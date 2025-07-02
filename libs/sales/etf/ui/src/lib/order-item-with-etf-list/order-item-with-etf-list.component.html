@@ -1,0 +1,47 @@
+<div
+  *ngIf="orderItemWithDiscount"
+  [attr.data-cy]="'feat-etf-order-item-with-etf-list'"
+  class="mobile-line mobile-line--step">
+  <div class="tracker--step__content">
+    <div class="display--block display--flex--md justify-content--between">
+      <div class="header-accordion--title">
+        <div class="header-accordion--title__text">
+          <div class="text-flow text-flow--body text-weight--g">
+            {{ orderItemWithDiscount.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tracker--step__content mb--m">
+    <div class="text--xm font-weight--bold"></div>
+    <div>
+      <div class="mt-20">
+        <div class="label-modifier-box card-mini">
+          <tg-sales-etf-list
+            (discountTerminationSelected)="selectDiscountToTerminate($event)"
+            [orderItemWithDiscount]="orderItemWithDiscount"
+            [usedDiscountSlotList]="usedAndPendingDiscountSlotList">
+          </tg-sales-etf-list>
+        </div>
+      </div>
+      <div class="text--s text-weight--r mt--l">
+        {{ 'ng.sales-checkout.text.etf-want-to-apply-changes' | translate }}
+      </div>
+      <div class="mt-20 overlay__section__content__action">
+        <button
+          (click)="applyEtfCancellation()"
+          [attr.data-cy]="'feat-etf-list-apply-button'"
+          class="button button--primary mr-10 mb--n--sm mb--s">
+          {{ 'ng.sales-checkout.btn.etf-apply-discount' | translate }}
+        </button>
+        <button
+          (click)="cancelEtfSelection()"
+          [attr.data-cy]="'feat-etf-list-cancel-button'"
+          class="button button--secondary">
+          {{ 'ng.sales-checkout.btn.etf-cancel-discount' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

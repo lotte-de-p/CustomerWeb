@@ -1,0 +1,27 @@
+<div class="font--caption cur-default my--xxxs">{{ 'ng.address.lbl.house-number' | translate }}</div>
+<div [ngClass]="{ 'disabled-state': disabledState }">
+  <input
+    #input
+    [attr.data-cy]="'feat-delivery-address-form-house-number'"
+    [matAutocomplete]="optionList"
+    autocomplete="one-time-code"
+    class="form__input"
+    [formControl]="control"
+    (blur)="onBlur()"
+    [placeholder]="'ng.address.form-house-number-placeholder-label' | translate"
+    type="text" />
+  <mat-autocomplete
+    #optionList="matAutocomplete"
+    [displayWith]="display"
+    (optionSelected)="optionSelected($event.option.value)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option.name }}
+    </mat-option>
+  </mat-autocomplete>
+  <div *ngIf="control.hasError('required')" class="formErrorInput text-align--left">
+    {{ 'ng.address.error.houseNumber.required' | translate }}
+  </div>
+  <div *ngIf="control.hasError('pattern') || control.hasError('maxlength')" class="formErrorInput text-align--left">
+    <div>{{ 'ng.address.error.houseNumber.invalid' | translate }}</div>
+  </div>
+</div>

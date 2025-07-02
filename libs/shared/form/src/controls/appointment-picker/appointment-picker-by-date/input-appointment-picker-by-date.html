@@ -1,0 +1,55 @@
+<div class="section-date mx--xs--md">
+  <div class="mt--m">
+    <div class="notification notification--errorfield notification--errorfield--flow" *ngIf="hasError('day_required')">
+      <span class="icon icon-error-shape errorfield">{{ datePickerErrorLabel | translate }}</span>
+    </div>
+  </div>
+  <app-no-available-appointment-date
+    *ngIf="!timeslots?.length && !updateSlots?.length"
+    (loadMoreSlots)="loadMoreSlots()"
+    [messageGroup]="messageGroup"></app-no-available-appointment-date>
+  <app-form-appointment-date-picker
+    *ngIf="initialised && (timeslots?.length || updateSlots?.length)"
+    [messageGroup]="messageGroup"
+    [timeslots]="timeslots"
+    [startDate]="startDate"
+    [endDate]="endDate"
+    [slidesToScroll]="slidesToScroll"
+    [selectedTimeslot]="selectedAppointmentSlot"
+    [initialSlide]="initialSlide"
+    (appointmentSelected)="setSelectedAppointmentSlot($event)"
+    [showLoadMore]="showLoadMore"
+    (loadMore)="loadMoreSlots($event)"
+    [updateSlots]="updateSlots"
+    [consumerType]="consumerType"
+    [disableLoadMore]="disableLoadMore"
+    (scrollTo)="scrollToSection($event)"
+    [slidesToShow]="slidesToShow"
+    [appointmentPickerType]="appointmentPickerType"
+    [isDeviceLandscape]="isDeviceLandscape"
+    [enableAppointmentsUI]="enableAppointmentsUI"
+    [datePickerLabel]="datePickerLabel">
+  </app-form-appointment-date-picker>
+</div>
+<div class="section-time mx--xs--md" *ngIf="selectedAppointmentSlot">
+  <div
+    class="notification notification--errorfield notification--errorfield--flow"
+    [ngClass]="{'mb-15' : consumerType === consumerTypeEnum.NC}"
+    *ngIf="hasError('slot_required')">
+    <span class="icon icon-error-shape errorfield">{{ momentPickerErrorLabel | translate }}</span>
+  </div>
+  <app-form-appointment-moment-picker
+    [messageGroup]="messageGroup"
+    [startDate]="startDate"
+    [endDate]="endDate"
+    [timeslots]="timeslots"
+    [updateSlots]="updateSlots"
+    [selectedTimeslot]="selectedAppointmentSlot"
+    [selectedMoment]="selectedAppointmentMoment"
+    (momentSelected)="setSelectedAppointmentMoment($event)"
+    [consumerType]="consumerType"
+    [isDeviceLandscape]="isDeviceLandscape"
+    [enableAppointmentsUI]="enableAppointmentsUI"
+    [momentPickerLabel]="momentPickerLabel">
+  </app-form-appointment-moment-picker>
+</div>

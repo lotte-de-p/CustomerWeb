@@ -1,0 +1,20 @@
+{
+  "name": "sales-customer-registration-feat-address-identity",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/customer-registration/feat-address-identity/src",
+  "prefix": "tg-sales",
+  "tags": ["type:feature", "scope:customer-registration-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/customer-registration/ui/**/*.ts",
+          "libs/sales/customer-registration/ui/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import '../vars/vars.base';
+@import '../button.default';
+
+:host {
+  .button,
+  a.button,
+  button.button,
+  input.button {
+    font-family: AkagiProBold;
+    font-size: rem(1.8);
+    line-height: rem(2.4);
+    &.primary {
+      &.state-disable,
+      &:disabled {
+        opacity: 1;
+        color: #626262;
+        ::part(icon) {
+          color: #626262;
+        }
+      }
+      &:active {
+        color: #111;
+        ::part(icon) {
+          color: #111;
+        }
+      }
+      &.state-loading svg path {
+        fill: #fff;
+      }
+    }
+    &.secondary {
+      &:hover {
+        background-color: #f2f2f2;
+        color: #626262;
+        box-shadow: inset 0 0 0 rem(0.2) #626262;
+        ::part(icon) {
+          color: #626262;
+        }
+      }
+      &:active {
+        color: #111111;
+        background-color: #aaaaaa;
+        box-shadow: inset 0 0 0 rem(0.2) #111111;
+        ::part(icon) {
+          color: #111111;
+        }
+      }
+    }
+    &.tertiary {
+      padding: var-rem(--semantic-spacing-sm) var-rem(--semantic-spacing-3xs);
+      &:active {
+        background-color: #f2f2f2;
+      }
+      &::before {
+        bottom: rem(0.8);
+        background-color: #111111;
+      }
+      &.icon-left:hover::after,
+      &.icon-right:hover::after,
+      &:hover::after {
+        width: 0%;
+      }
+    }
+  }
+}
+
+:host([brand='base'][theme='base-dark']) {
+  a.button,
+  button.button,
+  input.button {
+    &.primary {
+      background-color: white;
+      color: #111111;
+      ::part(icon) {
+        color: #111111;
+      }
+      &.state-disable,
+      &:disabled {
+        opacity: 1;
+        color: #626262;
+        ::part(icon) {
+          color: #626262;
+        }
+      }
+      &:active {
+        color: #111;
+        background-color: #aaaaaa;
+        ::part(icon) {
+          color: #111;
+        }
+      }
+      &.state-loading svg path {
+        fill: #111;
+      }
+    }
+    &.secondary {
+      color: #fff;
+      box-shadow: inset 0 0 0 rem(0.2) #fff;
+      ::part(icon) {
+        color: #fff;
+      }
+      &:hover {
+        background-color: #626262;
+        color: #fff;
+        box-shadow: inset 0 0 0 rem(0.2) #fff;
+      }
+      &:active {
+        color: #fff;
+        background-color: #aaaaaa;
+        box-shadow: inset 0 0 0 rem(0.2) #fff;
+        ::part(icon) {
+          color: #fff;
+        }
+      }
+      &.state-loading svg path {
+        fill: #fff;
+      }
+    }
+    &.tertiary {
+      color: #fff;
+      padding: var-rem(--semantic-spacing-sm) var-rem(--semantic-spacing-3xs);
+      ::part(icon) {
+        color: #fff;
+      }
+      &:active {
+        background-color: #626262;
+      }
+      &::before {
+        bottom: rem(0.8);
+        background-color: #fff;
+      }
+      &.icon-left:hover::after,
+      &.icon-right:hover::after,
+      &:hover::after {
+        width: 0%;
+      }
+      &.state-loading svg path {
+        fill: #fff;
+      }
+    }
+  }
+}

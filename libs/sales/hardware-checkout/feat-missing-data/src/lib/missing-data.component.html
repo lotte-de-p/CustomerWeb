@@ -1,0 +1,113 @@
+<div class="container">
+  <form [formGroup]="missingDataForm" class="form-group container--small mb-20">
+    <div class="postpaid-registration postpaid-registration__external">
+      <div class="sim-home-activation background-white ng-scope m--auto">
+        <div class="horizontal-tab col-sm-12">
+          <ul class="tab-bar mb-30">
+            <li class="tab-bar__li" [ngClass]="{ active: isBelgianIdentity }">
+              <a (click)="toggleIdentityView()">{{ 'ng.sales-checkout.lbl.belgian' | translate }}</a>
+            </li>
+            <li class="tab-bar__li" [ngClass]="{ active: !isBelgianIdentity }">
+              <a (click)="toggleIdentityView()">{{ 'ng.sales-checkout.lbl.other' | translate }}</a>
+            </li>
+          </ul>
+          <div class="tab-bar-content">
+            <div class="row">
+              <div class="col-sm-12">
+                <div *ngIf="isBelgianIdentity" class="mb-30">
+                  <label for="belgianEid">{{ 'ng.sales-checkout.mandatory-info-belgian-eid-label' | translate }}</label>
+                  <input
+                    id="belgianEid"
+                    mask="AAA-0000000-00"
+                    [dropSpecialCharacters]="false"
+                    placeholder="___-______-__"
+                    class="form__input"
+                    formControlName="belgianEid"
+                    type="text"
+                    required
+                    [ngClass]="{
+                      error:
+                        missingDataForm.controls['belgianEid'].touched && missingDataForm.controls['belgianEid'].errors
+                    }" />
+                  @if (
+                    missingDataForm.controls['belgianEid'].touched &&
+                    missingDataForm.controls['belgianEid'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      {{ 'ng.sales-checkout.mandatory-info-belgian-eid-error-required' | translate }}
+                    </div>
+                  } @else if (
+                    missingDataForm.controls['belgianEid'].touched &&
+                    missingDataForm.controls['belgianEid'].errors?.['invalidEid']
+                  ) {
+                    <div class="formErrorInput">
+                      {{ 'ng.sales-checkout.mandatory-info-belgian-eid-pattern-error' | translate }}
+                    </div>
+                  }
+                </div>
+                <div *ngIf="!isBelgianIdentity" class="mb-30">
+                  <label for="foreignEid">{{ 'ng.sales-checkout.mandatory-info-other-eid-label' | translate }}</label>
+                  <input
+                    id="foreignEid"
+                    class="form__input"
+                    formControlName="foreignEid"
+                    type="text"
+                    required
+                    [ngClass]="{
+                      error:
+                        missingDataForm.controls['foreignEid'].touched && missingDataForm.controls['foreignEid'].errors
+                    }" />
+                  @if (
+                    missingDataForm.controls['foreignEid'].touched &&
+                    missingDataForm.controls['foreignEid'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      {{ 'ng.sales-checkout.mandatory-info-foreign-eid-error-required' | translate }}
+                    </div>
+                  } @else if (
+                    missingDataForm.controls['foreignEid'].touched &&
+                    missingDataForm.controls['foreignEid'].errors?.['invalidEid']
+                  ) {
+                    <div class="formErrorInput">
+                      {{ 'ng.sales-checkout.mandatory-info-foreign-eid-pattern-error' | translate }}
+                    </div>
+                  }
+                </div>
+              </div>
+
+              <label for="nationalRegistryNumber">{{ 'ng.sales-checkout.mandatory-info-nrn-label' | translate }}</label>
+              <input
+                mask="00.00.00-000.00"
+                [dropSpecialCharacters]="false"
+                id="nationalRegistryNumber"
+                placeholder="__.__.__-___.__"
+                formControlName="nationalRegistryNumber"
+                class="form__input nationalRegistryNumber mb--n"
+                type="text"
+                [ngClass]="{
+                  error:
+                    missingDataForm.controls['nationalRegistryNumber'].touched &&
+                    missingDataForm.controls['nationalRegistryNumber'].errors
+                }" />
+              @if (
+                missingDataForm.controls['nationalRegistryNumber'].touched &&
+                missingDataForm.controls['nationalRegistryNumber'].errors?.['required']
+              ) {
+                <div class="formErrorInput">
+                  {{ 'ng.sales-checkout.mandatory-info-nrn-error-required' | translate }}
+                </div>
+              } @else if (
+                missingDataForm.controls['nationalRegistryNumber'].touched &&
+                missingDataForm.controls['nationalRegistryNumber'].errors?.['invalidNrn']
+              ) {
+                <div class="formErrorInput">
+                  {{ 'ng.sales-checkout.mandatory-info-nrn-pattern-error' | translate }}
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

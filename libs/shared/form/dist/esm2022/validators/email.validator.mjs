@@ -1,0 +1,12 @@
+import { Validators } from '@angular/forms';
+import { RegexConstants } from '../constants';
+export class EmailValidator extends Validators {
+    static validEmail(control) {
+        return RegexConstants.EMAIL.test(control.value)
+            ? null
+            : {
+                format: false,
+            };
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW1haWwudmFsaWRhdG9yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL3ZhbGlkYXRvcnMvZW1haWwudmFsaWRhdG9yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBbUIsVUFBVSxFQUFFLE1BQU0sZ0JBQWdCLENBQUM7QUFDN0QsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLGNBQWMsQ0FBQztBQUU5QyxNQUFNLE9BQU8sY0FBZSxTQUFRLFVBQVU7SUFDNUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxPQUF3QjtRQUN4QyxPQUFPLGNBQWMsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUM7WUFDN0MsQ0FBQyxDQUFDLElBQUk7WUFDTixDQUFDLENBQUM7Z0JBQ0UsTUFBTSxFQUFFLEtBQUs7YUFDZCxDQUFDO0lBQ1IsQ0FBQztDQUNGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQWJzdHJhY3RDb250cm9sLCBWYWxpZGF0b3JzIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xuaW1wb3J0IHsgUmVnZXhDb25zdGFudHMgfSBmcm9tICcuLi9jb25zdGFudHMnO1xuXG5leHBvcnQgY2xhc3MgRW1haWxWYWxpZGF0b3IgZXh0ZW5kcyBWYWxpZGF0b3JzIHtcbiAgc3RhdGljIHZhbGlkRW1haWwoY29udHJvbDogQWJzdHJhY3RDb250cm9sKSB7XG4gICAgcmV0dXJuIFJlZ2V4Q29uc3RhbnRzLkVNQUlMLnRlc3QoY29udHJvbC52YWx1ZSlcbiAgICAgID8gbnVsbFxuICAgICAgOiB7XG4gICAgICAgICAgZm9ybWF0OiBmYWxzZSxcbiAgICAgICAgfTtcbiAgfVxufVxuIl19

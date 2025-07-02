@@ -1,0 +1,104 @@
+<app-loader [enableLoader]="enableLoader" [pageType]="pageType" [enableMask]="enableMask" [startByDefault]="false">
+</app-loader>
+
+@if (showDialog) {
+  <tg-fleet-manager-line-overlay
+    (closeOverlay)="closeOverlay()"
+    class="width--full position--fixed position--top position--left"
+    style="z-index: 100">
+    @if (currentAction === lineOverviewActions.LINE_ADD_OPTIONS) {}
+  </tg-fleet-manager-line-overlay>
+}
+
+<div class="row">
+  <app-message-flow [messageGroupName]="messageGroupName" class="width--full"></app-message-flow>
+  @if (msisdn) {
+    <div class="col-sm-12 p-0" [attr.data-cy]="'line-product-details'">
+      <div class="navigation-content__header">
+        <div class="title">
+          <i class="header-icon icon icon-stack"></i>
+          <h2>{{ 'ng.line-product-details.lbl.product' | translate }}</h2>
+        </div>
+      </div>
+      <div class="navigation-content__details products">
+        <div class="details-section">
+          <div class="details-section__item">
+            <label class="default">{{ 'ng.line-product-details.lbl.tariff-plan' | translate }}</label>
+            <div class="details display--flex justify-content--between row">
+              <p class="col-md-4 col-lg-6 col-12" [attr.data-cy]="'tariff-plan'">{{ tariffPlan }}</p>
+              @if (hasTariffPlanUrl()) {
+                <ng-container>
+                  <span
+                    class="link"
+                    (click)="emitAction(lineOverviewActions.LINE_CHANGE_TARIFF_PLAN)"
+                    [attr.data-cy]="'change-tariff-plan-link'">
+                    <span>{{ 'ng.line-product-details.link.change' | translate }}</span>
+                  </span>
+                </ng-container>
+              }
+            </div>
+          </div>
+          <div class="details-section__item">
+            <label class="default">{{ 'ng.line-product-details.lbl.billing-account' | translate }}</label>
+            <div class="details display--flex justify-content--between row">
+              <p class="col-md-4 col-lg-6 col-12" [attr.data-cy]="'account-number'">{{ accountNumber }}</p>
+              @if (hasCreateTicketUrl()) {
+                <ng-container>
+                  <a class="link" [tgLoadPage]="createTicketUrl" [attr.data-cy]="'create-ticket-link'">
+                    <span>{{ 'ng.line-product-details.link.change' | translate }}</span>
+                  </a>
+                </ng-container>
+              }
+            </div>
+          </div>
+          <div class="details-section__item">
+            <label class="default">{{ 'ng.line-product-details.lbl.options' | translate }}</label>
+            <div class="details display--flex justify-content--between row">
+              <p class="col-md-4 col-lg-6 col-12" [attr.data-cy]="'options'">{{ options }}</p>
+              <div class="options-link">
+                @if (hasAddOptionUrl()) {
+                  <ng-container>
+                    <span
+                      class="link mr--l"
+                      (click)="emitAction(lineOverviewActions.LINE_ADD_OPTIONS)"
+                      [attr.data-cy]="'add-options-link'">
+                      <span>{{ 'ng.line-product-details.link.add-options' | translate }}</span>
+                    </span>
+                  </ng-container>
+                }
+                @if (hasRemoveOptionUrl()) {
+                  <ng-container>
+                    <span
+                      class="link"
+                      (click)="emitAction(lineOverviewActions.LINE_REMOVE_OPTIONS)"
+                      [attr.data-cy]="'remove-options-link'">
+                      <span>{{ 'ng.line-product-details.link.remove-options' | translate }}</span>
+                    </span>
+                  </ng-container>
+                }
+              </div>
+            </div>
+          </div>
+          @if (splitBillProfileName !== undefined) {
+            <div class="details-section__item">
+              <label class="default">{{ 'ng.line-product-details.lbl.split-bill-profile' | translate }}</label>
+              <div class="details display--flex justify-content--between">
+                <div>
+                  <p>{{ splitBillProfileName }}</p>
+                  <p class="description-text">{{ splitBillProfileDescription }}</p>
+                </div>
+                @if (hasSplitBillProfileUrl()) {
+                  <ng-container>
+                    <a class="link" [tgLoadPage]="splitBillProfileUrl">
+                      <span> {{ 'ng.line-product-details.link.change' | translate }} </span>
+                    </a>
+                  </ng-container>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

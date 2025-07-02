@@ -1,0 +1,43 @@
+import { OmapiProduct } from '../models/omapi-product.model';
+import { RawOmapiProductInterface } from '../interfaces/raw-omapi-product.interface';
+import { LanguageService, NormalizationService } from '@telenet/ng-lib-page';
+import * as i0 from "@angular/core";
+export declare class OmapiProductMapper {
+    private readonly languageService;
+    private readonly normalizationService;
+    constructor(languageService: LanguageService, normalizationService: NormalizationService);
+    readonly ignoredDarwinSpecifications: string[];
+    toModel(rawOmapiProduct?: RawOmapiProductInterface): OmapiProduct;
+    private createOmapiProduct;
+    private mapOmapiData;
+    private hasExternalContentPack;
+    private hasDiscount;
+    private getContentForLocale;
+    private createLocalizedContents;
+    private createOmapiConstituents;
+    private createLocalizedContent;
+    private createServices;
+    private createService;
+    private createSpecifications;
+    private createSpecification;
+    private createRate;
+    private createRates;
+    private createApps;
+    private createShortDescription;
+    private createSubCategory;
+    private getCharacteristics;
+    private correctDarwinCharacteristics;
+    private correctSharedMobileData;
+    private correctMaxMobileLines;
+    private getProductTier;
+    private getFloatValue;
+    private getIntegerValue;
+    private getChars;
+    private createConstituents;
+    private createConstituent;
+    private createVisibilityRules;
+    private getValueUnit;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OmapiProductMapper, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<OmapiProductMapper>;
+}
+//# sourceMappingURL=omapi-product.mapper.d.ts.map

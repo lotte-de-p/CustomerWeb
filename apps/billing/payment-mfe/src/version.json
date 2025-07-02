@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Customer Web Billing Payment Application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

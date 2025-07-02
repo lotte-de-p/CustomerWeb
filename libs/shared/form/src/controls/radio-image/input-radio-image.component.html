@@ -1,0 +1,47 @@
+<div class="stepper-move stepper-move--user-input">
+  <div class="whitespace whitespace--small"></div>
+  <div class="section section-choices container">
+    <div *ngIf="customLabel">
+      <div
+        class="text-flow text-flow--h3 text-align--center"
+        [class.form__label--error]="error"
+        [innerHTML]="getLabel() | translate"></div>
+      <div class="whitespace whitespace--medium"></div>
+    </div>
+
+    <div class="label-modifier-box card-square">
+      <ng-container *ngFor="let option of optionList; let i = index">
+        <div class="label-modifier-slot animation-show-slide-up" style="--animation-delay: {{ i }}">
+          <input
+            type="radio"
+            class="label-modifier-radio"
+            name="radio-group-name-{{ key }}"
+            value="{{ option.value }}"
+            id="choice-{{ i }}-{{ key }}"
+            [checked]="selectedOption && option.value === selectedOption.value" />
+          <div class="label-modifier--append label-modifier--container cursor--pointer">
+            <div class="label-modifier--body">
+              <div class="label-modifier--body--inner-container">
+                <label
+                  for="choice-{{ i }}-{{ key }}"
+                  class="label-modifier-radio__label"
+                  (click)="selectOption(option)"></label>
+                <div class="label-modifier-content__header">
+                  <i class="icon icon-tick"></i>
+                </div>
+                <div class="label-modifier-content__image">
+                  <div [inlineSVG]="option.imagePath"></div>
+                </div>
+                <div class="label-modifier-content__body">
+                  <div
+                    class="text-flow text-flow--button label-modifier-content__body-label"
+                    [innerHTML]="getOptionLabel(option) | translate"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

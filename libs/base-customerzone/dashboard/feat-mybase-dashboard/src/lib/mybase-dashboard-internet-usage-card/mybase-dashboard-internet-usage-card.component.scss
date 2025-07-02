@@ -1,0 +1,17 @@
+.mybase-dashboard--card {
+  height: 100%;
+
+  .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .overflow-hidden-flex {
+    overflow: hidden;
+    flex: 1;
+  }
+}
+.mybase-dashboard--card--content--flex-basis {
+  flex-basis: 4rem;
+}

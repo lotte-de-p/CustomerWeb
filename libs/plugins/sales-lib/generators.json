@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "lib": {
+      "factory": "./src/generators/lib/generator",
+      "schema": "./src/generators/lib/schema.json",
+      "description": "Sales lib generator"
+    },
+    "state": {
+      "factory": "./src/generators/state/generator",
+      "schema": "./src/generators/state/schema.json",
+      "description": "Sales state generator"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+:host {
+  display: inline-flex;
+  place-content: center;
+  width: fit-content;
+  aspect-ratio: 1 / 1;
+  font-size: rem(1);
+
+  i {
+    display: inline-block;
+    text-align: center;
+    font-size: rem(2.4);
+    color: var(--wink-icon-color, var(--semantic-color-icon-default));
+
+    &:before {
+      display: block;
+    }
+
+    &.primary {
+      color: var(--wink-icon-color, var(--semantic-color-icon-on-brand));
+      background-color: var(--wink-icon-bg-color, var(--semantic-color-background-icon-primary));
+    }
+
+    &.secondary {
+      color: var(--wink-icon-color, var(--semantic-color-icon-default));
+      background-color: var(--wink-icon-bg-color, var(--semantic-color-background-icon-secondary));
+    }
+
+    &.transparent {
+      color: var(--wink-icon-color, var(--semantic-color-icon-on-brand));
+      background-color: var(--wink-icon-bg-color, var(--semantic-color-background-icon-transparant));
+    }
+
+    &.sm {
+      font-size: var-rem(--semantic-icon-sm);
+      width: var-rem(--semantic-icon-sm);
+    }
+
+    &.md {
+      font-size: var-rem(--semantic-icon-md);
+      width: var-rem(--semantic-icon-md);
+    }
+
+    &.lg {
+      font-size: var-rem(--semantic-icon-lg);
+      width: var-rem(--semantic-icon-lg);
+    }
+
+    &.xl {
+      font-size: var-rem(--semantic-icon-xl);
+      width: var-rem(--semantic-icon-xl);
+    }
+
+    &.color--default {
+      --wink-icon-color: var(--semantic-color-icon-default);
+    }
+
+    &.color--subtle {
+      --wink-icon-color: var(--semantic-color-icon-subtle);
+    }
+
+    &.color--subtlest {
+      --wink-icon-color: var(--semantic-color-icon-subtlest);
+    }
+
+    &.color--inverse {
+      --wink-icon-color: var(--semantic-color-icon-inverse);
+    }
+
+    &.color--promo {
+      --wink-icon-color: var(--semantic-color-icon-promo);
+    }
+
+    &.backdrop {
+      mask: $icon-component--backdrop;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+
+      &.sm {
+        padding: var-rem(--semantic-spacing-3xs);
+      }
+
+      &.md {
+        padding: var-rem(--semantic-spacing-xs);
+      }
+
+      &.lg {
+        padding: var-rem(--semantic-spacing-xs);
+      }
+
+      &.xl {
+        padding: var-rem(--semantic-spacing-xs);
+
+        @include media('from-sm') {
+          padding: var-rem(--semantic-spacing-md);
+        }
+      }
+    }
+  }
+}

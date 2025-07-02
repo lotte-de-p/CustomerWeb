@@ -1,0 +1,20 @@
+<form [formGroup]="parentForm" class="form-group">
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="endValidityDate-{{ idx }}" class="text-align--left text--s">{{
+        'ng.mock-marketing.text.end-valid-date' | translate
+      }}</label>
+      <input type="text" class="form__input" id="endValidityDate-{{ idx }}" formControlName="endValidityDate" />
+    </div>
+
+    <div class="col-sm-6">
+      <label for="price-{{ idx }}" class="text-align--left text--s">{{
+        'ng.mock-marketing.text.price' | translate
+      }}</label>
+      <input type="text" class="form__input" id="price-{{ idx }}" formControlName="price" />
+    </div>
+  </div>
+  <div class="formErrorInput mb-10" *ngIf="!parentForm.valid">
+    {{ 'ng.mock-marketing.warning.form-error' | translate }}
+  </div>
+</form>

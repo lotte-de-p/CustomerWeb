@@ -1,0 +1,167 @@
+{
+  "name": "profile-management-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/engagement/profile-management-mfe/src",
+  "prefix": "",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/engagement/profile-management-mfe",
+        "index": "apps/engagement/profile-management-mfe/src/index.html",
+        "main": "apps/engagement/profile-management-mfe/src/main.ts",
+        "polyfills": "apps/engagement/profile-management-mfe/src/polyfills.ts",
+        "tsConfig": "apps/engagement/profile-management-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/engagement/profile-management-mfe/src/favicon.ico",
+          "apps/engagement/profile-management-mfe/src/assets",
+          "apps/engagement/profile-management-mfe/src/version.json"
+        ],
+        "styles": ["apps/engagement/profile-management-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/engagement/profile-management-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "3mb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/engagement/profile-management-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/engagement/profile-management-mfe/src/favicon.ico",
+            "apps/engagement/profile-management-mfe/src/assets",
+            "apps/engagement/profile-management-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "apps/engagement/profile-management-mfe/src/assets",
+              "output": "assets/"
+            },
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "profile-management-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "profile-management-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "profile-management-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/engagement/profile-management-mfe/**/*.ts",
+          "apps/engagement/profile-management-mfe/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/engagement/profile-management-mfe/.storybook",
+        "browserTarget": "profile-management-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/profile-management-mfe",
+        "configDir": "apps/engagement/profile-management-mfe/.storybook",
+        "browserTarget": "profile-management-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/engagement/profile-management-mfe/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "profile-management-mfe:build-storybook",
+        "staticFilePath": "dist/storybook/profile-management-mfe"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "profile-management-mfe:build-storybook:ci"
+        }
+      }
+    },
+    "generate-i18n": {
+      "executor": "@telenet/aem-monorepo-plugin:i18n",
+      "options": {
+        "appPath": "apps/engagement/profile-management-mfe",
+        "prefixes": "ng.profile-overview"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:profile-management-mfe"]
+}

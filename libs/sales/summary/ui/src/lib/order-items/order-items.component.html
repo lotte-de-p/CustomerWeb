@@ -1,0 +1,10 @@
+<div id="sticky-sales-cart__section">
+  <div class="sales-cart-row--shadow-review">
+    <ng-container *ngFor="let orderItem of viewModel">
+      <tg-sales-summary-order-item-with-discount *ngIf="orderItem && orderItem.discount" [orderItem]="orderItem">
+      </tg-sales-summary-order-item-with-discount>
+      <tg-sales-summary-order-item *ngIf="orderItem && !orderItem.discount" [orderItem]="orderItem">
+      </tg-sales-summary-order-item>
+    </ng-container>
+  </div>
+</div>

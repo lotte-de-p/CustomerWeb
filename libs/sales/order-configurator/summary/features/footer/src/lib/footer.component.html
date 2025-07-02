@@ -1,0 +1,40 @@
+<div class="sales-cart__section sales-cart__summary-info mt-10">
+  <div class="px--n py--l background-white">
+    <div class="sales-cart-row__content">
+      <div class="sales-cart__summary-info__title color-shade_64 mb--m">
+        <i class="icon icon-information-shape mr--s"></i
+        ><span class="font--caption-bold">
+          {{ 'ng.sales-checkout.shopping-cart.lbl.important-summary-information-section.title' | translate }}</span
+        >
+      </div>
+      <ul class="color-shade_64 font--caption ml--l">
+        @if (tocUrl$ | async; as tocUrl) {
+          <li>
+            {{ 'ng.sales-checkout.contract-summary-pre.text' | translate }}
+            <a
+              (click)="contractSummaryLinkClicked()"
+              [attr.data-cy]="'summary-summary-toc-link'"
+              class="link inline"
+              href="javascript:void(0)"
+              >{{ 'ng.sales-checkout.contract-summary-link.text' | translate }}
+            </a>
+            {{ 'ng.sales-checkout.contract-summary-post.text' | translate }}
+          </li>
+        }
+        <li>{{ 'ng.hardware-checkout.shopping-cart.lbl.recall-right.text' | translate }}</li>
+        <li>
+          {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-pre.text' | translate }}
+          <a
+            (click)="termsAndConditionsLinkClicked()"
+            [attr.data-cy]="'summary-summary-terms-and-conditions'"
+            id="summary-summary-terms-and-conditions"
+            class="link inline"
+            href="javascript:void(0)">
+            {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-link.text' | translate }}
+          </a>
+          {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-post.text' | translate }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

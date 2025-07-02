@@ -1,0 +1,28 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/internet/BINT050004086",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "usage": {
+      "showCard": true,
+      "unlimited": {
+        "usedBytes": 75688980697,
+        "daysUntilRenewal": 20,
+        "status": "OK"
+      }
+    },
+    "homeNetwork": {
+      "showCard": true
+    },
+    "actions": [
+      "internet-notifications",
+      "speedtest",
+      "manage-your-product",
+      "my-device",
+      "devices-using-your-network",
+      "easy-switch",
+      "best-tariff",
+      "return-device"
+    ]
+  }
+}

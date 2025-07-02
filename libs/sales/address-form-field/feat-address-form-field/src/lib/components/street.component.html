@@ -1,0 +1,29 @@
+<div class="font--caption cur-default my--xxxs">{{ 'ng.address.lbl.street' | translate }}</div>
+<div [ngClass]="{ 'disabled-state': disabledState }">
+  <input
+    #input
+    [attr.data-cy]="'feat-delivery-address-form-street'"
+    [matAutocomplete]="optionList"
+    autocomplete="one-time-code"
+    class="form__input"
+    [formControl]="control"
+    (blur)="onBlur()"
+    [placeholder]="'ng.address.form-street-placeholder-label' | translate"
+    type="text" />
+  <mat-autocomplete
+    #optionList="matAutocomplete"
+    autoActiveFirstOption="true"
+    (optionSelected)="optionSelected($event.option.value)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
+  <div *ngIf="control.touched && control.hasError('required')" class="formErrorInput text-align--left">
+    {{ 'ng.address.error.street.required' | translate }}
+  </div>
+  <div
+    *ngIf="control.touched && !control.hasError('required') && control.hasError('invalidStreet')"
+    class="formErrorInput text-align--left">
+    {{ 'ng.address.error.street.not-from-list' | translate }}
+  </div>
+</div>

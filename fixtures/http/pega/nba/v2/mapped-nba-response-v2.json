@@ -1,0 +1,87 @@
+{
+  "customerNumber": "819130543",
+  "channel": "Web",
+  "containerName": "GetNBA",
+  "rankedResults": [
+    {
+      "rank": 1,
+      "group": "Sales",
+      "issue": "Migration",
+      "name": "SAMI_ONEfor5iconic",
+      "treatment": "OneXsellMig_Web_General",
+      "campaignId": "",
+      "interactionId": "-5826878382873476000",
+      "direction": "Inbound",
+      "sdata": {
+        "offers": [
+          {
+            "id": "42790",
+            "type": "Product",
+            "offers": []
+          },
+          {
+            "id": "40816",
+            "type": "Product",
+            "offers": []
+          }
+        ]
+      },
+      "offerDetails": [
+        {
+          "name": "Mobile5",
+          "treatment": "OneXsellMig_Web_General_SA",
+          "containers": [
+            {
+              "treatmentFragment": "/content/dam/pega/treatment-fragments/telenet/web/tf_11509",
+              "containerFragment": "/content/dam/pega/container-fragments/telenet/nbo/productsummary-specification-mob",
+              "contentFragment": "/content/dam/pega/content-fragments/telenet/nl/content-fragment-product",
+              "experienceTemplate": "/content/experience-fragments/www-telenet-touch/pega/experience-templates/pega-test-experience-fragment"
+            }
+          ]
+        },
+        {
+          "name": "One",
+          "treatment": "OneXsellMig_Web_General_SA",
+          "containers": [
+            {
+              "treatmentFragment": "/content/dam/pega/treatment-fragments/telenet/web/tf_11508",
+              "containerFragment": "/content/dam/pega/container-fragments/telenet/nbo/productsummary-specification-bb",
+              "contentFragment": "/content/dam/pega/content-fragments/telenet/nl/content-fragment-product",
+              "experienceTemplate": "/content/experience-fragments/www-telenet-touch/pega/experience-templates/pega-test-experience-fragment"
+            }
+          ]
+        },
+        {
+          "name": "IconicTV",
+          "treatment": "OneXsellMig_Web_General_SA",
+          "containers": [
+            {
+              "treatmentFragment": "/content/dam/pega/treatment-fragments/telenet/web/tf_11507",
+              "containerFragment": "/content/dam/pega/container-fragments/telenet/nbo/productsummary-specification-tv",
+              "contentFragment": "/content/dam/pega/content-fragments/telenet/nl/content-fragment-product",
+              "experienceTemplate": "/content/experience-fragments/www-telenet-touch/pega/experience-templates/pega-test-experience-fragment"
+            },
+            {
+              "treatmentFragment": "/content/dam/pega/treatment-fragments/telenet/web/tf_11507",
+              "containerFragment": "/content/dam/pega/container-fragments/telenet/nbo/productsummary-specification-tv",
+              "contentFragment": "/content/dam/pega/content-fragments/telenet/nl/content-fragment-product",
+              "experienceTemplate": "/content/experience-fragments/www-telenet-touch/pega/experience-templates/pega-test-experience-fragment"
+            }
+          ]
+        },
+        {
+          "name": "ONE_OC3",
+          "treatment": "OneXsellMig_Web_General_SA",
+          "containers": [
+            {
+              "treatmentFragment": "/content/dam/pega/treatment-fragments/telenet/web/tf_11500",
+              "containerFragment": "/content/dam/pega/container-fragments/telenet/nbo/productsummary-specification-sa",
+              "contentFragment": "/content/dam/pega/content-fragments/telenet/nl/content-fragment-product",
+              "experienceTemplate": "/content/experience-fragments/www-telenet-touch/pega/experience-templates/pega-test-experience-fragment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

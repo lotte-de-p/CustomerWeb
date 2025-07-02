@@ -1,0 +1,144 @@
+{
+  "product": "mobile",
+  "categories": [
+    {
+      "category": "included",
+      "preferenceGroups": [
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "selected": false,
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "selected": true,
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "selected": true,
+              "isEditable": false
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "21106710940",
+          "firstname": "Kiran",
+          "lastname": "Geeraerts",
+          "email": "kiran@telenet.be",
+          "language": "NL",
+          "phonenumber": "0496811029",
+          "gender": "FEMALE",
+          "birthdate": "1979-08-14",
+          "privacysetting": 2,
+          "role": "MANAGER",
+          "credential": "t020237",
+          "primarycredentialalias": "kiran@telenet.be",
+          "telenethosted": true,
+          "legacylogin": false,
+          "version": 9,
+          "status": "VALIDATED",
+          "msisdn": ["0496811029"],
+          "isInvitedProfile": false,
+          "selected": true,
+          "hasChanged": true
+        }
+      ]
+    },
+    {
+      "category": "option",
+      "preferenceGroups": [
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "selected": false
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "selected": true,
+              "selectedValues": ["5"]
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "6181394",
+          "firstname": "Kiran",
+          "lastname": "Geeraerts",
+          "email": "kiran@telenet.be",
+          "language": "NL",
+          "phonenumber": "0496811029",
+          "gender": "FEMALE",
+          "birthdate": "1979-08-14",
+          "privacysetting": 2,
+          "role": "MANAGER",
+          "credential": "t020237",
+          "primarycredentialalias": "kiran@telenet.be",
+          "telenethosted": true,
+          "legacylogin": false,
+          "version": 9,
+          "status": "VALIDATED",
+          "msisdn": ["0496811029"],
+          "isInvitedProfile": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "category": "outofbundle",
+      "preferenceGroups": [
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "values": ["5", "10", "15", "20", "25", "30", "50", "75", "100"],
+              "selectedValues": ["5", "10", "15"],
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "6181394",
+          "firstname": "Kiran",
+          "lastname": "Geeraerts",
+          "email": "kiran@telenet.be",
+          "language": "NL",
+          "phonenumber": "0496811029",
+          "gender": "FEMALE",
+          "birthdate": "1979-08-14",
+          "privacysetting": 2,
+          "role": "MANAGER",
+          "credential": "t020237",
+          "primarycredentialalias": "kiran@telenet.be",
+          "telenethosted": true,
+          "legacylogin": false,
+          "version": 9,
+          "status": "VALIDATED",
+          "msisdn": ["0496811029"],
+          "isInvitedProfile": false,
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

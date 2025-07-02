@@ -1,0 +1,279 @@
+@if (bundleAccounts && bundleAccounts.length > 0) {
+  <div>
+    <div class="mt--xl mb--xl">
+      <div
+        class="selector hide-until-md cursor--pointer width--full position--relative--sm flex-wrap--wrap"
+        (click)="toggleSelector()">
+        <div
+          class="selector__list position--absolute justify-content--start align-items--center flex-direction--row display--flex flex-wrap--wrap border-radius--all--n listing--none width--full"
+          [ngClass]="{
+            'selector__list__first-item selector__list__first-item--opened': isSelectorOpen,
+            'selector__list__first-item selector__list__first-item--closed': !isSelectorOpen,
+            'cursor--default': bundleAccounts.length === 1
+          }">
+          <div class="selector__list__content">
+            <div class="selector__list__content__first-section display--flex word-break--ellipsis">
+              @if (
+                (selectedAccount?.pid || !selectedAccount?.identifier) &&
+                !(selectedAccount?.simType === 'E_SIM' && selectedAccount?.isDataOnlyPlan)
+              ) {
+                <span class="selector__list__content__first-section__item word-break--ellipsis">
+                  {{ getNameByLabel(selectedAccount?.label) | translate }}
+                </span>
+              }
+              @if (!selectedAccount?.isDataOnlyPlan) {
+                <span class="selector__list__content__first-section__item word-break--ellipsis">
+                  {{ selectedAccount?.msisdn | phoneNumber }}
+                </span>
+              }
+              @if (selectedAccount?.isDataOnlyPlan) {
+                <div class="selector-list__content__badge-section">
+                  <span class="status-indicator status-indicator--with-icon">
+                    <i
+                      class="icon icon-sm text-weight--xxs color-mid-grey"
+                      [ngClass]="selectedAccount?.simType !== 'E_SIM' ? 'icon-sim-card' : 'icon-sim-esim'"></i
+                    >{{ 'ng.account-selector.lbl.msisdn' | translate }}
+                  </span>
+                </div>
+              }
+            </div>
+            @if (!selectedAccount?.usage?.isGroupBundleUsage && showGroupView) {
+              <div class="selector__list__content__second-section word-break--ellipsis">
+                <span class="selector__list__content__second-section__item">
+                  @if (selectedAccount?.usage?.shared?.data[0]?.usedUnits !== '0') {
+                    <span>
+                      {{ selectedAccount?.usage?.shared?.data[0]?.usedUnits }}
+                      @if (!selectedAccount?.usage?.shared?.data[0]?.usedUnitType) {
+                        <span>
+                          {{ selectedAccount?.usage?.shared?.data[0]?.unitType }}
+                        </span>
+                      }
+                      @if (selectedAccount?.usage?.shared?.data[0]?.usedUnitType) {
+                        <span>
+                          {{ selectedAccount?.usage?.shared?.data[0]?.usedUnitType }}
+                        </span>
+                      }
+                    </span>
+                  }
+                </span>
+                @if (selectedAccount?.usage) {
+                  <span>
+                    <span class="selector__list__content__second-section__item">
+                      @if (
+                        selectedAccount?.usage?.shared?.data[0]?.usedUnits !== '0' &&
+                        selectedAccount?.usage?.outOfBundle?.usedUnits !== '0'
+                      ) {
+                        <span>|</span>
+                      }
+                    </span>
+                    <span class="selector__list__content__second-section__item last-item">
+                      @if (selectedAccount?.usage?.outOfBundle?.usedUnits !== '0') {
+                        <span>
+                          {{
+                            'ng.account-selector.lbl.monetary-balance'
+                              | translate: { value: selectedAccount?.usage?.outOfBundle?.usedUnits }
+                          }}
+                        </span>
+                      }
+                    </span>
+                  </span>
+                }
+              </div>
+            }
+          </div>
+          @if (bundleAccounts.length > 1) {
+            <div>
+              <a href="#" class="selector__action">
+                <div [ngClass]="isSelectorOpen ? 'arrow arrow--up' : 'arrow arrow--down'"></div>
+              </a>
+            </div>
+          }
+        </div>
+
+        <ul
+          class="selector__list selector__list__options selector__list__options--opened position--absolute justify-content--start align-items--center flex-direction--row display--flex flex-wrap--wrap border-radius--all--n listing--none width--full">
+          @for (bundleAccount of bundleAccounts; track bundleAccount) {
+            <li
+              class="selector__list__options__item mr--n p--m justify-content--start align-items--center flex-direction--row display--flex flex-wrap--nowrap"
+              (click)="onSelectAccount(bundleAccount)">
+              <div class="selector__list__content">
+                <div class="selector__list__content__first-section display--flex align-items--center">
+                  @if (bundleAccount?.pid || !bundleAccount?.identifier) {
+                    <span class="selector__list__content__first-section__item font--caption">
+                      {{ getNameByLabel(bundleAccount.label) | translate }}
+                    </span>
+                  }
+                  @if (!bundleAccount?.isDataOnlyPlan) {
+                    <span class="selector__list__content__first-section__item font--caption">
+                      {{ bundleAccount?.msisdn | phoneNumber }}
+                    </span>
+                  } @else {
+                    <div>
+                      <span class="status-indicator status-indicator--with-icon">
+                        <i class="icon icon-sm icon-sim-card text-weight--xxs color-mid-grey"></i>
+                        {{ 'ng.account-selector.lbl.msisdn' | translate }}
+                      </span>
+                    </div>
+                  }
+                </div>
+                @if (!bundleAccount?.usage?.isGroupBundleUsage && showGroupView) {}
+                <div class="selector__list__content__second-section font--caption">
+                  @if (!bundleAccount?.usage?.isGroupBundleUsage && showGroupView) {
+                    <ng-container>
+                      <span class="selector__list__content__second-section__item">
+                        @if (bundleAccount?.usage?.shared?.data[0]?.usedUnits !== '0') {
+                          <span>
+                            {{ bundleAccount?.usage?.shared?.data[0]?.usedUnits }}
+                            @if (!bundleAccount?.usage?.shared?.data[0]?.usedUnitType) {
+                              <span>
+                                {{ bundleAccount?.usage?.shared?.data[0]?.unitType }}
+                              </span>
+                            }
+                            @if (bundleAccount?.usage?.shared?.data[0]?.usedUnitType) {
+                              <span>
+                                {{ bundleAccount?.usage?.shared?.data[0]?.usedUnitType }}
+                              </span>
+                            }
+                          </span>
+                        }
+                      </span>
+                      <span class="selector__list__content__second-section__item">
+                        @if (
+                          bundleAccount?.usage?.shared?.data[0]?.usedUnits !== '0' &&
+                          bundleAccount?.usage?.outOfBundle?.usedUnits !== '0'
+                        ) {
+                          <span>|</span>
+                        }
+                      </span>
+                      <span class="selector__list__content__second-section__item last-item">
+                        @if (bundleAccount?.usage?.outOfBundle?.usedUnits !== '0') {
+                          <span>
+                            {{
+                              'ng.account-selector.lbl.monetary-balance'
+                                | translate: { value: bundleAccount?.usage?.outOfBundle?.usedUnits }
+                            }}
+                          </span>
+                        }
+                      </span>
+                    </ng-container>
+                  }
+                </div>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="hide-from-md" (click)="toggleSelector()">
+        <div class="form-group">
+          <div class="select-dropdown-section dropdown--with-multiple-select-labels">
+            <select #mySelect class="form-control select-dropdown" (change)="onSelectAccount(mySelect.value)">
+              @for (bundleAccount of bundleAccounts; track bundleAccount) {
+                <option [value]="bundleAccount?.identifier">
+                  @if (bundleAccount?.pid || !bundleAccount?.identifier) {
+                    <span>{{ getNameByLabel(bundleAccount?.label) | translate }}</span>
+                  }
+                  &nbsp;
+                  @if (!bundleAccount?.isDataOnlyPlan) {
+                    <span>{{ bundleAccount?.identifier | phoneNumber }}</span>
+                  }
+                  &nbsp;
+                  @if (bundleAccount?.isDataOnlyPlan) {
+                    <span class="selector-list__content__badge-section">
+                      <span class="status-indicator status-indicator--with-icon">
+                        <i class="icon icon-sm icon-sim-card text-weight--xxs color-mid-grey"></i>
+                        {{ 'ng.account-selector.lbl.msisdn' | translate }}
+                      </span>
+                    </span>
+                  }
+                  @if (!bundleAccount?.usage?.isGroupBundleUsage && showGroupView) {
+                    <div>
+                      @if (bundleAccount?.usage?.shared?.data[0]?.usedUnits !== '0') {
+                        <div>
+                          {{ bundleAccount?.usage?.shared?.data[0]?.usedUnits }}&nbsp;
+                          {{ bundleAccount?.usage?.shared?.data[0]?.unitType }}
+                        </div>
+                      }
+                      @if (
+                        bundleAccount?.usage?.shared?.data[0]?.usedUnits !== '0' &&
+                        bundleAccount?.usage?.outOfBundle?.usedUnits !== '0'
+                      ) {
+                        <div>|</div>
+                      }
+                      @if (bundleAccount?.usage?.outOfBundle?.usedUnits !== '0') {
+                        <div>
+                          {{
+                            'ng.account-selector.lbl.monetary-balance'
+                              | translate: { value: bundleAccount?.usage?.outOfBundle?.usedUnits }
+                          }}
+                        </div>
+                      }
+                    </div>
+                  }
+                </option>
+              }
+            </select>
+
+            <div class="select-dropdown__content pl--s">
+              <div
+                class="select-dropdown__content__first-section display--flex--md display--none align-items--center my--xxxs">
+                @if (
+                  asProductSubscriptions(selectedAccount)?.pid || !asProductSubscriptions(selectedAccount)?.identifier
+                ) {
+                  <span class="select-dropdown__content__first-section__item">
+                    {{ getNameByLabel(asProductSubscriptions(selectedAccount)?.label) | translate }}
+                  </span>
+                }
+                @if (!asProductSubscriptions(selectedAccount)?.isDataOnlyPlan) {
+                  <span class="select-dropdown__content__first-section__item">
+                    {{ asProductSubscriptions(selectedAccount)?.identifier | phoneNumber }}
+                  </span>
+                } @else {
+                  <div>
+                    <span class="status-indicator status-indicator--with-icon">
+                      <i class="icon icon-sm icon-sim-card text-weight--xxs color-mid-grey"></i>
+                      {{ 'ng.account-selector.lbl.msisdn' | translate }}
+                    </span>
+                  </div>
+                }
+              </div>
+              @if (
+                asProductSubscriptions(selectedAccount)?.usage &&
+                !asProductSubscriptions(selectedAccount)?.usage?.isGroupBundleUsage &&
+                showGroupView
+              ) {
+                <div class="select-dropdown__content__second-section display--flex--md display--none">
+                  @if (asProductSubscriptions(selectedAccount)?.usage?.shared?.data[0]?.usedUnits !== '0') {
+                    <span class="select-dropdown__content__second-section__item">
+                      {{ asProductSubscriptions(selectedAccount)?.usage?.shared?.data[0].usedUnits }}&nbsp;
+                      {{ asProductSubscriptions(selectedAccount)?.usage?.shared?.data[0].unitType }}
+                    </span>
+                  }
+                  @if (
+                    asProductSubscriptions(selectedAccount)?.usage?.shared?.data[0]?.usedUnits !== '0' &&
+                    asProductSubscriptions(selectedAccount)?.usage?.outOfBundle?.usedUnits !== '0'
+                  ) {
+                    <span class="select-dropdown__content__second-section__item">|</span>
+                  }
+                  @if (asProductSubscriptions(selectedAccount)?.usage?.outOfBundle?.usedUnits !== '0') {
+                    <span class="selector__list__content__second-section__item color-red">
+                      {{
+                        'ng.account-selector.lbl.monetary-balance'
+                          | translate: { value: asProductSubscriptions(selectedAccount)?.usage?.outOfBundle?.usedUnits }
+                      }}
+                    </span>
+                  }
+                </div>
+              }
+            </div>
+            @if (bundleAccounts.length > 1) {
+              <div
+                class="icon position--absolute text--m text-weight--g"
+                [ngClass]="isSelectorOpen ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,20 @@
+{
+  "url": "http://localhost:8080/oauth/userdetails",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "customer_number": "1308895363",
+    "identity_id": "818105739",
+    "username": "Member_1308895363_wrkflo@telenetgroup.be",
+    "login_alias": "6b4a4318-51e2-42d4-aab8-f058ec3a8921",
+    "first_name": "Alex",
+    "last_name": "Vincent",
+    "scopes": ["D_usagelimits:p"],
+    "explicit_login": true,
+    "narrowed_scope": false,
+    "bss_system": "NETCRACKER",
+    "auth_age": 4,
+    "is_pid": true,
+    "role": "MEMBER"
+  }
+}

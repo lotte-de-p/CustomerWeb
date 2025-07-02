@@ -1,0 +1,31 @@
+{
+  "totalNumberOfTransactions": 10,
+  "transactions": [
+    {
+      "serviceName": "applestore",
+      "companyId": 111393,
+      "date": "2023-10-17T10:56:24",
+      "price": "0.01",
+      "priceUnit": "EUR",
+      "description": "Payment Apple Music.",
+      "serviceTranslation": {
+        "en": "Apple Music",
+        "nl": "Apple Muziek",
+        "fr": "Apple Musique"
+      }
+    },
+    {
+      "serviceName": "googleplay",
+      "companyId": 111394,
+      "date": "2023-10-18T10:56:24",
+      "price": "12.99",
+      "priceUnit": "EUR",
+      "description": "Payment Apple Music.",
+      "serviceTranslation": {
+        "en": "Youtube Music",
+        "nl": "Youtube Muziek",
+        "fr": "Youtube Musique"
+      }
+    }
+  ]
+}

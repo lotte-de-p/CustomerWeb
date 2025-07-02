@@ -1,0 +1,25 @@
+@if (isLoading$ | async) {
+  <tg-activate-sim-management-activation-ui-skeleton></tg-activate-sim-management-activation-ui-skeleton>
+} @else {
+  @if (activationStep$ | async; as activationStep) {
+    @if (activationStep === ActivationStep.VALIDATION) {
+      <tg-sim-management-sim-activation-validation-step
+        [imagePath]="imagePath"
+        [activationParams]="activationParams"
+        [mobileLineDetailsUrl]="mobileLineDetailsUrl">
+      </tg-sim-management-sim-activation-validation-step>
+    }
+
+    @if (activationStep === ActivationStep.PORTING) {
+      <tg-sim-management-sim-activation-porting-step [imagePath]="imagePath" [activationParams]="activationParams">
+      </tg-sim-management-sim-activation-porting-step>
+    }
+
+    @if (activationStep === ActivationStep.TERMS_AND_CONDITIONS) {
+      <tg-sim-management-sim-activation-terms-and-conditions-step
+        [imagePath]="imagePath"
+        [activationParams]="activationParams">
+      </tg-sim-management-sim-activation-terms-and-conditions-step>
+    }
+  }
+}

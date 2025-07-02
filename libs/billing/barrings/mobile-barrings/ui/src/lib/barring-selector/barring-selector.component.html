@@ -1,0 +1,130 @@
+<div class="barring-selector">
+  @if (
+    !isReadOnly &&
+    !disabledByFraud &&
+    (groupCode === ALL_INCOMING_AND_OUTGOING_GROUP || !globalBarringEnabled) &&
+    !suspendedNumber
+  ) {
+    <div class="button button--secondary button--alternate" (click)="slideMenu(true, $event)">
+      {{ 'ng.mobile-barrings.selector-button' | translate }}
+    </div>
+  }
+
+  <tg-slide-menu
+    (closeMenu)="cancelAction()"
+    [showMenu]="showMenu"
+    [isStickyFooter]="true"
+    [title]="'ng.mobile-barrings.group.title.' + groupCode | translate">
+    <div class="display--flex flex-direction--column mt--m px--m">
+      <div class="barrings">
+        @for (barSetting of barSettings; track barSetting.id) {
+          <div class="mb--l">
+            <label
+              class="color-black form__checkbox-v2--switch display--flex-inline position--relative flex-wrap--nowrap width--full"
+              [ngClass]="{
+                'pointer-events--none': globalBarringEnabled && barSetting.code !== ALL_INCOMING_AND_OUTGOING
+              }"
+              for="{{ barSetting.id }}">
+              <div class="display--flex justify-content--between">
+                <div
+                  class="text-flow text-flow--h6"
+                  [ngClass]="{
+                    'color-mid-grey': globalBarringEnabled && barSetting.code !== ALL_INCOMING_AND_OUTGOING
+                  }">
+                  {{ 'ng.mobile-barrings.barring-name.' + barSetting.code | translate }}
+                </div>
+                <div>
+                  <input
+                    class="form__checkbox-v2--switch__input position--absolute opacity--full-transparency height--full"
+                    type="checkbox"
+                    [checked]="barSetting.isBarred"
+                    (change)="activateBarring(barSetting)"
+                    name="checkbox-switch"
+                    [disabled]="barSetting.code === ALL_INCOMING_AND_OUTGOING ? false : globalBarringEnabled"
+                    id="{{ barSetting.id }}" />
+                  <span
+                    class="form__checkbox-v2--switch__toggle border-radius--all--l display--inline-flex align-items--center justify-content--around position--relative box-sizing--content-box"></span>
+                </div>
+              </div>
+            </label>
+            @if (
+              ('ng.mobile-barrings.barring-subtitle.' + barSetting.code | translate) !==
+              'ng.mobile-barrings.barring-subtitle.' + barSetting.code
+            ) {
+              <div class="barring-settings-subtitle font--body-small color-shade_72 mt--xxs pb--xs">
+                {{ 'ng.mobile-barrings.barring-subtitle.' + barSetting.code | translate }}
+              </div>
+            }
+            @if (
+              barSetting.code === 'all-incoming-and-outgoing' ||
+              barSetting.code === 'all-incoming-and-outgoing-while-roaming'
+            ) {
+              <div class="mt--m divider divider--s__very-light-grey"></div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="divider divider--s__very-light-grey"></div>
+        <div class="footer-slide display--flex pt--l">
+          <button
+            [attr.data-cy]="'mobile-barring-selector-cancel'"
+            class="button-override button button--secondary button--alternate button--fullwidth mr--m"
+            (click)="cancelAction()">
+            {{ 'ng.mobile-barrings.selector.cancel' | translate }}
+          </button>
+          <button
+            class="button-override button button--primary button--alternate button--fullwidth"
+            [attr.data-cy]="'mobile-barring-selector-save'"
+            (click)="save()">
+            {{ 'ng.mobile-barrings.selector.save' | translate }}
+          </button>
+        </div>
+      </div>
+    </footer>
+  </tg-slide-menu>
+
+  <tg-slide-menu
+    [hideCloseButton]="true"
+    [cancelClickOutside]="true"
+    [showMenu]="showWarningScreen"
+    [title]="
+      globalBarringEnabled
+        ? ('ng.mobile-barrings.add-warning' | translate)
+        : ('ng.mobile-barrings.remove-warning' | translate)
+    ">
+    <div class="display--flex flex-direction--column px--m">
+      <div class="barrings">
+        {{
+          globalBarringEnabled
+            ? ('ng.mobile-barrings.add-warning-description' | translate)
+            : ('ng.mobile-barrings.remove-warning-description' | translate)
+        }}
+      </div>
+      <footer>
+        <div class="footer">
+          <div class="footer-slide display--flex pt--l">
+            <button
+              [attr.data-cy]="'mobile-barring-selector-cancel-warning'"
+              class="button-override button button--secondary button--alternate button--fullwidth mr--m"
+              (click)="cancelWarning($event)">
+              {{ 'ng.mobile-barrings.selector.cancel' | translate }}
+            </button>
+            <button
+              [attr.data-cy]="'mobile-barring-selector-save-warning'"
+              class="button-override button button--primary button--alternate button--fullwidth"
+              (click)="saveWarning($event)">
+              {{
+                globalBarringEnabled
+                  ? ('ng.mobile-barrings.add-warning-save' | translate)
+                  : ('ng.mobile-barrings.remove-warning-save' | translate)
+              }}
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </tg-slide-menu>
+</div>

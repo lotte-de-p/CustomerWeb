@@ -1,0 +1,38 @@
+include:
+  - local: '/tools/gitlab/templates/npm-package.yml'
+  - local: '/tools/gitlab/templates/build.yml'
+  - local: '/tools/gitlab/templates/testing.yml'
+  - local: '/tools/gitlab/templates/sonar.yml'
+  - local: '/tools/gitlab/templates/harbor.yml'
+  - local: '/tools/gitlab/templates/patch.yml'
+  - local: '/tools/gitlab/templates/prettier.yml'
+  - local: '/tools/gitlab/templates/linting.yml'
+  - local: '/tools/gitlab/templates/flux-ci.yml'
+  - local: '/tools/gitlab/templates/version.yml'
+
+stages:
+  - prepare
+  - quality
+  - build
+  - package
+  - deploy to upgrade (edp)
+  - deploy to dev (dvp, int, sup)
+  - tag images for release (done by devs)
+  - patch for release (done by devs)
+  - deploy to stage (uat, trg)
+  - deploy by operators prd
+workflow:
+  name: Downstream pipeline for ${CLIENT_PROJECT}:${VERSION}
+default:
+  tags:
+    - aws
+    - shared
+
+cache:
+  - key:
+      files:
+        - package.json
+        - package-lock.json
+    policy: pull # prevent subsequent jobs from modifying cache
+    paths:
+      - node_modules/

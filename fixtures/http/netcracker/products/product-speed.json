@@ -1,0 +1,26 @@
+{
+  "nodeId": "10000516",
+  "nodeName": "H27NB04OLC7",
+  "nodeCategory": "0_500",
+  "profiles": [
+    {
+      "profileId": "TNET.FREESURF",
+      "upstream": {
+        "speedProfile": {
+          "minimum": "7.5",
+          "normal": "9",
+          "maximum": "10",
+          "advertised": "10"
+        }
+      },
+      "downstream": {
+        "speedProfile": {
+          "minimum": "75",
+          "normal": "90",
+          "maximum": "100",
+          "advertised": "100"
+        }
+      }
+    }
+  ]
+}

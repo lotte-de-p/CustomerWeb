@@ -1,0 +1,76 @@
+{
+  "id": "9161437751313683751",
+  "identifier": "0483523244",
+  "msisdn": "32483523244",
+  "accountNumber": "105151335",
+  "secondaryAccountNumber": "105151332",
+  "secondaryBillingAddressId": "9150757953013640830",
+  "label": "Mobile Connect",
+  "locationId": "9158327075113606997",
+  "specurl": "https://api.prd.base.be/omapi/public/product/BFLC0001",
+  "status": "ACTIVE",
+  "chars": {
+    "hasVoiceMailBox": "true"
+  },
+  "handsets": [],
+  "options": [
+    {
+      "parentId": "0483523244",
+      "label": "Voice Turkey 100 min",
+      "specurl": "https://api.prd.base.be/omapi/public/product/FVTU0100",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "10,00",
+        "recurrentTotal": "10,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "10,00",
+          "recurrentTotal": "10,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2021-10-12T15:59:09+02:00",
+        "price": {}
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": false,
+      "isIncluded": false
+    }
+  ],
+  "price": {
+    "currency": "EUR",
+    "recurrentDiscounted": "29,00",
+    "recurrentTotal": "29,00",
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "29,00",
+      "recurrentTotal": "29,00",
+      "recurrentDiscount": "0,00"
+    },
+    "recurrentDiscount": "0,00"
+  },
+  "splitBillProfile": {
+    "id": "9161437684113268411",
+    "name": "New Split Billing Profile #1"
+  },
+  "summaryPrices": {
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "39,00",
+      "recurrentTotal": "39,00",
+      "recurrentDiscount": "0,00"
+    }
+  },
+  "addressId": "9150757952913637761",
+  "discountItems": {
+    "discounts": []
+  },
+  "productType": "mobile",
+  "activationDate": "2021-09-12T15:59:55+02:00"
+}

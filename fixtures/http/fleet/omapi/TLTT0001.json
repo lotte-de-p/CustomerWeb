@@ -1,0 +1,117 @@
+{
+  "product": {
+    "externalProductCode": "TLTT0001",
+    "weight": 10,
+    "apps": [],
+    "category": ["Fleet Options with ETF", "Other data options"],
+    "subcategory": {
+      "name": "World Data",
+      "weight": 8,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "World Data"
+        },
+        {
+          "locale": "nl",
+          "name": "World Data"
+        },
+        {
+          "locale": "fr",
+          "name": "World Data"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "500",
+            "unit": "MB",
+            "visible": true,
+            "labelkey": "Roam World Data - 500 Mb",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "500 MB mobile data for use in all countries (not valid for satellite connections)"
+              },
+              {
+                "locale": "nl",
+                "name": "500 MB Data voor gebruik in alle landen (uitgezonderd  satelliet verbindingen)"
+              },
+              {
+                "locale": "fr",
+                "name": "500 MB de data mobiles pour une consommation dans tous les pays  (excepté connection satellite)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "39,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "TLTT0001",
+    "labelkey": "World Data 500 MB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "World Data 500 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-500-mb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "World Data 500 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-500-mb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "World Data 500 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-500-mb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "500 MB World Data"
+        },
+        {
+          "locale": "nl",
+          "name": "500 MB World Data"
+        },
+        {
+          "locale": "fr",
+          "name": "500 MB World Data"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

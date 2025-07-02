@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tsconfig.lib.base.json",
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.lib.prod.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./cypress/tsconfig.cy.json"
+    }
+  ]
+}

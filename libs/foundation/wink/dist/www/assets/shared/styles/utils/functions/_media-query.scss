@@ -1,0 +1,90 @@
+/*
+* Layout mixins
+*/
+
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+
+@function breakpoint($size) {
+  @return map-get($breakpoints, $size);
+}
+@function headerBreakpoint($size) {
+  @return map-get($header-breakpoints, $size);
+}
+
+@function em-correction($value: false) {
+  @return $value - (calc($value / 100) * 37.5) * 1em;
+}
+
+$breakpoints: (
+  'sm': em-correction(57.6),
+  'md': em-correction(76.9),
+  'lg': em-correction(119.2),
+);
+
+$header-breakpoints: (
+  'md': em-correction(102.4),
+);
+
+@mixin media($size) {
+  @if $size == 'from-sm' {
+    @media only screen and (min-width: breakpoint('sm')) {
+      @content;
+    }
+  } @else if $size == 'from-md' {
+    @media only screen and (min-width: breakpoint('md')) {
+      @content;
+    }
+  } @else if $size == 'from-lg' {
+    @media only screen and (min-width: breakpoint('lg')) {
+      @content;
+    }
+  }
+  @if $size == 'until-sm' {
+    @media only screen and (max-width: calc(breakpoint('sm') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'until-md' {
+    @media only screen and (max-width: calc(breakpoint('md') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'until-lg' {
+    @media only screen and (max-width: calc(breakpoint('lg') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'sm-md' {
+    @media only screen and (min-width: breakpoint('sm')) and (max-width: calc(breakpoint('md') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'md-lg' {
+    @media only screen and (min-width: breakpoint('md')) and (max-width: calc(breakpoint('lg') - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-header($size) {
+  @if $size == 'from-md' {
+    @media only screen and (min-width: headerBreakpoint('md')) {
+      @content;
+    }
+  } @else if $size == 'from-lg' {
+    @media only screen and (min-width: breakpoint('lg')) {
+      @content;
+    }
+  }
+  @if $size == 'until-md' {
+    @media only screen and (max-width: calc(headerBreakpoint('md') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'until-lg' {
+    @media only screen and (max-width: calc(breakpoint('lg') - 1px)) {
+      @content;
+    }
+  } @else if $size == 'md-lg' {
+    @media only screen and (min-width: headerBreakpoint('md')) and (max-width: calc(breakpoint('lg') - 1px)) {
+      @content;
+    }
+  }
+}

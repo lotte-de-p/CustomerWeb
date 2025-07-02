@@ -1,0 +1,182 @@
+<div class="Container background-white px--m pt--l pb--m p--l--sm" [ngClass]="isLast ? 'mb--m' : 'mb--xxs'">
+  <div class="display--flex justify-content--between flex-direction--row--md flex-direction--column">
+    <div>
+      <div class="display--flex--md align-items--center--md">
+        <div class="hardware-image--container m--auto text-align--center">
+          @if (data.device.imageUrl) {
+            <img
+              data-testid="hardware-discount-device-image"
+              class="display--block display--inline--md m--auto m--n--md hardware--image"
+              [src]="data.device.imageUrl" />
+          } @else {
+            <img
+              appHardwareDiscountDashboardImageSrcInterceptor
+              data-testid="hardware-discount-no-device-image"
+              class="display--block display--inline--md m--auto m--n--md hardware--image"
+              src="/assets/no-device-image.svg"
+              [moduleId]="'tg-hardware-discount'" />
+          }
+        </div>
+        <div class="ml--l--md mt--n--md mt--m">
+          @if (data.device.manufacturer) {
+            <div data-testid="hardware-discount-device-brand" class="color-shade_72 font--caption">
+              {{ data.device.manufacturer }}
+            </div>
+          }
+          <h4 data-testid="hardware-discount-device-name" class="heading--nomargin">{{ data.device.name }}</h4>
+          <wink-pricing
+            data-testid="hardware-discount-price"
+            theme="telenet-light"
+            brand="telenet"
+            appearance="text"
+            price="{{ data.discountedPrice | price }}"
+            priceStrikethrough="{{ data.originalPrice | price }}"
+            alignment="left"
+            type="product price"
+            class="hydrated">
+          </wink-pricing>
+          <div class="mt--n--md mt--m hide-from-md">
+            <ng-container *ngTemplateOutlet="badge"></ng-container>
+          </div>
+          <div class="display--flex mt--l">
+            @if (data.deliveryOrder) {
+              @if (data.deliveryOrder.expectedDeliveryDate) {
+                <div class="mr--l" data-testid="hardware-discount-planned-delivery-date">
+                  <div class="font--caption color-shade_72">
+                    {{ 'ng.hardware-discount.planned-delivery-date' | translate }}
+                  </div>
+                  <h6 class="heading--nomargin">{{ data.deliveryOrder.expectedDeliveryDate | date: 'dd/MM/yyyy' }}</h6>
+                </div>
+              }
+              @if (data.deliveryOrder.tracking) {
+                <div data-testid="hardware-discount-parcel-tracking-order">
+                  <div class="font--caption color-shade_72">
+                    {{ 'ng.hardware-discount.tracking-order' | translate }}
+                  </div>
+                  <div class="display--flex cursor--pointer" (click)="redirectToTrackingUrl()">
+                    <div class="tracking-number text-font-family--t6">{{ data.deliveryOrder.tracking.number }}</div>
+                    <wink-icon
+                      class="ml--xxxs"
+                      appearance="default"
+                      icon="external-link"
+                      size="md"
+                      brand="telenet"></wink-icon>
+                  </div>
+                </div>
+              }
+            } @else {
+              <div data-testid="hardware-discount-remaining-amount">
+                <div class="font--caption color-shade_72">
+                  {{ 'ng.hardware-discount.remaining-amount' | translate }}
+                </div>
+                <h6 class="heading--nomargin">&euro; {{ data.contract.remainingValue | price }}</h6>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt--n--md mt--m hide-until-md">
+      <ng-container *ngTemplateOutlet="badge"></ng-container>
+    </div>
+  </div>
+  <div class="mt--l divider divider--s__light-grey"></div>
+  <div class="display--flex--md justify-content--between pt--l align-items--center">
+    <div class="display--flex align-items--center mb--m mb--n--md">
+      <wink-button
+        (click)="downloadInvoices()"
+        data-testid="hardware-discount-show-invoice-btn"
+        text="{{ 'ng.hardware-discount.show-invoice-btn' | translate }}"
+        type="button"
+        appearance="tertiary"
+        size="md"
+        icon-position="left"
+        icon="bill"
+        element="a">
+      </wink-button>
+      @if (loading) {
+        <div data-testid="hardware-discount-loading" class="loading--circular ml--s"></div>
+      }
+    </div>
+    <div>
+      <wink-button
+        (click)="showRemainingDiscount()"
+        data-testid="hardware-discount-show-remaining-discount-btn"
+        element="a"
+        text="{{ discountButtonText | translate }}"
+        type="button"
+        appearance="secondary"
+        icon="{{ chevronIcon }}"
+        icon-position="right"
+        width="full">
+      </wink-button>
+    </div>
+  </div>
+
+  <!-- Step Tracker -->
+  @if (showDiscount) {
+    <div
+      class="horizontal-step-tracker-centered width--full pt--m pt--l--md"
+      data-testid="hardware-discount-device-discount-tracker">
+      <ul class="steps-tracker">
+        <li
+          class="steps-tracker__step horizontal-center-align center-align__column tracker-step"
+          [ngClass]="
+            depreciation.status === 'COMPLETED'
+              ? 'steps-tracker__step--completed'
+              : depreciation.status === 'ACTIVE'
+                ? 'steps-tracker__step--active'
+                : 'steps-tracker__step'
+          "
+          *ngFor="let depreciation of data.depreciations; let i = index">
+          <div class="steps-tracker__step__content">
+            <div class="steps-tracker__step__content__left text--m text-weight--g text-align--center">
+              <div [ngClass]="depreciation.status === 'COMPLETED' ? 'color-shade_48' : 'color-shade_72'">
+                <span class="font--caption-small hide-until-md">{{ depreciation.date | date: 'dd/MM/yyyy' }}</span>
+                <span class="font--body-regular hide-from-md">{{ depreciation.date | date: 'dd/MM/yyyy' }}</span>
+              </div>
+            </div>
+
+            <div
+              class="steps-tracker__step__content__icon text-align--center m--m"
+              [ngClass]="
+                depreciation.status === 'COMPLETED'
+                  ? 'background-shape--squarcle--completed'
+                  : 'background-shape--squarcle'
+              ">
+              <i [ngClass]="depreciation.status === 'COMPLETED' ? 'icon-tick' : ''"></i>
+            </div>
+
+            <div class="steps-tracker__step__content__right text--s text-align--center">
+              <div [ngClass]="depreciation.status === 'COMPLETED' ? 'color-shade_48' : ''">
+                <span class="font--caption-bold hide-until-md"> &euro;{{ depreciation.remainingValue | price }} </span>
+                <span class="text-flow--h6 hide-from-md"> &euro;{{ depreciation.remainingValue | price }} </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  }
+</div>
+
+<ng-template #badge>
+  @if (data.deliveryOrder) {
+    <wink-badge
+      data-testid="hardware-discount-order-in-progress"
+      text="{{ 'ng.hardware-discount.order-in-progress' | translate }}"
+      size="md"
+      is-bold
+      background="dark"></wink-badge>
+  } @else {
+    <wink-badge
+      data-testid="hardware-discount-duration-left"
+      text="{{ data.contract.remainingMonths }} {{ 'ng.hardware-discount.of' | translate }} {{
+        data.contract.obligationInMonths
+      }} {{ 'ng.hardware-discount.months-left' | translate }}"
+      size="md"
+      is-bold
+      background="accent3"
+      brand="telenet"></wink-badge>
+  }
+</ng-template>

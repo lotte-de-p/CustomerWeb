@@ -1,0 +1,20 @@
+{
+  "name": "sales-order-configurator-feature-notification",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/order-configurator/shared/notification/feat-notification/src",
+  "prefix": "lib",
+  "tags": ["type:feature", "scope:order-configurator-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/shared/notification/feat-notification/**/*.ts",
+          "libs/sales/order-configurator/shared/notification/feat-notification/**/*.html"
+        ]
+      }
+    }
+  }
+}

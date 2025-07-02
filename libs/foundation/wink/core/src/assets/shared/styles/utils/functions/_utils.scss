@@ -1,0 +1,16 @@
+@mixin generate-host-classes-with-prefix-from-map($cssProperty, $classesPostFixesMap) {
+  @each $cssPropertyValue in $classesPostFixesMap {
+    :host(.#{$cssProperty}-#{$cssPropertyValue}) {
+      #{$cssProperty}: #{$cssPropertyValue};
+    }
+  }
+  @each $bp, $val in $breakpoints {
+    @each $cssPropertyValue in $classesPostFixesMap {
+      @include media($bp) {
+        :host(.#{$cssProperty}-#{$cssPropertyValue}-#{$bp}) {
+          #{$cssProperty}: #{$cssPropertyValue};
+        }
+      }
+    }
+  }
+}

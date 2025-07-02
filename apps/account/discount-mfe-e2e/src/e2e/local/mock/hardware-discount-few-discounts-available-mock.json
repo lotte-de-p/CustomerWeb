@@ -1,0 +1,176 @@
+{
+  "availableSlots": 3,
+  "totalSlots": 5,
+  "creditCheck": "OK",
+  "usedDiscounts": [
+    {
+      "device": {
+        "manufacturer": null,
+        "name": "iPhone 15 Pro",
+        "imageUrl": null,
+        "itemCode": null
+      },
+      "deliveryOrder": {
+        "id": "D123",
+        "expectedDeliveryDate": "2024-09-23T12:05:05+02:00",
+        "tracking": {
+          "number": "44212537383",
+          "url": "https://tracking.com/12345"
+        }
+      },
+      "originalPrice": 1299.0,
+      "discountedPrice": 1099.0,
+      "invoice": {
+        "billingAccountNumber": "6579123",
+        "documentReferenceNumber": "245900090524"
+      },
+      "contract": {
+        "obligationInMonths": 12,
+        "remainingMonths": 10,
+        "remainingValue": 83.3333
+      },
+      "depreciations": [
+        {
+          "date": "2024-10-23",
+          "remainingValue": 100.0,
+          "status": "ACTIVE"
+        },
+        {
+          "date": "2024-11-23",
+          "remainingValue": 91.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2024-12-23",
+          "remainingValue": 83.3333,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-01-23",
+          "remainingValue": 75.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-02-23",
+          "remainingValue": 66.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-03-23",
+          "remainingValue": 58.3333,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-04-23",
+          "remainingValue": 50.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-05-23",
+          "remainingValue": 41.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-06-23",
+          "remainingValue": 33.3333,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-07-23",
+          "remainingValue": 25.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-08-23",
+          "remainingValue": 16.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-09-23",
+          "remainingValue": 8.3333,
+          "status": "PENDING"
+        }
+      ]
+    },
+    {
+      "device": {
+        "manufacturer": "Samsung",
+        "name": "S22 Ultra",
+        "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/92/87/LD0005928708_1_0005928719.jpg"
+      },
+      "originalPrice": 1199.0,
+      "discountedPrice": 999.0,
+      "invoice": {
+        "billingAccountNumber": "6579124",
+        "documentReferenceNumber": "245900090525"
+      },
+      "contract": {
+        "obligationInMonths": 12,
+        "remainingMonths": 10,
+        "remainingValue": 83.3333
+      },
+      "depreciations": [
+        {
+          "date": "2024-10-23",
+          "remainingValue": 100.0,
+          "status": "COMPLETED"
+        },
+        {
+          "date": "2024-11-23",
+          "remainingValue": 91.6667,
+          "status": "COMPLETED"
+        },
+        {
+          "date": "2024-12-23",
+          "remainingValue": 83.3333,
+          "status": "ACTIVE"
+        },
+        {
+          "date": "2025-01-23",
+          "remainingValue": 75.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-02-23",
+          "remainingValue": 66.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-03-23",
+          "remainingValue": 58.3333,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-04-23",
+          "remainingValue": 50.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-05-23",
+          "remainingValue": 41.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-06-23",
+          "remainingValue": 33.3333,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-07-23",
+          "remainingValue": 25.0,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-08-23",
+          "remainingValue": 16.6667,
+          "status": "PENDING"
+        },
+        {
+          "date": "2025-09-23",
+          "remainingValue": 8.3333,
+          "status": "PENDING"
+        }
+      ]
+    }
+  ]
+}

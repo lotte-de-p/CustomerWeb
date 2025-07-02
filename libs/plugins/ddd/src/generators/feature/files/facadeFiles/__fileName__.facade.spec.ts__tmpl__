@@ -1,0 +1,22 @@
+import { TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
+import { <%= facadeClassName %> } from './<%= fileName %>.facade';
+import { EffectsModule } from '@ngrx/effects';
+import { <%= className %>NgrxModule } from '../+state/<%= fileName %>-ngrx.module';
+
+describe(' <%= facadeClassName %>', () => {
+  let facade:  <%= facadeClassName %>;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [StoreModule.forRoot(), EffectsModule.forRoot(), <%= className %>NgrxModule],
+      providers: [
+        <%= facadeClassName %>,
+      ],
+    });
+    facade = TestBed.inject( <%= facadeClassName %>);
+  });
+
+  it('should be created', () => {
+    expect(facade).toBeTruthy();
+  });
+});

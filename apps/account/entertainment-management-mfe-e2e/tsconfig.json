@@ -1,0 +1,31 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../entertainment-management-mfe/**/*.ts",
+    "../entertainment-management-mfe/**/*.js",
+    "../../../libs/account/entertainment-management/**/*.ts",
+    "../../../libs/account/entertainment-management/**/*.js"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

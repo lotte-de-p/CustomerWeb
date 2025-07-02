@@ -1,0 +1,1 @@
+{"version":3,"file":"success-flow-message.model.d.ts","sourceRoot":"","sources":["../../../src/lib/model/success-flow-message.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,0BAA0B,CAAC;AAG3D,qBAAa,uBAAwB,SAAQ,eAAe;gBAC9C,gBAAgB,EAAE,MAAM,EAAE,GAAG,EAAE,MAAM,EAAE,iBAAiB,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,OAAO,CAAC;CAG/F"}

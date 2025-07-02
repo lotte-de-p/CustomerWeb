@@ -1,0 +1,26 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": ["es2020", "es2017", "dom"],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["cypress", "node"],
+    "paths": {
+      "@product-mfe/*": ["apps/account/product-mfe/src/*"],
+      "@product-mfe-global/*": ["apps/account/product-mfe/global/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../product-mfe/**/*.ts",
+    "../product-mfe/**/*.js"
+  ]
+}

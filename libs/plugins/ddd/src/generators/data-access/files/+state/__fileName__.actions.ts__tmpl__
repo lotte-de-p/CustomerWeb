@@ -1,0 +1,10 @@
+import { createAction, props } from '@ngrx/store';
+import { <%= dataAccessNameCapitalized %> } from '../<%= name %>.model';
+
+export const get<%= dataAccessNameCapitalized %>List = createAction('[<%= domain %> - <%= name %>] get <%= name %> list');
+export const get<%= dataAccessNameCapitalized %>ListSuccessAction = createAction(
+  '[<%= name %>] get <%= name %> list success response',
+  props<{ <%= propertyName %>List: <%= dataAccessNameCapitalized %>[] }>()
+);
+
+export const getErrorAction = createAction('[<%= name %>] get <%= name %> list Error', props<{ error: Error }>());

@@ -1,0 +1,59 @@
+include:
+  - local: '/tools/gitlab/images/distributed.yml'
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.build:monorepo:
+  extends: .distributed-base
+  stage: build
+  script:
+    - nx affected:build --base=$NX_BASE --head=$NX_HEAD --parallel=1
+  only: !reference [.allowed-branches]
+
+.build:app:
+  image: $NODE_BUILD_IMAGE
+  stage: build
+  extends: .distributed
+  script:
+    - nx run $CLIENT_PROJECT:build
+
+    #      Extracting the dist folder from the project build
+    - |-
+      echo "Current CLIENT_PROJECT: $CLIENT_PROJECT"
+      PROJECT_JSON=$(npx nx show project $CLIENT_PROJECT)
+      echo "JSON Output: $PROJECT_JSON"
+      PROJECT_ROOT=$(echo "$PROJECT_JSON" | grep -o '"root":"[^"]*"' | awk -F: '{print $2}' | tr -d '"')
+      echo "Project root extracted: $PROJECT_ROOT"
+      PROJECT_DIST_FOLDER=$(find dist/apps -type f -path "*/${CLIENT_PROJECT}*/version.json" -exec dirname {} \; 2>/dev/null)
+      echo "Build dist folder: $PROJECT_DIST_FOLDER"
+
+    #     Extracting the dist folder from storybook build section
+    - |-
+      BUILD_STORYBOOK_SECTION=$( echo "$PROJECT_JSON" | sed -n '/"build-storybook":/,/},/p')
+      STORYBOOK_DIST_FOLDER=$(echo "$BUILD_STORYBOOK_SECTION" | grep -o '"outputDir":"[^"]*"' | sed 's/"outputDir":"\([^"]*\)"/\1/')
+      echo "Storybook dist folder: $STORYBOOK_DIST_FOLDER"
+
+    #      Add the variables to the environment file
+    - |-
+      echo "Client project Location: ${PROJECT_ROOT}"
+      echo "CLIENT_PROJECT_LOCATION=$PROJECT_ROOT" >> project_path.env
+      echo "PROJECT_DIST_FOLDER=$PROJECT_DIST_FOLDER" >> project_path.env
+      echo "STORYBOOK_DIST_FOLDER=$STORYBOOK_DIST_FOLDER" >> project_path.env
+      echo "LEANIX_APPLICATION_NAME=$LEANIX_APPLICATION_NAME" >> project_path.env
+  only: !reference [.allowed-branches]
+  artifacts:
+    paths:
+      - node_modules/.cache/nx
+      - dist/**
+      - apps/**/dist
+      - project_path.env
+    when: always
+    expire_in: 2 weeks
+
+.build:storybook:
+  image: $NODE_BUILD_IMAGE
+  stage: build
+  extends: .distributed
+  script:
+    - nx run $CLIENT_PROJECT:build-storybook
+  rules:
+    - when: always

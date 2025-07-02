@@ -1,0 +1,43 @@
+[
+  {
+    "key": "categoryOne",
+    "display": true,
+    "toggle": false,
+    "steps": [
+      {
+        "key": "categoryOneStepOne"
+      },
+      {
+        "key": "categoryOneStepTwo"
+      },
+      {
+        "key": "categoryOneStepThree"
+      }
+    ]
+  },
+  {
+    "key": "categoryTwo",
+    "display": true,
+    "steps": [
+      {
+        "display": true,
+        "key": "categoryTwoStepOne"
+      },
+      {
+        "display": true,
+        "key": "categoryTwoStepTwo"
+      },
+      {
+        "key": "categoryOneStepThree"
+      }
+    ]
+  },
+  {
+    "key": "categoryThree",
+    "steps": []
+  },
+  {
+    "key": "categoryFour",
+    "steps": []
+  }
+]

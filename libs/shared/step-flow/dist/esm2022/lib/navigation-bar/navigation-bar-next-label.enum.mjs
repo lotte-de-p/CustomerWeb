@@ -1,0 +1,8 @@
+export var NavigationBarNextLabelEnum;
+(function (NavigationBarNextLabelEnum) {
+    NavigationBarNextLabelEnum["START"] = "ng.step-flow.start-step-label";
+    NavigationBarNextLabelEnum["NEXT"] = "ng.step-flow.next-step-label";
+    NavigationBarNextLabelEnum["FINAL"] = "ng.step-flow.close-label";
+    NavigationBarNextLabelEnum["CONFIRM"] = "ng.step-flow.confirm-label";
+})(NavigationBarNextLabelEnum || (NavigationBarNextLabelEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2aWdhdGlvbi1iYXItbmV4dC1sYWJlbC5lbnVtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL2xpYi9uYXZpZ2F0aW9uLWJhci9uYXZpZ2F0aW9uLWJhci1uZXh0LWxhYmVsLmVudW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFOLElBQVksMEJBS1g7QUFMRCxXQUFZLDBCQUEwQjtJQUNwQyxxRUFBdUMsQ0FBQTtJQUN2QyxtRUFBcUMsQ0FBQTtJQUNyQyxnRUFBa0MsQ0FBQTtJQUNsQyxvRUFBc0MsQ0FBQTtBQUN4QyxDQUFDLEVBTFcsMEJBQTBCLEtBQTFCLDBCQUEwQixRQUtyQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBlbnVtIE5hdmlnYXRpb25CYXJOZXh0TGFiZWxFbnVtIHtcbiAgU1RBUlQgPSAnbmcuc3RlcC1mbG93LnN0YXJ0LXN0ZXAtbGFiZWwnLFxuICBORVhUID0gJ25nLnN0ZXAtZmxvdy5uZXh0LXN0ZXAtbGFiZWwnLFxuICBGSU5BTCA9ICduZy5zdGVwLWZsb3cuY2xvc2UtbGFiZWwnLFxuICBDT05GSVJNID0gJ25nLnN0ZXAtZmxvdy5jb25maXJtLWxhYmVsJyxcbn1cbiJdfQ==

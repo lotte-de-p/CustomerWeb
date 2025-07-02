@@ -1,0 +1,6 @@
+export enum SalesFlowEnum {
+  CARE = 'CARE',
+  REVIEW = 'REVIEW',
+  MARKETING = 'MARKETING',
+  PRODUCT_OPTIONS = 'PRODUCT-OPTIONS',
+}

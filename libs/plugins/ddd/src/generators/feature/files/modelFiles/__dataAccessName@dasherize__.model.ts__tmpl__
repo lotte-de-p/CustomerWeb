@@ -1,0 +1,4 @@
+export interface <%= dataAccessNameCapitalized %> {
+  id: string;
+  name: string;
+}

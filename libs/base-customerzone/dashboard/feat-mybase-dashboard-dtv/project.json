@@ -1,0 +1,20 @@
+{
+  "name": "mybase-dashboard-feat-mybase-dashboard-dtv",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/base-customerzone/dashboard/feat-mybase-dashboard-dtv/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/base-customerzone/dashboard/feat-mybase-dashboard-dtv/**/*.ts",
+          "libs/base-customerzone/dashboard/feat-mybase-dashboard-dtv/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:mybase-dashboard", "scope:mybase-dashboard-mfe", "scope:dashboard-mfe"]
+}

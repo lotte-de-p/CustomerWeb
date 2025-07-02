@@ -1,0 +1,12 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": ["**/cypress/**"],
+  "reporter": ["cobertura", "html", "json", "text", "text-summary"],
+  "check-coverage": true,
+  "include": ["apps/marketing/marketing-mfe/**", "libs/marketing/roaming-international/feat-rates/**"],
+  "report-dir": "../../../../coverage/cypress/marketing/roaming-international/rates",
+  "cwd": "../../../../"
+}

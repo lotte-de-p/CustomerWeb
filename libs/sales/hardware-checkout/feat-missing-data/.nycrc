@@ -1,0 +1,12 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": ["**/cypress/**"],
+  "reporter": ["cobertura", "html", "json", "text", "text-summary"],
+  "check-coverage": true,
+  "include": ["apps/sales-mfe/**", "/libs/sales/hardware-checkout/feat-missing-data/**"],
+  "report-dir": "../../../../coverage/cypress/sales/sales/missing-data",
+  "cwd": "../../../../"
+}

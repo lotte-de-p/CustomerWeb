@@ -1,0 +1,32 @@
+import { Prices } from './prices.interface';
+import { CharsInterface } from './chars.interface';
+import { OmapiProductInfo } from './omapi-products.interface';
+import { ContractDetailsInterface } from './contract-details.interface';
+import { DiscountItemInterface } from './discount-item.interface';
+export interface Option {
+  id?: string;
+  label: string;
+  productInfo?: OmapiProductInfo;
+  prices?: Prices;
+  price?: Prices;
+  specUrl?: string;
+  contract?: ContractDetailsInterface;
+  status: string;
+  category?: string;
+  rank?: string;
+  discountItem?: DiscountItemInterface;
+  discountItems?: DiscountItemInterface;
+  isIncluded?: boolean;
+  isSelected?: boolean;
+  hwcvpItemCode?: string;
+  isIncludedOption?: boolean;
+  isOptionRemoved?: boolean;
+  productType?: string;
+  visible?: boolean;
+  parentId: string;
+  productId?: string;
+  name?: string;
+  volume?: string;
+  isFree?: boolean;
+  chars?: CharsInterface;
+}

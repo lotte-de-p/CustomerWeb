@@ -1,0 +1,105 @@
+{
+  "id": "9160805847613018763",
+  "identifier": "YUPW000000557",
+  "accountNumber": "500502621",
+  "label": "WIGO 35GB - year upfront payment",
+  "locationId": "9160805665913010871",
+  "specurl": "https://api.int.telenet.be/omapi/public/product/YUPW0025",
+  "status": "ACTIVE",
+  "handsets": [],
+  "options": [
+    {
+      "label": "Fixed Line",
+      "specurl": "https://api.trg.telenet.be/omapi/public/product/FLIN0001",
+      "status": "ACTIVE",
+      "isIncludedOption": true,
+      "isLineLevelProduct": false,
+      "productType": "telephone"
+    },
+    {
+      "label": "Safesurf",
+      "specurl": "https://api.trg.telenet.be/omapi/public/product/OIKO0102",
+      "status": "NOT_ACTIVE",
+      "isIncludedOption": true,
+      "isLineLevelProduct": false,
+      "productType": "internet"
+    }
+  ],
+  "addressId": "9150308781213403379",
+  "productType": "bundle",
+  "children": [
+    {
+      "id": "9160805840713018763",
+      "identifier": "015373592",
+      "label": "Fixed Line",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/FLIN0001",
+      "status": "ACTIVE",
+      "handsets": [],
+      "options": [
+        {
+          "label": "Services Top-line",
+          "specurl": "https://api.int.telenet.be/omapi/public/product/FTOP0001",
+          "status": "ACTIVE",
+          "productType": "mobile",
+          "isIncludedOption": true,
+          "isLineLevelProduct": false
+        }
+      ],
+      "productType": "telephone",
+      "contentPacks": []
+    },
+    {
+      "id": "9160805841813018763",
+      "identifier": "0465079981",
+      "label": "Telenet Mobile Line",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/MBLN0001",
+      "status": "ACTIVE",
+      "handsets": [],
+      "options": [],
+      "productType": "mobile",
+      "contentPacks": []
+    },
+    {
+      "id": "9160805844913018763",
+      "identifier": "INT000017585",
+      "label": "Internet Service",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/INLN0001",
+      "status": "ACTIVE",
+      "handsets": [],
+      "options": [
+        {
+          "label": "Giga Speedboost",
+          "specurl": "https://api.int.telenet.be/omapi/public/product/IOPT0005",
+          "status": "ACTIVE",
+          "isIncludedOption": false,
+          "isLineLevelProduct": false,
+          "productType": "internet"
+        }
+      ],
+      "productType": "internet",
+      "contentPacks": []
+    },
+    {
+      "id": "9160805848913018763",
+      "identifier": "IDTV000008669",
+      "label": "iDTV Access (EOS)",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/TEOS0001",
+      "status": "ACTIVE",
+      "handsets": [],
+      "options": [],
+      "productType": "dtv",
+      "contentPacks": [
+        {
+          "label": "Basic Content Pack",
+          "specurl": "https://api.int.telenet.be/omapi/public/product/TVPK0002",
+          "status": "ACTIVE",
+          "isIncludedOption": true,
+          "isLineLevelProduct": false
+        }
+      ]
+    }
+  ],
+  "collectionStatus": "Green",
+  "bundleType": "WIGO",
+  "showPlanUpgradeBanner": true
+}

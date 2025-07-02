@@ -1,0 +1,269 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .input-wrapper {
+    display: flex;
+    width: 100%;
+
+    &-date {
+      --wink-icon-bg-color: transparent;
+      --wink-icon-color: var(--semantic-color-text-subtlest);
+      position: relative;
+      width: 100%;
+
+      wink-icon {
+        position: absolute;
+        top: var-rem(--semantic-spacing-2xs);
+        right: var-rem(--semantic-spacing-2xs);
+        cursor: pointer;
+        pointer-events: none;
+
+        &.disabled {
+          opacity: calc(var(--semantic-opacity-disabled) / 10);
+          cursor: not-allowed;
+        }
+      }
+
+      input {
+        font-family: TelenetAlbra, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: var-rem(--semantic-typography-font-size-desktop-sm);
+        line-height: var-rem(--semantic-typography-line-height-desktop-sm);
+
+        &::-webkit-calendar-picker-indicator {
+          opacity: 0;
+        }
+
+        &::-webkit-datetime-edit-day-field,
+        &::-webkit-datetime-edit-month-field,
+        &::-webkit-datetime-edit-year-field {
+          &:focus {
+            background-color: var(--semantic-color-background-surface-system-informative);
+          }
+        }
+      }
+    }
+  }
+
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: var-rem(--wink-input--border-width, --semantic-border-md) solid;
+    border-color: var(--semantic-color-border-input-default);
+    color: var(--semantic-color-text-default);
+    background-color: var(--wink-input--bgc, --semantic-color-background-canvas-default);
+
+    &,
+    &-affix {
+      padding-top: var(--wink-input--pt, var-rem(--semantic-spacing-sm));
+      padding-bottom: var(--wink-input--pb, var-rem(--semantic-spacing-sm));
+      padding-left: var-rem(--semantic-spacing-md);
+      padding-right: var-rem(--semantic-spacing-md);
+      font-size: var(--wink-input--fs, #{rem(1.8)});
+      line-height: var(--wink-input--lh, #{rem(2.4)});
+    }
+    &-affix {
+      display: block;
+      min-width: rem(3.2);
+      flex-shrink: 0;
+      text-align: center;
+      border-radius: 0;
+      border: var-rem(--semantic-border-md) solid;
+      border-color: var(--semantic-color-border-input-default);
+      color: var(--semantic-color-text-subtlest);
+      background: var(--semantic-color-border-subtle);
+
+      &-prefix {
+        border-right: var-rem(--semantic-border-none);
+      }
+
+      &-postfix {
+        border-left: var-rem(--semantic-border-none);
+      }
+    }
+
+    &::placeholder {
+      color: var(--semantic-color-text-subtlest);
+    }
+
+    &:hover {
+      border-color: var(--wink-input--hover--bgc, --semantic-color-border-highlight);
+      border: var-rem(--wink-input--hover--border-width, --semantic-border-md) solid;
+    }
+
+    &:focus {
+      z-index: 1;
+      border-radius: rem(0.1);
+      outline-offset: rem(0.1);
+      outline: var-rem(--semantic-border-md) solid var(--semantic-color-border-focus);
+      border-color: var(--semantic-color-border-highlight);
+      border: var-rem(--wink-input--active--border-width, --semantic-border-md) solid;
+    }
+
+    &:read-only:not(:disabled),
+    &-affix.input-affix-readonly {
+      background-color: transparent;
+      border-color: transparent;
+      border-left-width: 0;
+      border-right-width: 0;
+      padding-left: var-rem(--semantic-spacing-none);
+      padding-right: var-rem(--semantic-spacing-none);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &-affix.input-affix-readonly {
+      &.input-affix-prefix {
+        padding-right: var-rem(--semantic-spacing-xs);
+      }
+
+      &.input-affix-postfix {
+        padding-left: var-rem(--semantic-spacing-xs);
+      }
+    }
+
+    &:disabled,
+    &-affix.input-affix-disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      user-select: none;
+      background-color: var(--semantic-color-background-surface-neutral-default);
+
+      &:hover {
+        border-color: var(--semantic-color-border-input-default);
+      }
+    }
+
+    &.invalid:not(:read-only) {
+      border-color: var(--semantic-color-border-error);
+    }
+
+    /* Input + icon-button */
+    &-with-icon-button {
+      position: relative;
+      align-items: center;
+      justify-content: center;
+
+      &.input-with-icon-button-left {
+        .input {
+          padding-left: var(--wink-input--icon-button-left--pl, #{rem(4.8)});
+        }
+        .input-icon-button-left {
+          left: var(--wink-input--icon-button-left--l, var-rem(--semantic-spacing-xs));
+        }
+      }
+
+      &.input-with-icon-button-right {
+        .input {
+          padding-right: var(--wink-input--icon-button-right--pr, #{rem(4.8)});
+        }
+
+        .input-icon-button-right {
+          right: var(--wink-input--icon-button-right--r, var-rem(--semantic-spacing-xs));
+        }
+      }
+    }
+
+    &-icon-button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      & button {
+        display: flex;
+        cursor: pointer;
+        border-width: 0;
+        border-radius: rem(0.4);
+        background: transparent;
+        padding: var(--wink-input--icon-button-padding, var-rem(--semantic-spacing-2xs));
+        wink-icon {
+          --wink-icon-color: #{var(--wink-input--icon-color, var(--semantic-color-icon-subtle))};
+        }
+
+        &:hover {
+          background: var(--semantic-color-border-hover);
+
+          wink-icon {
+            --wink-icon-color: #{var(--semantic-color-icon-default)};
+          }
+        }
+
+        &:active {
+          background: var(--wink-input--active--bgc, --semantic-color-background-surface-neutral-pressed);
+        }
+
+        &:focus,
+        &:focus-visible {
+          @include state-focus-outline;
+          z-index: 1;
+          border-color: var(--semantic-color-border-button-default);
+          background: var(--wink-input--focus--bgc, var(--semantic-color-background-surface-neutral-pressed));
+
+          & wink-icon {
+            --wink-icon-color: #{var(--semantic-color-icon-default-on-action)};
+          }
+        }
+      }
+    }
+  }
+
+  wink-form-label {
+    margin-bottom: var-rem(--semantic-spacing-3xs);
+  }
+  .label-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    user-select: none;
+  }
+
+  .error-msg {
+    color: var(--semantic-color-text-error);
+    display: flex;
+    align-items: flex-start;
+    margin-top: 4px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+
+    .error-label {
+      margin-top: 2px;
+    }
+
+    wink-icon {
+      --wink-icon-color: var(--semantic-color-text-error);
+
+      margin-right: 4px;
+    }
+  }
+}
+
+:host([appearance='search']) {
+  --wink-input--icon-color: var(--semantic-color-icon-subtle);
+  --wink-input--bgc: var(--semantic-color-background-surface-bold-default);
+  --wink-input--border-width: #{var-rem(--semantic-border-none)};
+  --wink-input--hover--bgc: var(--semantic-color-background-surface-bold-hovered);
+  --wink-input--hover--border-width: #{var-rem(--semantic-border-none)};
+  --wink-input--active--bgc: var(--semantic-color-background-surface-bold-pressed);
+  --wink-input--active--border-width: #{var-rem(--semantic-border-none)};
+  --wink-input--focus--bgc: var(--semantic-color-background-surface-subtle-pressed);
+}
+
+:host([size='sm']) {
+  --wink-input--fs: #{rem(1.6)};
+  --wink-input--lh: #{rem(2.4)};
+  --wink-input--pt: #{var-rem(--semantic-spacing-2xs)};
+  --wink-input--pb: #{var-rem(--semantic-spacing-2xs)};
+  --wink-input--icon-button-padding: #{var-rem(--semantic-spacing-3xs)};
+  --wink-input--icon-button-left--pl: #{var-rem(--semantic-spacing-xl)};
+  --wink-input--icon-button-left--l: #{var-rem(--semantic-spacing-3xs)};
+  --wink-input--icon-button-right--pr: #{var-rem(--semantic-spacing-xl)};
+  --wink-input--icon-button-right--r: #{var-rem(--semantic-spacing-3xs)};
+}

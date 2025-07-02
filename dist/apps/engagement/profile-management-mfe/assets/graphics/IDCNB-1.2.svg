@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="203" viewBox="0 0 212 203"><g fill="none" fill-rule="evenodd" transform="translate(2)"><path stroke="#979797" stroke-width="4" d="M94.5502133,170 L61.8289408,170 L49.3307382,170 L0,170 L0,90.906746 M0,77.2147525 L0,41 L144.151536,41 M156.180331,41 L208,41 L208,170 L105.033138,170"/><polyline stroke="#239A98" stroke-width="3" points="177.99 55 194 55 194 75 115 75 115 55 172.539 55"/><polyline stroke="#239A98" stroke-width="3" points="138.99 128 155 128 155 148 76 148 76 128 133.539 128"/><line x1="135.5" x2="164.5" y1="34.5" y2="34.5" stroke="#239A98" stroke-width="3" transform="rotate(90 150 34.5)"/><text fill="#111" font-family="AkagiPro-Book, Akagi Pro" font-size="12">
+                        <tspan x="109.938" y="11">ID Card Number</tspan>
+                    </text><line x1="85.5" x2="114.5" y1="168.5" y2="168.5" stroke="#239A98" stroke-width="3" transform="rotate(90 100 168.5)"/><text fill="#111" font-family="AkagiPro-Book, Akagi Pro" font-size="12">
+                        <tspan x="40.148" y="198">National Registry Number</tspan>
+                    </text></g></svg>

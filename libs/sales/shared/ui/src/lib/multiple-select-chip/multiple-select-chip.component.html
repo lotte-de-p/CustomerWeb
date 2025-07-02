@@ -1,0 +1,23 @@
+<fieldset>
+  <div class="display--grid gap--m mx--m--md">
+    <label class="form__checkbox-v2 position--relative display--flex align-items--start m--n">
+      <input
+        (change)="selectAll($event)"
+        [checked]="this.selectedChips.length === this.chips.length"
+        type="checkbox"
+        class="form__checkbox-v2__input display--flex align-items--center justify-content--center font--body-regular" />
+      <div class="form-item__input__label ml--xxs my--n">
+        {{ 'ng.sales.multiple-select.select-all' | translate }}
+      </div>
+    </label>
+  </div>
+</fieldset>
+<div class="select-tile--group display--flex flex-wrap--wrap gap--xm mt--xl mx--m--md">
+  <ng-container *ngFor="let chip of chips">
+    <tg-sales-chip
+      [iconClass]="chip.icon"
+      [label]="chip.label"
+      [ngModel]="isChecked(chip)"
+      (ngModelChange)="toggleChip(chip)"></tg-sales-chip>
+  </ng-container>
+</div>

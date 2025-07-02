@@ -1,0 +1,25 @@
+<div
+  [attr.data-testid]="'installation-type-card'"
+  class="Container--default p--m--md pt--m--md pb--n--md display--flex flex-direction--column height--full">
+  <span class="text-flow text-flow--h5 text-flow--h5 text-align--center--md pb--xxs--md pb--m">{{
+    installationType.type | labelKey: 'title' | translate
+  }}</span>
+  <div
+    class="installation-options__contents display--flex flex-direction--row--md flex-direction--column gap--m flex-grow">
+    <div
+      class="installation-options__contents display--flex flex-direction--row--md flex-direction--column gap--m flex-grow">
+      @for (deliveryMethod of installationType.deliveryMethods; track deliveryMethod.type.toLowerCase()) {
+        <div
+          class="installation-options__content-item"
+          [ngClass]="installationType.deliveryMethods.length === 2 ? 'col-md-6 col-12' : 'col-12'">
+          <tg-sales-order-configurator-installation-type-ui-delivery-method-card
+            [deliveryMethod]="deliveryMethod"
+            [installationType]="installationType.type"
+            [isSelected]="deliveryMethod.type === selectedDeliveryMethod?.type"
+            (click)="onDeliveryMethodSelectedEvent(deliveryMethod); $event.preventDefault()">
+          </tg-sales-order-configurator-installation-type-ui-delivery-method-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>

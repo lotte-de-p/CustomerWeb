@@ -1,0 +1,101 @@
+@if (showCard) {
+  <div class="heading--4 mt--n mb--s">{{ 'ng.mybase-dashboard.manage-products.title' | translate }}</div>
+
+  @if (products['mobile']) {
+    <ng-container
+      [ngTemplateOutlet]="card"
+      [ngTemplateOutletContext]="{
+        key: 'mobile',
+        last: !products['internet'] && !products['dtv'],
+        products: products['mobile'],
+        pending: pendingProducts['mobile']
+      }"></ng-container>
+  }
+
+  @if (products['internet']) {
+    <ng-container
+      [ngTemplateOutlet]="card"
+      [ngTemplateOutletContext]="{
+        key: 'internet',
+        last: !products['dtv'],
+        products: products['internet'],
+        pending: pendingProducts['internet']
+      }"></ng-container>
+  }
+
+  @if (products['dtv']) {
+    <ng-container
+      [ngTemplateOutlet]="card"
+      [ngTemplateOutletContext]="{
+        key: 'dtv',
+        last: true,
+        products: products['dtv'],
+        pending: pendingProducts['dtv']
+      }"></ng-container>
+  }
+}
+
+<ng-template #card let-key="key" let-products="products" let-last="last" let-pending="pending">
+  @if (pending) {
+    <div
+      class="display--flex align-items--center p--m p--l--lg background-white mb--s user-select--none"
+      [ngClass]="{ 'mb--m--l': !last }"
+      [attr.data-cy]="'mybase-dashboard-manage-products-card-pending-' + key">
+      <ng-container
+        [ngTemplateOutlet]="cardInfo"
+        [ngTemplateOutletContext]="{
+          key: key,
+          last: last,
+          products: products,
+          pending: pending
+        }"></ng-container>
+    </div>
+  } @else {
+    <div
+      class="display--flex align-items--center p--m p--l--lg background-white mb--s cursor--pointer--hover"
+      [ngClass]="{ 'mb--m--l': !last }"
+      (click)="redirectTo(key)"
+      [attr.data-cy]="'mybase-dashboard-manage-products-card-' + key">
+      <ng-container
+        [ngTemplateOutlet]="cardInfo"
+        [ngTemplateOutletContext]="{
+          key: key,
+          last: last,
+          products: products,
+          pending: pending
+        }"></ng-container>
+    </div>
+  }
+</ng-template>
+
+<ng-template #cardInfo let-key="key" let-products="products" let-last="last" let-pending="pending">
+  <div
+    class="display--flex justify-content--center align-items--center mr--s product-icon"
+    [ngClass]="{ 'opacity--mid-transparency': pending }">
+    <i class="icon icon-md {{ iconMap[key] }} icon-no-size-override"></i>
+  </div>
+  <div class="display--flex flex-grow flex-direction--column" [ngClass]="{ 'opacity--mid-transparency': pending }">
+    <div class="heading--6 heading--nomargin">
+      {{ 'ng.mybase-dashboard.manage-products.product-title-' + key | translate }}
+    </div>
+
+    @if (products!.length === 1) {
+      <div class="font--body-small color-shade_72">
+        {{ products!.at(0)?.productName }}
+      </div>
+    } @else if (products!.length > 1) {
+      <span class="font--body-small color-shade_72"
+        >{{ products!.length }}&nbsp;{{ 'ng.mybase-dashboard.manage-products.products-suffix-label' | translate }}</span
+      >
+    }
+  </div>
+  @if (!pending) {
+    <div class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></div>
+  } @else {
+    <div
+      class="status-indicator display--inline-block vertical-align--middle status-indicator status-indicator--inactive"
+      [attr.data-cy]="'mybase-dashboard-manage-products-card-pending'">
+      <span>{{ 'ng.mybase-dashboard.manage-products.pending-label' | translate }}</span>
+    </div>
+  }
+</ng-template>

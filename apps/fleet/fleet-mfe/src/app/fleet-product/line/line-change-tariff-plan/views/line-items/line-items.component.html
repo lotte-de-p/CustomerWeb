@@ -1,0 +1,85 @@
+@if (lineProductDetails) {
+  <div
+    class="lines-section"
+    style="margin-left: 24rem"
+    [ngClass]="{ 'blur-on-confirmation': isChangesConfirmed && containsDisconnectedStatus() }">
+    <div class="mx--xxxl display--flex flex-direction--row justify-content--between">
+      <div>
+        <label>{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.mobile-number' | translate }}</label>
+      </div>
+    </div>
+    <div class="options-content">
+      <div class="content">
+        <div class="left change-tariff-plan">
+          <label class="hidden-desktop">{{
+            'ng.fleet-manager-line-change-tariff-plan.lbl.mobile-number' | translate
+          }}</label>
+          <p>{{ lineProductDetails.identifier }}</p>
+        </div>
+        <div class="right change-tariff-plan">
+          <div class="old-tariff">
+            <label>{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.old-tariff' | translate }}</label>
+            @if (lineProductDetails.productInfo && lineProductDetails.productInfo.name) {
+              <button [attr.data-cy]="'previous-tariff'">{{ lineProductDetails.productInfo.name }}</button>
+            }
+          </div>
+          @if (selectedTariffPlan) {
+            <div class="new-tariff">
+              <label>{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.new-tariff' | translate }}</label>
+              <div
+                class="display--flex flex-direction--row justify-content--between pb--xs"
+                [attr.data-cy]="'new-tariff'">
+                <button>{{ selectedTariffPlan.productInfo.name }}</button>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    @if (tariffPlanOptions.length > 0) {
+      <div class="lines-options">
+        <label class="line-options-lbl">{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.options' | translate }}</label>
+        <div class="option-title-content">
+          <label class="line-options-lbl sm">{{
+            'ng.fleet-manager-line-change-tariff-plan.lbl.options' | translate
+          }}</label>
+          @for (option of tariffPlanOptions; track option) {
+            <div class="section">
+              <div class="width--full display--flex justify-content--between" [attr.data-cy]="'tariff-plan-option'">
+                <p>{{ option.shortDescription }}</p>
+                @if (option.volume) {
+                  <button>{{ option.volume }}</button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+    @if (containsDisconnectedStatus()) {
+      <div class="lines-options">
+        <label class="line-options-lbl">{{
+          'ng.fleet-manager-line-change-tariff-plan.lbl.disabled-options' | translate
+        }}</label>
+        <div class="option-title-content">
+          <label class="line-options-lbl sm">{{
+            'ng.fleet-manager-line-change-tariff-plan.lbl.disabled-options' | translate
+          }}</label>
+          @for (option of disconnectedActiveTariffPlanOptions; track option) {
+            <div class="section">
+              <div
+                class="width--full display--flex justify-content--between"
+                [attr.data-cy]="'disconnected-tariff-plan-option'">
+                <p>{{ option.shortDescription }}</p>
+                @if (option.volume) {
+                  <button class="disabled-option">{{ option.volume }}</button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+}

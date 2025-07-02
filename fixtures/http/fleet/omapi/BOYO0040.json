@@ -1,0 +1,311 @@
+{
+  "product": {
+    "externalProductCode": "BOYO0040",
+    "weight": 10,
+    "apps": [],
+    "category": [
+      "Based on You Plans",
+      "Post-Paid Mobile",
+      "For €5 discount",
+      "BASE Tadaam discount",
+      "For Rules - All 1.1/1.2 Mobile Plans",
+      "For Rules - Tariff Plans for Optional Product Correlation ID"
+    ],
+    "rates": [
+      {
+        "type": "Mobile data",
+        "unit": "MB",
+        "cost": "0",
+        "currency": "EUR"
+      },
+      {
+        "type": "call to other networks",
+        "unit": "MIN",
+        "cost": "0",
+        "currency": "EUR"
+      }
+    ],
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "20",
+            "labelkey": "40 Based on you - National and EU calls",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "calls"
+              },
+              {
+                "locale": "nl",
+                "name": "bellen"
+              },
+              {
+                "locale": "fr",
+                "name": "Appels"
+              }
+            ]
+          },
+          {
+            "value": "unlimited",
+            "unit": "number",
+            "visible": true,
+            "weight": "30",
+            "labelkey": "40 Based on you - National and EU SMS",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "texts"
+              },
+              {
+                "locale": "nl",
+                "name": "sms’en"
+              },
+              {
+                "locale": "fr",
+                "name": "SMS"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_CALLING"
+      },
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "Unlimited",
+            "unit": "GB",
+            "visible": true,
+            "weight": "10",
+            "labelkey": "BASE Unlimited National/EU Data",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "data"
+              },
+              {
+                "locale": "nl",
+                "name": "data"
+              },
+              {
+                "locale": "fr",
+                "name": "data"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "40,0",
+        "unit": "EUR"
+      },
+      "productsegment": "RMD",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": true,
+    "priceType": "Recurrent Charge",
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB_RMD",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50",
+            "communicationPreferenceTypeValue": "50",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "20 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90",
+            "communicationPreferenceTypeValue": "90",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "20 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100",
+            "communicationPreferenceTypeValue": "100",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "20 Euro", "50 Euro"]
+          }
+        ]
+      },
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "BOYO0040",
+    "labelkey": "BASE Unlimited",
+    "producttype": "MOBILE",
+    "customercategories": ["OTHER", "Production Test", "Residential", "Event/Demo"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "BASE Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-unlimited.png"
+      },
+      {
+        "locale": "nl",
+        "name": "BASE Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-unlimited.png"
+      },
+      {
+        "locale": "fr",
+        "name": "BASE Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-unlimited.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Data, calling and texting: all unlimited!"
+        },
+        {
+          "locale": "nl",
+          "name": "Data, belminuten en sms'en: allemaal onbeperkt!"
+        },
+        {
+          "locale": "fr",
+          "name": "Data, appels et SMS : tout illimité!"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncludedUnlimitedNational",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedNational75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedNational90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedNational100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncludedUnlimitedEU",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedEU75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedEU90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedDataUnlimitedEU100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "20 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

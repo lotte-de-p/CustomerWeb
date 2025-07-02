@@ -1,0 +1,1 @@
+{"version":3,"file":"vat-number.validator.d.ts","sourceRoot":"","sources":["../../src/validators/vat-number.validator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,gBAAgB,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAE/E,qBAAa,kBAAmB,SAAQ,UAAU;IAChD,MAAM,CAAC,gBAAgB,CAAC,OAAO,EAAE,eAAe,GAAG,gBAAgB,GAAG,IAAI;CAuB3E"}

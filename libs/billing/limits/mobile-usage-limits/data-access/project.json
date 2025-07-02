@@ -1,0 +1,20 @@
+{
+  "name": "billing-mobile-usage-limits-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/billing/limits/mobile-usage-limits/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/limits/mobile-usage-limits/data-access/**/*.ts",
+          "libs/billing/limits/mobile-usage-limits/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:customer-web-billing-limits", "scope:customer-web-billing-limits-mfe"]
+}

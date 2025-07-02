@@ -1,0 +1,51 @@
+{
+  "getSuccessfulValidationMock": {
+    "data": {},
+    "status": 200,
+    "config": {
+      "method": "GET",
+      "transformRequest": [null],
+      "transformResponse": [null],
+      "url": "https://api.sup.base.be/ocapi/public/api/mobile-service/v1/simcards/8932031234567890076/validation",
+      "headers": {
+        "x-alt-referer": "http://localhost:4502/content/www-telenet-bus/en/fleet/sim-swap.html?msisdn=12345",
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "application/json, text/plain, */*"
+      },
+      "timeout": 120000,
+      "withCredentials": true
+    },
+    "statusText": "",
+    "success": true
+  },
+  "getInvalidIccidMock": {
+    "data": {
+      "code": "OCAPI-ERR-ODMB035",
+      "status": 422,
+      "cause": "Sim card not valid for requested brand id",
+      "correlationId": " ",
+      "errorDetails": [
+        {
+          "errorDetailCode": "",
+          "message": ""
+        }
+      ]
+    },
+    "status": 422,
+    "config": {
+      "method": "GET",
+      "transformRequest": [null],
+      "transformResponse": [null],
+      "url": "https://api.sup.base.be/ocapi/public/api/mobile-service/v1/simcards/8932031234567890076/validation",
+      "headers": {
+        "x-alt-referer": "http://localhost:4502/content/www-telenet-bus/en/fleet/sim-swap.html?msisdn=12345",
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "application/json, text/plain, */*"
+      },
+      "timeout": 120000,
+      "withCredentials": true
+    },
+    "statusText": "",
+    "success": true
+  }
+}

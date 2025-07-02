@@ -1,0 +1,57 @@
+<div
+  class="card-content--wave-data-card--group-view"
+  [ngClass]="{ 'card-content--wave-data-card__with-double-waves': card?.chartConfigs?.length > 1 }"
+  (click)="navigateToMobileUsage()">
+  <div class="group-view__title-section js-hide-card-skeleton-identifier text--m line-height--20">
+    <div class="title-section__first-content">
+      <div class="display--flex">
+        <i class="icon icon-usage mr--m hide-until-sm"></i>
+        <span class="text-weight--g" [attr.data-cy]="'card-bundle-name'">
+          {{ 'ng.fleet-user-mobile-usage-overview.lbl.your-plan' | translate: { value: card?.bundleName } }}
+        </span>
+      </div>
+      <div>
+        <span class="pr--xxs pl--xxs">|</span>
+        <span [attr.data-cy]="'card-line-identifier'">{{ card?.lineIdentifier | phoneNumber }}</span>
+      </div>
+    </div>
+    @if (card?.outOfBundle) {
+      <div class="color-red text-weight--g text-align--right mr--xs">
+        {{
+          'ng.fleet-user-mobile-usage-overview.lbl.out-of-bundle-description-card'
+            | translate: { value: card?.outOfBundle }
+        }}
+      </div>
+    }
+  </div>
+  <div
+    class="group-view__body"
+    [ngClass]="{
+      'group-view__body--without-wave': card?.chartConfigs?.length === 0 || (!card?.chartConfigs && !card?.chartConfig)
+    }">
+    <div class="wave-data-card__wave-section no-scroll p--xs pt--n pb-0">
+      @if (card?.chartConfigs) {
+        <ng-container>
+          @for (chartConfig of card?.chartConfigs; track chartConfig) {
+            <ng-container>
+              <app-liquid-chart [config]="chartConfig"></app-liquid-chart>
+            </ng-container>
+          }
+        </ng-container>
+      }
+      @if (card?.chartConfig) {
+        <ng-container>
+          <app-liquid-chart [config]="card.chartConfig"></app-liquid-chart>
+        </ng-container>
+      }
+    </div>
+  </div>
+  <div class="group-view__footer-section">
+    <div class="mb-0" [attr.data-cy]="'days-for-next-bill'">
+      {{ card.nextUpdateDate }} {{ 'ng.fleet-user-mobile-usage-overview.lbl.days-untils' | translate }}
+    </div>
+    <a href="javascript:void(0)" (click)="navigateToMobileUsage()" class="footer-section--more-info">{{
+      'ng.fleet-user-mobile-usage-overview.lbl.more-usage-details' | translate
+    }}</a>
+  </div>
+</div>

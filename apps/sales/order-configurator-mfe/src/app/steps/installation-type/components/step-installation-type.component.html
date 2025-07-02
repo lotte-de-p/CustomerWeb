@@ -1,0 +1,18 @@
+<div [attr.data-testid]="'step-installation-type'" class="sales-checkout container--medium">
+  <div class="sales-page__container__title sales-page__container__title--secondary">
+    <div class="display--flex flex-direction--column">
+      <div class="sales-page__container__title__header text-align--center--md text-align--left">
+        {{ 'ng.sales-checkout.lbl.title.installation-type' | translate }}
+      </div>
+      <p class="text-align--center--md text-align--left">
+        {{ 'ng.sales-checkout.lbl.sub-title.installation-type' | translate }}
+      </p>
+    </div>
+  </div>
+  <div
+    class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+    <div class="col-sm-12 sales-checkout">
+      <tg-sales-order-configurator-installation-type-feat-installation-type-selection></tg-sales-order-configurator-installation-type-feat-installation-type-selection>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "mfe",
+  "version": "0.0.1",
+  "generators": {
+    "mfe:app": {
+      "factory": "./src/generators/app",
+      "schema": "./src/generators/app/schema.json",
+      "description": "mfe generator"
+    }
+  }
+}

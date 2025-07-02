@@ -1,0 +1,326 @@
+<div class="Container Container--partitioned col-md-8 m--auto">
+  <div class="Container--partitioned--partition Container--partitioned--partition--last-item mt--l">
+    <h4 class="text-align--center">{{ title }}</h4>
+    <div class="mb--s mt--s">
+      <app-message-flow [messageGroupName]="MESSAGE_GROUP"></app-message-flow>
+    </div>
+    <form [formGroup]="mockProductConfiguratorForm" class="form-group">
+      <div class="row mb--l">
+        <div class="col--grow form-group p-0 col-sm-5">
+          <div class="select-dropdown-section">
+            <select
+              name="family"
+              class="form-control select-dropdown"
+              #familySelect
+              (change)="onFamilySelection(familySelect.value)">
+              <option class="placeholder-option" [ngValue]="null" [disabled]="true" selected="">
+                {{ 'ng.mock-product-configurator.lbl.select-family' | translate }}
+              </option>
+              <option *ngFor="let family of productFamilies; let i = index" value="{{ family?.['value'] }}">
+                {{ family?.['key']!! | translate }}
+              </option>
+            </select>
+            <div class="icon icon-chevron-down position--absolute text--m text-weight--g"></div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="showLoader">
+        <div class="row mb--l">
+          <div class="text--m">{{ 'ng.mock-product-configurator.lbl.loading' | translate }}</div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="omapiFamilyResponse">
+        <div class="row mb--l">
+          <div class="text--m font-weight--bold">{{ 'ng.mock-product-configurator.lbl.select-tier' | translate }}</div>
+        </div>
+
+        <div class="row mb--l">
+          <div class="mobile-lines__radio-view-container mobile-lines__radiobutton-width">
+            <div class="label-modifier-box card-mini row">
+              <ng-container *ngFor="let tier of omapiFamilyResponse.tiers; let i = index">
+                <div class="label-modifier-slot animation-show-slide-up" style="--animation-delay: {{ i }};">
+                  <input
+                    type="radio"
+                    class="label-modifier-radio"
+                    name="tier"
+                    formControlName="tier"
+                    id="tier-choice-{{ i }}"
+                    value="{{ tier.productInfo?.productId }}"
+                    (click)="onTierSelection(tier)" />
+                  <div class="label-modifier--append label-modifier--container cursor--pointer">
+                    <div class="label-modifier--body">
+                      <div class="label-modifier--body--inner-container">
+                        <label for="tier-choice-{{ i }}" class="label-modifier-radio__label"></label>
+                        <div class="label-modifier-content__header-text"></div>
+                        <div class="label-modifier-content__header">
+                          <i class="icon icon-tick"></i>
+                        </div>
+                        <div class="label-modifier-content__desc"></div>
+                        <div class="label-modifier-content__body">
+                          <div class="text-flow text-flow--button label-modifier-content__body-label">
+                            {{ tier.key }}
+                          </div>
+                          <div class="text-flow text-flow--legal label-modifier-content__body-range"></div>
+                        </div>
+                        <div class="label-modifier-content__timing"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb--l" *ngIf="paxList.length > 0">
+          <div class="col--grow form-group p-0 col-sm-5">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.select-mobile-pax' | translate }}
+            </div>
+            <div class="form__input-container">
+              <select name="family" class="form-control select-dropdown" formControlName="mobilePAX">
+                <option class="placeholder-option" value="" [disabled]="true" selected="">
+                  {{ 'ng.mock-product-configurator.lbl.select-no-of-pax' | translate }}
+                </option>
+                <option *ngFor="let pax of paxList; let i = index" value="{{ pax }}">{{ pax }}</option>
+              </select>
+              <div
+                *ngIf="
+                  mockProductConfiguratorForm.controls?.['mobilePAX']?.errors &&
+                  (mockProductConfiguratorForm.controls?.['mobilePAX']?.dirty ||
+                    mockProductConfiguratorForm.controls?.['mobilePAX']?.touched)
+                ">
+                <div
+                  class="formErrorInput"
+                  *ngIf="mockProductConfiguratorForm.controls?.['mobilePAX']?.errors?.['required']">
+                  {{ 'ng.mock-product-configurator.error.required' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-container *ngIf="entertainments">
+          <div class="row mb--l">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.select-entertainment' | translate }}
+            </div>
+          </div>
+
+          <div class="row mb--l">
+            <div class="">
+              <div class="label-modifier-box card-mini row">
+                <ng-container *ngFor="let entertainment of entertainments; let i = index">
+                  <div class="label-modifier-slot animation-show-slide-up" style="--animation-delay:{{ i }};">
+                    <input
+                      type="radio"
+                      class="label-modifier-radio"
+                      name="entertainment"
+                      formControlName="entertainment"
+                      id="entertainment-choice-{{ i }}"
+                      value="{{ entertainment.productInfo?.productId }}"
+                      (click)="onEntertainmentSelection(entertainment)" />
+                    <div class="label-modifier--append label-modifier--container cursor--pointer">
+                      <div class="label-modifier--body">
+                        <div class="label-modifier--body--inner-container">
+                          <label for="entertainment-choice-{{ i }}" class="label-modifier-radio__label"></label>
+                          <div class="label-modifier-content__header-text"></div>
+                          <div class="label-modifier-content__header">
+                            <i class="icon icon-tick"></i>
+                          </div>
+                          <div class="label-modifier-content__desc"></div>
+                          <div class="label-modifier-content__body">
+                            <div class="text-flow text-flow--button label-modifier-content__body-label">
+                              {{ entertainment.productInfo?.name }}
+                            </div>
+                            <div class="text-flow text-flow--legal label-modifier-content__body-range"></div>
+                          </div>
+                          <div class="label-modifier-content__timing"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+                <div
+                  class="label-modifier-slot animation-show-slide-up"
+                  style="--animation-delay: {{ entertainments.length }};">
+                  <input
+                    type="radio"
+                    class="label-modifier-radio"
+                    name="entertainment"
+                    formControlName="entertainment"
+                    id="entertainment-choice-{{ entertainments.length }}"
+                    (click)="onEntertainmentSelection()" />
+                  <div class="label-modifier--append label-modifier--container cursor--pointer">
+                    <div class="label-modifier--body">
+                      <div class="label-modifier--body--inner-container">
+                        <label
+                          for="entertainment-choice-{{ entertainments.length }}"
+                          class="label-modifier-radio__label"></label>
+                        <div class="label-modifier-content__header-text"></div>
+                        <div class="label-modifier-content__header">
+                          <i class="icon icon-tick"></i>
+                        </div>
+                        <div class="label-modifier-content__desc"></div>
+                        <div class="label-modifier-content__body">
+                          <div class="text-flow text-flow--button label-modifier-content__body-label">
+                            {{ 'ng.mock-product-configurator.lbl.no-entertainment' | translate }}
+                          </div>
+                          <div class="text-flow text-flow--legal label-modifier-content__body-range"></div>
+                        </div>
+                        <div class="label-modifier-content__timing"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="contentPacks">
+          <div class="row mb--l">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.select-content-packs' | translate }}
+            </div>
+          </div>
+
+          <div class="row mb--l">
+            <div class="radio-checkbox--horizontal">
+              <ng-container *ngFor="let contentPack of contentPacks; let i = index">
+                <div class="display--flex justify-content--between mb--l">
+                  <label for="contentPackCheckbox-{{ i }}" class="label label--large color-text m-0">
+                    <span>{{ contentPack.productInfo?.name }}</span>
+                  </label>
+                  <ng-container
+                    *ngIf="isCheckedByDefault(contentPack.productInfo!!, 'contentPack'); else addOnContentPackTemplate">
+                    <span>&nbsp;{{ 'ng.mock-product-configurator.lbl.content-pack-included' | translate }}</span>
+                    <div class="CheckboxSwitch align-self--center--md">
+                      <input
+                        type="checkbox"
+                        id="contentPackCheckbox-{{ i }}"
+                        class="CheckboxSwitch-input"
+                        [checked]="true"
+                        [disabled]="true"
+                        (change)="onToggleSelection(contentPack.productInfo!!, $event, 'contentPack')" />
+                      <label for="contentPackCheckbox-{{ i }}" class="CheckboxSwitch-control display--flex"
+                        >&nbsp;</label
+                      >
+                    </div>
+                  </ng-container>
+                  <ng-template #addOnContentPackTemplate>
+                    <div class="CheckboxSwitch align-self--center--md">
+                      <input
+                        type="checkbox"
+                        id="contentPackCheckbox-{{ i }}"
+                        class="CheckboxSwitch-input"
+                        [checked]="isChecked(contentPack.productInfo!!)"
+                        [disabled]="isDisabled(contentPack.productInfo!!)"
+                        (change)="onToggleSelection(contentPack.productInfo!!, $event, 'contentPack')" />
+                      <label for="contentPackCheckbox-{{ i }}" class="CheckboxSwitch-control display--flex"
+                        >&nbsp;</label
+                      >
+                    </div>
+                  </ng-template>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="optins">
+          <div class="row mb--l">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.select-optin' | translate }}
+            </div>
+          </div>
+
+          <div class="row mb--l">
+            <div class="radio-checkbox--horizontal">
+              <ng-container *ngFor="let optin of optins; let i = index">
+                <div class="display--flex justify-content--between mb--l">
+                  <label for="optInCheckbox-{{ i }}" class="label label--large color-text m-0">{{
+                    optin.productInfo?.name
+                  }}</label>
+                  <div class="CheckboxSwitch align-self--center--md">
+                    <input
+                      type="checkbox"
+                      id="optInCheckbox-{{ i }}"
+                      class="CheckboxSwitch-input"
+                      (change)="onToggleSelection(optin.productInfo!!, $event, 'optin')" />
+                    <label for="optInCheckbox-{{ i }}" class="CheckboxSwitch-control display--flex">&nbsp;</label>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="options">
+          <div class="row mb--l">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.select-option' | translate }}
+            </div>
+          </div>
+
+          <div class="row mb--l">
+            <div class="radio-checkbox--horizontal">
+              <ng-container *ngFor="let option of options; let i = index">
+                <div class="display--flex justify-content--between mb--l">
+                  <label for="optionCheckbox-{{ i }}" class="label label--large color-text m-0">{{
+                    option.productInfo?.name
+                  }}</label>
+                  <div class="CheckboxSwitch align-self--center--md">
+                    <input
+                      type="checkbox"
+                      id="optionCheckbox-{{ i }}"
+                      class="CheckboxSwitch-input"
+                      (change)="onToggleSelection(option.productInfo!!, $event, 'option')" />
+                    <label for="optionCheckbox-{{ i }}" class="CheckboxSwitch-control display--flex">&nbsp;</label>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="isConnect5()">
+          <div class="row mb--l">
+            <div class="text--m font-weight--bold">
+              {{ 'ng.mock-product-configurator.lbl.location-id' | translate }}
+            </div>
+          </div>
+
+          <div class="row mb--l">
+            <input type="text" name="locationId" formControlName="locationId" class="col-sm-5 form__input" />
+          </div>
+        </ng-container>
+
+        <div class="example-button-row">
+          <button mat-stroked-button="" color="primary" class="button button--primary mb-20" (click)="onSubmit()">
+            {{ 'ng.mock-product-configurator.lbl.submit' | translate }}
+          </button>
+        </div>
+        <div class="example-button-row">
+          <button
+            mat-stroked-button=""
+            color="primary"
+            class="button button--primary mb-20"
+            (click)="registration('register')">
+            {{ 'ng.mock-product-configurator.lbl.register' | translate }}
+          </button>
+        </div>
+
+        <div class="example-button-row">
+          <button
+            mat-stroked-button=""
+            color="primary"
+            class="button button--primary mb-20"
+            (click)="registration('register-via-itsme')">
+            {{ 'ng.mock-product-configurator.lbl.registerViaItsMe' | translate }}
+          </button>
+        </div>
+      </ng-container>
+    </form>
+  </div>
+</div>

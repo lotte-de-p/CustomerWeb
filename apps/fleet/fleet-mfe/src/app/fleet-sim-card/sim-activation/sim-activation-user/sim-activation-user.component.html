@@ -1,0 +1,118 @@
+<app-loader [enableLoader]="enableLoader" [pageType]="'fleet-page'" [enableMask]="enableMask" [startByDefault]="false">
+</app-loader>
+
+<div class="container mt--l mb--l">
+  <h1 class="heading--nomargin text-align--center pb--s">
+    {{ 'ng.sim-activation-user.title.activate-sim' | translate }}
+  </h1>
+  <p class="text-align--center mb--xxl">{{ 'ng.sim-activation-user.lbl.enter-details' | translate }}</p>
+  <div class="col-12 col-sm-8 col-md-8 col-lg-8 p--n m--auto">
+    <div class="background-white m--auto sim-activation-user__container">
+      <div *ngIf="vm.showDefaultError" class="notification notification--errorfield">
+        <span class="icon icon-error-shape errorfield"></span>
+        <div>
+          <p>{{ 'ng.sim-activation-user.error.service-out-of-order' | translate }}</p>
+        </div>
+      </div>
+      <div *ngIf="vm.showSimCardAlreadyActivatedError" class="notification notification--errorfield">
+        <span class="icon icon-error-shape errorfield"></span>
+        <div>
+          <p>{{ 'ng.sim-activation-user.error.sim-already-activated' | translate }}</p>
+        </div>
+      </div>
+      <div *ngIf="vm.showSimActivationNotPossibleError" class="notification notification--errorfield">
+        <span class="icon icon-error-shape errorfield"></span>
+        <div>
+          <p>{{ 'ng.sim-activation-user.error.sim-activation-not-possible' | translate }}</p>
+        </div>
+      </div>
+      <div *ngIf="!vm.hideForm">
+        <div class="text-flow text-flow--h3 align-items-center display--flex mt--xm mb--xl--md">
+          <i class="icon icon-md mr--m icon-sim-card"></i>
+          <span>{{ 'ng.sim-activation-user.title.sim-card-details' | translate }}</span>
+        </div>
+        <form>
+          <div class="form-group">
+            <div class="mb--xl">
+              <label for="order-number" class="cursor--default">
+                {{ 'ng.sim-activation-user.lbl.order-number' | translate }}
+              </label>
+              <div class="form__input-container">
+                <input
+                  [(ngModel)]="vm.orderNumber"
+                  disabled
+                  type="text"
+                  id="order-number"
+                  name="orderNumber"
+                  class="form__input" />
+              </div>
+            </div>
+            <div class="mb--xl">
+              <label class="cursor--default" for="msisdn">
+                {{ 'ng.sim-activation-user.lbl.mobile-number' | translate }}
+              </label>
+              <div class="form__input-container">
+                <input [(ngModel)]="vm.msisdn" disabled type="text" id="msisdn" name="msisdn" class="form__input" />
+              </div>
+            </div>
+            <div [ngClass]="showSimCardImg ? 'mb--xxg pb--xxs' : 'mb--xl'">
+              <label for="sim-card-number" class="cursor--default">
+                {{ 'ng.sim-activation-user.lbl.sim-card-number' | translate }}
+              </label>
+              <div class="display--flex position--relative sim-activation-user__input__sim-card-number">
+                <label class="cursor--default pt--m pr--m" for="sim-card-number">
+                  {{ SIM_CARD_NUMBER_PREFIX }}
+                </label>
+                <div
+                  [ngClass]="
+                    showSimCardNumberInputRedBorder(simCardNumberInput) ? 'form__input-container--invalid' : ''
+                  "
+                  class="form__input-container position--relative flex-grow">
+                  <input
+                    #simCardNumberInput="ngModel"
+                    [(ngModel)]="vm.simCardNumber"
+                    (keyup)="validateSimCardNumber()"
+                    name="simCardNumber"
+                    type="text"
+                    [ngClass]="showSimCardNumberInputRedBorder(simCardNumberInput) ? 'form__input--error' : ''"
+                    class="form__input"
+                    id="sim-card-number" />
+                  <span (click)="toggleShowSimCardImg()" class="form__input--icon">
+                    <i
+                      [ngClass]="showSimCardImg ? 'visibility--hide' : 'visibility--show'"
+                      class="icon icon-information-shape icon-sm cursor--pointer position--absolute sim-activation-user__input__information-icon">
+                    </i>
+                  </span>
+                </div>
+                <div
+                  *ngIf="showSimCardNumberInvalidFormatError(simCardNumberInput)"
+                  class="form__msg--error form__input__invalid-message">
+                  {{ 'ng.sim-activation-user.error.sim-invalid-format' | translate }}
+                </div>
+                <div *ngIf="vm.showWrongSimCardNumberError" class="form__msg--error form__input__invalid-message">
+                  {{ 'ng.sim-activation-user.error.sim-not-match' | translate }}
+                </div>
+
+                <div (click)="toggleShowSimCardImg()" [ngClass]="showSimCardImg ? '' : 'display--none'">
+                  <div class="cursor--pointer sim-activation-user__sim-card position--absolute"></div>
+                </div>
+              </div>
+            </div>
+            <div class="color-shade_48">
+              {{ 'ng.sim-activation-user.lbl.info-check-data' | translate }}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="!vm.hideForm" class="display--flex justify-content--end">
+      <button
+        (click)="activateSim()"
+        [disabled]="vm.disableActivateButton"
+        type="button"
+        class="button button--primary display--flex align-self--end mr--xl mt--l">
+        {{ 'ng.sim-activation-user.btn.activate' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

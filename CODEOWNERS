@@ -1,0 +1,38 @@
+# CODEOWNERS file for managing ownership of specific parts of the codebase
+
+[Core files - Owners] @jdiascha @fanrys @bvanden3 @yhoubri1 @kversleg @djaamann
+package.json
+tsconfig.base.json @jdiascha @fanrys @bvanden3 @yhoubri1 @kversleg @cpynenbo @shaesen1 @nvanmee1 @djaamann
+/.eslintrc.json
+.editorconfig
+/.storybook/
+/.run/
+environments/
+**/nycrc
+.gitlab-ci.yml
+
+[Core files - Owners][2] @jdiascha @yhoubri1 @kversleg @djaamann
+tools/
+.prettierrc
+.prettierignore
+nginx/
+./.gitlab-ci.yml
+sonar-project.properties
+nx.json
+.npmrc
+CODEOWNERS
+lerna.json
+./jest.preset.js
+./.eslintrc.json
+.eslintignore
+
+[Demo Owners] @jdiascha @fanrys @yhoubri1 @kversleg @djaamann
+apps/foundation/demo-mfe/
+libs/foundation/demo/
+
+[Sales owners]
+libs/sales/**/.eslintrc.json @jdiascha @fanrys @bvanden3 @yhoubri1 @kversleg @cpynenbo @shaesen1 @nvanmee1
+
+[Wink Owners][2]
+apps/foundation/wink/ @sgoeman @jherman5 @yasakour @bvanautr @inazarko @wmassie
+libs/foundation/wink/ @sgoeman @jherman5 @yasakour @bvanautr @inazarko @wmassie

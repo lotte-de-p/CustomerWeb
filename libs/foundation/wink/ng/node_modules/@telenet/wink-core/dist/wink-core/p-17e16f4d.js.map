@@ -1,0 +1,1 @@
+{"version":3,"names":["BREAKPOINTS","mobile","tablet"],"sources":["../core/src/models/breakpoints.types.tsx"],"sourcesContent":["export const BREAKPOINTS = {\n  mobile: '(max-width: 576px)',\n  tablet: '(max-width: 769px)',\n};\n"],"mappings":"MAAaA,EAAc,CACzBC,OAAQ,qBACRC,OAAQ,6B"}

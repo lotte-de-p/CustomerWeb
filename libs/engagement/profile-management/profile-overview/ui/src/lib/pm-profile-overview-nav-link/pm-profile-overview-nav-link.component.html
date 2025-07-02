@@ -1,0 +1,40 @@
+<a
+  (click)="trackLinkClick($event)"
+  [href]="link()"
+  [ngClass]="subTitle() ? 'align-items--start' : 'align-items--center'"
+  [attr.data-cy]="'pm-po-nav-link-' + type()"
+  class="link-list-item link link--unstyled display--flex gap--m gap--m--lg width--full pl--m pl--l--lg">
+  <div
+    [ngClass]="subTitle() ? 'align-items--start' : 'align-items--center'"
+    class="link-list-item__icon my--m my--l--lg align-self--stretch display--flex">
+    <i
+      class="icon icon-component display--inline-flex aspect-ratio--1-1 width--fit-content backdrop-mask icon-component--size__m icon-{{
+        icon()
+      }}"
+      [ngClass]="isBaseCustomer() ? 'hide--telenet icon-component--no-padding' : 'hide--base icon-component--secondary'"
+      aria-hidden="true">
+    </i>
+  </div>
+  <div
+    [ngClass]="subTitle() ? 'align-items--start' : 'align-items--center'"
+    class="link-list-item__content display--flex width--full justify-content--between align-self--stretch gap--m gap--m--lg py--m pr--m py--l--lg pr--l--lg border-width--b--r border-style--b--solid border-color--b--light-grey">
+    <div>
+      <div class="link-list-item__content__title">
+        <div class="cmp-text">
+          {{ 'ng.profile-overview.' + type() + '-link.title' | translate }}
+        </div>
+
+        @if (subTitle()) {
+          <div class="link-list-item__content__subtext color-shade_72">
+            <div class="cmp-text">
+              {{ 'ng.profile-overview.' + type() + '-link.subtitle' | translate }}
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+    <i
+      class="icon icon-component display--inline-flex aspect-ratio--1-1 width--fit-content icon-chevron-right icon-component icon-component--size__m icon-component--no-padding backdrop-mask"
+      aria-hidden="true"></i>
+  </div>
+</a>

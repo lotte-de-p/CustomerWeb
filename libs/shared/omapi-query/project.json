@@ -1,0 +1,40 @@
+{
+  "name": "omapi-query",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/omapi-query/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/omapi-query/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/omapi-query/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/omapi-query/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-omapi-query"],
+      "options": {
+        "jestConfig": "libs/shared/omapi-query/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/omapi-query/src/**/*.ts", "libs/shared/omapi-query/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:omapi-query"]
+}

@@ -1,0 +1,33 @@
+{
+  "internet": {
+    "category": "CAP",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTB0000",
+    "daysUntil": "23",
+    "validity": "2020-12-25T04:30:00.000Z",
+    "allocatedUsage": {
+      "units": 225,
+      "usedUnits": 160,
+      "remainingUnits": 65,
+      "unitType": "GB",
+      "usedPercentage": "71.00",
+      "lastUsageDate": "2020-11-17T17:51:00"
+    },
+    "extendedUsage": {
+      "eligibleToBuy": true,
+      "specurl": "https://api.int.telenet.be/omapi/public/product/IOPT0002",
+      "volumeBlocks": "2"
+    },
+    "wifreeUsage": {
+      "usedUnits": 0,
+      "unitType": "GB"
+    },
+    "totalUsage": {
+      "units": 160,
+      "unitType": "GB",
+      "lastUsageDate": "2020-11-17T17:51:00"
+    },
+    "peakUsage": {
+      "usedUnits": 100
+    }
+  }
+}

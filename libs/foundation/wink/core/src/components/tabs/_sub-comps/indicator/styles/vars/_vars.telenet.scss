@@ -1,0 +1,6 @@
+@import '../../../../../../assets/telenet/styles';
+:host {
+  img {
+    @include telenet-backdrop-mask;
+  }
+}

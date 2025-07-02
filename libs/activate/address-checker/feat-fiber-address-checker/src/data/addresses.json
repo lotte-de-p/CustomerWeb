@@ -1,0 +1,17 @@
+[
+  {
+    "zipcode": "2180",
+    "subMunicipality": "Ekeren",
+    "street": "Onze-Lieve-Vrouwstraat",
+    "houseNumber": "54",
+    "boxNumber": "5",
+    "addressGeoId": "addressGeoId"
+  },
+  {
+    "zipcode": "2180",
+    "subMunicipality": "Ekeren",
+    "street": "Onze-Lieve-Vrouwstraat",
+    "houseNumber": "55",
+    "addressGeoId": "addressGeoId"
+  }
+]

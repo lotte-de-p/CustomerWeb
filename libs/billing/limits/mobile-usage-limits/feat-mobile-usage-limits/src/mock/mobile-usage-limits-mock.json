@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-usage-limits-service/v1/mobile-usage-limits/0489552137",
+  "method": "GET",
+  "status": 200,
+  "delay": 100,
+  "response": {
+    "outOfBundle": {
+      "currentUsage": 1.53,
+      "limit": {
+        "enabled": true,
+        "value": 20
+      }
+    },
+    "premiumService": {
+      "currentUsage": 1.53,
+      "limit": {
+        "value": 50
+      }
+    }
+  }
+}

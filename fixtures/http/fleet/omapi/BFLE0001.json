@@ -1,0 +1,267 @@
+{
+  "product": {
+    "productid": "BFLE0001",
+    "externalProductCode": "BFLE0001",
+    "labelkey": "Mobile 1",
+    "producttype": "MOBILE",
+    "weight": 20,
+    "apps": [],
+    "customercategories": ["OTHER", "Business", "Production Test Business"],
+    "category": [
+      "BFleet Voice",
+      "Flex mobile",
+      "Post-Paid Mobile",
+      "For Rules - All 1.1/1.2 Mobile Plans",
+      "For Rules - Tariff Plans for Optional Product Correlation ID"
+    ],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Mobile 1",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Mobile 1",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Mobile 1",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "You only pay for what you use, and you call your colleagues for free."
+        },
+        {
+          "locale": "nl",
+          "name": "Betaal alleen wat je verbruikt en bel gratis onder collega's."
+        },
+        {
+          "locale": "fr",
+          "name": "Payez uniquement ce que vous utilisez. Tous les appels entre collègues sont gratuits."
+        }
+      ]
+    },
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "Mobile 1 - CUG",
+            "value": "Unlimited",
+            "unit": "CUG",
+            "visible": true,
+            "weight": "40",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "calls and SMSes between colleagues"
+              },
+              {
+                "locale": "nl",
+                "name": "bellen en sms'en onder collega's"
+              },
+              {
+                "locale": "fr",
+                "name": "appels et SMS entre collègues"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": []
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "5,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleB2B",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleB2B",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "25 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro",
+                "200 Euro",
+                "300 Euro",
+                "400 Euro",
+                "500 Euro",
+                "600 Euro",
+                "700 Euro",
+                "800 Euro",
+                "900 Euro"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB_B2B",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50B2B",
+            "communicationPreferenceTypeValue": "50",
+            "isEditable": true,
+            "values": [
+              "0 Euro",
+              "5 Euro",
+              "10 Euro",
+              "20 Euro",
+              "50 Euro",
+              "100 Euro",
+              "200 Euro",
+              "300 Euro",
+              "400 Euro",
+              "500 Euro"
+            ]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90B2B",
+            "communicationPreferenceTypeValue": "90",
+            "isEditable": true,
+            "values": [
+              "0 Euro",
+              "5 Euro",
+              "10 Euro",
+              "20 Euro",
+              "50 Euro",
+              "100 Euro",
+              "200 Euro",
+              "300 Euro",
+              "400 Euro",
+              "500 Euro"
+            ]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100B2B",
+            "communicationPreferenceTypeValue": "100",
+            "isEditable": true,
+            "values": [
+              "0 Euro",
+              "5 Euro",
+              "10 Euro",
+              "20 Euro",
+              "50 Euro",
+              "100 Euro",
+              "200 Euro",
+              "300 Euro",
+              "400 Euro",
+              "500 Euro"
+            ]
+          }
+        ]
+      },
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "requiresInstallation": false,
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": true
+  }
+}

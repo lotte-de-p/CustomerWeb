@@ -1,0 +1,73 @@
+<div class="lines-section">
+  <div class="label-content">
+    <div class="left">
+      <label>
+        {{ 'ng.fleet-manager-line-remove-options.lbl.phone-number' | translate }}
+      </label>
+    </div>
+    <div class="right">
+      <label>
+        {{ 'ng.fleet-manager-line-remove-options.lbl.options' | translate }}
+      </label>
+    </div>
+  </div>
+  @for (selectedLine of selectedLines(); track selectedLine) {
+    <div class="options-content">
+      <div class="content">
+        <div class="left">
+          <label class="hidden-desktop">
+            {{ 'ng.fleet-manager-line-remove-options.lbl.phone-number' | translate }}
+          </label>
+          <p>{{ selectedLine.identifier | phoneNumber }}</p>
+        </div>
+        <div class="right">
+          @if (selectedLine.isAffected) {
+            <div [attr.data-cy]="'removed-options'">
+              <label>
+                {{ 'ng.fleet-manager-line-remove-options.lbl.removed' | translate }}
+              </label>
+              @for (option of selectedLine.options; track option) {
+                <div style="max-width: 80%">
+                  @if (option.isOptionRemoved) {
+                    <div class="right-content-upgraded">
+                      <div class="subtitle-content" [attr.data-cy]="'removed-option'">
+                        <p class="remove-option" [textContent]="option.category"></p>
+                        <button class="remove-option" [textContent]="option.volume"></button>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          }
+          @if (selectedLine.options.length === 0) {
+            <div class="text--r text--xxs">
+              <span class="text--r text--xxs">
+                {{ 'ng.fleet-manager-line-remove-options.lbl.no-options-added' | translate }}
+              </span>
+            </div>
+          }
+          @if (showPreviouslyAddedOption(selectedLine)) {
+            <div [attr.data-cy]="'previously-added'">
+              <label>
+                {{ 'ng.fleet-manager-line-remove-options.lbl.previously-added' | translate }}
+              </label>
+              @for (option of selectedLine.options; track option) {
+                <div style="max-width: 80%">
+                  @if (!option.isOptionRemoved) {
+                    <div class="right-content-upgraded">
+                      <div class="subtitle-content" [attr.data-cy]="'previously-added-option'">
+                        <p class="prev-added-title" [textContent]="option.productInfo.subCategory.localizedName"></p>
+                        <button class="btn-disabled" [textContent]="option.volume"></button>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

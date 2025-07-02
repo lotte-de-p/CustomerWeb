@@ -1,0 +1,17 @@
+export enum FiberAddressCheckerEnum {
+  MESSAGE_GROUP = 'fiber-address-checker',
+  ZIPCODE_CITY_ENDPOINT = '/address/v1/suggest/city',
+  STREET_CITY_ENDPOINT = '/address/v1/suggest/street',
+  NUMBER_CITY_ENDPOINT = '/address/v1/suggest/number',
+  ADDRESS_GEO_ID_ENDPOINT = '/address/v1/geoId',
+  FIBER_ELIGIBILITY_ENDPOINT = '/address/v1/fiber/eligible',
+  LEAD_CAPTATION_AEMSIM = '-action/public/?t=aemsim',
+  LEAD_CAPTATION_MARKETO = '/public/api/marketo/v1/leads/submitForm',
+  ADDRESS_NOT_FOUND = 'OMAPI-ERROR-ADDRESS-NOT-FOUND',
+  PRODUCT_SERVICE_PREFIX = '/public/api/product-service/',
+  VERSION_1 = 'v1',
+  CONTACT_SERVICE_PREFIX = '/public/api/contact-service/',
+  CONTEXT_CONTACT = '/contact',
+  PRODUCT_TYPE_PLAN = 'PLAN',
+  PRODUCT_STATUS_PLAN = 'ACTIVE',
+}

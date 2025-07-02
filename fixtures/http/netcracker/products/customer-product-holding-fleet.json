@@ -1,0 +1,322 @@
+{
+  "selectedLines": [
+    {
+      "id": "9151058241113574971",
+      "identifier": "0468239791",
+      "msisdn": "32468239791",
+      "accountNumber": "999910887",
+      "label": "B-Fleet Connect",
+      "description": "Dan Fuhman",
+      "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+      "status": "ACTIVE",
+      "isAffected": false,
+      "options": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Small",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE",
+          "isSelected": false,
+          "productId": "UNLM0002",
+          "category": "Calls to World",
+          "name": "Voice World Small : 100 min outside Europe",
+          "volume": "100 MB",
+          "productInfo": {
+            "productId": "UNLM0002",
+            "name": "Voice World Small : 100 min outside Europe",
+            "subCategory": {
+              "localizedName": "Calls to World"
+            },
+            "services": [
+              {
+                "specifications": [
+                  {
+                    "value": "100",
+                    "unit": "MB"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "9151058241113574973",
+      "identifier": "0468239792",
+      "msisdn": "32468239792",
+      "accountNumber": "999910887",
+      "label": "Corp Basic",
+      "type": "Mandatory",
+      "description": "Smans Peter",
+      "specurl": "https://api.int.base.be/omapi/public/product/COBA000",
+      "status": "ACTIVE",
+      "options": [
+        {
+          "id": "9151058241113574974",
+          "parentId": "9151058241113574973",
+          "label": "Option Voice Europe 60 min",
+          "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+          "status": "ACTIVE",
+          "productId": "UNLM0002",
+          "category": "Calls to World",
+          "name": "Voice World Small : 100 min outside Europe",
+          "volume": "60 MIN",
+          "productInfo": {
+            "productId": "UNLM0002",
+            "name": "Voice World Small : 100 min outside Europe",
+            "subCategory": {
+              "localizedName": "Calls to World"
+            },
+            "services": [
+              {
+                "specifications": [
+                  {
+                    "value": "60",
+                    "unit": "MIN"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "9151058241113574975",
+          "parentId": "9151058241113574973",
+          "label": "Internet World Large",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+          "status": "ACTIVE",
+          "productId": "VWSM0100",
+          "name": "Voice World Small : 100 min outside Europe",
+          "category": "Calls to World",
+          "volume": "250 MB",
+          "productInfo": {
+            "productId": "VWSM0100",
+            "name": "Voice World Small : 100 min outside Europe",
+            "subCategory": {
+              "localizedName": "Calls to World"
+            },
+            "services": [
+              {
+                "specifications": [
+                  {
+                    "value": "250",
+                    "unit": "MB"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productLineOptions": [
+    {
+      "category": "internet",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "productId": "UNLM0002",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Small",
+          "volume": "100 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "internet",
+          "status": "ACTIVE",
+          "isSelected": false
+        },
+        {
+          "id": "9151058241113574975",
+          "parentId": "9151058241113574973",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "category": "internet",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "prepaid_internet",
+      "subcategory": [
+        {
+          "id": "9151058241113574974",
+          "productId": "UNLM0002",
+          "parentId": "9151058241113574973",
+          "label": "Option Voice Europe 60 min",
+          "volume": "60 MIN",
+          "category": "prepaid_internet",
+          "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "data",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Small",
+          "volume": "100 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "data",
+          "isSelected": false,
+          "status": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "voice",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Small",
+          "volume": "100 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": false,
+          "status": "INACTIVE"
+        },
+        {
+          "id": "9151058241113574988",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Large",
+          "volume": "250 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": true,
+          "isDisabled": true,
+          "status": "INACTIVE"
+        },
+        {
+          "id": "9151058241113574979",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Large",
+          "volume": "250 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": true,
+          "isDisabled": true,
+          "status": "INACTIVE"
+        }
+      ]
+    }
+  ],
+  "mockOptionsByCategories": [
+    {
+      "category": "Bellen in België",
+      "subcategory": [
+        {
+          "id": "UNLM0002",
+          "label": "Onbeperkt bellen",
+          "category": "Bellen in België"
+        }
+      ]
+    },
+    {
+      "category": "Calls to World",
+      "subcategory": [
+        {
+          "id": "WORL0010",
+          "label": "40 minuten naar 17 niet-EU-landen ",
+          "category": "Calls to World"
+        },
+        {
+          "id": "WORL0030",
+          "label": "150 minuten naar 17 niet-EU-landen ",
+          "category": "Calls to World"
+        }
+      ]
+    },
+    {
+      "category": "Bellen naar nummers in Europa",
+      "subcategory": [
+        {
+          "id": "VOEU0060",
+          "label": "60 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        },
+        {
+          "id": "VOEU0180",
+          "label": "180 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        },
+        {
+          "id": "VOEU0600",
+          "label": "600 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        }
+      ]
+    }
+  ],
+  "selectedLinesWithMoreOptions": [
+    {
+      "id": "9151058241113574971",
+      "identifier": "0468239791",
+      "msisdn": "32468239791",
+      "accountNumber": "999910887",
+      "label": "B-Fleet Connect",
+      "description": "Dan Fuhman",
+      "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+      "status": "ACTIVE",
+      "options": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Small",
+          "volume": "100 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "9151058241113574973",
+      "identifier": "0468239792",
+      "msisdn": "32468239792",
+      "accountNumber": "999910887",
+      "label": "Corp Basic",
+      "description": "Smans Peter",
+      "specurl": "https://api.int.base.be/omapi/public/product/COBA000",
+      "status": "ACTIVE",
+      "options": [
+        {
+          "id": "9151058241113574974",
+          "parentId": "9151058241113574973",
+          "label": "Option Voice Europe 60 min",
+          "volume": "60 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574975",
+          "parentId": "9151058241113574973",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ]
+}

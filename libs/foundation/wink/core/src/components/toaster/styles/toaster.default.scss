@@ -1,0 +1,22 @@
+wink-toaster {
+  position: fixed;
+  z-index: $z-index--toaster;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  pointer-events: none;
+  transition: all 200ms ease-in-out;
+  gap: var-rem(--semantic-spacing-3xs);
+
+  @include media('from-sm') {
+    align-items: flex-end;
+    gap: var-rem(--semantic-spacing-md);
+    padding: var-rem(--semantic-spacing-md);
+  }
+}

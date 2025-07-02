@@ -1,0 +1,114 @@
+{
+  "id": "9169867873313578628",
+  "identifier": "0468239791",
+  "msisdn": "32468239791",
+  "accountNumber": "125788244",
+  "referenceInformation": "testMJ",
+  "label": "Mobile Connect",
+  "locationId": "9169860887713252236",
+  "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+  "status": "ACTIVE",
+  "chars": {
+    "hasVoiceMailBox": "true"
+  },
+  "handsets": [],
+  "options": [
+    {
+      "parentId": "0484058561",
+      "label": "World Data 2 GB",
+      "specurl": "https://api.int.base.be/omapi/public/product/TLTT0004",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "156,00",
+        "recurrentTotal": "156,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "156,00",
+          "recurrentTotal": "156,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2024-06-30T08:44:18+02:00",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "8,89"
+        }
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": false,
+      "isIncluded": false,
+      "chars": {}
+    },
+    {
+      "parentId": "0484058561",
+      "label": "Data OPEC 1,5 GB",
+      "specurl": "https://api.int.base.be/omapi/public/product/FDOP0015",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "60,00",
+        "recurrentTotal": "60,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "60,00",
+          "recurrentTotal": "60,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2024-06-30T08:44:18+02:00",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "3,42"
+        }
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": false,
+      "isIncluded": false,
+      "chars": {}
+    }
+  ],
+  "lineLevelProducts": [],
+  "price": {
+    "currency": "EUR",
+    "recurrentDiscounted": "30,00",
+    "recurrentTotal": "30,00",
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "30,00",
+      "recurrentTotal": "30,00",
+      "recurrentDiscount": "0,00"
+    },
+    "recurrentDiscount": "0,00"
+  },
+  "splitBillProfile": {
+    "id": "9170154608113916905",
+    "name": "New Split Billing Profile #1",
+    "type": "SB20"
+  },
+  "summaryPrices": {
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "246,00",
+      "recurrentTotal": "246,00",
+      "recurrentDiscount": "0,00"
+    }
+  },
+  "addressId": "9150757958413973182",
+  "discountItems": {
+    "discounts": []
+  },
+  "productType": "mobile",
+  "activationDate": "2024-05-15T14:38:18+02:00",
+  "hasOldSocialTariffDiscount": false
+}

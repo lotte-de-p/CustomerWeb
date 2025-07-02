@@ -1,0 +1,46 @@
+<form [formGroup]="parentForm" class="form-group">
+  <div class="form__input-container">
+    <input
+      type="text"
+      id="domainName-{{ idx }}"
+      formControlName="domainName"
+      class="form__input form__input--max-width"
+      required="required"
+      placeholder="Enter Domain Name" />
+  </div>
+  <div class="formErrorInput" *ngIf="parentForm.get('domainName')?.touched && !parentForm.get('domainName')?.valid">
+    {{ 'ng.mock-marketing.warning.required.domain-name' | translate }}
+  </div>
+  <div class="form__input-container">
+    <input
+      type="text"
+      id="domainExtension-{{ idx }}"
+      formControlName="domainExtension"
+      class="form__input form__input--max-width"
+      required="required"
+      placeholder="Enter Extension" />
+  </div>
+  <div
+    class="formErrorInput"
+    *ngIf="parentForm.get('domainExtension')?.touched && !parentForm.get('domainExtension')?.valid">
+    {{ 'ng.mock-marketing.warning.required.extension' | translate }}
+  </div>
+  <div class="row">
+    <div class="col--grow form-group">
+      <div class="select-dropdown-section">
+        <select formControlName="orderType" class="form-control select-dropdown" id="orderType-{{ idx }}">
+          <option selected="" class="placeholder-option" [disabled]="true">
+            {{ 'ng.mock-marketing.text.option-placeholder-select-type' | translate }}
+          </option>
+          <option value="new">{{ 'ng.mock-marketing.text.option-new' | translate }}</option>
+          <option value="transfer-in">{{ 'ng.mock-marketing.text.option-transfer-in' | translate }}</option>
+          <option value="trade">{{ 'ng.mock-marketing.text.option-trade' | translate }}</option>
+        </select>
+        <div class="icon icon-chevron-down position--absolute text--m text-weight--g"></div>
+      </div>
+      <div class="formErrorInput" *ngIf="parentForm.get('orderType')?.touched && !parentForm.get('orderType')?.valid">
+        {{ 'ng.mock-marketing.warning.select-form-value-required' | translate }}
+      </div>
+    </div>
+  </div>
+</form>

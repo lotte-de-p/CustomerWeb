@@ -1,0 +1,81 @@
+<div [attr.data-cy]="'order-summary-depreciation-overlay'" class="cdk-overlay-container">
+  <div
+    class="cdk-overlay-backdrop cdk-overlay-backdrop-noop-animation cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+  <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center">
+    <div class="cdk-overlay-pane" id="cdk-overlay-0" style="max-width: 80vw; position: static">
+      <div aria-hidden="true" class="cdk-visually-hidden cdk-focus-trap-anchor" tabindex="0"></div>
+      <div class="mdc-dialog__container">
+        <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+          <div class="overlay sales-overlay--depreciation-table">
+            <div class="overlay__mask"></div>
+            <div class="overlay__section">
+              <div class="overlay__section__content overlay__section__content--page">
+                <a (click)="closeOverlay()" class="display--inline" href="javascript:void(0)">
+                  <div
+                    [attr.data-cy]="'order-summary-depreciation-close-overlay'"
+                    class="overlay__section__content__close icon-close"></div>
+                </a>
+                <div class="overlay__section__content__title"></div>
+                <div class="overlay__section__content__sub-title"></div>
+                <div class="overlay__section__content__description"></div>
+                <div class="text-align--center text-weight--g depreciation-table--title text--xl">
+                  {{ 'ng.sales-checkout.shopping-cart.lbl.depreciation-table-title' | translate }}
+                </div>
+                <div class="depreciation-table--wrapper background-white">
+                  <div class="depreciation-table__heading text-align--left mb-30">
+                    {{ 'ng.sales-checkout.shopping-cart.lbl.depreciation-table-note' | translate }}
+                  </div>
+                  <span
+                    class="text-align--right mb-10 text--xs text--m--md text-weight--g display--block mt--xxs mt--n--md ml--n ml--xxs--md">
+                    {{
+                      'ng.sales-checkout.shopping-cart.lbl.depreciation-table-vat-indication' + (isSoho ? '.tbf' : '')
+                        | translate
+                    }}
+                  </span>
+
+                  <div class="depreciation-table__info background-very-light-grey">
+                    <div class="horizontal-step-tracker-centered text-align--center">
+                      <ul class="steps-tracker steps-tracker--with-label width--full m-0">
+                        <li class="steps-tracker__step steps-tracker--with-text">
+                          <div class="steps-tracker__step__content">
+                            <div class="steps-tracker__step__content__left text--s text-weight--g text-align--center">
+                              <p>
+                                {{ 'ng.sales-checkout.shopping-cart.lbl.depreciation-table-amount-left' | translate }}
+                              </p>
+                            </div>
+                            <div
+                              class="steps-tracker__step__content__right text--s mt--n mt--xl--md text-weight--g fl-left">
+                              <p>{{ 'ng.sales-checkout.shopping-cart.lbl.depreciation-table-month' | translate }}</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          *ngFor="let item of depreciationCostItems"
+                          class="steps-tracker__step horizontal-center-align center-align__column steps-tracker__step--completed"
+                          id="steps-tracker-{{ item.monthIndex }}">
+                          <div class="steps-tracker__step__content">
+                            <div class="steps-tracker__step__content__left text--s text-weight--g text-align--center">
+                              <p [attr.data-cy]="'order-summary-depreciation-item-cost'">€ {{ item.remainingCost }}</p>
+                            </div>
+                            <div
+                              class="steps-tracker__step__content__icon text-align--center m--m background-shape--squarcle">
+                              <i class="icon-tick"></i>
+                            </div>
+                            <div class="steps-tracker__step__content__right text--s text-align--center">
+                              <p [attr.data-cy]="'order-summary-depreciation-item-month'">{{ item.monthIndex + 1 }}</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true" class="cdk-visually-hidden cdk-focus-trap-anchor" tabindex="0"></div>
+    </div>
+  </div>
+</div>

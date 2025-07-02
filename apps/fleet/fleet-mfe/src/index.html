@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TelenetGroup - FleetMFE</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="styles.css" rel="stylesheet" />
+    <!-- comment the pageLocaleData script before committing -->
+    <!-- <script src="https://www.int.telenet.be/nl.pageLocaleData.js"></script> -->
+
+    <!--<script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.int.telenet.be/ocapi',
+          'omapi-url': 'https://api.int.telenet.be/omapi',
+          'omapi-query-url': 'https://api.int.telenet.be/omapi-query/public',
+          'openid-auth-url': 'https://login.int.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.int.telenet.be/openid',
+          'gateway-url': 'https://api.int.telenet.be',
+          'sofy-url': 'https://int.sofy-dev.awscloud.external.telenet.be',
+          'gsa-url': 'https://api.int.telenet.be/searchapi/gsa/api/',
+          'openid-client-id': 'ocapi',
+          'oauth-callback-url': '',
+          'php-eshop-url': 'https://shop.int.telenet.be/shop/nl',
+          'base-ac-systems-url': 'https://base.rest.ac-systems.com',
+          'recaptcha-api-url': 'https://www.google.com/recaptcha/api.js',
+          'recaptcha-site-key': '6Ld15hAbAAAAABL4l8LoTnBv-CBkhYE8Ukwc3aMQ',
+          'recaptcha-v3-site-key': '6Lc2hCQbAAAAACaxx5NvByzCNYI4NSpgqsrrT4Wp',
+        };
+      })();
+    </script>-->
+    <!-- backend stubbing url config -->
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'http://localhost:10081/ocapi',
+          'omapi-url': 'http://localhost:10081/omapi',
+          'omapi-query-url': 'http://localhost:10081/omapi-query/public',
+          'openid-auth-url': 'http://localhost:10081/openid/oauth/authorize',
+          'openid-url': 'http://localhost:10081/openid',
+          'gateway-url': 'http://localhost:10081',
+          'sofy-url': 'https://int.sofy-dev.awscloud.external.telenet.be',
+          'gsa-url': 'http://localhost:10081/searchapi/gsa/api/',
+          'openid-client-id': 'ocapi',
+          'oauth-callback-url': '',
+          'php-eshop-url': 'https://shop.int.telenet.be/shop/nl',
+          'base-ac-systems-url': 'https://base.rest.ac-systems.com',
+          'recaptcha-api-url': 'https://www.google.com/recaptcha/api.js',
+          'recaptcha-site-key': '6Ld15hAbAAAAABL4l8LoTnBv-CBkhYE8Ukwc3aMQ',
+          'recaptcha-v3-site-key': '6Lc2hCQbAAAAACaxx5NvByzCNYI4NSpgqsrrT4Wp',
+        };
+      })();
+    </script>
+  </head>
+
+  <body class="stepper-page telenet" style="min-height: 100vh">
+    <tg-app-root></tg-app-root>
+  </body>
+</html>

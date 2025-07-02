@@ -1,0 +1,30 @@
+{
+  "name": "order-configurator-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/sales/order-configurator-mfe-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/sales/order-configurator-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sales/order-configurator-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:order-configurator-mfe"],
+  "implicitDependencies": ["order-configurator-mfe"]
+}

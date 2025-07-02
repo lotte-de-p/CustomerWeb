@@ -1,0 +1,5 @@
+export enum ProductCategoryEnum {
+  BASE_PRO = 'BASE-PRO',
+  PRE_PAID_MOBILE = 'PREPAID-MOBILE',
+  POST_PAID_MOBILE = 'POST-PAID-MOBILE',
+}

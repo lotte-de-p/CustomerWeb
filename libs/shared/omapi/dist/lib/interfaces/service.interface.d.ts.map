@@ -1,0 +1,1 @@
+{"version":3,"file":"service.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/service.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,sBAAsB,EAAE,MAAM,2BAA2B,CAAC;AAEnE,MAAM,WAAW,gBAAgB;IAC/B,WAAW,EAAE,MAAM,CAAC;IACpB,UAAU,CAAC,EAAE,mBAAmB,CAAC;IACjC,cAAc,CAAC,EAAE,sBAAsB,EAAE,CAAC;CAC3C;AAED,MAAM,WAAW,mBAAmB;IAClC,cAAc,EAAE,MAAM,CAAC;CACxB"}

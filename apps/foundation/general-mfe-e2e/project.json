@@ -1,0 +1,66 @@
+{
+  "name": "general-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/foundation/general-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/general-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "general-mfe:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "general-mfe:serve:production"
+        },
+        "local": {
+          "watch": true
+        }
+      }
+    },
+    "e2e-local": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/foundation/general-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "general-mfe:serve:production"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/general-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "general-mfe:serve:development",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local-dev": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/general-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "general-mfe:serve:development",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "general-mfe:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/foundation/general-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:general-mfe"],
+  "implicitDependencies": ["general-mfe"]
+}

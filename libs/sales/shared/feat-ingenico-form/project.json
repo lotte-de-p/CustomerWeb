@@ -1,0 +1,40 @@
+{
+  "name": "sales-shared-feat-ingenico-form",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/shared/feat-ingenico-form/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/shared/feat-ingenico-form/**/*.ts",
+          "libs/sales/shared/feat-ingenico-form/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/shared/feat-ingenico-form/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/shared/feat-ingenico-form/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "headless": false,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["scope:sales-shared", "scope:sales-mfe", "type:feature"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sales-order-configurator-delivery-feat-delivery-content",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/order-configurator/delivery/features/delivery-content/src",
+  "prefix": "sales-order-configurator-delivery",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/delivery/features/delivery-content/**/*.ts",
+          "libs/sales/order-configurator/delivery/features/delivery-content/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:order-configurator-mfe"]
+}

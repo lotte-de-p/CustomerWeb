@@ -1,0 +1,54 @@
+<div
+  *ngIf="inboxMessage() as message"
+  data-cy="inbox-messages"
+  class="inbox-messages-overview p--l mt--xxs mb--xs background-white display--flex flex-direction--row--sm flex-direction--column-reverse text-decoration--none"
+  [ngClass]="
+    message.pinned ? 'border-width--l--l border--l--r border-style--l--solid border-color--l--brand-primary' : ''
+  ">
+  <div class="aem-Grid aem-Grid--default--10 aem-Grid--12 aem-Grid--tablet--12 aem-Grid--phone--12">
+    <div class="mb--xxs aem-GridColumn--default--12 aem-GridColumn--phone--12">
+      <div class="cmp-badge">
+        <tg-inbox-message-badge *ngIf="!message.read" [badgeType]="badgeType"></tg-inbox-message-badge>
+        <tg-inbox-message-date [messageAdded]="message.messageAdded" [isRead]="message.read"></tg-inbox-message-date>
+      </div>
+    </div>
+    <div class="aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--phone--12">
+      <div class="cmp cmp-title my--xs">
+        <p class="heading--5 heading--nomargin">
+          {{ message.content?.title }}
+        </p>
+      </div>
+      <div class="cmp cmp-text">
+        <p class="font--body-small">
+          {{ message.content?.body }}
+        </p>
+      </div>
+      <div class="my--xs">
+        <a
+          [href]="message.content?.callToAction?.link"
+          (click)="handleClick($event, message)"
+          class="button button--secondary button--small">
+          <span>{{ message.content?.callToAction?.name }}</span>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="!message.pinned" class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12">
+      <div class="text-align--right hidden-mobile">
+        <div class="whitespace aem-GridColumn">
+          <div class="whitespace whitespace--medium"></div>
+        </div>
+        <a class="link" (click)="handleDeleteMessage($event, message)">
+          <i class="icon icon-trash"></i>
+          <span class="pl--xs text-decoration--underline">{{ 'ng.inbox-messages.delete.txt' | translate }}</span>
+        </a>
+      </div>
+
+      <div class="text-align--left hide-from-sm">
+        <a class="link" (click)="handleDeleteMessage($event, message)">
+          <i class="icon icon-trash"></i>
+          <span class="pl--xs text-decoration--underline">{{ 'ng.inbox-messages.delete.txt' | translate }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

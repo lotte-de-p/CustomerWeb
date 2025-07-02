@@ -1,0 +1,35 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white height--full display--flex flex-direction--column"
+  [attr.data-cy]="'mybase-dashboard-mobile-usage-prepaid'">
+  <div
+    (click)="goToMobileUsage()"
+    class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">{{
+        'ng.mybase-dashboard-mobile.mobile-usage-prepaid.title' | translate
+      }}</span>
+    </div>
+    <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+  </div>
+  <div>
+    <div>
+      <span class="text-flow text-flow--h1 mr--xxs" [attr.data-cy]="'mybase-dashboard-mobile-usage-prepaid-amount'"
+        >&euro;&nbsp;{{ balance | number: '1.2-2' }}</span
+      >
+      <span class="text-flow text-flow--h6">{{
+        'ng.mybase-dashboard-mobile.mobile-usage-prepaid.label-left' | translate
+      }}</span>
+    </div>
+    <div class="font--caption-small mb--s" [attr.data-cy]="'mybase-dashboard-mobile-usage-prepaid-expiry-date'">
+      {{ 'ng.mybase-dashboard-mobile.mobile-usage-prepaid.label-expires-on' | translate }}
+      {{ expiryDate | date: 'longDate' }}
+    </div>
+  </div>
+  <button
+    class="button button--secondary button--alternate button--fullwidth cursor--pointer"
+    (click)="goToTopUpLink($event)"
+    [attr.data-cy]="'mybase-dashboard-mobile-usage-prepaid-cta'">
+    <i class="icon icon-mobile-arrow-up icon-md mr--s"></i>
+    <span>{{ 'ng.mybase-dashboard-mobile.mobile-usage-prepaid.button-top-up' | translate }}</span>
+  </button>
+</div>

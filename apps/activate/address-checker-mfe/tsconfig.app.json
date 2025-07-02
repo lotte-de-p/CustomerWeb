@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc",
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.d.ts", "src/app/address-checker.module.ts"],
+  "exclude": ["**/*.test.ts", "**/*.spec.ts", "jest.config.ts", "**/*.stories.ts", "**/*.stories.js"]
+}

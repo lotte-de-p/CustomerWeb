@@ -1,0 +1,5 @@
+export var HttpTypesEnum;
+(function (HttpTypesEnum) {
+    HttpTypesEnum["POST"] = "POST";
+})(HttpTypesEnum || (HttpTypesEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaHR0cC10eXBlcy5lbnVtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL2xpYi9lbnVtcy9odHRwLXR5cGVzLmVudW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFOLElBQVksYUFFWDtBQUZELFdBQVksYUFBYTtJQUN2Qiw4QkFBYSxDQUFBO0FBQ2YsQ0FBQyxFQUZXLGFBQWEsS0FBYixhQUFhLFFBRXhCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gSHR0cFR5cGVzRW51bSB7XG4gIFBPU1QgPSAnUE9TVCcsXG59XG4iXX0=

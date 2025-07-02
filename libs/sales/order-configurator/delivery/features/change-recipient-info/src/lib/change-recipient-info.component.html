@@ -1,0 +1,76 @@
+@if (isFormVisible) {
+  <div class="sales-checkout container--medium sales-overlay pt-50">
+    @if (!validatePersonalInfoOnInit) {
+      <div
+        class="overlay__section__content__close icon-close pr-30 ng-star-inserted"
+        (click)="closeRecipientDetailsForm()"
+        [attr.data-testid]="'change-delivery-info-x-button'"></div>
+    }
+    <div class="sales-page__container__title sales-page__container__title--secondary">
+      <div class="display--flex flex-direction--column">
+        <div class="sales-page__container__title__header text-align--center--md text-align--left">
+          {{ 'ng.sales-checkout.lbl.title.delivery-address-overlay' | translate }}
+        </div>
+        <p class="text-align--center--md text-align--left">
+          {{ 'ng.sales-checkout.lbl.sub-title.delivery-address-overlay' | translate }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+      <div class="col-sm-12 sales-checkout">
+        <div class="stepper-page__body-inner p-0">
+          <div class="stepper-page__content--split container mobile-lines">
+            <div class="stepper-page__content-second">
+              <div class="stepper-move" id="undefined">
+                <div class="text-flow text-flow--label stepper-page__title-label m-0"></div>
+                <div class="sales-flow">
+                  <div class="sales-flow__content__delivery mb--xxxg">
+                    <div class="overlay__section__content__action ng-star-inserted">
+                      <div class="form-group__field--large form-group__field">
+                        <form
+                          (ngSubmit)="onSubmit()"
+                          [formGroup]="form"
+                          class="form-group ng-untouched ng-pristine ng-invalid">
+                          <div class="content-section mb-30 p--xl--md p--l mx--n--md mx--l ng-star-inserted">
+                            <div class="sales-display-info__content__row mb-30">
+                              <div class="sales-display-info__content__row__description">
+                                <h6 class="mt-0">
+                                  {{ 'ng.sales-checkout.text.delivery-address-details-title' | translate }}
+                                </h6>
+                              </div>
+                            </div>
+                            <tg-sales-address-form-field
+                              formControlName="recipientAddress"></tg-sales-address-form-field>
+                          </div>
+                          <div class="sales-flow__content__delivery__action mt-20 pl--n--md pl--s text-align--right">
+                            @if (!validatePersonalInfoOnInit) {
+                              <button
+                                [tgSalesTrackClickEvent]="{ name: 'change address canceled' }"
+                                (click)="closeRecipientDetailsForm()"
+                                class="button button--secondary"
+                                [attr.data-testid]="'change-delivery-info-cancel-button'">
+                                {{ 'ng.sales-checkout.button.cancel' | translate }}
+                              </button>
+                            }
+                            <button
+                              [tgSalesTrackClickEvent]="{ name: 'change address saved' }"
+                              class="button button--primary"
+                              type="submit"
+                              [attr.data-testid]="'change-delivery-info-submit-button'">
+                              {{ 'ng.sales-checkout.btn.save' | translate }}
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

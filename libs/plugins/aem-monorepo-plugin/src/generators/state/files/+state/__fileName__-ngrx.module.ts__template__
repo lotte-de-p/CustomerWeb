@@ -1,0 +1,11 @@
+import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { <%= effectsClassName %> } from './<%= fileName %>.effects';
+import { <%= featureName %> } from './<%= fileName %>.reducer';
+
+@NgModule({
+  imports: [EffectsModule.forFeature([<%= effectsClassName %>]), StoreModule.forFeature(<%= featureName %>)],
+})
+export class <%= className %>NgrxModule {}

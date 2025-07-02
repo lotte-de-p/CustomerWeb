@@ -1,0 +1,53 @@
+<mat-form-field class="width--full mat-select-multiple" appearance="fill">
+  <div
+    *ngIf="customLabel"
+    [ngClass]="{ labelStyle: this.labelStyle }"
+    class="display--flex align-items--center justify-content--between">
+    <div>
+      <label for="{{ key }}">{{ getLabel() | translate }}</label>
+      <div *ngIf="toolTipRequired" class="tooltip position--relative inline-block">
+        <div
+          class="tooltip__icon-section display--flex flex-direction--row--sm flex-direction--row-reverse align-items--center justify-content--center cursor--pointer my--xxxs">
+          <i class="icon icon-information-shape"></i>
+        </div>
+        <div class="tooltip__info-section tooltip__info-section__arrow-left tooltip__info-section__auto-width">
+          <div class="horizontal-center-align">
+            <div class="info-section__description">
+              <div class="info-section__description__text">
+                {{ getTooltip() | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="fl-right" *ngIf="!required">{{ getLabel() + '.optional' | translate }}</label>
+  </div>
+  <mat-select
+    #selectDropdown
+    multiple
+    [attr.data-cy]="messageGroup + '.mat-select.' + key"
+    [(ngModel)]="selectedOptions"
+    [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''">
+    <mat-select-trigger
+      *ngIf="selectedOptions.length > 0"
+      class="background-yellow border-radius--all--l py--xxxs px--m">
+      <span class="text--s">{{ selectedOptionsCount }}</span>
+    </mat-select-trigger>
+    <mat-option
+      [attr.data-cy]="messageGroup + '.mat-select.' + key + '.select-all'"
+      #allSelected
+      (click)="toggleAllSelection($event)"
+      (touchstart)="toggleAllSelection($event)"
+      >{{ getLabel() + '-select-all' | translate }}</mat-option
+    >
+    <mat-option
+      [attr.data-cy]="messageGroup + '.mat-select.' + key + '.option.' + option.value"
+      (click)="updateValueAndPreventClosing($event)"
+      (touchstart)="updateValueAndPreventClosing($event)"
+      *ngFor="let option of optionList"
+      [value]="option"
+      >{{ option.label }}</mat-option
+    >
+  </mat-select>
+</mat-form-field>

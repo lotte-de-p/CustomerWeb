@@ -1,0 +1,6 @@
+<span class="display--block text--xs text--s--sm mt--xl">
+  <span [innerHTML]="getText('disclaimer') | translate"> </span>
+  <span *ngIf="!showMore" (click)="toggleDisclaimerContent()" [innerHTML]="getText('disclaimer-read-more') | translate">
+  </span>
+  <span *ngIf="showMore" [innerHTML]="getText('disclaimer-expanded') | translate"> </span>
+</span>

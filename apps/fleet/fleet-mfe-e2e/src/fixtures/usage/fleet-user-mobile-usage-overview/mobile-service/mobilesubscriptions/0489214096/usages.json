@@ -1,0 +1,202 @@
+{
+  "productCode": "BFLC0002",
+  "specurl": "https://api.uat.base.be/omapi/public/product/BFLC0002",
+  "nextBillingDate": "2024-07-23T00:00:00+02:00",
+  "lastUpdated": "2024-08-14T09:01:30.393745+02:00",
+  "included": {
+    "monetary": [],
+    "data": [
+      {
+        "name": "Mobile Contact + - Nat/EU Data",
+        "startUnits": "10",
+        "remainingUnits": "10",
+        "usedUnits": "0",
+        "usedPercentage": 0,
+        "unitType": "GB",
+        "unlimited": false,
+        "validity": "2024-08-25T23:59:59+02:00",
+        "daysUntil": "4",
+        "bucketType": "data"
+      }
+    ],
+    "text": [],
+    "voice": []
+  },
+  "outOfBundle": {
+    "usedUnits": "0",
+    "unitType": "EUR",
+    "details": [
+      {
+        "type": "OOB_NATIONAL_VOICE",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_INTERNATIONAL_VOICE",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_ROAMING_VOICE",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_NATIONAL_SMS",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_INTERNATIONAL_SMS",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_ROAMING_SMS",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_MMS",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_NATIONAL_DATA",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_ROAMING_DATA",
+        "value": 0.0
+      },
+      {
+        "type": "OOB_PAY_BY_MOBILE_AND_PREMIUM",
+        "value": 0.0
+      }
+    ]
+  },
+  "options": [
+    {
+      "label": "Data National 25 GB",
+      "specurl": "https://api.uat.base.be/omapi/public/product/DNUN0025",
+      "productCode": "DNUN0025",
+      "monetary": [],
+      "data": [
+        {
+          "name": "Data National 25 GB",
+          "startUnits": "25",
+          "remainingUnits": "25",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "GB",
+          "unlimited": false,
+          "validity": "2024-08-25T23:59:59+02:00",
+          "daysUntil": "4",
+          "bucketType": "data"
+        }
+      ],
+      "text": [],
+      "voice": []
+    },
+    {
+      "label": "Data National 1 GB",
+      "specurl": "https://api.uat.base.be/omapi/public/product/FDNS0001",
+      "productCode": "FDNS0001",
+      "monetary": [],
+      "data": [
+        {
+          "name": "Data National 1 GB",
+          "startUnits": "1",
+          "remainingUnits": "1",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "GB",
+          "unlimited": false,
+          "validity": "2024-08-25T23:59:59+02:00",
+          "daysUntil": "4",
+          "bucketType": "data"
+        }
+      ],
+      "text": [],
+      "voice": []
+    },
+    {
+      "label": "Voice Europe plus 180 min",
+      "specurl": "https://api.uat.base.be/omapi/public/product/VOEF0180",
+      "productCode": "VOEF0180",
+      "monetary": [],
+      "data": [],
+      "text": [],
+      "voice": [
+        {
+          "name": "Voice Europe plus 180 min",
+          "startUnits": "10800",
+          "remainingUnits": "10800",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "SECONDS",
+          "unlimited": false,
+          "validity": "2024-08-25T23:59:59+02:00",
+          "daysUntil": "4",
+          "bucketType": "calls in/to Europe plus"
+        }
+      ]
+    }
+  ],
+  "carryOver": {
+    "monetary": [],
+    "data": [],
+    "text": [],
+    "voice": []
+  },
+  "total": {
+    "monetary": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "EUR",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "data": {
+      "startUnits": "10",
+      "remainingUnits": "10",
+      "usedUnits": "0",
+      "unitType": "GB",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 100
+    },
+    "text": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "NUMBER",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "voice": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "SECONDS",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    }
+  },
+  "proratable": false,
+  "sharedBundles": {
+    "monetary": [],
+    "data": [
+      {
+        "name": "Shared Data Asia business 20 GB",
+        "startUnits": "20",
+        "remainingUnits": "20",
+        "usedUnits": "0",
+        "usedPercentage": 0,
+        "unitType": "GB",
+        "unlimited": false,
+        "validity": "2024-08-25T23:59:59+02:00",
+        "daysUntil": "4",
+        "bucketType": "shared data bundle Asia business"
+      }
+    ],
+    "text": [],
+    "voice": []
+  }
+}

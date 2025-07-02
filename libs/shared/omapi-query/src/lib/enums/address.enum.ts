@@ -1,0 +1,3 @@
+export enum AddressEnum {
+  ADDRESS_NOT_FOUND = 'OMAPI-ERROR-ADDRESS-NOT-FOUND',
+}

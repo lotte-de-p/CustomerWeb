@@ -1,0 +1,56 @@
+<div class="stepper-page__body container" [attr.data-cy]="'navs-overlay'">
+  <div class="stepper-page__body-inner">
+    <div class="stepper-page__title m-0 p-0">
+      <div class="text-flow text-flow--label stepper-page__title-label hide-until-sm"></div>
+
+      <div class="text-flow text-flow--h1 hide-until-sm"></div>
+    </div>
+
+    <div class="stepper-page__content--split container">
+      <div class="stepper-page__content--split container flex-hide-until-sm sticky">
+        <img
+          class=""
+          appSalesImageSrcInterceptor
+          [moduleId]="'tg-sales-customer-registration'"
+          alt="desktop-error-telenet"
+          src="/assets/telenet/desktop-error-telenet.svg" />
+      </div>
+      <div id="call-me-back-feedback--failed" class="stepper-page__content-second">
+        <div
+          class="display--flex align-items--center align-items--start--sm flex-direction--column text-align--center text-align--left--sm">
+          <div class="mb--l--md mb--xl text-align--left text-flow text-flow--h1">
+            {{ 'customer-registration.lbl.order-cannot-be-completed' | translate }}
+          </div>
+
+          <div class="background-white p--xl">
+            <div class="text--xm text-align--left">
+              <span>{{ 'customer-registration.lbl.please-register-with-itsme' | translate }}</span>
+              <a href="{{ pointOfSalesUrl }}" class="decoration-line cursor--pointer">{{
+                'customer-registration.lbl.our-point-of-sale' | translate
+              }}</a>
+              <span>{{ 'customer-registration.lbl.provide-id-to-complete-order' | translate }}</span>
+            </div>
+            <div class="my--l">
+              <button class="button button--secondary button__icon--position-left register-with-itsme pt-10 pb-10">
+                <img
+                  alt="itsme"
+                  appSalesImageSrcInterceptor
+                  [moduleId]="'tg-sales-customer-registration'"
+                  src="/assets/common/itsme-logo.svg" />
+                <span class="ml--m text--m">
+                  {{ 'customer-registration.btn.register-with-its-me' | translate }}
+                </span>
+              </button>
+            </div>
+
+            <div class="cursor--pointer decoration-line text--s text-align--left">
+              <a href="{{ requestHelpUrl }}">
+                {{ 'customer-registration.lbl.need-help-contact-telenet' | translate }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

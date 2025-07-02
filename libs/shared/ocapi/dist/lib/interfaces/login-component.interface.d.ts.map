@@ -1,0 +1,1 @@
+{"version":3,"file":"login-component.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/login-component.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,WAAW,CAAC;AAEzC,MAAM,WAAW,uBAAuB;IACtC,iBAAiB,CAAC,YAAY,CAAC,EAAE,YAAY,GAAG,IAAI,CAAC;CACtD"}

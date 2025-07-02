@@ -1,0 +1,46 @@
+[
+  {
+    "activationDate": "2021-03-28T12:38:59+01:00",
+    "cancellationDate": "2021-03-24T12:38:59+01:00",
+    "epc": "TIPS0001",
+    "status": "DISCONNECTED",
+    "customerProductId": "2",
+    "planName": "TIP11",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "tipMRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipUsage": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  },
+  {
+    "activationDate": "2021-03-28T12:38:59+01:00",
+    "cancellationDate": "2021-03-24T12:38:59+01:00",
+    "epc": "TIPS0001",
+    "status": "DISCONNECTED",
+    "customerProductId": "2",
+    "planName": "TIP12",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "tipMRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipUsage": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  }
+]

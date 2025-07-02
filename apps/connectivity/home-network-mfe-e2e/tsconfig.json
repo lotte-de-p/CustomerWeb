@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["node"],
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "../home-network-mfe/**/*.ts", "../home-network-mfe/**/*.js"],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInputAccessModifiers": true,
+  },
+}

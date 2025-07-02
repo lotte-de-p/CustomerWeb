@@ -1,0 +1,41 @@
+[
+  {
+    "pid": "41106704021",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "BundleInternet",
+        "preferences": [
+          {
+            "preferenceType": "Internet800",
+            "channels": ["Email", "Email and SMS"]
+          },
+          {
+            "preferenceType": "Internet900",
+            "channels": ["Email"]
+          },
+          {
+            "preferenceType": "Internet1000",
+            "channels": ["Email"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "Internet",
+        "preferences": [
+          {
+            "preferenceType": "Internet80",
+            "channels": ["Email", "Email and SMS"]
+          },
+          {
+            "preferenceType": "Internet90",
+            "channels": ["Email"]
+          },
+          {
+            "preferenceType": "Internet100",
+            "channels": ["Email"]
+          }
+        ]
+      }
+    ]
+  }
+]

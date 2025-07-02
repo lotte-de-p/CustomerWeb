@@ -1,0 +1,87 @@
+@if (mobileLines?.length > 0) {
+  <div class="account-line-selector">
+    @if (hideSelector === 'false' && mobileLines && mobileLines.length > 0) {
+      <div (click)="toggle.emit(mobileLines)" class="account-selector">
+        @if (isInitialized && lineSelected) {
+          <div
+            class="account-selector__list account-selector__list__first-item account-selector__list--with-icon"
+            [ngClass]="{
+              'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__first-item--opened':
+                isSelectorOpen,
+              'cursor--default': mobileLines.length === 1,
+              'account-selector__list__first-item--closed': !isSelectorOpen
+            }">
+            <div class="account-selector__list__icon">
+              <i
+                class="icon-circle"
+                [ngClass]="{
+                  'icon-question': lineSelected['isSomeoneElse'],
+                  'icon-mobile': !lineSelected['isSomeoneElse']
+                }"></i>
+            </div>
+            <div class="account-selector__list__account-info">
+              <div class="account-selector__list__account-info__account-id">{{ lineSelected['msisdn'] }}</div>
+              <div class="account-selector__list__account-info__account-details">
+                @if (lineSelected['label']) {
+                  <p class="m--n word-break--ellipsis">{{ lineSelected['label'] }}</p>
+                }
+                @if (lineSelected['isSomeoneElse']) {
+                  <p class="m--n word-break--ellipsis">{{ 'account-selector.lbl.someone-else' | translate }}</p>
+                }
+                @if (lineSelected.plan && lineSelected.plan.name) {
+                  <p class="m--n word-break--ellipsis">{{ lineSelected.plan.name }}</p>
+                }
+              </div>
+            </div>
+            @if (mobileLines.length > 1) {
+              <a class="account-selector__action">
+                <div
+                  class="icon icon-sm position--absolute text-weight--g"
+                  [ngClass]="isSelectorOpen ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+              </a>
+            }
+          </div>
+        }
+        @if (isInitialized) {
+          <ul
+            class="account-selector__list account-selector__list__options"
+            [ngClass]="{
+              'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__options--opened':
+                isSelectorOpen
+            }">
+            @for (account of mobileLines; track account.msisdn) {
+              <li
+                class="account-selector__list__options__item"
+                [ngClass]="{ 'account-selector__list__options__item--active': isActive(account) }">
+                <a class="account-selector__list__options__item__link" (click)="onSelectAccount(account)">
+                  <div class="account-selector__list__icon">
+                    <i
+                      class="icon-circle"
+                      [ngClass]="{
+                        'icon-question': account['isSomeoneElse'],
+                        'icon-mobile': !account['isSomeoneElse']
+                      }"></i>
+                  </div>
+                  <div class="account-selector__list__account-info">
+                    <div class="account-selector__list__account-info__account-id">{{ account['msisdn'] }}</div>
+                    <div class="account-selector__list__account-info__account-details">
+                      @if (account['label']) {
+                        <p class="m--n">{{ account['label'] }}</p>
+                      }
+                      @if (account['isSomeoneElse']) {
+                        <p class="m--n">{{ 'account-selector.lbl.someone-else' | translate }}</p>
+                      }
+                      @if (account.plan && account?.plan?.name) {
+                        <p class="m--n">{{ account?.plan?.name }}</p>
+                      }
+                    </div>
+                  </div>
+                </a>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+    }
+  </div>
+}

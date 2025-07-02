@@ -1,0 +1,16 @@
+[
+  {
+    "salesOrderId": "916556346352672",
+    "status": "SHIPPED",
+    "trackingUrl": "https://www.tracking.com?orderid=916556346352672"
+  },
+  {
+    "salesOrderId": "916556346352674",
+    "status": "SUBMITTED"
+  },
+  {
+    "salesOrderId": "916556346352676",
+    "status": "DELIVERY FAILED",
+    "trackingUrl": "https://www.tracking.com?orderid=916556346352676"
+  }
+]

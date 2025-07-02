@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="85.064" tests="8" failures="5">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T05:55:46" tests="0" file="src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Bundle usage reminders" timestamp="2024-07-17T05:55:46" tests="8" time="85.044" failures="5">
+    <testcase name="should show enabled checkbox and threshold 50" time="1.180" classname="Bundle usage reminders should show enabled checkbox and threshold 50">
+    </testcase>
+    <testcase name="should show disabled checkbox and hide threshold input" time="0.490" classname="Bundle usage reminders should show disabled checkbox and hide threshold input">
+    </testcase>
+    <testcase name="should show enabled checkbox and empty threshold input when threshold value is default value" time="0.509" classname="Bundle usage reminders should show enabled checkbox and empty threshold input when threshold value is default value">
+    </testcase>
+    <testcase name="should save a threshold" time="5.002" classname="Bundle usage reminders should save a threshold">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.notification.notification--success&gt;&apos; to contain &apos;ng.bundle-usage-reminders.response-success-update-account-success&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.notification.notification--success>' to contain 'ng.bundle-usage-reminders.response-success-update-account-success'
+    at Context.eval (webpack:///./src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts:52:0)]]></failure>
+    </testcase>
+    <testcase name="should display an error message and disable the save button when threshold is empty" time="4.932" classname="Bundle usage reminders should display an error message and disable the save button when threshold is empty">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput.Form__input__invalid-message&gt;&apos; to contain &apos;ng.bundle-usage-reminders.overconsumptionthreshold.required.error&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput.Form__input__invalid-message>' to contain 'ng.bundle-usage-reminders.overconsumptionthreshold.required.error'
+    at Context.eval (webpack:///./src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts:59:0)]]></failure>
+    </testcase>
+    <testcase name="should not display the form and show error message when it cannot retrieve the threshold" time="4.391" classname="Bundle usage reminders should not display the form and show error message when it cannot retrieve the threshold">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.notification.notification--errorfield&gt;&apos; to contain &apos;ng.ocapi.0-errorfield&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.notification.notification--errorfield>' to contain 'ng.ocapi.0-errorfield'
+    at Context.eval (webpack:///./src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts:65:0)]]></failure>
+    </testcase>
+    <testcase name="should disable the form when threshold is in progress" time="4.392" classname="Bundle usage reminders should disable the form when threshold is in progress">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.notification.notification--warning&gt;&apos; to contain &apos;ng.bundle-usage-reminders.update-in.progress-warning&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.notification.notification--warning>' to contain 'ng.bundle-usage-reminders.update-in.progress-warning'
+    at Context.eval (webpack:///./src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts:71:0)]]></failure>
+    </testcase>
+    <testcase name="should update the form and clear the messages when you switch to a different billing account" time="5.136" classname="Bundle usage reminders should update the form and clear the messages when you switch to a different billing account">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.notification.notification--success&gt;&apos; to contain &apos;ng.bundle-usage-reminders.response-success-update-account-success&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.notification.notification--success>' to contain 'ng.bundle-usage-reminders.response-success-update-account-success'
+    at Context.eval (webpack:///./src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts:82:0)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

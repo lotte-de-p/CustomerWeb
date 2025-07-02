@@ -1,0 +1,57 @@
+<app-loader [enableLoader]="enableLoader" [pageType]="pageType" [enableMask]="enableMask" [startByDefault]="false">
+</app-loader>
+
+<tg-login (componentCanRender)="initAfterLoggedIn()" [messageGroupName]="messageGroupName" [scopes]="scopes">
+  <div class="navigation-content">
+    <app-message [messageGroupName]="messageGroupName"></app-message>
+    <div class="navigation-content__header--title">
+      <i class="header-icon icon icon-user"></i>
+      <h2>{{ 'ng.line-identification-details.identification.lbl' | translate }}</h2>
+    </div>
+    <div class="navigation-content__details identification" *ngIf="form">
+      <form name="identification__form" [formGroup]="form">
+        <tg-sim-information [msisdn]="msisdn" (simDetailsStatus)="getSimDetailsStatus($event)"></tg-sim-information>
+        <tg-user-profile-form
+          [form]="form"
+          [fullScreen]="false"
+          [isContactDetailsEditable]="isContactDetailsEditable"
+          [messageGroupName]="messageGroupName"
+          [day]="day"
+          [month]="month"
+          [year]="year"
+          [showIdentificationDetailsBtn]="showIdentificationDetailsBtn"></tg-user-profile-form>
+      </form>
+      <ng-container *ngIf="showIdentificationDetailsBtn">
+        <div class="identification-details-not-found">
+          <div>
+            <p class="identification-details-not-found--heading">
+              {{ 'ng.line-identification-details.notification-heading' | translate }}
+            </p>
+            <p class="identification-details-not-found--description">
+              {{ 'ng.line-identification-details.notification-description' | translate }}
+            </p>
+          </div>
+          <div>
+            <button
+              class="button button--primary"
+              (click)="showIdentificationDetails()"
+              [ngClass]="{ disabled: !!isSIMPending }">
+              {{ 'ng.line-identification-details.btn.add-identification-details' | translate }}
+            </button>
+          </div>
+        </div>
+      </ng-container>
+      <tg-line-information-actions
+        class="col-md-12"
+        [suspendSimUrl]="suspendSimUrl"
+        [unSuspendSimUrl]="unSuspendSimUrl"
+        [msisdn]="msisdn"
+        [formGroup]="form"
+        [simStatus]="simStatus"
+        [newContactDetails]="!hasContactDetails"
+        [showIdentificationDetailsBtn]="showIdentificationDetailsBtn"
+        (resetForm)="loadIdentificationLines()">
+      </tg-line-information-actions>
+    </div>
+  </div>
+</tg-login>

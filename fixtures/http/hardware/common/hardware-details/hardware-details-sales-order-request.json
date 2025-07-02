@@ -1,0 +1,14 @@
+{
+  "offers": [
+    {
+      "id": "HWTO0001",
+      "type": "Hardware",
+      "offers": [
+        {
+          "itemCode": "2061994",
+          "type": "SmartPhone"
+        }
+      ]
+    }
+  ]
+}

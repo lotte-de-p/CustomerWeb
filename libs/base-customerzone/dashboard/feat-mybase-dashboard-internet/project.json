@@ -1,0 +1,20 @@
+{
+  "name": "mybase-dashboard-feat-mybase-dashboard-internet",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/base-customerzone/dashboard/feat-mybase-dashboard-internet/src",
+  "prefix": "app",
+  "tags": ["type:feature", "scope:mybase-dashboard-mfe", "scope:mybase-dashboard"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/base-customerzone/dashboard/feat-mybase-dashboard-internet/**/*.ts",
+          "libs/base-customerzone/dashboard/feat-mybase-dashboard-internet/**/*.html"
+        ]
+      }
+    }
+  }
+}

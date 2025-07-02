@@ -1,0 +1,17 @@
+{
+  "name": "tg-connectivity-home-network--data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/connectivity/home-network//data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/connectivity/home-network//data-access/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:tg-connectivity-home-network-", "scope:home-network-mfe"]
+}

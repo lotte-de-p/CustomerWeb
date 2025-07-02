@@ -1,0 +1,176 @@
+{
+  "categories": [
+    {
+      "category": "shared-BundleMobileDataIncluded",
+      "preferenceGroups": [
+        {
+          "category": "shared-BundleMobileDataIncluded",
+          "preferenceGroup": "BundleMobileDataIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "75",
+              "selected": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "90",
+              "selected": false
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "41106704021",
+          "firstname": "Member3",
+          "lastname": "Nick12",
+          "email": "nick12member3@aem.com",
+          "language": "NL",
+          "phonenumber": "+32468598915",
+          "gender": "MALE",
+          "birthdate": "1999-09-28",
+          "privacysetting": 1,
+          "role": "Member",
+          "credential": "419593105",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": ["+32468598915"],
+          "isInvitedProfile": false,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "category": "included",
+      "preferenceGroups": [
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "selected": false
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "selected": false
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "41106704021",
+          "firstname": "Member3",
+          "lastname": "Nick12",
+          "email": "nick12member3@aem.com",
+          "language": "NL",
+          "phonenumber": "+32468598915",
+          "gender": "MALE",
+          "birthdate": "1999-09-28",
+          "privacysetting": 1,
+          "role": "Member",
+          "credential": "419593105",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": ["+32468598915"],
+          "isInvitedProfile": false,
+          "selected": false
+        },
+        {
+          "pid": "41106704028",
+          "firstname": "Member4",
+          "lastname": "Nick12",
+          "email": "nick12member4@aem.com",
+          "language": "NL",
+          "phonenumber": "+32468598927",
+          "gender": "MALE",
+          "birthdate": "1989-09-20",
+          "privacysetting": 1,
+          "role": "Member",
+          "credential": "419593114",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": [],
+          "isInvitedProfile": false,
+          "selected": false,
+          "mailboxUUID": "9f04846f-bdf3-4195-b75e-f5bd0a697891"
+        },
+        {
+          "pid": "41106703984",
+          "firstname": "Nick",
+          "lastname": "test",
+          "email": "nick12test@aem.com",
+          "language": "NL",
+          "phonenumber": "+32489123911",
+          "gender": "MALE",
+          "birthdate": "1972-02-28",
+          "privacysetting": 1,
+          "role": "Contract_Holder",
+          "credential": "419593065",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": [],
+          "isInvitedProfile": false,
+          "selected": false
+        },
+        {
+          "pid": "41106703996",
+          "firstname": "Akul",
+          "lastname": "Moondra1",
+          "email": "nick12manager1@aem.com",
+          "language": "EN",
+          "phonenumber": "+32468598912",
+          "gender": "MALE",
+          "birthdate": "1987-12-22",
+          "privacysetting": 1,
+          "role": "Manager",
+          "credential": "419593079",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": [],
+          "isInvitedProfile": false,
+          "selected": false
+        },
+        {
+          "pid": "41106704019",
+          "firstname": "Member2",
+          "lastname": "Nick12",
+          "email": "nick12member2@aem.com",
+          "language": "NL",
+          "phonenumber": "+32468598914",
+          "gender": "MALE",
+          "birthdate": "1999-07-28",
+          "privacysetting": 1,
+          "role": "Member",
+          "credential": "419593103",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": ["+32468598914"],
+          "isInvitedProfile": false,
+          "selected": false,
+          "mailboxUUID": "9f04846f-bdf3-4195-b75e-f5bd0a697892"
+        }
+      ]
+    }
+  ]
+}

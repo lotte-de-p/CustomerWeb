@@ -1,0 +1,37 @@
+[
+  {
+    "tabName": "identification",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/identification"
+  },
+  {
+    "tabName": "address",
+    "default": true,
+    "tabLink": "/assets/local/line-navigation-list-content/address"
+  },
+  {
+    "tabName": "products",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/products"
+  },
+  {
+    "tabName": "barrings",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/barrings"
+  },
+  {
+    "tabName": "apn",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/apn"
+  },
+  {
+    "tabName": "payByMobile",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/pay-by-mobile"
+  },
+  {
+    "tabName": "more",
+    "default": false,
+    "tabLink": "/assets/local/line-navigation-list-content/more"
+  }
+]

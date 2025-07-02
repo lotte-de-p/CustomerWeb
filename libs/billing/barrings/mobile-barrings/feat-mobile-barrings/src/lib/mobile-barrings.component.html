@@ -1,0 +1,93 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div class="barrings-wrapper">
+    @if (mobileBarringError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <tg-error-notification
+            [description]="'ng.mobile-barrings.error-barrings-description' | translate"
+            [label]="'ng.mobile-barrings.error-barrings-label' | translate"></tg-error-notification>
+        </div>
+      </div>
+    } @else {
+      <tg-mobile-line-selector (mobileLineSelected)="onSelectMobileLine($event)"></tg-mobile-line-selector>
+      @if (isReadOnly) {
+        <div class="background-notification--info--light--shade_16 pl--xl pt--m pr--m pb--m mt--s mb--l">
+          <i class="icon icon-md icon-information-shape color-notification--info--light mr--xs"></i>
+          <span class="heading--6">
+            {{ 'ng.mobile-barrings.member-read-only' | translate }}
+          </span>
+        </div>
+      }
+      @if (showGlobalBarringEnabledMessage) {
+        <div class="background-notification--info--light--shade_16 pl--xl p--m mb--l display--flex">
+          <i class="icon icon-md icon-information-shape color-notification--info--light mr--xs"></i>
+          <div>
+            <div class="heading--6 mt--n">
+              {{ 'ng.mobile-barrings.global-barring-enabled' | translate }}
+              <span class="underline cursor--pointer" (click)="openGeneral($event)">{{
+                'ng.mobile-barrings.group.title.general' | translate
+              }}</span>
+            </div>
+          </div>
+        </div>
+      }
+      @if (suspendedNumber) {
+        <div class="background-notification--info--light--shade_16 pl--xl pt--m pr--m pb--m mt--s mb--l">
+          <i class="icon icon-md icon-information-shape color-notification--info--light mr--xs"></i>
+          <span class="heading--6">
+            {{ 'ng.mobile-barrings.suspended-mobile-line' | translate }}
+          </span>
+        </div>
+      }
+      @if (saveSuccessful) {
+        <div class="background-notification--success--light--shade_16 pl--xl pt--m pr--m pb--m mt--s mb--l">
+          <i class="icon icon-md icon-check-shape color-notification--success--light mr--xs"></i>
+          <span class="heading--6">
+            {{ 'ng.mobile-barrings.save-successful' | translate }}
+          </span>
+        </div>
+      }
+      @if (errorOnSave) {
+        <div class="background-notification--error--light--shade_16 display--flex pl--xl pt--m pr--m pb--m mt--s mb--l">
+          <i class="icon icon-md icon-error-shape color-notification--error--light mr--xs"></i>
+          <div class="display--inline" [innerHTML]="'ng.mobile-barrings.save-error' | translate"></div>
+        </div>
+      }
+      @if (mobileBarringGroups?.length && (mobileBarringsLoading$ | async) === false) {
+        <div>
+          @for (group of mobileBarringGroups; track $index; let first = $first) {
+            <tg-barring
+              [ngClass]="{ 'mt--xl display--block': !first }"
+              [barringGroup]="{ group, savedBarring }"
+              [isReadOnly]="isReadOnly"
+              [globalBarringEnabled]="globalBarringEnabled"
+              [bannerLinkClicked]="bannerLinkClicked"
+              [suspendedNumber]="suspendedNumber"
+              [originalValueOfGeneralBarring]="originalValueOfGeneralBarring"
+              (saveBarrings)="save()"
+              (toggleBarring)="toggleBarring($event)"
+              (cancel)="cancel()"
+              (addAnalyticsEvent)="addAnalyticsEvent($event)"></tg-barring>
+          }
+        </div>
+      }
+    }
+    @if (mobileBarringsLoading$ | async) {
+      <div class="p--xxxg skeleton skeleton--basic skeleton--container">
+        <div class="p--l"></div>
+      </div>
+      <div class="mt--xl p--xxxg skeleton skeleton--basic skeleton--container">
+        <div class="p--l"></div>
+      </div>
+      <div class="mt--xl p--xxxg skeleton skeleton--basic skeleton--container">
+        <div class="p--l"></div>
+      </div>
+      <div class="mt--xl p--xxxg skeleton skeleton--basic skeleton--container">
+        <div class="p--l"></div>
+      </div>
+      <div class="mt--xl p--xxxg skeleton skeleton--basic skeleton--container">
+        <div class="p--l"></div>
+      </div>
+    }
+  </div>
+</tg-login>

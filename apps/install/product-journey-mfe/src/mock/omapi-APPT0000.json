@@ -1,0 +1,347 @@
+{
+  "url": "https://api.uat.telenet.be/omapi/public/product/APPT0000",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "product": {
+      "externalProductCode": "APPT0000",
+      "weight": 360,
+      "apps": [],
+      "services": [
+        {
+          "experience": {
+            "experiencetype": "ENTERTAINMENT"
+          },
+          "specifications": [
+            {
+              "grouping": "DTV",
+              "visible": true,
+              "weight": "20",
+              "labelkey": "Decoder required",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Watch TV on all screens without a decoder"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Tv-kijken zonder decoder op alle schermen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Regarder la TV sans décodeur sur tous les écrans"
+                }
+              ]
+            },
+            {
+              "grouping": "DTV",
+              "visible": true,
+              "weight": "40",
+              "labelkey": "Channel support",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "14 channels available"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Aanbod van 14 zenders"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Offre de 14 chaînes"
+                }
+              ]
+            },
+            {
+              "grouping": "DTV",
+              "visible": true,
+              "weight": "50",
+              "labelkey": "Replay support",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Watch up to 7 days back with Replay TV"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Kijk tot 7 dagen terug met Terugkijk TV"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Revoyez des programmes des 7 derniers jours avec Replay TV"
+                }
+              ]
+            },
+            {
+              "grouping": "DTV",
+              "visible": true,
+              "weight": "60",
+              "labelkey": "Content options",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Option to subscribe to additional entertainment packages or streaming services"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mogelijkheid tot abonneren op extra entertainmentpakketten of streamingdiensten"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Possibilité de s'abonner à des packs de divertissement ou à des services de streaming supplémentaires"
+                }
+              ]
+            }
+          ],
+          "servicetype": "DTV"
+        },
+        {
+          "experience": {
+            "experiencetype": "SURF"
+          },
+          "specifications": [
+            {
+              "grouping": "INTERNET",
+              "value": "unlimited",
+              "unit": "GB",
+              "visible": true,
+              "weight": "10",
+              "labelkey": "spec.fixedinternet.volume.download.fup",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Unlimited surfing"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Onbeperkt surfen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Surfer sans limites"
+                }
+              ]
+            },
+            {
+              "grouping": "INTERNET",
+              "value": "300",
+              "unit": "Mbps",
+              "visible": true,
+              "weight": "40",
+              "labelkey": "spec.fixedinternet.speed.download",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Downloadspeed: until"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Downloadsnelheid: tot"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Vitesse de téléchargement : jusqu'à"
+                }
+              ]
+            },
+            {
+              "grouping": "INTERNET",
+              "value": "5",
+              "unit": "GB",
+              "visible": true,
+              "weight": "20",
+              "labelkey": "spec.fixedinternet.mailbox.volume",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Per mailbox"
+                },
+                {
+                  "locale": "nl",
+                  "name": "per mailbox"
+                },
+                {
+                  "locale": "fr",
+                  "name": "par boîte e-mail"
+                }
+              ]
+            },
+            {
+              "grouping": "INTERNET",
+              "value": "20",
+              "unit": "Mbps",
+              "visible": true,
+              "weight": "50",
+              "labelkey": "spec.fixedinternet.speed.upload",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Uploadspeed: until"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Uploadsnelheid: tot"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Vitesse d'envoi: jusqu'à"
+                }
+              ]
+            },
+            {
+              "grouping": "INTERNET",
+              "value": "10",
+              "visible": true,
+              "weight": "60",
+              "labelkey": "spec.fixedinternet.mailbox.included",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "mailboxes"
+                },
+                {
+                  "locale": "nl",
+                  "name": "mailboxen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "boîtes e-mail"
+                }
+              ]
+            }
+          ],
+          "servicetype": "FIXED_INTERNET"
+        }
+      ],
+      "characteristics": {
+        "salespricevatincl": {
+          "value": "71,67",
+          "unit": "EUR"
+        },
+        "productsegment": "RMD",
+        "productgroup": "FMC",
+        "esimAvailable": false,
+        "elementarycharacteristics": [
+          {
+            "key": "internet_usage_limit",
+            "value": "3000",
+            "unit": "GB"
+          },
+          {
+            "key": "internet_usage_initial_threshold",
+            "value": "2400",
+            "unit": "GB"
+          },
+          {
+            "key": "internet_usage_alert_threshold",
+            "value": "2700",
+            "unit": "GB"
+          }
+        ],
+        "productsubgroup": "Internet+DTV",
+        "service_category": "FUP"
+      },
+      "unlimited": false,
+      "priceType": "Recurrent Charge",
+      "constituents": [
+        {
+          "type": "internet_line",
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ],
+      "usageLimits": {
+        "premiumService": {
+          "preferenceGroup": "PremiumServices",
+          "limits": [
+            {
+              "communicationPreferenceType": "OutBundleFraud",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      },
+      "requiresInstallation": true,
+      "languageSpecifications": [],
+      "usageBasedRatePlan": false,
+      "productid": "TWOP0012",
+      "labelkey": "All-Internet + Telenet TV flow",
+      "producttype": "BUNDLE",
+      "customercategories": ["Residential", "Event/Demo", "Production Test"],
+      "visible": true,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "All-Internet + Telenet TV flow",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv-flow.png"
+        },
+        {
+          "locale": "nl",
+          "name": "All-Internet + Telenet TV flow",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv-flow.png"
+        },
+        {
+          "locale": "fr",
+          "name": "All-Internet + Telenet TV flow",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv-flow.png"
+        }
+      ],
+      "shortdescription": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "All-Internet + Telenet TV flow"
+          },
+          {
+            "locale": "nl",
+            "name": "All-Internet + Telenet TV flow"
+          },
+          {
+            "locale": "fr",
+            "name": "All-Internet + Telenet TV flow"
+          }
+        ]
+      },
+      "visibilityrules": {
+        "conditionalvisibility": false
+      },
+      "usagenotifications": {
+        "mobile": [],
+        "internet": [
+          {
+            "category": "FUP",
+            "preferenceGroup": "InternetFUP",
+            "threshold": [
+              {
+                "communicationPreferenceType": "Internet90",
+                "communicationPreferenceTypeValue": "90",
+                "isEditable": false,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "Internet100",
+                "communicationPreferenceTypeValue": "100",
+                "isEditable": false,
+                "values": []
+              }
+            ]
+          }
+        ]
+      },
+      "isYupProduct": false,
+      "isEligibleForPauseProfile": false,
+      "isEligibleForAutoPause": false,
+      "isEligibleForSettinglimits": false,
+      "isFPBProduct": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "profile-management-util",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/engagement/profile-management/util/src",
+  "projectType": "library",
+  "prefix": "lib",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/profile-management/util/**/*.ts",
+          "libs/engagement/profile-management/util/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": [
+    "type:util",
+    "scope:profile-management",
+    "scope:profile-management-mfe",
+    "scope:profile-management-data-access"
+  ]
+}

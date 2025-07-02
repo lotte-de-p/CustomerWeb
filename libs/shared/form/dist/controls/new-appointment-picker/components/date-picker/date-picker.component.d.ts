@@ -1,0 +1,45 @@
+import { ChangeDetectorRef, EventEmitter, Injector, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { LanguageService } from '@telenet/ng-lib-page';
+import { InputAbstractComponent } from '../../../input-abstract.component';
+import { DatePickerLabelsInterface, SlideConfigInterface } from '../../interfaces';
+import { TimeslotMomentEnum } from '../../../../enums';
+import { FormErrorService, MessageGroupDirective } from '../../../../errors';
+import { AppointmentTransformerSlot } from '../../../../models';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class InputDatePickerComponent extends InputAbstractComponent implements OnInit, OnChanges {
+    languageService: LanguageService;
+    formService: FormErrorService;
+    messageGroupDirective: MessageGroupDirective;
+    injector: Injector;
+    private readonly cdr;
+    disableNoAvailableSlots: boolean;
+    withMoment: boolean;
+    showLoadMore: boolean;
+    timeslots: AppointmentTransformerSlot[];
+    updateSlots: AppointmentTransformerSlot[];
+    dateSlideConfig: SlideConfigInterface;
+    loadMore: EventEmitter<any>;
+    labels: DatePickerLabelsInterface;
+    selectedTimeslot?: AppointmentTransformerSlot;
+    appointmentMomentEnum: typeof TimeslotMomentEnum;
+    slickModal: SlickCarouselComponent;
+    appointmentsAvailable$: Observable<boolean>;
+    reRender: boolean;
+    constructor(languageService: LanguageService, formService: FormErrorService, messageGroupDirective: MessageGroupDirective, injector: Injector, cdr: ChangeDetectorRef);
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    onChange: (_: AppointmentTransformerSlot) => void;
+    onTouch: (_: boolean) => void;
+    registerOnChange(fn: VoidFunction): void;
+    registerOnTouched(fn: VoidFunction): void;
+    writeValue(value: AppointmentTransformerSlot): void;
+    selectInstallSlotDay(appointmentSlot: AppointmentTransformerSlot): void;
+    loadMoreSlots(): void;
+    private scrollToSelectedSlides;
+    private setLabels;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputDatePickerComponent, [null, null, { optional: true; }, null, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputDatePickerComponent, "app-form-date-picker", never, { "disableNoAvailableSlots": { "alias": "disableNoAvailableSlots"; "required": false; }; "withMoment": { "alias": "withMoment"; "required": false; }; "showLoadMore": { "alias": "showLoadMore"; "required": false; }; "timeslots": { "alias": "timeslots"; "required": false; }; "updateSlots": { "alias": "updateSlots"; "required": false; }; "dateSlideConfig": { "alias": "dateSlideConfig"; "required": false; }; }, { "loadMore": "loadMore"; }, never, never, false, never>;
+}
+//# sourceMappingURL=date-picker.component.d.ts.map

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.784" tests="4" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-08-29T06:05:55" tests="0" file="src/e2e/local/home.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Home" timestamp="2024-08-29T06:05:55" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Page Loading and navigation" timestamp="2024-08-29T06:05:55" tests="4" time="3.759" failures="0">
+    <testcase name="should load the home component" time="1.225" classname="Home Page Loading and navigation should load the home component">
+    </testcase>
+    <testcase name="should show all the routes" time="0.525" classname="Home Page Loading and navigation should show all the routes">
+    </testcase>
+    <testcase name="should allow searching components" time="0.614" classname="Home Page Loading and navigation should allow searching components">
+    </testcase>
+    <testcase name="should allow navigating to components" time="0.557" classname="Home Page Loading and navigation should allow navigating to components">
+    </testcase>
+  </testsuite>
+</testsuites>

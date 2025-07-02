@@ -1,0 +1,71 @@
+import { proxyCustomElement, HTMLElement, h, Host } from '@stencil/core/internal/client';
+
+const TITLE_SIZES = {
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    h4: 'h4',
+    h5: 'h5',
+    h6: 'h6',
+};
+const TITLE_SPACINGS_Y = {
+    default: 'default',
+    top: 'top',
+    bottom: 'bottom',
+    none: 'none',
+};
+
+const titleBaseCss = ".sr-only{position:absolute;width:0.1rem;height:0.1rem;padding:0;margin:-0.1rem;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sr-only{position:absolute;width:0.1rem;height:0.1rem;padding:0;margin:-0.1rem;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}:host{font-family:TelenetAlbra-Bold, \"Helvetica Neue\", Helvetica, Arial, sans-serif;font-weight:700}:host h1,:host .h1{font-size:56px;line-height:60px;margin-top:4.8rem;margin-bottom:2.4rem}:host h2,:host .h2{font-size:40px;line-height:48px;margin-top:2.4rem;margin-bottom:0.4rem}:host h3,:host .h3{font-size:32px;line-height:40px;margin-top:2.4rem;margin-bottom:0.4rem}:host h4,:host .h4{font-size:24px;line-height:32px;margin-top:2.4rem;margin-bottom:0.4rem}:host h5,:host .h5{font-size:20px;line-height:28px;margin-top:0.4rem;margin-bottom:2.4rem}:host h6,:host .h6{font-size:18px;line-height:28px;margin-top:1.6rem;margin-bottom:0}:host(.spacing-top) *{margin-bottom:0}:host(.spacing-bottom) *{margin-top:0}:host(.spacing-none) *{margin-top:0;margin-bottom:0}";
+const WinkTitleBaseStyle0 = titleBaseCss;
+
+const titleTelenetCss = ".sr-only{position:absolute;width:0.1rem;height:0.1rem;padding:0;margin:-0.1rem;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sr-only{position:absolute;width:0.1rem;height:0.1rem;padding:0;margin:-0.1rem;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}:host{font-family:TelenetAlbra-Bold, \"Helvetica Neue\", Helvetica, Arial, sans-serif;font-weight:700}:host h1,:host .h1{font-size:5.6rem;line-height:6rem;margin-top:4.8rem;margin-bottom:2.4rem}:host h2,:host .h2{font-size:4rem;line-height:4.8rem;margin-top:2.4rem;margin-bottom:0.4rem}:host h3,:host .h3{font-size:3.2rem;line-height:4rem;margin-top:2.4rem;margin-bottom:0.4rem}:host h4,:host .h4{font-size:2.4rem;line-height:3.2rem;margin-top:2.4rem;margin-bottom:0.4rem}:host h5,:host .h5{font-size:2rem;line-height:2.8rem;margin-top:2.4rem;margin-bottom:0.4rem}:host h6,:host .h6{font-size:1.8rem;line-height:2.8rem;margin-top:1.6rem;margin-bottom:0}:host(.spacing-top) *{margin-bottom:0}:host(.spacing-bottom) *{margin-top:0}:host(.spacing-none) *{margin-top:0;margin-bottom:0}";
+const WinkTitleTelenetStyle0 = titleTelenetCss;
+
+const Title = /*@__PURE__*/ proxyCustomElement(class Title extends HTMLElement {
+    constructor() {
+        super();
+        this.__registerHost();
+        this.__attachShadow();
+        this.htmlTag = TITLE_SIZES.h2;
+        this.noSeo = false;
+        this.text = '';
+        this.spacingY = TITLE_SPACINGS_Y.default;
+        this._HtmlTag = this.htmlTag;
+    }
+    componentWillRender() {
+        this._HtmlTag = this.noSeo ? 'div' : this.htmlTag;
+    }
+    render() {
+        return (h(Host, { key: 'ad89fd8cc705021f289f820bba893b5fba3b7e30', class: this.spacingY !== 'default' ? `spacing-${this.spacingY}` : '' }, h(this._HtmlTag, { key: '9b43bafd3c9d4b96c56473032137277edf5ccee8', class: { [this.htmlTag]: this.noSeo } }, this.text)));
+    }
+    static get style() { return {
+        base: WinkTitleBaseStyle0,
+        telenet: WinkTitleTelenetStyle0
+    }; }
+}, [33, "wink-title", {
+        "htmlTag": [1, "html-tag"],
+        "noSeo": [4, "no-seo"],
+        "text": [1],
+        "spacingY": [1, "spacing-y"],
+        "_HtmlTag": [32]
+    }]);
+function defineCustomElement$1() {
+    if (typeof customElements === "undefined") {
+        return;
+    }
+    const components = ["wink-title"];
+    components.forEach(tagName => { switch (tagName) {
+        case "wink-title":
+            if (!customElements.get(tagName)) {
+                customElements.define(tagName, Title);
+            }
+            break;
+    } });
+}
+
+const WinkTitle = Title;
+const defineCustomElement = defineCustomElement$1;
+
+export { WinkTitle, defineCustomElement };
+
+//# sourceMappingURL=wink-title.js.map

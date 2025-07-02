@@ -1,0 +1,8 @@
+{
+  "name": "@telenet/ng-lib-account",
+  "version": "1.0.0",
+  "publishConfig": {
+    "directory": "./dist"
+  },
+  "gitHead": "f2d8311acc11fe6f11ba65df8706122bf853e891"
+}

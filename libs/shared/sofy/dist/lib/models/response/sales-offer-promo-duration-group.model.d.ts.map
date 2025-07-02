@@ -1,0 +1,1 @@
+{"version":3,"file":"sales-offer-promo-duration-group.model.d.ts","sourceRoot":"","sources":["../../../../src/lib/models/response/sales-offer-promo-duration-group.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,2BAA2B,CAAC;AAE5D,MAAM,WAAW,4BAA4B;IAC3C,QAAQ,EAAE,MAAM,CAAC;IACjB,MAAM,EAAE,eAAe,EAAE,CAAC;CAC3B"}

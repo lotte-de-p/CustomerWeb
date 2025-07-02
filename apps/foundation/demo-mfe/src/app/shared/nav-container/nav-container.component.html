@@ -1,0 +1,384 @@
+<wink-global-header>
+  <wink-customer-orientation slot="customer-orientation"></wink-customer-orientation>
+  <wink-intent-bar slot="intent-bar"></wink-intent-bar>
+  <div slot="customer-zone">
+    <wink-dropdown-menu heading="Account" align-items="top-left" item-selected="Account">
+      <wink-avatar size="sm" slot="dropdown-menu--avatar"></wink-avatar>
+      <wink-link
+        appearance="dropdown-menu-link"
+        size="inherit"
+        icon-position="left"
+        icon-appearance="secondary"
+        is-disabled="false"
+        href="/"
+        class="active">
+        <wink-icon slot="link-icon" appearance="secondary" icon="user" size="sm"></wink-icon>
+        Account
+      </wink-link>
+      <wink-link
+        appearance="dropdown-menu-link"
+        size="inherit"
+        icon-position="left"
+        icon-appearance="secondary"
+        is-disabled="false"
+        href="/">
+        <wink-icon slot="link-icon" appearance="secondary" icon="stack" size="sm"></wink-icon>
+        Products
+      </wink-link>
+      <wink-link
+        appearance="dropdown-menu-link"
+        size="inherit"
+        icon-position="left"
+        icon-appearance="secondary"
+        is-disabled="false"
+        href="#">
+        <wink-icon slot="link-icon" appearance="secondary" icon="bill" size="sm"></wink-icon>
+        Billy
+      </wink-link>
+    </wink-dropdown-menu>
+  </div>
+  <div slot="language">
+    <wink-dropdown-menu heading="NL" list-position="left" item-selected="NL">
+      <wink-link appearance="dropdown-menu-link">NL</wink-link>
+      <wink-link appearance="dropdown-menu-link">FR</wink-link>
+      <wink-link appearance="dropdown-menu-link">EN</wink-link>
+    </wink-dropdown-menu>
+  </div>
+  <div slot="brand">
+    <wink-logo
+      appearance="telenet-yellow"
+      href="https://www.telenet.be"
+      alt="Inspect element to check"
+      target="_self"></wink-logo>
+  </div>
+  <div slot="main-navigation">
+    <wink-main-navigation
+      menu-items='[{"name":"Billing","url":"/billing","hasSubNav":false},{"name":"Product Detail","url":"/product/detail","hasSubNav":false},{"name":"Fly Out Example","url":"#","hasSubNav":true}]'></wink-main-navigation>
+  </div>
+  <div slot="search">
+    <wink-input
+      appearance="search"
+      icon-left="search"
+      icon-right="backspace"
+      input-mode-option="text"
+      type="text"
+      size="sm"
+      placeholder="Zoeken"
+      name="input name"></wink-input>
+  </div>
+  <div slot="call-to-action">
+    <wink-button
+      text="Shopping cart"
+      element="button"
+      type="button"
+      appearance="primary"
+      size="sm"
+      status="none"
+      icon="basket"
+      icon-position="left"></wink-button>
+  </div>
+
+  <wink-flyout flyout-id="0" slot="flyout">
+    <div slot="col-1">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#"> Landing page </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Uitgelicht" has-bold-links="">
+        <wink-navigation-list-item href="#"> Internet Abonnementen </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Bundels met internet </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-3">
+      <wink-navigation-list list-title="Support">
+        <wink-navigation-list-item href=""> Hulp nodig met internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Jouw product beheren </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-4">
+      <wink-img src-desktop="/assets/shared/img/place-holders/flyout.svg" alt="flyout image" loading="lazy"></wink-img>
+    </div>
+  </wink-flyout>
+
+  <wink-flyout flyout-id="2" slot="flyout">
+    <div slot="col-1">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#"> Landing page </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + TV </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href="">Internet</wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-4"></div>
+
+    <div slot="col-4">
+      <wink-img src-desktop="/assets/shared/img/place-holders/flyout.svg" alt="flyout image" loading="lazy"></wink-img>
+    </div>
+  </wink-flyout>
+
+  <wink-flyout flyout-id="3" slot="flyout">
+    <div slot="col-1">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#"> Landing page </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-3">
+      <wink-navigation-list list-title="Support">
+        <wink-navigation-list-item href=""> Hulp nodig met internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Jouw product beheren </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-4">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#">Netwerk</wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Uitgelicht" has-bold-links="">
+        <wink-navigation-list-item href="#"> Internet Abonnementen </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Bundels met internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+  </wink-flyout>
+
+  <wink-customer-orientation slot="mobile-customer-orientation"></wink-customer-orientation>
+  <wink-intent-bar slot="mobile-intent-bar"></wink-intent-bar>
+  <div slot="mobile-customer-zone">
+    <wink-icon appearance="default" icon="user" size="md" exportparts="icon, icon-user"></wink-icon>
+  </div>
+  <div slot="mobile-language">
+    <wink-dropdown-menu heading="NL" list-position="left" item-selected="NL">
+      <wink-link appearance="dropdown-menu-link">NL</wink-link>
+      <wink-link appearance="dropdown-menu-link">FR</wink-link>
+      <wink-link appearance="dropdown-menu-link">EN</wink-link>
+    </wink-dropdown-menu>
+  </div>
+  <div slot="mobile-brand">
+    <wink-logo
+      appearance="telenet-yellow"
+      href="https://www.telenet.be"
+      alt="Inspect element to check"
+      target="_self"></wink-logo>
+  </div>
+  <wink-main-navigation
+    slot="mobile-main-navigation"
+    menu-items='[{"name":"Abonnementen","url":"#","hasSubNav":true},{"name":"Toestellen","url":"#","hasSubNav":false},{"name":"Promo&apos;s","url":"#","hasSubNav":true},{"name":"Netwerk","url":"#","hasSubNav":true},{"name":"Hulp","url":"#"},{"name":"MyTelenet","url":"#"},{"name":"Contact","url":"#"}]'></wink-main-navigation>
+  <div slot="mobile-search">
+    <wink-icon appearance="default" icon="search" size="md" exportparts="icon, icon-search"></wink-icon>
+  </div>
+
+  <wink-flyout flyout-id="0" slot="mobile-flyout">
+    <div slot="col-1">
+      <wink-navigation-list list-title="Uitgelicht" has-bold-links="">
+        <wink-navigation-list-item href="#"> Internet Abonnementen </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Bundels met internet </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-3">
+      <wink-navigation-list list-title="Support">
+        <wink-navigation-list-item href=""> Hulp nodig met internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Jouw product beheren </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+  </wink-flyout>
+
+  <wink-flyout flyout-id="2" slot="mobile-flyout">
+    <div slot="col-1">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#">Promo's</wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + TV </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href="">Internet</wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true" list-title="Mobiel">
+        <wink-navigation-list-item href=""> Mobiele abonnementen </wink-navigation-list-item>
+        <wink-navigation-list-item href=""> Telenet Pay </wink-navigation-list-item>
+        <wink-navigation-list-item href="">eSIM</wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-3">
+      <wink-navigation-list list-title="Entertainment" has-bold-links="true">
+        <wink-navigation-list-item href="#"> Play Sports </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Netflix &amp; Streamz combo </wink-navigation-list-item>
+        <wink-navigation-list-item href="#">Streamz</wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Play More </wink-navigation-list-item>
+        <wink-navigation-list-item href="#">Disney+</wink-navigation-list-item>
+        <wink-navigation-list-item href="#">Netflix</wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> The Park (VR) </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href="#">TV</wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list has-bold-links="true">
+        <wink-navigation-list-item href="#"> Vaste telefoonlijn </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+  </wink-flyout>
+
+  <wink-flyout flyout-id="3" slot="mobile-flyout">
+    <div slot="col-1">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#">Netwerk</wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-2">
+      <wink-navigation-list list-title="Welk aanbod past bij jou?">
+        <wink-navigation-list-item href=""> Doe de test </wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Internet Producten" has-bold-links="true">
+        <wink-navigation-list-item href=""> Internet + Mobiel + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + Mobiel </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet + TV </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Internet only </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-3">
+      <wink-navigation-list list-title="Support">
+        <wink-navigation-list-item href=""> Hulp nodig met internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Jouw product beheren </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Meer inspiratie omtrent internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+
+    <div slot="col-4">
+      <wink-navigation-list has-bold-links="">
+        <wink-navigation-list-item href="#">Netwerk</wink-navigation-list-item>
+      </wink-navigation-list>
+
+      <wink-navigation-list list-title="Uitgelicht" has-bold-links="">
+        <wink-navigation-list-item href="#"> Internet Abonnementen </wink-navigation-list-item>
+        <wink-navigation-list-item href="#"> Bundels met internet </wink-navigation-list-item>
+      </wink-navigation-list>
+    </div>
+  </wink-flyout>
+
+  <div slot="mobile-call-to-action">
+    <wink-button
+      text="Button primary"
+      element="button"
+      type="button"
+      appearance="primary"
+      width="full"
+      status="none"></wink-button>
+  </div>
+</wink-global-header>
+<wink-stack
+  col="{ default : 12}"
+  direction="{ default : row }"
+  gap="{ default : xs }"
+  justify-content="{ default : center }"
+  align-items="{ default : center }"
+  wrap="{ default : wrap }"
+  class="gap-xs flex-direction-row justify-content-center align-items-center flex-wrap-wrap col-12">
+  <ng-content></ng-content>
+</wink-stack>

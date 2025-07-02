@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.812" tests="5" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-08-28T13:01:01" tests="0" file="src/e2e/fleet-product/line-remove-options/line-remove-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Remove Options" timestamp="2024-08-28T13:01:01" tests="5" time="10.790" failures="0">
+    <testcase name="On page load, check options" time="2.550" classname="Line Remove Options On page load, check options">
+    </testcase>
+    <testcase name="when on the remove options wizard then the manager can remove an option from the plan" time="1.748" classname="Line Remove Options when on the remove options wizard then the manager can remove an option from the plan">
+    </testcase>
+    <testcase name="when on the remove options wizard then the manager can not select an option that is not in the plan" time="1.665" classname="Line Remove Options when on the remove options wizard then the manager can not select an option that is not in the plan">
+    </testcase>
+    <testcase name="when on the remove options wizard then the manager can not select an option that is not in the plan" time="1.635" classname="Line Remove Options when on the remove options wizard then the manager can not select an option that is not in the plan">
+    </testcase>
+    <testcase name="when on the remove options wizard then the manager can remove the options" time="2.348" classname="Line Remove Options when on the remove options wizard then the manager can remove the options">
+    </testcase>
+  </testsuite>
+</testsuites>

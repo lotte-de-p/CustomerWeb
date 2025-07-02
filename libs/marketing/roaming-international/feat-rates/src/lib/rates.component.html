@@ -1,0 +1,67 @@
+<div class="template-section py--n mx--xm mx--n--sm">
+  <tg-marketing-roaming-international-ui-rates-header
+    [rateType]="rateType"></tg-marketing-roaming-international-ui-rates-header>
+  <tg-marketing-roaming-international-country-list
+    [rateType]="rateType"
+    [customerType]="customerType"></tg-marketing-roaming-international-country-list>
+
+  <ng-container *ngIf="selectedFromCountry$ | async as fromCountry">
+    <div *ngIf="rateType === 'ROAMING'">
+      <tg-marketing-roaming-international-ui-country-header
+        [country]="fromCountry"></tg-marketing-roaming-international-ui-country-header>
+      <div class="display--block display--flex--sm flex-direction--column--sm">
+        <tg-marketing-roaming-international-ui-zone-info
+          [country]="fromCountry"></tg-marketing-roaming-international-ui-zone-info>
+        <tg-marketing-roaming-international-ui-rates-overview
+          *ngIf="roamingRatesFromSelectedCountryToBelgium$ | async as overviewFromSelectedCountryToBelgium"
+          [overview]="overviewFromSelectedCountryToBelgium"></tg-marketing-roaming-international-ui-rates-overview>
+        <tg-marketing-roaming-international-ui-rates-overview
+          *ngIf="roamingRatesInsideSelectedCountry$ | async as overviewInSelectedCountry"
+          [overview]="overviewInSelectedCountry"></tg-marketing-roaming-international-ui-rates-overview>
+      </div>
+    </div>
+
+    <div *ngIf="rateType === 'ROAMING'">
+      <tg-marketing-roaming-international-country-list
+        [rateType]="rateType"
+        [customerType]="customerType"
+        [selectedCountryType]="'secondCountry'"></tg-marketing-roaming-international-country-list>
+      <div *ngIf="selectedAnotherCountry$">
+        <tg-marketing-roaming-international-ui-rate-card-collection
+          *ngIf="roamingRatesToAnotherDestinationCountry$ | async as overviewToSelectedCountry"
+          [ratesOverview]="
+            overviewToSelectedCountry.rates
+          "></tg-marketing-roaming-international-ui-rate-card-collection>
+      </div>
+    </div>
+  </ng-container>
+
+  <div *ngIf="rateType === 'INTERNATIONAL' && selectedAnotherCountry$">
+    <div class="mb--default cmp-title">
+      <h3 class="text-align--left heading--4 mt--l mb--xxxs" *ngIf="selectedAnotherCountry$ | async as anotherCountry">
+        {{
+          'ng.roaming-international-rates.rates-overview.title.from.belgium'
+            | translate: { country: anotherCountry.country }
+        }}
+      </h3>
+    </div>
+    <tg-marketing-roaming-international-ui-rate-card-collection
+      *ngIf="roamingRatesToAnotherDestinationCountry$ | async as overviewToSelectedCountry"
+      [ratesOverview]="overviewToSelectedCountry.rates"></tg-marketing-roaming-international-ui-rate-card-collection>
+  </div>
+  <div *ngIf="rateType === 'ROAMING' && (selectedFromCountry$ | async)">
+    <tg-marketing-roaming-international-ui-satellite-ferry-info></tg-marketing-roaming-international-ui-satellite-ferry-info>
+  </div>
+  <div
+    *ngIf="
+      (rateType === 'ROAMING' && (selectedFromCountry$ | async)) ||
+      (rateType === 'INTERNATIONAL' && (selectedAnotherCountry$ | async))
+    ">
+    <tg-marketing-roaming-international-upsell-options
+      *ngIf="selectedUpSellOptions$ | async as upSellOptions"
+      [upSellOptions]="upSellOptions"
+      [rateType]="rateType"
+      [customerType]="customerType"
+      [upsellOptionsLocation]="upsellOptionsLocation"></tg-marketing-roaming-international-upsell-options>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+[
+  {
+    "pid": "21106710940",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "MobileIncluded",
+        "preferences": [
+          {
+            "preferenceType": "Included100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncludedUnlimitedNational",
+        "preferences": [
+          {
+            "preferenceType": "IncludedDataUnlimitedNational100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileOptionsIncluded",
+        "preferences": [
+          {
+            "preferenceType": "IncludedOptions100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncludedUnlimitedEU",
+        "preferences": [
+          {
+            "preferenceType": "IncludedDataUnlimitedEU100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "PrePaidBucketBalance",
+        "preferences": [
+          {
+            "preferenceType": "BucketThresholdReached",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "PremiumServices",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleFraud",
+            "channels": ["Email", "SMS"]
+          },
+          {
+            "preferenceType": "OutBundlePremiumSpendingLimit",
+            "channels": ["Email", "SMS"]
+          },
+          {
+            "preferenceType": "OutBundlePremiumServices",
+            "channels": ["Email", "SMS"],
+            "value": "125 Euro"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pid": "41106704021",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "BundleMobileDataIncluded",
+        "preferences": [
+          {
+            "preferenceType": "BundleMobileDataIncluded",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncludedUnlimitedNational",
+        "preferences": [
+          {
+            "preferenceType": "IncludedDataUnlimitedNational100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileOptionsIncluded",
+        "preferences": [
+          {
+            "preferenceType": "IncludedOptions100",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      }
+    ]
+  }
+]

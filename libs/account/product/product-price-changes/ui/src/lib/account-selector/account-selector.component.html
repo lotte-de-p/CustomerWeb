@@ -1,0 +1,60 @@
+<div
+  class="billing-account-line-selector account-line-selector align-self--end--md p--xl--md p--n width--full width--auto--sm"
+  style="margin-right: 0; margin-left: 0"
+  *ngIf="billingAccounts && billingAccounts?.length! > 0">
+  <div
+    (click)="toggleSelector()"
+    class="account-selector"
+    data-cy="account-selector"
+    *ngIf="billingAccounts && billingAccounts.length > 0">
+    <div
+      class="account-selector__list account-selector__list__first-item account-selector__list--with-icon"
+      [ngClass]="{
+        'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__first-item--opened':
+          isSelectorOpen,
+        'cursor--default': billingAccounts.length === 1,
+        'account-selector__list__first-item--closed': !isSelectorOpen
+      }">
+      <div class="account-selector__list__icon">
+        <i class="icon-circle icon-billing-account"></i>
+      </div>
+      <div class="account-selector__list__account-info">
+        <div
+          class="account-selector__list__account-info__account-id"
+          data-cy="account-selector-account-number"
+          *ngIf="accountSelected">
+          {{ accountSelected }}
+        </div>
+      </div>
+      <a class="account-selector__action" *ngIf="billingAccounts.length > 1">
+        <div
+          class="icon icon-sm position--absolute text-weight--g"
+          [ngClass]="isSelectorOpen ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+      </a>
+    </div>
+
+    <ul
+      class="account-selector__list account-selector__list__options"
+      data-cy="account-selector-list"
+      *ngIf="billingAccounts.length > 1"
+      [ngClass]="{
+        'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__options--opened':
+          isSelectorOpen
+      }">
+      <li
+        class="account-selector__list__options__item"
+        [ngClass]="{ 'account-selector__list__options__item--active': isActive(account) }"
+        data-cy="account-selector-list-option"
+        *ngFor="let account of billingAccounts | orderBy">
+        <a class="account-selector__list__options__item__link" (click)="onSelectAccount(account)">
+          <div class="account-selector__list__icon">
+            <i class="icon-circle icon-billing-account"></i>
+          </div>
+          <div class="account-selector__list__account-info">
+            <div class="account-selector__list__account-info__account-id">{{ account }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

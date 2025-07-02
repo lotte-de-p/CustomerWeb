@@ -1,0 +1,67 @@
+{
+  "url": "http://localhost:8080/address/v1/suggest/city?searchTerm=10",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1070",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1050",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1040",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1030",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1000",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1130",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1020",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1020",
+      "subMunicipality": "Laken"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1130",
+      "subMunicipality": "Haren-H"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1120",
+      "subMunicipality": "Brussel"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1120",
+      "subMunicipality": "Neder-over-Heembeek"
+    },
+    {
+      "geoId": "47bda15e-83c4-6b81-e054-00144f80cbe2",
+      "zipCode": "1120",
+      "subMunicipality": "Yeder-over-Heembeek"
+    }
+  ]
+}

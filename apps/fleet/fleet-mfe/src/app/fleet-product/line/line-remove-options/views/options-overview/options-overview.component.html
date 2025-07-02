@@ -1,0 +1,55 @@
+<div class="option-tiles remove-option">
+  <div class="title-row">
+    <i class="icon-manage-line"></i>
+    <p>
+      {{ 'ng.fleet-manager-line-remove-options.lbl.remove-options' | translate }}
+    </p>
+  </div>
+  <div class="pt-25">
+    <p>
+      {{ 'ng.fleet-manager-line-remove-options.lbl.remove-option-info' | translate }}
+    </p>
+  </div>
+  <div class="title">
+    <p>
+      {{ 'ng.fleet-manager-line-remove-options.lbl.remove-options' | translate }}
+    </p>
+  </div>
+  @for (categories of productLineOptions; track categories) {
+    <div class="option-title" [attr.data-cy]="'available-option-category'">
+      <div class="option-title-toggle" (click)="toggleCategories(categories)" [attr.data-cy]="'option-category'">
+        <span [textContent]="categories.category">{{ categories.category }}</span>
+        <i class="icon-chevron-down" [ngClass]="{ open: categories.isOpen }"></i>
+      </div>
+      @if (categories.isOpen) {
+        <div class="options-button-container">
+          @for (subcategory of categories.subcategory; track subcategory) {
+            <div>
+              @if (subcategory.visible) {
+                <button
+                  class="options-button remove-option"
+                  [ngClass]="{ available: !subcategory.isSelected, 'previously-added': subcategory.isDisabled }"
+                  [disabled]="subcategory.isDisabled"
+                  (click)="toggleOption(subcategory)"
+                  [attr.data-cy]="'available-option'">
+                  <div class="justify-content--between width--full display--flex">
+                    <span [textContent]="subcategory.volume"></span>
+                  </div>
+                  @if (!subcategory.isDisabled) {
+                    <span
+                      class="separator"
+                      [attr.data-cy]="'available-option-icon'"
+                      [ngClass]="{
+                        'icon-tick': subcategory.isSelected,
+                        'icon-minus': !subcategory.isSelected
+                      }"></span>
+                  }
+                </button>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>

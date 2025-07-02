@@ -1,0 +1,1310 @@
+[
+  {
+    "flavours": [],
+    "id": "1792",
+    "label": "35 Based on you",
+    "options": [
+      {
+        "productInfo": {
+          "productId": "123",
+          "subCategory": {
+            "localizedName": "dummy option"
+          },
+          "services": [
+            {
+              "specifications": [
+                {
+                  "value": "dummy val"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "eligibleOffers": [
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-onnet",
+                  "visible": true,
+                  "weight": "40",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Bellen naar BASE",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "30",
+                  "minValue": "0",
+                  "maxValue": "300",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "300",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-sms-nationaleu",
+                  "visible": true,
+                  "weight": "50",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "number",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Sms'en",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilemonetary-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "15",
+                  "formattedValue": "15",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Maandelijks bedrag",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_monetary",
+              "experience": {
+                "type": "general"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-data-nationaleu",
+                  "visible": true,
+                  "weight": "20",
+                  "minValue": "0",
+                  "maxValue": "3",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "3",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "BOYO0015",
+          "key": "15-based-on-you",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "15 Based on you",
+          "type": "product",
+          "weight": 10,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 15,
+            "recipientsMandatory": false
+          },
+          "name": "15 Based on you",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/15-based-on-you.png",
+          "shortDescription": "Combineer 0 tot 3 GB met 0 tot 300 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+          "rates": [
+            {
+              "type": "DATA",
+              "unit": "MB",
+              "cost": "0,004882",
+              "currency": "EUR"
+            },
+            {
+              "type": "VOICE",
+              "unit": "MIN",
+              "cost": "0,05",
+              "currency": "EUR"
+            }
+          ],
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 10,
+        "type": "Mandatory",
+        "optionProducts": []
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-onnet",
+                  "visible": true,
+                  "weight": "40",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Bellen naar BASE",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "30",
+                  "minValue": "0",
+                  "maxValue": "600",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "600",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-sms-nationaleu",
+                  "visible": true,
+                  "weight": "50",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "number",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Sms'en",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilemonetary-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "25",
+                  "formattedValue": "25",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Maandelijks bedrag",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_monetary",
+              "experience": {
+                "type": "general"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-data-nationaleu",
+                  "visible": true,
+                  "weight": "20",
+                  "minValue": "0",
+                  "maxValue": "6",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "6",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "BOYO0025",
+          "key": "25-based-on-you",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "25 Based on you",
+          "visible": false,
+          "type": "product",
+          "weight": 20,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "25 Based on you",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/25-based-on-you.png",
+          "shortDescription": "Combineer 0 tot 6 GB met 0 tot 600 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+          "rates": [
+            {
+              "type": "DATA",
+              "unit": "MB",
+              "cost": "0,004069",
+              "currency": "EUR"
+            },
+            {
+              "type": "VOICE",
+              "unit": "MIN",
+              "cost": "0,041666",
+              "currency": "EUR"
+            }
+          ],
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 20,
+        "type": "Mandatory",
+        "optionProducts": [
+          {
+            "productInfo": {
+              "services": [
+                {
+                  "specifications": [
+                    {
+                      "key": "spec-mobilecalling-minutes-nationaleu",
+                      "visible": true,
+                      "weight": "0",
+                      "value": "2",
+                      "formattedValue": "2",
+                      "unit": "EUR",
+                      "localizedcontent": {
+                        "locale": "nl",
+                        "name": "Onbeperkt bellen naar alle nummers in België (ook geldig in de EU-zone)",
+                        "logo": ""
+                      }
+                    }
+                  ],
+                  "key": "",
+                  "type": "mobile_calling",
+                  "experience": {
+                    "type": "call"
+                  }
+                }
+              ],
+              "apps": [],
+              "id": "UNLM0002",
+              "key": "unlimited-call---based-on-you",
+              "category": ["voice-options"],
+              "categoryLabel": "Voice Options",
+              "labelKey": "Unlimited call - Based on you",
+              "type": "option",
+              "weight": 10,
+              "characteristics": {
+                "productSubGroup": "",
+                "priceInclVat": 2,
+                "recipientsMandatory": false
+              },
+              "name": "Onbeperkt bellen - Based on you",
+              "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png",
+              "shortDescription": null,
+              "subCategory": {
+                "name": "Calling",
+                "weight": 10,
+                "mutualExclusion": false,
+                "localizedName": "Bellen in België",
+                "normalizedName": "calling"
+              },
+              "visibilityrules": {
+                "conditionalvisibility": true
+              },
+              "specifications": {}
+            },
+            "weight": 10,
+            "price": {
+              "currency": "Euro",
+              "amount": "10,00",
+              "type": "Monthly"
+            }
+          }
+        ]
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-onnet",
+                  "visible": true,
+                  "weight": "40",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Bellen naar BASE",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "30",
+                  "minValue": "0",
+                  "maxValue": "1200",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "1.200",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-sms-nationaleu",
+                  "visible": true,
+                  "weight": "50",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "number",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Sms'en",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilemonetary-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "35",
+                  "formattedValue": "35",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Maandelijks bedrag",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_monetary",
+              "experience": {
+                "type": "general"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-data-nationaleu",
+                  "visible": true,
+                  "weight": "20",
+                  "minValue": "0",
+                  "maxValue": "12",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "12",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "BOYO0035",
+          "key": "35-based-on-you",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "35 Based on you",
+          "visible": false,
+          "type": "product",
+          "weight": 30,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "35 Based on you",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/35-based-on-you.png",
+          "shortDescription": "Combineer 0 tot 12 GB met 0 tot 1200 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+          "rates": [
+            {
+              "type": "DATA",
+              "unit": "MB",
+              "cost": "0,002848",
+              "currency": "EUR"
+            },
+            {
+              "type": "VOICE",
+              "unit": "MIN",
+              "cost": "0,029166",
+              "currency": "EUR"
+            }
+          ],
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 30,
+        "type": "Mandatory",
+        "optionProducts": [
+          {
+            "productInfo": {
+              "services": [
+                {
+                  "specifications": [
+                    {
+                      "key": "spec-mobilecalling-minutes-nationaleu",
+                      "visible": false,
+                      "weight": "0",
+                      "value": "2",
+                      "formattedValue": "2",
+                      "unit": "EUR",
+                      "localizedcontent": {
+                        "locale": "nl",
+                        "name": "Onbeperkt bellen naar alle nummers in België (ook geldig in de EU-zone)",
+                        "logo": ""
+                      }
+                    }
+                  ],
+                  "key": "",
+                  "type": "mobile_calling",
+                  "experience": {
+                    "type": "call"
+                  }
+                }
+              ],
+              "apps": [],
+              "id": "UNLM0002",
+              "key": "unlimited-call---based-on-you",
+              "category": ["voice-options"],
+              "categoryLabel": "Voice Options",
+              "labelKey": "Unlimited call - Based on you",
+              "type": "option",
+              "weight": 10,
+              "characteristics": {
+                "productSubGroup": "",
+                "priceInclVat": 2,
+                "recipientsMandatory": false
+              },
+              "name": "Onbeperkt bellen - Based on you",
+              "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png",
+              "shortDescription": null,
+              "subCategory": {
+                "name": "Calling",
+                "weight": 10,
+                "mutualExclusion": false,
+                "localizedName": "Bellen in België",
+                "normalizedName": "calling"
+              },
+              "visibilityrules": {
+                "conditionalvisibility": true
+              },
+              "specifications": {}
+            },
+            "weight": 10,
+            "price": {
+              "currency": "Euro",
+              "amount": "10,00",
+              "type": "Monthly"
+            }
+          }
+        ]
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "1",
+                  "formattedValue": "1",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "INTA0010",
+          "key": "internet-anywhere-10",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "Internet Anywhere 10",
+          "visible": false,
+          "type": "product",
+          "weight": 60,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "Internet Anywhere 10",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/internet-anywhere-10.png",
+          "shortDescription": "1 GB mobiel internet in België",
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 60,
+        "type": "Mandatory",
+        "optionProducts": []
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-onnet",
+                  "visible": false,
+                  "weight": "40",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Bellen naar BASE",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "30",
+                  "minValue": "0",
+                  "maxValue": "2400",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "2.400",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                    "logo": ""
+                  }
+                },
+                {
+                  "key": "spec-mobilecalling-sms-nationaleu",
+                  "visible": false,
+                  "weight": "50",
+                  "value": "unlimited",
+                  "formattedValue": "unlimited",
+                  "unit": "number",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Sms'en",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilemonetary-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "45",
+                  "formattedValue": "45",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Maandelijks bedrag",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_monetary",
+              "experience": {
+                "type": "general"
+              }
+            },
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-data-nationaleu",
+                  "visible": true,
+                  "weight": "20",
+                  "minValue": "0",
+                  "maxValue": "24",
+                  "formattedMinValue": "0",
+                  "formattedMaxValue": "24",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "BOYO0045",
+          "key": "45-based-on-you",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "45 Based on you",
+          "visible": false,
+          "type": "product",
+          "weight": 40,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "45 Based on you",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/45-based-on-you.png",
+          "shortDescription": "Combineer 0 tot 24 GB met 0 tot 2400 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+          "rates": [
+            {
+              "type": "DATA",
+              "unit": "MB",
+              "cost": "0,001831",
+              "currency": "EUR"
+            },
+            {
+              "type": "VOICE",
+              "unit": "MIN",
+              "cost": "0,01875",
+              "currency": "EUR"
+            }
+          ],
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 40,
+        "type": "Mandatory",
+        "optionProducts": []
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "3",
+                  "formattedValue": "3",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "INTA0020",
+          "key": "internet-anywhere-20",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "Internet Anywhere 20",
+          "visible": false,
+          "type": "product",
+          "weight": 70,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "Internet Anywhere 20",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/internet-anywhere-20.png",
+          "shortDescription": "3 GB mobiel internet in België",
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 70,
+        "type": "Mandatory",
+        "optionProducts": []
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobileinternet-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "6",
+                  "formattedValue": "6",
+                  "unit": "GB",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Mobiele data in België en de EU-zone",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_internet",
+              "experience": {
+                "type": "surf"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "INTA0030",
+          "key": "internet-anywhere-30",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "Internet Anywhere 30",
+          "visible": false,
+          "type": "product",
+          "weight": 80,
+          "characteristics": {
+            "productSubGroup": "",
+            "recipientsMandatory": false
+          },
+          "name": "Internet Anywhere 30",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/internet-anywhere-30.png",
+          "shortDescription": "6 GB mobiel internet in België",
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 80,
+        "type": "Mandatory",
+        "optionProducts": []
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilemonetary-volume-nationaleu",
+                  "visible": true,
+                  "weight": "10",
+                  "value": "0",
+                  "formattedValue": "0",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Maandelijks bedrag",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_monetary",
+              "experience": {
+                "type": "general"
+              }
+            }
+          ],
+          "apps": [],
+          "id": "BASE0000",
+          "key": "base-0",
+          "category": ["post-paid-mobile"],
+          "categoryLabel": "POST-PAID-MOBILE",
+          "labelKey": "BASE 0",
+          "type": "product",
+          "weight": 50,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 0,
+            "recipientsMandatory": false
+          },
+          "name": "BASE 0",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/base-0.png",
+          "shortDescription": "Betaal alleen wat je verbruikt",
+          "rates": [
+            {
+              "type": "DATA",
+              "unit": "MB",
+              "cost": "0,10",
+              "currency": "EUR"
+            },
+            {
+              "type": "VOICE",
+              "unit": "MIN",
+              "cost": "0,25",
+              "currency": "EUR"
+            },
+            {
+              "type": "TEXT",
+              "unit": "SMS",
+              "cost": "0,10",
+              "currency": "EUR"
+            }
+          ],
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "type": "Mandatory",
+        "weight": 50,
+        "optionProducts": []
+      }
+    ],
+    "optionProducts": [
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "0",
+                  "value": "2",
+                  "formattedValue": "2",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "Onbeperkt bellen naar alle nummers in België (ook geldig in de EU-zone)",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "UNLM0002",
+          "key": "unlimited-call---based-on-you",
+          "category": ["voice-options"],
+          "categoryLabel": "Voice Options",
+          "labelKey": "Unlimited call - Based on you",
+          "productType": "option",
+          "weight": 10,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 2,
+            "recipientsMandatory": false
+          },
+          "name": "Onbeperkt bellen",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calling",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedName": "Bellen in België",
+            "normalizedName": "calling"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": true
+          },
+          "specifications": {}
+        },
+        "weight": 10,
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        },
+        "type": "Mandatory"
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-world",
+                  "visible": false,
+                  "weight": "0",
+                  "value": "40",
+                  "formattedValue": "40",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "40 minutes to 17 non-EU countries",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "WORL0010",
+          "key": "worldmin-10-euro",
+          "category": ["prepaid-voice-options"],
+          "categoryLabel": "PREPAID VOICE OPTIONS",
+          "labelKey": "Worldmin 10 euro",
+          "visible": true,
+          "productType": "option",
+          "weight": 30,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 10,
+            "recipientsMandatory": false
+          },
+          "name": "40 minuten naar 17 niet-EU-landen ",
+          "logo": "",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calls to numbers outside Europe",
+            "weight": 20,
+            "mutualExclusion": false,
+            "localizedName": "Calls to numbers outside Europe",
+            "normalizedName": "calls-to-numbers-outside-europe"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 30,
+        "type": "Mandatory",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        }
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-world",
+                  "visible": true,
+                  "weight": "0",
+                  "value": "150",
+                  "formattedValue": "150",
+                  "unit": "minutes",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "150 minutes to 17 non-EU countries",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "WORL0030",
+          "key": "worldmin-30-euro",
+          "category": ["prepaid-voice-options"],
+          "categoryLabel": "PREPAID VOICE OPTIONS",
+          "labelKey": "Worldmin 30 euro",
+          "visible": true,
+          "productType": "option",
+          "weight": 40,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 30,
+            "recipientsMandatory": false
+          },
+          "name": "150 minuten naar 17 niet-EU-landen ",
+          "logo": "",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calls to numbers outside Europe",
+            "weight": 20,
+            "mutualExclusion": true,
+            "localizedName": "Calls to numbers outside Europe",
+            "normalizedName": "calls-to-numbers-outside-europe"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "weight": 40,
+        "type": "Mandatory",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        }
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": false,
+                  "weight": "0",
+                  "value": "5",
+                  "formattedValue": "5",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "60 minuten om te bellen naar Europese landen of in Europa",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "VOEU0060",
+          "key": "voice-europe-60-min",
+          "category": ["voice-options"],
+          "categoryLabel": "Voice Options",
+          "labelKey": "Voice Europe 60 MIN",
+          "visible": false,
+          "productType": "option",
+          "weight": 60,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": null,
+            "recipientsMandatory": false
+          },
+          "name": "60 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedName": "Bellen naar nummers in Europa",
+            "normalizedName": "calls-to-numbers-in-europe"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "type": "Mandatory",
+        "weight": 60,
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        }
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": true,
+                  "weight": "0",
+                  "value": "10",
+                  "formattedValue": "10",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "180 minuten om te bellen naar Europese landen of in Europa",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "VOEU0180",
+          "key": "voice-europe-180-min",
+          "category": ["voice-options"],
+          "categoryLabel": "Voice Options",
+          "labelKey": "Voice Europe 180 MIN",
+          "productType": "option",
+          "weight": 70,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": 10,
+            "recipientsMandatory": false
+          },
+          "name": "180 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedName": "Bellen naar nummers in Europa",
+            "normalizedName": "calls-to-numbers-in-europe"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "type": "Mandatory",
+        "weight": 70,
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        }
+      },
+      {
+        "productInfo": {
+          "services": [
+            {
+              "specifications": [
+                {
+                  "key": "spec-mobilecalling-minutes-nationaleu",
+                  "visible": false,
+                  "weight": "0",
+                  "value": "15",
+                  "formattedValue": "15",
+                  "unit": "EUR",
+                  "localizedcontent": {
+                    "locale": "nl",
+                    "name": "600 minuten om te bellen naar Europese landen of in Europa",
+                    "logo": ""
+                  }
+                }
+              ],
+              "key": "",
+              "type": "mobile_calling",
+              "experience": {
+                "type": "call"
+              }
+            }
+          ],
+          "apps": [],
+          "productId": "VOEU0600",
+          "key": "voice-europe-600-min",
+          "category": ["voice-options"],
+          "categoryLabel": "Voice Options",
+          "labelKey": "Voice Europe 600 MIN",
+          "visible": false,
+          "productType": "option",
+          "weight": 80,
+          "characteristics": {
+            "productSubGroup": "",
+            "priceInclVat": null,
+            "recipientsMandatory": false
+          },
+          "name": "600 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-600-min.png",
+          "shortDescription": null,
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedName": "Bellen naar nummers in Europa",
+            "normalizedName": "calls-to-numbers-in-europe"
+          },
+          "visibilityrules": {
+            "conditionalvisibility": false
+          },
+          "specifications": {}
+        },
+        "type": "Mandatory",
+        "weight": 80,
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00",
+          "type": "Monthly"
+        }
+      }
+    ]
+  }
+]

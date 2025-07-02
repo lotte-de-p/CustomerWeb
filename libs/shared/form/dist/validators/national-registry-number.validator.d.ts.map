@@ -1,0 +1,1 @@
+{"version":3,"file":"national-registry-number.validator.d.ts","sourceRoot":"","sources":["../../src/validators/national-registry-number.validator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAI7D,qBAAa,+BAAgC,SAAQ,UAAU;IAC7D,MAAM,CAAC,aAAa,CAAC,OAAO,EAAE,eAAe;;;IAgB7C,MAAM,CAAC,UAAU,CAAC,KAAK,EAAE,MAAM;CAoBhC"}

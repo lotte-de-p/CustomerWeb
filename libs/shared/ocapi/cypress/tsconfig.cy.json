@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.spec.json",
+  "compilerOptions": {
+    "outDir": "../../../../dist/out-tsc",
+    "module": "ES2022",
+    "strict": true,
+    "types": ["cypress", "node"],
+    "preserveSymlinks": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "noImplicitOverride": false,
+    "allowSyntheticDefaultImports": true
+  },
+  "files": ["../src/**/*.cy.ts"],
+  "exclude": [],
+  "include": [
+    "support/**/*.ts",
+    "../cypress.config.ts",
+    "../src/**/*.cy.ts",
+    "../src/**/*.cy.tsx",
+    "../src/**/*.cy.js",
+    "../src/**/*.cy.jsx",
+    "../src/**/*.d.ts"
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "name": "sales-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/sales/sales-mfe/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sales/sales-mfe",
+        "index": "apps/sales/sales-mfe/src/index.html",
+        "main": "apps/sales/sales-mfe/src/main.ts",
+        "polyfills": "apps/sales/sales-mfe/src/polyfills.ts",
+        "tsConfig": "apps/sales/sales-mfe/tsconfig.app.json",
+        "aot": true,
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/sales/sales-mfe/src/favicon.ico",
+          "apps/sales/sales-mfe/src/assets",
+          "apps/sales/sales-mfe/src/version.json",
+          {
+            "glob": "**/*",
+            "input": "components/sales/nc/hardware-checkout",
+            "output": "apps/sales/sales-mfe/src/assets/sales/hardware-checkout"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/sales/sales-mfe/src/assets",
+            "output": "assets/"
+          }
+        ],
+        "styles": ["apps/sales/sales-mfe/src/styles.scss"],
+        "scripts": [
+          "apps/sales/sales-mfe/src/assets/plugins/json-url/json-url-single.js",
+          "node_modules/tg-loader/dist/loader-plugin.js"
+        ],
+        "customWebpackConfig": {
+          "path": "apps/sales/sales-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "3mb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/sales/sales-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/sales/sales-mfe/src/favicon.ico",
+            "apps/sales/sales-mfe/src/assets",
+            "apps/sales/sales-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "components/sales/nc/hardware-checkout",
+              "output": "apps/sales/sales-mfe/src/assets/sales/hardware-checkout"
+            },
+            {
+              "glob": "**/*",
+              "input": "apps/sales/sales-mfe/src/assets",
+              "output": "assets/"
+            },
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "customWebpackConfig": {
+            "path": "apps/sales/sales-mfe-e2e/coverage.webpack.js"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "sales-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "sales-mfe:build:development",
+          "proxyConfig": "apps/sales/sales-mfe/src/proxy.conf.json"
+        },
+        "coverage": {
+          "buildTarget": "sales-mfe:build:coverage",
+          "proxyConfig": "apps/sales/sales-mfe/src/proxy.conf.json"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4205,
+        "publicHost": "http://localhost:4205",
+        "buildTarget": "sales-mfe:build:development",
+        "host": "0.0.0.0",
+        "disableHostCheck": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sales/sales-mfe/**/*.ts", "apps/sales/sales-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/sales/sales-mfe/.storybook",
+        "browserTarget": "sales-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/sales-mfe",
+        "configDir": "apps/sales/sales-mfe/.storybook",
+        "browserTarget": "sales-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/sales/sales-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["type:app", "scope:sales-mfe"]
+}

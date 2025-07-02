@@ -1,0 +1,19 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "include": ["apps/marketing/marketing-mfe/**", "apps/marketing/marketing-mfe-e2e/**"],
+  "reporter": [
+    "lcovonly",
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+    "exclude": [
+      "**/cypress/**",
+      "**/dist/**"
+    ],
+  "report-dir": "../../../coverage/apps/marketing/marketing-mfe-e2e",
+  "cwd": "../../../"
+}

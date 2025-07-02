@@ -1,0 +1,66 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn($event)">
+  <tg-mobile-line-selector (mobileLineSelected)="onSelectMobileLine($event)"></tg-mobile-line-selector>
+  <app-message-flow [messageGroupName]="MESSAGE_GROUP_NAME"></app-message-flow>
+  <ng-template #mobileUsageLimitsSkeleton>
+    <care-billing-mobile-usage-limits-skeleton
+      *ngIf="selectedMobileLine?.status !== 'ACTIVATION_IN_PROGRESS'"></care-billing-mobile-usage-limits-skeleton>
+  </ng-template>
+  <ng-template #limitsErrorNotification>
+    <tg-error-notification
+      [description]="'ng.mobile-usage-limits.error-limits-description' | translate"
+      [label]="'ng.mobile-usage-limits.error-limits-label' | translate"></tg-error-notification>
+  </ng-template>
+  <ng-container *ngIf="mobileUsageLimitsLoaded$ | async; else mobileUsageLimitsSkeleton">
+    <div *ngIf="selectedMobileUsageLimits$ | async as usageLimits; else limitsErrorNotification">
+      <care-billing-mobile-usage-limits-update-warning-dialog
+        [dialogData]="warningDialogData"
+        [showWarningDialog]="showWarningDialog"
+        (clickEvent)="warningDialogEvent($event)">
+      </care-billing-mobile-usage-limits-update-warning-dialog>
+      <care-billing-mobile-usage-limits-member-notification-header *ngIf="isMember">
+      </care-billing-mobile-usage-limits-member-notification-header>
+      <div class="content-section mb-20" *ngIf="outOfBundleLimitsLoaded$ | async">
+        <div class="p--xl--md p--l">
+          <div class="display--flex flex-direction--row justify-content--between">
+            <care-billing-mobile-usage-limits-out-of-bundle-limits-header [isMember]="isMember">
+            </care-billing-mobile-usage-limits-out-of-bundle-limits-header>
+            <care-billing-mobile-usage-limits-manage-limits
+              *ngIf="!isMember"
+              [attr.data-cy]="'mobile-usage-limits-manage-oob'"
+              (clickEvent)="showManageLimit($event, 'out-of-plan')"></care-billing-mobile-usage-limits-manage-limits>
+          </div>
+          <care-billing-mobile-usage-limits-out-of-bundle-limits-description class="row m--n" [isMember]="isMember">
+          </care-billing-mobile-usage-limits-out-of-bundle-limits-description>
+          <care-billing-mobile-usage-limits-out-of-bundle-limits-details
+            [outOfBundleLimits]="outOfBundleLimits$ | async"
+            [isMember]="isMember"
+            [currentOutOfBundleLimit]="currentUsageLimits?.outOfBundle"
+            [showOutOfBundleLimit]="showOutOfBundleLimit"
+            (outOfBundleLimitUpdated)="updateOOBLimits($event)">
+          </care-billing-mobile-usage-limits-out-of-bundle-limits-details>
+        </div>
+      </div>
+      <div class="content-section mb-20">
+        <div class="p--xl--md p--l">
+          <div class="display--flex flex-direction--row justify-content--between">
+            <care-billing-mobile-usage-limits-premium-services-header
+              [isMember]="isMember"></care-billing-mobile-usage-limits-premium-services-header>
+            <care-billing-mobile-usage-limits-manage-limits
+              *ngIf="!isMember"
+              [attr.data-cy]="'mobile-usage-limits-manage-premium-services'"
+              (clickEvent)="showManageLimit($event, 'premium-services')">
+            </care-billing-mobile-usage-limits-manage-limits>
+          </div>
+          <care-billing-mobile-usage-limits-premium-services-description
+            class="row m--n"></care-billing-mobile-usage-limits-premium-services-description>
+          <care-billing-mobile-usage-limits-premium-services
+            [isMember]="isMember"
+            [currentPremiumUsageLimit]="usageLimits.premiumService"
+            [showPremiumServices]="showPremiumServices"
+            (premiumLimitUpdated)="updatePremiumLimits($event)">
+          </care-billing-mobile-usage-limits-premium-services>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</tg-login>

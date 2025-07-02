@@ -1,0 +1,1 @@
+{"version":3,"file":"sales-offer.model.d.ts","sourceRoot":"","sources":["../../../../src/lib/models/response/sales-offer.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,6BAA6B,CAAC;AAChE,OAAO,EAAE,oBAAoB,EAAE,MAAM,2BAA2B,CAAC;AAEjE,MAAM,WAAW,UAAU;IACzB,QAAQ,EAAE,iBAAiB,EAAE,CAAC;IAC9B,KAAK,EAAE,oBAAoB,CAAC;IAC5B,iBAAiB,EAAE,iBAAiB,EAAE,CAAC;CACxC"}

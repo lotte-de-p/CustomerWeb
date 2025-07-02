@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { <%= stateClassName %> } from '../+state/<%= fileName %>.state';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class <%= facadeClassName %> {
+  constructor(private readonly store: Store<<%= stateClassName %>>) {}
+}

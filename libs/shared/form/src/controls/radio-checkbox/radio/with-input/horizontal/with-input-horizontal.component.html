@@ -1,0 +1,75 @@
+<div *ngIf="customLabel" [tgMargin]="{ size: 'm', position: 'b' }" tgGridRow>
+  <div class="col--grow">
+    <div appTextFlow="label">
+      <div class="label-input-flow"></div>
+      <label>{{ getLabel() | translate }}</label>
+    </div>
+  </div>
+</div>
+<div *ngIf="error" class="notification notification--errorfield">
+  <span class="icon icon-error-shape errorfield">{{ getText() | translate }}</span>
+</div>
+<div [tgMargin]="{ size: 'l', position: 'b' }" tgGridRow>
+  <ng-container *ngFor="let option of optionList; let i = index">
+    <div class="col--grow">
+      <div
+        [tgMargin]="[
+          { size: 'm', position: 't' },
+          { size: 'm', position: 'b' }
+        ]">
+        <div class="radio-checkbox">
+          <div [style]="'--animation-delay:' + i" class="radio form__radio">
+            <input
+              [checked]="selectedOption && option.value === selectedOption.value"
+              class="form__radio__input"
+              id="choice-{{ i }}-{{ key }}"
+              name="choice-{{ i }}-{{ key }}"
+              type="radio" />
+            <label (click)="selectOption(option)" class="form__radio__label" for="choice-{{ i }}-{{ key }}"></label>
+          </div>
+          <label
+            (click)="selectOption(option)"
+            [innerHTML]="getOptionLabel(option) | translate"
+            class="label--large"
+            for="choice-{{ i }}-{{ key }}">
+          </label>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div
+    [tgMargin]="[
+      { size: 'm', position: 't' },
+      { size: 'm', position: 'b' }
+    ]">
+    <div class="radio-checkbox">
+      <div [style]="'--animation-delay:' + optionList.length" class="radio form__radio">
+        <input
+          [checked]="inputRadioSelected"
+          class="form__radio__input"
+          id="choice-{{ optionList.length }}-{{ key }}"
+          name="choice-{{ optionList.length }}-{{ key }}"
+          type="radio" />
+        <label (click)="selectInput()" class="form__radio__label" for="choice-{{ optionList.length }}-{{ key }}"
+          >&nbsp;</label
+        >
+      </div>
+      <label (click)="selectInput()" class="label--large" for="choice-{{ optionList.length }}-{{ key }}"></label>
+    </div>
+  </div>
+  <div class="col--grow">
+    <div class="form__input-container">
+      <input
+        (blur)="onBlur()"
+        (focus)="focusOtherSelected()"
+        [(ngModel)]="inputValue"
+        class="form__input Form__input"
+        id="choice-input-{{ optionList.length }}-{{ key }}"
+        name="radio-group-name"
+        pattern=""
+        placeholder="{{ inputPlaceholder }}"
+        required="required"
+        type="text" />
+    </div>
+  </div>
+</div>

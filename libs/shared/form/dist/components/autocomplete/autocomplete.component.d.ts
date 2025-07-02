@@ -1,0 +1,43 @@
+import { OnInit, EventEmitter } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class AutocompleteComponent<T> implements OnInit {
+    searchTerm: string;
+    autocompleteItems: T[];
+    createLabel: (item: T) => string;
+    placeholder: string;
+    maxResults: number;
+    name: string;
+    showListOnFocus: boolean;
+    setErrorState: boolean;
+    selectionChange: EventEmitter<T>;
+    inputTextChange: EventEmitter<string>;
+    showSuggestions: boolean;
+    highlightedItem: T | null;
+    filteredItems: T[];
+    selectedItem: T | null;
+    scrollTo: number;
+    highlightedItemHeight: number;
+    listItemHeight: number;
+    ngOnInit(): void;
+    private fallbackCreateLabel;
+    handleKeyEvent(key: string): void;
+    private updateModelWithSearchTerm;
+    private getHighlightedItemIndex;
+    private handleArrowUp;
+    private handleArrowDown;
+    private setSearchTerm;
+    showListBox(): boolean;
+    getLabel(item: T): string;
+    selectItem(item: T | null): void;
+    private setHighlightedItem;
+    onBlur(event?: Event): void;
+    onFocus(): void;
+    hasSearchTerm(): boolean;
+    hasSuggestions(): boolean;
+    updateFilteredItems(): T[];
+    getItemId(highlightedItem: T): string;
+    getActiveItemId(): string;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteComponent<any>, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteComponent<any>, "tg-autocomplete", never, { "searchTerm": { "alias": "searchTerm"; "required": false; }; "autocompleteItems": { "alias": "autocompleteItems"; "required": false; }; "createLabel": { "alias": "createLabel"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "maxResults": { "alias": "maxResults"; "required": false; }; "name": { "alias": "name"; "required": false; }; "showListOnFocus": { "alias": "showListOnFocus"; "required": false; }; "setErrorState": { "alias": "setErrorState"; "required": false; }; }, { "selectionChange": "selectionChange"; "inputTextChange": "inputTextChange"; }, never, never, true, never>;
+}
+//# sourceMappingURL=autocomplete.component.d.ts.map

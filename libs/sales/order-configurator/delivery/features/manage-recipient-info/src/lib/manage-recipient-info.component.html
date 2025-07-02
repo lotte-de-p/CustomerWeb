@@ -1,0 +1,26 @@
+<div class="m-0 content-section">
+  <h6 class="pl--xl pt--l m-0">
+    {{ 'ng.sales-checkout.text.delivery-address-title' | translate }}
+  </h6>
+</div>
+<form novalidate="">
+  <div class="sales-flow__content__delivery__section mb--xg">
+    <div class="sales-display-info--delivery-address mb-0">
+      <div class="sales-display-info__content">
+        <tg-order-configurator-delivery-ui-recipient-address [recipientAddress]="recipientAddress$ | async">
+        </tg-order-configurator-delivery-ui-recipient-address>
+        <div class="divider divider--s__very-light-grey mb--l"></div>
+        <tg-order-configurator-delivery-ui-recipient-details
+          [recipientDetails]="recipientDetails$ | async"></tg-order-configurator-delivery-ui-recipient-details>
+      </div>
+    </div>
+    <div class="display--flex color-black pl--xl--md pb--xs--md px--xm">
+      <a
+        (click)="openRecipientDetailsForm()"
+        [attr.data-testid]="'change-delivery-address-button'"
+        class="button button--primary mb--l">
+        {{ 'ng.sales-checkout.delivery-change-address' | translate }}
+      </a>
+    </div>
+  </div>
+</form>

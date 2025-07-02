@@ -1,0 +1,1 @@
+{"version":3,"file":"connect-five.constants.d.ts","sourceRoot":"","sources":["../../../src/lib/constants/connect-five.constants.ts"],"names":[],"mappings":"AAAA,qBAAa,oBAAoB;IAC/B,MAAM,CAAC,aAAa,SAAiB;IACrC,MAAM,CAAC,mBAAmB,SAAS;IACnC,MAAM,CAAC,WAAW,SAAkB;IACpC,MAAM,CAAC,eAAe,SAAgB;IACtC,MAAM,CAAC,YAAY,SAAoB;IACvC,MAAM,CAAC,0BAA0B,SAAK;CACvC"}

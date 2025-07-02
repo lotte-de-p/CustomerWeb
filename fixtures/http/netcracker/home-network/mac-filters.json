@@ -1,0 +1,27 @@
+{
+  "macAddress": "30:65:EC:6F:C4:58",
+  "hostRestrictionAction": {
+    "value": "DISABLED",
+    "possibleValue": ["DISABLED", "ALLOW", "DENY"]
+  },
+  "macFilterDefinitions": [
+    {
+      "macAddress": "00:7E:56:43:0E:BE",
+      "active": true,
+      "description": "Ip Camera 1",
+      "ssidType": {
+        "value": "PRIMARY",
+        "possibleValues": ["PRIMARY", "SECONDARY", "GUEST", "HOTSPOT"]
+      }
+    },
+    {
+      "macAddress": "00:7E:56:43:0E:BA",
+      "active": true,
+      "description": "Ip Camera 2",
+      "ssidType": {
+        "value": "PRIMARY",
+        "possibleValues": ["PRIMARY", "SECONDARY", "GUEST", "HOTSPOT"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc/libs/@telenet/ng-lib-step-flow",
+    "strictPropertyInitialization": false
+  }
+}

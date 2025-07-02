@@ -1,0 +1,1 @@
+{"version":3,"file":"short-description.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/short-description.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,yBAAyB,EAAE,MAAM,+BAA+B,CAAC;AAE1E,MAAM,WAAW,yBAAyB;IACxC,gBAAgB,CAAC,EAAE,yBAAyB,CAAC;CAC9C"}

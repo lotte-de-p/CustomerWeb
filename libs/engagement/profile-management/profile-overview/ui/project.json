@@ -1,0 +1,20 @@
+{
+  "name": "profile-overview-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/profile-management/profile-overview/ui/src",
+  "prefix": "tg-pm",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/profile-management/profile-overview/ui/**/*.ts",
+          "libs/engagement/profile-management/profile-overview/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:profile-overview", "scope:profile-management", "scope:profile-management-mfe"]
+}

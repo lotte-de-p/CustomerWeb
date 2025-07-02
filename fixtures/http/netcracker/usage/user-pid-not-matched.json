@@ -1,0 +1,509 @@
+{
+  "id": "9162775032013596496",
+  "identifier": "0468532926",
+  "label": "mobileusaegstanman",
+  "useSpecurl": false,
+  "activationDate": "2022-02-14T09:46:32",
+  "addressId": "9150308808513471913",
+  "locationId": "9162750629513913913",
+  "status": "Active",
+  "userPIDLinked": false,
+  "isDataOnlyPlan": false,
+  "productType": "mobile",
+  "pid": "41111880467",
+  "hasVoiceMail": true,
+  "options": [],
+  "spec": {
+    "localizedcontent": {
+      "locale": "en",
+      "name": "Telenet Mobile",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+    }
+  },
+  "productInfo": {
+    "internalCategory": "POST-PAID-MOBILE",
+    "productId": "TMOB0001",
+    "isYupProduct": false,
+    "externalProductCode": "TMOB0001",
+    "productType": "MOBILE",
+    "categories": [
+      "mobile",
+      "for-rules---standalone-mobile-plans",
+      "for-rules---res-tlos-with-voicemail",
+      "for-rules---upgrades-for-kingkong-business",
+      "for-rules---bundles-mobile-fix--b2b",
+      "post-paid-mobile",
+      "for-rules---partner-discount",
+      "for-rules---for-125121-discount",
+      "for-rules---9-personeelskorting-telenet",
+      "for-rules---partner-discount-except-oneup"
+    ],
+    "customerCategories": ["residential", "eventdemo", "production-test"],
+    "subCategory": {},
+    "labelKey": "Telenet Mobile",
+    "visible": true,
+    "weight": 5,
+    "services": [
+      {
+        "serviceType": "MOBILE_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "10",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Minutes to all numbers in Belgium (also valid in the EU zone)"
+            }
+          },
+          {
+            "labelKey": "text",
+            "unit": "number",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited sms in Belgium and EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "telenet-mobile-monthly---nationaleu-data",
+            "unit": "GB",
+            "value": "3",
+            "visible": true,
+            "weight": "30",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Data usage in Belgium and the EU-zone"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      }
+    ],
+    "apps": [],
+    "localizedContent": [
+      {
+        "locale": "en",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      }
+    ],
+    "shortDescription": {
+      "localizedContent": {
+        "locale": "en",
+        "name": "Telenet Mobile"
+      }
+    },
+    "visibilityRules": {
+      "conditionalVisibility": false
+    },
+    "unlimited": false,
+    "eligibleForDiscount": false,
+    "priceType": "Recurrent Charge",
+    "characteristics": {
+      "productGroup": "OTHER",
+      "productSubGroup": "",
+      "productSegment": "RMD",
+      "priceInclVat": 20,
+      "recipientsMandatory": false,
+      "esimAvailable": false
+    },
+    "usageBasedRatePlan": false,
+    "requiresInstallation": false,
+    "name": "Telenet Mobile",
+    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png",
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB_RMD",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50",
+            "communicationPreferenceTypeValue": "50",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90",
+            "communicationPreferenceTypeValue": "90",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100",
+            "communicationPreferenceTypeValue": "100",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          }
+        ]
+      },
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "20 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "plan": {
+    "internalCategory": "POST-PAID-MOBILE",
+    "productId": "TMOB0001",
+    "isYupProduct": false,
+    "externalProductCode": "TMOB0001",
+    "productType": "MOBILE",
+    "categories": [
+      "mobile",
+      "for-rules---standalone-mobile-plans",
+      "for-rules---res-tlos-with-voicemail",
+      "for-rules---upgrades-for-kingkong-business",
+      "for-rules---bundles-mobile-fix--b2b",
+      "post-paid-mobile",
+      "for-rules---partner-discount",
+      "for-rules---for-125121-discount",
+      "for-rules---9-personeelskorting-telenet",
+      "for-rules---partner-discount-except-oneup"
+    ],
+    "customerCategories": ["residential", "eventdemo", "production-test"],
+    "subCategory": {},
+    "labelKey": "Telenet Mobile",
+    "visible": true,
+    "weight": 5,
+    "services": [
+      {
+        "serviceType": "MOBILE_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "10",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Minutes to all numbers in Belgium (also valid in the EU zone)"
+            }
+          },
+          {
+            "labelKey": "text",
+            "unit": "number",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited sms in Belgium and EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "telenet-mobile-monthly---nationaleu-data",
+            "unit": "GB",
+            "value": "3",
+            "visible": true,
+            "weight": "30",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Data usage in Belgium and the EU-zone"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      }
+    ],
+    "apps": [],
+    "localizedContent": [
+      {
+        "locale": "en",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Telenet Mobile",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png"
+      }
+    ],
+    "shortDescription": {
+      "localizedContent": {
+        "locale": "en",
+        "name": "Telenet Mobile"
+      }
+    },
+    "visibilityRules": {
+      "conditionalVisibility": false
+    },
+    "unlimited": false,
+    "eligibleForDiscount": false,
+    "priceType": "Recurrent Charge",
+    "characteristics": {
+      "productGroup": "OTHER",
+      "productSubGroup": "",
+      "productSegment": "RMD",
+      "priceInclVat": 20,
+      "recipientsMandatory": false,
+      "esimAvailable": false
+    },
+    "usageBasedRatePlan": false,
+    "requiresInstallation": false,
+    "name": "Telenet Mobile",
+    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/telenet-mobile.png",
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB_RMD",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50",
+            "communicationPreferenceTypeValue": "50",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90",
+            "communicationPreferenceTypeValue": "90",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100",
+            "communicationPreferenceTypeValue": "100",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          }
+        ]
+      },
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "20 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "isBase0Plan": false,
+  "msisdn": "0468532926",
+  "isMultipleUserPIDLinked": false,
+  "hasNoLinesMappedToPID": true,
+  "address": {
+    "street": "Buizegemlei",
+    "streetId": "9150308777213952560",
+    "country": "België",
+    "municipality": "Edegem",
+    "addressId": "9150308808513471913",
+    "type": "Geographical Address",
+    "boxNumber": "1",
+    "floorNumber": "2",
+    "houseNumber": "135",
+    "postalCode": "2650",
+    "countryCode": "BE",
+    "tinaLocationId": "6cc8d3007q-9wuh7c0kjb"
+  }
+}

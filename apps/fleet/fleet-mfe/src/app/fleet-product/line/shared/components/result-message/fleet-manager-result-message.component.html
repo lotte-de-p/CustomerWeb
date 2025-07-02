@@ -1,0 +1,9 @@
+<div class="bundle-usage--remove fixed" [attr.data-cy]="'result-screen'">
+  <app-message-flow [messageGroupName]="messageGroup"></app-message-flow>
+  <a
+    [attr.data-cy]="'result-screen-back-to-overview-link'"
+    class="link pt--s"
+    (click)="backToProductOverviewClicked.emit()"
+    ><i class="icon-chevron-left-small"></i>{{ backToProductOverviewLabel | translate }}
+  </a>
+</div>

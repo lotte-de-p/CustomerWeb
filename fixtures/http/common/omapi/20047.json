@@ -1,0 +1,124 @@
+{
+  "product": {
+    "productid": 20047,
+    "labelkey": "pack.fmc.wigohomes",
+    "visible": true,
+    "family": "FMC_RMD",
+    "salesofferingid": "145",
+    "producttype": "BUNDLE",
+    "weight": 1,
+    "apps": [
+      {
+        "labelkey": "support"
+      },
+      {
+        "labelkey": "triiing"
+      },
+      {
+        "labelkey": "yelo"
+      }
+    ],
+    "services": [
+      {
+        "labelkey": "pack.triple.inttelidtv.wigohs",
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL",
+          "weight": 99
+        },
+        "weight": 0,
+        "specifications": [
+          {
+            "labelkey": "spec.product.listprice.vatexcl",
+            "value": "59.37",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.bundle.salesprice",
+            "value": "59.37",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "setting.product.salesofferingid.activate",
+            "value": "145",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "setting.product.salesofferingid.deactivate",
+            "value": "145",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "setting.bundle.internetpackage",
+            "value": "62541",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "spec.product.listprice.vatincl",
+            "value": "71.84",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "setting.bundle.nexttier",
+            "value": "16571",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "salesofferingid",
+            "value": "145",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "setting.bundle.linkedproducts",
+            "value": "16581,16571,16601,16405,16611,16285,16355,16415,17605",
+            "visible": false,
+            "weight": 99
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "productsegment": "RMD",
+      "producttier": "Mid",
+      "productgroup": "FMC",
+      "activationsalesofferingid": "145",
+      "productlevel": "3P",
+      "salespricevatincl": {
+        "unit": "EURO",
+        "value": "71.84"
+      },
+      "salespricevatexcl": {
+        "unit": "EURO",
+        "value": "59.37"
+      }
+    },
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "WIGO HOME S",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigohomes.png"
+      },
+      {
+        "locale": "fr",
+        "name": "WIGO HOME S",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigohomes.png"
+      },
+      {
+        "locale": "en",
+        "name": "WIGO HOME S",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigohomes.png"
+      }
+    ]
+  }
+}

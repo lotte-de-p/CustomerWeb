@@ -1,0 +1,22 @@
+{
+  "offers": [
+    {
+      "id": "BOYO0025",
+      "type": "Product",
+      "offers": [
+        {
+          "id": "EQUI0014",
+          "type": "Smartphone"
+        },
+        {
+          "id": "SPOTIFY1",
+          "type": "Options"
+        }
+      ]
+    },
+    {
+      "id": "BOYO0035",
+      "type": "Product"
+    }
+  ]
+}

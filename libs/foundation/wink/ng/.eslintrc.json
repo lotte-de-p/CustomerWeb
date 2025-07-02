@@ -1,0 +1,21 @@
+{
+  "extends": ["../../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "src/**", "node_modules", "dist", "jest.config.ts", "wink-ng.js"],
+  "parserOptions": {
+    "project": "./libs/foundation/wink/core/tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
+}

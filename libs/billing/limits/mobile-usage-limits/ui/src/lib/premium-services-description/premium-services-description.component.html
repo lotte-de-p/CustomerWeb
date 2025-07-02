@@ -1,0 +1,9 @@
+<p
+  class="font--body-regular pt--xxs color-shade_72 col-12 col-md-10"
+  [attr.data-cy]="'premium-services-header-description'">
+  @if (!isMember) {
+    {{ 'ng.mobile-usage-limits.lbl.premium-services-description' | translate }}
+  } @else {
+    {{ 'ng.mobile-usage-limits.lbl.member-premium-services-description' | translate }}
+  }
+</p>

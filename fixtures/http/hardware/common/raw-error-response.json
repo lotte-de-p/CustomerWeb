@@ -1,0 +1,9 @@
+{
+  "errorWithUrl": {
+    "error": {},
+    "url": "https://base.rest.ac-systems.com/api/stock/single/apikey/baserest/sku/11800161"
+  },
+  "errorWithoutUrl": {
+    "error": {}
+  }
+}

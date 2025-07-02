@@ -1,0 +1,472 @@
+{
+  "product": {
+    "productid": 20048,
+    "labelkey": "pack.fmc.wigos3gb",
+    "visible": true,
+    "family": "FMC_RMD",
+    "salesofferingid": "147",
+    "producttype": "BUNDLE",
+    "weight": 1,
+    "apps": [
+      {
+        "labelkey": "support"
+      },
+      {
+        "labelkey": "triiing"
+      },
+      {
+        "labelkey": "yelo"
+      },
+      {
+        "labelkey": "mobileusage"
+      }
+    ],
+    "services": [
+      {
+        "labelkey": "pack.quad.inttelmob.wigos3gb",
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL",
+          "weight": 99
+        },
+        "weight": 0,
+        "specifications": [
+          {
+            "labelkey": "setting.bundle.nexttier",
+            "value": "16601",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "spec.product.listprice.vatexcl",
+            "value": "69.88",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "setting.product.salesofferingid.deactivate",
+            "value": "147",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "spec.bundle.mobile.shareddata",
+            "value": "3",
+            "unit": "GB",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "setting.product.salesofferingid.activate",
+            "value": "147",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "spec.bundle.freeride.activations",
+            "value": "1",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.product.listprice.vatincl",
+            "value": "84.55",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "salesofferingid",
+            "value": "147",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "setting.bundle.internetpackage",
+            "value": "62141",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "setting.bundle.linkedproducts",
+            "value": "16581,16571,16601,16405,16611,16285,16355,16415",
+            "visible": false,
+            "weight": 99
+          },
+          {
+            "labelkey": "spec.bundle.freeride.size",
+            "value": "3",
+            "unit": "GB",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.bundle.salesprice",
+            "value": "84.55",
+            "unit": "EURO",
+            "visible": false,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.bundle.mobile.maxlines",
+            "value": "2",
+            "visible": true,
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "sharedmobiledata": {
+        "unit": "GB",
+        "value": "3"
+      },
+      "productsegment": "RMD",
+      "producttier": "Mid",
+      "productgroup": "FMC",
+      "max_mobile_lines": "2",
+      "activationsalesofferingid": "147",
+      "max_mobile_includeddata_reminders": "1",
+      "max_mobile_outofbundle_reminders": "4",
+      "productlevel": "4P",
+      "salespricevatincl": {
+        "unit": "EURO",
+        "value": "84.55"
+      },
+      "salespricevatexcl": {
+        "unit": "EURO",
+        "value": "69.88"
+      },
+      "constituents": [
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/24675",
+          "type": "internet_line",
+          "rawOmapi": {
+            "product": {
+              "productid": 24675,
+              "labelkey": "internet.line.allinternet.standalone",
+              "visible": true,
+              "family": "NOT_APPLICABLE",
+              "producttype": "PRODUCT",
+              "weight": 2,
+              "apps": [
+                {
+                  "labelkey": "support"
+                }
+              ],
+              "services": [
+                {
+                  "labelkey": "surf.fixedinternet.fibernet",
+                  "servicetype": "FIXED_INTERNET",
+                  "experience": {
+                    "experiencetype": "SURF",
+                    "weight": 10
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.volume",
+                      "value": "5",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": 5
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.upload",
+                      "value": "20",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 2
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.webspace.volume",
+                      "value": "50",
+                      "unit": "MB",
+                      "visible": true,
+                      "weight": 6
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.download",
+                      "value": "300",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.volume.download.fup",
+                      "value": "FUP",
+                      "visible": true,
+                      "weight": 3
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.included",
+                      "value": "10",
+                      "visible": true,
+                      "weight": 4
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.wifree",
+                      "value": "1",
+                      "visible": false,
+                      "weight": 7
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "alert_threshold_marker": {
+                  "unit": "GB",
+                  "value": "750"
+                },
+                "detailed_scale": {
+                  "unit": "GB",
+                  "value": "25"
+                },
+                "productsegment": "ALL",
+                "service_category": "FUP",
+                "productgroup": "OTHER",
+                "initial_threshold_2": {
+                  "unit": "GB",
+                  "value": "1050"
+                },
+                "initial_threshold_1": {
+                  "unit": "GB",
+                  "value": "225"
+                },
+                "service_category_limit": {
+                  "unit": "GB",
+                  "value": "750"
+                },
+                "alert_threshold": {
+                  "unit": "GB",
+                  "value": "525"
+                }
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "All-Internet",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-allinternet-standalone.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "All-Internet",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-allinternet-standalone.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "All-Internet",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-allinternet-standalone.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/2268",
+          "type": "mobile_line",
+          "rawOmapi": {
+            "product": {
+              "productid": 20923,
+              "labelkey": "rateclass.7961.wigo3.4p.mid.mobile.3gb",
+              "visible": true,
+              "family": "FMC_RMD",
+              "producttype": "PRODUCT",
+              "weight": 2,
+              "apps": [
+                {
+                  "labelkey": "support"
+                },
+                {
+                  "labelkey": "mobileusage"
+                }
+              ],
+              "services": [
+                {
+                  "labelkey": "surf.mobileinternet.wigo3gb",
+                  "servicetype": "MOBILE_INTERNET",
+                  "experience": {
+                    "experiencetype": "SURF",
+                    "weight": 10
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "setting.mobile.usagereminders.included.data.maxthresholds",
+                      "value": "1",
+                      "visible": false,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.mobileinternet.volume.shared",
+                      "value": "3",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": 1
+                    }
+                  ]
+                },
+                {
+                  "labelkey": "call.mobilecalling.wigo3gb",
+                  "servicetype": "MOBILE_CALLING",
+                  "experience": {
+                    "experiencetype": "CALL",
+                    "weight": 20
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "spec.mobilecalling.minutes.fup",
+                      "value": "FUP",
+                      "visible": true,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "setting.mobile.usagereminders.outofbundle.maxthresholds",
+                      "value": "4",
+                      "visible": false,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.mobilecalling.sms.fup",
+                      "value": "FUP",
+                      "visible": true,
+                      "weight": 2
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "productgroup": "FMC",
+                "productsegment": "RMD"
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "WIGO S Mobiel 3GB",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7961-fmc-wigo3gb-mobile.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "WIGO S Mobile 3GB",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7585-fmc-wigo3gb-mobile.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "WIGO S Mobile 3GB",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7585-fmc-wigo3gb-mobile.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/20923",
+          "type": "mobile_line"
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/672",
+          "type": "fixed_phone",
+          "rawOmapi": {
+            "product": {
+              "productid": 741,
+              "labelkey": "rateclass.7275.fmc.fixedtel",
+              "visible": true,
+              "family": "FMC_RMD",
+              "producttype": "PRODUCT",
+              "weight": 2,
+              "apps": [
+                {
+                  "labelkey": "support"
+                },
+                {
+                  "labelkey": "mobileusage"
+                }
+              ],
+              "services": [
+                {
+                  "labelkey": "call.fixedcalling.wigo",
+                  "servicetype": "FIXED_CALLING",
+                  "experience": {
+                    "experiencetype": "CALL",
+                    "weight": 20
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "spec.fixedcalling.wigo.freecalling",
+                      "value": "INCLUDED",
+                      "visible": true,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.fixedcalling.wigo.daynight",
+                      "value": "INCLUDED",
+                      "visible": true,
+                      "weight": 2
+                    },
+                    {
+                      "labelkey": "spec.fixedcalling.wigo.minutes.fup",
+                      "value": "FUP",
+                      "visible": false,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.fixedcalling.wigo.minutes.unlimited",
+                      "value": "UNLIMITED",
+                      "visible": false,
+                      "weight": 1
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "productgroup": "FMC",
+                "productsegment": "ALL"
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "WIGO Telefonie_Beta",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7275-fmc-fixedtel.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "WIGO Telefonie_Beta",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7275-fmc-fixedtel.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "WIGO Telefonie_Beta",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/rateclass-7275-fmc-fixedtel.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/269",
+          "type": "dtv"
+        }
+      ]
+    },
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "WIGO S 3GB",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigos3gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "WIGO S 3GB",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigos3gb.png"
+      },
+      {
+        "locale": "en",
+        "name": "WIGO S 3GB",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/pack-fmc-wigos3gb.png"
+      }
+    ]
+  }
+}

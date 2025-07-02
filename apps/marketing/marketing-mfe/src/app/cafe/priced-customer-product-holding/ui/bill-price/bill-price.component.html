@@ -1,0 +1,18 @@
+<div class="display--flex justify-content--end align-items--center mt--xl">
+  <div class="text-block__right text-align--right">
+    <div class="price price__total-month-promo-description">
+      <span *ngIf="!isFrench" class="line-height--18 text--m text--xm--sm text-font-family--t6 vertical-align--text-top"
+        >€</span
+      >
+      <span class="text-font-family--t6 text--xl--sm">{{ integer }}</span>
+      <span *ngIf="decimal" class="line-height--18 text--m text--xm--sm text-font-family--t6 vertical-align--text-top"
+        >,{{ decimal }}</span
+      >
+      <span *ngIf="isFrench" class="line-height--18 text--m text--xm--sm text-font-family--t6 vertical-align--text-top"
+        >€</span
+      >
+      <span class="text--xs text--s--sm">{{ translateHelperService.getText('price-month') | translate }}</span>
+    </div>
+  </div>
+</div>
+<div class="whitespace whitespace--medium"></div>

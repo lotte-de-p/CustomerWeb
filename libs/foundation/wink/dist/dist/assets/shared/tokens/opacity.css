@@ -1,0 +1,13 @@
+:root  {
+--primitives-opacity-0: 0;
+--primitives-opacity-10: 1;
+--primitives-opacity-20: 2;
+--primitives-opacity-30: 3;
+--primitives-opacity-40: 4;
+--primitives-opacity-50: 5;
+--primitives-opacity-60: 6;
+--primitives-opacity-70: 7;
+--primitives-opacity-80: 8;
+--primitives-opacity-90: 9;
+--primitives-opacity-100: 10;
+}

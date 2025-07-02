@@ -1,0 +1,168 @@
+{
+  "firstDays": {
+    "10": "2019-10-01",
+    "11": "2019-11-01",
+    "12": "2019-12-01"
+  },
+  "slots": {
+    "10": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "6": false,
+      "7": false,
+      "8": false,
+      "9": false,
+      "10": false,
+      "11": false,
+      "12": false,
+      "13": false,
+      "14": false,
+      "15": false,
+      "16": false,
+      "17": false,
+      "18": false,
+      "19": false,
+      "20": false,
+      "21": false,
+      "22": false,
+      "23": false,
+      "24": false,
+      "25": false,
+      "26": false,
+      "27": false,
+      "28": false,
+      "29": false,
+      "30": false,
+      "31": false
+    },
+    "11": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "6": false,
+      "7": false,
+      "8": {
+        "date": "2019-11-08",
+        "timing": ["MORNING"]
+      },
+      "9": false,
+      "10": false,
+      "11": {
+        "date": "2019-11-11",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "12": {
+        "date": "2019-11-12",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "13": {
+        "date": "2019-11-13",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "14": {
+        "date": "2019-11-14",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "15": {
+        "date": "2019-11-15",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "16": false,
+      "17": false,
+      "18": {
+        "date": "2019-11-18",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "19": {
+        "date": "2019-11-19",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "20": {
+        "date": "2019-11-20",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "21": {
+        "date": "2019-11-21",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "22": false,
+      "23": false,
+      "24": false,
+      "25": {
+        "date": "2019-11-25",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "26": {
+        "date": "2019-11-26",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "27": {
+        "date": "2019-11-27",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "28": {
+        "date": "2019-11-28",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "29": {
+        "date": "2019-11-29",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "30": false
+    },
+    "12": {
+      "1": {
+        "date": "2019-12-01",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "2": {
+        "date": "2019-12-02",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "3": {
+        "date": "2019-12-03",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "4": {
+        "date": "2019-12-04",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "5": {
+        "date": "2019-12-05",
+        "timing": ["MORNING", "LUNCH", "AFTERNOON"]
+      },
+      "6": false,
+      "7": false,
+      "8": false,
+      "9": false,
+      "10": false,
+      "11": false,
+      "12": false,
+      "13": false,
+      "14": false,
+      "15": false,
+      "16": false,
+      "17": false,
+      "18": false,
+      "19": false,
+      "20": false,
+      "21": false,
+      "22": false,
+      "23": false,
+      "24": false,
+      "25": false,
+      "26": false,
+      "27": false,
+      "28": false,
+      "29": false,
+      "30": false,
+      "31": false
+    }
+  },
+  "firstAvailableSlotMonth": 11
+}

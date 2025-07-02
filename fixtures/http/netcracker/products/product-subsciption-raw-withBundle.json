@@ -1,0 +1,70 @@
+[
+  {
+    "description": "Freephone Europe Pro",
+    "id": "917476364863439",
+    "identifier": "767767677",
+    "externalProductCode": "INT0100",
+    "label": "Internetline Europe Pro/INT0100",
+    "addressId": "9152527990413378524",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-22T00:00:00+01:00",
+    "productType": "dtv"
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767678",
+    "externalProductCode": "INT0101",
+    "label": "Internetline Europe",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "hasVoiceMail": true,
+    "activationDate": "2018-11-21T00:00:00+01:00",
+    "productType": "mobile"
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767679",
+    "externalProductCode": "INT0101",
+    "label": "Internetline Europe",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-20T00:00:00+01:00",
+    "productType": "telephone"
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767670",
+    "externalProductCode": "INT0101",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-19T00:00:00+01:00",
+    "productType": "internet"
+  },
+  {
+    "activationDate": "2020-07-14T17:10:59",
+    "addressId": "9150758032413488273",
+    "identifier": "767767699",
+    "label": "WIGO Unlimited / WIGO000000086",
+    "locationId": "9157766813013249652",
+    "status": "Active",
+    "productType": "bundle",
+    "userPIDLinked": false,
+    "isDataOnlyPlan": false,
+    "bundleIdentifier": "WIGO000000086"
+  }
+]

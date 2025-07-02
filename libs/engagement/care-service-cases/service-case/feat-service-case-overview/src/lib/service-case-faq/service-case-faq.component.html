@@ -1,0 +1,22 @@
+<div *ngIf="selectedServiceCase">
+  <div class="text--l mb--m--md mb--xxs text-weight--l">
+    {{ 'ng.service-cases.faq.useful-information' | translate }}
+  </div>
+  <div class="background-white px--s">
+    <care-accordion>
+      <care-accordion-item
+        *ngFor="let question of [].constructor(getQuestions(selectedServiceCase)); index as index; last as isLast"
+        (faqToggle)="faqToggle($event, selectedServiceCase, index + 1)"
+        [title]="
+          ('ng.service-cases.faq.' + selectedServiceCase.type + '.question-' + (index + 1)).toLowerCase() | translate
+        "
+        [divider]="!isLast">
+        <div
+          [ngClass]="{ 'pb--s': isLast }"
+          [innerHTML]="
+            ('ng.service-cases.faq.' + selectedServiceCase.type + '.answer-' + (index + 1)).toLowerCase() | translate
+          "></div>
+      </care-accordion-item>
+    </care-accordion>
+  </div>
+</div>

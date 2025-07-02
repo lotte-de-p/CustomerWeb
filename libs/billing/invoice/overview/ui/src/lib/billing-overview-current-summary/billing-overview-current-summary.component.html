@@ -1,0 +1,57 @@
+<div class="row m--n">
+  <div class="col-9 p--n">
+    <wink-paragraph
+      [attr.data-testid]="'billing-overview-current-summary-method-header-text'"
+      appearance="caption"
+      size="regular"
+      class="hydrated font--caption-regular color-shade_72 word-break--ellipsis">
+      {{ headerText }}
+    </wink-paragraph>
+    <ng-container *ngFor="let description of descriptions">
+      <div class="display--flex align-items--center">
+        <h6
+          class="heading--nomargin col--grow"
+          [attr.data-testid]="'billing-overview-current-summary-method-description-text'">
+          {{ description.caption | translate }}
+        </h6>
+        <ng-container *ngIf="description.value">
+          <span class="px--xxxs"><h4 class="heading--nomargin bullet">.</h4></span>
+          <wink-paragraph
+            [attr.data-testid]="'billing-overview-current-summary-method-description-text-value'"
+            appearance="body"
+            size="small"
+            class="hydrated font--caption-regular color-shade_72 word-break--ellipsis">
+            {{ description.value }}
+          </wink-paragraph>
+        </ng-container>
+      </div>
+    </ng-container>
+    <div
+      *ngIf="isPaymentMethodUpdated"
+      class="display--flex flex-direction--row align-items--center"
+      [attr.data-testid]="'billing-overview-payment-method-change-notification'">
+      <div>
+        <wink-icon icon="hourglass" appearance="default" size="md" class="border-color--r--shade_16"></wink-icon>
+      </div>
+      <div class="pt--xxxs">
+        <wink-paragraph
+          appearance="caption"
+          size="regular"
+          class="hydrated font--caption-regular color-shade_72 word-break--ellipsis">
+          {{ updatedPaymentMethodNotification | translate }}
+        </wink-paragraph>
+      </div>
+    </div>
+  </div>
+  <div class="col-3 text-align--right p--n">
+    <wink-button
+      [attr.data-testid]="'billing-overview-current-summary-manage-billing-settings'"
+      text="{{ 'ng.billing-overview.lbl.manage-billing-settings' | translate }}"
+      type="button"
+      appearance="secondary"
+      size="sm"
+      width="none"
+      status="none"
+      (click)="redirectToManageBillingSettings()"></wink-button>
+  </div>
+</div>

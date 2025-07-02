@@ -1,0 +1,1 @@
+{"version":3,"file":"install-type-price.factory.d.ts","sourceRoot":"","sources":["../../src/models/install-type-price.factory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,qBAAqB,EAAE,MAAM,4BAA4B,CAAC;AAGnE,qBAAa,2BAA2B;WACxB,qBAAqB,CAAC,YAAY,EAAE,MAAM,EAAE,iBAAiB,EAAE,MAAM,GAAG,qBAAqB;WAS7F,wBAAwB,CAAC,iBAAiB,EAAE,MAAM,GAAG,qBAAqB;CAOzF"}

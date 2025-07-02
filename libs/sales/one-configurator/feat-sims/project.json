@@ -1,0 +1,9 @@
+{
+  "name": "sales-one-configurator-feat-sims",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/one-configurator/feat-sims/src",
+  "prefix": "lib",
+  "tags": ["type:feature", "scope:sales-one-configurator", "scope:sales-mfe"],
+  "projectType": "library",
+  "targets": {}
+}

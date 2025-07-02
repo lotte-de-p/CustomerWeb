@@ -1,0 +1,71 @@
+{
+  "name": "address-checker-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/activate/address-checker-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "extractLicenses": false,
+      "sourceMap": true,
+      "namedChunks": true,
+      "vendorChunk": true,
+      "customWebpackConfig": {
+        "path": "./coverage.webpack.ts"
+      },
+      "options": {
+        "cypressConfig": "apps/activate/address-checker-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "address-checker-mfe:storybook",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "address-checker-mfe:storybook:ci"
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/activate/address-checker-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "address-checker-mfe:storybook",
+        "testingType": "e2e"
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/activate/address-checker-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "address-checker-mfe:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "address-checker-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/activate/address-checker-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:address-checker-mfe"],
+  "implicitDependencies": ["address-checker-mfe"]
+}

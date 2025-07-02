@@ -1,0 +1,125 @@
+{
+  "product": {
+    "externalProductCode": "FDOP0015",
+    "weight": 1090,
+    "apps": [],
+    "category": ["B2B Options with ETF", "Other data options", "Fleet Options with ETF"],
+    "subcategory": {
+      "name": "Data in OPEC countries",
+      "weight": 250,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Data OPEC"
+        },
+        {
+          "locale": "nl",
+          "name": "Data OPEC"
+        },
+        {
+          "locale": "fr",
+          "name": "Data OPEP"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "1.5",
+            "unit": "GB",
+            "visible": true,
+            "weight": "1090",
+            "labelkey": "Data OPEC 1.5 GB",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Algeria, Congo, Democratic Republic of Congo, Ecuador, Gabon, Iran, Kuwait, Nigeria, Qatar, Saudi Arabia, United Arab Emirates (UAE)"
+              },
+              {
+                "locale": "nl",
+                "name": "Algerije, Congo, Democratische Republiek Congo, Ecuador, Gabon, Iran, Koeweit, Nigeria, Qatar, Saudi-Arabië, Verenigde Arabische Emiraten (VAE)"
+              },
+              {
+                "locale": "fr",
+                "name": "Algérie, Arabie saoudite, Congo, Équateur, Émirats arabes unis (EAU), Gabon, Iran, Koweït, Nigeria, Qatar, République démocratique du Congo"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      },
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "60,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "FDOP0015",
+    "labelkey": "Data OPEC 1,5 GB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Data OPEC 1,5 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-opec-1,5-gb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Data OPEC 1,5 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-opec-1,5-gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Data OPEP 1,5 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-opec-1,5-gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "1.5 GB mobile data in OPEC countries"
+        },
+        {
+          "locale": "nl",
+          "name": "1,5 GB mobiele data in OPEC-landen"
+        },
+        {
+          "locale": "fr",
+          "name": "1,5 GB de data mobiles dans les pays de l’OPEP"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

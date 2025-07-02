@@ -1,0 +1,15 @@
+<div class="mb--l">
+  <wink-notification data-testid="sim-management-notification" appearance="{{ message.type }}" has-close-icon="false">
+    @if (message.title) {
+      <wink-title slot="heading" html-tag="h6" spacing-y="bottom" text="{{ message.title | translate }}"></wink-title>
+    }
+
+    <wink-paragraph slot="content" appearance="body" size="small">
+      @if (message.text) {
+        <p>{{ message.text | translate }}</p>
+      } @else if (message.type === messageType.ERROR) {
+        <p>{{ 'ng.sim-management.txt.error' | translate }}</p>
+      }
+    </wink-paragraph>
+  </wink-notification>
+</div>

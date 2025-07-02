@@ -1,0 +1,540 @@
+[
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Repair",
+    "status": "Completed",
+    "interventionId": "123456",
+    "timeSlot": {
+      "code": "DAY",
+      "date": "2018-11-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "address": {
+      "id": "121212",
+      "street": "Liersesteenweg",
+      "houseNumber": "96",
+      "subhouseNumber": "1",
+      "box": "3",
+      "zipCode": "2800",
+      "country": "Belgium"
+    },
+    "isFtthAppointment": true
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Repair",
+    "status": "New",
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {},
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212",
+      "street": "Liersesteenweg",
+      "houseNumber": "96",
+      "subhouseNumber": "1",
+      "box": "3",
+      "zipCode": "2800",
+      "country": "Belgium"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "interventionId": "123456",
+    "type": "Repair",
+    "subType": "Repair",
+    "status": "New",
+    "timeSlot": {
+      "date": "2021-11-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212",
+      "street": "Liersesteenweg",
+      "houseNumber": "96",
+      "subhouseNumber": "1",
+      "box": "3",
+      "zipCode": "2800",
+      "country": "Belgium",
+      "locationId": "9158085987613524773"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Remote Support",
+    "status": "Cancelled",
+    "timeSlot": {
+      "date": "2017-11-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212",
+      "street": "Liersesteenweg",
+      "houseNumber": "96",
+      "subhouseNumber": "1",
+      "box": "3",
+      "zipCode": "2800",
+      "country": "Belgium"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Install",
+    "timeSlot": {
+      "date": "2020-11-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "address": {
+      "id": "121212",
+      "street": "Liersesteenweg",
+      "houseNumber": "96",
+      "subhouseNumber": "1",
+      "box": "3",
+      "zipCode": "2800",
+      "country": "Belgium"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Home Support",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2020-7-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "hasUpcomingCableAccessAppointment": true,
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "move",
+    "subType": "Home Support",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "Repair",
+    "subType": "Home Delivery",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "Repair",
+    "subType": "Remote Support",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "Repair",
+    "subType": "Drop cable",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "Repair",
+    "subType": "Repair",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1210",
+    "type": "Move",
+    "subType": "Repair",
+    "salesOrderId": "32323",
+    "deInstallationDate": "2028-11-12",
+    "status": "Scheduled",
+    "timeSlot": {
+      "date": "2021-9-08",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "hasUpcomingCableAccessAppointment": false,
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "move test",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Home Support",
+    "status": "wait",
+    "timeSlot": {
+      "date": "2020-7-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "hasUpcomingCableAccessAppointment": true,
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Home Support",
+    "status": "Postpone-Rescheduled",
+    "timeSlot": {
+      "date": "2020-7-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "hasUpcomingCableAccessAppointment": true,
+    "address": {
+      "id": "121212"
+    }
+  },
+  {
+    "appointmentId": "1212",
+    "type": "Install",
+    "subType": "Home Support",
+    "status": "postpone-needreschedule",
+    "timeSlot": {
+      "date": "2020-7-08",
+      "startTime": "23:00",
+      "endTime": "23:35",
+      "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+    },
+    "products": [
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      },
+      {
+        "specurl": "https://api.sup.telenet.be/omapi/public/product/PROC0001"
+      }
+    ],
+    "cost": {
+      "installation": "23"
+    },
+    "contactInfo": {
+      "contactName": "don",
+      "notificationInfo": {
+        "notificationMethod": "Voice",
+        "notificationContact": "323000000"
+      }
+    },
+    "hasUpcomingCableAccessAppointment": true,
+    "address": {
+      "id": "121212"
+    }
+  }
+]

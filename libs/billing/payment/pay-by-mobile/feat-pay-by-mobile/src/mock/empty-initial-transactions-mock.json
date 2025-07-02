@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:8080/public/api/pay-by-mobile-service/v1/pay-by-mobile/initial-transactions/0489552137",
+  "method": "GET",
+  "status": 200,
+  "delay": 100,
+  "response": {
+    "totalNumberOfTransactions": 0,
+    "transactions": []
+  }
+}

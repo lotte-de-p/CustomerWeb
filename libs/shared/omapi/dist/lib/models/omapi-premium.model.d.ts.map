@@ -1,0 +1,1 @@
+{"version":3,"file":"omapi-premium.model.d.ts","sourceRoot":"","sources":["../../../src/lib/models/omapi-premium.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,iCAAiC,CAAC;AAEnE,qBAAa,YAAY;IACvB,gBAAgB,CAAC,EAAE,MAAM,CAAC;IAC1B,OAAO,CAAC,EAAE,gBAAgB,EAAE,CAAC;CAC9B"}

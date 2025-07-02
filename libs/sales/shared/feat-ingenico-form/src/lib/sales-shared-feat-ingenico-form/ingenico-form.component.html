@@ -1,0 +1,30 @@
+<div style="display: none">
+  <form [action]="actionUrl" [attr.data-cy]="'ingenico-form'" enctype="application/x-www-form-urlencoded" method="POST">
+    <input [value]="formToSubmit?.PSPID" name="PSPID" />
+    <input [value]="formToSubmit?.ORDERID" name="ORDERID" />
+    <input [value]="formToSubmit?.AMOUNT" name="AMOUNT" />
+    <input [value]="formToSubmit?.CURRENCY" name="CURRENCY" />
+    <input [value]="formToSubmit?.LANGUAGE" name="LANGUAGE" />
+    <input [value]="formToSubmit?.CN" name="CN" />
+    <input [value]="formToSubmit?.EMAIL" name="EMAIL" />
+    <input [value]="formToSubmit?.OWNERZIP" name="OWNERZIP" />
+    <input [value]="formToSubmit?.OWNERADDRESS" name="OWNERADDRESS" />
+    <input [value]="formToSubmit?.OWNERCTY" name="OWNERCTY" />
+    <input [value]="formToSubmit?.OWNERTOWN" name="OWNERTOWN" />
+    <input [value]="formToSubmit?.OWNERTELNO" name="OWNERTELNO" />
+
+    <input [value]="formToSubmit?.TP" name="TP" />
+    <input [value]="formToSubmit?.DEVICE" name="DEVICE" />
+
+    <input [value]="formToSubmit?.SHASIGN" name="SHASIGN" />
+
+    <input [value]="formToSubmit?.ACCEPTURL" name="ACCEPTURL" />
+    <input [value]="formToSubmit?.DECLINEURL" name="DECLINEURL" />
+    <input [value]="formToSubmit?.EXCEPTIONURL" name="EXCEPTIONURL" />
+    <input [value]="formToSubmit?.CANCELURL" name="CANCELURL" />
+
+    <input [value]="formToSubmit?.PARAMPLUS" name="PARAMPLUS" />
+    <input [value]="formToSubmit?.PARAMVAR" name="PARAMVAR" />
+    <input #ingenicoForm (click)="handleClick()" name="submit" type="submit" />
+  </form>
+</div>

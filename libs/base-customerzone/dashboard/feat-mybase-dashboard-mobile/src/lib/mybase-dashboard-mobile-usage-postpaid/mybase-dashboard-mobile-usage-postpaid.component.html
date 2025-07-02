@@ -1,0 +1,58 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white height--full display--flex flex-direction--column"
+  [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid'">
+  <div
+    (click)="goToMobileUsage()"
+    class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">{{
+        'ng.mybase-dashboard-mobile.mobile-usage-postpaid.title' | translate
+      }}</span>
+    </div>
+    <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+  </div>
+  <div>
+    <div class="mb--xs">
+      <span class="text-flow text-flow--h1" [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid-volume-used'">{{
+        used | number: '1.0-2'
+      }}</span
+      >&nbsp;<span class="text-flow text-flow--h6">{{
+        'ng.mybase-dashboard-mobile.mobile-usage-postpaid.volume-used-part-one' | translate
+      }}</span>
+      {{ 'ng.mybase-dashboard-mobile.mobile-usage-postpaid.volume-used-part-two' | translate }}
+      <span [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid-volume-total'">{{ total | number: '1.0-2' }}</span
+      >&nbsp;{{ 'ng.mybase-dashboard-mobile.mobile-usage-postpaid.volume-used-part-three' | translate }}
+    </div>
+    <tg-progress-bar [progress]="usedPct" [barColor]="progressBarStatus"></tg-progress-bar>
+    <div
+      class="font--caption-small mb--s"
+      [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid-days-until-renewal'"
+      [attr.data-cy-daysUntilRenewal]="daysUntilRenewal">
+      {{
+        'ng.mybase-dashboard-mobile.mobile-usage-postpaid.label-days-until-renewal' | translate: { daysUntilRenewal }
+      }}
+    </div>
+  </div>
+  <div>
+    <span
+      *ngIf="carryOver > 0"
+      class="mybase-label text-flow text-flow--label"
+      [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid-carry-over'"
+      [attr.data-cy-carryOver]="carryOver"
+      >{{
+        'ng.mybase-dashboard-mobile.mobile-usage-postpaid.label-data-jump'
+          | translate: { carryOver: carryOver | number: '1.0-2' }
+      }}</span
+    >
+    <span
+      *ngIf="outOfBundleLimit > 0"
+      class="mybase-label text-flow text-flow--label"
+      [attr.data-cy]="'mybase-dashboard-mobile-usage-postpaid-out-of-bundle-limit'"
+      [attr.data-cy-outOfBundleLimit]="outOfBundleLimit"
+      >&euro;&nbsp;{{
+        'ng.mybase-dashboard-mobile.mobile-usage-postpaid.label-budget-limit'
+          | translate: { outOfBundleLimit: outOfBundleLimit }
+      }}</span
+    >
+  </div>
+</div>

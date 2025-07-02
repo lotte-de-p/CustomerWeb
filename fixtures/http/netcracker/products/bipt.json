@@ -1,0 +1,462 @@
+{
+  "customerProductHoldings": [
+    {
+      "identifier": "0669371988",
+      "status": "ACTIVE",
+      "msisdn": "32487071541",
+      "rawOmapi": {
+        "product": {
+          "productid": "FATU0000",
+          "weight": 10,
+          "category": ["Prepaid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "0487071549",
+      "status": "ACTIVE",
+      "msisdn": "32487071542",
+      "rawOmapi": {
+        "product": {
+          "productid": "BOYO0015",
+          "weight": 20,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "0669306457",
+      "msisdn": "32487071543",
+      "status": "SUSPENDED",
+      "rawOmapi": {
+        "product": {
+          "productid": "XXXB0009",
+          "weight": 30,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "B9",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "B9",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "B9",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "0669342640",
+      "msisdn": "32487071544",
+      "status": "ACTIVE",
+      "rawOmapi": {
+        "product": {
+          "productid": "BAAL0010",
+          "weight": 40,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "BASE Allo 10",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "BASE Allo 10",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "BASE Allo 10",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "0748518912",
+      "msisdn": "32487071545",
+      "status": "ACTIVE",
+      "rawOmapi": {
+        "product": {
+          "productid": "PRBA0000",
+          "weight": 50,
+          "category": ["PrePaid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "prepaid BASE",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "prepaid BASE",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "prepaid BASE",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "lastBillUsageCycle": [
+    {
+      "identifier": "0669342640",
+      "accountnumber": "500032868",
+      "identifierType": "mobile",
+      "specurl": "https://api.edp.base.be/omapi/public/product/BAAL0010",
+      "usage": {
+        "voice": 0,
+        "text": 0,
+        "data": 0
+      }
+    },
+    {
+      "identifier": "0487071549",
+      "accountnumber": "500032868",
+      "identifierType": "mobile",
+      "isProrated": true,
+      "specurl": "https://api.edp.base.be/omapi/public/product/BOYO0015",
+      "usage": {
+        "voice": 30,
+        "text": 40,
+        "data": 50
+      }
+    },
+    {
+      "identifier": "0748518912",
+      "accountnumber": "500096444",
+      "identifierType": "mobile",
+      "specurl": "https://api.int.base.be/omapi/public/product/PRBA0000",
+      "usage": {
+        "voice": 0,
+        "text": 0,
+        "data": 0
+      }
+    },
+    {
+      "identifier": "0669371988",
+      "accountnumber": "500032868",
+      "identifierType": "mobile",
+      "specurl": "https://api.edp.base.be/omapi/public/product/BOYO0015",
+      "usage": {
+        "voice": 20,
+        "text": 30,
+        "data": 40
+      }
+    },
+    {
+      "identifier": "016885294",
+      "identifierType": "telephone",
+      "accountnumber": "78127712",
+      "usage": {
+        "fixedVoiceToFixed": 10,
+        "fixedVoiceToMobile": 20
+      }
+    },
+    {
+      "identifier": "016885294",
+      "identifierType": "telephone",
+      "accountnumber": "78127712",
+      "usage": {
+        "fixedVoiceToFixed": 0,
+        "fixedVoiceToMobile": 0
+      }
+    },
+    {
+      "identifier": "z508735",
+      "identifierType": "internet",
+      "accountnumber": "78127712",
+      "usage": {
+        "data": 40
+      }
+    },
+    {
+      "identifier": "z508735",
+      "identifierType": "internet",
+      "accountnumber": "78127712",
+      "usage": {
+        "data": 0
+      }
+    },
+    {
+      "identifier": "0669342640",
+      "accountnumber": "500032868",
+      "identifierType": "mobile",
+      "isDataOnlyPlan": true,
+      "specurl": "https://api.edp.base.be/omapi/public/product/BAAL0010",
+      "usage": {
+        "data": 50
+      }
+    },
+    {
+      "identifier": "0669342646",
+      "accountnumber": "500032860",
+      "identifierType": "mobile",
+      "specurl": "https://api.edp.base.be/omapi/public/product/BAAL0010"
+    },
+    {
+      "identifier": "OTT000000009",
+      "accountnumber": "100004903",
+      "specurl": "https://api.sup.base.be/omapi/public/product/null",
+      "identifierType": "Otttv",
+      "isDataOnlyPlan": false,
+      "isProrated": false
+    },
+    {
+      "identifier": "DTV2842278",
+      "identifierType": "dtv",
+      "accountnumber": "78127712"
+    },
+    {
+      "code": "TLNTBIPT-000001",
+      "cause": "No Bill Generated for the given Billing Account Number",
+      "correlationId": "3bf9473d-d8c0-4f80-b958-6a950af093aa",
+      "errorDetails": [
+        {
+          "errorDetailCode": "500 Internal Server Error",
+          "message": "NoBillGeneratedException"
+        }
+      ]
+    }
+  ],
+  "productSubscriptions": [
+    {
+      "activationDate": "2020-07-02T14:33:12",
+      "addressId": "9150757967713576220",
+      "identifier": "0468122553",
+      "label": "King / 0468122553",
+      "locationId": "9157661938413162296",
+      "status": "Active",
+      "productType": "mobile",
+      "rawOmapi": {
+        "product": {
+          "productid": "BOYO0015",
+          "weight": 20,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "activationDate": "2020-07-02T15:11:25",
+      "addressId": "9150757967713576220",
+      "identifier": "INT000000220",
+      "label": "All-Internet / INT000000220",
+      "locationId": "9157661938413162296",
+      "status": "Active",
+      "productType": "internet",
+      "rawOmapi": {
+        "product": {
+          "productid": "BOYO0015",
+          "weight": 20,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "bundleLastBillUsageCycle": [
+    {
+      "identifier": "IMTTK_39011284",
+      "identifierType": "bundle",
+      "accountnumber": "78127712",
+      "totalSIM": 1,
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/71",
+      "isDataOnlyPlan": false,
+      "isProrated": true,
+      "product": [
+        {
+          "identifier": "cf43926",
+          "identifierType": "mobile",
+          "accountnumber": "78127712",
+          "usage": {
+            "voice": 30,
+            "text": 40,
+            "data": 50
+          }
+        },
+        {
+          "identifier": "DTV2842278",
+          "identifierType": "dtv",
+          "accountnumber": "78127712"
+        },
+        {
+          "identifier": "016885294",
+          "identifierType": "telephone",
+          "accountnumber": "78127712",
+          "usage": {
+            "fixedVoiceToFixed": 10,
+            "fixedVoiceToMobile": 0
+          }
+        },
+        {
+          "identifier": "z508735",
+          "identifierType": "internet",
+          "accountnumber": "78127712",
+          "usage": {
+            "data": 40
+          }
+        }
+      ],
+      "rawOmapi": {
+        "product": {
+          "productid": "BOYO0015",
+          "weight": 20,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "IMTTK_39011284",
+      "identifierType": "bundle",
+      "accountnumber": "78127712",
+      "totalSIM": 2,
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/71",
+      "isDataOnlyPlan": false,
+      "isProrated": true,
+      "product": [
+        {
+          "identifier": "0468122553",
+          "identifierType": "mobile",
+          "accountnumber": "78127712",
+          "usage": {
+            "voice": 20,
+            "text": 0,
+            "data": 0
+          }
+        },
+        {
+          "identifier": "cf43926",
+          "identifierType": "mobile",
+          "accountnumber": "78127712",
+          "usage": {
+            "voice": 30,
+            "text": 40,
+            "data": 50
+          }
+        }
+      ],
+      "rawOmapi": {
+        "product": {
+          "productid": "BOYO0015",
+          "weight": 20,
+          "category": ["Post-Paid Mobile"],
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "fr",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            },
+            {
+              "locale": "en",
+              "name": "15 Based on you",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/prepaid-base.png"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

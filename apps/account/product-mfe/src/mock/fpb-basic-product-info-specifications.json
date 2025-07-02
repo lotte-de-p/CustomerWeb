@@ -1,0 +1,69 @@
+[
+  {
+    "labelKey": "voice",
+    "unit": "MIN",
+    "value": "1000",
+    "visible": true,
+    "weight": "10",
+    "productType": "TELEPHONE",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+    },
+    "serviceType": "FIXED_CALLING",
+    "id": "BSCM0100",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "basic-flavour",
+    "visible": true,
+    "weight": "20",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+    },
+    "serviceType": "FEATURE",
+    "id": "BSCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "basic-flavour",
+    "visible": true,
+    "weight": "30",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Je klant haken niet meer in omwille van een bezettoon. "
+    },
+    "serviceType": "FEATURE",
+    "id": "BSCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "basic-flavour",
+    "visible": true,
+    "weight": "40",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Jij krijgt tot 20 vaste nummers."
+    },
+    "serviceType": "FEATURE",
+    "id": "BSCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  }
+]

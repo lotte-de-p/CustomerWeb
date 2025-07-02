@@ -1,0 +1,46 @@
+<div class="header-search" style="position: relative">
+  <div class="SearchBar-form searchBar-form-focus">
+    <a class="searchBar--button icon-search visible"></a>
+    <input
+      type="search"
+      class="searchBar--input searchBar-form-focus"
+      placeholder="Search for a component..."
+      #component_search
+      (keyup)="updateFilter(component_search.value)"
+      [attr.data-cy]="'component-search'" />
+  </div>
+</div>
+<div class="mt--s">
+  <div class="display--flex mb--s">
+    <div class="pr--l">Include billing account selector</div>
+    <input type="checkbox" [attr.data-cy]="'billing-account-checkbox'" [(ngModel)]="includeBillingAccountSelector" />
+  </div>
+  <div class="display--flex mb--s">
+    <div class="pr--l">Include mobile line selector</div>
+    <input type="checkbox" [attr.data-cy]="'mobile-line-selector-checkbox'" [(ngModel)]="includeMobileLineSelector" />
+  </div>
+  <div [attr.data-cy]="'component-links'">
+    @for (route of routes; track route) {
+      <span class="mb--s mr--s display--inline-block">
+        <button class="button" (click)="navigate(route)">
+          <span>{{ truncate(route.slice(1, route.length)) }}</span>
+        </button>
+      </span>
+    }
+    <span class="mb--s mr--s display--inline-block">
+      <button class="button" (click)="navigate('line-identification-details?msisdn=0480008093')">
+        <span>Line details with number</span>
+      </button>
+    </span>
+    <span class="mb--s mr--s display--inline-block">
+      <button class="button" (click)="navigate('line-address-details?msisdn=0480008093')">
+        <span>Line address details with number</span>
+      </button>
+    </span>
+    <span class="mb--s mr--s inline-block">
+      <button class="button" (click)="navigate('line-navigation-list?msisdn=0487071067')">
+        <span>Line Navigation List with number</span>
+      </button>
+    </span>
+  </div>
+</div>

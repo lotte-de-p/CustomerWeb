@@ -1,0 +1,9 @@
+export var InstallTypeEnum;
+(function (InstallTypeEnum) {
+    InstallTypeEnum["SELF_INSTALL"] = "selfinstall";
+    InstallTypeEnum["PRE_INSTALL"] = "preinstall";
+    InstallTypeEnum["COMFORT_INSTALL"] = "comfortinstall";
+    InstallTypeEnum["BUSINESS_INSTALL"] = "businessinstall";
+    InstallTypeEnum["BUSINESS_INSTALL_SWAP"] = "businessinstall_swap";
+})(InstallTypeEnum || (InstallTypeEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib2NhcGktbW92ZS1vcmRlci5lbnVtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL2xpYi9lbnVtcy9vY2FwaS1tb3ZlLW9yZGVyLmVudW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFOLElBQVksZUFNWDtBQU5ELFdBQVksZUFBZTtJQUN6QiwrQ0FBNEIsQ0FBQTtJQUM1Qiw2Q0FBMEIsQ0FBQTtJQUMxQixxREFBa0MsQ0FBQTtJQUNsQyx1REFBb0MsQ0FBQTtJQUNwQyxpRUFBOEMsQ0FBQTtBQUNoRCxDQUFDLEVBTlcsZUFBZSxLQUFmLGVBQWUsUUFNMUIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBJbnN0YWxsVHlwZUVudW0ge1xuICBTRUxGX0lOU1RBTEwgPSAnc2VsZmluc3RhbGwnLFxuICBQUkVfSU5TVEFMTCA9ICdwcmVpbnN0YWxsJyxcbiAgQ09NRk9SVF9JTlNUQUxMID0gJ2NvbWZvcnRpbnN0YWxsJyxcbiAgQlVTSU5FU1NfSU5TVEFMTCA9ICdidXNpbmVzc2luc3RhbGwnLFxuICBCVVNJTkVTU19JTlNUQUxMX1NXQVAgPSAnYnVzaW5lc3NpbnN0YWxsX3N3YXAnLFxufVxuIl19

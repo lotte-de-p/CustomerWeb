@@ -1,0 +1,65 @@
+{
+  "name": "wink-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/foundation/wink-e2e/src",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/wink-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "wink:storybook"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "wink:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "wink:storybook"
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/wink-e2e/cypress.config.ts",
+        "devServerTarget": "wink:storybook",
+        "testingType": "e2e"
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-local": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/foundation/wink-e2e/cypress.config.ts",
+        "devServerTarget": "wink:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "wink:storybook:ci"
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/foundation/wink-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:wink"],
+  "implicitDependencies": ["wink"]
+}

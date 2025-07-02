@@ -1,0 +1,25 @@
+{
+  "url": "http://localhost:8080/public/api/return-devices-service/v1/addresses",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "9165643348913618888",
+      "country": "België",
+      "countryCode": "BE",
+      "city": "Mechelen",
+      "postalCode": "2800",
+      "street": "Darwin Loadteststraat",
+      "houseNumber": "7606"
+    },
+    {
+      "id": "9165643348913617778",
+      "country": "België",
+      "countryCode": "BE",
+      "city": "Mechelen",
+      "postalCode": "2800",
+      "street": "Darwin Loadteststraat",
+      "houseNumber": "7607"
+    }
+  ]
+}

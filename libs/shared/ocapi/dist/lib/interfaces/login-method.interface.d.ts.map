@@ -1,0 +1,1 @@
+{"version":3,"file":"login-method.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/login-method.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,MAAM,CAAC;AAElC,MAAM,WAAW,oBAAoB;IACnC,UAAU,IAAI,UAAU,CAAC,OAAO,CAAC,CAAC;CACnC"}

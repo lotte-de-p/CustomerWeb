@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  standalone: true,
+  imports: [CommonModule],
+  selector: 'tg-<%=fullPathDasherized%>-<%=dasherize(name)%>',
+  templateUrl: './<%=dasherize(name)%>.component.html',
+  styleUrls: ['./<%=dasherize(name)%>.component.scss']
+})
+export class <%=classify(name)%>Component {}
+

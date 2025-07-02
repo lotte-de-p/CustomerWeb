@@ -1,0 +1,46 @@
+import { EventEmitter } from '@angular/core';
+import { TimeslotMomentEnum } from '../../../enums';
+import { AppointmentTransformerSlot } from '../../../models';
+import { AppointmentPickerComponentInterface } from '../appointment-picker-component.interface';
+import { AppointmentPickerTypeEnum } from '../appointment-picker-type.enum';
+import { AppointmentSlotOption } from '../appointment-slot-option.model';
+import { AppointmentPickerConsumerTypeEnum } from '../../../interfaces';
+import { AppointmentPickerByTemporalComponentInterface } from '../appointment-picker-by-temporal-component.interface';
+import { AbstractAppointmentPickerByTemporalComponent } from '../abstract-appointment-picker-by-temporal.component';
+import * as i0 from "@angular/core";
+export declare class InputAppointmentPickerByDateComponent extends AbstractAppointmentPickerByTemporalComponent<InputAppointmentPickerByDateComponent> implements AppointmentPickerComponentInterface, AppointmentPickerByTemporalComponentInterface {
+    messageGroup: string;
+    error: unknown;
+    startDate: Date;
+    endDate: Date;
+    timeslots: AppointmentTransformerSlot[];
+    slidesToScroll: number;
+    initialSlide: number;
+    initialised: boolean;
+    labelKeys: string[];
+    updateSlots: AppointmentTransformerSlot[];
+    showLoadMore: boolean;
+    consumerType: string;
+    disableLoadMore: boolean;
+    enableAppointmentsUI: boolean;
+    slidesToShow: number;
+    appointmentPickerType: AppointmentPickerTypeEnum;
+    isDeviceLandscape: boolean;
+    appointmentSlotSelected: EventEmitter<AppointmentSlotOption>;
+    loadMore: EventEmitter<any>;
+    scrollTo: EventEmitter<AppointmentPickerTypeEnum>;
+    datePickerLabel: string;
+    momentPickerLabel: string;
+    datePickerErrorLabel: string;
+    momentPickerErrorLabel: string;
+    selectedAppointmentSlot?: AppointmentTransformerSlot;
+    selectedAppointmentMoment?: TimeslotMomentEnum;
+    consumerTypeEnum: typeof AppointmentPickerConsumerTypeEnum;
+    setSelectedAppointment(appointmentSlotOption: AppointmentSlotOption): void;
+    setSelectedAppointmentSlot(appointmentSlot: AppointmentTransformerSlot): void;
+    getSelectedAppointment(): AppointmentSlotOption;
+    getComponent(): InputAppointmentPickerByDateComponent;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputAppointmentPickerByDateComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputAppointmentPickerByDateComponent, "app-form-appointment-picker-by-date", never, { "error": { "alias": "error"; "required": false; }; "startDate": { "alias": "startDate"; "required": false; }; "endDate": { "alias": "endDate"; "required": false; }; "timeslots": { "alias": "timeslots"; "required": false; }; "slidesToScroll": { "alias": "slidesToScroll"; "required": false; }; "initialSlide": { "alias": "initialSlide"; "required": false; }; "initialised": { "alias": "initialised"; "required": false; }; "labelKeys": { "alias": "labelKeys"; "required": false; }; "updateSlots": { "alias": "updateSlots"; "required": false; }; "showLoadMore": { "alias": "showLoadMore"; "required": false; }; "consumerType": { "alias": "consumerType"; "required": false; }; "disableLoadMore": { "alias": "disableLoadMore"; "required": false; }; "enableAppointmentsUI": { "alias": "enableAppointmentsUI"; "required": false; }; "slidesToShow": { "alias": "slidesToShow"; "required": false; }; "appointmentPickerType": { "alias": "appointmentPickerType"; "required": false; }; "isDeviceLandscape": { "alias": "isDeviceLandscape"; "required": false; }; }, { "appointmentSlotSelected": "appointmentSlotSelected"; "loadMore": "loadMore"; "scrollTo": "scrollTo"; }, never, never, false, never>;
+}
+//# sourceMappingURL=input-appointment-picker-by-date.component.d.ts.map

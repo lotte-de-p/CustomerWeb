@@ -1,0 +1,88 @@
+:host {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: TelenetAlbra-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: rem(1.6);
+
+  .dropdown-menu--heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: var-rem(--semantic-spacing-xs);
+    border-radius: var-rem(--semantic-radius-default);
+    color: var(--wink-dropdown-color, var(--semantic-color-text-default));
+    background-color: var(--wink-dropdown-bg-color, var(--semantic-color-background-surface-subtle-default));
+    font-size: var(--wink-dropdown-font-size, inherit);
+    text-align: right;
+
+    ::slotted([slot='dropdown-menu--avatar']) {
+      margin-right: var-rem(--semantic-spacing-xs);
+    }
+
+    .dropdown-menu--chevron {
+      display: inline-flex;
+      margin-left: rem(0.8);
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: var(--semantic-color-background-surface-subtle-hovered);
+    }
+
+    &:focus-visible {
+      @include state-focus-outline;
+    }
+  }
+
+  .dropdown-menu--list {
+    position: absolute;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    padding: var-rem(--semantic-spacing-sm);
+    gap: var-rem(--semantic-spacing-xs);
+    background-color: var(--semantic-color-background-canvas-overlapping);
+    box-shadow: 0 rem(0.8) rem(1.6) 0 rgba(41, 29, 24, 0.08);
+    z-index: 3;
+    width: 100%;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+:host([is-expanded]) {
+  .dropdown-menu--heading .dropdown-menu--chevron {
+    transform: scaleY(-1);
+  }
+
+  .dropdown-menu--list {
+    display: flex;
+  }
+}
+
+:host(.dropdown-menu--align-list--top-left) .dropdown-menu--list {
+  left: 0;
+  top: calc(100% + #{rem(0.8)});
+}
+
+:host(.dropdown-menu--align-list--top-right) .dropdown-menu--list {
+  right: 0;
+  top: calc(100% + #{rem(0.8)});
+}
+
+:host(.dropdown-menu--align-list--bottom-left) .dropdown-menu--list {
+  left: 0;
+  bottom: calc(100% + #{rem(0.8)});
+}
+
+:host(.dropdown-menu--align-list--bottom-right) .dropdown-menu--list {
+  right: 0;
+  bottom: calc(100% + #{rem(0.8)});
+}

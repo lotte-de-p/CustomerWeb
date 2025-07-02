@@ -1,0 +1,69 @@
+<div class="option-tiles remove-option mobile-option-tiles">
+  <div class="title-row justify-content--between">
+    <div class="display--flex flex-direction--row">
+      <i class="icon-manage-line"></i>
+      <p>
+        {{ 'ng.fleet-user-line-remove-options.lbl.remove-options' | translate }}
+      </p>
+    </div>
+    <div class="hidden-desktop">
+      <em
+        [attr.data-cy]="'toggle-available-options'"
+        [ngClass]="showAvailableOptionsContainer ? 'icon-chevron-up' : 'icon-chevron-down'"
+        (click)="toggleAvailableOptions()"></em>
+    </div>
+  </div>
+  <div class="pt-25 pb-25">
+    <p>
+      {{ 'ng.fleet-user-line-remove-options.lbl.remove-option-info' | translate }}
+    </p>
+  </div>
+  <div class="pb-25 hidden-desktop">
+    <p class="text-flow--h5">{{ selectedLine.identifier | translate }}</p>
+  </div>
+  <div [ngClass]="{ 'hidden-mobile': !showAvailableOptionsContainer }">
+    <div class="title hidden-mobile">
+      <p>
+        {{ 'ng.fleet-user-line-remove-options.lbl.remove-options' | translate }}
+      </p>
+    </div>
+    @for (categories of productLineOptions; track categories) {
+      <div class="option-title" [attr.data-cy]="'available-option-category'">
+        <div class="option-title-toggle" (click)="toggleCategories(categories)">
+          <span [textContent]="categories.category">{{ categories.category }}</span>
+          <i class="icon-chevron-down" [ngClass]="{ open: categories.isOpen }"></i>
+        </div>
+        @if (categories.isOpen) {
+          <div class="options-button-container mobile-options-button-container">
+            @for (subcategory of categories.lineOptions; track subcategory) {
+              <div>
+                @if (subcategory.visible) {
+                  <button
+                    class="options-button remove-option"
+                    [ngClass]="{ available: !subcategory.isSelected, 'previously-added': subcategory.isDisabled }"
+                    [disabled]="subcategory.isDisabled"
+                    (click)="toggleOption(subcategory)"
+                    [attr.data-cy]="'available-option'">
+                    <div class="justify-content--between width--full display--flex">
+                      <span [textContent]="subcategory.volume"></span>
+                      <span>{{ currencySymbol }}{{ subcategory.price.amount }}</span>
+                    </div>
+                    @if (!subcategory.isDisabled) {
+                      <span
+                        class="separator"
+                        [attr.data-cy]="'available-option-icon'"
+                        [ngClass]="{
+                          'icon-tick': subcategory.isSelected,
+                          'icon-minus': !subcategory.isSelected
+                        }"></span>
+                    }
+                  </button>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

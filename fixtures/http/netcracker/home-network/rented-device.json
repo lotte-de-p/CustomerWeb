@@ -1,0 +1,27 @@
+[
+  {
+    "parentId": "9152563554313410823",
+    "activationDate": "2018-04-09T00:00:00+01:00",
+    "addressId": "9152563554313410855",
+    "serialNumber": "9872876487612",
+    "identifier": "91525635543134101234",
+    "identifierType": "customerProductId",
+    "label": "Power Line Model Name",
+    "name": "Power Line",
+    "locationId": "9151527556651707562",
+    "status": "Active",
+    "productType": "networkBooster",
+    "saleType": "Rent"
+  },
+  {
+    "parentId": "9152563554313410823",
+    "addressId": "9152563554313410855",
+    "identifier": "91525635543134101234",
+    "identifierType": "customerProductId",
+    "label": "Access Point Model Name",
+    "name": "Access Point",
+    "locationId": "9151527556651707562",
+    "status": "Activation in progress",
+    "productType": "networkBooster"
+  }
+]

@@ -1,0 +1,47 @@
+<div class="content-section">
+  <div class="create-fleet-line">
+    <form name="sim-number" [formGroup]="form">
+      <div class="replace-sim">
+        <div class="form-items">
+          <label
+            ><span class="color-brand-1e cursor--default">
+              {{ 'ng.create-fleet-line.lbl.please-enter-blanco-sim-iccid' | translate }}
+            </span></label
+          >
+          <div class="form-group">
+            <div class="sim-input">
+              <p>{{ 'ng.create-fleet-line.lbl.sim-number-prefix' | translate }}</p>
+              <tg-form-input
+                labelPrefix="sim-swap"
+                formControlName="sim-number"
+                labelStyle="FormGroup__label"
+                [showPlaceHolder]="true"
+                [hideLabel]="true"
+                [required]="true"
+                [maxLength]="13"
+                (keyup)="clearValidationError()">
+              </tg-form-input>
+              <div
+                class="icon icon-question-shape cursor--pointer"
+                [ngClass]="showSim ? 'show-sim' : 'hide-sim'"
+                (click)="displaySimHelp()"></div>
+              <div class="sim-card-image-container">
+                <div
+                  class="cursor--pointer"
+                  [ngClass]="showSim ? 'sim-card__show' : 'sim-card__hide'"
+                  (click)="displaySimHelp()"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-order" [ngClass]="showSim ? 'show-sim' : 'hide-sim'">
+            <span class="pr-5"> {{ 'ng.create-fleet-line.info.out-of-stock' | translate }}</span>
+            <a class="color-brand-primary" *ngIf="orderSimUrl" [href]="orderSimUrl">
+              {{ 'ng.create-fleet-line.lbl.order-sims' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

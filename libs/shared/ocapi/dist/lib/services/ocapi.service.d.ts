@@ -1,0 +1,48 @@
+import { Observable } from 'rxjs';
+import { ConfigService } from '@telenet/ng-lib-config';
+import { HttpClient } from '@angular/common/http';
+import { MessageService } from '@telenet/ng-lib-message';
+import { OmapiProductService } from '@telenet/ng-lib-omapi';
+import { DataLayerService } from '@telenet/ng-lib-datalayer';
+import { UrlService } from '@telenet/ng-lib-page';
+import { OcapiHelper } from '../utils';
+import { OcapiCallConfig } from '../models';
+import { OmapiQueryProductService } from '@telenet/ng-lib-omapi-query';
+import { AuthenticationState } from './authentication/state/authentication.state';
+import { ErrorReportService } from './error-report.service';
+import * as i0 from "@angular/core";
+export declare class OcapiService {
+    private readonly http;
+    private readonly configService;
+    private readonly messageService;
+    private readonly omapiProductService;
+    private readonly omapiQueryProductService;
+    private readonly ocapiHelper;
+    private readonly dataLayerService;
+    private readonly urlService;
+    private readonly authenticationState;
+    private readonly errorReportService;
+    private static readonly LOG;
+    constructor(http: HttpClient, configService: ConfigService, messageService: MessageService, omapiProductService: OmapiProductService, omapiQueryProductService: OmapiQueryProductService, ocapiHelper: OcapiHelper, dataLayerService: DataLayerService, urlService: UrlService, authenticationState: AuthenticationState, errorReportService: ErrorReportService);
+    doGet<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    doPost<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    doPut<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    doRestHead<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    doPatch<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    doDelete<T, G>(ocapiCallConfig: OcapiCallConfig<T, G>): Observable<G>;
+    private doResolve;
+    private ocapiResponseEnrichedWithOmapiQueryData$;
+    private ocapiResponseEnrichedWithOmapiData$;
+    private doRequest;
+    private recursiveAddDataToOcapiResponse;
+    private isQueryUrl;
+    private isSpecUrl;
+    private getProductIdFromOmapiResponse;
+    private recursiveUrls;
+    private handleError;
+    private sendErrorEventToAnalyticsForCustomError;
+    private getDetailedErrorCode;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OcapiService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<OcapiService>;
+}
+//# sourceMappingURL=ocapi.service.d.ts.map

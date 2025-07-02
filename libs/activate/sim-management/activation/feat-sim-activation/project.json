@@ -1,0 +1,33 @@
+{
+  "name": "sim-management-feat-sim-activation",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/activate/sim-management/activation/feat-sim-activation/src",
+  "prefix": "tg-activate-sim-management-sim-activation",
+  "tags": ["type:feature", "scope:sim-management-mfe"],
+  "projectType": "library",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/activate/sim-management/activation/feat-sim-activation/**/*.ts",
+          "libs/activate/sim-management/activation/feat-sim-activation/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GeneralMfe</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://www.int.telenet.be/nl.pageLocaleData.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+      .header-search--autosuggest-query-item em {
+        font-weight: bold !important;
+        font-style: normal !important;
+      }
+    </style>
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'search-api-url': 'https://api.int.telenet.be/search/api',
+          // 'search-api-url': 'mock.api',
+        };
+      })();
+    </script>
+    <style>
+      .header-search--autosuggest {
+        padding-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <tg-foundation-general-root></tg-foundation-general-root>
+  </body>
+</html>

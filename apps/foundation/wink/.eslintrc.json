@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "../../../.eslintrc.json"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2022,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "ignorePatterns": [
+    "!**/*",
+    "src/polyfills.ts",
+    "tsconfig.spec.json",
+    "src/environments/environment.ts",
+    "src/environments/environment.prod.ts",
+    "src/mock/*"
+  ],
+  "overrides": []
+}

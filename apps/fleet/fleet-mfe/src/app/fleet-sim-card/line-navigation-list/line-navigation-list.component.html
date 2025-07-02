@@ -1,0 +1,44 @@
+<app-loader [enableLoader]="true" [pageType]="'fleet-page'" [enableMask]="true" [startByDefault]="false"> </app-loader>
+<app-message-flow messageGroupName="line-navigation-list"></app-message-flow>
+<div class="row">
+  <ng-container *ngIf="navItems$ | async as navItems">
+    <div class="col-sm-12 col-md-4" [attr.data-cy]="'nav'">
+      <div class="navigation-list--deprecated">
+        <div
+          class="nav-header-mobile font--body-small display--flex align-items--center position--relative"
+          [ngClass]="{ 'visibility--show': hideNavMenuWhenMobile }"
+          (click)="showNavMenu()">
+          <i class="icon icon-chevron-right back-arrow pr--xxs"></i>
+          <span>{{ 'ng.line-navigation-list.text.back-menu' | translate }}</span>
+        </div>
+        <div class="nav-list" [ngClass]="{ 'visibility--hide': hideNavMenuWhenMobile }">
+          <ul>
+            <li
+              *ngFor="let navItem of navItems; let last = last"
+              [ngClass]="{ active: isNavItemActive(navItem) }"
+              (click)="loadContent(navItem)"
+              [attr.data-cy]="'nav-item'">
+              <div class="link-section">
+                <div class="selection-bar"></div>
+                <div class="list-item" [ngClass]="{ 'last-item': last }">
+                  <span>
+                    <i class="navigation-list__icon icon-{{ navItem.tabName }}"></i>
+                    <span>{{ 'ng.line-navigation-list.link.' + navItem.tabName | translate }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="content$ | async as content">
+    <div
+      class="col-sm-12 col-md-8 navigation--content"
+      [ngClass]="{ 'visibility--show': hideNavMenuWhenMobile, 'visibility--hide': !hideNavMenuWhenMobile }"
+      [attr.data-cy]="'content'">
+      <span [innerHTML]="content"></span>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,134 @@
+[
+  {
+    "billingAccount": {
+      "accountNumber": "501094665",
+      "address": {
+        "addressId": "5775899",
+        "street": "Kruierstraat",
+        "postalCode": "8660",
+        "city": "De Panne",
+        "country": "België",
+        "houseNumber": "8"
+      }
+    },
+    "billingFrequency": "MONTHLY",
+    "priceChange": 1.145555,
+    "vatInclusive": false,
+    "priceAccordingToConsumption": false,
+    "products": [
+      {
+        "description": {
+          "nl": "Telenet Telefonie",
+          "fr": "Telenet Téléphonie"
+        },
+        "oldPrice": 24.33,
+        "newPrice": 25.47
+      }
+    ]
+  },
+  {
+    "billingAccount": {
+      "accountNumber": "501190680",
+      "address": {
+        "addressId": "5775899",
+        "street": "Kruierstraat",
+        "postalCode": "8660",
+        "city": "De Panne",
+        "country": "België",
+        "houseNumber": "8"
+      }
+    },
+    "billingFrequency": "YEARLY",
+    "priceChange": 10.47,
+    "vatInclusive": false,
+    "priceAccordingToConsumption": false,
+    "products": [
+      {
+        "description": {
+          "nl": "Auteursrechten",
+          "fr": "Droits d'auteur"
+        },
+        "oldPrice": 59.04,
+        "newPrice": 61.8
+      },
+      {
+        "description": {
+          "nl": "Abonnement kabel-tv",
+          "fr": "Abonnement télédistribution"
+        },
+        "oldPrice": 164.05,
+        "newPrice": 171.76
+      }
+    ]
+  },
+  {
+    "billingAccount": {
+      "accountNumber": "501190680",
+      "address": {
+        "addressId": "5775899",
+        "street": "Kruierstraat",
+        "postalCode": "8660",
+        "city": "De Panne",
+        "country": "België",
+        "houseNumber": "8"
+      }
+    },
+    "billingFrequency": "YEARLY",
+    "priceChange": 10.47,
+    "vatInclusive": false,
+    "priceAccordingToConsumption": true,
+    "products": [
+      {
+        "description": {
+          "nl": "Auteursrechten",
+          "fr": "Droits d'auteur"
+        },
+        "oldPrice": 59.04,
+        "newPrice": 61.8
+      },
+      {
+        "description": {
+          "nl": "Abonnement kabel-tv",
+          "fr": "Abonnement télédistribution"
+        },
+        "oldPrice": 164.05,
+        "newPrice": 171.76
+      }
+    ]
+  },
+  {
+    "billingAccount": {
+      "accountNumber": "501190681",
+      "address": {
+        "addressId": "5775899",
+        "street": "Kruierstraat",
+        "postalCode": "8660",
+        "city": "De Panne",
+        "country": "België",
+        "houseNumber": "8"
+      }
+    },
+    "billingFrequency": "YEARLY",
+    "priceChange": 10.47,
+    "vatInclusive": true,
+    "priceAccordingToConsumption": true,
+    "products": [
+      {
+        "description": {
+          "nl": "Auteursrechten",
+          "fr": "Droits d'auteur"
+        },
+        "oldPrice": 59.04,
+        "newPrice": 61.8
+      },
+      {
+        "description": {
+          "nl": "Abonnement kabel-tv",
+          "fr": "Abonnement télédistribution"
+        },
+        "oldPrice": 164.05,
+        "newPrice": 171.76
+      }
+    ]
+  }
+]

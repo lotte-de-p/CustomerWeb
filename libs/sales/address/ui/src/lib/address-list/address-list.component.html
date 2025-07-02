@@ -1,0 +1,21 @@
+<div class="installation-location__content px--xxs">
+  <div class="installation-location__title row row--no-gutters justify-content--between mb--l font-weight--bold">
+    <div class="heading--6 heading--nomargin">
+      {{ 'ng.sales-checkout.lbl.select-installation-location.location-title' | translate }}
+    </div>
+    <i
+      class="icon"
+      data-cy="address-list-chevron"
+      [ngClass]="showAddress ? 'icon-chevron-up' : 'icon-chevron-down'"
+      (click)="showAddress = !showAddress"></i>
+  </div>
+  <div
+    class="select-tile--group display--grid grid-template-column--1 gap--xm"
+    data-cy="address-list"
+    [class.display--none-important]="!showAddress">
+    @for (address of addresses; track address.id; let i = $index) {
+      <tg-sales-installation-address [address]="address" [index]="i" (addressSelected)="onAddressSelected($event)">
+      </tg-sales-installation-address>
+    }
+  </div>
+</div>

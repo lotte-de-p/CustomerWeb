@@ -1,0 +1,18 @@
+<img [src]="imagePath" />
+<h6 class="heading--notopmargin overlay__section__content__title">
+  {{ 'ng.' + messageGroupName + '.fiber-not-planned.thank-you.title' | translate }}
+</h6>
+<div class="text--m color-shade_48">
+  {{ 'ng.' + messageGroupName + '.fiber-not-planned.thank-you.subtitle' | translate }}
+</div>
+<div class="mt--m">
+  <div class="col-12 col-md-12 px--n">
+    <button
+      [attr.data-cy]="'thank-you-confirm-button'"
+      type="submit"
+      class="button button--primary button--width-auto mt--m mt--n--md"
+      (click)="onClose()">
+      {{ 'ng.' + messageGroupName + '.btn.back-to-ftth-address-checker' | translate }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<tg-marketing-cafe-drop-down-accordion-header
+  [title]="title"
+  [isPanelCollapsed]="(notification | async) === null"
+  tgMarketingTogglePanel>
+</tg-marketing-cafe-drop-down-accordion-header>
+
+<tg-marketing-cafe-drop-down-accordion-panel
+  [overviews]="overviews"
+  [class.accordion--panel__collapsed]="(notification | async) === null"
+  class="display--flex flex-direction--column flex-grow px--l">
+</tg-marketing-cafe-drop-down-accordion-panel>

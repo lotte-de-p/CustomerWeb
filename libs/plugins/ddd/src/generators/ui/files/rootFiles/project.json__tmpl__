@@ -1,0 +1,50 @@
+{
+  "name": "<%= fullPathDasherized %>-ui",
+  "$schema": "<%= offsetFromRoot %>node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "<%= libUiPath %>/src",
+  "prefix": "<%= prefix %>",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["<%= libUiPath %>/**/*.ts", "<%= libUiPath %>/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "<%= libUiPath %>/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "<%= mfeName %>:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "<%= libUiPath %>/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "<%= mfeName %>:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "<%= libUiPath %>/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "<%= mfeName %>:build:development"
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:<%= fullPathDasherized %>", "scope:<%= mfeName %>"]
+}

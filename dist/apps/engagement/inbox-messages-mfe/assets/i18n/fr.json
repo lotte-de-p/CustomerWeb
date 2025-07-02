@@ -1,0 +1,11 @@
+{
+  "ng.inbox-messages.message-added-years.txt": "{{value}} years ago",
+  "ng.inbox-messages.message-added-days.txt": "{{value}} days ago",
+  "ng.inbox-messages.message-added-months.txt": "{{value}} months ago",
+  "ng.inbox-messages.badge.txt": "New",
+  "ng.inbox-messages.important-messages.lbl": "Belangrijk",
+  "ng.inbox-messages.other-messages.lbl": "Andere berichten",
+  "ng.inbox-messages.notification-icon.txt": "Meldingen",
+  "ng.inbox-messages.no-messages.txt": "Je hebt nog geen meldingen",
+  "ng.inbox-messages.delete.txt": "Verwijderen"
+}

@@ -1,0 +1,29 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/mobile/0480031261",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "productName": "BASE 29",
+    "msisdn": "0480031261",
+    "mobileUsage": {
+      "showCard": true,
+      "postpaid": {
+        "data": { "total": 25000000000, "carryOver": 500000000, "remaining": 16100000000 },
+        "daysUntilRenewal": 27,
+        "outOfBundleLimit": 30,
+        "status": "OK"
+      }
+    },
+    "actions": [
+      "paybymobile",
+      "buy-hardware-discount",
+      "mobile-usage-notifications",
+      "voicemail",
+      "sim-management",
+      "product-overview",
+      "usage-details",
+      "usage-limits",
+      "barrings"
+    ]
+  }
+}

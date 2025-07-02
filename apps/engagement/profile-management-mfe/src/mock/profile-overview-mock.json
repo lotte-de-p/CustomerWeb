@@ -1,0 +1,14 @@
+{
+  "url": "http://localhost:8080/public/api/profile-management-cs/v1/identities/41111893388",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "customerNumber": "123456",
+    "role": "Manager",
+    "firstname": "John",
+    "lastname": "Doe",
+    "canManageSimCards": true,
+    "canManageDtvProducts": true,
+    "canManageInternetProducts": true
+  }
+}

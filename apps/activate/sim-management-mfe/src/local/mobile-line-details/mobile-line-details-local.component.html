@@ -1,0 +1,23 @@
+<div class="py--l py--xxl-sm">
+  <div class="display--flex justify-content--around">
+    <div class="col-xl-5 col-lg-6 col-md-8 col-xs-12">
+      <tg-sim-management-mobile-line-details
+        [profileManagementUrl]="'/mytelenet/profiel'"
+        [simSwapUrl]="
+          '/residential/nl/sales?flow=review&pid=__msisdn__&sid=__salesOrderId__&statuses=ADD&intent=sim-add&source=sim-add'
+        "
+        [mobileBarringUrl]="'/mobile/?msisdn=__msisdn__#/nav_item=barring.html'"
+        [activateESimSmartWatchInfoUrl]="
+          '/klantenservice/mobiel-en-vast/simkaart-en-toestellen/alles-over-telenet-one-number'
+        "
+        [eSimInformationUrl]="
+          '/content/www-telenet-touch/nl/support/mobiel-en-vast/simkaart-en-toestellen/alles-over-esim-voor-smartphones'
+        "
+        [deviceSupportsESimUrl]="'/content/www-telenet-touch/nl/producten/mobiel/esim#checkdevice'"
+        [eSimActivationUrl]="'/e-sim-activation'"
+        [simActivationUrl]="'/sim-activation?type=sim'"
+        [portingUrl]="'/sim-activation?type=e_sim'"
+        [smsVerificationUrl]="'/sms-verification'"></tg-sim-management-mobile-line-details>
+    </div>
+  </div>
+</div>

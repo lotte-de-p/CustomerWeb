@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "useDefineForClassFields": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "strictPropertyInitialization": false
+  },
+  "files": [],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./cypress/tsconfig.cy.json"
+    }
+  ],
+  "extends": "../../../../tsconfig.base.json",
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

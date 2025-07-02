@@ -1,0 +1,304 @@
+{
+  "tiers": [
+    {
+      "key": "ONE",
+      "omapiId": "C5FA0001"
+    },
+    {
+      "key": "ONEup",
+      "omapiId": "C5FU0001"
+    }
+  ],
+  "products": [
+    {
+      "type": "mobile",
+      "tiers": [
+        {
+          "key": "ONE",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "C5FA0001"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FA0002"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FA0003"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FA0004"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FA0005"
+            }
+          ]
+        },
+        {
+          "key": "ONEup",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "C5FU0001"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FU0002"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FU0003"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FU0004"
+            },
+            {
+              "key": "",
+              "omapiId": "C5FU0005"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "tiers": [
+        {
+          "key": "ONE",
+          "products": [
+            {
+              "key": "comfort_tv",
+              "omapiId": "TEOS0001"
+            },
+            {
+              "key": "smart_streaming",
+              "omapiId": "OTT0000"
+            }
+          ]
+        },
+        {
+          "key": "ONEup",
+          "products": [
+            {
+              "key": "comfort_tv",
+              "omapiId": "TEOS0001"
+            },
+            {
+              "key": "smart_streaming",
+              "omapiId": "OTT0000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "optins": [
+    {
+      "key": "data_sim",
+      "tiers": [
+        {
+          "key": "ONE",
+          "pax": [
+            {
+              "omapiId": "C5FA0001",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FA0002",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FA0003",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FA0004",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FA0005",
+              "optinId": "MBLN0002"
+            }
+          ]
+        },
+        {
+          "key": "ONEup",
+          "pax": [
+            {
+              "omapiId": "C5FU0001",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FU0002",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FU0003",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FU0004",
+              "optinId": "MBLN0002"
+            },
+            {
+              "omapiId": "C5FU0005",
+              "optinId": "MBLN0002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fixed_telephony",
+      "tiers": [
+        {
+          "key": "ONE",
+          "pax": [
+            {
+              "omapiId": "C5FA0001",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FA0002",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FA0003",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FA0004",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FA0005",
+              "optinId": "FLIN0001"
+            }
+          ]
+        },
+        {
+          "key": "ONEup",
+          "pax": [
+            {
+              "omapiId": "C5FU0001",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FU0002",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FU0003",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FU0004",
+              "optinId": "FLIN0001"
+            },
+            {
+              "omapiId": "C5FU0005",
+              "optinId": "FLIN0001"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "type": "mobile",
+      "key": "international_calling",
+      "omapiId": "BERU0001"
+    },
+    {
+      "type": "entertainment",
+      "key": "basic_content_pack",
+      "omapiId": "TVPK0002"
+    },
+    {
+      "type": "entertainment",
+      "key": "streamz",
+      "omapiId": "TVPK0014"
+    },
+    {
+      "type": "entertainment",
+      "key": "stream_plus",
+      "omapiId": "TVPK0018"
+    },
+    {
+      "type": "entertainment",
+      "key": "play_more",
+      "omapiId": "TVPK0015"
+    },
+    {
+      "type": "entertainment",
+      "key": "play_sports",
+      "omapiId": "TVPK0016"
+    },
+    {
+      "type": "entertainment",
+      "key": "play_sports",
+      "omapiId": "TVPK0021",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "be_tv",
+      "omapiId": "TVPK0005",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "be_tv_sport",
+      "omapiId": "TVPK0006",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "bouquet_africain",
+      "omapiId": "TVPK0008",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "bouquet_arabe",
+      "omapiId": "TVPK0009",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "bouquet_discover_more",
+      "omapiId": "TVPK0010",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "bouquet_family_fun",
+      "omapiId": "TVPK0011",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "option_fr",
+      "omapiId": "TVPK0012",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "voo_sport",
+      "omapiId": "TVPK0020",
+      "parents": ["TEOS0001"]
+    },
+    {
+      "type": "entertainment",
+      "key": "passion_xl",
+      "omapiId": "TVPK0013",
+      "parents": ["TEOS0001"]
+    }
+  ]
+}

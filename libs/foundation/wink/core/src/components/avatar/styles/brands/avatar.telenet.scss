@@ -1,0 +1,8 @@
+@import '../vars/vars.telenet';
+@import '../avatar.default';
+
+:host {
+  img {
+    @include telenet-backdrop-mask;
+  }
+}

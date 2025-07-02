@@ -1,0 +1,22 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html",
+    "json",
+    "text",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+    "libs/sales/address/feat-installation-address/**"
+  ],
+  "report-dir": "../../../../coverage/cypress/sales/feat-installation-address",
+  "cwd": "../../../../"
+}

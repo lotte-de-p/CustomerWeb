@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "status": "Entering",
+  "customerId": "9155587919613576246",
+  "id": "9155655324113798659",
+  "name": "Order #0000611558",
+  "prices": {
+    "taxExclPrices": {
+      "currency": "Euro",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "30,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "30,00"
+    }
+  },
+  "lineItems": [
+    {
+      "type": "Modify Product",
+      "productIdentifier": "0487074737",
+      "orderItems": [
+        {
+          "id": "9155656411013190769",
+          "name": "PAYU / 0487074737",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "Euro",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "Euro",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            }
+          },
+          "locationId": "9155587914713576246",
+          "parentId": "9155655324113798659",
+          "specurl": "https://api.int.base.be/omapi/public/product/PAYU0000",
+          "orderItems": [
+            {
+              "id": "9155656416013190769",
+              "name": "Data Top 24 250 MB",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "12,10",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "12,10"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "10,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "10,00"
+                }
+              },
+              "locationId": "9155587914713576246",
+              "parentId": "9155656411013190769",
+              "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+              "orderItems": [],
+              "status": "ADDED"
+            },
+            {
+              "id": "9155656415113190769",
+              "name": "Voice Top 24 250 min",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "24,20",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "24,20"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "20,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9155587914713576246",
+              "parentId": "9155656411013190769",
+              "specurl": "https://api.int.base.be/omapi/public/product/VWME0250",
+              "orderItems": [],
+              "status": "DISCONNECT"
+            }
+          ],
+          "status": "MODIFY"
+        },
+        {
+          "id": "9155594361013600381",
+          "name": "Flex 1 / 0487074737",
+          "prices": {
+            "taxExclPrices": {
+              "currency": "Euro",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "5,00",
+              "terminationCharge": "0,00",
+              "oneTimeDiscounted": "5,00",
+              "recurrentDiscounted": "5,00"
+            }
+          },
+          "locationId": "9155587914713576246",
+          "specurl": "https://api.int.base.be/omapi/public/product/BFLE0001",
+          "orderItems": [],
+          "status": "Active"
+        }
+      ]
+    }
+  ],
+  "lineCount": 0
+}

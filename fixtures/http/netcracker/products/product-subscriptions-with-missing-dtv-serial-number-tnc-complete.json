@@ -1,0 +1,78 @@
+[
+  {
+    "id": "9150308797613325423",
+    "activationDate": "2020-09-03T09:09:52",
+    "addressId": "9150308785513909483",
+    "identifier": "D000032222",
+    "label": "DTV / D000032222",
+    "locationId": "9158204607013827796",
+    "status": "Activation in progress",
+    "productType": "dtv",
+    "salesOrderId": "9158204666013827796",
+    "productOrders": [
+      {
+        "id": "9158204607013827715",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "Telenet TV Box",
+          "id": "9158741229213293520"
+        },
+        "chars": {
+          "serialNumber": "9815615412412414"
+        },
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Completed"
+            }
+          },
+          {
+            "topic": "Picked",
+            "status": {
+              "name": "Completed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9158689683913931971",
+        "status": "Processing",
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Completed"
+            }
+          }
+        ],
+        "customerProduct": {
+          "name": "Telenet TV Box",
+          "id": "9158741229213293519",
+          "productInfo": {
+            "productType": "TV_BOX"
+          }
+        }
+      },
+      {
+        "id": "9158689683913931972",
+        "status": "Processing",
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Completed"
+            }
+          }
+        ],
+        "customerProduct": {
+          "name": "Telenet TV Box",
+          "id": "9158741229213293510",
+          "productInfo": {
+            "productType": "TV_BOX"
+          }
+        }
+      }
+    ]
+  }
+]

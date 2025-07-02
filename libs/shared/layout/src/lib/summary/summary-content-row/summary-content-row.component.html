@@ -1,0 +1,37 @@
+<div
+  [tgMargin]="rowMargin?.margin || { position: 't', size: 'm' }"
+  class="display--flex justify-content--between width--full"
+  [ngClass]="isFollowedByPromoLabel ? 'mb--xxxs' : 'mb--xxs'">
+  <div
+    [tgFontSize]="labelConfiguration?.fontSize!"
+    [tgFontWeight]="labelConfiguration?.fontWeight!"
+    [tgMargin]="labelConfiguration?.margin!"
+    [tgTextFlow]="labelConfiguration?.textFlow!"
+    class="text-block__left">
+    <ng-content></ng-content>
+  </div>
+  <div class="center-align">
+    <div
+      *ngIf="strikeThroughPrice"
+      [tgFontSize]="strikeTroughConfiguration.fontSize!"
+      [tgFontWeight]="strikeTroughConfiguration.fontWeight!"
+      [tgMargin]="strikeTroughConfiguration.margin!"
+      [tgTextFlow]="strikeTroughConfiguration.textFlow!"
+      class="text-block__left">
+      <div class="text-decoration--line-through text-block__right space-nowrap" tgTextFlow="body">
+        {{ getLabel(level, strikeThroughPrice.type) | translate: { price: strikeThroughPrice.value | price } }}
+      </div>
+    </div>
+    <div
+      *ngIf="price"
+      [tgFontSize]="priceConfiguration?.fontSize || 'm'"
+      [tgFontWeight]="priceConfiguration?.fontWeight || 'r'"
+      [tgMargin]="priceConfiguration?.margin || { position: 't', size: 'm' }"
+      [tgTextFlow]="priceConfiguration?.textFlow || 'body'"
+      class="text-block__left">
+      <div [tgTextFlow]="getTextFlow()" class="text-block__right space-nowrap">
+        {{ getLabel(level, price.type) | translate: { price: price.value | price } }}
+      </div>
+    </div>
+  </div>
+</div>

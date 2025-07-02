@@ -1,0 +1,17 @@
+{
+  "name": "entertainment-dtv-box-management-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/activate/entertainment/dtv-box-management/data-access/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:entertainment-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/activate/entertainment/dtv-box-management/data-access/**/*.{ts,js,html}"]
+      }
+    }
+  }
+}

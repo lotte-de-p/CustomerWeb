@@ -1,0 +1,86 @@
+<tg-login [messageGroupName]="messageGroupName" (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes">
+  <app-loader [enableLoader]="enableLoader" [pageType]="pageType" [enableMask]="enableMask"> </app-loader>
+  <app-message-flow [messageGroupName]="messageGroupName"></app-message-flow>
+
+  <div class="manage-social-login col-sm-12 background-white m--auto content-section">
+    <div
+      class="text-align--left text-font-family--t7 text--l font-weight--black p--xl--sm p--l border--t--r border-width--t--r border-style--t--solid border-color--t--white">
+      {{ 'ng.manage-social-login.lbl.view-change-connections-info' | translate }}
+    </div>
+    <div class="divider divider--s__very-light-grey"></div>
+    <div
+      class="align-center text-align--center text--l--sm text--xxm font-weight--black p--xl--sm p--l border--t--r border-width--t--r border-style--t--solid border-color--t--white">
+      <div *ngrxLet="socialLogins$; let socialLogins">
+        <div class="display--flex align-items-center justify-content--center">
+          <div class="hidden-mobile display--flex align-items-center justify-content--center m--s">
+            <div class="p--xl border--r--r border-width--r--r border-style--r--solid border-color--r--white">
+              <img
+                tgProfileManagementImageSrcInterceptor
+                [moduleId]="'tg-pm-manage-social-login'"
+                src="/assets/logo_itsme.svg"
+                alt="itsme icon"
+                class="manage-social-login__icon-section" />
+            </div>
+            <div class="p--xl border--r--r border-width--r--r border-style--r--solid border-color--r--white">
+              <div class="text&#45;&#45;xxm&#45;&#45;sm text&#45;&#45;m font-weight&#45;&#45;black">itsme</div>
+            </div>
+            <div *ngIf="!socialLogins?.isLinkedToItsme">
+              <div class="text--s--sm text--m font--body-regular text-align--center--sm text-align--center py--xs">
+                {{ 'ng.manage-social-login.lbl.social-login-not-linked' | translate }}
+              </div>
+            </div>
+            <div *ngIf="socialLogins?.isLinkedToItsme">
+              <button class="button button--secondary" (click)="openUnlinkConfirmationDialog('itsme')">
+                <img
+                  tgProfileManagementImageSrcInterceptor
+                  [moduleId]="'tg-pm-manage-social-login'"
+                  src="/assets/icon_broken_lock.svg"
+                  alt="broken lock icon" />
+                <span>
+                  {{ 'ng.manage-social-login.lbl.unlink-itsme' | translate }}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="display--flex align-items-center justify-content--center" style="display: inline-block">
+          <div class="hidden-desktop display--flex align-items-center mb-30 justify-content--center">
+            <div class="p--s border--r--r border-width--r--r border-style--r--solid border-color--r--white">
+              <img
+                tgProfileManagementImageSrcInterceptor
+                [moduleId]="'tg-pm-manage-social-login'"
+                src="/assets/logo_itsme.svg"
+                alt="itsme icon"
+                style="width: 7.4rem; height: 7.4rem" />
+            </div>
+            <div class="p--s border--r--r border-width--r--r border-style--r--solid border-color--r--white">
+              <div class="text--xxm--sm text--m font-weight--black">itsme</div>
+            </div>
+            <div *ngIf="!socialLogins?.isLinkedToItsme">
+              <div class="text--s--sm text--m font--body-regular p--l text-align--center--sm text-align--center">
+                {{ 'ng.manage-social-login.lbl.social-login-not-linked' | translate }}
+              </div>
+            </div>
+            <div *ngIf="socialLogins?.isLinkedToItsme">
+              <button class="button button--secondary" (click)="openUnlinkConfirmationDialog('itsme')">
+                <img
+                  tgProfileManagementImageSrcInterceptor
+                  [moduleId]="'tg-pm-manage-social-login'"
+                  src="/assets/icon_broken_lock.svg"
+                  alt="broken lock icon" />
+                <span>
+                  {{ 'ng.manage-social-login.lbl.unlink-itsme' | translate }}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text--s--sm text--m font-weight--black p--l text-align--center--sm text-align--center">
+      <a href="{{ socialLoginDetailsUrl }}" class="link">
+        {{ 'ng.manage-social-login.lbl.social-login-more-info' | translate }}
+      </a>
+    </div>
+  </div>
+</tg-login>

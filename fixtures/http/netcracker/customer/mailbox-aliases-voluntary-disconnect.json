@@ -1,0 +1,62 @@
+{
+  "mailboxes": [
+    {
+      "mailboxUUID": "9f04846f-bdf3-4195-b75e-f5bd0a697892",
+      "firstName": "Siddhant",
+      "lastName": "Gupta",
+      "manageMailbox": false,
+      "loggedInUser": false,
+      "virus": "AS_DISABLED",
+      "spam": "AS_DISABLED",
+      "isCompromised": true,
+      "plannedForVoluntaryDisconnection": "No",
+      "aliases": [
+        {
+          "mailboxAliasId": "siddhant.gupta@telenetgroup.be"
+        }
+      ]
+    },
+    {
+      "mailboxUUID": "9f04846f-bdf3-4195-b75e-f5bd0a697892",
+      "firstName": "null",
+      "lastName": "null",
+      "manageMailbox": true,
+      "loggedInUser": true,
+      "isCompromised": false,
+      "plannedForVoluntaryDisconnection": "Yes",
+      "aliases": [
+        {
+          "mailboxAliasId": "siddhant.gupta@telenetgroup.be"
+        },
+        {
+          "mailboxAliasId": "abc@telenetgroup.be"
+        },
+        {
+          "mailboxAliasId": "xyz@telenetgroup.be"
+        }
+      ]
+    },
+    {
+      "mailboxUUID": "9f04846f-bdf3-4195-b75e-f5bd0a697878",
+      "firstName": "null",
+      "lastName": "null",
+      "manageMailbox": true,
+      "loggedInUser": true,
+      "isCompromised": false,
+      "plannedForVoluntaryDisconnection": "Yes",
+      "aliases": [
+        {
+          "mailboxAliasId": "siddhanttest.gupta@telenetgroup.be"
+        },
+        {
+          "mailboxAliasId": "abctest@telenetgroup.be"
+        },
+        {
+          "mailboxAliasId": "xyztest@telenetgroup.be"
+        }
+      ]
+    }
+  ],
+  "maxNoOfMailboxes": "10",
+  "maxNoOfAliases": "5"
+}

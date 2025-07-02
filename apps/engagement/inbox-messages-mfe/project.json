@@ -1,0 +1,169 @@
+{
+  "name": "inbox-messages-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "tg-inbox-messages",
+  "sourceRoot": "apps/engagement/inbox-messages-mfe/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/engagement/inbox-messages-mfe",
+        "index": "apps/engagement/inbox-messages-mfe/src/index.html",
+        "main": "apps/engagement/inbox-messages-mfe/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/engagement/inbox-messages-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/engagement/inbox-messages-mfe/src/favicon.ico",
+          "apps/engagement/inbox-messages-mfe/src/assets",
+          "apps/engagement/inbox-messages-mfe/src/version.json"
+        ],
+        "styles": ["apps/engagement/inbox-messages-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/engagement/inbox-messages-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/engagement/inbox-messages-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/engagement/inbox-messages-mfe/src/favicon.ico",
+            "apps/engagement/inbox-messages-mfe/src/assets",
+            "apps/engagement/inbox-messages-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "customWebpackConfig": {
+            "path": "apps/engagement/inbox-messages-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "inbox-messages-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "inbox-messages-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4210,
+        "publicHost": "http://localhost:4210"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "inbox-messages-mfe:build",
+        "extraWebpackConfig": "apps/engagement/inbox-messages-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/engagement/inbox-messages-mfe/**/*.ts",
+          "apps/engagement/inbox-messages-mfe/**/*.html"
+        ]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "inbox-messages-mfe:build"
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/engagement/inbox-messages-mfe/.storybook",
+        "browserTarget": "inbox-messages-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/inbox-messages-mfe",
+        "configDir": "apps/engagement/inbox-messages-mfe/.storybook",
+        "browserTarget": "inbox-messages-mfe:build-storybook",
+        "styles": ["apps/engagement/inbox-messages-mfe/src/styles.scss"],
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/engagement/inbox-messages-mfe/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "inbox-messages-mfe:build-storybook",
+        "staticFilePath": "dist/storybook/inbox-messages-mfe"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "inbox-messages-mfe:build-storybook:ci"
+        }
+      }
+    }
+  },
+  "tags": ["type:app", "scope:inbox-messages-mfe"]
+}

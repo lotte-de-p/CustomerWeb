@@ -1,0 +1,28 @@
+.mybase-dashboard--card {
+  height: 100%;
+  min-height: 15rem;
+}
+.mybase-dashboard--card--content--flex-basis {
+  flex-basis: 4rem;
+}
+
+.mybase-dashboard {
+  @media only screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+  // @include media('md') {
+
+  margin-top: -6rem;
+}
+.skeleton--title {
+  width: 25rem;
+  height: 3rem;
+}
+
+.skeleton-manage-product--card {
+  height: 10rem;
+}
+
+.skeleton-support--card {
+  height: 8rem;
+}

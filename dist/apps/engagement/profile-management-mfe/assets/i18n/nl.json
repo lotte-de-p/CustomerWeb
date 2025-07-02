@@ -1,0 +1,21 @@
+{
+  "ng.profile-overview.role-Manager.title": "Beheeder",
+  "ng.profile-overview.role-Member.title": "Member",
+  "ng.profile-overview.role-CONTRACT_HOLDER.title": "Contracthouder",
+  "ng.profile-overview.customer-number.title": "Klantennummer",
+  "ng.profile-overview.manage-personal-data-link.title": "Je persoonlijke gegevens",
+  "ng.profile-overview.manage-login-password-link.title": "MyTelenet-login en -wachtwoord",
+  "ng.profile-overview.social-login-link.title": "Aanmelden met",
+  "ng.profile-overview.social-login-link.subtitle": "Facebook, Google, Itsme",
+  "ng.profile-overview.manage-other-users-link.title": "Gebruikers beheren",
+  "ng.profile-overview.connected-services-link.title": "Gekoppelde diensten",
+  "ng.profile-overview.easy-switch-link.title": "Je Easy Switch-gegevens",
+  "ng.profile-overview.payment-method-link.title": "Betalingsmethode",
+  "ng.profile-overview.wifi-password-link.title": "Wifi-wachtwoord",
+  "ng.profile-overview.sim-cards-link.title": "Gebruikers SIM",
+  "ng.profile-overview.sim-cards-link.subtitle": "PIN & PUK code & SIM information",
+  "ng.profile-overview.privacy-settings-link.title": "Privacy",
+  "ng.profile-overview.more-info-link.text": "You have limited access as a member.",
+  "ng.profile-overview.more-info-link.title": "More Info.",
+  "ng.profile-overview.copy.btn": "Kopieer"
+}

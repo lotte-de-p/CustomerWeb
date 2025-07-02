@@ -1,0 +1,10 @@
+<div *ngFor="let service of services">
+  <ng-container *ngFor="let spec of service.specifications">
+    <ul *ngIf="spec.localizedContent?.name" [ngClass]="{ 'mt-10 ml--m': isTelenetBrand, 'ml--xxxl': !isTelenetBrand }">
+      <li
+        [attr.data-cy]="'optionSpecifications'"
+        class="data--key"
+        [innerHTML]="getFormattedSpecifications(spec.localizedContent?.name)"></li>
+    </ul>
+  </ng-container>
+</div>

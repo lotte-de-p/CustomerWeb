@@ -1,0 +1,21 @@
+<div class="cmp-image mr--xs" data-cs-mask>
+  @if (!hasProfilePicture()) {
+    @if (isBaseCustomer()) {
+      <img
+        class="cmp-image__image border-radius--circle"
+        tgProfileManagementImageSrcInterceptor
+        [moduleId]="'tg-pm-profile-overview'"
+        src="/assets/profile-avatar-base.svg"
+        alt="profile picture avatar" />
+    } @else {
+      <img
+        class="cmp-image__image border-radius--circle"
+        tgProfileManagementImageSrcInterceptor
+        [moduleId]="'tg-pm-profile-overview'"
+        src="/assets/profile-avatar.svg"
+        alt="profile picture avatar" />
+    }
+  } @else {
+    <img [src]="profilePictureUrl()" class="cmp-image__image border-radius--circle" alt="profile" />
+  }
+</div>

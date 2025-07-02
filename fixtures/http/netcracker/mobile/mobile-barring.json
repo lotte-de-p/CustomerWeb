@@ -1,0 +1,164 @@
+{
+  "label": "Mobile Line",
+  "specurl": "https://api.int.base.be/omapi/public/product/TECH0001",
+  "barringSettings": [
+    {
+      "id": "9149714240165296390",
+      "name": "Customer Bar All",
+      "barringOrder": 23,
+      "barringGroup": "General",
+      "isbarred": false,
+      "fraudManagerSet": true,
+      "mutualExclusionBarringIdSet": [
+        "9148574133765183805",
+        "9148574133765183807",
+        "9148574133765183808",
+        "9147986090113628517",
+        "9145816944513694015",
+        "9145817036413694137"
+      ]
+    },
+    {
+      "id": "9145817036413694137",
+      "name": "Bar Incoming Calls",
+      "barringOrder": 25,
+      "barringGroup": "General",
+      "isbarred": true,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9148574133765183805",
+      "name": "All National Premium Voice Services Prefix (0900, 0901,0902, 0903, 0904, 0905, 0906, 0907, 0909)",
+      "barringOrder": 27,
+      "barringGroup": "Premium Voice",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9148574133765183807",
+      "name": "Adult Content Prefix (0906, 0907)",
+      "barringOrder": 29,
+      "barringGroup": "Premium Voice",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9148574133765183808",
+      "name": "Other Games, Competetion, Logos, Ringtones, Leisure Product And Services Prefix (0905)",
+      "barringOrder": 30,
+      "barringGroup": "Premium Voice",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9148574133765183809",
+      "name": "TV Games Prefix (09051)",
+      "barringOrder": 31,
+      "barringGroup": "Premium Voice",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9145817118313694310",
+      "name": "Bar MMS",
+      "barringOrder": 34,
+      "barringGroup": "General",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149714239965296385",
+      "name": "Entertainment and others (5xxx, 6xxx, 9xxx)",
+      "barringOrder": 35,
+      "barringGroup": "Premium SMS",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149714240065296386",
+      "name": "Adult (7xxx)",
+      "barringOrder": 36,
+      "barringGroup": "Premium SMS",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149714240065296387",
+      "name": "Mpayment (De Lijn, SMS parking, Fundraising) (2xxx, 3xxx, 4xxx)",
+      "barringOrder": 37,
+      "barringGroup": "Premium SMS",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149714240065296388",
+      "name": "Free SMS (8xxx)",
+      "barringOrder": 38,
+      "barringGroup": "Premium SMS",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9145817118313694255",
+      "name": "Mobile Internet (2G,3G,4G)",
+      "barringOrder": 39,
+      "barringGroup": "General",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149841377513787259",
+      "name": "Bar Roaming All",
+      "barringOrder": 40,
+      "barringGroup": "Roaming",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9145816944513694044",
+      "name": "Bar Roaming Incoming Calls",
+      "barringOrder": 41,
+      "barringGroup": "Roaming",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9145816944513694015",
+      "name": "Bar Roaming Outgoing Calls",
+      "barringOrder": 42,
+      "barringGroup": "Roaming",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9147961129713633603",
+      "name": "Bar Roaming Data",
+      "barringOrder": 43,
+      "barringGroup": "Roaming",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9147986090113628517",
+      "name": "Bar International Calls",
+      "barringOrder": 44,
+      "barringGroup": "General",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9149454316765665203",
+      "name": "Direct Operator billing block (PayByMobile)",
+      "barringOrder": 45,
+      "barringGroup": "PayByMobile",
+      "isbarred": false,
+      "fraudManagerSet": false
+    },
+    {
+      "id": "9156330555913040022",
+      "name": "Roaming Data Guard",
+      "barringGroup": "Roaming",
+      "isbarred": false
+    }
+  ]
+}

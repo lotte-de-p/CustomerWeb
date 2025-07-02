@@ -1,0 +1,243 @@
+<tg-sales-customer-registration-title [currentStep]="currentStep | async"></tg-sales-customer-registration-title>
+<div class="mb--xxxg pb--l py--n col-lg-8 col-md-9 col-12 m--auto">
+  @if (error$ | async; as error) {
+    <div class="my--m">
+      <tg-sales-error-message
+        [errorMessage]="'ng.customer-registration.' + error.code + '-errorfield'"></tg-sales-error-message>
+    </div>
+  }
+  <div class="mb--g mb--xxxg--sm">
+    <div class="background-white col-12 m--auto px--xxxl--md px--xl py--m--md py--xxs">
+      <div class="row">
+        <div class="col-sm-12">
+          <form [formGroup]="businessIdentityDetailsForm">
+            @if ((searchCustomerResultExists$ | async) === true) {
+              <tg-sales-error-message-with-login-button
+                (loginEmitter)="doLogin()"
+                [brand]="brand"
+                [attr.data-cy]="'hard-match-error'"
+                [attr.data-testid]="'hard-match-error'"></tg-sales-error-message-with-login-button>
+            }
+            <div class="address-identity-section">
+              <div class="my--xl">
+                <label
+                  class="text--m cursor--default"
+                  for="companyNameField"
+                  [attr.data-cy]="'company-name-field'"
+                  [attr.data-testid]="'company-name-field'">
+                  {{ 'customer-registration.form-company-name-label' | translate }}
+                </label>
+                <div class="form__input-container mb--xl">
+                  <input
+                    type="text"
+                    id="companyNameField"
+                    name="companyNameField"
+                    class="form__input"
+                    formControlName="companyNameField" />
+
+                  @if (
+                    businessIdentityDetailsForm.controls['companyNameField'].touched &&
+                    businessIdentityDetailsForm.controls['companyNameField'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                        {{ 'customer-registration.form-company-name-guidance-error-required' | translate }}
+                      </div>
+                    </div>
+                  } @else if (
+                    businessIdentityDetailsForm.controls['companyNameField'].touched &&
+                    businessIdentityDetailsForm.controls['companyNameField'].errors?.['invalidCompanyName']
+                  ) {
+                    <div class="formErrorInput">
+                      <div
+                        class="text--s mt--xxxs color-notification--error--light text-align--left"
+                        [attr.data-cy]="'company-name-constraint'"
+                        [attr.data-testid]="'company-name-constraint'">
+                        {{ 'customer-registration.company-name-guidance-error-company-name-constraint' | translate }}
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+              <div class="my--xl">
+                <label
+                  class="text--m cursor--default"
+                  for="belgianEnterpriseNumberField"
+                  [attr.data-cy]="'belgian-enterprise-number-field'"
+                  [attr.data-testid]="'belgian-enterprise-number-field'">
+                  {{ 'customer-registration.vat-number-label' | translate }}
+                </label>
+                <div class="form__input-container mb--xl">
+                  <input
+                    type="text"
+                    id="belgianEnterpriseNumberField"
+                    name="belgianEnterpriseNumberField"
+                    class="form__input"
+                    mask="0000.000.000"
+                    [dropSpecialCharacters]="false"
+                    [showMaskTyped]="true"
+                    placeholder="0000.000.000"
+                    formControlName="belgianEnterpriseNumberField"
+                    (blur)="searchCustomerWithBelgianEnterpriseNumber()" />
+
+                  @if (
+                    businessIdentityDetailsForm.controls['belgianEnterpriseNumberField'].touched &&
+                    businessIdentityDetailsForm.controls['belgianEnterpriseNumberField'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                        {{ 'customer-registration.vat-number-guidance-error-required' | translate }}
+                      </div>
+                    </div>
+                  } @else if (
+                    businessIdentityDetailsForm.controls['belgianEnterpriseNumberField'].touched &&
+                    businessIdentityDetailsForm.controls['belgianEnterpriseNumberField'].errors?.['invalidVatNumber']
+                  ) {
+                    <div class="formErrorInput">
+                      <div
+                        class="text--s mt--xxxs color-notification--error--light text-align--left"
+                        [attr.data-cy]="'belgian-enterprise-number-constraint'"
+                        [attr.data-testid]="'belgian-enterprise-number-constraint'">
+                        {{ 'customer-registration.vat-number-guidance-error-enterprise-number-constraint' | translate }}
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+              <div class="my--xl">
+                <div class="form-group position--relative">
+                  <label class="text--m cursor--default" for="legalEntityField">
+                    {{ 'customer-registration.legal-entity-label' | translate }}</label
+                  >
+                  <input
+                    type="text"
+                    class="form__input ellipsis cursor--pointer form__input--valid"
+                    [ngClass]="{ 'form__input--error': !isLegalEntityValid }"
+                    formControlName="legalEntityField"
+                    name="legalEntityField"
+                    [attr.data-cy]="'legal-entity-field'"
+                    [attr.data-testid]="'legal-entity-field'"
+                    id="legalEntityField"
+                    matInput
+                    [matAutocomplete]="auto"
+                    (keyup)="filterResults($event)"
+                    (blur)="validateEnitity($event, true)"
+                    placeholder="{{ 'customer-registration.lbl.legal-entity-placeholder' | translate }}" />
+                  <mat-autocomplete #auto="matAutocomplete">
+                    @for (entity of legalFilteredEntities; track entity) {
+                      <mat-option [value]="entity.name" (click)="validateEnitity(entity.name, false)">{{
+                        entity.name
+                      }}</mat-option>
+                    }
+                  </mat-autocomplete>
+                  @if (
+                    businessIdentityDetailsForm.controls['legalEntityField'].touched &&
+                    businessIdentityDetailsForm.controls['legalEntityField'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                        {{ 'customer-registration.form-legal-entity-guidance-error-required' | translate }}
+                      </div>
+                    </div>
+                  }
+                  @if (
+                    !isLegalEntityValid &&
+                    !businessIdentityDetailsForm.controls['legalEntityField'].errors?.['required']
+                  ) {
+                    <div class="formErrorInput">
+                      <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                        {{ 'customer-registration.legal-entity-guidance-error-invalid' | translate }}
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="pb--m heading--5 heading--nomargin">
+        {{ 'customer-registration.lbl.address-details' | translate }}
+      </div>
+      <div class="pb--xxs">
+        <div>{{ 'customer-registration.lbl.address-info-message' | translate }}</div>
+      </div>
+      <tg-sales-customer-registration-address-form
+        #legalAddress
+        [locationSuggestions]="locationSuggestion$ | async"
+        [streetSuggestions]="streetSuggestion$ | async"
+        (updateStreetsEmitter)="updateStreets($event)"
+        (updateSubHouseEmitter)="updateSubHouse()"
+        [subHouseNoSuggestions]="subHouseNoSuggestions$ | async"
+        [boxNoSuggestions]="boxNoSuggestions$ | async"
+        (updateBoxEmitter)="updateBox()"
+        (saveAddressEmitter)="saveAddressToState($event)"
+        [addressType]="'legalAddress'">
+      </tg-sales-customer-registration-address-form>
+      @if ((isInstallableProductExists$ | async) === true) {
+        <tg-sales-customer-registration-address-toggle
+          (isChecked)="toggleAddressVisibility($event)"
+          [showBillingAddressToggle]="false"
+          [addressType]="'installationAddress'"
+          [showInstallationAddressToggle]="true"
+          [attr.data-cy]="'installation-address-toggle'"
+          [attr.data-testid]="'installation-address-toggle'"></tg-sales-customer-registration-address-toggle>
+        @if (showInstallationAddress) {
+          <div class="mt--xl--md mt--l">
+            <div class="pb--xs heading--5 heading--nomargin">
+              {{ 'customer-registration.lbl.installation-address' | translate }}
+            </div>
+            <div class="pb--m">
+              <div>{{ 'customer-registration.lbl.address-info-message' | translate }}</div>
+            </div>
+            <tg-sales-customer-registration-address-form
+              #installationAddress
+              [locationSuggestions]="locationSuggestion$ | async"
+              [streetSuggestions]="streetSuggestion$ | async"
+              (updateStreetsEmitter)="updateStreets($event)"
+              (updateSubHouseEmitter)="updateSubHouse()"
+              [subHouseNoSuggestions]="subHouseNoSuggestions$ | async"
+              [boxNoSuggestions]="boxNoSuggestions$ | async"
+              (updateBoxEmitter)="updateBox()"
+              (saveAddressEmitter)="saveAddressToState($event)"
+              [addressType]="'installationAddress'">
+            </tg-sales-customer-registration-address-form>
+          </div>
+        }
+      }
+      <tg-sales-customer-registration-address-toggle
+        (isChecked)="toggleAddressVisibility($event)"
+        [showBillingAddressToggle]="true"
+        [addressType]="'billingAddress'"
+        [showInstallationAddressToggle]="false"
+        [attr.data-cy]="'billing-address-toggle'"
+        [attr.data-testid]="'billing-address-toggle'"></tg-sales-customer-registration-address-toggle>
+      @defer (on viewport) {
+        @if (showBillingAddress) {
+          <div class="mt--xl--md mt--l">
+            <div class="pb--xs heading--5 heading--nomargin">
+              {{ 'customer-registration.lbl.billing-address' | translate }}
+            </div>
+            <div class="pb--m">
+              <div>{{ 'customer-registration.lbl.address-info-message' | translate }}</div>
+            </div>
+            <tg-sales-customer-registration-address-form
+              #billingAddress
+              [locationSuggestions]="locationSuggestion$ | async"
+              [streetSuggestions]="streetSuggestion$ | async"
+              (updateStreetsEmitter)="updateStreets($event)"
+              (updateSubHouseEmitter)="updateSubHouse()"
+              [subHouseNoSuggestions]="subHouseNoSuggestions$ | async"
+              [boxNoSuggestions]="boxNoSuggestions$ | async"
+              (updateBoxEmitter)="updateBox()"
+              (saveAddressEmitter)="saveAddressToState($event)"
+              [addressType]="'billingAddress'">
+            </tg-sales-customer-registration-address-form>
+          </div>
+        }
+      } @placeholder {
+        <br />
+      }
+    </div>
+  </div>
+</div>

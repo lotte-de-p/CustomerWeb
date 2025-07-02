@@ -1,0 +1,1 @@
+{"version":3,"file":"step-flow-analytics-config.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/step-flow-analytics-config.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,KAAK,CAAC;AAE3B,MAAM,WAAW,uBAAuB;IACtC,eAAe,EAAE,MAAM,CAAC;IACxB,iBAAiB,EAAE,MAAM,CAAC;IAC1B,IAAI,CAAC,EAAE,IAAI,CAAC;CACb"}

@@ -1,0 +1,12 @@
+export class RegexConstants {
+  static PHONE_NUMBER = /^[\d/.+-]{8,15}$/;
+  static FIXED_PHONE_NUMBER = /^\d{8,9}$/;
+  static NATIONAL_PHONE_NUMBER = /^(0|0032|\+32)\d{8}$/;
+  static NATIONAL_MOBILE_NUMBER = /^(0|0032|\+32)4\d{8}$/;
+  static INTERNATIONAL_PHONE_NUMBER = /^(00|\+)(?!32)\d{7,15}$/;
+  static TELENET_PHONE_NUMBER = /^((0|0032|\+32)4\d{8}|(00|\+)(?!32)\d{7,12})$/;
+  static TELENET_MOBILE_NUMBER = /^(0|0032|\+32)4\d{8}$/;
+  static BASE_PHONE_NUMBER = /^((0|0032|\+32)4\d{8}|(00|\+)(?!32)4\d{8}|4\d{8})$/;
+  static FORMATTED_BASE_PHONE_NUMBER = /^(\d{4} \d{2} \d{2} \d{2})$/;
+  static INTERNATIONAL_NUMBER = /^(\+|00|0)\d{6,14}$/;
+}

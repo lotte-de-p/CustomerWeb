@@ -1,0 +1,1 @@
+{"version":3,"file":"sub-category.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/sub-category.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,yBAAyB,EAAE,MAAM,+BAA+B,CAAC;AAE1E,MAAM,WAAW,oBAAoB;IACnC,IAAI,EAAE,MAAM,CAAC;IACb,aAAa,CAAC,EAAE,MAAM,CAAC;IACvB,gBAAgB,EAAE,yBAAyB,EAAE,CAAC;IAC9C,MAAM,EAAE,MAAM,CAAC;IACf,eAAe,EAAE,OAAO,CAAC;CAC1B"}

@@ -1,0 +1,49 @@
+<ng-container *ngIf="productsDetailsSummaryVM$ | async as summaryVM">
+  <div class="product-finder-result--detail-screen my--xxl--md my--l">
+    <div class="color-white">
+      <div class="container px--m px--n--md">
+        <div class="product-finder-result--detail-screen-contents">
+          <div class="text-flow text-flow--h5 mb--xxxl">{{ summaryVM.title }}</div>
+          <div class="display--flex flex-wrap--wrap justify-content--between">
+            <div
+              *ngIf="summaryVM.internetSpecs.length > 0"
+              class="product-finder-result--detail-screen-content--product background-white_08 mb--l p--xxl--md p--xm">
+              <tg-sales-products-details-summary-item
+                [icon]="'icon icon-wifi-signal'"
+                [title]="'ng.products-details-summary.summary-item-internet-title'"
+                [specs]="summaryVM.internetSpecs">
+              </tg-sales-products-details-summary-item>
+            </div>
+            <div
+              *ngIf="summaryVM.tvSpecs.length > 0"
+              class="product-finder-result--detail-screen-content--product background-white_08 mb--l p--xxl--md p--xm">
+              <tg-sales-products-details-summary-item
+                [icon]="'icon icon-tv'"
+                [title]="'ng.products-details-summary.summary-item-tv-title'"
+                [specs]="summaryVM.tvSpecs">
+              </tg-sales-products-details-summary-item>
+            </div>
+            <div
+              *ngIf="summaryVM.mobileSpecs.length > 0"
+              class="product-finder-result--detail-screen-content--product background-white_08 mb--l p--xxl--md p--xm">
+              <tg-sales-products-details-summary-item
+                [icon]="'icon icon-mobile'"
+                [title]="'ng.products-details-summary.summary-item-mobile-title'"
+                [specs]="summaryVM.mobileSpecs">
+              </tg-sales-products-details-summary-item>
+            </div>
+            <div
+              *ngIf="summaryVM.fixedTelephoneSpecs.length > 0"
+              class="product-finder-result--detail-screen-content--product background-white_08 mb--l p--xxl--md p--xm">
+              <tg-sales-products-details-summary-item
+                [icon]="'icon icon-telephone'"
+                [title]="'ng.products-details-summary.summary-item-fixed-telephone-title'"
+                [specs]="summaryVM.fixedTelephoneSpecs">
+              </tg-sales-products-details-summary-item>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

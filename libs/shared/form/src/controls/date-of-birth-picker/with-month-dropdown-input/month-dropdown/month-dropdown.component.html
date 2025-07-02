@@ -1,0 +1,36 @@
+<div class="form-group position--relative">
+  <div class="select-dropdown-section default">
+    <div class="form-control select-dropdown p--n">
+      <input type="hidden" readonly [(ngModel)]="value" />
+      <input
+        id="{{ key }}"
+        type="text"
+        class="Form__input form-control cursor--pointer"
+        name="{{ key }}"
+        [value]="optionLabel"
+        [disabled]="disabled"
+        [placeholder]="showPlaceHolder ? ('ng.dob.lbl.select-month-placeholder' | translate) : ''"
+        [class.ng-invalid-custom]="error"
+        (focusout)="focusOut()"
+        (click)="toggle()"
+        readonly
+        required />
+      <div
+        class="icon position--absolute text--m text-weight--g"
+        [ngClass]="shouldShowDropdown ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+    </div>
+  </div>
+  <div *ngIf="shouldShowDropdown" class="select-dropdown__options position--absolute width--full">
+    <ul class="select-dropdown__options__content pl--n m--n position--relative">
+      <li
+        *ngFor="let option of optionList"
+        (mousedown)="selectOptionValue(option)"
+        class="select-dropdown__options__list cursor---pointer">
+        {{ option.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="formErrorInput Form__input__invalid-message" *ngIf="error">
+    {{ 'ng.dob.error-month-required' | translate }}
+  </div>
+</div>

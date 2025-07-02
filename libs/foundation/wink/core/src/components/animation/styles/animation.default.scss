@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .controls {
+    width: 100%;
+    position: absolute;
+    bottom: var-rem(--semantic-spacing-md);
+    display: flex;
+    gap: var-rem(--semantic-spacing-xl);
+    justify-content: center;
+    align-items: center;
+  }
+}

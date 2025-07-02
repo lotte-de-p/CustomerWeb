@@ -1,0 +1,13 @@
+<div class="header-accordion heading--5 cursor--pointer user-select--none p--l m--n" (click)="handleClick()">
+  <div class="header-accordion--title">
+    <div class="header-accordion--title__text">
+      {{ title }}
+    </div>
+  </div>
+  <div class="header-accordion--link display--flex align-items--center">
+    <i
+      class="icon icon-sm transition--all-3ms"
+      [ngClass]="isPanelCollapsed ? 'icon-chevron-down' : 'icon-chevron-up'"
+      [class.rotate--180]="rotateChevron"></i>
+  </div>
+</div>

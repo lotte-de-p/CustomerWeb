@@ -1,0 +1,16 @@
+{
+  "extends": ["../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "no-return-assign": "off",
+        "prefer-const": "warn",
+        "no-restricted-syntax": "warn",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/ban-types": "warn"
+      }
+    }
+  ]
+}

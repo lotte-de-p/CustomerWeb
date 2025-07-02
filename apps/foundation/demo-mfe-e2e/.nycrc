@@ -1,0 +1,30 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "json",
+    "cobertura",
+    "html-spa",
+    "html",
+    "text"
+  ],
+  "check-coverage": true,
+  "exclude": [
+          "../../../**/*.spec.ts",
+          "../../../**/dist/**",
+          "../../../**/*.json",
+          "../../../**/*.mock.ts"
+        ],
+  "include": [
+    "../demo-mfe/**",
+    "../demo-mfe-e2e/**",
+    "../../../libs/foundation/demo/**"
+  ],
+  "report-dir": "../../../coverage/apps/foundation/demo-mfe-e2e",
+  "cwd": "../../../"
+}

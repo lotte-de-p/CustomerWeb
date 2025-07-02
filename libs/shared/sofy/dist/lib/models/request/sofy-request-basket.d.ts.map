@@ -1,0 +1,1 @@
+{"version":3,"file":"sofy-request-basket.d.ts","sourceRoot":"","sources":["../../../../src/lib/models/request/sofy-request-basket.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,wBAAwB,CAAC;AAE5D,MAAM,WAAW,iBAAiB;IAChC,QAAQ,CAAC,EAAE,kBAAkB,EAAE,CAAC;IAChC,iBAAiB,CAAC,EAAE,kBAAkB,EAAE,CAAC;IACzC,YAAY,CAAC,EAAE,MAAM,CAAC;CACvB"}

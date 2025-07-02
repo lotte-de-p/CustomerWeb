@@ -1,0 +1,190 @@
+{
+  "name": "return-devices-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "tg-return-devices",
+  "sourceRoot": "apps/install/return-devices-mfe/src",
+  "tags": ["type:app", "scope:return-devices-mfe"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/install/return-devices-mfe",
+        "index": "apps/install/return-devices-mfe/src/index.html",
+        "main": "apps/install/return-devices-mfe/src/main.ts",
+        "polyfills": ["apps/install/return-devices-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/install/return-devices-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/install/return-devices-mfe/src/version.json",
+          "apps/install/return-devices-mfe/src/favicon.ico",
+          "apps/install/return-devices-mfe/src/assets"
+        ],
+        "styles": ["apps/install/return-devices-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/install/return-devices-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4mb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/install/return-devices-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/install/return-devices-mfe/src/version.json",
+            "apps/install/return-devices-mfe/src/favicon.ico",
+            "apps/install/return-devices-mfe/src/assets",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "buildOptimizer": false,
+          "optimization": false,
+          "customWebpackConfig": {
+            "path": "apps/install/return-devices-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "return-devices-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "return-devices-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4209,
+        "publicHost": "http://localhost:4209"
+      }
+    },
+    "serve-ssl": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "return-devices-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "return-devices-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200,
+        "host": "local.telenet.be",
+        "buildTarget": "return-devices-mfe:build",
+        "ssl": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "return-devices-mfe:build",
+        "extraWebpackConfig": "apps/install/return-devices-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/install/return-devices-mfe/src/**/*.{ts,js,html}"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/install/return-devices-mfe/.storybook",
+        "browserTarget": "return-devices-mfe:build",
+        "compodoc": false,
+        "assets": [
+          "apps/install/return-devices-mfe/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/pdfjs-dist/build",
+            "output": "assets/"
+          }
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/install/return-devices-mfe/.storybook",
+        "browserTarget": "return-devices-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/install/return-devices-mfe/src/styles.scss"],
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/return-devices-mfe",
+        "configDir": "apps/install/return-devices-mfe/.storybook",
+        "browserTarget": "return-devices-mfe:build",
+        "compodoc": false,
+        "styles": ["apps/install/return-devices-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

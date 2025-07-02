@@ -1,0 +1,11 @@
+{
+  "model": {
+    "newOrExistingNumber": "new",
+    "phoneNumber": "",
+    "publishPhoneBook": false,
+    "telenetOperator": false
+  },
+  "dirty": false,
+  "status": "",
+  "errors": {}
+}

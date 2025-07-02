@@ -1,0 +1,14 @@
+@function size($size, $mapSource: $sizes-map) {
+  @return map-get($mapSource, $size) * 1rem;
+}
+
+@function var-rem($size-tokens, $fallback-size-tokens: null) {
+  @if $fallback-size-tokens != null {
+    @if type-of($fallback-size-tokens) == 'number' {
+      @return calc(var($size-tokens, $fallback-size-tokens) * 1rem);
+    }
+    @return calc(var($size-tokens, #{var($fallback-size-tokens)}) * 1rem);
+  }
+
+  @return calc(var($size-tokens) * 1rem);
+}

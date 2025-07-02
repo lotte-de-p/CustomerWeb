@@ -1,0 +1,8 @@
+<div
+  [attr.data-cy]="'service-case-status'"
+  class="display--inline-flex gap--s align-items--center background-shade_12 border-radius--all--xxs py--xxxs px--xxs">
+  <span
+    style="height: 10px; width: 10px; border-radius: 50%; display: block"
+    [ngClass]="status === 'OPEN' ? 'background-notification--success--light' : 'background-white_32'"></span>
+  <span class="text--s">{{ 'ng.service-cases.item.status.' + status | translate }}</span>
+</div>

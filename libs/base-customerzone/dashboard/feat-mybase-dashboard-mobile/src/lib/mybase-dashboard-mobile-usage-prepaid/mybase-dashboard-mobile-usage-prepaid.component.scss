@@ -1,0 +1,12 @@
+:host {
+  height: 100%;
+  display: block;
+}
+
+.mybase-dashboard--card {
+  &:hover {
+    .icon.icon-chevron-right {
+      color: #00807b; // color('brand-primary');
+    }
+  }
+}

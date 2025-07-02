@@ -1,0 +1,199 @@
+{
+  "status": "Entering",
+  "customerId": "9158437347613404263",
+  "id": "9166671059613918354",
+  "name": "Order #0038929698",
+  "prices": {
+    "taxInclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "37,51",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "37,51",
+      "upfrontTotal": "0,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "31,00",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "31,00",
+      "upfrontTotal": "0,00"
+    }
+  },
+  "lineItems": [
+    {
+      "type": "Modify Product",
+      "productIdentifier": "0498341490",
+      "orderItems": [
+        {
+          "id": "9166671055213918454",
+          "name": "Mobile 1 / 0498341490",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "2,42",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "2,42",
+              "upfrontTotal": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "2,00",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "2,00",
+              "upfrontTotal": "0,00"
+            }
+          },
+          "locationId": "9158437342713404263",
+          "parentId": "9166671059613918354",
+          "specurl": "http://localhost:10081/omapi/public/product/BFLE0001",
+          "orderItems": [
+            {
+              "id": "9166671053313918454",
+              "name": "Voice Europe plus 180 min",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "9,68",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "9,68",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "8,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "8,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9158437342713404263",
+              "parentId": "9166671055213918454",
+              "specurl": "http://localhost:10081/omapi/public/product/VOEF0180",
+              "orderItems": [],
+              "status": "ADDED",
+              "chars": {},
+              "discountItems": {},
+              "isMigratedFromStandalone": false,
+              "prepaidProduct": false
+            },
+            {
+              "id": "9166671057313918454",
+              "name": "Data National 1 GB",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "6,05",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "6,05",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "5,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "5,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9158437342713404263",
+              "parentId": "9166671055213918454",
+              "specurl": "http://localhost:10081/omapi/public/product/FDNS0001",
+              "orderItems": [],
+              "status": "ADDED",
+              "chars": {},
+              "discountItems": {},
+              "isMigratedFromStandalone": false,
+              "prepaidProduct": false
+            },
+            {
+              "id": "9166671052313919064",
+              "name": "Voice Europe plus 400 min",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "19,36",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "19,36",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "16,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "16,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9158437342713404263",
+              "parentId": "9166671055213918454",
+              "specurl": "http://localhost:10081/omapi/public/product/FLOB0005",
+              "orderItems": [],
+              "status": "ADD",
+              "chars": {},
+              "discountItems": {},
+              "isMigratedFromStandalone": false,
+              "prepaidProduct": false
+            }
+          ],
+          "status": "ADDED",
+          "billingAccountId": "9158437591813165746",
+          "productIdentifier": "0498341490",
+          "billingAddressId": "9150758002313655069",
+          "chars": {
+            "phoneNumber": "0498341490",
+            "referenceInformation": "test"
+          },
+          "discountItems": {},
+          "prepaidProduct": false
+        }
+      ]
+    }
+  ],
+  "lineCount": 0,
+  "token": "72eb5f53-770d-49d5-904e-984e0c0cba44",
+  "pricesWereUpdated": false,
+  "manualAddress": false,
+  "manualProcessingRequired": false,
+  "feasibilityCheckRequired": false,
+  "modemSwapReq": false
+}

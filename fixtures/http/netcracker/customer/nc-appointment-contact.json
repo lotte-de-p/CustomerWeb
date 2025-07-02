@@ -1,0 +1,17 @@
+{
+  "contactInfo": {
+    "contactName": "Test User",
+    "language": "EN",
+    "preferredContactMethod": "SMS",
+    "contactMethods": [
+      {
+        "type": "SMS",
+        "phone1": "0412345678"
+      },
+      {
+        "type": "Email",
+        "email": "hello@world.com"
+      }
+    ]
+  }
+}

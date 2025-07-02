@@ -1,0 +1,20 @@
+{
+  "name": "address-checker-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/activate/address-checker/data-access/src",
+  "prefix": "",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/activate/address-checker/data-access/**/*.ts",
+          "libs/activate/address-checker/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:address-checker", "scope:address-checker-mfe"]
+}

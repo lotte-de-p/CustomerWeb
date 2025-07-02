@@ -1,0 +1,23 @@
+:host {
+  display: block;
+
+  .not-clickable {
+    pointer-events: none;
+  }
+
+  a {
+    display: block;
+
+    &:focus,
+    &:focus-visible {
+      @include state-focus-outline;
+    }
+  }
+
+  picture img {
+    display: block;
+    max-width: rem(8);
+    width: var(--wink-logo-width, 100%);
+    height: auto;
+  }
+}

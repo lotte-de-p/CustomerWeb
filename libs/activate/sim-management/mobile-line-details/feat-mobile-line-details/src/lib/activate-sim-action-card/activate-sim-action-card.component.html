@@ -1,0 +1,20 @@
+<div class="background-white p--xl mb--l">
+  <div class="display--flex justify-content--between">
+    <div class="heading--4 my--n">
+      {{ 'ng.sim-management.lbl.sim-ready-for-activation' | translate }}
+    </div>
+    <div>
+      <button
+        class="button button--primary"
+        data-testid="sim-management-activate-sim-button"
+        (click)="onActivateSimClick()">
+        <span>{{ 'ng.sim-management.btn.activate-sim' | translate }}</span>
+      </button>
+    </div>
+  </div>
+  <div class="font--body-small color-shade_64">
+    <div>
+      {{ 'ng.sim-management.txt.activate-sim-description' | translate }}
+    </div>
+  </div>
+</div>

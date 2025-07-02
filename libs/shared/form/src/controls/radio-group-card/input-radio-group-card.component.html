@@ -1,0 +1,69 @@
+<div class="group-cards-input">
+  <div class="group group--square group--square__small" data-id="choice">
+    <div *ngIf="customLabel && !toHideError()">
+      <div class="text-flow text-flow--h2 section__title" [class.form__label--error]="error">
+        {{ getLabel() | translate }}
+      </div>
+      <div class="whitespace whitespace--small"></div>
+    </div>
+    <div class="cards">
+      <ng-container *ngFor="let option of optionList; let i = index">
+        <div class="cards-slot">
+          <input
+            type="radio"
+            name="choice-{{ key }}"
+            value="{{ option.value }}"
+            id="choice-{{ i }}-{{ key }}"
+            class="cards-radio"
+            [checked]="selectedOption && option.value === selectedOption.value" />
+          <div class="cards--append cards--container cursor--pointer selected">
+            <div class="cards--body">
+              <div class="cards--body--inner-container">
+                <label for="choice-{{ i }}-{{ key }}" class="cards-radio__label" (click)="selectOption(option)"></label>
+                <div class="cards-content__header">
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="cards-content__image" [inlineSVG]="option.imagePath"></div>
+                <div class="cards-content__body">
+                  <div
+                    class="text-flow text-flow--button cards-content__body-label"
+                    [innerHTML]="getOptionLabel(option) | translate"></div>
+                  <span
+                    *ngIf="option.price > 0 && isModemInstallType"
+                    [ngClass]="{ 'text-strikethrough': option.isPromo }"
+                    class="text-flow--detail"
+                    >{{ getLabelValue('installType-price') | translate: { price: option.price | price } }}
+                    <span *ngIf="!option.isPromo && isBusiness">{{
+                      getLabelValue('business-price-symbol') | translate
+                    }}</span>
+                  </span>
+                  <span
+                    *ngIf="option.priceAfterPromo > 0 && isModemInstallType && option.isPromo"
+                    class="text-uppercase"
+                    >{{
+                      getLabelValue('installType-priceAfterPromo')
+                        | translate: { priceAfterPromo: option.priceAfterPromo | price }
+                    }}
+                    <span *ngIf="isBusiness">{{ getLabelValue('business-price-symbol') | translate }}</span>
+                  </span>
+                  <span
+                    *ngIf="option.priceAfterPromo === 0 && option.isPromo && isModemInstallType"
+                    class="text-uppercase"
+                    >{{ getLabelValue('gratis') | translate }}</span
+                  >
+                </div>
+                <div class="cover" *ngIf="option.isPromo && isModemInstallType">
+                  <div class="promo-highlight promo-highlight--primary-color promo-highlight--mini">
+                    <div class="promo-highlight__first-row">
+                      <span class="promo-highlight__first-row--text">{{ getLabelValue('promo') | translate }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

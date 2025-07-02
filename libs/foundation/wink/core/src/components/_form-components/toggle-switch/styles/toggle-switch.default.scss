@@ -1,0 +1,132 @@
+:host {
+  display: flex;
+  align-items: center;
+  &.toggle-switch--spacebetween {
+    justify-content: space-between;
+  }
+
+  .toggle-switch--label {
+    display: inline-block;
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+    margin: 0 var-rem(--semantic-spacing-xs) 0 0;
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+    color: var(--semantic-color-text-default);
+  }
+
+  .toggle-switch--wrapper {
+    position: relative;
+  }
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: rem(-999.9);
+    width: rem(5.2);
+    height: rem(3.2);
+    background: var(--semantic-color-background-form-default-default);
+    display: block;
+    border-radius: rem(2);
+    position: relative;
+    margin-top: rem(-1.4);
+  }
+  label:before {
+    content: '';
+    position: absolute;
+    top: rem(-0.4);
+    left: rem(-0.4);
+    width: rem(6);
+    height: rem(4);
+    cursor: pointer;
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: rem(0.4);
+    left: rem(0.4);
+    width: rem(2.4);
+    height: rem(2.4);
+    background: var(--semantic-color-background-surface-highlight-8);
+    border-radius: rem(9);
+    transition: 0.3s;
+  }
+  .toggle-switch--icon:hover ~ label,
+  label:hover {
+    background: var(--semantic-color-background-form-default-hovered);
+  }
+  .toggle-switch--icon:hover {
+    cursor: pointer;
+  }
+
+  .toggle-switch--icon:hover ~ label:after,
+  label:hover:after {
+    box-shadow: 0 0 0 rem(0.8) var(--semantic-color-background-surface-subtle-hovered);
+  }
+
+  input[type='checkbox']:focus ~ label {
+    outline: rem(0.2) solid var(--semantic-color-border-focus);
+    outline-offset: rem(0.2);
+  }
+
+  input:checked ~ label {
+    background: var(--semantic-color-background-form-selected-selected);
+  }
+  input:checked ~ .toggle-switch--icon:hover ~ label,
+  input:checked ~ label:hover {
+    background: var(--semantic-color-background-surface-action-hover);
+  }
+  input:checked ~ .toggle-switch--icon:hover ~ label:after,
+  input:checked ~ label:after {
+    left: calc(100% - #{rem(0.5)});
+    transform: translateX(-100%);
+  }
+  .toggle-switch--icon:active ~ label:after,
+  label:active:after {
+    width: rem(2.6);
+  }
+
+  .toggle-switch--icon wink-icon {
+    --wink-icon-color: var(--semantic-color-icon-on-action);
+    position: absolute;
+    border-radius: 100%;
+    z-index: 3;
+    top: rem(0.75);
+    transition: 0.2s all;
+    &:nth-child(1) {
+      left: rem(0.75);
+      opacity: 1;
+    }
+    &:nth-child(2) {
+      left: rem(0.75);
+      opacity: 0;
+    }
+  }
+
+  input:checked ~ .toggle-switch--icon wink-icon {
+    z-index: 3;
+    transition: 0.2s all;
+    &:nth-child(1) {
+      opacity: 0;
+      left: rem(2.7);
+    }
+    &:nth-child(2) {
+      opacity: 1;
+      left: rem(2.7);
+    }
+  }
+
+  input[type='checkbox']:disabled,
+  input[type='checkbox']:disabled ~ *,
+  input[type='checkbox']:disabled ~ label:before,
+  .toggle-switch--label--disabled {
+    opacity: calc(#{var(--semantic-opacity-disabled)} / 10);
+    cursor: not-allowed;
+  }
+}

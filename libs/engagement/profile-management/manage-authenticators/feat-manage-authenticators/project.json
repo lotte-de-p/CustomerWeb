@@ -1,0 +1,15 @@
+{
+  "name": "feat-manage-authenticators",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/engagement/profile-management/manage-authenticators/feat-manage-authenticators/src",
+  "projectType": "library",
+  "prefix": "lib",
+  "tags": [
+    "type:feature",
+    "scope:profile-management",
+    "scope:profile-management-mfe",
+    "scope:profile-management-manage-authenticators",
+    "scope:profile-management-manage-authenticators-feat-manage-authenticators"
+  ],
+  "targets": {}
+}

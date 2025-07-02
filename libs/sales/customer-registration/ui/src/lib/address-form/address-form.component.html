@@ -1,0 +1,153 @@
+<form action="" [formGroup]="addressForm" autocomplete="off" messageGroup="address">
+  <div class="row mb--xl--md mb--l">
+    <div class="col-sm-12 form-group">
+      <label class="cursor--default">{{ 'ng.address.lbl.zip-code' | translate }}</label>
+      <input
+        type="text"
+        class="form__input"
+        formControlName="zipCode"
+        [matAutocomplete]="zipCodeList"
+        #zipCode
+        [attr.data-cy]="'zip-code'"
+        [attr.data-testid]="'zip-code'"
+        (blur)="isValidInput('zipCode', zipCode.value)" />
+      <mat-autocomplete #zipCodeList="matAutocomplete" [autoActiveFirstOption]="true" [displayWith]="displayFunction">
+        @for (location of filteredLocationSuggestions; track location) {
+          <mat-option [value]="location"> {{ location.postalCode }} - {{ location.location }} </mat-option>
+        }
+      </mat-autocomplete>
+      @if (
+        addressForm.controls['zipCode'].errors &&
+        addressForm.controls['zipCode'].touched &&
+        addressForm.controls['zipCode'].hasError('required')
+      ) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.error.zipCode.required' | translate }}
+        </div>
+      }
+      @if (addressForm.controls['zipCode'].hasError('invalid')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.error.zipCode.invalid' | translate }}
+        </div>
+      }
+    </div>
+  </div>
+  <div class="row mb--xl--md mb--l">
+    <div class="col-sm-12 form-group">
+      <label class="cursor--default">{{ 'ng.address.lbl.street' | translate }}</label>
+      <div [ngClass]="{ 'disabled-state': addressForm.controls['street'].disabled }">
+        <input
+          class="form__input"
+          formControlName="street"
+          [matAutocomplete]="streetList"
+          placeholder="{{ 'ng.address.form-street-placeholder-label' | translate }}"
+          #streetName
+          [attr.data-cy]="'street'"
+          [attr.data-testid]="'street'"
+          (blur)="isValidInput('street', streetName.value)" />
+        <mat-autocomplete #streetList="matAutocomplete">
+          @for (street of filteredStreetSuggestions; track street) {
+            <mat-option [value]="street">
+              {{ street }}
+            </mat-option>
+          }
+        </mat-autocomplete>
+      </div>
+      @if (addressForm.controls['street'].touched && addressForm.controls['street'].hasError('required')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.error.street.required' | translate }}
+        </div>
+      }
+
+      @if (addressForm.controls['street'].hasError('invalid')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.error.street.invalid' | translate }}
+        </div>
+      }
+    </div>
+  </div>
+  <div class="row mb--xs--md mb--xxxs">
+    <div class="col-sm-6 form-group">
+      <label class="cursor--default">{{ 'ng.address.lbl.house-number' | translate }}</label>
+      <div [ngClass]="{ 'disabled-state': addressForm.controls['houseNumber'].disabled }">
+        <input
+          class="form__input"
+          [attr.data-cy]="'houseNumber'"
+          [attr.data-testid]="'houseNumber'"
+          formControlName="houseNumber"
+          placeholder="{{ 'ng.address.form-house-number-placeholder-label' | translate }}"
+          #house
+          (blur)="updateAddress('houseNumber')" />
+      </div>
+      @if (addressForm.controls['houseNumber'].touched && addressForm.controls['houseNumber'].hasError('required')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.error.houseNumber.required' | translate }}
+        </div>
+      }
+
+      @if (
+        addressForm.controls['houseNumber'].hasError('pattern') ||
+        addressForm.controls['houseNumber'].hasError('invalid')
+      ) {
+        <div class="formErrorInput text-align--left">
+          <div>{{ 'ng.address.houseNumber-pattern.error' | translate }}</div>
+        </div>
+      }
+    </div>
+    <div class="col-sm-6 form-group">
+      <div class="font--caption cursor--default my--xxxs">{{ 'ng.address.lbl.sub-house' | translate }}</div>
+      <div [ngClass]="{ 'disabled-state': addressForm.controls['subHouse'].disabled }">
+        <input
+          class="form__input"
+          formControlName="subHouse"
+          [matAutocomplete]="subHouseList"
+          placeholder="{{ 'ng.address.form-sub-house-placeholder-label' | translate }}"
+          #subHouse
+          (blur)="updateAddress('subHouse')" />
+        <mat-autocomplete #subHouseList="matAutocomplete">
+          @for (subhousenr of subHouseNoSuggestions; track subhousenr) {
+            <mat-option [value]="subhousenr">
+              {{ subhousenr }}
+            </mat-option>
+          }
+        </mat-autocomplete>
+      </div>
+      @if (
+        addressForm.controls['subHouse'].hasError('pattern') || addressForm.controls['subHouse'].hasError('invalid')
+      ) {
+        <div class="formErrorInput text-align--left">
+          <div>{{ 'ng.address.subHouse-pattern.error' | translate }}</div>
+        </div>
+      }
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label class="cursor--default">{{ 'ng.address.lbl.box-number' | translate }}</label>
+      <div [ngClass]="{ 'disabled-state': addressForm.controls['boxNumber'].disabled }">
+        <input
+          class="form__input"
+          autocomplete="off"
+          formControlName="boxNumber"
+          [matAutocomplete]="boxList"
+          placeholder="{{ 'ng.address.form-box-number-placeholder-label' | translate }}"
+          #boxNumber
+          (blur)="updateAddress('boxNumber')" />
+        <mat-autocomplete #boxList="matAutocomplete" [autoActiveFirstOption]="true">
+          @for (boxNo of boxNoSuggestions; track boxNo) {
+            <mat-option [value]="boxNo">
+              {{ boxNo }}
+            </mat-option>
+          }
+        </mat-autocomplete>
+      </div>
+      @if (
+        addressForm.controls['boxNumber'].hasError('pattern') || addressForm.controls['boxNumber'].hasError('invalid')
+      ) {
+        <div class="formErrorInput text-align--left">
+          <div>{{ 'ng.address.boxNumber-pattern.error' | translate }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</form>

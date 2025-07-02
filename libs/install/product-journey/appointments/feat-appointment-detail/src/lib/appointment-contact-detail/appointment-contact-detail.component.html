@@ -1,0 +1,55 @@
+<div [hidden]="!appointment" class="pt--g--md pt--xl">
+  <div>
+    <h4 class="m-0 pb--m">{{ 'ng.appointments.contact.lbl.contact-details' | translate }}</h4>
+    <div
+      *ngIf="!showEditContactForm && !showEditContactDetail && appointment?.customer"
+      class="background-white appointment-contact p--xl--md p--m">
+      <div class="cards--body">
+        <div class="cards--body--inner-container">
+          <div id="appointment-contact-details">
+            <div class="col-sm-12 appointment-contact__details px--n">
+              <div class="appointment-contact__details--section display--flex justify-content--between flex-wrap--wrap">
+                <div class="col-sm-12 px--n">
+                  <h5 data-cs-mask [attr.data-cy]="'contact-name'">
+                    {{ appointment?.customer?.contactName }}
+                  </h5>
+                  <p data-cs-mask [attr.data-cy]="'contact-value'" class="font--body-regular m-0">
+                    {{ appointment?.customer?.notificationContact | phoneNumber }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p
+              class="pt--xs"
+              *ngIf="appointment?.isUpcomingAppointment && !appointment?.isScheduledAppointment && isMaster">
+              <a
+                [attr.data-cy]="'update-contact-detail'"
+                class="link link--default font--body-regular-bold"
+                href="javascript:void(0)"
+                (click)="setEditContactFlag()"
+                [clickPushToAnalytics]="{
+                  attributeName: 'change contact details',
+                  eventName: DatalayerEventNames.LINK_CLICKED,
+                  messageGroupName: messageGroupName
+                }"
+                >{{ 'ng.appointments.contact.update-btn' | translate }}</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="(showEditContactForm || showEditContactDetail) && isMaster"
+      class="appointment-contact background-white p--xl--md p--m">
+      <h5 class="m-0 pb--m--md pb--xs">
+        {{ 'ng.appointments.edit-contact-details.lbl' | translate }}
+      </h5>
+      <tg-contact-detail-form
+        [appointment]="appointment"
+        [showEditContactDetail]="showEditContactDetail"
+        (showEditContactForm)="setEditContactFlag($event)">
+      </tg-contact-detail-form>
+    </div>
+  </div>
+</div>

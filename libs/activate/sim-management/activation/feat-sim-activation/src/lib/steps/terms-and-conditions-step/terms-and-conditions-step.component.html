@@ -1,0 +1,41 @@
+<tg-activate-sim-management-activation-ui-step-container
+  data-testid="sim-terms-and-conditions"
+  [title]="'ng.e-sim-activation.title.terms-and-conditions.eSales'"
+  [description]="
+    activationParams.type === ActivationType.E_SIM
+      ? 'ng.e-sim-activation.porting.txt.terms-and-conditions'
+      : 'ng.e-sim-activation.sim-swap.txt.terms-and-conditions'
+  "
+  progress="100"
+  [submitLabel]="
+    activationParams.type === ActivationType.E_SIM
+      ? 'ng.e-sim-activation.btn.activate'
+      : 'ng.e-sim-activation.btn.activate-sim'
+  "
+  (backClick)="onBackClick()"
+  (submitClick)="onSubmitClick()">
+  <ng-container left-content>
+    <div class="col-6 hide-until-sm text-align--center">
+      <img
+        [tgActivateSimManagementImageSrcInterceptor]="imagePath"
+        src="/assets/mobile-secure.svg"
+        [moduleId]="SimManagementComponentId.SIM_MANAGEMENT_SIM_ACTIVATION" />
+    </div>
+  </ng-container>
+  <ng-container content>
+    <div class="background-white p--xxl">
+      @if (actionResultMessage$ | async; as message) {
+        <tg-activate-sim-management-ui-notification [message]="message"></tg-activate-sim-management-ui-notification>
+      }
+
+      <p
+        [innerHTML]="
+          activationParams.type !== ActivationType.E_SIM
+            ? isTelenetCustomer
+              ? ('ng.e-sim-activation.text.terms-and-conditions-accept-telenet' | translate)
+              : ('ng.e-sim-activation.text.terms-and-conditions-accept-base' | translate)
+            : ('ng.e-sim-activation.porting.txt.terms-and-conditions' | translate)
+        "></p>
+    </div>
+  </ng-container>
+</tg-activate-sim-management-activation-ui-step-container>

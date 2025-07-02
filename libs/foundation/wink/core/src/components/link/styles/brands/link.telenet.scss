@@ -1,0 +1,18 @@
+@import '../vars/vars.telenet';
+@import '../link.default';
+
+:host {
+  .link {
+    &.font-body-regular #link-content {
+      @include font-body-regular;
+    }
+
+    &.font-body-small #link-content {
+      @include font-body-small;
+    }
+
+    &.font-caption-bold #link-content {
+      @include font-caption-bold;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "mobileusagehistories": [
+    {
+      "mobile": "0468551298",
+      "histories": [
+        {
+          "type": "VOICE",
+          "label": "Mobile Voice",
+          "usedunits": 1200,
+          "unittype": "SECONDS",
+          "priceunit": "EUR",
+          "price": 11.57,
+          "destination": "00336765434567",
+          "datetime": "2022-04-23T16:59:00+02:00",
+          "isPremium": false
+        },
+        {
+          "type": "TEXT",
+          "label": "SMS",
+          "usedunits": 1,
+          "unittype": "NUMBER",
+          "priceunit": "EUR",
+          "price": 0.0,
+          "destination": "32483333333",
+          "datetime": "2022-04-23T16:59:04+02:00",
+          "isPremium": false
+        },
+        {
+          "type": "DATA",
+          "label": "Mobile Data",
+          "usedunits": 214753280,
+          "unittype": "BYTES",
+          "priceunit": "EUR",
+          "price": 0.0,
+          "datetime": "2022-05-10T09:33:00+02:00",
+          "isPremium": false
+        },
+        {
+          "type": "PAY_BY_MOBILE",
+          "label": "Mobile Direct Operator Billing",
+          "usedunits": 1,
+          "unittype": "NUMBER",
+          "priceunit": "EUR",
+          "price": 1.0,
+          "destination": "W-PENTHOUSE-N-S",
+          "datetime": "2022-06-17T00:05:01+02:00",
+          "isPremium": true
+        }
+      ]
+    }
+  ]
+}

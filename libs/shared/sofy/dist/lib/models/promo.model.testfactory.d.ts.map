@@ -1,0 +1,1 @@
+{"version":3,"file":"promo.model.testfactory.d.ts","sourceRoot":"","sources":["../../../src/lib/models/promo.model.testfactory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,eAAe,CAAC;AAE3C,OAAO,EAAE,YAAY,EAAE,MAAM,mCAAmC,CAAC;AAEjE,qBAAa,qBAAqB;IAChC,MAAM,CAAC,KAAK,CAAC,UAAU,CAAC,EAAE,YAAY,GAAG,UAAU;CAwBpD"}

@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  wink-form-label {
+    margin-bottom: var-rem(--semantic-spacing-3xs);
+  }
+  .select-wrapper {
+    --wink-icon-bg-color: transparent;
+    position: relative;
+    width: 100%;
+    wink-icon {
+      position: absolute;
+      top: var-rem(--semantic-spacing-2xs);
+      right: var-rem(--semantic-spacing-2xs);
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+  select {
+    background-color: transparent;
+    appearance: none;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: var-rem(--semantic-spacing-sm) var-rem(--semantic-spacing-sm);
+    border-radius: 0;
+    border-width: var-rem(--semantic-border-md);
+    border-style: solid;
+    border-color: var(--semantic-color-border-bold);
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--semantic-color-text-default);
+    &.placeholder {
+      color: var(--semantic-color-text-subtle);
+    }
+    &:hover {
+      border-color: var(--semantic-color-border-highlight);
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline-offset: rem(0.2);
+      outline: var-rem(--semantic-border-md) solid var(--semantic-color-border-focus);
+      border-color: var(--semantic-color-border-highlight);
+    }
+
+    &.invalid {
+      border-color: var(--semantic-color-border-error);
+    }
+  }
+}
+:host .label-disabled,
+:host select:disabled,
+:host select:disabled + wink-icon {
+  opacity: calc(var(--semantic-opacity-disabled) / 10);
+  cursor: not-allowed;
+}
+
+:host select:disabled {
+  border-color: var(--semantic-color-border-bold);
+  background-color: var(--semantic-color-background-surface-bold-default);
+}

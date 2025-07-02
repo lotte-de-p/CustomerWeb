@@ -1,0 +1,7 @@
+<div>
+  <span>{{ address.street }} {{ address.houseNumber }}</span>
+  <span *ngIf="address.subHouseNumber"> {{ address.subHouseNumber }}</span>
+  <span *ngIf="address.box">
+    <span> {{ 'ng.product-price-changes.address.box' | translate }}</span> {{ address.box }}</span
+  >, {{ address.postalCode }} {{ address.city }}
+</div>

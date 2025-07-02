@@ -1,0 +1,28 @@
+{
+  "name": "@telenet/ng-lib-datalayer",
+  "version": "1.0.0",
+  "publishConfig": {
+    "directory": "./dist"
+  },
+  "gitHead": "f2d8311acc11fe6f11ba65df8706122bf853e891",
+  "module": "fesm2022/telenet-ng-lib-datalayer.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/telenet-ng-lib-datalayer.mjs",
+      "esm": "./esm2022/telenet-ng-lib-datalayer.mjs",
+      "default": "./fesm2022/telenet-ng-lib-datalayer.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}

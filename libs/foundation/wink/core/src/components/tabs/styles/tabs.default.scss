@@ -1,0 +1,192 @@
+:host {
+  display: contents;
+}
+
+:host .tabs {
+  color: var(--semantic-color-text-default);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .tab-header {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    .tab-list {
+      min-width: 100%;
+      display: inline-flex;
+
+      .tab,
+      .tab:focus,
+      .tab:hover {
+        all: unset;
+        cursor: pointer;
+        flex-grow: 1;
+        text-transform: capitalize;
+        padding: var-rem(--semantic-spacing-xs) var-rem(--semantic-spacing-3xs);
+        outline-offset: rem(-0.3);
+        white-space: nowrap;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+
+        .tab-content {
+          height: 100%;
+          background-color: var(--semantic-color-background-surface-bold-default);
+          padding: var-rem(--semantic-spacing-md) var-rem(--semantic-spacing-lg);
+          font-size: rem(1.4);
+
+          p {
+            margin: 0;
+          }
+
+          .tab-title {
+            font-family: TelenetAlbra, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: rem(1.8);
+            line-height: rem(2.8);
+          }
+        }
+
+        &:has(+ .is-active-tab) {
+          padding-right: var-rem(--semantic-spacing-xs);
+        }
+
+        &.is-active-tab {
+          background-color: var(--semantic-color-background-tab-default);
+          position: relative;
+          border-top: var-rem(--semantic-border-lg) solid var(--semantic-color-border-selected);
+          padding: calc(var-rem(--semantic-spacing-lg) + var-rem(--semantic-spacing-3xs)) var-rem(--semantic-spacing-lg)
+            var-rem(--semantic-spacing-lg);
+
+          @include media('from-sm') {
+            padding: calc(var-rem(--semantic-spacing-lg) - var-rem(--semantic-spacing-3xs))
+              var-rem(--semantic-spacing-lg) var-rem(--semantic-spacing-lg);
+          }
+
+          .tab-content {
+            background-color: unset;
+            padding: unset;
+          }
+
+          + .tab {
+            padding-left: var-rem(--semantic-spacing-xs);
+          }
+        }
+
+        &:focus-visible {
+          isolation: isolate;
+
+          &:not(.is-active-tab) .tab-content {
+            @include state-focus-outline;
+          }
+
+          &.is-active-tab {
+            @include state-focus-outline;
+
+            &:first-of-type {
+              margin-left: var-rem(--semantic-spacing-3xs);
+            }
+
+            &:last-of-type {
+              margin-right: var-rem(--semantic-spacing-3xs);
+            }
+          }
+        }
+
+        &:hover {
+          .tab-content {
+            background-color: var(--semantic-color-background-surface-bold-hovered);
+          }
+
+          &.is-active-tab .tab-content {
+            background-color: unset;
+          }
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+
+          .tab-content {
+            opacity: calc(var(--semantic-opacity-disabled) * 0.1);
+          }
+        }
+      }
+    }
+
+    &.is-scrollable {
+      position: relative;
+      z-index: 1;
+
+      .tab-list {
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: rem(0.6) 0;
+        margin-bottom: rem(-0.6);
+
+        @include hideScrollbar;
+
+        .tab {
+          min-width: fit-content;
+        }
+      }
+    }
+
+    .scroll-button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: fit-content;
+      margin: auto 0;
+
+      &-left {
+        left: var-rem(--semantic-spacing-xs);
+      }
+
+      &-right {
+        right: var-rem(--semantic-spacing-xs);
+      }
+    }
+  }
+
+  [role='tabpanel'] {
+    background-color: var(--semantic-color-background-tab-default);
+    padding: var-rem(--semantic-spacing-lg);
+    width: 100%;
+    overflow: auto;
+
+    * {
+      font-size: $tabpanel-font-size;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &:focus-visible {
+      @include state-focus-outline;
+      outline-offset: rem(-0.2);
+    }
+  }
+
+  &-inline .tab-header .tab-list {
+    .tab,
+    .tab:focus,
+    .tab:hover {
+      border-bottom: rem(0.1) solid var(--semantic-color-border-default);
+
+      &.is-active-tab {
+        border: rem(0.1) solid var(--semantic-color-border-default);
+        border-top: rem(0.3) solid var(--semantic-color-border-selected);
+        border-bottom: rem(0.1) solid var(--semantic-color-background-tab-default);
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "product": {
+    "externalProductCode": "TLTT0013",
+    "weight": 1,
+    "apps": [],
+    "category": ["Fleet Options with ETF", "Hybrid options"],
+    "subcategory": {
+      "name": "Preferred roaming WG",
+      "weight": 2,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Preferred roaming WG"
+        },
+        {
+          "locale": "nl",
+          "name": "Preferred roaming WG"
+        },
+        {
+          "locale": "fr",
+          "name": "Preferred roaming WG"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "value": "800",
+            "unit": "SMS",
+            "visible": true,
+            "weight": "3",
+            "labelkey": "Prefered Roaming SMS - 800 sms",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "800 SMSes  in and to Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Morocco, Russia, Saudi Arabia, Singapore, South Africa,\nThailand, Tunisia, Turkey and USA."
+              },
+              {
+                "locale": "nl",
+                "name": "800 SMSen in en naar Australië, Canada, China, Egypte, Hong Kong, Indië, Indonesië, Israel, Japan, Kaapverdië, Marokko, Mexico, Rusland, Saudi-Arabië, Singapore, Thailand, Tunisië, Turkije,  Verenigde staten en Zuid-Afrika."
+              },
+              {
+                "locale": "fr",
+                "name": "800 SMS  dans et vers Afrique du Sud, Arabie saoudite, Australie, Canada, Cap Vert, Chine, Egypte, États-Unis, Hong Kong, Inde, Indonésie, Israel, Japon, Maroc, Mexique, Russie, Singapore, Thaïlande, Tunésie et Turquie."
+              }
+            ]
+          },
+          {
+            "value": "800",
+            "unit": "minuten",
+            "visible": true,
+            "weight": "2",
+            "labelkey": "Prefered Roaming Voice - 800 min",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "800 minutes calling in and to Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Morocco, Russia, Saudi Arabia, Singapore, South Africa,\nThailand, Tunisia, Turkey and USA."
+              },
+              {
+                "locale": "nl",
+                "name": "800 minuten bellen in en naar Australië, Canada, China, Egypte, Hong Kong, Indië, Indonesië, Israel, Japan, Kaapverdië, Marokko, Mexico, Rusland, Saudi-Arabië, Singapore, Thailand, Tunisië, Turkije,  Verenigde staten en Zuid-Afrika."
+              },
+              {
+                "locale": "fr",
+                "name": "800 minutes d'appel dans et vers Afrique du Sud, Arabie saoudite, Australie, Canada, Cap Vert, Chine, Egypte, États-Unis, Hong Kong, Inde, Indonésie, Israel, Japon, Maroc, Mexique, Russie, Singapore, Thaïlande, Tunésie et Turquie."
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_CALLING"
+      },
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "2",
+            "unit": "GB",
+            "visible": true,
+            "weight": "1",
+            "labelkey": "Prefered Roaming  Data - 2Gb",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "2 GB mobile data for use in Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Morocco, Russia, Saudi Arabia, Singapore, South Africa,\nThailand, Tunisia, Turkey and USA."
+              },
+              {
+                "locale": "nl",
+                "name": "2 GB mobiele data voor gebruik in \nAustralië, Canada, China, Egypte, Hong Kong, Indië, Indonesië, Israel, Japan, Kaapverdië, Marokko, Mexico, Rusland, Saudi-Arabië, Singapore, Thailand, Tunisië, Turkije,  Verenigde staten en Zuid-Afrika."
+              },
+              {
+                "locale": "fr",
+                "name": "2 GB de data mobiles pour consommation en Afrique du Sud, Arabie saoudite, Australie, Canada, Cap Vert, Chine, Egypte, États-Unis, Hong Kong, Inde, Indonésie, Israel, Japon, Maroc, Mexique, Russie, Singapore, Thaïlande, Tunésie et Turquie"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "20,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "TLTT0013",
+    "labelkey": "Preferred Roaming WG 800min/800SMS/2GB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Preferred Roaming WG 800min/800SMS/2GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/preferred-roaming-wg-800min/800sms/2gb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Preferred Roaming WG 800min/800SMS/2GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/preferred-roaming-wg-800min/800sms/2gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Preferred Roaming WG 800min/800SMS/2GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/preferred-roaming-wg-800min/800sms/2gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Preferred roaming WG  \n800 minutes\n800 sms\n2GB mobile data"
+        },
+        {
+          "locale": "nl",
+          "name": "Preferred roaming WG  \n800 minuten \n800 sms\n2GB mobile data"
+        },
+        {
+          "locale": "fr",
+          "name": "Preferred roaming WG  \n800 minutes \n800 sms\n2GB mobile data"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

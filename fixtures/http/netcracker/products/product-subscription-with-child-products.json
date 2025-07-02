@@ -1,0 +1,134 @@
+[
+  {
+    "addressId": "9150308794013914042",
+    "identifier": "WIGO000001178",
+    "label": "WIGO 40GB / WIGO000001178",
+    "locationId": "9159396630713391475",
+    "status": "Pending Activation",
+    "productType": "bundle",
+    "products": [
+      {
+        "identifier": "056494781",
+        "productType": "telephone",
+        "status": "Pending Activation",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLIN0001",
+        "id": "9159396675713396852"
+      },
+      {
+        "identifier": "0468599833",
+        "productType": "mobile",
+        "status": "Pending Activation",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/MBLN0001",
+        "id": "9159396671513396852"
+      },
+      {
+        "identifier": "INT000008662",
+        "productType": "internet",
+        "status": "Pending Activation",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/INLN0001",
+        "id": "9159396673613396852"
+      },
+      {
+        "identifier": "IDTV000003141",
+        "productType": "dtv",
+        "status": "Pending Activation",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/TSIP0001",
+        "id": "9159396672313396852"
+      }
+    ],
+    "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0040",
+    "id": "9159396678213396852",
+    "useSpecurl": false,
+    "productOrders": [
+      {
+        "id": "9159396678813396952",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "Fixed Line / 056494781",
+          "id": "9159396675713396852",
+          "rawOmapi": {
+            "productType": "TV_BOX1"
+          }
+        },
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9159396677913396956",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "Telenet Mobile Line / 0468599833",
+          "id": "9159396671513396852",
+          "rawOmapi": {
+            "productType": "TV_BOX2"
+          }
+        },
+        "tasks": [
+          {
+            "topic": "TBAPI_WAIT_FOR_ACTIVATION_BY_LINK",
+            "status": {
+              "name": "Not Started"
+            }
+          },
+          {
+            "topic": "AC_WAIT_FOR_ICCID",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9159396674813396952",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "Internet Service / INT000008662",
+          "id": "9159396673613396852",
+          "rawOmapi": {
+            "productType": "TV_BOX3"
+          }
+        },
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9159396679713396952",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "HD Digicorder",
+          "id": "9159396677313396852",
+          "rawOmapi": {
+            "productType": "TV_BOX4"
+          }
+        },
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Waiting"
+            }
+          },
+          {
+            "topic": "Picked",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      }
+    ],
+    "salesOrderId": "9159396643213392623"
+  }
+]

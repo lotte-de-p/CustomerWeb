@@ -1,0 +1,206 @@
+{
+  "name": "sim-management-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "tg-sim-management",
+  "sourceRoot": "apps/activate/sim-management-mfe/src",
+  "tags": ["type:app", "scope:sim-management-mfe"],
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sim-management-mfe",
+        "index": "apps/activate/sim-management-mfe/src/index.html",
+        "main": "apps/activate/sim-management-mfe/src/main.ts",
+        "polyfills": ["apps/activate/sim-management-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/activate/sim-management-mfe/tsconfig.app.json",
+        "aot": true,
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/activate/sim-management-mfe/src/version.json",
+          "apps/activate/sim-management-mfe/src/favicon.ico",
+          "apps/activate/sim-management-mfe/src/assets"
+        ],
+        "styles": ["apps/activate/sim-management-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/activate/sim-management-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/activate/sim-management-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/activate/sim-management-mfe/src/favicon.ico",
+            "apps/activate/sim-management-mfe/src/assets",
+            "apps/activate/sim-management-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "optimization": false,
+          "buildOptimizer": false,
+          "customWebpackConfig": {
+            "path": "apps/activate/sim-management-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "sim-management-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "sim-management-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "sim-management-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4213,
+        "publicHost": "http://localhost:4213",
+        "buildTarget": "sim-management-mfe:build:development"
+      }
+    },
+    "serve-ssl": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run sim-management-mfe:serve:build --ssl=true --host=local.telenet.be --port=4200 --sslKey=%NX_SSL_KEY_PATH% --sslCert=%NX_SSL_CERT_PATH% --publicHost="
+          }
+        ]
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "sim-management-mfe:build",
+        "extraWebpackConfig": "apps/activate/sim-management-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/activate/sim-management-mfe/src/**/*.{ts,js,html}"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/activate/sim-management-mfe/.storybook",
+        "browserTarget": "sim-management-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/activate/sim-management-mfe/.storybook",
+        "browserTarget": "sim-management-mfe:build-storybook",
+        "compodoc": false,
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/sim-management-mfe",
+        "configDir": "apps/activate/sim-management-mfe/.storybook",
+        "browserTarget": "sim-management-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/activate/sim-management-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/activate/sim-management-mfe/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "sim-management-mfe:build-storybook",
+        "staticFilePath": "dist/storybook/sim-management-mfe"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "sim-management-mfe:build-storybook:ci"
+        }
+      }
+    }
+  }
+}

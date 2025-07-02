@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.308" tests="4" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-12T06:19:49" tests="0" file="src/e2e/fleet-profile/msa/msa.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Master Service Agreement" timestamp="2024-09-12T06:19:49" tests="4" time="4.274" failures="0">
+    <testcase name="should autoselect the first MSA on page load" time="1.362" classname="Master Service Agreement should autoselect the first MSA on page load">
+    </testcase>
+    <testcase name="should show the tariff plan for the selected msa when selecting another MSA" time="0.766" classname="Master Service Agreement should show the tariff plan for the selected msa when selecting another MSA">
+    </testcase>
+    <testcase name="should pin and unpin the selected offer when the pin button is clicked" time="0.707" classname="Master Service Agreement should pin and unpin the selected offer when the pin button is clicked">
+    </testcase>
+    <testcase name="should show group bundles when the group bundles tab is clicked" time="0.615" classname="Master Service Agreement should show group bundles when the group bundles tab is clicked">
+    </testcase>
+  </testsuite>
+</testsuites>

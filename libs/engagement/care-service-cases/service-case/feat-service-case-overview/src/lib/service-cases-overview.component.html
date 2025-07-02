@@ -1,0 +1,27 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <care-service-case-error *ngIf="loadError$ | async as loadError" [error]="loadError"></care-service-case-error>
+  <care-service-case-loader
+    *ngIf="loading$ | async as loading; else content"
+    [loading]="loading"></care-service-case-loader>
+  <ng-template #content>
+    <div class="row">
+      <div class="col-md-3 p--s">
+        <tg-service-case-list
+          [selectedServiceCase]="selectedServiceCase$ | async"
+          [serviceCases]="(serviceCase$ | async) || []"
+          [closedServiceCases]="(closedServiceCases$ | async) || []"
+          [openServiceCases]="(openServiceCases$ | async) || []"
+          (toggleHistoryEvent)="toggleHistoryEvent($event)"
+          (selectServiceCase)="selectServiceCase($event)"></tg-service-case-list>
+      </div>
+      <div class="col-md-9 p--s">
+        <div class="mb--xxl--md mb--l">
+          <tg-service-case-detail [selectedServiceCase]="selectedServiceCase$ | async"></tg-service-case-detail>
+        </div>
+        <div>
+          <tg-service-case-faq [selectedServiceCase]="selectedServiceCase$ | async"></tg-service-case-faq>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</tg-login>

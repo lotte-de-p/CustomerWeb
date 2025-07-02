@@ -1,0 +1,7 @@
+<tg-inbox-message-notification-icon
+  [inboxOverviewPageUrl]="inboxOverviewPageUrl"
+  [hideIconLabel]="hideIconLabel"
+  [unreadMessages]="unreadInboxMessagesCount$ | async"
+  (notificationClicked)="handleNotificationClick($event)"
+  (unreadMessagesChange)="lazyLoadingOutputEvent.emit($event)">
+</tg-inbox-message-notification-icon>

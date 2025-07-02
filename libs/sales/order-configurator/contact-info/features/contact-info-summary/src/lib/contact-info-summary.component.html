@@ -1,0 +1,27 @@
+@if (contactInfo$ | async; as contactInfo) {
+  <div>
+    <div class="mt--m mt--m--md">
+      <div class="sales-display-info align-items--baseline">
+        <h5 class="m-0">{{ 'ng.sales-checkout.text.review-personal-info' | translate }}</h5>
+      </div>
+    </div>
+    <div
+      class="sales-display-info pb--l border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey"
+      data-cs-mask="">
+      <div class="sales-display-info__content">
+        <div class="sales-display-info__content__row mb--xs">
+          <i class="icon-md sales-display-info__content__row__icon icon-user"></i>
+          <p [attr.data-cy]="'personal-info-name'" class="sales-display-info__content__row__description">
+            <span>{{ contactInfo.firstName }}</span> <span> {{ contactInfo.lastName }}</span>
+          </p>
+        </div>
+        <div class="sales-display-info__content__row mb--xs">
+          <i class="icon-email icon-md sales-display-info__content__row__icon"></i>
+          <p [attr.data-cy]="'personal-info-email'" class="sales-display-info__content__row__description">
+            {{ contactInfo.email }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+}

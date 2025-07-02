@@ -1,0 +1,232 @@
+:host {
+  display: block;
+  --semantic-duration-medium: 300ms;
+  --semantic-duration-very-slow: 500ms;
+
+  --semantic-easing-productive-ease-in: cubic-bezier(0.11, 0, 0.5, 0);
+  --semantic-easing-productive-ease-out: cubic-bezier(0.5, 1, 0.89, 1);
+  --semantic-easing-productive-ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+
+  .sheet {
+    --sticky-footer-height: 10;
+
+    background-color: var(--semantic-color-background-surface-neutral-overlapping-default);
+    color: var(--semantic-color-text-default);
+    border: unset;
+    position: fixed;
+    inset: auto auto 0 0;
+    padding: 0;
+    margin: unset;
+    width: 100vw;
+    height: fit-content;
+    max-width: 100%;
+    max-height: 85vh;
+    overflow: hidden;
+    transition:
+      display var(--semantic-duration-medium) allow-discrete,
+      overlay var(--semantic-duration-medium) allow-discrete;
+    animation-name: sheetMobileFadeOut;
+    animation-duration: var(--semantic-duration-very-slow);
+    animation-timing-function: var(--semantic-easing-productive-ease-in-out);
+    animation-fill-mode: forwards;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include media('from-md') {
+      animation-name: sheetDesktopFadeOut;
+      inset: 0 0 0 auto;
+      left: unset;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: fit-content;
+      height: 100vh;
+      max-width: 50%;
+      max-height: 100%;
+    }
+
+    @include media('from-lg') {
+      max-width: rem(55.6);
+    }
+
+    &::backdrop {
+      pointer-events: none;
+      animation-duration: var(--semantic-duration-very-slow);
+      animation-timing-function: var(--semantic-easing-productive-ease-in-out);
+      animation-fill-mode: forwards;
+      animation-name: backdropFadeOut;
+    }
+
+    &[open] {
+      animation-name: sheetMobileFadeIn;
+
+      @include media('from-md') {
+        animation-name: sheetDesktopFadeIn;
+      }
+
+      &::backdrop {
+        animation-name: backdropFadeIn;
+      }
+    }
+
+    &:not([open]) {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    &-darker,
+    &-darker .sheet-footer {
+      background-color: var(--semantic-color-background-surface-subtle-overlapping-default);
+    }
+
+    &-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      max-height: 85vh;
+      overflow: hidden;
+      font-size: rem(1.8);
+      padding-top: calc(var-rem(--semantic-icon-md) + (2 * var-rem(--semantic-spacing-md)));
+
+      @include media('from-md') {
+        padding-top: calc(var-rem(--semantic-icon-md) + (2 * var-rem(--semantic-spacing-lg)));
+      }
+
+      &-scroll {
+        padding: 0 var-rem(--semantic-spacing-lg) var-rem(--semantic-spacing-lg);
+        overflow-y: auto;
+
+        @include media('from-md') {
+          padding-bottom: calc(var-rem(--sticky-footer-height) + var-rem(--semantic-spacing-lg));
+        }
+      }
+
+      &-page {
+        display: none;
+
+        &-visible {
+          display: block;
+        }
+      }
+    }
+
+    &-icon {
+      --icon-position: var(--semantic-spacing-3xs);
+
+      @include media('from-md') {
+        --icon-position: var(--semantic-spacing-sm);
+      }
+
+      cursor: pointer;
+      position: absolute;
+      top: var-rem(--icon-position);
+
+      &-close {
+        right: var-rem(--icon-position);
+      }
+
+      &-back {
+        left: var-rem(--icon-position);
+      }
+    }
+
+    &-footer {
+      background-color: var(--semantic-color-background-surface-neutral-overlapping-default);
+      padding: var-rem(--semantic-spacing-md);
+      border-top: var-rem(--semantic-border-sm) solid var(--semantic-color-border-default);
+      width: 100%;
+      max-height: var-rem(--sticky-footer-height);
+      box-sizing: border-box;
+      flex-shrink: 0;
+
+      @include media('from-md') {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: var-rem(--semantic-spacing-lg);
+      }
+
+      &-sub {
+        display: none;
+
+        &.sheet-footer-visible {
+          display: flex;
+          gap: var-rem(--semantic-spacing-md);
+        }
+      }
+    }
+  }
+}
+
+@keyframes sheetDesktopFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sheetDesktopFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sheetMobileFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheetMobileFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  :host {
+    animation-duration: 0;
+  }
+}
+
+@keyframes backdropFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: var(--semantic-color-background-surface-overlay);
+  }
+}
+
+@keyframes backdropFadeOut {
+  0% {
+    opacity: 1;
+    background-color: var(--semantic-color-background-surface-overlay);
+  }
+  100% {
+    opacity: 0;
+  }
+}

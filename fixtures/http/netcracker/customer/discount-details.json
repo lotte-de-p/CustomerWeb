@@ -1,0 +1,271 @@
+{
+  "collectionStatus": "Green",
+  "startDateOfEligibility": "2018-01-01T00:00:00+01:00",
+  "availableDiscounts": {
+    "discountsRemaining": "3",
+    "totalEligibleDiscounts": "5"
+  },
+  "availableOnTopDiscounts": [
+    {
+      "name": "On-Top Discount with BOYO0040",
+      "endValidityDate": "2077-01-01T16:50:10+01:00",
+      "relatedProduct": {
+        "name": "YUGO / YUGO000000076",
+        "externalProductCode": "BOYO0040"
+      }
+    },
+    {
+      "name": "On-Top Discount with BOY020 ",
+      "endValidityDate": "2077-01-01T16:50:10+01:00",
+      "relatedProduct": {
+        "name": "YUGO / YUGO000000076",
+        "externalProductCode": "BOY020"
+      }
+    }
+  ],
+  "usedDiscounts": [
+    {
+      "deviceName": "Google Pixel 4",
+      "endDateOfContract": "2021-01-23T00:00:00+01:00",
+      "startDateOfContract": "2020-01-23T00:00:00+01:00",
+      "durationLeft": {
+        "months": "10",
+        "days": "8"
+      },
+      "currency": "Euro",
+      "initialPrice": "69,99",
+      "discountedPrice": "49,99",
+      "etf": "9,99",
+      "bill": {
+        "billingAccountNumber": "100323487",
+        "billreferencenumber": "203800011512"
+      },
+      "depreciations": [
+        {
+          "amountLeft": "20,00",
+          "endDateofMonth": "2020-01-23"
+        },
+        {
+          "amountLeft": "18,33",
+          "endDateofMonth": "2020-02-23"
+        },
+        {
+          "amountLeft": "16,66",
+          "endDateofMonth": "2020-03-23"
+        },
+        {
+          "amountLeft": "15,00",
+          "endDateofMonth": "2020-04-23"
+        },
+        {
+          "amountLeft": "13,33",
+          "endDateofMonth": "2020-05-23"
+        },
+        {
+          "amountLeft": "11,66",
+          "endDateofMonth": "2020-06-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2020-07-23"
+        },
+        {
+          "amountLeft": "8,33",
+          "endDateofMonth": "2020-08-23"
+        },
+        {
+          "amountLeft": "6,66",
+          "endDateofMonth": "2020-09-23"
+        },
+        {
+          "amountLeft": "5,00",
+          "endDateofMonth": "2020-10-23"
+        },
+        {
+          "amountLeft": "3,33",
+          "endDateofMonth": "2020-11-23"
+        },
+        {
+          "amountLeft": "1,66",
+          "endDateofMonth": "2020-12-23"
+        }
+      ]
+    },
+    {
+      "deviceName": "Apple iPhone 11",
+      "endDateOfContract": "2019-10-23T00:00:00+01:00",
+      "startDateOfContract": "2019-01-23T00:00:00+01:00",
+      "durationLeft": {
+        "months": "10",
+        "days": "8"
+      },
+      "currency": "Euro",
+      "initialPrice": "109,99",
+      "discountedPrice": "89,99",
+      "etf": "19,99",
+      "bill": {
+        "billingAccountNumber": "100323487",
+        "billreferencenumber": "203800011555"
+      },
+      "depreciations": [
+        {
+          "amountLeft": "20,00",
+          "endDateofMonth": "2019-01-23"
+        },
+        {
+          "amountLeft": "18,00",
+          "endDateofMonth": "2019-02-23"
+        },
+        {
+          "amountLeft": "16,00",
+          "endDateofMonth": "2019-03-23"
+        },
+        {
+          "amountLeft": "14,00",
+          "endDateofMonth": "2019-04-23"
+        },
+        {
+          "amountLeft": "12,00",
+          "endDateofMonth": "2019-05-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-06-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-07-23"
+        },
+        {
+          "amountLeft": "8,00",
+          "endDateofMonth": "2019-08-23"
+        },
+        {
+          "amountLeft": "4,00",
+          "endDateofMonth": "2019-09-23"
+        },
+        {
+          "amountLeft": "2,00",
+          "endDateofMonth": "2019-10-23"
+        }
+      ]
+    },
+    {
+      "deviceName": "Acer Monitor",
+      "endDateOfContract": "2019-10-23T00:00:00+01:00",
+      "startDateOfContract": "2019-01-23T00:00:00+01:00",
+      "durationLeft": {
+        "months": "10",
+        "days": "8"
+      },
+      "currency": "Euro",
+      "initialPrice": "109,99",
+      "discountedPrice": "89,99",
+      "etf": "19,99",
+      "bill": {
+        "billingAccountNumber": "100323487",
+        "billreferencenumber": "203800011555"
+      },
+      "depreciations": [
+        {
+          "amountLeft": "20,00",
+          "endDateofMonth": "2019-01-23"
+        },
+        {
+          "amountLeft": "18,00",
+          "endDateofMonth": "2019-02-23"
+        },
+        {
+          "amountLeft": "16,00",
+          "endDateofMonth": "2019-03-23"
+        },
+        {
+          "amountLeft": "14,00",
+          "endDateofMonth": "2019-04-23"
+        },
+        {
+          "amountLeft": "12,00",
+          "endDateofMonth": "2019-05-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-06-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-07-23"
+        },
+        {
+          "amountLeft": "8,00",
+          "endDateofMonth": "2019-08-23"
+        },
+        {
+          "amountLeft": "4,00",
+          "endDateofMonth": "2019-09-23"
+        },
+        {
+          "amountLeft": "2,00",
+          "endDateofMonth": "2019-10-23"
+        }
+      ]
+    },
+    {
+      "deviceName": "Acer Monitor",
+      "endDateOfContract": "2019-10-23T00:00:00+01:00",
+      "durationLeft": {
+        "months": "10",
+        "days": "8"
+      },
+      "currency": "Euro",
+      "initialPrice": "109,99",
+      "discountedPrice": "89,99",
+      "etf": "19,99",
+      "bill": {
+        "billingAccountNumber": "100323487",
+        "billreferencenumber": "203800011555"
+      },
+      "depreciations": [
+        {
+          "amountLeft": "20,00",
+          "endDateofMonth": "2019-01-23"
+        },
+        {
+          "amountLeft": "18,00",
+          "endDateofMonth": "2019-02-23"
+        },
+        {
+          "amountLeft": "16,00",
+          "endDateofMonth": "2019-03-23"
+        },
+        {
+          "amountLeft": "14,00",
+          "endDateofMonth": "2019-04-23"
+        },
+        {
+          "amountLeft": "12,00",
+          "endDateofMonth": "2019-05-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-06-23"
+        },
+        {
+          "amountLeft": "10,00",
+          "endDateofMonth": "2019-07-23"
+        },
+        {
+          "amountLeft": "8,00",
+          "endDateofMonth": "2019-08-23"
+        },
+        {
+          "amountLeft": "4,00",
+          "endDateofMonth": "2019-09-23"
+        },
+        {
+          "amountLeft": "2,00",
+          "endDateofMonth": "2019-10-23"
+        }
+      ]
+    }
+  ]
+}

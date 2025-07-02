@@ -1,0 +1,160 @@
+{
+  "name": "demo-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/foundation/demo-mfe/src",
+  "prefix": "tg-foundation-demo",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/foundation/demo-mfe",
+        "index": "apps/foundation/demo-mfe/src/index.html",
+        "main": "apps/foundation/demo-mfe/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/foundation/demo-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/foundation/demo-mfe/src/favicon.ico",
+          "apps/foundation/demo-mfe/src/assets",
+          "apps/foundation/demo-mfe/src/version.json",
+          {
+            "glob": "**/*",
+            "input": "libs/foundation/wink/dist/www/assets",
+            "output": "assets/"
+          }
+        ],
+        "styles": ["apps/foundation/demo-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/foundation/demo-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "3mb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/foundation/demo-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/foundation/demo-mfe/src/favicon.ico",
+            "apps/foundation/demo-mfe/src/assets",
+            "apps/foundation/demo-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            },
+            {
+              "glob": "**/*",
+              "input": "libs/foundation/wink/dist/www/assets",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "coverage": {
+        "buildOptimizer": false,
+        "optimization": false,
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "customWebpackConfig": {
+          "path": "apps/foundation/demo-mfe-e2e/coverage.webpack.ts"
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "demo-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "demo-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "demo-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/foundation/demo-mfe/**/*.ts", "apps/foundation/demo-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/foundation/demo-mfe/.storybook",
+        "browserTarget": "demo-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/foundation/demo-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "demo-mfe:build-storybook",
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/demo-mfe",
+        "configDir": "apps/foundation/demo-mfe/.storybook",
+        "browserTarget": "demo-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/foundation/demo-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:app", "scope:demo-mfe"]
+}

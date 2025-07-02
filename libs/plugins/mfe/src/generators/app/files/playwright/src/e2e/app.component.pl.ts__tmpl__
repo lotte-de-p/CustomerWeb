@@ -1,0 +1,12 @@
+import { test, expect } from '@tools/e2e';
+import { <%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_PAGE_LANDING, <%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_SELECTOR_ROOT } from '../support';
+
+test.describe('<%= mfeName %>: Landing Page', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto(<%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_PAGE_LANDING);
+  });
+
+  test('should display', async ({ page }) => {
+    await expect(page.locator(<%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_SELECTOR_ROOT)).toBeVisible();
+  });
+});

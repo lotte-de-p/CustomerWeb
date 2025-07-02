@@ -1,0 +1,6 @@
+<tg-marketing-cafe-drop-down-accordion
+  *ngIf="isLoggedIn$ | async"
+  [title]="title"
+  [overviews]="(overview$ | async)!"
+  class="Container">
+</tg-marketing-cafe-drop-down-accordion>

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "ddd",
+  "version": "0.0.1",
+  "generators": {
+    "ddd:feature": {
+      "factory": "./src/generators/feature",
+      "schema": "./src/generators/feature/schema.json",
+      "description": "DDD Feature generator"
+    },
+    "ddd:ui": {
+      "factory": "./src/generators/ui",
+      "schema": "./src/generators/ui/schema.json",
+      "description": "DDD ui generator"
+    }
+  }
+}

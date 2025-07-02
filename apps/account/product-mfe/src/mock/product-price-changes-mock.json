@@ -1,0 +1,146 @@
+{
+  "url": "http://localhost:8080/public/api/product-price-change-service/v1/product-price-changes",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "accountNumber": "501094665",
+      "productPriceChanges": [
+        {
+          "address": {
+            "addressId": "5775899",
+            "street": "Kruierstraat",
+            "postalCode": "8660",
+            "city": "De Panne",
+            "country": "België",
+            "houseNumber": "8",
+            "subHouseNumber": "A",
+            "box": "001"
+          },
+          "billingFrequency": "MONTHLY",
+          "priceChange": 1.145555,
+          "segment": "RES",
+          "vatInclusive": false,
+          "priceAccordingToConsumption": false,
+          "products": [
+            {
+              "description": {
+                "nl": "Telenet Telefonie",
+                "fr": "Telenet Téléphonie"
+              },
+              "oldPrice": 156.96,
+              "newPrice": 5.78
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "accountNumber": "501190680",
+      "productPriceChanges": [
+        {
+          "address": {
+            "addressId": "5775900",
+            "street": "Kruierstraat",
+            "postalCode": "8660",
+            "city": "De Panne",
+            "country": "België",
+            "houseNumber": "8"
+          },
+          "billingFrequency": "YEARLY",
+          "priceChange": 10.47,
+          "segment": "RES",
+          "vatInclusive": false,
+          "priceAccordingToConsumption": false,
+          "products": [
+            {
+              "description": {
+                "nl": "Auteursrechten",
+                "fr": "Droits d'auteur"
+              },
+              "oldPrice": 59.04,
+              "newPrice": 61.8
+            },
+            {
+              "description": {
+                "nl": "Abonnement kabel-tv",
+                "fr": "Abonnement télédistribution"
+              },
+              "oldPrice": 164.05,
+              "newPrice": 171.76
+            }
+          ]
+        },
+        {
+          "address": {
+            "addressId": "5775901",
+            "street": "Anderstraat",
+            "postalCode": "9940",
+            "city": "Evergem",
+            "country": "België",
+            "houseNumber": "123"
+          },
+          "billingFrequency": "MONTHYLY",
+          "priceChange": 10.47,
+          "vatInclusive": false,
+          "priceAccordingToConsumption": true,
+          "products": [
+            {
+              "description": {
+                "nl": "Auteursrechten",
+                "fr": "Droits d'auteur"
+              },
+              "oldPrice": 59.04,
+              "newPrice": 61.8
+            },
+            {
+              "description": {
+                "nl": "Abonnement kabel-tv",
+                "fr": "Abonnement télédistribution"
+              },
+              "oldPrice": 164.05,
+              "newPrice": 171.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "accountNumber": "501190681",
+      "productPriceChanges": [
+        {
+          "address": {
+            "addressId": "5775902",
+            "street": "Kruierstraat",
+            "postalCode": "8660",
+            "city": "De Panne",
+            "country": "België",
+            "houseNumber": "8"
+          },
+          "billingFrequency": "YEARLY",
+          "priceChange": 10.47,
+          "vatInclusive": true,
+          "priceAccordingToConsumption": true,
+          "products": [
+            {
+              "description": {
+                "nl": "Auteursrechten",
+                "fr": "Droits d'auteur"
+              },
+              "oldPrice": 59.04,
+              "newPrice": 61.8
+            },
+            {
+              "description": {
+                "nl": "Abonnement kabel-tv",
+                "fr": "Abonnement télédistribution"
+              },
+              "oldPrice": 164.05,
+              "newPrice": 171.76
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

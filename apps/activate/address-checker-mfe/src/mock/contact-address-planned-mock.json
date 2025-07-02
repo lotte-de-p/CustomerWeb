@@ -1,0 +1,17 @@
+{
+  "url": "http://localhost:8080/public/api/contact-service/v1/contact/addresses/9165638576413172146",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "id": "9165638576413172146",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "municipality": "Gent",
+    "postalCode": "4000",
+    "street": "Gent Street",
+    "streetId": "9165637286113103076",
+    "houseNumber": "1234",
+    "tinaLocationId": "-xyhej200at-q2yojd0ol5"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "serviceDetails": {
+    "premiumSerivceId": "1700",
+    "details": [
+      {
+        "serviceType": "VOICE",
+        "serviceStatus": "ACTIVE",
+        "serviceDescription": "Vlaamse Info lijn",
+        "serviceConfirmedDate": "20060901000000",
+        "serviceEndDate": "",
+        "premium": "Tax included",
+        "fixOrMobile": "F",
+        "priceStartDate": "20060901000000",
+        "priceEndDate": "",
+        "callPerMinute": "0.0000/min",
+        "callPerSecond": "0.0000/sec",
+        "contentProviderStartDate": "20060901000000",
+        "contentProviderEndDate": "",
+        "contentProviderName": "Vlaamse Info Lijn",
+        "contentProviderStreet": "Boudewijnlaan 30 ",
+        "contentProviderPostalCode": "1000",
+        "contentProviderCity": "Brussels",
+        "contentProviderCountry": "BEL",
+        "customerCareTelephoneOrEmail": "02 5535523 - Base.support@kpngro",
+        "customerCareUrl": "http://www.vlaanderen.be/infolijn"
+      },
+      {
+        "serviceType": "SMS",
+        "serviceStatus": "ACTIVE",
+        "serviceDescription": "Vlaamse overheid informatiedienst",
+        "serviceConfirmedDate": "20060831000000",
+        "serviceEndDate": "",
+        "premium": "Tax included",
+        "fixOrMobile": "",
+        "priceStartDate": "20060831000000",
+        "priceEndDate": "",
+        "sendSms": "0.0000/sms",
+        "receiveSms": "0.0000/sms",
+        "contentProviderStartDate": "20060831000000",
+        "contentProviderEndDate": "",
+        "contentProviderName": "Vlaamse Infolijn",
+        "contentProviderStreet": "Boudewijnlaan 30",
+        "contentProviderPostalCode": "1000",
+        "contentProviderCity": "Brussel",
+        "contentProviderCountry": "BEL",
+        "customerCareTelephoneOrEmail": "+3225028500 - helpdesk@ringring.",
+        "customerCareUrl": "unknown"
+      }
+    ]
+  }
+}

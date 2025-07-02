@@ -1,0 +1,108 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: block;
+}
+:host label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 0;
+}
+:host input[type=checkbox] {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: flex-start;
+  appearance: none;
+  background-color: var(--semantic-color-background-surface-neutral-default);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid var(--semantic-color-border-form-default);
+  padding: 0;
+  margin: 0 calc(var(--semantic-spacing-xs) * 1rem) 0 0;
+  color: var(--semantic-color-border-form-selected);
+  border-radius: 0;
+  box-sizing: content-box;
+}
+:host input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+:host input[type=checkbox]:hover {
+  border: 0.2rem solid var(--semantic-color-border-highlight);
+}
+:host input[type=checkbox]:checked {
+  background: var(--semantic-color-background-surface-action-default);
+  border-color: var(--semantic-color-border-form-selected);
+}
+:host input[type=checkbox]:checked::before {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.99485 0.631188C9.47477 0.904479 9.64228 1.51508 9.36899 1.99501L5.38288 8.99501C5.22451 9.27313 4.94257 9.45864 4.62448 9.49404C4.30639 9.52943 3.99058 9.41043 3.77494 9.17393L0.761051 5.86837C0.388947 5.46026 0.418139 4.82777 0.826253 4.45566C1.23437 4.08356 1.86686 4.11275 2.23896 4.52086L4.32579 6.80964L7.63102 1.00533C7.90431 0.525407 8.51492 0.357896 8.99485 0.631188Z' fill='%23291D18'/%3E%3C/svg%3E%0A");
+}
+:host input[type=checkbox]:focus {
+  border-color: var(--semantic-color-border-form-default);
+}
+:host input[type=checkbox]:focus:checked {
+  border-color: var(--semantic-color-border-form-selected);
+}
+:host input[type=checkbox]:focus, :host input[type=checkbox]:focus:checked {
+  outline: 0.2rem solid var(--semantic-color-border-focus);
+  outline-offset: 0.2rem;
+}
+:host input[type=checkbox]:invalid, :host input[type=checkbox][aria-invalid], :host input[type=checkbox]:invalid:checked, :host input[type=checkbox][aria-invalid]:checked, :host input[type=checkbox]:invalid:hover, :host input[type=checkbox][aria-invalid]:hover, :host input[type=checkbox]:invalid:checked:hover, :host input[type=checkbox][aria-invalid]:checked:hover, :host input[type=checkbox][aria-invalid]:disabled:hover {
+  border-color: var(--semantic-color-border-error);
+}
+:host input[type=checkbox]:invalid:checked, :host input[type=checkbox][aria-invalid]:checked {
+  background-color: var(--semantic-color-background-surface-neutral-default);
+}
+:host input[type=checkbox]:invalid:checked::before, :host input[type=checkbox][aria-invalid]:checked::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.99485 0.631188C9.47477 0.904479 9.64228 1.51508 9.36899 1.99501L5.38288 8.99501C5.22451 9.27313 4.94257 9.45864 4.62448 9.49404C4.30639 9.52943 3.99058 9.41043 3.77494 9.17393L0.761051 5.86837C0.388947 5.46026 0.418139 4.82777 0.826253 4.45566C1.23437 4.08356 1.86686 4.11275 2.23896 4.52086L4.32579 6.80964L7.63102 1.00533C7.90431 0.525407 8.51492 0.357896 8.99485 0.631188Z' fill='%23DE350B'/%3E%3C/svg%3E%0A");
+}
+:host input[type=checkbox]:disabled, :host input[type=checkbox]:disabled ~ * {
+  opacity: calc((var(--semantic-opacity-disabled)) / 10);
+  cursor: not-allowed;
+}
+:host input[type=checkbox]:disabled:hover {
+  border: 0.2rem solid #766f6b;
+}

@@ -1,0 +1,21 @@
+@if (deliveryContent$ | async; as deliveryContent) {
+  <div class="delivery p-0">
+    @for (deliveryItem of deliveryContent; track deliveryItem.productType) {
+      <div class="image-description">
+        <div [attr.data-cy]="'delivery-item'" class="image-description__card position--relative">
+          @if (deliveryItem.quantity > 1) {
+            <div class="image-description__card__info position--absolute">
+              {{ deliveryItem.quantity }}
+            </div>
+          }
+          <div class="image-description__card__image ml-0 position--relative">
+            <i class="icon icon-md icon-{{ deliveryItem.deliveryInfo.iconType }} pb--l"></i>
+            <div class="font--caption-small mt--l position--absolute px--xs">
+              {{ deliveryItem.productType }}
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+}

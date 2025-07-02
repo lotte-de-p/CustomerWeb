@@ -1,0 +1,22 @@
+<ng-container *ngFor="let option of optionList; let i = index">
+  <div class="radio-checkbox">
+    <div class="radio form__radio" style="--animation-delay: i">
+      <input
+        (click)="selectOption(option)"
+        [checked]="selectedOption && option.value === selectedOption.value"
+        class="form__radio__input"
+        id="form-input-radio-{{ i }}-{{ key }}"
+        name="radio-group-name-{{ i }}-{{ key }}"
+        type="radio" />
+      <label class="form__radio__label" for="form-input-radio-{{ i }}-{{ key }}"></label>
+    </div>
+    <label
+      (click)="selectOption(option)"
+      [innerHTML]="getOptionLabel(option) | translate"
+      class="label--large"
+      [attr.data-cy]="messageGroup + '.' + key + '.option.' + option.value"
+      for="form-input-radio-{{ i }}-{{ key }}">
+    </label>
+  </div>
+  <div tgWhitespace="tiny"></div>
+</ng-container>

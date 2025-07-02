@@ -1,0 +1,74 @@
+[
+  {
+    "contactId": "916041317548134",
+    "contactInfo": {
+      "emails": [
+        {
+          "id": "9160417548613989657",
+          "value": "test1@staff.telenet.be"
+        }
+      ],
+      "phones": [
+        {
+          "id": "9160417547613989657",
+          "value": "0489012991"
+        }
+      ]
+    },
+    "individual": {
+      "epithet": "Mrs.",
+      "firstName": "test first name 1",
+      "lastName": "test last name 1"
+    },
+    "language": "NL",
+    "birthDate": "1991-05-12"
+  },
+  {
+    "contactId": "91604131754212",
+    "contactInfo": {
+      "emails": [
+        {
+          "id": "9160417548613989657",
+          "value": "test1@staff.telenet.be"
+        }
+      ],
+      "phones": [
+        {
+          "id": "9160417547613989657",
+          "value": "0489012991"
+        }
+      ]
+    },
+    "individual": {
+      "epithet": "Mrs.",
+      "firstName": "test first name 2",
+      "lastName": "test last name 2"
+    },
+    "language": "NL",
+    "birthDate": "1991-05-12"
+  },
+  {
+    "contactId": "Default",
+    "contactInfo": {
+      "emails": [
+        {
+          "id": "9160417548613989657",
+          "value": "test3@staff.telenet.be"
+        }
+      ],
+      "phones": [
+        {
+          "id": "9160417547613989657",
+          "value": "0489012991"
+        }
+      ]
+    },
+    "individual": {
+      "epithet": "Mrs.",
+      "firstName": "Default Test",
+      "lastName": "Name"
+    },
+    "language": "NL",
+    "birthDate": "1991-05-12"
+  }
+]

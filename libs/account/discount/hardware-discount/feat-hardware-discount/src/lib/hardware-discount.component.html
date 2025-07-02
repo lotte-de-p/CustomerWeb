@@ -1,0 +1,55 @@
+<tg-login [scopes]="scope" (componentCanRender)="initAfterLoggedIn()">
+  <div class="px--xxxs" data-testid="hardware-discount">
+    @if (selectHardwareDiscountError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <wink-notification appearance="error" has-close-icon="false">
+            <wink-paragraph slot="content" appearance="body" size="small">
+              {{ (selectHardwareDiscountError$ | async)! | translate }}
+            </wink-paragraph>
+          </wink-notification>
+        </div>
+      </div>
+    } @else {
+      @if (selectHardwareDiscountLoading$ | async) {
+        <div class="display--flex--md">
+          <div class="col-1 mb--m mr--m p--n">
+            <div class="skeleton skeleton--basic skeleton--container p--m mt--l--md"></div>
+          </div>
+          <div class="col-9 mb--m mr--m p--n">
+            <div class="skeleton skeleton--basic skeleton--container p--m mt--l--md"></div>
+          </div>
+          <div class="col-2 mb--m mr--m p--n">
+            <div class="skeleton skeleton--basic skeleton--container p--m mt--l--md"></div>
+          </div>
+        </div>
+        <div class="col-12 p--n">
+          <div class="skeleton skeleton--basic skeleton--container p--m mt--l--md"></div>
+        </div>
+      }
+      @if ((selectHardwareDiscountLoading$ | async) === false) {
+        <tg-discount-overview
+          [data]="(selectHardwareDiscountOverview$ | async)!"
+          [useDiscountLink]="useDiscountLink"
+          [termsConditionsLink]="termsConditionsLink"
+          (analyticsData)="sendAnalyticsEvent($event)"></tg-discount-overview>
+        @for (discountdetails of usedDiscounts; track discountdetails; let first = $first; let last = $last) {
+          @if (first) {
+            <h4 data-testid="hardware-discount-header-in-use" class="heading--nomargin pb--xs pt--xxxl--md pt--l">
+              {{ 'ng.hardware-discount.in-use-title' | translate }}
+            </h4>
+          }
+          <tg-discount-details
+            [data]="discountdetails!"
+            [isLast]="last"
+            (analyticsData)="sendAnalyticsEvent($event)"></tg-discount-details>
+          @if (last) {
+            <tg-additional-discount-info
+              (analyticsData)="sendAnalyticsEvent($event)"
+              [hardwareInvoicesLink]="hardwareInvoicesLink"></tg-additional-discount-info>
+          }
+        }
+      }
+    }
+  </div>
+</tg-login>

@@ -1,0 +1,17 @@
+{
+  "name": "demo-shared-util",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/foundation/demo/shared/util/src",
+  "prefix": "tg-demo",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/foundation/demo/shared/util/**/*.ts", "libs/foundation/demo/shared/util/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:util", "scope:demo-shared", "scope:demo-mfe"]
+}

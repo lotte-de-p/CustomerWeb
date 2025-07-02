@@ -1,0 +1,53 @@
+{
+  "name": "base-payments-topup",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/base-payments/topup/feature-topup/src",
+  "prefix": "tg-base-payments-topup",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/base-payments/topup/feature-topup/**/*.ts",
+          "libs/base-payments/topup/feature-topup/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/base-payments/topup/feature-topup/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "topup-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/base-payments/topup/feature-topup/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "topup-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/base-payments/topup/feature-topup/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "topup-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:base-payments-topup", "scope:topup-mfe"]
+}

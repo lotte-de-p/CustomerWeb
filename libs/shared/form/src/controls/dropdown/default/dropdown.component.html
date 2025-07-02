@@ -1,0 +1,27 @@
+<div class="form-group">
+  <div *ngIf="customLabel">
+    <div class="{{ labelStyle }}">
+      <label class="text-flow--label" for="{{ key }}">{{ getLabel() | translate }}</label>
+    </div>
+  </div>
+  <div class="select-dropdown-section" style="border-bottom: 0">
+    <select
+      (ngModelChange)="updateValue($event)"
+      [(ngModel)]="value"
+      class="form-control select-dropdown"
+      id="{{ key }}"
+      name="{{ key }}"
+      required="required">
+      <option class="placeholder-option" [hidden]="!showPlaceHolder" selected value="">
+        {{ getPlaceholder() | translate }}
+      </option>
+      <option *ngFor="let option of optionList; let i = index" value="{{ option.value }}">
+        {{ option.label }}
+      </option>
+    </select>
+    <div class="icon icon-chevron-down position--absolute text--m text-weight--g"></div>
+    <div class="formErrorInput Form__input__invalid-message" *ngIf="error">
+      {{ getText() | translate }}
+    </div>
+  </div>
+</div>

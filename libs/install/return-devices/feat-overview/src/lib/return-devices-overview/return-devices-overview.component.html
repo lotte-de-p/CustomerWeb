@@ -1,0 +1,102 @@
+<tg-login data-cy="return-devices-overview" [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <ng-template #returnDevicesOverviewSkeleton>
+    <tg-return-devices-skeleton></tg-return-devices-skeleton>
+  </ng-template>
+  <ng-container *ngIf="selectDeviceDetailsLoaded$ | async; else returnDevicesOverviewSkeleton">
+    <ng-container
+      *ngrxLet="{
+        returnDevices: returnDevices$,
+        returnLabelByteArray: returnLabelByteArray$,
+        returnDevicesError: returnDevicesFailure$
+      } as vm">
+      <app-message [messageGroupName]="'return-devices'"></app-message>
+      @if (showDialog) {
+        <tg-return-devices-print-return-label-dialog
+          (printClick)="print()"
+          (downloadClick)="download(vm.returnLabelByteArray)"
+          (closeClick)="close()"></tg-return-devices-print-return-label-dialog>
+      }
+      <div [ngClass]="{ 'line-selector--header': isBaseCustomer }">
+        <div
+          class="display--flex mb--m flex-direction--row--md pb--l align-items--center"
+          [ngClass]="{ 'justify-content--normal--md justify-content--between pt--m--md': isBaseCustomer }">
+          <div
+            [ngClass]="{
+              'line-selector--title mt-0 mb-0': isBaseCustomer,
+              'line-selector-telenet--title': !isBaseCustomer
+            }"
+            class="text-flow--text word-break--ellipsis"
+            [attr.data-cy]="'address-value'">
+            @if (selectedAddressLine) {
+              {{ selectedAddressLine | formatAddress }}
+            }
+          </div>
+          <ng-container *ngrxLet="returnDevicesAddressLines$; let returnDevicesAddressLines">
+            @if (returnDevicesAddressLines.length > 1) {
+              <span
+                [ngClass]="{
+                  'line-selector--open text-font-family--t5': isBaseCustomer,
+                  'line-selector-telenet--open': !isBaseCustomer
+                }"
+                class="link ml--xxs text-weight--l cursor--pointer"
+                (click)="openAddressSelection()"
+                href="javascript:void(0)"
+                [attr.data-cy]="'address-selector-click'"
+                >{{ 'ng.return-devices.select.address' | translate }}
+              </span>
+              <tg-return-devices-address-selector
+                [isBaseCustomer]="isBaseCustomer"
+                [returnDevicesAddressLines]="returnDevicesAddressLines"
+                [selectedAddressLine]="selectedAddressLine"
+                [showMenu]="showMenu"
+                (closeMenu)="closeMenu()"
+                (addressLineSelected)="onSelectAddressLine($event)"></tg-return-devices-address-selector>
+            }
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="my--l--md m--m pb--xxl mx--n--md">
+        <div
+          class="return-devices m--auto"
+          [ngClass]="{ 'px--m px--n--md': isBaseCustomer, 'px--xxxs': !isBaseCustomer }">
+          <div class="p--n m--auto">
+            @if (!vm.returnDevicesError) {
+              <tg-return-devices-header
+                [returnDevices]="vm.returnDevices"
+                (printReturnLabelClick)="showReturnLabelDialog()"
+                [clickPushToAnalytics]="{
+                  attributeName: 'return label button',
+                  eventName: DatalayerEventNames.BUTTON_CLICKED,
+                  messageGroupName: messageGroupName
+                }"></tg-return-devices-header>
+
+              <div class="pt--l" data-cy="return-devices-overview-details">
+                @for (device of vm.returnDevices; track device.serialNumber; let i = $index) {
+                  <tg-return-devices-detail
+                    [attr.data-cy]="'return-devices-overview-detail-' + i"
+                    [device]="device"
+                    [messageGroupName]="messageGroupName"
+                    (printReturnLabelClick)="showReturnLabelDialog()"
+                    (toggleDeviceClick)="toggleDevice($event)"
+                    [imagePath]="imagePath"></tg-return-devices-detail>
+                }
+              </div>
+
+              <tg-return-devices-footer
+                [returnPointUrl]="returnPointUrl"
+                [telenetStoreUrl]="telenetStoreUrl"
+                [imagePath]="imagePath"
+                [isBaseCustomer]="isBaseCustomer"
+                [messageGroupName]="messageGroupName"
+                (printReturnLabelClick)="showReturnLabelDialog()">
+              </tg-return-devices-footer>
+            }
+          </div>
+        </div>
+      </div>
+
+      <iframe id="printReturnLabel" #returnLabelIframe class="display--none"></iframe>
+    </ng-container>
+  </ng-container>
+</tg-login>

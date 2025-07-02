@@ -1,0 +1,21 @@
+<div class="cmp-accordion__item overflow--hidden">
+  <div class="cmp-accordion__header" (click)="toggle()">
+    <button
+      [attr.data-testid]="'accordion-button'"
+      class="cmp-accordion__button background-transparent width--full border-none py--xs px--xxxs"
+      [attr.aria-expanded]="expanded"
+      [ngClass]="{ 'cmp-accordion__button--expanded': expanded, 'cursor--pointer': isCollapsible }">
+      <div class="display--flex row width--full align-items--center m--n text-align--left">
+        <ng-content select="[accordion-header]"></ng-content>
+        <div *ngIf="isCollapsible" class="col--1 pl--n px--s">
+          <i
+            class="fl-right cmp-accordion__icon icon icon-chevron-down icon-no-size-override icon-md"
+            [attr.data-testid]="'accordion-chevron'"></i>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="overflow-hidden px--xxs accordion__item" #content>
+    <ng-content select="[accordion-content]"></ng-content>
+  </div>
+</div>

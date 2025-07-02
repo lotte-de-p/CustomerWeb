@@ -1,0 +1,1 @@
+{"version":3,"file":"message-bus.service.d.ts","sourceRoot":"","sources":["../../../src/sales/service/message-bus.service.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,aAAa,EAAE,MAAM,MAAM,CAAC;;AAGrC,qBAGa,iBAAiB;IAC5B,WAAW,yBAAqC;yCADrC,iBAAiB;6CAAjB,iBAAiB;CAE7B;AAED,MAAM,WAAW,OAAO;IACtB,IAAI,EAAE,MAAM,CAAC;IACb,aAAa,EAAE,MAAM,CAAC;CACvB"}

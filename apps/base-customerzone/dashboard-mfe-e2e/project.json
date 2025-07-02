@@ -1,0 +1,59 @@
+{
+  "name": "mybase-dashboard-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/base-customerzone/dashboard-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "extractLicenses": false,
+      "sourceMap": true,
+      "namedChunks": true,
+      "vendorChunk": true,
+      "customWebpackConfig": {
+        "path": "./coverage.webpack.ts"
+      },
+      "options": {
+        "cypressConfig": "apps/base-customerzone/dashboard-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "mybase-dashboard-mfe:serve:storybook",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mybase-dashboard-mfe:storybook:ci"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/base-customerzone/dashboard-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "mybase-dashboard-mfe:storybook",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/base-customerzone/dashboard-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "mybase-dashboard-mfe:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "mybase-dashboard-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/base-customerzone/dashboard-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:mybase-dashboard-mfe"],
+  "implicitDependencies": ["mybase-dashboard-mfe"]
+}

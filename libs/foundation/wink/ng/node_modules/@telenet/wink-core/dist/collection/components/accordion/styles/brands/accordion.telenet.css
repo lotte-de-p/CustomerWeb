@@ -1,0 +1,100 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: contents;
+}
+
+.accordion {
+  font-size: 1.6rem;
+  color: var(--semantic-color-text-default);
+  border-bottom: calc(var(--semantic-border-sm) * 1rem) solid var(--semantic-color-border-subtle);
+}
+.accordion [role=heading] {
+  font-family: telenetalbra-bold, arial, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.accordion [role=heading] .accordion-title {
+  display: inline-flex;
+  gap: calc(var(--semantic-spacing-lg) * 1rem);
+}
+.accordion-trigger {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: calc(var(--semantic-spacing-lg) * 1rem);
+  width: 100%;
+  padding: calc(var(--semantic-spacing-lg) * 1rem) 0 calc(var(--semantic-spacing-lg) * 1rem) 0;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+.accordion-trigger:focus-visible {
+  outline-offset: 0.1rem;
+  outline: 0.2rem solid var(--semantic-color-border-focus);
+  border-radius: 0.1rem;
+}
+.accordion-trigger[aria-expanded=true] .accordion-icon {
+  transform: rotate(180deg);
+}
+.accordion-icon {
+  transition: all 0.3s ease;
+}
+.accordion .accordion-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.accordion .accordion-panel > div {
+  min-height: 0;
+  padding-right: calc(var(--semantic-icon-md) * 1rem);
+}
+.accordion .accordion-panel > div.with-icon {
+  padding-left: calc(var(--semantic-spacing-lg) * 1rem + var(--semantic-icon-md) * 1rem);
+}
+.accordion .accordion-panel > div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(var(--semantic-spacing-lg) * 1rem);
+}
+.accordion .accordion-panel[aria-hidden=false] {
+  grid-template-rows: 0fr;
+}

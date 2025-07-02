@@ -1,0 +1,22 @@
+{
+  "extends": "<%= offsetFromRoot %>tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["node"],
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "../<%= mfeName %>/**/*.ts",
+    "../<%= mfeName %>/**/*.js"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInputAccessModifiers": true
+  }
+}

@@ -1,0 +1,6 @@
+export var ScreenType;
+(function (ScreenType) {
+    ScreenType[ScreenType["MOBILE"] = 0] = "MOBILE";
+    ScreenType[ScreenType["DESKTOP"] = 1] = "DESKTOP";
+})(ScreenType || (ScreenType = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVuLXR5cGUuZW51bS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9lbnVtcy9zY3JlZW4tdHlwZS5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBTixJQUFZLFVBR1g7QUFIRCxXQUFZLFVBQVU7SUFDcEIsK0NBQU0sQ0FBQTtJQUNOLGlEQUFPLENBQUE7QUFDVCxDQUFDLEVBSFcsVUFBVSxLQUFWLFVBQVUsUUFHckIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBTY3JlZW5UeXBlIHtcbiAgTU9CSUxFLFxuICBERVNLVE9QLFxufVxuIl19

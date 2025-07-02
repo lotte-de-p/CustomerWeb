@@ -1,0 +1,199 @@
+{
+  "name": "entertainment-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "tg-entertainment",
+  "sourceRoot": "apps/activate/entertainment-mfe/src",
+  "tags": ["type:app", "scope:entertainment-mfe"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/entertainment-mfe",
+        "index": "apps/activate/entertainment-mfe/src/index.html",
+        "main": "apps/activate/entertainment-mfe/src/main.ts",
+        "polyfills": ["apps/activate/entertainment-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/activate/entertainment-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/activate/entertainment-mfe/src/version.json",
+          "apps/activate/entertainment-mfe/src/favicon.ico",
+          "apps/activate/entertainment-mfe/src/assets"
+        ],
+        "styles": ["apps/activate/entertainment-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/activate/entertainment-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/activate/entertainment-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/activate/entertainment-mfe/src/version.json",
+            "apps/activate/entertainment-mfe/src/favicon.ico",
+            "apps/activate/entertainment-mfe/src/assets",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "buildOptimizer": false,
+          "optimization": false,
+          "customWebpackConfig": {
+            "path": "apps/activate/entertainment-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "entertainment-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "entertainment-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4212,
+        "publicHost": "http://localhost:4212"
+      }
+    },
+    "serve-ssl": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "entertainment-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "entertainment-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200,
+        "host": "local.telenet.be",
+        "buildTarget": "entertainment-mfe:build",
+        "ssl": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "entertainment-mfe:build",
+        "extraWebpackConfig": "apps/activate/entertainment-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/activate/entertainment-mfe/src/**/*.{ts,js,html}"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/activate/entertainment-mfe/.storybook",
+        "browserTarget": "entertainment-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/activate/entertainment-mfe/.storybook",
+        "browserTarget": "entertainment-mfe:build-storybook",
+        "compodoc": false,
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/entertainment-mfe",
+        "configDir": "apps/activate/entertainment-mfe/.storybook",
+        "browserTarget": "entertainment-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/activate/entertainment-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/activate/entertainment-mfe/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "entertainment-mfe:build-storybook",
+        "staticFilePath": "dist/storybook/entertainment-mfe"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "entertainment-mfe:build-storybook:ci"
+        }
+      }
+    }
+  }
+}

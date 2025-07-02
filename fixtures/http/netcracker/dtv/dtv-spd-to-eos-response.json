@@ -1,0 +1,27 @@
+{
+  "feasibilityCheckRequired": true,
+  "customerId": "9161205125513994012",
+  "installation": {
+    "location": {
+      "id": "9163104861913998899"
+    }
+  },
+  "productIdentifier": "IDTV000009568",
+  "salesOrderId": "9163104861913998887",
+  "prices": {
+    "taxIncl": {
+      "currency": "Euro",
+      "rentalCost": "2,55",
+      "swapCost": "50,00"
+    },
+    "taxExcl": {
+      "currency": "Euro",
+      "rentalCost": "2,55",
+      "swapCost": "50,00"
+    }
+  },
+  "count": {
+    "SPD": "2",
+    "EOS": "2"
+  }
+}

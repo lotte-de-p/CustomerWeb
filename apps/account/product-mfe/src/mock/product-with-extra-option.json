@@ -1,0 +1,15 @@
+{
+  "options": [
+    {
+      "label": "Giga Speedboost",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/IOPT0005",
+      "status": "ACTIVE",
+      "isIncludedOption": false,
+      "isLineLevelProduct": false,
+      "productType": "internet",
+      "productInfo": {
+        "weight": 575
+      }
+    }
+  ]
+}

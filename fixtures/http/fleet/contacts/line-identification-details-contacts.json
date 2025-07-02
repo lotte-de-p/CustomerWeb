@@ -1,0 +1,27 @@
+{
+  "contactId": "9160413175481231123",
+  "contactInfo": {
+    "emails": [
+      {
+        "id": "9160417548613989657",
+        "value": "test@staff.telenet.be"
+      }
+    ],
+    "phones": [
+      {
+        "id": "9160417547613989657",
+        "value": "0489012991"
+      }
+    ]
+  },
+  "individual": {
+    "epithet": "Mrs.",
+    "firstName": "test first name",
+    "lastName": "test last name"
+  },
+  "language": "NL",
+  "birthDate": "1991-05-12",
+  "legalAddress": {
+    "id": "9150308808513474144"
+  }
+}

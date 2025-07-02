@@ -1,0 +1,77 @@
+{
+  "url": "http://localhost:8080/public/api/appointments-service/v1/appointments?status=OPEN",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "appointmentId": "TI_1518555414_20230731_112415",
+      "appointmentType": "MOVE",
+      "appointmentSubType": "",
+      "appointmentStatus": "NEW",
+      "appointmentDate": "2023-10-10",
+      "customer": {
+        "contactName": "Lucas",
+        "language": "NL",
+        "notificationMethod": "SMS",
+        "notificationContact": "0465198787"
+      },
+      "cableAppointment": false,
+      "fiberAppointment": false,
+      "salesOrderId": "9167375606013226000",
+      "cost": "102.8500",
+      "address": {
+        "locationId": "9169507398513822922",
+        "street": "Pareipoelstraat",
+        "houseNumber": "12",
+        "boxNumber": "",
+        "zip": "2800",
+        "city": "Mechelen",
+        "countryCode": "BE",
+        "country": "België"
+      },
+      "products": [
+        {
+          "specurl": "http://localhost:8080/omapi/public/product/TWOP0012"
+        }
+      ],
+      "installationDateAtNewAddress": ""
+    },
+    {
+      "appointmentId": "TI_1518555414_20230731_112499",
+      "appointmentType": "INSTALL",
+      "appointmentSubType": null,
+      "appointmentStatus": "NEW",
+      "appointmentDate": "2023-10-12",
+      "customer": {
+        "contactName": "Test Romeijnder",
+        "language": "NL",
+        "notificationMethod": "EMAIL",
+        "notificationContact": "test@info.be"
+      },
+      "timeSlot": {
+        "periodOfDay": "MI",
+        "startTime": "10:00",
+        "endTime": "14:30"
+      },
+      "cableAppointment": false,
+      "fiberAppointment": false,
+      "salesOrderId": "9167375606013226000",
+      "cost": "102.8500",
+      "address": {
+        "street": "Pareipoelstrt",
+        "houseNumber": "126",
+        "boxNumber": "",
+        "zip": "2800",
+        "city": "Mechelen",
+        "countryCode": "BE",
+        "country": "België"
+      },
+      "products": [
+        {
+          "specurl": "http://localhost:8080/omapi/public/product/TWOP0012"
+        }
+      ],
+      "installationDateAtNewAddress": "2023-09-05T22:00:00Z"
+    }
+  ]
+}

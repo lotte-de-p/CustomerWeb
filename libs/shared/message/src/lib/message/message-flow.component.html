@@ -1,0 +1,12 @@
+<ng-container *ngIf="getMessages().length > 0; else noErrorTemplate">
+  <div
+    [attr.data-cy]="'app-message-flow'"
+    *ngFor="let message of getMessages()"
+    class="notification notification--{{ message.type }} notification--{{ message.type }}--flow">
+    <span class="icon-{{ message.subtype }}"></span>
+    <div [innerHTML]="getTranslatedLabel(message)"></div>
+  </div>
+</ng-container>
+<ng-template #noErrorTemplate>
+  <ng-content></ng-content>
+</ng-template>

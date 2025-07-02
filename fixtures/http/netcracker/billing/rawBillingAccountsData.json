@@ -1,0 +1,172 @@
+[
+  {
+    "id": "9155674120813369086",
+    "accountNumber": "999977610",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "37518",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308807013313912",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "6",
+      "postalCode": "2800"
+    },
+    "contactInfo": {
+      "firstName": "harshit",
+      "lastName": "sri"
+    },
+    "email": {
+      "id": "9155674124813368985",
+      "value": "test12@tester.com"
+    },
+    "mobile": {
+      "id": "9155674123813368985",
+      "value": "0412345678"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS"
+  },
+  {
+    "id": "9155674120813369080",
+    "accountNumber": "999977610",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "37518",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308807013313912",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "6",
+      "postalCode": "2800"
+    },
+    "contactInfo": {
+      "firstName": "harshit",
+      "lastName": "sri"
+    },
+    "email": {
+      "id": "9155674124813368985",
+      "value": "test12@tester.com"
+    },
+    "mobile": {
+      "id": "9155674123813368985",
+      "value": "0412345678"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS",
+    "isEligibleForManualPayment": true,
+    "hasFailedDDPayment": true
+  },
+  {
+    "id": "9155674120813369081",
+    "accountNumber": "999977610",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "37518",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308807013313912",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "6",
+      "postalCode": "2800"
+    },
+    "contactInfo": {
+      "firstName": "harshit",
+      "lastName": "sri"
+    },
+    "email": {
+      "id": "9155674124813368985",
+      "value": "test12@tester.com"
+    },
+    "mobile": {
+      "id": "9155674123813368985",
+      "value": "0412345678"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS",
+    "isEligibleForManualPayment": false,
+    "hasFailedDDPayment": true
+  },
+  {
+    "id": "9155674120813369082",
+    "accountNumber": "999977610",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "37518",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308807013313912",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "6",
+      "postalCode": "2800"
+    },
+    "contactInfo": {
+      "firstName": "harshit",
+      "lastName": "sri"
+    },
+    "email": {
+      "id": "9155674124813368985",
+      "value": "test12@tester.com"
+    },
+    "mobile": {
+      "id": "9155674123813368985",
+      "value": "0412345678"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS",
+    "isEligibleForManualPayment": true,
+    "hasFailedDDPayment": false
+  }
+]

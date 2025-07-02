@@ -1,0 +1,23 @@
+<form action="" [formGroup]="addressForm" autocomplete="off">
+  <div class="col-12 p--n">
+    <tg-zipcode-input-field [messageGroup]="messageGroupName" formControlName="cityOrZipCode"> </tg-zipcode-input-field>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-7">
+      <tg-street-input-field [messageGroup]="messageGroupName" [geoId]="municipalityGeoId" formControlName="street">
+      </tg-street-input-field>
+    </div>
+    <div class="col-sm-3 col-6">
+      <tg-house-number-input-field
+        formControlName="houseNumber"
+        [messageGroup]="messageGroupName"
+        [geoId]="municipalityGeoId"
+        [street]="street">
+      </tg-house-number-input-field>
+    </div>
+    <div class="col-sm-2 col-6">
+      <tg-box-number-input-field formControlName="boxNumber" [messageGroup]="messageGroupName">
+      </tg-box-number-input-field>
+    </div>
+  </div>
+</form>

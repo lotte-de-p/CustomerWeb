@@ -1,0 +1,43 @@
+<div class="form-group">
+  <div *ngIf="!hideLabel" [ngClass]="{ labelStyle: this.labelStyle, 'text-flow--label': !labelStyle }">
+    <label for="{{ key }}">{{ getLabel() | translate }}</label>
+    <div class="tooltip position--relative display--inline-block">
+      <div
+        class="tooltip__icon-section display--flex flex-direction--row--sm flex-direction--row-reverse align-items--center justify-content--center cursor--pointer my--xxxs">
+        <i class="icon icon-information-shape"></i>
+      </div>
+      <div class="tooltip__info-section tooltip__info-section__arrow-left tooltip__info-section__auto-width">
+        <div class="horizontal-center-align">
+          <div class="info-section__description">
+            <div class="info-section__description__text">
+              {{ getTooltip() | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input
+    id="{{ key }}"
+    type="text"
+    class="Form__input form-control"
+    [required]="required"
+    [ngClass]="{ 'form__input--disabled': disabled, 'form__input--error': error }"
+    mask="{{ mask && mask.maskValue }}"
+    [dropSpecialCharacters]="mask && mask.dropSpecialCharacters"
+    name="{{ key }}"
+    [prefix]="prefix || ''"
+    (blur)="onBlur()"
+    (ngModelChange)="updateValue($event)"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''"
+    [class.ng-invalid-custom]="error"
+    maxlength="{{ maxLength }}" />
+  <div
+    [attr.data-cy]="messageGroup + '.error.' + key"
+    class="formErrorInput Form__input__invalid-message"
+    *ngIf="error">
+    {{ getText() | translate }}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 127 124" xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd">
+		<g transform="translate(-801 -404)">
+			<g transform="translate(802 405)">
+				<path d="m29.234 111.01v-80.348l2.9035-3.9763m3.8435-5.2636l9.801-13.422h63.089v67.987m0-29.241v74.254h-79.637v-46.11" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m27.218 31.5h47.379" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m75.101 120v-85.954" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<ellipse cx="90.726" cy="58" rx="11.089" ry="11" stroke="#8C8D8E" stroke-linejoin="round" />
+				<path d="m91.23 49v17" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m82.661 58.5h17.137" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<polyline points="101.81 109 101.81 121 79.637 121 79.637 109 79.637 109" stroke="#979797" stroke-linejoin="round" stroke-width="1.52" />
+				<path d="m79.637 116.5h22.177" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m80.645 111.5h22.177" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m80.645 108.5h21.169" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m101.81 109v-20.645c0-6.2711-4.9646-11.355-11.089-11.355-6.1241 0-11.089 5.0837-11.089 11.355v20.645" stroke="#979797" stroke-linejoin="round" stroke-width="1.2" />
+				<path d="m80.645 87.5h20.161" stroke="#979797" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5" />
+				<path d="m96.169 87v21m-10.887 0v-21" fill="#8C8D8E" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m90.222 100c0.83511 0 1.5121-0.67157 1.5121-1.5s-0.67699-1.5-1.5121-1.5-1.5121 0.67157-1.5121 1.5 0.67699 1.5 1.5121 1.5z" fill="#8C8D8E" />
+				<path d="m74.597 84v2h-23.215-2.5716-2.5199-22.016v-2h-2.0968v-2h52.419v2z" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="1.3" />
+				<path d="m74.597 38v2h-50.323v-2h-2.0968v-2h52.419v2z" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="1.3" />
+				<polyline points="79.585 27 70.615 27 70.615 25 69.556 25 69.556 23 90.726 23" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
+				<polyline transform="translate(97.278 25) scale(-1 1) translate(-97.278 -25)" points="111.9 27 83.72 27 83.72 25 82.661 25 82.661 23 103.84 23" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
+				<rect x="34.274" y="46" width="14.113" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="54.435" y="46" width="14.113" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m34.274 57.5h11.597" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m53.427 57.5h11.089" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="33.266" y="92" width="34.274" height="29" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m48.387 115.5h5.0403" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m69.556 23l20.161-23 20.161 23h-40.323zm9.9083-3.3034l10.253-11.697 10.169 11.6" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
+				<path d="m14.097 103h1.0403c1.1046 0 2 0.89543 2 2v16h-5.0403v-16c0-1.1046 0.89543-2 2-2z" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="13.105" y="51" width="3.0242" height="52" stroke="#979797" />
+				<path d="m12.097 48c0 1.6569 1.1283 3 2.5202 3 1.3918 0 2.5202-1.3431 2.5202-3" stroke="#979797" stroke-width="1.5" />
+				<path d="m9.375 47.5h11.419" stroke="#979797" stroke-linecap="round" stroke-width="2" />
+				<path d="m0 121.5h125" stroke="#8C8D8E" stroke-linecap="round" stroke-width="1.5" />
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,37 @@
+{
+  "name": "sales-etf-feat-etf",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/etf/feat-etf/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/etf/feat-etf/**/*.ts", "libs/sales/etf/feat-etf/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/etf/feat-etf/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/etf/feat-etf/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "headless": false,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-etf", "scope:sales-mfe"]
+}

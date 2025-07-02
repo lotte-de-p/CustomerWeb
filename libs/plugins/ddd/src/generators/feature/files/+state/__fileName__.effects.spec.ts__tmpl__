@@ -1,0 +1,56 @@
+import { TestBed } from '@angular/core/testing';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { Action } from '@ngrx/store';
+import { Observable, of } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
+import { <%= dataAccessNameCapitalized %>Service } from '../<%= name %>.service';
+
+import * as <%= propertyName %>Actions from './<%= fileName %>.actions';
+import { <%= effectsClassName %> } from './<%= fileName %>.effects';
+
+describe('<%= effectsClassName %>', () => {
+    let effects: <%= effectsClassName %>;
+    let actions$: Observable<Action>;
+    let <%= propertyName %>Service: jest.Mocked<<%= dataAccessNameCapitalized %>Service>;
+
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        providers: [
+          <%= effectsClassName %>,
+          provideMockStore(),
+          provideMockActions(() => actions$),
+          {
+            provide: <%= dataAccessNameCapitalized %>Service,
+            useValue: {
+              get<%= dataAccessNameCapitalized %>List: jest.fn(),
+            },
+          },
+        ],
+      });
+
+      jest.spyOn(console, 'log').mockImplementation(jest.fn);
+      effects = TestBed.inject(<%= effectsClassName %>);
+      <%= propertyName %>Service = TestBed.inject(<%= dataAccessNameCapitalized %>Service) as jest.Mocked<<%= dataAccessNameCapitalized %>Service>;
+    });
+
+    describe('<%= dataAccessNameCapitalized %>List$', () => {
+      describe(`when service call is successful`, () => {
+        it('should dispatch get<%= dataAccessNameCapitalized %>ListSuccessAction ', (done) => {
+          const mock<%= dataAccessNameCapitalized %>ListEntries = [
+            {
+              id: '1',
+              name: 'Test name'
+            },
+          ];
+          <%= propertyName %>Service.get<%= dataAccessNameCapitalized %>List.mockReturnValue(of(mock<%= dataAccessNameCapitalized %>ListEntries));
+
+          actions$ = of(<%= propertyName %>Actions.get<%= dataAccessNameCapitalized %>List());
+
+          effects.<%= propertyName %>List$.subscribe((action) => {
+            expect(action).toEqual(<%= propertyName %>Actions.get<%= dataAccessNameCapitalized %>ListSuccessAction({ <%= propertyName %>List: mock<%= dataAccessNameCapitalized %>ListEntries }));
+            done();
+          });
+        });
+      });
+    });
+});

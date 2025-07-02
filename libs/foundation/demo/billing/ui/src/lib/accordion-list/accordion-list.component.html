@@ -1,0 +1,23 @@
+<div *ngIf="items.length === 0" class="text-align--center">There are no invoices available.</div>
+<div class="cmp-accordion theme--inherit" *ngIf="items.length > 0">
+  <ng-container *ngFor="let item of items; let idx = index; trackBy: accordionItemTrackBy">
+    <div [ngClass]="{ 'background-white': isPanelRendition }">
+      <tg-demo-accordion-item [isCollapsible]="rendition !== 'non-collapsible-panel'" [expanded]="expanded">
+        <ng-container accordion-header>
+          <ng-template
+            [ngTemplateOutlet]="accordionHeaderRef"
+            [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
+        </ng-container>
+        <ng-container accordion-content *ngIf="accordionContentRef">
+          <ng-template
+            [ngTemplateOutlet]="accordionContentRef"
+            [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
+        </ng-container>
+      </tg-demo-accordion-item>
+    </div>
+    <ng-container *ngIf="isNotLastItem(idx)">
+      <div [ngClass]="{ 'pb--xs': isPanelRendition, 'pb--xxs': !isPanelRendition }"></div>
+      <div [ngClass]="{ 'divider--xxs': rendition === 'default' }"></div>
+    </ng-container>
+  </ng-container>
+</div>

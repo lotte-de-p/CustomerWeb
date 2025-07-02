@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.466" tests="2" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-08-29T07:06:11" tests="0" file="src/e2e/fleet-product/line-product-details/line-product-details.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Product Details" timestamp="2024-08-29T07:06:11" tests="1" time="0.000" failures="0">
+    <testcase name="On page load, check simcard details" time="1.308" classname="Line Product Details On page load, check simcard details">
+    </testcase>
+  </testsuite>
+  <testsuite name="On Remove options show remove options screen" timestamp="2024-08-29T07:06:12" tests="1" time="16.132" failures="1">
+    <testcase name="&quot;before each&quot; hook for &quot;when on the remove options wizard you can see which options are present now in the overview and in the options list&quot;" time="5.069" classname="Line Product Details On Remove options show remove options screen &quot;before each&quot; hook for &quot;when on the remove options wizard you can see which options are present now in the overview and in the options list&quot;">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `[data-cy=remove-options]`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `On Remove options show remo...`" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-cy=remove-options]`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `On Remove options show remo...`
+    at openRemoveOptions (webpack:///./src/e2e/fleet-product/line-product-details/line-product-details.spec.cy.ts:80:0)
+    at Context.eval (webpack:///./src/e2e/fleet-product/line-product-details/line-product-details.spec.cy.ts:63:0)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

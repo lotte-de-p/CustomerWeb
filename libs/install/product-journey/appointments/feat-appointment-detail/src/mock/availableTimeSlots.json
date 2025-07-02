@@ -1,0 +1,302 @@
+[
+  {
+    "date": "2023-10-30",
+    "timeSlots": [
+      {
+        "availabilityId": "494222085",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "20932628",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "47913535",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "2034180210",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-10-31",
+    "timeSlots": [
+      {
+        "availabilityId": "1451761764",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "727247028",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "1307256806",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "1808283189",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-01",
+    "timeSlots": [
+      {
+        "availabilityId": "902493659",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "147795740",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "262769421",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "1253506442",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-02",
+    "timeSlots": [
+      {
+        "availabilityId": "463791339",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633850",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234553",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520497",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-03",
+    "timeSlots": [
+      {
+        "availabilityId": "463791312",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633812",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234512",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520412",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-04",
+    "timeSlots": [
+      {
+        "availabilityId": "463791323",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633823",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234523",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520423",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-05",
+    "timeSlots": [
+      {
+        "availabilityId": "463791334",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633834",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234534",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520434",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-06",
+    "timeSlots": [
+      {
+        "availabilityId": "463791345",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633845",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234545",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520445",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-07",
+    "timeSlots": [
+      {
+        "availabilityId": "463791356",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633856",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234556",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520456",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-08",
+    "timeSlots": [
+      {
+        "availabilityId": "463791367",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633867",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234567",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520467",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-09",
+    "timeSlots": [
+      {
+        "availabilityId": "463791378",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633878",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234578",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520478",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  },
+  {
+    "date": "2023-11-10",
+    "timeSlots": [
+      {
+        "availabilityId": "463791389",
+        "timeSlotCode": "AM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "226633889",
+        "timeSlotCode": "MI",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "417234589",
+        "timeSlotCode": "PM",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      },
+      {
+        "availabilityId": "114520489",
+        "timeSlotCode": "DAY",
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+      }
+    ]
+  }
+]

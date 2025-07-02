@@ -1,0 +1,129 @@
+[
+  {
+    "name": "Accessories",
+    "code": "accessories",
+    "sortOrder": 8,
+    "subCategories": [
+      {
+        "name": "Cover",
+        "sortOrder": 2,
+        "code": "cover"
+      },
+      {
+        "code": "Screenprotector",
+        "sortOrder": 5
+      },
+      {
+        "name": "Headphone",
+        "sortOrder": 3,
+        "code": "headphone"
+      },
+      {
+        "name": "Charger",
+        "sortOrder": 1,
+        "code": "charger"
+      },
+      {
+        "name": "Cable",
+        "sortOrder": 4,
+        "code": "cable"
+      },
+      {
+        "code": "holder",
+        "sortOrder": 6
+      },
+      {
+        "name": "Powerbank",
+        "sortOrder": 8,
+        "code": "powerbank"
+      }
+    ]
+  },
+  {
+    "name": "Smartphone",
+    "code": "smartphone",
+    "sortOrder": 10,
+    "subCategories": [
+      {
+        "name": "Smartphone",
+        "sortOrder": 10,
+        "code": "smartphone"
+      }
+    ]
+  },
+  {
+    "name": "TV & Audio",
+    "code": "tv_audio",
+    "sortOrder": 13,
+    "subCategories": [
+      {
+        "name": "TV",
+        "sortOrder": 2,
+        "code": "tv"
+      },
+      {
+        "name": "Streaming device",
+        "sortOrder": 3,
+        "code": "streaming"
+      },
+      {
+        "name": "Radio",
+        "sortOrder": 4,
+        "code": "radio"
+      },
+      {
+        "name": "Gameconsole",
+        "sortOrder": 8,
+        "code": "gameconsole"
+      }
+    ]
+  },
+  {
+    "name": "Smartwatch",
+    "code": "smartwatch",
+    "sortOrder": 14,
+    "subCategories": [
+      {
+        "name": "Smartwatch",
+        "sortOrder": 14,
+        "code": "smartwatch"
+      }
+    ]
+  },
+  {
+    "name": "Smart home",
+    "sortOrder": 15,
+    "code": "smarthome",
+    "subCategories": [
+      {
+        "name": "Smart home",
+        "sortOrder": 15,
+        "code": "smarthome"
+      }
+    ]
+  },
+  {
+    "name": "Multimedia",
+    "sortOrder": 16,
+    "code": "multimedia",
+    "subCategories": [
+      {
+        "name": "Multimedia",
+        "sortOrder": 16,
+        "code": "multimedia"
+      }
+    ]
+  },
+  {
+    "name": "Home Office",
+    "sortOrder": 17,
+    "code": "home_office",
+    "subCategories": [
+      {
+        "name": "Tablet",
+        "sortOrder": 1,
+        "code": "tablet"
+      }
+    ]
+  }
+]

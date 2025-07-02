@@ -1,0 +1,24 @@
+<div *ngIf="simDetailsModel$ | async as simDetails">
+  <div *ngIf="simDetails.simType" class="info-section col-sm-12 col-md-7">
+    <div class="form-group">
+      <label class="default">
+        {{ 'ng.line-identification-details.sim-type.lbl' | translate }}
+      </label>
+      <p [attr.data-cy]="'simType'">{{ simTypeLabelKey | translate }}</p>
+    </div>
+  </div>
+  <div class="info-section col-sm-12 col-md-7 mt--l">
+    <div class="form-group">
+      <label class="default">
+        {{ 'ng.line-identification-details.simNumber.lbl' | translate }}
+      </label>
+      <p [attr.data-cy]="'simNumber'">{{ simDetails.sim }}</p>
+    </div>
+    <div class="form-group">
+      <label class="default">
+        {{ 'ng.line-identification-details.puk.lbl' | translate }}
+      </label>
+      <p [attr.data-cy]="'simPuk'">{{ simDetails.puk }}</p>
+    </div>
+  </div>
+</div>

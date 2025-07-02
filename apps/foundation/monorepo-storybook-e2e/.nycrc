@@ -1,0 +1,28 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+    "compact": false,
+    "merge": true,
+    "reporter": [
+      "lcovonly",
+      "cobertura",
+      "html-spa",
+      "text",
+      "json",
+      "text-summary"
+    ],
+    "check-coverage": true,
+      "exclude": [
+        "../../../**/*.spec.ts",
+        "../../../**/dist/**",
+        "../../../**/*.json",
+        "../../../**/*.mock.ts"
+      ],
+  "include": [
+  "../monorepo-storybook/**",
+  "../monorepo-storybook-e2e/**",
+  "../../../libs/**"
+  ],
+  "report-dir": "../../../coverage/apps/foundation/monorepo-storybook-e2e",
+  "cwd": "../../../"
+}

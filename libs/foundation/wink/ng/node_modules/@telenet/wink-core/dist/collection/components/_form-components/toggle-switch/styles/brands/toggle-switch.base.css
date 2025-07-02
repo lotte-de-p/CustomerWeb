@@ -1,0 +1,157 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: flex;
+  align-items: center;
+}
+:host.toggle-switch--spacebetween {
+  justify-content: space-between;
+}
+:host .toggle-switch--label {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin: 0 calc(var(--semantic-spacing-xs) * 1rem) 0 0;
+  cursor: pointer;
+  padding: 0;
+  height: 100%;
+  color: var(--semantic-color-text-default);
+}
+:host .toggle-switch--wrapper {
+  position: relative;
+}
+:host input[type=checkbox] {
+  height: 0;
+  width: 0;
+}
+:host label {
+  cursor: pointer;
+  text-indent: -999.9rem;
+  width: 5.2rem;
+  height: 3.2rem;
+  background: var(--semantic-color-background-form-default-default);
+  display: block;
+  border-radius: 2rem;
+  position: relative;
+  margin-top: -1.4rem;
+}
+:host label:before {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  left: -0.4rem;
+  width: 6rem;
+  height: 4rem;
+  cursor: pointer;
+}
+:host label:after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--semantic-color-background-surface-highlight-8);
+  border-radius: 9rem;
+  transition: 0.3s;
+}
+:host .toggle-switch--icon:hover ~ label,
+:host label:hover {
+  background: var(--semantic-color-background-form-default-hovered);
+}
+:host .toggle-switch--icon:hover {
+  cursor: pointer;
+}
+:host .toggle-switch--icon:hover ~ label:after,
+:host label:hover:after {
+  box-shadow: 0 0 0 0.8rem var(--semantic-color-background-surface-subtle-hovered);
+}
+:host input[type=checkbox]:focus ~ label {
+  outline: 0.2rem solid var(--semantic-color-border-focus);
+  outline-offset: 0.2rem;
+}
+:host input:checked ~ label {
+  background: var(--semantic-color-background-form-selected-selected);
+}
+:host input:checked ~ .toggle-switch--icon:hover ~ label,
+:host input:checked ~ label:hover {
+  background: var(--semantic-color-background-surface-action-hover);
+}
+:host input:checked ~ .toggle-switch--icon:hover ~ label:after,
+:host input:checked ~ label:after {
+  left: calc(100% - 0.5rem);
+  transform: translateX(-100%);
+}
+:host .toggle-switch--icon:active ~ label:after,
+:host label:active:after {
+  width: 2.6rem;
+}
+:host .toggle-switch--icon wink-icon {
+  --wink-icon-color: var(--semantic-color-icon-on-action);
+  position: absolute;
+  border-radius: 100%;
+  z-index: 3;
+  top: 0.75rem;
+  transition: 0.2s all;
+}
+:host .toggle-switch--icon wink-icon:nth-child(1) {
+  left: 0.75rem;
+  opacity: 1;
+}
+:host .toggle-switch--icon wink-icon:nth-child(2) {
+  left: 0.75rem;
+  opacity: 0;
+}
+:host input:checked ~ .toggle-switch--icon wink-icon {
+  z-index: 3;
+  transition: 0.2s all;
+}
+:host input:checked ~ .toggle-switch--icon wink-icon:nth-child(1) {
+  opacity: 0;
+  left: 2.7rem;
+}
+:host input:checked ~ .toggle-switch--icon wink-icon:nth-child(2) {
+  opacity: 1;
+  left: 2.7rem;
+}
+:host input[type=checkbox]:disabled,
+:host input[type=checkbox]:disabled ~ *,
+:host input[type=checkbox]:disabled ~ label:before,
+:host .toggle-switch--label--disabled {
+  opacity: calc(var(--semantic-opacity-disabled) / 10);
+  cursor: not-allowed;
+}

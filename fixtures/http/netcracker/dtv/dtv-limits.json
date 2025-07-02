@@ -1,0 +1,13 @@
+{
+  "dtv": {
+    "lineType": "SIPADAN",
+    "limits": [
+      {
+        "expenditureLimit": "unlimited"
+      }
+    ],
+    "collectionsInfo": {
+      "status": false
+    }
+  }
+}

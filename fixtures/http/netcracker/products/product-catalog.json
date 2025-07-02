@@ -1,0 +1,13 @@
+[
+  {
+    "externalProductCode": "INTF0200",
+    "specurl": "https://api.sup.telenet.be/omapi/public/product/INTF0200",
+    "profileId": "TNET.10046",
+    "labelKey": "All-Internet",
+    "productType": "internet",
+    "speedBoost": {
+      "eligible": true,
+      "profileId": "TNET.10052"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "State",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "project": {
+      "type": "string",
+      "description": "The project name to add the state to (typical the data-access project inside a domain)",
+      "alias": "p",
+      "x-prompt": "The project to add state to?"
+    },
+    "facade": {
+      "type": "boolean",
+      "default": true,
+      "description": "Should a facade be generated",
+      "alias": "f",
+      "x-prompt": "Should a facade be generated?"
+    }
+  },
+  "required": ["name", "project"]
+}

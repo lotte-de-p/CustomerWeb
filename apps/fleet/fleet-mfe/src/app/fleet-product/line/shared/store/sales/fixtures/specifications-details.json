@@ -1,0 +1,83 @@
+[
+  {
+    "product": {
+      "productid": "555_269",
+      "type": "BUNDLE",
+      "services": [
+        {
+          "servicetype": "GENERAL",
+          "experience": {
+            "experiencetype": "SURF",
+            "weight": 10
+          }
+        }
+      ],
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Basic Internet & Telenet TV",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Basic Internet & Telenet TV",
+          "logo": ""
+        }
+      ]
+    }
+  },
+  {
+    "product": {
+      "productid": "588_269",
+      "type": "BUNDLE",
+      "services": [
+        {
+          "servicetype": "GENERAL",
+          "experience": {
+            "experiencetype": "SURF",
+            "weight": 10
+          }
+        }
+      ],
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "All Internet 150 & Telenet TV",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "All Internet 150 & Telenet TV",
+          "logo": ""
+        }
+      ]
+    }
+  },
+  {
+    "product": {
+      "productid": "589_269",
+      "type": "BUNDLE",
+      "services": [
+        {
+          "servicetype": "GENERAL",
+          "experience": {
+            "experiencetype": "SURF",
+            "weight": 10
+          }
+        }
+      ],
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Internet Fiber 200 & Telenet TV",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Internet Fiber 200 & Telenet TV",
+          "logo": ""
+        }
+      ]
+    }
+  }
+]

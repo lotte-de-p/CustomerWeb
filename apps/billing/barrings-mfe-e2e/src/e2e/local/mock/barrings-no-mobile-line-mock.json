@@ -1,0 +1,7 @@
+[
+  {
+    "code": "ODATA-ERR-001",
+    "cause": "ODATA Error - 500 Internal Server Error: \"{\"details\":\"Error id 8001b072-c9a2-4aaf-bc4b-86ab94a0c4fb-250\",\"stack\":\"\"}\"",
+    "correlationId": "e007d41b-c3e1-4ee1-a549-a57b2c8ddefe"
+  }
+]

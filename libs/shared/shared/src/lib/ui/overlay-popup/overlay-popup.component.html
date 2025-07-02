@@ -1,0 +1,27 @@
+<div class="overlay">
+  <div class="overlay__mask"></div>
+  <div class="overlay__section">
+    <div class="overlay__section__content p--m p--l--md animation--slide-down-to-screen">
+      @if (enableClose) {
+        <div class="overlay__section__content__close">
+          <div class="icon icon-cross" (click)="this.closeButtonClicked.emit()"></div>
+        </div>
+      }
+      <div class="text-align--left">
+        <h5 *ngIf="title" class="heading--notopmargin overlay__section__content__title">{{ title }}</h5>
+        <div *ngIf="subtitle" class="overlay__section__content__sub-title">{{ subtitle }}</div>
+        <div class="mt--xs">
+          <div *ngIf="content" class="overlay__section__content__description">{{ content }}</div>
+        </div>
+      </div>
+      <div class="overlay__section__content__action">
+        <a *ngIf="secondaryButtonText" (click)="this.secondaryButtonClicked.emit()" class="button button--secondary">{{
+          secondaryButtonText
+        }}</a>
+        <a *ngIf="primaryButtonText" (click)="this.primaryButtonClicked.emit()" class="button button--primary">{{
+          primaryButtonText
+        }}</a>
+      </div>
+    </div>
+  </div>
+</div>

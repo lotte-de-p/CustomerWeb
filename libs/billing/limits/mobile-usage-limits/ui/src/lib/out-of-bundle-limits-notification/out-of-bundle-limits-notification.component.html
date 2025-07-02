@@ -1,0 +1,18 @@
+<div>
+  <div [attr.data-cy]="'mobile-usage-limits-out-of-bundle-current-limit'" class="font--body-small color-shade_72">
+    {{ 'ng.mobile-usage-limits.lbl.out-of-bundle-current-limit' | translate }}:
+  </div>
+  @if (isOutOfBundleNoLimits) {
+    <div
+      [attr.data-cy]="'mobile-usage-limits-out-of-bundle-current-limit-price'"
+      class="heading--5 heading--nomargin text-weight--xl">
+      {{ 'ng.mobile-usage-limits.lbl.no-limits' | translate }}
+    </div>
+  } @else {
+    <div
+      [attr.data-cy]="'mobile-usage-limits-out-of-bundle-current-limit-price'"
+      class="heading--5 heading--nomargin text-weight--xl">
+      {{ 'ng.mobile-usage-limits.lbl.limit' | translate: { value: outOfBundleLimitValue } }}
+    </div>
+  }
+</div>

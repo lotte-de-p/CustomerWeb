@@ -1,0 +1,1 @@
+{"version":3,"file":"timeslot-list.model.d.ts","sourceRoot":"","sources":["../../src/models/timeslot-list.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,qBAAqB,CAAC;AAEjD,qBAAa,cAAc;IACzB,cAAc,EAAE,UAAU,EAAE,CAAM;IAClC,iBAAiB,CAAC,EAAE,OAAO,CAAC;IAE5B,gBAAgB,IAAI,UAAU;IAK9B,eAAe,IAAI,UAAU;IAK7B,OAAO,CAAC,eAAe;CAQxB"}

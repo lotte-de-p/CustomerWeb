@@ -1,0 +1,16 @@
+{
+  "multipleSkus": [
+    {
+      "sku": "114100002",
+      "inStock": true,
+      "lastUpdated": "2020-08-07T10:30:03",
+      "hasError": false
+    },
+    {
+      "sku": "114100001",
+      "inStock": false,
+      "lastUpdated": "2020-08-07T10:30:03",
+      "hasError": true
+    }
+  ]
+}

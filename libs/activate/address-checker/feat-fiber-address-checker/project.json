@@ -1,0 +1,33 @@
+{
+  "name": "address-checker-feat-fiber-address-checker",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/activate/address-checker/feat-fiber-address-checker/src",
+  "prefix": "tg-fiber-address-checker",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/activate/address-checker/feat-fiber-address-checker/**/*.ts",
+          "libs/activate/address-checker/feat-fiber-address-checker/**/*.html"
+        ]
+      }
+    },
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:feature", "scope:address-checker", "scope:address-checker-mfe"]
+}

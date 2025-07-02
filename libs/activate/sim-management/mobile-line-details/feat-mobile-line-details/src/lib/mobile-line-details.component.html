@@ -1,0 +1,182 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn($event)">
+  <span class="heading--3">{{ 'ng.sim-management.lbl.title' | translate }}</span>
+
+  @if (viewModel.isLoading$ | async) {
+    <tg-activate-sim-management-ui-skeleton></tg-activate-sim-management-ui-skeleton>
+  } @else {
+    <tg-activate-sim-management-mobile-line-selector (mobileLineSelected)="onMobileLineChange($event)">
+    </tg-activate-sim-management-mobile-line-selector>
+
+    @if (viewModel.actionResultMessage$ | async; as message) {
+      <tg-activate-sim-management-ui-notification [message]="message"></tg-activate-sim-management-ui-notification>
+    }
+
+    @if (viewModel.isMember$ | async) {
+      <tg-activate-sim-management-ui-notification
+        data-testid="sim-management-member-notification"
+        [message]="{
+          type: MessageType.INFO,
+          title: 'ng.sim-management.member-notification.title',
+          text: 'ng.sim-management.member-notification.description'
+        }"></tg-activate-sim-management-ui-notification>
+    }
+
+    @if (viewModel.isBlockedBySystem$ | async) {
+      <tg-activate-sim-management-ui-notification
+        data-testid="sim-management-blocked-by-system-notification"
+        [message]="{
+          type: MessageType.WARNING,
+          text: 'ng.sim-management.info.is-blocked-by-system-message'
+        }"></tg-activate-sim-management-ui-notification>
+    }
+    @if (viewModel.selectedMobileLine$ | async; as mobileLine) {
+      @if (viewModel.isESimSwapReadyForActivation$ | async) {
+        <tg-sim-management-mobile-line-details-activate-e-sim-action-card
+          [mobileLine]="mobileLine"
+          [eSimActivationUrl]="eSimActivationUrl"></tg-sim-management-mobile-line-details-activate-e-sim-action-card>
+      }
+
+      @if (viewModel.isSimSwapReadyForActivation$ | async) {
+        <tg-sim-management-mobile-line-details-activate-sim-action-card
+          [mobileLine]="mobileLine"
+          [simActivationUrl]="simActivationUrl"></tg-sim-management-mobile-line-details-activate-sim-action-card>
+      }
+
+      @if ((viewModel.isESimSwapReadyForActivation$ | async) || (viewModel.isESimSwapInProgress$ | async)) {
+        <tg-sim-management-mobile-line-details-pending-e-sim-information-card
+          [mobileLine]="mobileLine"></tg-sim-management-mobile-line-details-pending-e-sim-information-card>
+      }
+
+      @if (viewModel.isSimSwapReadyForActivation$ | async) {
+        <tg-sim-management-mobile-line-details-pending-sim-information-card
+          [mobileLine]="mobileLine"></tg-sim-management-mobile-line-details-pending-sim-information-card>
+      }
+
+      @if (
+        mobileLine.mainSimCard?.type === SimType.E_SIM && mobileLine.isPorting && !mobileLine.isPortingDetailsProvided
+      ) {
+        <tg-sim-management-mobile-line-details-port-e-sim-action-card
+          [mobileLine]="mobileLine"
+          [portingUrl]="portingUrl"></tg-sim-management-mobile-line-details-port-e-sim-action-card>
+      }
+
+      @if (mobileLine.mainSimCard) {
+        <div data-testid="sim-management-main-sim-information">
+          <tg-sim-management-mobile-line-details-sim-information-card
+            [mobileLine]="mobileLine"
+            (unblockActionClick)="onUnblockClick($event)"></tg-sim-management-mobile-line-details-sim-information-card>
+        </div>
+      }
+
+      @if (
+        (viewModel.isAssignActionVisible$ | async) ||
+        (viewModel.isBlockActionVisible$ | async) ||
+        (viewModel.isActivateESimSmartWatchInfoActionVisible$ | async)
+      ) {
+        <div class="heading--4 mt--n mb--s mt--xxxl">{{ 'ng.sim-management.lbl.sim-management' | translate }}</div>
+      }
+      <div class="row">
+        @if (viewModel.isAssignActionVisible$ | async) {
+          @if (viewModel.householdUsers$ | async; as users) {
+            @if (mobileLine.identityId) {
+              <div class="col-sm-6">
+                <tg-activate-sim-management-ui-action-card
+                  data-testid="sim-management-reassign-action-card"
+                  [iconClass]="'icon-arrows-counterclockwise'"
+                  [title]="'ng.sim-management.lbl.reassign-sim'"
+                  [description]="'ng.sim-management.text.reassign-sim'"
+                  (actionClick)="onAssignClick(mobileLine, users)">
+                </tg-activate-sim-management-ui-action-card>
+              </div>
+            } @else {
+              <div class="col-sm-6">
+                <tg-activate-sim-management-ui-action-card
+                  data-testid="sim-management-assign-action-card"
+                  [iconClass]="'icon-mobile-arrow-down'"
+                  [title]="'ng.sim-management.lbl.assign-sim'"
+                  [description]="'ng.sim-management.text.assign-sim'"
+                  (actionClick)="onAssignClick(mobileLine, users)">
+                </tg-activate-sim-management-ui-action-card>
+              </div>
+            }
+          }
+        }
+        @if (viewModel.isActivateESimSmartWatchInfoActionVisible$ | async) {
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-esim-smartwatch-activation-info-action-card"
+              [iconClass]="'icon-arrows-counterclockwise'"
+              [title]="'ng.sim-management.lbl.activate-esim'"
+              [description]="'ng.sim-management.lbl.activate-esim-description'"
+              (actionClick)="onActivateESimSmartWatchInfoClick()">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+        }
+        @if (viewModel.isBlockActionVisible$ | async) {
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-block-action-card"
+              [iconClass]="'icon-arrows-counterclockwise'"
+              [title]="'ng.sim-management.lbl.sim-block'"
+              [description]="'ng.sim-management.text.sim-block'"
+              (actionClick)="onBlockClick(mobileLine)">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-partial-block-action-card"
+              [iconClass]="'icon-arrows-counterclockwise'"
+              [title]="'ng.sim-management.lbl.sim-partial-blocking'"
+              [description]="'ng.sim-management.text.sim-partial-blocking'"
+              (actionClick)="onPartialBlockClick(mobileLine)">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+        }
+        @if (viewModel.isDeactivateESimWearableActionVisible$ | async) {
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-esim-smartwatch-deactivation-action-card"
+              [iconClass]="'icon-arrows-counterclockwise'"
+              [title]="'ng.sim-management.lbl.deactivate-e-sim'"
+              [description]="'ng.sim-management.text.deactivate-e-sim'"
+              (actionClick)="onDeactivateESimForSmartWatchClick(mobileLine)">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+        }
+      </div>
+
+      @if ((viewModel.isSimSwapActionVisible$ | async) || (viewModel.isESimProfileRequestVisible$ | async)) {
+        <div class="heading--4 mt--n mb--s mt--xl">{{ 'ng.sim-management.lbl.change-sim' | translate }}</div>
+      }
+      <div class="row">
+        @if (viewModel.isSimSwapActionVisible$ | async) {
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-request-physical-sim-action-card"
+              [title]="'ng.sim-management.link.request-new-sim'"
+              (actionClick)="onRequestPhysicalSimClick(mobileLine)">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+        }
+        @if (viewModel.isESimProfileRequestVisible$ | async) {
+          <div class="col-sm-6">
+            <tg-activate-sim-management-ui-action-card
+              data-testid="sim-management-request-esim-action-card"
+              [title]="
+                mobileLine.mainSimCard?.type === SimType.E_SIM
+                  ? 'ng.sim-management.lbl.request-esim-swap-title'
+                  : 'ng.sim-management.lbl.request-esim-title'
+              "
+              (actionClick)="onRequestESimClick()">
+            </tg-activate-sim-management-ui-action-card>
+          </div>
+        }
+      </div>
+    }
+    <div class="heading--5 mt--n mb--s mt--xl">{{ 'ng.sim-management.lbl.help-with-e-sim' | translate }}</div>
+    <tg-sim-management-mobile-line-details-help-with-e-sim-card
+      [eSimInformationUrl]="eSimInformationUrl"
+      [deviceSupportsESimUrl]="deviceSupportsESimUrl"></tg-sim-management-mobile-line-details-help-with-e-sim-card>
+  }
+</tg-login>

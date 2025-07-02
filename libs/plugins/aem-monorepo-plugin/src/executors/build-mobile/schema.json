@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "appSPath": {
+      "type": "string",
+      "description": "Path to the mfe app"
+    },
+    "skipGenerateI18n": {
+      "type": "boolean",
+      "description": "Option to skip the generate-i18n step",
+      "default": false
+    }
+  },
+  "required": ["appPath"]
+}

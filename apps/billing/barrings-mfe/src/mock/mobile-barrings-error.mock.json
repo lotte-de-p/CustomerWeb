@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-barrings-service/v1/mobile-barrings/0489126622",
+  "method": "GET",
+  "status": 500,
+  "response": {
+    "code": "ODATA-ERR-001",
+    "cause": "ODATA Error - 400 Bad Request: \"{\"title\":\"Constraint Violation\",\"status\":400,\"violations\":[{\"field\":\"findMobileBarrings.msisdn\",\"message\":\"MSISDN is not valid\"}]}\"",
+    "correlationId": "676a1e21-3099-4844-bcc3-70613550c85c"
+  }
+}

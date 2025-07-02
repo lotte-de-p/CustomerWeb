@@ -1,0 +1,153 @@
+{
+  "customerproductholding": [
+    {
+      "identifier": "DTV2710555",
+      "customerproductid": "158495352",
+      "accountnumber": "72093824",
+      "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+      "rateclassid": "44",
+      "rateclassdescription": "Telenet Digital TV",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+      "products": [],
+      "options": [],
+      "address": {
+        "street": "Hazel",
+        "postalcode": "9340",
+        "municipality": "Lede",
+        "country": "België",
+        "housenr": "63",
+        "addressid": "6cc7yy007q-9x3xae07dk"
+      }
+    },
+    {
+      "identifier": "WIGOHOME_44375989",
+      "accountnumber": "72093824",
+      "label": "WIGOHOME",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/20046",
+      "products": [
+        {
+          "identifier": "am15380",
+          "customerproductid": "339322002",
+          "accountnumber": "72093824",
+          "label": "internet.line.fmc.wigohome",
+          "rateclassid": "22",
+          "rateclassdescription": "Telenet Internet",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/20799",
+          "products": [],
+          "options": []
+        },
+        {
+          "identifier": "050658323",
+          "customerproductid": "339322016",
+          "accountnumber": "72093824",
+          "label": "telephony.line.basic",
+          "rateclassid": "51",
+          "rateclassdescription": "Telenet FreePhone Europe",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/672",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/151",
+              "label": "telephony.linetype.bijkomendelijn"
+            }
+          ]
+        },
+        {
+          "identifier": "DTV4048252",
+          "customerproductid": "339321992",
+          "accountnumber": "72093824",
+          "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+          "rateclassid": "44",
+          "rateclassdescription": "Telenet Digital TV",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/585",
+              "label": "tv.digitaltv.package.popcornpacks.popcorn"
+            }
+          ]
+        }
+      ],
+      "options": [],
+      "address": {
+        "street": "Zeedijk",
+        "postalcode": "8370",
+        "municipality": "Blankenberge",
+        "country": "België",
+        "housenr": "190",
+        "floor": "3",
+        "addressid": "6cc7yy007q-9w6brv0n6l"
+      }
+    },
+    {
+      "identifier": "IMTTK_43537707",
+      "accountnumber": "72093824",
+      "label": "IMTTK",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/71",
+      "products": [
+        {
+          "identifier": "DTV332063",
+          "customerproductid": "50968122",
+          "accountnumber": "72093824",
+          "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+          "rateclassid": "44",
+          "rateclassdescription": "Telenet Digital TV",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/277",
+              "label": "tv.digitaltv.package.primepacks.primesportsfilmpack"
+            }
+          ]
+        },
+        {
+          "identifier": "093296194",
+          "customerproductid": "92264561",
+          "accountnumber": "72093824",
+          "label": "telephony.line.basic",
+          "rateclassid": "51",
+          "rateclassdescription": "Telenet FreePhone Europe",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/672",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/150",
+              "label": "telephony.linetype.eerstelijn"
+            }
+          ]
+        },
+        {
+          "identifier": "u935524",
+          "customerproductid": "289678661",
+          "accountnumber": "72093824",
+          "label": "internet.line.sun.smallpipe",
+          "rateclassid": "22",
+          "rateclassdescription": "Telenet Internet",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/588",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/114",
+              "label": "internet.feature.domein.be"
+            },
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/301",
+              "label": "internet.feature.tsp"
+            }
+          ]
+        }
+      ],
+      "options": [],
+      "address": {
+        "street": "Hazel",
+        "postalcode": "9340",
+        "municipality": "Lede",
+        "country": "België",
+        "housenr": "63",
+        "addressid": "6cc7yy007q-9x3xae07dk"
+      }
+    }
+  ]
+}

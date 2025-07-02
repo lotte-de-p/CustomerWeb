@@ -1,0 +1,773 @@
+{
+  "id": "9162378149713828548",
+  "identifier": "0468614414",
+  "label": "TBmultilinenew",
+  "useSpecurl": false,
+  "activationDate": "2021-12-30T11:33:19",
+  "addressId": "9150308808513471913",
+  "locationId": "9162377924613809857",
+  "status": "Active",
+  "userPIDLinked": true,
+  "isDataOnlyPlan": false,
+  "productType": "bundle",
+  "bundleIdentifier": "WIGO000003710",
+  "pid": "41111879285",
+  "hasVoiceMail": true,
+  "bundleType": "WIGO",
+  "options": [],
+  "spec": {
+    "localizedcontent": {
+      "locale": "en",
+      "name": "WIGO Unlimited",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+    }
+  },
+  "productInfo": {
+    "internalCategory": "POST-PAID-MOBILE",
+    "productId": "WIGU0001",
+    "isYupProduct": false,
+    "externalProductCode": "WIGU0001",
+    "productType": "BUNDLE",
+    "categories": [
+      "for-rules---offerings-for-120531",
+      "for-rules---453-externe-medewerkers-korting",
+      "for-rules---9-personeelskorting-telenet",
+      "for-rules---partner-discount",
+      "for-sponsor-discount---all-tlo-products",
+      "for-rules---price-reduction-during-3-months",
+      "for-rules---wigo-4p-high-tier-bundles",
+      "for-rules---bundle-tlos",
+      "for-discount---offerings-for-free-activation-discount",
+      "for-rules---tlos-with-speedboost",
+      "4p-bundle",
+      "for-rules---fixed-and-bundles-category",
+      "for-rules---wigo-bundles",
+      "for-rules---wigo-4p-bundles",
+      "for-rules---res-digital-tv-and-bundles-with-digital-tv",
+      "for-rules---multi-dtv-promo",
+      "for-discount---4p3p-bundles",
+      "for-rules---all-internet--tv-wigo",
+      "for-rules---all-internet--tv-wigo-for-100650",
+      "for-rules---service-policies-for-wigo-unlimited-bundles",
+      "for-rules---wigo-for-126941",
+      "for-rules---for-112721-discount",
+      "for-rules---for-124951-discount",
+      "for-rules---for-114321-discount",
+      "for-rules---res-bundles",
+      "for-rules---available-for-esim",
+      "post-paid-mobile",
+      "for-rules---wigos-for-102600",
+      "for-discounts---26-promo",
+      "for-discounts---159-promo",
+      "for-discounts---116xxx-promo",
+      "for-discounts---117200-promo",
+      "for-discounts---782-promo",
+      "for-discounts---109085-promo",
+      "for-discounts---105600-promo",
+      "for-discounts---133331-promo",
+      "for-rules---3p4p-bundles-and-internet-tlos-for-internet-service-policies"
+    ],
+    "customerCategories": ["residential", "eventdemo", "production-test"],
+    "subCategory": {},
+    "labelKey": "WIGO Unlimited",
+    "visible": true,
+    "weight": 280,
+    "services": [
+      {
+        "serviceType": "GENERAL",
+        "specifications": [
+          {
+            "labelKey": "spec-bundle-mobile-maxlines",
+            "value": "5",
+            "visible": true,
+            "weight": "1"
+          }
+        ],
+        "experience": {
+          "experienceType": "GENERAL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "10",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Unlimited calls"
+            }
+          },
+          {
+            "labelKey": "text",
+            "unit": "number",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "40",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited sms in Belgium and EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "wigo-unlimited-national-monthly",
+            "unit": "GB",
+            "value": "100",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "WIGO Unlimited National"
+            }
+          },
+          {
+            "labelKey": "wigo-unlimited-eu-monthly",
+            "unit": "GB",
+            "value": "50",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "WIGO Unlimited EU"
+            }
+          },
+          {
+            "labelKey": "freeg",
+            "unit": "GB",
+            "value": "100",
+            "visible": true,
+            "weight": "70",
+            "localizedContent": {
+              "locale": "en",
+              "name": "mobile data in Belgium"
+            }
+          },
+          {
+            "labelKey": "free-eu",
+            "unit": "GB",
+            "value": "70",
+            "visible": true,
+            "weight": "80",
+            "localizedContent": {
+              "locale": "en",
+              "name": "mobile data in EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      },
+      {
+        "serviceType": "FIXED_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "spec-fixedinternet-volume-download-fup",
+            "unit": "GB",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "70",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited WIGO Data"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      },
+      {
+        "serviceType": "DTV",
+        "specifications": [
+          {
+            "labelKey": "dtv",
+            "visible": true,
+            "weight": "50",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Dtv/Tv box"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "ENTERTAINMENT"
+        }
+      },
+      {
+        "serviceType": "FIXED_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "60",
+            "localizedContent": {
+              "locale": "en",
+              "name": "fixed Unlimited calls"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      }
+    ],
+    "apps": [],
+    "localizedContent": [
+      {
+        "locale": "en",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      },
+      {
+        "locale": "nl",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      },
+      {
+        "locale": "fr",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      }
+    ],
+    "shortDescription": {
+      "localizedContent": {
+        "locale": "en",
+        "name": "WIGO Unlimited"
+      }
+    },
+    "visibilityRules": {
+      "conditionalVisibility": false
+    },
+    "unlimited": false,
+    "eligibleForDiscount": false,
+    "priceType": "Recurrent Charge",
+    "characteristics": {
+      "productGroup": "OTHER",
+      "productSubGroup": "",
+      "productSegment": "RMD",
+      "priceInclVat": 205,
+      "recipientsMandatory": false,
+      "esimAvailable": true
+    },
+    "usageBasedRatePlan": false,
+    "requiresInstallation": true,
+    "chars": [
+      {
+        "key": "internet_usage_limit",
+        "values": ["750"],
+        "unit": "GB"
+      },
+      {
+        "key": "internet_usage_initial_threshold",
+        "values": ["600"],
+        "unit": "GB"
+      },
+      {
+        "key": "internet_usage_alert_threshold",
+        "values": ["675"],
+        "unit": "GB"
+      }
+    ],
+    "name": "WIGO Unlimited",
+    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png",
+    "usageLimits": {
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncludedUnlimitedNational",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "80",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "95",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false
+            }
+          ]
+        }
+      ],
+      "internet": [
+        {
+          "category": "FUP",
+          "preferenceGroup": "InternetFUP",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Internet100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "productConstituents": [
+      {
+        "type": "dtv[SIPADAN]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "dtv[EOS]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "fixed_telephone",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "mobile_line",
+        "minCount": "0",
+        "maxCount": "5"
+      },
+      {
+        "type": "internet_line",
+        "minCount": "1",
+        "maxCount": "1"
+      }
+    ]
+  },
+  "plan": {
+    "internalCategory": "POST-PAID-MOBILE",
+    "productId": "WIGU0001",
+    "isYupProduct": false,
+    "externalProductCode": "WIGU0001",
+    "productType": "BUNDLE",
+    "categories": [
+      "for-rules---offerings-for-120531",
+      "for-rules---453-externe-medewerkers-korting",
+      "for-rules---9-personeelskorting-telenet",
+      "for-rules---partner-discount",
+      "for-sponsor-discount---all-tlo-products",
+      "for-rules---price-reduction-during-3-months",
+      "for-rules---wigo-4p-high-tier-bundles",
+      "for-rules---bundle-tlos",
+      "for-discount---offerings-for-free-activation-discount",
+      "for-rules---tlos-with-speedboost",
+      "4p-bundle",
+      "for-rules---fixed-and-bundles-category",
+      "for-rules---wigo-bundles",
+      "for-rules---wigo-4p-bundles",
+      "for-rules---res-digital-tv-and-bundles-with-digital-tv",
+      "for-rules---multi-dtv-promo",
+      "for-discount---4p3p-bundles",
+      "for-rules---all-internet--tv-wigo",
+      "for-rules---all-internet--tv-wigo-for-100650",
+      "for-rules---service-policies-for-wigo-unlimited-bundles",
+      "for-rules---wigo-for-126941",
+      "for-rules---for-112721-discount",
+      "for-rules---for-124951-discount",
+      "for-rules---for-114321-discount",
+      "for-rules---res-bundles",
+      "for-rules---available-for-esim",
+      "post-paid-mobile",
+      "for-rules---wigos-for-102600",
+      "for-discounts---26-promo",
+      "for-discounts---159-promo",
+      "for-discounts---116xxx-promo",
+      "for-discounts---117200-promo",
+      "for-discounts---782-promo",
+      "for-discounts---109085-promo",
+      "for-discounts---105600-promo",
+      "for-discounts---133331-promo",
+      "for-rules---3p4p-bundles-and-internet-tlos-for-internet-service-policies"
+    ],
+    "customerCategories": ["residential", "eventdemo", "production-test"],
+    "subCategory": {},
+    "labelKey": "WIGO Unlimited",
+    "visible": true,
+    "weight": 280,
+    "services": [
+      {
+        "serviceType": "GENERAL",
+        "specifications": [
+          {
+            "labelKey": "spec-bundle-mobile-maxlines",
+            "value": "5",
+            "visible": true,
+            "weight": "1"
+          }
+        ],
+        "experience": {
+          "experienceType": "GENERAL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "10",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Unlimited calls"
+            }
+          },
+          {
+            "labelKey": "text",
+            "unit": "number",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "40",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited sms in Belgium and EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      },
+      {
+        "serviceType": "MOBILE_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "wigo-unlimited-national-monthly",
+            "unit": "GB",
+            "value": "100",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "WIGO Unlimited National"
+            }
+          },
+          {
+            "labelKey": "wigo-unlimited-eu-monthly",
+            "unit": "GB",
+            "value": "50",
+            "visible": true,
+            "weight": "20",
+            "localizedContent": {
+              "locale": "en",
+              "name": "WIGO Unlimited EU"
+            }
+          },
+          {
+            "labelKey": "freeg",
+            "unit": "GB",
+            "value": "100",
+            "visible": true,
+            "weight": "70",
+            "localizedContent": {
+              "locale": "en",
+              "name": "mobile data in Belgium"
+            }
+          },
+          {
+            "labelKey": "free-eu",
+            "unit": "GB",
+            "value": "70",
+            "visible": true,
+            "weight": "80",
+            "localizedContent": {
+              "locale": "en",
+              "name": "mobile data in EU"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      },
+      {
+        "serviceType": "FIXED_INTERNET",
+        "specifications": [
+          {
+            "labelKey": "spec-fixedinternet-volume-download-fup",
+            "unit": "GB",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "70",
+            "localizedContent": {
+              "locale": "en",
+              "name": "unlimited WIGO Data"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "SURF"
+        }
+      },
+      {
+        "serviceType": "DTV",
+        "specifications": [
+          {
+            "labelKey": "dtv",
+            "visible": true,
+            "weight": "50",
+            "localizedContent": {
+              "locale": "en",
+              "name": "Dtv/Tv box"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "ENTERTAINMENT"
+        }
+      },
+      {
+        "serviceType": "FIXED_CALLING",
+        "specifications": [
+          {
+            "labelKey": "voice",
+            "unit": "minutes",
+            "value": "unlimited",
+            "visible": true,
+            "weight": "60",
+            "localizedContent": {
+              "locale": "en",
+              "name": "fixed Unlimited calls"
+            }
+          }
+        ],
+        "experience": {
+          "experienceType": "CALL"
+        }
+      }
+    ],
+    "apps": [],
+    "localizedContent": [
+      {
+        "locale": "en",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      },
+      {
+        "locale": "nl",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      },
+      {
+        "locale": "fr",
+        "name": "WIGO Unlimited",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png"
+      }
+    ],
+    "shortDescription": {
+      "localizedContent": {
+        "locale": "en",
+        "name": "WIGO Unlimited"
+      }
+    },
+    "visibilityRules": {
+      "conditionalVisibility": false
+    },
+    "unlimited": false,
+    "eligibleForDiscount": false,
+    "priceType": "Recurrent Charge",
+    "characteristics": {
+      "productGroup": "OTHER",
+      "productSubGroup": "",
+      "productSegment": "RMD",
+      "priceInclVat": 205,
+      "recipientsMandatory": false,
+      "esimAvailable": true
+    },
+    "usageBasedRatePlan": false,
+    "requiresInstallation": true,
+    "chars": [
+      {
+        "key": "internet_usage_limit",
+        "values": ["750"],
+        "unit": "GB"
+      },
+      {
+        "key": "internet_usage_initial_threshold",
+        "values": ["600"],
+        "unit": "GB"
+      },
+      {
+        "key": "internet_usage_alert_threshold",
+        "values": ["675"],
+        "unit": "GB"
+      }
+    ],
+    "name": "WIGO Unlimited",
+    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/wigo-unlimited.png",
+    "usageLimits": {
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "personalOutOfBundle",
+          "preferenceGroup": "BundleMobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        }
+      ],
+      "internet": [
+        {
+          "category": "FUP",
+          "preferenceGroup": "InternetFUP",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Internet100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "productConstituents": [
+      {
+        "type": "dtv[SIPADAN]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "dtv[EOS]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "fixed_telephone",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "mobile_line",
+        "minCount": "0",
+        "maxCount": "5"
+      },
+      {
+        "type": "internet_line",
+        "minCount": "1",
+        "maxCount": "1"
+      }
+    ]
+  },
+  "isBase0Plan": false,
+  "msisdn": "0468614414",
+  "isMultipleUserPIDLinked": false,
+  "hasNoLinesMappedToPID": false,
+  "address": {
+    "street": "Buizegemlei",
+    "streetId": "9150308777213952560",
+    "country": "België",
+    "municipality": "Edegem",
+    "addressId": "9150308808513471913",
+    "type": "Geographical Address",
+    "boxNumber": "1",
+    "floorNumber": "2",
+    "houseNumber": "135",
+    "postalCode": "2650",
+    "countryCode": "BE"
+  }
+}

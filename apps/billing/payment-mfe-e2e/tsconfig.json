@@ -1,0 +1,29 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": [
+      "es2020",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../payment-mfe/**/*.ts",
+    "../payment-mfe/**/*.js"
+  ]
+}

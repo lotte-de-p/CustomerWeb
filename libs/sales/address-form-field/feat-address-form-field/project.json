@@ -1,0 +1,39 @@
+{
+  "name": "sales-address-form-field-feat-address-form-field",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/address-form-field/feat-address-form-field/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/address-form-field/feat-address-form-field/**/*.ts",
+          "libs/sales/address-form-field/feat-address-form-field/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/address-form-field/feat-address-form-field/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/address-form-field/feat-address-form-field/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-address-form-field", "scope:sales-mfe"]
+}

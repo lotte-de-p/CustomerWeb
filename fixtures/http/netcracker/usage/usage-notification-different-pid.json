@@ -1,0 +1,142 @@
+[
+  {
+    "pid": "41111880467",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "PrePaidBucketBalance",
+        "preferences": [
+          {
+            "preferenceType": "BucketCompletelyUsed",
+            "channels": ["Email"],
+            "values": []
+          },
+          {
+            "preferenceType": "BucketExpired",
+            "channels": ["Email"],
+            "values": []
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "BundleMobileOutbundleB2B",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleB2B",
+            "channels": ["Email"],
+            "values": ["50 Euro", "100 Euro"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileOutbundleRMD",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleRMD",
+            "channels": ["Email"],
+            "values": ["50 Euro"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileCB_RMD",
+        "preferences": [
+          {
+            "preferenceType": "CbLimit100",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncluded",
+        "preferences": [
+          {
+            "preferenceType": "Included100",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileOptionsIncluded",
+        "preferences": [
+          {
+            "preferenceType": "IncludedOptions100",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncludedUnlimitedNational",
+        "preferences": [
+          {
+            "preferenceType": "IncludedDataUnlimitedNational100",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "BundleMobileOutbundleRMD",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleRMD",
+            "channels": ["Email"],
+            "values": ["50 Euro"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileOutbundleB2B",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleB2B",
+            "channels": ["Email"],
+            "values": ["50 Euro", "100 Euro"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileCB_B2B",
+        "preferences": [
+          {
+            "preferenceType": "CbLimit100B2B",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "MobileIncludedUnlimitedEU",
+        "preferences": [
+          {
+            "preferenceType": "IncludedDataUnlimitedEU100",
+            "channels": ["Email"],
+            "values": ["100"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "PremiumServices",
+        "preferences": [
+          {
+            "preferenceType": "OutBundleFraud",
+            "channels": ["Email"],
+            "values": []
+          },
+          {
+            "preferenceType": "OutBundlePremiumSpendingLimit",
+            "channels": ["Email"],
+            "values": []
+          },
+          {
+            "preferenceType": "OutBundlePremiumServices",
+            "channels": ["Email"],
+            "values": []
+          }
+        ]
+      }
+    ]
+  }
+]

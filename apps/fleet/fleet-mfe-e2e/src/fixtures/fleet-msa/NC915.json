@@ -1,0 +1,234 @@
+{
+  "product": {
+    "productid": 915,
+    "externalProductCode": "BOYO0015",
+    "labelkey": "15 Based on you",
+    "producttype": "PRODUCT",
+    "weight": 10,
+    "apps": [],
+    "customercategories": ["RESIDENTIAL"],
+    "category": "POST-PAID-MOBILE",
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "15 Based on you",
+        "logo": ""
+      },
+      {
+        "locale": "fr",
+        "name": "15 Based on you",
+        "logo": ""
+      },
+      {
+        "locale": "en",
+        "name": "15 Based on you",
+        "logo": ""
+      },
+      {
+        "locale": "nl",
+        "name": "15 Based on you",
+        "logo": "{{STUBBING_URL}}/image.png"
+      },
+      {
+        "locale": "fr",
+        "name": "15 Based on you",
+        "logo": "{{STUBBING_URL}}/image.png"
+      },
+      {
+        "locale": "en",
+        "name": "15 Based on you",
+        "logo": "{{STUBBING_URL}}/image.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Combineer 0 tot 3 GB met 0 tot 300 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Combinez de 0 à 3 GB et 0 à 300 minutes d'appel. Ce que vous ne consommez pas est reporté au mois suivant.",
+          "logo": ""
+        },
+        {
+          "locale": "en",
+          "name": "Combine 0 to 3 GB with 0 to 300 minutes. What you don't use up, you carry over to next month.",
+          "logo": ""
+        }
+      ]
+    },
+    "rates": [
+      {
+        "type": "DATA",
+        "unit": "MB",
+        "cost": 0.004882,
+        "currency": "EUR"
+      },
+      {
+        "type": "VOICE",
+        "unit": "MIN",
+        "cost": 0.05,
+        "currency": "EUR"
+      }
+    ],
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobilecalling.minutes.onnet",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "40",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar BASE",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Appels vers BASE",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Calls to BASE",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "spec.mobilecalling.minutes.national/EU",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "30",
+            "minvalue": "0",
+            "maxvalue": "300",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Minutes vers tous les numéros en Belgique (et de la zone UE vers la zone UE)",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Minutes to all numbers in Belgium (and from the EU-zone to the EU-zone)",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "spec.mobilecalling.sms.national/EU",
+            "value": "unlimited",
+            "unit": "number",
+            "visible": true,
+            "weight": "50",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Sms'en",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "SMS",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Texting",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_MONETARY",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobilemonetary.volume.national/EU",
+            "value": "15",
+            "unit": "EUR",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Maandelijks bedrag",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Montant mensuel",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Monthly amount",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobileinternet.data.national/EU",
+            "unit": "GB",
+            "visible": true,
+            "weight": "20",
+            "minvalue": "0",
+            "maxvalue": "3",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Mobiele data in België en de EU-zone",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Données mobiles en Belgique and dans la zone UE",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Data usage in Belgium and the EU-zone",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": 15.0,
+        "unit": "EUR"
+      }
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    }
+  }
+}

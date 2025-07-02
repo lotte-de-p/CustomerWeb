@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "json",
+    "cobertura",
+    "html-spa",
+    "text-summary",
+    "text"
+  ],
+  "check-coverage": true,
+  "include": [
+    "../return-devices-mfe/**",
+    "../return-devices-e2e/**",
+      "../../../libs/install/return-devices/**"
+  ],
+  "report-dir": "../../../coverage/apps/install/return-devices-mfe-e2e",
+  "cwd": "../../../"
+}

@@ -1,0 +1,46 @@
+<app-message [messageGroupName]="MESSAGE_GROUP">
+  <div
+    *ngIf="isLoaded && pricingData"
+    class="promo-highlight display--flex flex-direction--row align-items--end
+                promo-highlight__{{ this.alignment }} theme--{{ this.theme }} "
+    [ngClass]="getDynamicCSS()">
+    <div
+      *ngIf="startingFrom"
+      [innerHTML]="'ng.pricing.lbl.from' | translate"
+      class="promo-highlight__first-row align-items--baseline font--caption space-nowrap"></div>
+
+    <div [ngClass]="selectedRendition | pricingRenditionPipe: isShoppingCart">
+      <div
+        *ngIf="showNormalPrice()"
+        class="promo-highlight__second-row text-decoration--line-through align-items--baseline font--caption space-nowrap">
+        <tg-marketing-cafe-pricing-price [amount]="pricingData.normalPrice || ''" [rendition]="'small'">
+        </tg-marketing-cafe-pricing-price>
+      </div>
+
+      <tg-marketing-cafe-pricing-price
+        [amount]="pricingData.discountedPrice || ''"
+        [applyBaseSingleDigitStyle]="applyBaseSingleDigitStyle">
+      </tg-marketing-cafe-pricing-price>
+    </div>
+    <div
+      *ngIf="!hideFrequency"
+      [innerHtml]="'ng.pricing.lbl.frequency' | translate"
+      class="promo-highlight__fourth-row align-items--baseline font--caption space-nowrap"
+      [ngClass]="isShoppingCart | pricingSecondColumnModifierPipe"></div>
+
+    <div
+      *ngIf="showPromoDuration()"
+      [innerHtml]="
+        showCustomDurationMessage
+          ? customDurationMessage
+          : ('ng.pricing.lbl.duration' | translate: { value: pricingData.duration })
+      "
+      class="promo-highlight__fifth-row align-items--baseline font--caption space-nowrap"
+      [ngClass]="isShoppingCart | pricingSecondColumnModifierPipe"></div>
+    <div
+      *ngIf="promoMessage && isShoppingCart"
+      [innerHtml]="promoMessage | translate"
+      class="promo-highlight__fifth-row align-items--baseline font--caption space-nowrap"
+      [ngClass]="getConfiguratorSecondColumnModifierForLife()"></div>
+  </div>
+</app-message>

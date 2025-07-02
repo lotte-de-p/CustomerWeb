@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <ng-content select="[left-content]"></ng-content>
+    <div class="col-xs-12 col-sm-6">
+      <h3 class="heading--nomargin" data-testid="sim-validation-title">
+        {{ title | translate }}
+      </h3>
+      <p class="mb--xxl">
+        {{ description | translate }}
+      </p>
+      <ng-content select="[content]"></ng-content>
+    </div>
+  </div>
+</div>
+
+<div
+  class="sticky-footer-v2 position--fixed background-white width--full py--m px--xm p--xm--md display--flex justify-content--center align-items--center box-sizing--inherit shadow--xs-inverse position--bottom position--left">
+  <div
+    class="sticky-footer-v2__container width--full default-max-site-width display--flex justify-content--between align-items--center">
+    <div class="back-section">
+      @if (showBack) {
+        <a
+          (click)="onBackClick()"
+          data-testid="step-container-back-button"
+          href="javascript:void(0)"
+          class="link link--with-icon">
+          <i class="icon icon-chevron-left icon--shaped"></i><span>{{ backLabel | translate }}</span></a
+        >
+      }
+    </div>
+
+    <div class="next-section">
+      <wink-button
+        data-testid="step-container-proceed-button"
+        text="{{ submitLabel | translate }}"
+        type="button"
+        appearance="primary"
+        size="md"
+        width="none"
+        status="none"
+        (click)="onSubmitClick()">
+      </wink-button>
+    </div>
+  </div>
+  @if (progress) {
+    <div class="progress-bar">
+      <div class="indicator-progress" [ngClass]="'ready-' + progress"></div>
+    </div>
+  }
+</div>

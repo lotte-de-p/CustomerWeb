@@ -1,0 +1,56 @@
+variables:
+  CLIENT_PROJECT: order-configurator-mfe
+  GITOPS_DEPLOY_FOLDER_NAME: customer-web-sales/order-configurator
+  LEANIX_APPLICATION_NAME: sales
+  CLIENT_E2E: order-configurator-mfe-e2e
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+test:app:
+  extends: .test:app
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+build:storybook:
+  extends: .build:storybook
+
+push-to-harbor:
+  extends: .push-to-harbor
+
+component-test:app:
+  extends: .component-test:app
+
+e2e:app:
+  extends: .e2e:local
+  rules:
+    - when: always
+
+sonar:app:
+  extends: .sonar:app
+
+patch-stage:
+  extends: .patch-stage
+
+patch-prod:
+  extends: .patch-prod
+
+#gitops-deploy-stage:
+#  extends: .gitops-deploy-stage
+#
+#gitops-deploy-upgrade:
+#  extends: .gitops-deploy-upgrade
+#
+#gitops-deploy-prod:
+#  extends: .gitops-deploy-prod
+#
+gitops-deploy-dev:
+  extends: .gitops-deploy-dev
+#tag-stage-candidate:
+#  extends: .tag-stage-candidate
+#
+#tag-prod-candidate:
+#  extends: .tag-prod-candidate

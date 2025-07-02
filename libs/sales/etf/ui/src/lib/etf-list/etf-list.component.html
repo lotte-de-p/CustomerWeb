@@ -1,0 +1,54 @@
+<ng-container *ngIf="orderItemWithDiscount">
+  <ng-container *ngFor="let usedDiscountSlot of usedDiscountSlotList; let i = index">
+    <div
+      class="label-modifier-slot animation-show-slide-up"
+      style="--animation-delay: {{ i }};"
+      [attr.data-cy]="'feat-etf-etf-list-item'">
+      <input
+        type="radio"
+        class="label-modifier-radio"
+        id="choice-{{ orderItemWithDiscount.id }}-{{ i }}"
+        name="radio-{{ orderItemWithDiscount.id }}"
+        value="usedDiscountSlot"
+        [checked]="orderItemWithDiscount.selectedEtfDiscountSlot?.id === usedDiscountSlot.id"
+        (click)="selectDiscountToTerminate(usedDiscountSlot)" />
+      <div
+        class="label-modifier--append label-modifier--container cursor--pointer"
+        [class.disabled]="
+          orderItemWithDiscount.selectedEtfDiscountSlot?.id !== usedDiscountSlot.id &&
+          usedDiscountSlot.shouldBeTerminated
+        ">
+        <div class="label-modifier--body">
+          <div class="label-modifier--body--inner-container">
+            <label for="choice-{{ orderItemWithDiscount.id }}-{{ i }}" class="label-modifier-radio__label"></label>
+            <div class="label-modifier-content__header-text"></div>
+            <div class="label-modifier-content__header">
+              <i class="icon-tick"></i>
+            </div>
+            <div class="label-modifier-content__desc"></div>
+            <div class="label-modifier-content__body">
+              <div class="text-flow text-flow--button label-modifier-content__body-label">
+                {{ usedDiscountSlot.name }}
+              </div>
+              <div class="display--flex flex-direction--row--md flex-direction--column">
+                <div class="pr--xxs mb--xxs--md text-weight--g">
+                  <span class="text-flow label-modifier-content__body-range text--s">{{
+                    'ng.sales-checkout.text.etf-end-date'
+                      | translate: { etfEndDateOfContract: usedDiscountSlot.endDateOfContract | date: 'dd.MM.yyyy' }
+                  }}</span>
+                </div>
+                <div class="text-weight--g">
+                  <span class="text-flow label-modifier-content__body-range text--s ml--l--md">{{
+                    'ng.sales-checkout.text.etf-termination-fee'
+                      | translate: { terminationFee: usedDiscountSlot.etf.value | price }
+                  }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="label-modifier-content__timing"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,38 @@
+<div>
+  <div class="notification notification--info" data-cy="notification-info-box">
+    <span class="icon icon-information-shape info" data-cy="notification-info-box-icon"></span>
+    <div>
+      <p data-cy="header-info-box-text">
+        @if (returnDevices?.length) {
+          <div [innerHTML]="'ng.return-devices.info.about-returned-devices' | translate"></div>
+        } @else {
+          {{ 'ng.return-devices.lbl.no-devices-to-return' | translate }}
+        }
+      </p>
+    </div>
+  </div>
+</div>
+@if (returnDevices?.length) {
+  <div class="pt--s">
+    <div
+      class="display--flex justify-content--between mb--m mt--l flex-direction--column flex-direction--row--md"
+      style="align-items: center">
+      <span class="text-flow text-flow--h4" data-cy="header-ready-to-return-title">
+        {{ 'ng.return-devices.lbl.ready-to-return-device' | translate }}
+      </span>
+
+      <button
+        data-cy="header-print-button"
+        (click)="onGenerateReturnLabelClick()"
+        class="button button__icon--position-left">
+        <i class="icon icon-printer"></i>
+        <span>{{ 'ng.return-devices.lbl.generate-return-label' | translate }}</span>
+      </button>
+    </div>
+    <div>
+      <p class="font--body-regular my--m" data-cy="header-ready-to-return-description">
+        {{ 'ng.return-devices.heading-description' | translate }}
+      </p>
+    </div>
+  </div>
+}

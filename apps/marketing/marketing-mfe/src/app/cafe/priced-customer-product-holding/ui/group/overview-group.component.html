@@ -1,0 +1,49 @@
+<div
+  *ngIf="items && items.length"
+  class="display--flex justify-content--between align-items--center heading--6 mb--xxs mt--s">
+  <div class="text-block__left">
+    {{ translateHelperService.getTitle(type) | translate }}
+  </div>
+  <div class="text-block__right display--flex align-items--baseline word-break--keep-all"></div>
+</div>
+<ng-container *ngFor="let item of items">
+  <ng-container
+    *ngTemplateOutlet="
+      record;
+      context: {
+        labelKey: translateHelperService.getLabel(getLabelKey(item)),
+        args: getLabelArgs(item),
+        class: type === overviewGroupTypeEnum.PRODUCTS ? 'text--m text--xm--sm' : ' text--s text--m--sm p--n'
+      }
+    ">
+  </ng-container>
+  <ng-container *ngFor="let spec of item.specifications">
+    <ng-container
+      *ngTemplateOutlet="
+        record;
+        context: {
+          labelKey: spec.label.key,
+          args: spec.label.args,
+          icon: spec.icon,
+          rowClass: 'position--relative',
+          class: 'ml--xl text--s text--m--sm p--n'
+        }
+      ">
+    </ng-container>
+  </ng-container>
+</ng-container>
+<ng-template
+  #record
+  let-labelKey="labelKey"
+  let-args="args"
+  let-icon="icon"
+  let-rowClass="rowClass"
+  let-itemClass="class">
+  <div class="display--flex justify-content--between align-content--center mb--xxs" [ngClass]="rowClass">
+    <i *ngIf="icon" class="position--absolute cursor--pointer text--xxm line-height--20" [ngClass]="icon"></i>
+    <div class="display--flex flex-grow justify-content--between align-items--center" [ngClass]="itemClass">
+      <div class="text-block__left" [innerHTML]="labelKey | translate: args"></div>
+      <div class="text-block__right display--flex align-items--baseline word-break--keep-all"></div>
+    </div>
+  </div>
+</ng-template>

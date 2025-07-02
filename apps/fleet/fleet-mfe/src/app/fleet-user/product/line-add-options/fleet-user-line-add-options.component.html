@@ -1,0 +1,78 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-user-line-overlay [isSourceOneApp]="isSourceOneApp" (closeOverlay)="backToProductOverview()">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-user-result-message
+        backToProductOverviewLabel="ng.fleet-user-line-add-options.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        [isSourceOneApp]="isSourceOneApp"
+        (backToProductOverviewClicked)="backToProductOverview()">
+      </tg-fleet-user-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+    @if (isFleetUserOrderingEnabled$ | async) {
+      @if (showProduct$ | async) {
+        <div class="row" [attr.data-cy]="'add-options'">
+          <div class="col-sm-12 p-0">
+            <div>
+              <div class="options-content">
+                <tg-fleet-user-available-option
+                  [groupedOptions]="productAvailableOptions"
+                  [selectedLine]="selectedLine"
+                  [showAvailableOptionsContainer]="showAvailbaleOptionsContainer"
+                  (toggleContainerData)="toggleContainerData($event)"
+                  (toggleAvailableOptionsContainer)="toggleAvailableOptions()">
+                </tg-fleet-user-available-option>
+                <div>
+                  <tg-fleet-user-mobile-action-buttons
+                    primaryButtonLabel="ng.fleet-user-line-add-options.lbl.review-selected-lines"
+                    secondaryButtonLabel="ng.fleet-user-line-add-options.btn.revert-changes"
+                    [primaryButtonEnabled]="hasNoChanges() || showAvailbaleOptionsContainer"
+                    [secondaryButtonEnabled]="hasNoChanges() || showAvailbaleOptionsContainer"
+                    (primaryCallback)="showWarningContent()"
+                    (secondaryCallback)="revertChanges()">
+                  </tg-fleet-user-mobile-action-buttons>
+                  <div class="title-top">
+                    <div class="title-container">
+                      <div>
+                        <p class="hidden-mobile">
+                          {{ 'ng.fleet-user-line-add-options.lbl.review-selected-lines' | translate }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <tg-fleet-user-line-item
+                    [ngClass]="{ 'mobile-blur': showAvailbaleOptionsContainer }"
+                    [selectedLine]="selectedLine"
+                    [showFilteredLines]="showFilteredLines"></tg-fleet-user-line-item>
+
+                  <tg-fleet-user-sticky-actions
+                    class="hidden-mobile"
+                    (revertChanges)="revertChanges()"
+                    (showWarning)="showWarningContent()"
+                    [selectedLine]="selectedLine"
+                    [initialSelectedLines]="initialSelectedLines"></tg-fleet-user-sticky-actions>
+
+                  <tg-fleet-user-warning-message
+                    [isShowWarning]="isShowWarning"
+                    [selectedLine]="selectedLine"
+                    [optionProducts]="optionProducts"
+                    [salesOrderResponse]="salesOrderResponse"
+                    [category]="category"
+                    (closedOverLay)="backToProductOverview()"
+                    (closeWarning)="closeWarningMessage()"
+                    [messageGroup]="messageGroup"></tg-fleet-user-warning-message>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </tg-fleet-user-line-overlay>
+</tg-login>

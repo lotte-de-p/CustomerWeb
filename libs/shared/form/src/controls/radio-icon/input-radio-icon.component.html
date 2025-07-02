@@ -1,0 +1,40 @@
+<ng-container *ngFor="let option of optionList; let i = index">
+  <div class="label-modifier-box card-mini card-mini--radio-circle-box" data-id="choice">
+    <div class="label-modifier-slot">
+      <input
+        type="radio"
+        class="label-modifier-radio"
+        name="radio-group-name-{{ key }}"
+        value="{{ option.value }}"
+        id="choice-{{ i }}-{{ key }}"
+        [checked]="selectedOption && option.value === selectedOption.value" />
+      <div class="label-modifier--append label-modifier--container cur-pointer">
+        <div class="label-modifier--body">
+          <div class="label-modifier--body--inner-container">
+            <label
+              for="choice-{{ i }}-{{ key }}"
+              class="label-modifier-radio__label"
+              (click)="selectOption(option)"></label>
+            <div class="label-modifier-content__header">
+              <span
+                class="radio-circle-box display--inline-flex justify-content--center align-items--center align-self--center border-radius--circle"></span>
+            </div>
+            <div class="label-modifier-content__body">
+              <div
+                *ngIf="customLabel"
+                class="text-flow text-flow--button label-modifier-content__body-label"
+                [innerHTML]="getLabel() | translate"></div>
+              <div class="text-flow text-flow--button label-modifier-content__body-label">
+                <i *ngIf="!!option.icon" class="icon" [ngClass]="option.icon ? option.icon : ''"></i>
+                {{ !!customOptionLabel ? option.label : (option.label | translate) }}
+              </div>
+              <div *ngIf="!!option.text" class="px--l text-flow text-flow--legal label-modifier-content__body-range">
+                {{ !!customOptionLabel ? option.text : (option.text | translate) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

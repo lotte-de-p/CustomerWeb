@@ -1,0 +1,95 @@
+<div class="background-white p--xl mb--l" data-testid="sim-management-main-sim-information">
+  <div class="display--flex justify-content--between">
+    <div class="heading--4 my--n">
+      {{ 'ng.sim-management.lbl.sim-information' | translate }}
+      <div class="font--body-small color-shade_64">
+        @if ((isESimSwapReadyForActivation$ | async) || (isESimSwapInProgress$ | async)) {
+          <span data-testid="sim-management-swap-old-sim-information">
+            {{ 'ng.sim-management.cptn.old-sim-info' | translate }}
+          </span>
+        } @else {
+          {{ 'ng.sim-management.lbl.for' | translate }}
+          <span data-testid="sim-management-information-msisdn">{{ mobileLine.msisdn }}</span>
+        }
+      </div>
+    </div>
+    @if (isUnblockActionVisible$ | async) {
+      <div class="pt--xxxs">
+        <a
+          href="javascript:void(0);"
+          class="link"
+          data-testid="sim-management-information-unblock-link"
+          (click)="onUnblockClick(mobileLine)">
+          {{ 'ng.sim-management.lbl.sim-unblock' | translate }}
+        </a>
+      </div>
+    }
+  </div>
+
+  <div class="row pt--xl pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.tariff-plan' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">{{ mobileLine.tariffPlan }}</div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.pin' | translate }}
+    </div>
+    @if (mobileLine.mainSimCard?.pin) {
+      <div class="col-sm-6 font--body-regular sim-card-info-block">
+        <span data-testid="sim-management-information-pin">{{ mobileLine.mainSimCard?.pin }}</span> ({{
+          'ng.sim-management.lbl.initial' | translate
+        }})
+      </div>
+      <div class="col font--caption color-shade_48">
+        {{ 'ng.sim-management.txt.initial' | translate }}
+      </div>
+    }
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.puk' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      <span data-testid="sim-management-information-puk">{{ mobileLine.mainSimCard?.puk }}</span>
+    </div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.simcard-number' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      <span data-testid="sim-management-information-iccid">{{ mobileLine.mainSimCard?.iccid }}</span>
+    </div>
+  </div>
+
+  <div class="row" [formGroup]="mobileLineForm">
+    <div class="col-sm-6 font--body-regular-bold display--flex align-items--center">
+      {{ 'ng.sim-management.lbl.nickname' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      @if ((isESimSwapReadyForActivation$ | async) || (isESimSwapInProgress$ | async) || mobileLine.isSuspended) {
+        <span data-testid="sim-management-information-nickname-readonly">{{ mobileLine.name }}</span>
+      } @else {
+        <div class="display--flex input-v2--with-icon-button input-v2--with-icon-button--right">
+          <input
+            type="text"
+            value="{{ mobileLine.name }}"
+            class="input-v2"
+            data-testid="sim-management-mobile-line-input"
+            formControlName="name"
+            [placeholder]="'ng.sim-management.placeholder.nickname' | translate" />
+          <div class="input-v2__icon-button input-v2__icon-button--right">
+            <i
+              aria-hidden="true"
+              class="icon icon-check-shape icon-md icon-no-size-override"
+              data-testid="sim-management-mobile-line-name-loading-icon"
+              [class.color-notification--success--light]="(isEditMobileLineNameInProgress$ | async) === false"
+              [class.color-white_64]="(isEditMobileLineNameInProgress$ | async) === true"></i>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

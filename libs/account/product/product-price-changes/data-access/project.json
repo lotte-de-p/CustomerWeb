@@ -1,0 +1,8 @@
+{
+  "name": "product-product-price-changes-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/account/product/product-price-changes/data-access/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:product-product-price-changes", "scope:product-mfe"],
+  "projectType": "library"
+}

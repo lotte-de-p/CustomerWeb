@@ -1,0 +1,65 @@
+<div
+  *ngIf="orderItemWithDiscount && orderItemWithDiscount.selectedEtfDiscountSlot"
+  [attr.data-cy]="'feat-etf-order-item-with-cancellation'"
+  class="mobile-line mobile-line--step">
+  <div class="tracker--step__content">
+    <div class="display--block display--flex--md justify-content--between">
+      <div class="header-accordion--title">
+        <div class="header-accordion--title__text">
+          <div class="text-flow text-flow--body text-weight--g">
+            {{ orderItemWithDiscount.name }}
+          </div>
+        </div>
+      </div>
+      <div class="header-accordion--link space-nowrap">
+        <a
+          (click)="setOrderItemTerminationState(orderItemWithDiscount)"
+          class="link link--unstyled text-weight--g text-flow text-flow--hyperlink"
+          href="javascript:void(0)">
+          {{ 'ng.sales-checkout.text.etf-edit' | translate }}
+        </a>
+      </div>
+    </div>
+    <hr class="m-0 mt-20" />
+  </div>
+  <div class="tracker--step__content mb--m">
+    <div class="mt-20">
+      <div class="header-accordion header-accordion">
+        <div class="header-accordion--title">
+          <div class="header-accordion--title__text">
+            <div class="text-flow text-flow--body text-weight--g">
+              {{
+                'ng.sales-checkout.text.etf-month-contract'
+                  | translate: { customerChosenDiscount: orderItemWithDiscount.rule.discountAmount.value | price }
+              }}
+            </div>
+          </div>
+        </div>
+        <div class="text-flow text-flow--body text-weight--g space-nowrap">
+          {{
+            'ng.sales-checkout.price.etf-customer-chosen-discount'
+              | translate: { customerChosenDiscount: orderItemWithDiscount.rule.discountAmount.value | price }
+          }}
+        </div>
+      </div>
+      <div class="header-accordion header-accordion mt-20">
+        <div class="header-accordion--title">
+          <div class="header-accordion--title__text">
+            <div class="text-flow text-flow--body text-weight--g">
+              {{
+                'ng.sales-checkout.text.etf-termination-fee-for-used-discount'
+                  | translate: { deviceName: orderItemWithDiscount.selectedEtfDiscountSlot.name }
+              }}
+            </div>
+          </div>
+        </div>
+        <div class="text-flow text-flow--body text-weight--g space-nowrap">
+          {{
+            'ng.sales-checkout.price.etf-price'
+              | translate: { terminationFee: orderItemWithDiscount.selectedEtfDiscountSlot.etf.value | price }
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { <%= classifiedStateName %> } from './<%= name %>.state';
+import { stateFeatureName } from '../constants/state.const';
+
+export const featureState = createFeatureSelector<<%= classifiedStateName %>>(stateFeatureName);
+
+export const name = createSelector([featureState], (state: <%= classifiedStateName %>) => {
+  return state.name;
+});

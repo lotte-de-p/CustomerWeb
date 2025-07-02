@@ -1,0 +1,31 @@
+{
+  "mobilesubscriptions": [
+    {
+      "identifier": "0468163537",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/726",
+      "sim": "8941019000000334157",
+      "pin": "4415",
+      "puk": "40003415",
+      "activationstate": "active",
+      "paused": false
+    },
+    {
+      "identifier": "0468295114",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/730",
+      "sim": "8941019000000335493",
+      "pin": "4549",
+      "puk": "40003549",
+      "activationstate": "active",
+      "paused": false
+    },
+    {
+      "identifier": "0468295115",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/726",
+      "sim": "8941019000000335501",
+      "pin": "4550",
+      "puk": "40003550",
+      "activationstate": "active",
+      "paused": false
+    }
+  ]
+}

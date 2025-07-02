@@ -1,0 +1,18 @@
+@function rem($value) {
+  @return #{calc($value * var(--rem-multiplier, 1rem))};
+}
+
+@function size($size, $mapSource: $sizes-map) {
+  @return map-get($mapSource, $size) * var(--rem-multiplier, 1rem);
+}
+
+@function var-rem($size-tokens, $fallback-size-tokens: null) {
+  @if $fallback-size-tokens != null {
+    @if type-of($fallback-size-tokens) == 'number' {
+      @return calc(var($size-tokens, $fallback-size-tokens) * var(--rem-multiplier, 1rem));
+    }
+    @return calc(var($size-tokens, #{var($fallback-size-tokens)}) * var(--rem-multiplier, 1rem));
+  }
+
+  @return calc(var($size-tokens) * var(--rem-multiplier, 1rem));
+}

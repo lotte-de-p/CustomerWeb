@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-message-flow [messageGroupName]="messageGroupName">
+      <div class="line-details-header mb-10" [ngClass]="{ 'visibility-hidden': (toggleNavMenu$ | async) }">
+        <div class="icon-mobile"></div>
+        <div class="header">
+          <p class="header header__text">{{ 'ng.line-number.lbl.edit-line-details' | translate }}</p>
+          <p class="header header__value" *ngIf="lineNumber">{{ lineNumber | phoneNumber }}</p>
+        </div>
+      </div>
+    </app-message-flow>
+  </div>
+</div>

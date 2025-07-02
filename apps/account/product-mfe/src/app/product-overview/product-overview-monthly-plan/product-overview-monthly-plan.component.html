@@ -1,0 +1,37 @@
+<div class="product-overview__section display-base">
+  <div class="product-overview__section__monthly-plan" *ngIf="addSubscriptionUrl !== '/'">
+    <div class="monthly-plan--information">
+      <div class="mr-20 icon-basket icon-width"></div>
+      <div>
+        <p class="information--heading">
+          {{ 'ng.product-overview.lbl.new-subscription' | translate }}
+        </p>
+        <p>{{ 'ng.product-overview.txt.view-options' | translate }}</p>
+      </div>
+    </div>
+    <div class="monthly-plan--action">
+      <a class="button button--primary" [href]="addSubscriptionUrl" href="">
+        {{ 'ng.product-overview.btn.add-subscription' | translate }}
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="product-overview__section__monthly-plan" *ngIf="discoverSmartPhoneUrl !== '/'">
+    <div class="monthly-plan--information">
+      <div class="mr-20 icon-mobile icon-width"></div>
+      <div>
+        <p class="information--heading">
+          {{ 'ng.product-overview.lbl.discover-plan' | translate }}
+        </p>
+        <p>
+          {{ 'ng.product-overview.text.discover-plan' | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="monthly-plan--action">
+      <a class="button button--primary" [href]="discoverSmartPhoneUrl" href="">
+        {{ 'ng.product-overview.btn.discover-plan' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+{"version":3,"file":"company-name.validator.d.ts","sourceRoot":"","sources":["../../src/validators/company-name.validator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAG7D,qBAAa,oBAAqB,SAAQ,UAAU;IAClD,MAAM,CAAC,gBAAgB,CAAC,OAAO,EAAE,eAAe;;;CAOjD"}

@@ -1,0 +1,55 @@
+<div class="cmp-responsivegrid__container pb-10">
+  <div class="cmp cmp-title" *ngIf="selectedCountryType === 'secondCountry'">
+    <h3 class="text-align--left heading--4 mt--l mb--xxxs">
+      {{ 'ng.roaming-international-rates.country-list.another-country' | translate }}
+    </h3>
+  </div>
+  <div class="row">
+    <div
+      class="col-xs-12"
+      [ngClass]="selectedCountryType === 'secondCountry' || rateType === 'INTERNATIONAL' ? 'col-md-8' : 'col-md-6'">
+      <div class="pb--xm--sm display--flex--sm">
+        <div
+          class="form--pre-labels mr--xm--sm"
+          *ngIf="selectedCountryType === 'secondCountry' || rateType === 'INTERNATIONAL'">
+          <label class="">{{ 'ng.roaming-international-rates.country-list.from' | translate }}</label>
+          <div class="display--flex align-items--center roaming-rates-second-search-label">
+            <div class="cmp-text">
+              <p>{{ (selectedFromCountry$ | async)?.country }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="form--autocomplete width--full">
+          <label class="">{{ 'ng.roaming-international-rates.country-list.to' | translate }}</label>
+          <div class="form-element-wrapper display--flex">
+            <tg-autocomplete
+              *ngIf="filteredCountries$ | async as countries"
+              name="selectFromCountry{{ selectedCountryType }}"
+              placeholder="{{ 'ng.roaming-international-rates.country-list.place-holder' | translate }}"
+              [createLabel]="createLabel"
+              [autocompleteItems]="countries"
+              [searchTerm]="
+                !selectedCountryType || (rateType === 'INTERNATIONAL' && selectedFromCountry)
+                  ? selectedCountryFromQueryParam || ''
+                  : ''
+              "
+              [showListOnFocus]="true"
+              [setErrorState]="errorMessage !== ''"
+              [maxResults]="countries.length"
+              (selectionChange)="handleSuggestionsChange($event)"
+              (inputTextChange)="validateUserInput($event)">
+            </tg-autocomplete>
+            <div class="display--none display--block--sm ml--l--sm">
+              <button class="button" style="" (click)="handleCalculateEvent($event)" type="button">
+                <span>{{ 'ng.roaming-international-rates.country-list.calculate' | translate }}</span>
+              </button>
+            </div>
+          </div>
+          <div *ngIf="errorMessage !== ''" class="formErrorInput">
+            {{ errorMessage | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

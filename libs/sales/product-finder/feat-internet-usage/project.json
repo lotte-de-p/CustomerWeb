@@ -1,0 +1,20 @@
+{
+  "name": "sales-product-finder-feat-internet-usage",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/product-finder/feat-internet-usage/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/product-finder/feat-internet-usage/**/*.ts",
+          "libs/sales/product-finder/feat-internet-usage/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales/product-finder", "scope:sales-mfe"]
+}

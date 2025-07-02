@@ -1,0 +1,69 @@
+<h4 class="heading--nomargin pb--xs" data-testid="hardware-discount-header-available">
+  {{ 'ng.hardware-discount.available-title' | translate }}
+</h4>
+<div class="Container background-white px--m pt--l pb--m p--l--sm">
+  @if (data.creditCheck === 'NOT_OK') {
+    <div class="mb--m mb--l--md">
+      <wink-notification appearance="error">
+        <wink-title
+          slot="heading"
+          data-testid="hardware-discount-bad-payer-msg"
+          html-tag="h6"
+          spacing-y="bottom"
+          text="{{ 'ng.hardware-discount.error.bad-payer' | translate }}"
+          brand="telenet"
+          class="spacing-bottom hydrated"></wink-title>
+      </wink-notification>
+    </div>
+  }
+  <div class="display--flex justify-content--between flex-direction--row--md flex-direction--column">
+    <div>
+      <div class="display--flex--md">
+        <wink-icon
+          appearance="primary"
+          data-testid="hardware-discount-promo-icon"
+          icon="promo-percent"
+          size="xl"
+          brand="telenet">
+        </wink-icon>
+        <div class="ml--l--md mt--n--md mt--m">
+          <div class="display--flex align-items--baseline" data-testid="hardware-discount-available-slots">
+            <h2 class="heading--nomargin">{{ data.availableSlots }}</h2>
+            <h5 class="heading--nomargin">
+              /{{ data.totalSlots }} {{ 'ng.hardware-discount.discounts-left' | translate }}
+            </h5>
+          </div>
+          <div data-testid="hardware-discount-overview-subtext" class="color-shade_72">
+            {{ 'ng.hardware-discount.overview-subtext' | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    @if (data.creditCheck === 'OK') {
+      <div class="mt--n--md mt--m display--flex--md align-items--center--md">
+        <wink-button
+          (click)="redirectTo(useDiscountLink)"
+          data-testid="hardware-discount-use-discount-btn"
+          text="{{ 'ng.hardware-discount.use-discount-btn' | translate }}"
+          type="button"
+          element="a"
+          appearance="primary"
+          size="md"
+          width="full"
+          status="none">
+        </wink-button>
+      </div>
+    }
+  </div>
+</div>
+<div class="font--caption color-shade_72 pt--xxs">
+  <span data-testid="hardware-discount-terms-and-conditions-text">
+    {{ 'ng.hardware-discount.contract-text' | translate }}
+  </span>
+  <span
+    data-testid="hardware-discount-terms-and-conditions-link"
+    class="text-flow text-flow--hyperlink font--caption cursor--pointer"
+    (click)="redirectTo(termsConditionsLink)">
+    {{ 'ng.hardware-discount.terms-and-conditions-lbl' | translate }}
+  </span>
+</div>

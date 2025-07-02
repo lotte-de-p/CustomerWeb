@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.653" tests="11" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-13T10:17:22" tests="0" file="src/e2e/fleet-product/line-change-tariff-plan/line-change-tariff-plan.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Change Tariff Plan" timestamp="2024-09-13T10:17:22" tests="8" time="0.000" failures="0">
+    <testcase name="AC 1: Fleet Manager goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened" time="1.995" classname="Line Change Tariff Plan AC 1: Fleet Manager goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet Manager opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list" time="1.251" classname="Line Change Tariff Plan AC 2: Fleet Manager opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list">
+    </testcase>
+    <testcase name="AC 3: Fleet Manager opens the change tariff plan wizard when fleet manager switches the mobile plan the new plan is visible " time="1.281" classname="Line Change Tariff Plan AC 3: Fleet Manager opens the change tariff plan wizard when fleet manager switches the mobile plan the new plan is visible ">
+    </testcase>
+    <testcase name="AC 4.1: Fleet Manager chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown " time="1.297" classname="Line Change Tariff Plan AC 4.1: Fleet Manager chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown ">
+    </testcase>
+    <testcase name="AC 4.2: Fleet Manager chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed" time="1.379" classname="Line Change Tariff Plan AC 4.2: Fleet Manager chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed">
+    </testcase>
+    <testcase name="AC 6: Fleet Manager chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again " time="1.310" classname="Line Change Tariff Plan AC 6: Fleet Manager chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again ">
+    </testcase>
+    <testcase name="AC 8: Fleet Manager changes tariff plan in the wizard when he saves his changes then tariff plan is changed" time="1.441" classname="Line Change Tariff Plan AC 8: Fleet Manager changes tariff plan in the wizard when he saves his changes then tariff plan is changed">
+    </testcase>
+    <testcase name="AC 11: Fleet Manager opens the change tariff plan wizard then the options of the previous plan are shown" time="1.564" classname="Line Change Tariff Plan AC 11: Fleet Manager opens the change tariff plan wizard then the options of the previous plan are shown">
+    </testcase>
+  </testsuite>
+  <testsuite name="Disconnected options" timestamp="2024-09-13T10:17:34" tests="3" time="5.934" failures="0">
+    <testcase name="Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present" time="1.682" classname="Line Change Tariff Plan Disconnected options Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options" time="1.594" classname="Line Change Tariff Plan Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed" time="1.592" classname="Line Change Tariff Plan Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed">
+    </testcase>
+  </testsuite>
+</testsuites>

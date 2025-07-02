@@ -1,0 +1,20 @@
+<div class="label-input-flow">
+  <label for="{{ key }}" class="text-flow--label">{{ getLabel() | translate}}</label>
+</div>
+<div class="form__input-container">
+  <input
+    id="{{ key }}"
+    type="text"
+    class="Form__input form-control"
+    required="required"
+    (ngModelChange)="updateValue($event)"
+    [(ngModel)]="value"
+    [ngClass]="error ? 'error' : ''"
+    [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''" />
+</div>
+<div
+  [attr.data-cy]="messageGroup + '.error.' + key"
+  class="form__msg--error form__input__invalid-message"
+  *ngIf="error">
+  {{ getText() | translate}}
+</div>

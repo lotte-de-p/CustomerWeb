@@ -1,0 +1,34 @@
+export class InstallTypeModel {
+    description;
+    mutuallyexclusive;
+    price;
+    priceexclvat;
+    promos;
+    selected;
+    options;
+    withSelected() {
+        this.selected = true;
+        return this;
+    }
+    withDescription(description) {
+        this.description = description;
+        return this;
+    }
+    withPrice(price) {
+        this.price = price;
+        return this;
+    }
+    isPreInstall() {
+        return this.description === 'preinstall';
+    }
+    isComfortInstall() {
+        return this.description === 'comfortinstall';
+    }
+    isSelfInstall() {
+        return this.description === 'selfinstall';
+    }
+    isModemSwap() {
+        return !this.description.includes('_swap');
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5zdGFsbC10eXBlLm1vZGVsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL2xpYi9tb2RlbHMvaW5zdGFsbC10eXBlLm1vZGVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBLE1BQU0sT0FBTyxnQkFBZ0I7SUFDM0IsV0FBVyxDQUFTO0lBQ3BCLGlCQUFpQixDQUFTO0lBQzFCLEtBQUssQ0FBUztJQUNkLFlBQVksQ0FBUztJQUNyQixNQUFNLENBQWU7SUFDckIsUUFBUSxDQUFVO0lBQ2xCLE9BQU8sQ0FBNkI7SUFFcEMsWUFBWTtRQUNWLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLE9BQU8sSUFBSSxDQUFDO0lBQ2QsQ0FBQztJQUVELGVBQWUsQ0FBQyxXQUFtQjtRQUNqQyxJQUFJLENBQUMsV0FBVyxHQUFHLFdBQVcsQ0FBQztRQUMvQixPQUFPLElBQUksQ0FBQztJQUNkLENBQUM7SUFFRCxTQUFTLENBQUMsS0FBYTtRQUNyQixJQUFJLENBQUMsS0FBSyxHQUFHLEtBQUssQ0FBQztRQUNuQixPQUFPLElBQUksQ0FBQztJQUNkLENBQUM7SUFFRCxZQUFZO1FBQ1YsT0FBTyxJQUFJLENBQUMsV0FBVyxLQUFLLFlBQVksQ0FBQztJQUMzQyxDQUFDO0lBRUQsZ0JBQWdCO1FBQ2QsT0FBTyxJQUFJLENBQUMsV0FBVyxLQUFLLGdCQUFnQixDQUFDO0lBQy9DLENBQUM7SUFFRCxhQUFhO1FBQ1gsT0FBTyxJQUFJLENBQUMsV0FBVyxLQUFLLGFBQWEsQ0FBQztJQUM1QyxDQUFDO0lBRUQsV0FBVztRQUNULE9BQU8sQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsQ0FBQztJQUM3QyxDQUFDO0NBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbnN0YWxsVHlwZUludGVyZmFjZSB9IGZyb20gJy4uL2ludGVyZmFjZXMvaW5zdGFsbC10eXBlLmludGVyZmFjZSc7XG5pbXBvcnQgeyBQcm9tb01vZGVsIH0gZnJvbSAnLi9wcm9tby5tb2RlbCc7XG5pbXBvcnQgeyBEZWxpdmVyeU9wdGlvbkludGVyZmFjZSB9IGZyb20gJy4uL2ludGVyZmFjZXMvZGVsaXZlcnktb3B0aW9uLmludGVyZmFjZSc7XG5cbmV4cG9ydCBjbGFzcyBJbnN0YWxsVHlwZU1vZGVsIGltcGxlbWVudHMgSW5zdGFsbFR5cGVJbnRlcmZhY2Uge1xuICBkZXNjcmlwdGlvbjogc3RyaW5nO1xuICBtdXR1YWxseWV4Y2x1c2l2ZTogc3RyaW5nO1xuICBwcmljZTogbnVtYmVyO1xuICBwcmljZWV4Y2x2YXQ6IG51bWJlcjtcbiAgcHJvbW9zOiBQcm9tb01vZGVsW107XG4gIHNlbGVjdGVkOiBib29sZWFuO1xuICBvcHRpb25zPzogRGVsaXZlcnlPcHRpb25JbnRlcmZhY2VbXTtcblxuICB3aXRoU2VsZWN0ZWQoKTogSW5zdGFsbFR5cGVNb2RlbCB7XG4gICAgdGhpcy5zZWxlY3RlZCA9IHRydWU7XG4gICAgcmV0dXJuIHRoaXM7XG4gIH1cblxuICB3aXRoRGVzY3JpcHRpb24oZGVzY3JpcHRpb246IHN0cmluZyk6IEluc3RhbGxUeXBlTW9kZWwge1xuICAgIHRoaXMuZGVzY3JpcHRpb24gPSBkZXNjcmlwdGlvbjtcbiAgICByZXR1cm4gdGhpcztcbiAgfVxuXG4gIHdpdGhQcmljZShwcmljZTogbnVtYmVyKTogSW5zdGFsbFR5cGVNb2RlbCB7XG4gICAgdGhpcy5wcmljZSA9IHByaWNlO1xuICAgIHJldHVybiB0aGlzO1xuICB9XG5cbiAgaXNQcmVJbnN0YWxsKCk6IGJvb2xlYW4ge1xuICAgIHJldHVybiB0aGlzLmRlc2NyaXB0aW9uID09PSAncHJlaW5zdGFsbCc7XG4gIH1cblxuICBpc0NvbWZvcnRJbnN0YWxsKCk6IGJvb2xlYW4ge1xuICAgIHJldHVybiB0aGlzLmRlc2NyaXB0aW9uID09PSAnY29tZm9ydGluc3RhbGwnO1xuICB9XG5cbiAgaXNTZWxmSW5zdGFsbCgpOiBib29sZWFuIHtcbiAgICByZXR1cm4gdGhpcy5kZXNjcmlwdGlvbiA9PT0gJ3NlbGZpbnN0YWxsJztcbiAgfVxuXG4gIGlzTW9kZW1Td2FwKCk6IGJvb2xlYW4ge1xuICAgIHJldHVybiAhdGhpcy5kZXNjcmlwdGlvbi5pbmNsdWRlcygnX3N3YXAnKTtcbiAgfVxufVxuIl19

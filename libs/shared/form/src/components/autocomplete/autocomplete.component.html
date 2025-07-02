@@ -1,0 +1,38 @@
+<div class="AutoComplete">
+  <input
+    [(ngModel)]="searchTerm"
+    [name]="name"
+    [placeholder]="placeholder"
+    type="text"
+    autocomplete="off"
+    class="form__input m--n"
+    [ngClass]="{ 'form__input--error': setErrorState }"
+    role="combobox"
+    [attr.aria-controls]="name + '-listbox'"
+    aria-autocomplete="list"
+    [attr.aria-expanded]="hasSearchTerm() && showSuggestions && hasSuggestions()"
+    [attr.aria-activedescendant]="getActiveItemId()"
+    (keyup)="handleKeyEvent($event.key)"
+    (blur)="onBlur($event)"
+    (focus)="onFocus()" />
+
+  <div class="cmp dropdown dropdown-suggest dropdown-suggest--max5results" *ngIf="showListBox()">
+    <div class="dropdown-suggest__menu">
+      <ul
+        class="dropdown-menu__menuitems__list"
+        [id]="name + '-listbox'"
+        role="listbox"
+        aria-label="List of pages"
+        [scrollTop]="scrollTo">
+        <li
+          *ngFor="let item of filteredItems | slice: 0 : maxResults"
+          [id]="getItemId(item)"
+          class="dropdown-menu__menuitems__list-item"
+          [ngClass]="{ 'dropdown-suggest__selector-menu--active': highlightedItem === item }"
+          (mousedown)="selectItem(item)">
+          {{ getLabel(item) }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

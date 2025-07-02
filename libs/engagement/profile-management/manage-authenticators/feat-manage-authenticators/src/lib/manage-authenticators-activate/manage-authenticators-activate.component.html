@@ -1,0 +1,56 @@
+<div>
+  <div
+    class="link-list-item__icon align-self--stretch display--flex align-items--start p--s"
+    [attr.data-cy]="'pm-ma-authenticator-activate-icon'">
+    <div *ngIf="selectedAuthenticator?.type === 'itsme'">
+      <i
+        class="icon icon-component display--inline-flex aspect-ratio--1-1 width--fit-content backdrop-mask icon-component--size__l hide--base icon-component--secondary"
+        aria-hidden="true">
+        <img
+          tgProfileManagementImageSrcInterceptor
+          [moduleId]="'tg-pm-manage-authenticators'"
+          src="/assets/logo_{{ selectedAuthenticator?.type }}.svg"
+          alt="{{ selectedAuthenticator?.type }} icon" />
+      </i>
+    </div>
+    <div *ngIf="selectedAuthenticator?.type !== 'itsme'">
+      <tg-pm-manage-authenticators-icon [type]="'' + selectedAuthenticator?.type" [size]="'icon-component--size__l'">
+      </tg-pm-manage-authenticators-icon>
+    </div>
+  </div>
+  <div class="cmp cmp-title px--s pt--s pb--0" [attr.data-cy]="'pm-ma-authenticator-activate-title'">
+    <h2 class="text-align--left heading--notopmargin">
+      {{ 'ng.manage-authenticators.lbl.activate-' + selectedAuthenticator?.type + '-title' | translate }}
+    </h2>
+  </div>
+  <div
+    class="cmp-text theme--inherit p--s"
+    [attr.data-cy]="'pm-ma-authenticator-activate-info'"
+    [innerHTML]="'ng.manage-authenticators.lbl.activate-' + selectedAuthenticator?.type + '-info' | translate"></div>
+</div>
+
+<div class="col-sm-12 col-md-12">
+  <div class="content-section">
+    <div class="heading--4 heading--nomargin p--s" [attr.data-cy]="'pm-ma-authenticator-activate-subtitle'">
+      {{ 'ng.manage-authenticators.lbl.activate-' + selectedAuthenticator?.type + '-subtitle' | translate }}
+    </div>
+    <div
+      class="cmp-text theme--inherit p--s"
+      [attr.data-cy]="'pm-ma-authenticator-activate-steps'"
+      [innerHTML]="'ng.manage-authenticators.lbl.activate-' + selectedAuthenticator?.type + '-steps' | translate"></div>
+    <div class="p--m--sm p--m">
+      <button
+        class="button button--primary"
+        (click)="activate()"
+        [attr.data-cy]="'pm-ma-authenticator-activate-btn-activate'">
+        {{ 'ng.manage-authenticators.btn.activate-' + selectedAuthenticator?.type + '-activate' | translate }}
+      </button>
+      <button
+        class="button button--secondary"
+        (click)="cancel()"
+        [attr.data-cy]="'pm-ma-authenticator-activate-btn-cancel'">
+        {{ 'ng.manage-authenticators.btn.activate-cancel' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

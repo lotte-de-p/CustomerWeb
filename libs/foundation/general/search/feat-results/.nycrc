@@ -1,0 +1,23 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html",
+    "json",
+    "text",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+    "apps/foundation/general-mfe/**",
+    "libs/foundation/general/search/feat-results/**"
+  ],
+  "report-dir": "../../../../../coverage/cypress/general/search/results",
+  "cwd": "../../../../../"
+}

@@ -1,0 +1,5 @@
+export enum BssSystemEnum {
+  NETCRACKER = 'NETCRACKER',
+  TELENET_LEGACY = 'TELENET_LEGACY',
+  UNKNOWN = 'UNKNOWN',
+}

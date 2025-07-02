@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" class="background-shade_04">
+  <head>
+    <meta charset="utf-8" />
+    <title>Customer web activate Sim Management MFE</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://atomic.dvp.apps.telenet.be/styles/preview.css" />
+    <link rel="stylesheet" href="https://atomic.dvp.apps.telenet.be/styles/telenet.css" />
+
+    <script
+      type="module"
+      src="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/build/wink-core.esm.js"></script>
+    <script
+      nomodule
+      src="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/build/wink-core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/assets/telenet/icons/icons-font/telenet-icons-font.css" />
+    <link
+      rel="stylesheet"
+      href="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/build/wink-core.css" />
+    <link
+      rel="stylesheet"
+      href="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/assets/shared/tokens/telenet-light-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/assets/shared/tokens/devices-mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://customer-web-foundation-wink-cdn.aem-modules-dev.awscloud.external.telenet.be/v2.0.0/assets/shared/tokens/devices-desktop.css" />
+
+    <script src="https://www.int.telenet.be/en.pageLocaleData.js"></script>
+
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.int.telenet.be/ocapi',
+          'omapi-url': 'https://api.int.telenet.be/omapi',
+          'oauth-url': 'https://login.int.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.int.telenet.be/openid',
+          'oauth-client-id': 'ocapi',
+        };
+
+        window.TelenetGroup = {
+          pathCategorisation: {
+            customerBrand: 'TELENET',
+          },
+        };
+      })();
+    </script>
+  </head>
+  <body class="background-shade_04">
+    <tg-sim-management-local></tg-sim-management-local>
+  </body>
+</html>

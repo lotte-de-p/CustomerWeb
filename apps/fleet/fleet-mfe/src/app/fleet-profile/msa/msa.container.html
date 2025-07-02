@@ -1,0 +1,35 @@
+<app-loader [enableLoader]="enableLoader" [pageType]="'fleet-page'" [enableMask]="enableMask" [startByDefault]="false">
+</app-loader>
+
+<div *ngIf="customerMsa$ | async as customerMsa">
+  <div class="msa-list-items form-builder form-group">
+    <form novalidate name="msa_form" class="select2-container" [formGroup]="msaForm">
+      <tg-form-dropdown-with-input
+        [optionList]="getDropdownOptions(customerMsa)"
+        [showPlaceHolder]="true"
+        labelPrefix="dropdown"
+        formControlName="msa"
+        labelStyle="FormGroup__label"
+        [customLabel]="false"
+        (ngModelChange)="onMsaSelectionChanged($event)"></tg-form-dropdown-with-input>
+    </form>
+  </div>
+
+  <mat-tab-group
+    class="mt--xxl"
+    [selectedIndex]="selectedTab.value"
+    (selectedIndexChange)="selectedTab.setValue($event)">
+    <mat-tab *ngFor="let tab of tabs; let index = index">
+      <ng-template mat-tab-label> {{tab | translate}} </ng-template>
+      <div class="center" *ngIf="currentMsa$ | async as currentMsa">
+        <tg-group-bundle *ngIf="tab === tabs[1]" [bundles]="currentMsa.groupBundles"> </tg-group-bundle>
+        <tg-tariff-plan-container
+          *ngIf="tab === tabs[0]"
+          [eligibleOffers]="currentMsa.eligibleOffers"
+          [options]="tariffPlanOptions"
+          [componentInstanceId]="componentInstanceId">
+        </tg-tariff-plan-container>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,11 @@
+{
+  "id": "915321865216215",
+  "limit": {
+    "id": "147750487413744134",
+    "enabled": false,
+    "currentUsage": "2",
+    "value": "3",
+    "unitType": "GB",
+    "originalUnitType": "bytes"
+  }
+}

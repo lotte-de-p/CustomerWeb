@@ -1,0 +1,34 @@
+<div *ngIf="address" class="user-input-options">
+  <div class="cards mt--m border-color--all--mid-grey border-width--all--r border-style--all--solid">
+    <div class="cards--append cards--container p--m">
+      <div class="cards--body">
+        <div class="cards--body--inner-container">
+          <div class="cards-content__body">
+            <div class="text-flow text-flow--button cards-content__body-label">
+              <div class="row vertical-align-content">
+                <div class="col-md-1 col-1 p--n">
+                  <i class="color-text heading--3 icon icon-locations icon-md mr--s"></i>
+                </div>
+                <div class="col-md-8 col-7 p--n">
+                  <h5 class="text-flow--text heading--nomargin">
+                    {{ address.street }} {{ address.houseNumber }}{{ address.subHouseNumber ?? ' ' }}
+                  </h5>
+                  <span class="text-flow--text color-shade_24">
+                    {{ address.zipcode }}, {{ address.subMunicipality }}
+                  </span>
+                </div>
+                <div
+                  class="col-md-3 col-4 cur-pointer p--n text-align--center"
+                  id="editAddress"
+                  (click)="editAddress()">
+                  <i class="color-text heading--3 icon icon-edit icon-md mr--s--md"></i>
+                  <span class="link">{{ 'ng.' + messageGroupName + '.lbl.edit' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

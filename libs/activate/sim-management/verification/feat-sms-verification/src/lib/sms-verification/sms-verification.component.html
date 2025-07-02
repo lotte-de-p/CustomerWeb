@@ -1,0 +1,80 @@
+<tg-login (componentCanRender)="initAfterLoggedIn($event)">
+  @if (selectedMobileLine$ | async; as selectedMobileLine) {
+    <tg-activate-sim-management-activation-ui-step-container
+      [title]="'ng.sim-management.sms-verification.title'"
+      [submitLabel]="'ng.sim-management.sms-verification.btn.submit'"
+      [backLabel]="'ng.sim-management.sms-verification.btn.back'"
+      (backClick)="onBackClick()"
+      (submitClick)="onSubmitClick(selectedMobileLine.msisdn)">
+      <ng-container left-content>
+        <div class="col-6 hide-until-sm text-align--center">
+          <img
+            [tgActivateSimManagementImageSrcInterceptor]="imagePath"
+            [moduleId]="SimManagementComponentId.SIM_MANAGEMENT_SMS_VERIFICATION"
+            src="/assets/mobile-secure.svg" />
+        </div>
+      </ng-container>
+      <ng-container content>
+        <div class="background-white p--s p--xxl--sm">
+          @if (showActionResultMessage && (notificationMessage$ | async); as notificationMessage) {
+            <div class="">
+              <tg-activate-sim-management-ui-notification
+                [message]="notificationMessage"></tg-activate-sim-management-ui-notification>
+            </div>
+          }
+          <div class="pid-profile__form-container">
+            <div class="account-line-selector" style="margin: 0">
+              @if (showDataOnlyPlan) {
+                <tg-sim-management-sms-verification-mobile-line-selector
+                  [mobileLines]="mobileLines"
+                  (toggleSixDigitCodeContent)="toggleSixDigitCodeContent($event)"
+                  (generateSMSCodeMessage)="generateSMSCodeMessage($event)">
+                </tg-sim-management-sms-verification-mobile-line-selector>
+              } @else {
+                <tg-sim-management-sms-verification-selected-mobile-line [selectedMobileLine]="selectedMobileLine">
+                </tg-sim-management-sms-verification-selected-mobile-line>
+              }
+              <tg-sim-management-sms-verification-six-digit-form
+                [validateSmsCodeForm]="validateSmsCodeForm"
+                (generateSMSCodeMessage)="generateSMSCodeMessage(selectedMobileLine.msisdn)"
+                [showSixDigitCode]="showSixDigitCode"
+                (smsCodeComplete)="getSmsCode($event)"
+                (validateSmsCodeFormData)="validateSmsCodeFormData($event)">
+              </tg-sim-management-sms-verification-six-digit-form>
+            </div>
+          </div>
+        </div>
+
+        @if (showSixDigitCode && !selectedMobileLine.isDataOnlyPlan) {
+          <div class="accordion theme--inherit sms-verification-padding-xl p--s">
+            <div class="divider--xxs hide--telenet"></div>
+            <div class="accordion__item overflow-hidden">
+              <div class="pb--xxs--md"></div>
+              <div class="accordion__header">
+                <button
+                  data-testid="sms-verification-not-received-code-accordion"
+                  (click)="toggleReceivingCode()"
+                  class="accordion__button display--flex justify-content--between align-content--center background-transparent width--full border-none cursor--pointer py--m px--n">
+                  <h5 class="heading--nomargin">
+                    {{ 'ng.sim-management.sms-verification.btn.resend-code' | translate }}
+                  </h5>
+                  <i
+                    class="accordion__icon icon icon-no-size-override icon-md"
+                    [ngClass]="{
+                      'icon-chevron-up': toggleReceiveCode,
+                      'icon-chevron-down': !toggleReceiveCode
+                    }"></i>
+                </button>
+              </div>
+              @if (toggleReceiveCode) {
+                <div class="accordion__panel overflow-hidden transition--ease-3ms text-align--left">
+                  {{ 'ng.sim-management.sms-verification.not-receiving-recover-code-description' | translate }}
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </ng-container>
+    </tg-activate-sim-management-activation-ui-step-container>
+  }
+</tg-login>

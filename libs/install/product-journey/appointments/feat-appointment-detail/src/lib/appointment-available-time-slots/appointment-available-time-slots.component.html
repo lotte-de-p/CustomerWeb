@@ -1,0 +1,98 @@
+<div class="display--block" *ngrxLet="error$; let error">
+  <div class="appointment-picker appointment-picker--section mt--g--md mt--xl">
+    <h4
+      class="m-0 pb--m"
+      [innerHTML]="
+        'ng.appointments.datepickertitle.' + selectedAppointment?.appointmentType + '.lbl' | lowercase | translate
+      "></h4>
+    <div class="py--xl--md p--m px--l--md background-white">
+      <app-message class="text-flow text-flow--h5" [messageGroupName]="messageGroupName"></app-message>
+      <div *ngIf="!error">
+        <h6 class="mt-0 pb--m pl--xs--md">{{ 'ng.appointments.choose.tab.lbl' | translate }}</h6>
+        <div
+          class="pb--xs pr--xxxl--md pl--xs--md select-tile--group display--grid grid-template-column--4--md gap--xm">
+          <label
+            for="choice"
+            class="select-tile display--flex flex-direction--column m--n color-text background-white animation-show-slide-up"
+            (click)="setAppointmentPickerType(0)">
+            <div
+              class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm"
+              data-cy="appointment-time-slot-tab-date">
+              <div class="select-tile__content--inner display--flex flex-direction--column">
+                <div class="display--flex gap--m gap--l--sm">
+                  <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                    <i
+                      class="icon icon-md icon-calendar display--inline-flex aspect-ratio--1-1 width--fit-content icon-no-size-override"
+                      aria-hidden="true"></i>
+
+                    <div class="heading--6 heading--nomargin">{{ 'ng.appointments.tab.date.lbl' | translate }}</div>
+                  </div>
+                  <input
+                    type="radio"
+                    name="choice"
+                    value=""
+                    id="choice"
+                    data-cy="appointment-time-slot-input-date"
+                    checked
+                    class="select-tile__input display--flex align-items--center justify-content--center font--body-regular cursor--pointer border-radius--circle" />
+                </div>
+              </div>
+            </div>
+          </label>
+          <label
+            for="choice1"
+            class="select-tile display--flex flex-direction--column m--n color-text background-white animation-show-slide-up"
+            (click)="setAppointmentPickerType(1)">
+            <div
+              class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm"
+              data-cy="appointment-time-slot-tab-time">
+              <div class="select-tile__content--inner display--flex flex-direction--column">
+                <div class="display--flex gap--m gap--l--sm">
+                  <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                    <i
+                      class="icon icon-md icon-clock display--inline-flex aspect-ratio--1-1 width--fit-content icon-no-size-override"
+                      aria-hidden="true"></i>
+                    <div class="heading--6 heading--nomargin">{{ 'ng.appointments.tab.time.lbl' | translate }}</div>
+                  </div>
+                  <input
+                    type="radio"
+                    name="choice"
+                    value=""
+                    data-cy="appointment-time-slot-input-time"
+                    id="choice1"
+                    class="select-tile__input display--flex align-items--center justify-content--center font--body-regular cursor--pointer border-radius--circle" />
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <ng-container *ngIf="timeSlotsLoaded$ | async; else timeSlotSkeleton">
+          <form [formGroup]="timeSlotForm" *ngIf="availableTimeSlots">
+            <app-form-appointment-picker
+              [reset]="hasReset"
+              [appointmentPickerType]="selectedAppointmentPickerType"
+              [startDate]="startDate"
+              [timeslots]="availableTimeSlots"
+              consumerType="NC"
+              formControlName="appointment"
+              labelPrefix="schedule-appointment"
+              [showLoadMore]="false"
+              (loadMore)="loadMoreSlots($event)"
+              messageGroup="appointments"
+              [updateSlots]="updatedSlots"
+              [disableLoadMore]="!disableLoadMore"
+              (scrollTo)="scrollToSection($event)"
+              [slidesToShow]="4"
+              [isDeviceLandscape]="isDeviceLandscape"
+              [enableAppointmentsUI]="true">
+            </app-form-appointment-picker>
+          </form>
+        </ng-container>
+        <ng-template #timeSlotSkeleton>
+          <tg-time-slot-skeleton></tg-time-slot-skeleton>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

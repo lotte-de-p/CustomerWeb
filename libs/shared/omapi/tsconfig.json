@@ -1,0 +1,18 @@
+{
+  "extends": "../../../tsconfig.lib.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.lib.prod.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+:host {
+  * {
+    font-size: rem(1.6);
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: rem(1.6);
+    padding: rem(1.6);
+    width: 100%;
+    flex-wrap: nowrap;
+
+    &.has-close-icon {
+      @include media('until-sm') {
+        flex-wrap: wrap;
+      }
+    }
+
+    @include media('until-sm') {
+      gap: rem(2.4);
+      padding: rem(2.4);
+    }
+
+    .close-icon {
+      cursor: pointer;
+
+      @include media('from-sm') {
+        order: 1;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: #{$spacer-title-paragraph};
+    }
+
+    &.information {
+      background-color: var(--semantic-color-background-surface-system-informative);
+
+      :not(.close-icon) {
+        --wink-icon-color: #{$wink-icon-color-default};
+      }
+    }
+
+    &.success {
+      background-color: var(--semantic-color-background-surface-system-success);
+
+      :not(.close-icon) {
+        --wink-icon-color: #{$wink-icon-color-success};
+      }
+    }
+
+    &.error {
+      background-color: var(--semantic-color-background-surface-system-error);
+
+      :not(.close-icon) {
+        --wink-icon-color: #{$wink-icon-color-error};
+      }
+    }
+
+    &.warning {
+      background-color: var(--semantic-color-background-surface-system-warning);
+
+      :not(.close-icon) {
+        --wink-icon-color: #{$wink-icon-color-warning};
+      }
+    }
+  }
+}

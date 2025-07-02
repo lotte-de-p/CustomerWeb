@@ -1,0 +1,4 @@
+<div class="notification notification--info mb-20" *ngIf="notification" [attr.data-cy]="'summary-notification'">
+  <span class="icon icon-information-shape"></span>
+  <span>{{ notification.message | translate }}</span>
+</div>

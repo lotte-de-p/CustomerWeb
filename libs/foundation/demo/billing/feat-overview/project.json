@@ -1,0 +1,60 @@
+{
+  "name": "demo-billing-feat-overview",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/foundation/demo/billing/feat-overview/src",
+  "prefix": "demo-billing",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/foundation/demo/billing/feat-overview/**/*.ts",
+          "libs/foundation/demo/billing/feat-overview/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/demo/billing/feat-overview/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/demo/billing/feat-overview/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/demo/billing/feat-overview/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "demo-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:demo-billing", "scope:demo-mfe"]
+}

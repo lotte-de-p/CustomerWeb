@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.431" tests="3" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T11:08:18" tests="0" file="src/e2e/fleet-sim-card/sim-activation/sim-activation-manager/sim-activation-manager.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Bundle usage reminders" timestamp="2024-07-17T11:08:18" tests="3" time="5.405" failures="0">
+    <testcase name="On page load, date picker should exist" time="0.963" classname="Bundle usage reminders On page load, date picker should exist">
+    </testcase>
+    <testcase name="On click on date input , date picker should be visible" time="0.569" classname="Bundle usage reminders On click on date input , date picker should be visible">
+    </testcase>
+    <testcase name="When choosing current date, the input must be enabled" time="0.545" classname="Bundle usage reminders When choosing current date, the input must be enabled">
+    </testcase>
+  </testsuite>
+</testsuites>

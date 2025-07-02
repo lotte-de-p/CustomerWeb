@@ -1,0 +1,43 @@
+<div *ngIf="error" class="notification notification--errorfield">
+  <span class="icon icon-error-shape errorfield">{{ getText() | translate }}</span>
+</div>
+<div
+  [class.card-square--small]="small"
+  class="label-modifier-box card-square flex-direction--column flex-direction--row--sm">
+  <div
+    *ngFor="let option of optionList; let i = index"
+    class="animation-show-slide-up mr--default--sm"
+    style="{{ '--animation-delay:' + i }}">
+    <input
+      [checked]="selectedOption && option.value === selectedOption.value"
+      class="label-modifier-radio"
+      id="choice-{{ i }}-{{ key }}"
+      name="choice-{{ key }}"
+      type="radio"
+      value="{{ option.value }}" />
+    <div class="label-modifier--append label-modifier--container cursor--pointer">
+      <div class="label-modifier--body">
+        <div class="label-modifier--body--inner-container">
+          <label
+            (click)="selectOption(option)"
+            class="label-modifier-radio__label"
+            for="choice-{{ i }}-{{ key }}"></label>
+          <div class="label-modifier-content__header">
+            <i class="icon icon-tick"></i>
+          </div>
+          <div [inlineSVG]="option.imagePath" class="label-modifier-content__image hide-until-sm"></div>
+          <div class="label-modifier-content__body">
+            <div
+              [innerHTML]="getOptionLabel(option) | translate"
+              class="text-flow text-flow--button label-modifier-content__body-label"></div>
+            <div
+              *ngIf="customOptionExplanationText"
+              [innerHTML]="getOptionText(option) | translate"
+              class="text-align--left text-align--center--sm"></div>
+          </div>
+          <div class="label-modifier-content__timing"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

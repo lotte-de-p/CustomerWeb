@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { <%= dataAccessNameCapitalized %> } from './<%= name %>.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class <%= dataAccessNameCapitalized %>Service {
+  get<%= dataAccessNameCapitalized %>List(): Observable<<%= dataAccessNameCapitalized %>[]> {
+    return of([
+      {
+        id: '1',
+        name: 'Test1',
+      },
+      {
+        id: '2',
+        name: 'Test2',
+      },
+      {
+        id: '3',
+        name: 'Test3',
+      },
+    ]);
+  }
+}

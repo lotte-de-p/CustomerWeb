@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "types": []
+  },
+  "exclude": [
+    "src/test-setup.ts",
+    "src/**/*.spec.ts",
+    "jest.config.ts",
+    "src/**/*.test.ts",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "**/*.cy.ts",
+    "**/*.cy.js",
+    "**/*.cy.tsx",
+    "**/*.cy.jsx"
+  ],
+  "include": ["src/**/*.ts"]
+}

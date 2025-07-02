@@ -1,0 +1,52 @@
+variables:
+  CLIENT_PROJECT: <%= mfeName %>
+  GITOPS_DEPLOY_FOLDER_NAME: <%= leanIxName %>/<%= mfeNameWithoutSuffix %>
+  LEANIX_APPLICATION_NAME: <%= leanIxName %>
+  CLIENT_E2E: <%= mfeNameE2E %>
+  TZ: 'Europe/Brussels' #Setting the environment Time Zone
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+test:app:
+  extends: .test:app
+  rules:
+    - when: always
+
+component-test:app:
+  extends: .component-test:app
+
+e2e:app:
+  extends: .e2e:local
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+build:storybook:
+  extends: .build:storybook
+
+push-to-harbor:
+  extends: .push-to-harbor
+
+sonar:app:
+  extends: .sonar:app
+
+# gitops-deploy-dev:
+#  extends: .gitops-deploy-dev
+
+# tag-stage-candidate:
+#   extends: .tag-stage-candidate
+
+# tag-prod-candidate:
+#   extends: .tag-prod-candidate
+
+# gitops-deploy-stage:
+#   extends: .gitops-deploy-stage
+
+# gitops-deploy-upgrade:
+#   extends: .gitops-deploy-upgrade
+
+# gitops-deploy-prod:
+#   extends: .gitops-deploy-prod

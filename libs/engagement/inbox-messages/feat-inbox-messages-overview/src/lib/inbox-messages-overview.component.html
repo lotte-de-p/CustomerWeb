@@ -1,0 +1,37 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <tg-inbox-message-loader *ngIf="loading$ | async as loading; else inboxMessageContent"></tg-inbox-message-loader>
+
+  <ng-template #inboxMessageContent>
+    @if (inboxMessages$ | async; as inboxMessages) {
+      @if (inboxMessages?.pinnedInboxMessages?.length) {
+        <p class="text-flow text-flow--body">{{ 'ng.inbox-messages.important-messages.lbl' | translate }}</p>
+
+        @for (inboxMessage of inboxMessages?.pinnedInboxMessages; track inboxMessage.id) {
+          <tg-inbox-message
+            [inboxMessage]="inboxMessage"
+            (inboxMessageClicked)="handleInboxMessageClick($event)"></tg-inbox-message>
+        }
+      }
+
+      @if (inboxMessages?.otherInboxMessages?.length) {
+        <p class="text-flow text-flow--body mt--xxl">{{ 'ng.inbox-messages.other-messages.lbl' | translate }}</p>
+
+        @for (inboxMessage of inboxMessages?.otherInboxMessages; track inboxMessage.id) {
+          <tg-inbox-message
+            [inboxMessage]="inboxMessage"
+            (deleteMessage)="deleteMessage($event)"
+            (inboxMessageClicked)="handleInboxMessageClick($event)">
+          </tg-inbox-message>
+        }
+      }
+
+      @if (!inboxMessages?.pinnedInboxMessages?.length && !inboxMessages?.otherInboxMessages?.length) {
+        @if (loadError$ | async; as loadError) {
+          <tg-inbox-message-error (errorAction)="handleErrorAction()"></tg-inbox-message-error>
+        } @else {
+          <tg-inbox-message-empty-data></tg-inbox-message-empty-data>
+        }
+      }
+    }
+  </ng-template>
+</tg-login>

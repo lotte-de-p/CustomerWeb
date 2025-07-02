@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="19.897" tests="4" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-11T07:42:46" tests="0" file="src/e2e/fleet-profile/msa/msa.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Master Service Agreement" timestamp="2024-07-11T07:42:46" tests="4" time="19.870" failures="1">
+    <testcase name="should autoselect the first MSA on page load" time="0.996" classname="Master Service Agreement should autoselect the first MSA on page load">
+    </testcase>
+    <testcase name="should show the tariff plan for the selected msa when selecting another MSA" time="4.853" classname="Master Service Agreement should show the tariff plan for the selected msa when selecting another MSA">
+      <failure message="Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`&lt;input type=&quot;text&quot; readonly=&quot;&quot; class=&quot;form__input form-control cursor--pointer ellipsis ng-untouched ng-pristine ng-valid&quot; id=&quot;msa&quot; placeholder=&quot;ng.dropdown.msa.phd&quot;&gt;`
+
+is being covered by another element:
+
+`&lt;div class=&quot;container max-100vw p--g justify-content--between flex-direction--row sticky-header sticky-header--shadow&quot;&gt;...&lt;/div&gt;`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`<input type="text" readonly="" class="form__input form-control cursor--pointer ellipsis ng-untouched ng-pristine ng-valid" id="msa" placeholder="ng.dropdown.msa.phd">`
+
+is being covered by another element:
+
+`<div class="container max-100vw p--g justify-content--between flex-direction--row sticky-header sticky-header--shadow">...</div>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+    at ensureIsDescendent (http://localhost:4201/__cypress/runner/cypress_runner.js:111947:68)
+    at ensureDescendents (http://localhost:4201/__cypress/runner/cypress_runner.js:111998:5)
+    at ensureDescendentsAndScroll (http://localhost:4201/__cypress/runner/cypress_runner.js:112004:14)
+    at ensureElIsNotCovered (http://localhost:4201/__cypress/runner/cypress_runner.js:112135:5)
+    at runAllChecks (http://localhost:4201/__cypress/runner/cypress_runner.js:112334:52)
+    at retryActionability (http://localhost:4201/__cypress/runner/cypress_runner.js:112371:16)
+    at tryCatcher (http://localhost:4201/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise.attempt.Promise.try (http://localhost:4201/__cypress/runner/cypress_runner.js:4315:29)
+    at whenStable (http://localhost:4201/__cypress/runner/cypress_runner.js:143918:68)
+    at <unknown> (http://localhost:4201/__cypress/runner/cypress_runner.js:143859:14)
+    at tryCatcher (http://localhost:4201/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (http://localhost:4201/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (http://localhost:4201/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (http://localhost:4201/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (http://localhost:4201/__cypress/runner/cypress_runner.js:1701:18)
+    at Promise._fulfill (http://localhost:4201/__cypress/runner/cypress_runner.js:1645:18)
+    at <unknown> (http://localhost:4201/__cypress/runner/cypress_runner.js:5450:46)
+From Your Spec Code:
+    at Context.eval (webpack:///./src/e2e/fleet-profile/msa/msa.spec.cy.ts:39:0)]]></failure>
+    </testcase>
+    <testcase name="should pin and unpin the selected offer when the pin button is clicked" time="0.720" classname="Master Service Agreement should pin and unpin the selected offer when the pin button is clicked">
+    </testcase>
+    <testcase name="should show group bundles when the group bundles tab is clicked" time="0.602" classname="Master Service Agreement should show group bundles when the group bundles tab is clicked">
+    </testcase>
+  </testsuite>
+</testsuites>

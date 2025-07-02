@@ -1,0 +1,65 @@
+<form [formGroup]="identityDetailsForm">
+  <div class="mt--xl--md mt--l">
+    <label
+      class="cursor--default"
+      for="nationalRegistrationNumberField"
+      [attr.data-cy]="'nationalRegistrationNumberField'">
+      {{ 'customer-registration.form-nrn-label' | translate }}
+    </label>
+    <div class="form__input-container mb--xl--md mb--l">
+      <input
+        type="text"
+        id="nationalRegistrationNumberField"
+        name="nationalRegistrationNumberField"
+        class="form__input"
+        [placeholder]="'00.00.00-000.00'"
+        mask="00.00.00-000.00"
+        [showMaskTyped]="true"
+        [placeHolderCharacter]="'0'"
+        [dropSpecialCharacters]="false"
+        formControlName="nationalRegistrationNumberField"
+        (blur)="extractDateOfBirthFromNRN()"
+        [attr.data-cy]="'nrn-field'"
+        [attr.data-testid]="'nrn-field'" />
+
+      @if (
+        identityDetailsForm.controls['nationalRegistrationNumberField'].touched &&
+        identityDetailsForm.controls['nationalRegistrationNumberField'].errors?.['required']
+      ) {
+        <div class="formErrorInput">
+          <div
+            class="text--s mt--xxxs color-notification--error--light text-align--left"
+            [attr.data-cy]="'nrn-field-required-error'">
+            {{ 'customer-registration.form-nrn-guidance-error-required' | translate }}
+          </div>
+        </div>
+      } @else if (
+        identityDetailsForm.controls['nationalRegistrationNumberField'].touched &&
+        identityDetailsForm.controls['nationalRegistrationNumberField'].errors?.['invalidNrn']
+      ) {
+        <div class="formErrorInput">
+          <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+            {{ 'customer-registration.form-nrn-guidance-error-national-registry-number-constraint' | translate }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  @if (isResidential) {
+    <div class="mt--xl--md mt--l">
+      <label class="text-align--left cursor--default">
+        {{ 'customer-registration.form-dob-label' | translate }}
+      </label>
+      <div class="mb--xl--md mb--l">
+        <app-date-of-birth-picker
+          [form]="identityDetailsForm"
+          [day]="identityDetailsForm.controls['day'].value"
+          [month]="identityDetailsForm.controls['selectedMonth'].value"
+          [year]="identityDetailsForm.controls['year'].value"
+          [minDefaultLegalAge]="minDefaultAge"
+          ngDefaultControl>
+        </app-date-of-birth-picker>
+      </div>
+    </div>
+  }
+</form>

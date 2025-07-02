@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/service-moments?limit=2",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "type": "SIM_ACTIVATION"
+    }
+  ]
+}

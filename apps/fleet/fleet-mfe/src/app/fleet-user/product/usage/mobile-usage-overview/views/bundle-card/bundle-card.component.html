@@ -1,0 +1,88 @@
+<div id="bundle-card">
+  @if (!showErrorCard) {
+    <ng-container>
+      @if (bundleCards.length > 0 && !isMobileView) {
+        <div class="wave-data-card__wave-section js-hide-card-skeleton-identifier">
+          @if (bundleCards.length === 1) {
+            <ng-container>
+              <app-line-view [card]="bundleCards[0]"></app-line-view>
+            </ng-container>
+          }
+          @if (bundleCards.length > 1) {
+            <ng-container>
+              <ngx-slick-carousel class="carousel" [config]="slickConfig" #slickModal="slick-carousel">
+                @for (bundleCard of bundleCards; track bundleCard) {
+                  <div ngxSlickItem class="slide">
+                    @if (bundleCard.isGroupView) {
+                      <ng-container>
+                        <app-group-view [card]="bundleCard"></app-group-view>
+                      </ng-container>
+                    }
+                    @if (!bundleCard.isGroupView) {
+                      <ng-container>
+                        <app-line-view [card]="bundleCard"></app-line-view>
+                      </ng-container>
+                    }
+                  </div>
+                }
+              </ngx-slick-carousel>
+            </ng-container>
+          }
+        </div>
+      }
+      @if (bundleCardsMobile.length > 0 && isMobileView) {
+        <div class="wave-data-card__wave-section js-hide-card-skeleton-identifier">
+          @if (bundleCardsMobile.length === 1) {
+            <ng-container>
+              <app-line-view [card]="bundleCardsMobile[0]"></app-line-view>
+            </ng-container>
+          }
+          @if (bundleCardsMobile.length > 1) {
+            <ng-container>
+              <ngx-slick-carousel class="carousel" [config]="slickConfigMobile" #slickModal="slick-carousel">
+                @for (bundleCard of bundleCardsMobile; track bundleCard) {
+                  <div ngxSlickItem class="slide">
+                    @if (bundleCard.isGroupView) {
+                      <ng-container>
+                        <app-group-view [card]="bundleCard"></app-group-view>
+                      </ng-container>
+                    }
+                    @if (!bundleCard.isGroupView) {
+                      <ng-container>
+                        <app-line-view [card]="bundleCard"></app-line-view>
+                      </ng-container>
+                    }
+                  </div>
+                }
+              </ngx-slick-carousel>
+            </ng-container>
+          }
+        </div>
+      }
+      @if (hasNotActiveAndPendingActivationMobileLines) {
+        <div class="wave-data-card__wave-section">
+          <div class="group-view__title-section js-hide-card-skeleton-identifier text-align--center pt--xl">
+            <div class="text-weight--g">
+              <span>{{ 'ng.fleet-user-mobile-usage-overview.lbl.usage' | translate }}</span>
+            </div>
+          </div>
+          <app-liquid-chart
+            [hasActivationInProgressProduct]="hasNotActiveAndPendingActivationMobileLines"></app-liquid-chart>
+        </div>
+      }
+    </ng-container>
+  }
+  @if (showErrorCard) {
+    <ng-container>
+      <div class="notification--card">
+        <i class="icon icon-error-shape"></i>
+        <div class="notification--card__message js-hide-card-skeleton-identifier">
+          <div class="notification--card__message__header">{{ cardTitle }}</div>
+          <div class="notification--card__message__description">
+            {{ 'ng.fleet-user-mobile-usage-overview.error.service-not-available' | translate }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  }
+</div>

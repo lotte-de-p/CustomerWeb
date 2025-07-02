@@ -1,0 +1,30 @@
+<div class="input-v2--wrapper mb--m">
+  <label class="label-v2" for="new-hn" id="houseNumber:Label">
+    <div class="label-v2__label">
+      <div [ngClass]="{ 'label-v2--disabled': controls.disabled }" class="font--caption cur-default my--xxxs">
+        {{ 'ng.' + messageGroup + '.lbl.house-number' | translate }}
+      </div>
+    </div>
+  </label>
+  <div class="display--flex width--full">
+    <input
+      [formControl]="formControl"
+      [matAutocomplete]="houseNumberList"
+      aria-describedby="houseNumber:Helper houseNumber:Error"
+      autocomplete="off"
+      class="input-v2"
+      id="new-hn"
+      type="text" />
+    <mat-autocomplete #houseNumberList="matAutocomplete" [autoActiveFirstOption]="true" [displayWith]="formattedNumber">
+      <mat-option *ngFor="let suggestion of suggestions$ | async" [value]="suggestion">
+        {{ suggestion.houseNumber }}
+      </mat-option>
+    </mat-autocomplete>
+  </div>
+</div>
+<div
+  *ngIf="controls.touched && controls.hasError('required')"
+  class="formErrorInput text-align--left"
+  data-cy="error-on-houseNumber">
+  {{ 'ng.' + messageGroup + '.error.houseNumber.required' | translate }}
+</div>

@@ -1,0 +1,129 @@
+<product-product-price-changes-skeleton *ngIf="loading$ | async; else loaded"></product-product-price-changes-skeleton>
+<ng-template #loaded>
+  <ng-container *ngIf="isAuthenticated$ | async; else customLogin">
+    <ng-container *ngIf="productPriceChanges$ | async as productPriceChanges">
+      <div class="row" *ngIf="productPriceChanges.length === 0 && (loadError$ | async) === undefined">
+        <div class="col-12">
+          <product-no-price-changes />
+        </div>
+      </div>
+      <ng-container *ngIf="productPriceChanges.length === 0 && (loadError$ | async) as loadError">
+        <div
+          class="display--flex width--full justify-content--center align-items--center"
+          style="height: 70vh"
+          data-cy="product-price-changes-unauthorized">
+          <div class="display--flex flex-direction--column align-items--center justify-content--center">
+            <img
+              [src]="'/content/dam/www-telenet-touch/nl/common/components/product-price-changes/limited-access.svg'"
+              alt="no price changes"
+              height="200"
+              class="mb--s" />
+            <h4 class="heading--4 mt--n">{{ 'ng.product-price-changes.limited-access' | translate }}</h4>
+            <p class="text-align--center">{{ 'ng.ocapi.403-OCAPI-ERR-004-errorfield' | translate }}</p>
+          </div>
+        </div>
+      </ng-container>
+      <app-message-flow [messageGroupName]="MESSAGE_GROUP_NAME"></app-message-flow>
+      <product-price-changes-account-selector
+        *ngIf="productPriceChanges.length"
+        class="display--flex flex-direction--column"
+        [billingAccounts]="(billingAccounts$ | async) || []"
+        [accountSelected]="selectedBillingAccount$ | async"
+        (selectBillingAccount)="selectBillingAccount($event)"></product-price-changes-account-selector>
+      <div class="pb--l">
+        <ng-container *ngIf="selectedProductPriceChanges$ | async as selectedProductPriceChanges">
+          <div class="row" *ngIf="selectedProductPriceChanges.length">
+            <div class="col-12">
+              <div class="mb--m mb--n--md py--m" style="display: block">
+                <p
+                  data-cy="price-adjustment"
+                  innerHTML="{{ 'ng.product-price-changes.price-adjustment' | translate }}"></p>
+              </div>
+            </div>
+          </div>
+          <ng-container
+            *ngFor="let ppc of selectedProductPriceChanges"
+            [ngTemplateOutlet]="productPriceChange"
+            [ngTemplateOutletContext]="{ productPriceChange: ppc }"></ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+  </ng-container>
+</ng-template>
+<ng-template #customLogin>
+  <div class="row display--flex justify-content--center">
+    <div class="col-11 col-md-5 col-xs-10 background-white px--xxl py--l">
+      <app-message-flow [messageGroupName]="MESSAGE_GROUP_NAME"></app-message-flow>
+      <product-price-changes-login
+        data-cy="product-price-changes-login"
+        [authenticationError]="authenticationError$ | async"
+        [clientNumberInformationUrl]="clientNumberInformationUrl"
+        (login)="login($event)"></product-price-changes-login>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #productPriceChange let-productPriceChange="productPriceChange">
+  <div class="background-white px--l py--l mb--l">
+    <h4 class="heading--4 mt--n mb--m mb--l--md border--bottom--light-grey pb--m pb--l--md">
+      <product-price-changes-address [address]="productPriceChange.address" />
+    </h4>
+    <div class="row" *ngIf="productPriceChange.priceAccordingToConsumption; else priceNotAccordingToConsumption">
+      <div class="col-12">
+        <div class="notification notification--info">
+          <div
+            class="icon icon-information-shape info display--flex gap--s flex-direction--row--md flex-direction--column">
+            <div>
+              <h6
+                data-cy="no-price-change-title"
+                class="mt-0"
+                innerHTML="{{ 'ng.product-price-changes.no-price-changes.title' | translate }}"></h6>
+              <p
+                data-cy="no-price-change"
+                class="mt-0 mb-0"
+                innerHTML="{{ 'ng.product-price-changes.no-price-changes' | translate }}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #priceNotAccordingToConsumption>
+    <div class="row">
+      <div class="col-12">
+        <div class="mb--m mb--n--md p--m pl-24 pr-24 notification notification--info" style="display: block">
+          <div
+            class="icon icon-information-shape info display--flex gap--s flex-direction--row--md flex-direction--column">
+            <div>
+              <h6
+                class="general-class mt--n heading--6"
+                innerHTML="{{ 'ng.product-price-changes.description-title' | translate }}"></h6>
+              <p
+                *ngIf="productPriceChange"
+                data-cy="description-summary"
+                class="mb--n"
+                innerHTML="{{
+                  'ng.product-price-changes.description-summary-' + productPriceChange.billingFrequency.toLowerCase()
+                    | translate
+                      : {
+                          totalPriceIncrease:
+                            productPriceChange.priceChange
+                            | currency
+                              : 'EUR'
+                              : 'symbol'
+                              : (productPriceChange.priceChange % 1 === 0 ? '1.0-0' : '1.2-2')
+                              : locale
+                        }
+                }}"></p>
+            </div>
+          </div>
+        </div>
+        <care-price-changes
+          [productPriceChange]="productPriceChange"
+          [lang]="lang"
+          [locale]="locale"></care-price-changes>
+      </div>
+    </div>
+  </ng-template>
+</ng-template>

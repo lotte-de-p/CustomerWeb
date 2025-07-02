@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="20.776" tests="18" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-09-02T12:22:29" tests="0" file="src/e2e/fleet-user/line-add-options/line-add-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Fleet User Line Add Options" timestamp="2024-09-02T12:22:29" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="As a fleet user I can use add options on my desktop" timestamp="2024-09-02T12:22:29" tests="10" time="0.000" failures="1">
+    <testcase name="AC 1: Fleet User goes to products overview page when add options is selected then the add options wizard is opened and previously added options are shown" time="1.388" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 1: Fleet User goes to products overview page when add options is selected then the add options wizard is opened and previously added options are shown">
+    </testcase>
+    <testcase name="AC 2: Fleet User opens the add options wizard when fleet user he sees an option that is already in his sim line he can not add this option again " time="0.807" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 2: Fleet User opens the add options wizard when fleet user he sees an option that is already in his sim line he can not add this option again ">
+    </testcase>
+    <testcase name="AC 3: Fleet User opens the add options wizard when fleet user tried to add multiple options from the same category only one is allowed " time="0.906" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 3: Fleet User opens the add options wizard when fleet user tried to add multiple options from the same category only one is allowed ">
+    </testcase>
+    <testcase name="AC 4: Fleet User adds an option in the wizard when he did not have another option from this category before then the added option is shown under the subtitle Added " time="0.814" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 4: Fleet User adds an option in the wizard when he did not have another option from this category before then the added option is shown under the subtitle Added ">
+    </testcase>
+    <testcase name="AC 5: Fleet User adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated " time="0.813" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 5: Fleet User adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated ">
+    </testcase>
+    <testcase name="AC 6: Fleet User upgrades options in the wizard when he clicks on undo changes then the upgraded option is unselected again" time="1.006" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 6: Fleet User upgrades options in the wizard when he clicks on undo changes then the upgraded option is unselected again">
+    </testcase>
+    <testcase name="AC 7: Fleet User adds option of a unselected category in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.963" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 7: Fleet User adds option of a unselected category in the wizard when he clicks on undo changes then the options are removed from the overview ">
+      <failure message="`cy.click()` can only be called on a single element. Your subject contained 7 elements. Pass `{ multiple: true }` if you want to serially click each element.
+
+https://on.cypress.io/click" type="CypressError"><![CDATA[CypressError: `cy.click()` can only be called on a single element. Your subject contained 7 elements. Pass `{ multiple: true }` if you want to serially click each element.
+
+https://on.cypress.io/click
+    at mouseAction (http://localhost:4201/__cypress/runner/cypress_runner.js:111540:68)
+    at Context.click (http://localhost:4201/__cypress/runner/cypress_runner.js:111707:14)
+    at wrapped (http://localhost:4201/__cypress/runner/cypress_runner.js:138292:19)
+From Your Spec Code:
+    at Context.eval (webpack:///./src/e2e/fleet-user/line-add-options/line-add-options.spec.cy.ts:258:0)]]></failure>
+    </testcase>
+    <testcase name="AC 8.1: Fleet User adds an option in the wizard when he saves his changes then the options are successfully submitted" time="0.947" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 8.1: Fleet User adds an option in the wizard when he saves his changes then the options are successfully submitted">
+    </testcase>
+    <testcase name="AC 8.2: Fleet User upgrades an option in the wizard when he saves his changes then the options are successfully submitted" time="0.949" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 8.2: Fleet User upgrades an option in the wizard when he saves his changes then the options are successfully submitted">
+    </testcase>
+    <testcase name="AC 9: Fleet User adds an option in the wizard when he saves his changes then he changes his mind and cancels it the user is redirected to the wizard again " time="0.968" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop AC 9: Fleet User adds an option in the wizard when he saves his changes then he changes his mind and cancels it the user is redirected to the wizard again ">
+    </testcase>
+  </testsuite>
+  <testsuite name="Split bill guard checks" timestamp="2024-09-02T12:22:41" tests="2" time="2.437" failures="0">
+    <testcase name="should show error message when fleet user ordering is not enabled" time="1.104" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop Split bill guard checks should show error message when fleet user ordering is not enabled">
+    </testcase>
+    <testcase name="should show error message when product is not of type SB20" time="1.252" classname="Fleet User Line Add Options As a fleet user I can use add options on my desktop Split bill guard checks should show error message when product is not of type SB20">
+    </testcase>
+  </testsuite>
+  <testsuite name="As a fleet user I can use add options on my mobile" timestamp="2024-09-02T12:22:43" tests="6" time="6.440" failures="0">
+    <testcase name="AC 2: Fleet User opens the add options wizard when fleet user he sees an option that is already in his sim line he can not add this option again " time="0.739" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 2: Fleet User opens the add options wizard when fleet user he sees an option that is already in his sim line he can not add this option again ">
+    </testcase>
+    <testcase name="AC 5: Fleet User adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated " time="0.822" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 5: Fleet User adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated ">
+    </testcase>
+    <testcase name="AC 7: Fleet User adds option of a unselected category in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.896" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 7: Fleet User adds option of a unselected category in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8.1: Fleet User adds an option in the wizard when he saves his changes then the options are successfully submitted" time="0.971" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 8.1: Fleet User adds an option in the wizard when he saves his changes then the options are successfully submitted">
+    </testcase>
+    <testcase name="AC 8.2: Fleet User upgrades an option in the wizard when he saves his changes then the options are successfully submitted" time="0.962" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 8.2: Fleet User upgrades an option in the wizard when he saves his changes then the options are successfully submitted">
+    </testcase>
+    <testcase name="AC 9: Fleet User adds an option in the wizard when he saves his changes then he changes his mind and cancels it the user is redirected to the wizard again " time="0.991" classname="Fleet User Line Add Options As a fleet user I can use add options on my mobile AC 9: Fleet User adds an option in the wizard when he saves his changes then he changes his mind and cancels it the user is redirected to the wizard again ">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,38 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 rem(-0.4) rem(0.8) 0 #291d1814;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: $default-max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    gap: var-rem(--semantic-spacing-md);
+    padding: var-rem(--semantic-spacing-md);
+  }
+
+  wink-progress-bar {
+    position: absolute;
+    top: rem(-0.4);
+  }
+
+  .section-left {
+    flex-basis: 50%;
+  }
+
+  .section-right {
+    flex-basis: 50%;
+    text-align: right;
+  }
+
+  wink-paragraph {
+    width: auto;
+    flex-basis: auto;
+  }
+}

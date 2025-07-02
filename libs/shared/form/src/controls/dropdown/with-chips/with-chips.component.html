@@ -1,0 +1,33 @@
+<div class="form-group position--relative">
+  <div *ngIf="customLabel" [ngClass]="{ labelStyle: this.labelStyle }">
+    <label for="{{ key }}">{{ getLabel() | translate }}</label>
+  </div>
+  <div class="ui-select-container ui-select-multiple select2 select2-container select2-container-multi">
+    <ul class="select2-choices">
+      <span class="ui-select-match" (click)="toggle()">
+        <li
+          class="ui-select-match-item select2-search-choice display--flex align-items--center"
+          *ngFor="let selectedOption of selectedOptions">
+          <span class="mx--xs">{{ selectedOption.label }}</span>
+          <a class="ui-select-match-close select2-search-choice-close" (click)="removeOption(selectedOption)"></a>
+        </li>
+        <div
+          class="icon fl-right text--m text-weight--g"
+          [ngClass]="shouldShowDropdown ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+      </span>
+    </ul>
+  </div>
+  <div *ngIf="shouldShowDropdown" class="select-dropdown__options position--absolute width--full">
+    <ul class="select-dropdown__options__content pl--n m--n position--relative">
+      <li
+        *ngFor="let option of sortBy('label')"
+        (mousedown)="updateValue(option)"
+        class="select-dropdown__options__list cursor---pointer">
+        {{ option.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="formErrorInput Form__input__invalid-message" *ngIf="error">
+    {{ getText() | translate }}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<a
+  [href]="inboxOverviewPageUrl"
+  (click)="handleNotificationClick($event, inboxOverviewPageUrl)"
+  [attr.aria-label]="'ng.inbox-messages.notification-icon.txt' | translate"
+  class="link link--unstyled display--flex align-items--center">
+  <div
+    data-cy="inbox-message-notification"
+    class="icon icons-with-notification display--inline-flex icon icon-md icon-bell position--relative">
+    <span
+      *ngIf="unreadMessages"
+      class="icon--notification__dot icon--notification__dot--notification--dot display--flex align-items--center justify-content--center position--absolute background-red color-white border-radius--all--l border--all--r border-width--all--b border-style--all--solid border-color--all--white mt--t">
+    </span>
+  </div>
+
+  <ng-container *ngIf="'ng.inbox-messages.notification-icon.txt' | translate as iconText">
+    <span
+      class="pl--xs pl--xxs--md display--none display--inline--md"
+      *ngIf="!hideIconLabel && iconText !== 'ng.inbox-messages.notification-icon.txt'">
+      {{ iconText }}
+    </span>
+  </ng-container>
+</a>

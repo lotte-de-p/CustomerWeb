@@ -1,0 +1,191 @@
+<tg-sales-customer-registration-title [currentStep]="currentStep$ | async"></tg-sales-customer-registration-title>
+<div class="mb--xxxg pb--l py--n col-lg-8 col-md-9 col-12 m--auto">
+  @if (error$ | async; as error) {
+    <div class="my--m">
+      <tg-sales-error-message
+        [errorMessage]="'ng.customer-registration.' + error.code + '-errorfield'"></tg-sales-error-message>
+    </div>
+  }
+  <div class="mb--g mb--xxxg--sm">
+    <div class="mx--m mx--n--md col-md-9 col-12">
+      @if ((prepaidOmapiProductExists$ | async) === false) {
+        <div class="select-tile--group display--grid grid-template-column--2 gap--m mb--xl--md mb--l">
+          <label
+            class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+            [attr.data-cy]="'belgianIdentity'"
+            for="belgian">
+            <div
+              class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+              <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+                <div class="display--flex gap--m gap--l--sm">
+                  <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                    <div class="heading--6 heading--nomargin pl--xxs">
+                      {{ 'customer-registration.lbl.belgian' | translate }}
+                    </div>
+                  </div>
+                  <input
+                    type="radio"
+                    id="belgian"
+                    value="belgian"
+                    [(ngModel)]="identitySelection"
+                    class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                    name="identity"
+                    (change)="toggleIdentityView('belgian')" />
+                </div>
+              </div>
+            </div>
+          </label>
+          <label
+            class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+            for="other">
+            <div
+              class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+              <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+                <div class="display--flex gap--m gap--l--sm">
+                  <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                    <div class="heading--6 heading--nomargin pl--xxs">
+                      {{ 'customer-registration.lbl.other' | translate }}
+                    </div>
+                  </div>
+                  <input
+                    type="radio"
+                    id="other"
+                    value="other"
+                    [(ngModel)]="identitySelection"
+                    class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                    name="identity"
+                    (change)="toggleIdentityView('other')" />
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      }
+    </div>
+    <div class="background-white col-12 m--auto px--xxxl--md px--xl py--m--md py--xxs">
+      <div>
+        <div>
+          <div class="row">
+            <div class="col-sm-12">
+              @if ((searchCustomerResultExists$ | async) === true) {
+                <tg-sales-error-message-with-login-button
+                  (loginEmitter)="doLogin()"
+                  [attr.data-cy]="'hard-match-error'"
+                  [brand]="brand$ | async"></tg-sales-error-message-with-login-button>
+              }
+              @if ((prepaidOmapiProductExists$ | async) === false) {
+                <div class="mt--xl--md mt--l">
+                  <ng-container [formGroup]="identityDetailsForm">
+                    @if (isBelgianIdentity) {
+                      <div class="form-info-align position--relative">
+                        <div>
+                          <label class="cursor--default pr--xxxs">
+                            {{ 'customer-registration.belgian-eid-label' | translate }}
+                          </label>
+                          <span
+                            (click)="toggleIdentityInfoOverlayView(true)"
+                            class="icon icon-information-shape position--absolute icon-sm cursor--pointer">
+                          </span>
+                        </div>
+                        <div class="form__input-container mb--xl--md mb--l">
+                          <input
+                            type="text"
+                            class="form__input"
+                            [placeholder]="'000-0000000-00'"
+                            mask="AAA-0000000-00"
+                            [showMaskTyped]="true"
+                            [dropSpecialCharacters]="false"
+                            [placeHolderCharacter]="'0'"
+                            formControlName="belgianEid"
+                            (blur)="searchCustomer('belgianEid')"
+                            [attr.data-cy]="'belgian-eid-field'" />
+                          @if (
+                            identityDetailsForm.controls['belgianEid'].touched &&
+                            identityDetailsForm.controls['belgianEid'].errors?.['required']
+                          ) {
+                            <div class="formErrorInput" [attr.data-cy]="'belgian-eid-field-required-error'">
+                              <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                                {{ 'customer-registration.form-belgian-eid-guidance-error-required' | translate }}
+                              </div>
+                            </div>
+                          } @else if (
+                            identityDetailsForm.controls['belgianEid'].touched &&
+                            identityDetailsForm.controls['belgianEid'].errors?.['invalidEid']
+                          ) {
+                            <div class="formErrorInput" [attr.data-cy]="'belgian-eid-field-invalid-error'">
+                              <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                                {{
+                                  'customer-registration.form-belgian-eid-guidance-error-belgian-eid-constraint'
+                                    | translate
+                                }}
+                              </div>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    } @else {
+                      <div class="form-group position--relative">
+                        <div class="FormGroup__label FormGroup__label--input">
+                          <div>
+                            <div class="mb--xxs">
+                              <span class="cursor--default">{{
+                                'customer-registration.belgian-eid-label' | translate
+                              }}</span>
+                              <span
+                                (click)="toggleIdentityInfoOverlayView(true)"
+                                class="icon icon-information-shape icon-sm cursor--pointer">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <input
+                          type="text"
+                          class="form__input"
+                          formControlName="foreignEid"
+                          (blur)="searchCustomer('foreignEid')" />
+                        @if (
+                          identityDetailsForm.controls['foreignEid'].touched &&
+                          identityDetailsForm.controls['foreignEid'].errors?.['required']
+                        ) {
+                          <div class="formErrorInput">
+                            <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                              {{ 'customer-registration.form-foreign-eid-guidance-error-required' | translate }}
+                            </div>
+                          </div>
+                        } @else if (
+                          identityDetailsForm.controls['foreignEid'].touched &&
+                          identityDetailsForm.controls['foreignEid'].errors?.['invalidEid']
+                        ) {
+                          <div class="formErrorInput">
+                            <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+                              {{
+                                'customer-registration.form-foreign-eid-guidance-error-foreign-eid-constraint'
+                                  | translate
+                              }}
+                            </div>
+                          </div>
+                        }
+                      </div>
+                    }
+                  </ng-container>
+                </div>
+              }
+              <tg-sales-identity-details-form
+                [userInput]="userInput$ | async"
+                [prepaidOmapiProductExists]="prepaidOmapiProductExists$ | async"
+                [itsMeDetails]="itsMeResponse$ | async"
+                [isResidential]="isResidential"
+                (searchCustomerEmitter)="searchCustomer('nrn')"></tg-sales-identity-details-form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @if (showIdentityInfoOverlay) {
+    <tg-sales-identity-overlay
+      [brand]="brand$ | async"
+      [isBelgianIdentity]="isBelgianIdentity"
+      (closeOverlay)="toggleIdentityInfoOverlayView(false)"></tg-sales-identity-overlay>
+  }
+</div>

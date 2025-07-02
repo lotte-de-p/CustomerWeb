@@ -1,0 +1,53 @@
+{
+  "name": "@telenet/aem-monorepo-plugin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/aem-monorepo-plugin/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/plugins/aem-monorepo-plugin",
+        "main": "libs/plugins/aem-monorepo-plugin/src/index.ts",
+        "tsConfig": "libs/plugins/aem-monorepo-plugin/tsconfig.lib.json",
+        "assets": [
+          "libs/plugins/aem-monorepo-plugin/*.md",
+          {
+            "input": "./libs/plugins/aem-monorepo-plugin/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/aem-monorepo-plugin/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/aem-monorepo-plugin",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/plugins/aem-monorepo-plugin",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/aem-monorepo-plugin/**/*.ts",
+          "libs/plugins/aem-monorepo-plugin/generators.json",
+          "libs/plugins/aem-monorepo-plugin/executors.json",
+          "libs/plugins/aem-monorepo-plugin/package.json"
+        ]
+      }
+    }
+  },
+  "tags": ["type:plugin", "scope:aem-monorepo-plugin"]
+}

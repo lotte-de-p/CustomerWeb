@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Topup application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

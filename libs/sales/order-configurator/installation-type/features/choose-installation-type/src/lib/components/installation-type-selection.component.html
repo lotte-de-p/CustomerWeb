@@ -1,0 +1,27 @@
+<div
+  class="container display--flex gap--xm flex-direction--column flex-direction--row--md mb--g justify-content--center">
+  @if (viewModel?.installationTypes | async; as installationTypes) {
+    @for (installationType of installationTypes.list; track installationType.type) {
+      <div
+        class="installation-options__details"
+        [ngClass]="{
+          'col-md-6': installationTypes.totalAmountOfOptions === 4,
+          'col-md-8':
+            (installationTypes.totalAmountOfOptions === 3 || installationTypes.totalAmountOfOptions === 2) &&
+            installationType.deliveryMethods.length === 2,
+          'col-md-4':
+            installationTypes.totalAmountOfOptions === 1 ||
+            ((installationTypes.totalAmountOfOptions === 3 || installationTypes.totalAmountOfOptions === 2) &&
+              installationType.deliveryMethods.length === 1)
+        }">
+        <div class="installation-options__cards height--full ng-star-inserted">
+          <tg-sales-order-configurator-installation-type-ui-installation-type-card
+            [installationType]="installationType"
+            [selectedDeliveryMethod]="viewModel?.selectedInstallationTypeOption | async"
+            (deliveryMethodSelected)="onDeliveryMethodSelectedEvent($event)">
+          </tg-sales-order-configurator-installation-type-ui-installation-type-card>
+        </div>
+      </div>
+    }
+  }
+</div>

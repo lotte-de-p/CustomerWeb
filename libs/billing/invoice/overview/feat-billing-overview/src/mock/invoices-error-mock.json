@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices",
+  "method": "GET",
+  "status": 400,
+  "response": {
+    "code": "OCAPI-ERR-036",
+    "cause": "Missing endpoint configuration for Url [/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices] & Method [GET]",
+    "correlationId": "e5e6a95a-925c-4d0d-a359-977de6e739ad"
+  }
+}

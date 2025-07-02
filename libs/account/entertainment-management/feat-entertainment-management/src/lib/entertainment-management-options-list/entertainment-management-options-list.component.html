@@ -1,0 +1,28 @@
+@if ((selectActiveOptions$ | async)?.length) {
+  <div class="col-md-6 p--n pl--n--md pr--xxg--md">
+    <div class="font--body-large pb--s pt--s" data-testid="entertainment-management-label-active-option">
+      {{ 'ng.entertainment-management.lbl.active-options' | translate }}
+    </div>
+    <tg-entertainment-management-option [data]="(selectActiveOptions$ | async)!"></tg-entertainment-management-option>
+  </div>
+}
+
+@if ((selectAvailableStreamingOptions$ | async)?.length) {
+  <div class="col-md-6 p--n pl--n--md pr--xxg--md">
+    <div class="font--body-large pb--s pt--s" data-testid="entertainment-management-label-streaming-services">
+      {{ 'ng.entertainment-management.lbl.streaming-services' | translate }}
+    </div>
+    <tg-entertainment-management-option
+      [data]="(selectAvailableStreamingOptions$ | async)!"></tg-entertainment-management-option>
+  </div>
+}
+
+@if ((selectAvailableContentPacks$ | async)?.length) {
+  <div class="col-md-6 p--n pl--n--md pr--xxg--md">
+    <div class="font--body-large pb--s pt--s" data-testid="entertainment-management-label-content-packages">
+      {{ 'ng.entertainment-management.lbl.content-packages' | translate }}
+    </div>
+    <tg-entertainment-management-option
+      [data]="(selectAvailableContentPacks$ | async)!"></tg-entertainment-management-option>
+  </div>
+}

@@ -1,0 +1,35 @@
+<div *ngIf="customLabel">
+  <!-- optional class can be added, defined by parent component -->
+  <div class="text-flow text-flow--h3" [class.form__label--error]="error">{{ getLabel() | translate }}</div>
+  <div class="whitespace whitespace--tiny"></div>
+
+  <!-- Error banner/message for the input groups with label-modifiers -->
+</div>
+<div>
+  <label
+    class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up mb--s"
+    for="choice-{{ i }}-{{ key }}"
+    (click)="selectOption(option)"
+    *ngFor="let option of optionList; let i = index"
+    [style]="'--animation-delay:' + i">
+    <div class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+      <div class="select-tile__content--inner display--flex flex-direction--column">
+        <div class="display--flex gap--m gap--l--sm">
+          <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+            <div class="heading--6 heading--nomargin" [innerHTML]="getOptionLabel(option) | translate"></div>
+            <div *ngIf="option.text && option.text !== ''" class="font--caption-bold">
+              {{ !!customOptionLabel ? option.text : (getOptionSubLabel(option) | translate) }}
+            </div>
+          </div>
+          <input
+            type="radio"
+            value="{{ option.value }}"
+            id="choice-{{ i }}-{{ key }}"
+            [checked]="selectedOption && option.value === selectedOption.value"
+            name="checkbox-{{ key }}"
+            class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+        </div>
+      </div>
+    </div>
+  </label>
+</div>

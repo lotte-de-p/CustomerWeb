@@ -1,0 +1,117 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white mt--l--md"
+  [attr.data-cy]="'mybase-dashboard-mobile-usage-card'">
+  <div
+    (click)="redirectToUsage(smoothSurfing)"
+    class="display--flex justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m"
+    [ngClass]="{ 'cursor--pointer': smoothSurfing }">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">
+        {{ 'ng.mybase-dashboard.mobile-usage-card.title' | translate }}
+      </span>
+    </div>
+    @if (smoothSurfing) {
+      <i
+        class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override display--flex align-items--center"
+        [attr.data-cy]="'mybase-dashboard-mobile-usage-card-header-icon'"></i>
+    }
+  </div>
+  <!-- pt--xxxs -->
+  <div>
+    @if (smoothSurfing) {
+      <div
+        class="mybase-dashboard--card--content cursor--pointer"
+        (click)="redirectToUsage(smoothSurfing)"
+        [attr.data-cy]="'mybase-dashboard-mobile-usage-card-status-ok'">
+        <div class="display--flex flex-direction--column align-items--center">
+          <img
+            appMybaseDashboardImageSrcInterceptor
+            class="hide-until-md"
+            src="/assets/mobile-usage.svg"
+            [moduleId]="'tg-mybase-dashboard'"
+            [attr.data-cy]="'mybase-dashboard-mobile-usage-card-smooth-surfing'" />
+          <img
+            appMybaseDashboardImageSrcInterceptor
+            class="hide-from-md"
+            src="/assets/mobile-usage-mobile-view.svg"
+            [moduleId]="'tg-mybase-dashboard'"
+            [attr.data-cy]="'mybase-dashboard-mobile-usage-card-smooth-surfing'" />
+          <div class="mybase-dashboard--card--content--status mt--xxs">
+            <div class="heading--6 m--n">
+              {{ 'ng.mybase-dashboard.usages.smooth-surfing' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    } @else {
+      @for (usage of mobileUsage; track $index) {
+        <div class="mybase-dashboard--card--content display--flex justify-content--between pt--xs">
+          <div class="display--flex flex-grow cursor--pointer--hover" (click)="redirectToUsage(true, usage.msisdn)">
+            <div class="mybase-dashboard--card--content--status flex--1">
+              <div class="display--flex">
+                @switch (usage.usageStatus) {
+                  @case ('LIMIT_ALMOST_REACHED') {
+                    <i
+                      class="icon icon-alert-shape-filled color-orange icon-md icon-no-size-override"
+                      [attr.data-cy]="'mybase-dashboard-mobile-usage-card-limit-almost-reached'"></i>
+                    <div class="heading--6 m--n ml--xs flex--1">
+                      <div class="display--flex justify-content--between">
+                        <span>{{ 'ng.mybase-dashboard.limit-almost-reached-mobile' | translate }}</span>
+                        <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+                      </div>
+                      <div class="font--body-small color-shade_72" data-cs-mask>
+                        @if (mobileUsage.length > 1) {
+                          <span [attr.data-cy]="'mybase-dashboard-mobile-usage-card-limit-almost-reached-multiple'">{{
+                            usage.msisdn | phoneNumber
+                          }}</span>
+                          -
+                        }
+                        {{ usage.productName }}
+                      </div>
+                    </div>
+                  }
+                  @case ('LIMIT_EXCEEDED') {
+                    <ng-container
+                      [ngTemplateOutlet]="limitExceeded"
+                      [ngTemplateOutletContext]="{
+                        usage: usage
+                      }">
+                    </ng-container>
+                  }
+                  @case ('LIMIT_EXCEEDED_SLOW_SPEED') {
+                    <ng-container
+                      [ngTemplateOutlet]="limitExceeded"
+                      [ngTemplateOutletContext]="{
+                        usage: usage
+                      }">
+                    </ng-container>
+                  }
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>
+<ng-template #limitExceeded let-usage="usage">
+  <i
+    class="icon icon-error-shape-filled color-red icon-md icon-no-size-override"
+    [attr.data-cy]="'mybase-dashboard-mobile-usage-card-limit-exceeded'"></i>
+  <div class="heading--6 m--n ml--xs flex--1">
+    <div class="display--flex justify-content--between">
+      <span>{{ 'ng.mybase-dashboard.limit-exceeded-mobile' | translate }}</span>
+      <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+    </div>
+    <div class="font--body-small color-shade_72" data-cs-mask>
+      @if (mobileUsage.length > 1) {
+        <span [attr.data-cy]="'mybase-dashboard-mobile-usage-card-limit-exceeded-multiple'">{{
+          usage.msisdn | phoneNumber
+        }}</span>
+        -
+      }
+      {{ usage.productName }}
+    </div>
+  </div>
+</ng-template>

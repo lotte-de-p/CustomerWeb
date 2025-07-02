@@ -1,0 +1,79 @@
+<div class="option-tiles mobile-option-tiles" [attr.data-cy]="'available-options'">
+  <div class="title-row justify-content--between">
+    <div class="display--flex flex-direction--row">
+      <em class="icon-manage-line"></em>
+      <p>{{ 'ng.fleet-user-line-change-tariff-plan.text.page-header' | translate }}</p>
+    </div>
+    <div class="hidden-desktop">
+      <em
+        [ngClass]="showAvailableOptions ? 'icon-chevron-up' : 'icon-chevron-down'"
+        [attr.data-cy]="'toggle-available-options'"
+        (click)="toggleAvailableOptions()"></em>
+    </div>
+  </div>
+  <div class="title hidden-mobile">
+    <p>{{ 'ng.fleet-user-line-change-tariff-plan.text.page-sub-header' | translate }}</p>
+  </div>
+  <div class="pt-25 hidden-desktop">
+    <p>{{ 'ng.fleet-user-line-change-tariff-plan.text.page-sub-header' | translate }}</p>
+  </div>
+  <div class="pb-25 hidden-desktop">
+    <p class="text-flow--h5">{{ selectedLine.identifier | translate }}</p>
+  </div>
+  <div [ngClass]="{ 'hidden-mobile': !showAvailableOptions }">
+    <div class="option-title">
+      <div class="option-title-toggle" [attr.data-cy]="'category-selector'" (click)="toggleCategorySelected()">
+        <span>{{ 'ng.fleet-user-line-change-tariff-plan.text.category-type' | translate }}</span>
+        <i class="icon-chevron-down" [ngClass]="{ open: _isCategorySelected }"></i>
+      </div>
+      @if (_isCategorySelected) {
+        @if (mobilePlans.length > 0) {
+          <div class="options-button-container" [attr.data-cy]="'mobile-plans'">
+            <span class="ml-5 mb-15">{{ 'ng.fleet-user-line-change-tariff-plan.lbl.mobile-plans' | translate }}</span>
+            @for (mobilePlan of mobilePlans; track mobilePlan) {
+              <button
+                class="options-button options-button--tariff"
+                [ngClass]="{ available: !(mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId) }"
+                (click)="onSelectTariff(mobilePlan)"
+                [attr.data-cy]="'mobile-plan-option'">
+                <div class="justify-content--between width--full display--flex">
+                  <span>{{ mobilePlan.productInfo.name }}</span>
+                  <span>€{{ mobilePlan.price.amount }}</span>
+                </div>
+                <span
+                  [ngClass]="{
+                    'separator icon-plus': !(mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId),
+                    'separator icon-tick disabled': mobilePlan.isPreviouslyAdded,
+                    'separator icon-tick': mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId
+                  }"></span>
+              </button>
+            }
+          </div>
+        }
+        @if (dataPlans.length > 0) {
+          <div class="options-button-container" [attr.data-cy]="'data-plans'">
+            <span class="ml-5 mb-15">{{ 'ng.fleet-user-line-change-tariff-plan.lbl.data-plans' | translate }}</span>
+            @for (dataPlan of dataPlans; track dataPlan) {
+              <button
+                class="options-button options-button--tariff"
+                [ngClass]="{ available: !(dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId) }"
+                (click)="onSelectTariff(dataPlan)"
+                [attr.data-cy]="'data-plan-option'">
+                <div class="justify-content--between width--full display--flex">
+                  <span>{{ dataPlan.productInfo.name }}</span>
+                  <span>€{{ dataPlan.price.amount }}</span>
+                </div>
+                <span
+                  [ngClass]="{
+                    'separator icon-plus': !(dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId),
+                    'separator icon-tick disabled': dataPlan.isPreviouslyAdded,
+                    'separator icon-tick': dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId
+                  }"></span>
+              </button>
+            }
+          </div>
+        }
+      }
+    </div>
+  </div>
+</div>

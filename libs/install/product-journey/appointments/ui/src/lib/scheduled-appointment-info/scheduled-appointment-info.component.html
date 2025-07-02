@@ -1,0 +1,32 @@
+<div class="mb--g--md mb--xl background-white p--xl--md p--l" *ngIf="isScheduledAppointment">
+  <div class="row m-0">
+    <div class="col-md-6 text-align--center p--n mb--m mb--n--md">
+      <img
+        class="m--auto"
+        [src]="'/etc/designs/aff-telenetgroup/atomic/clientlibs/clientlib-atomic/graphics/moving-van-desktop.svg'"
+        alt="" />
+    </div>
+    <div
+      class="col-md-6 text-flow text-flow--h5 text-align--left--md text-align--center p--n"
+      [attr.data-cy]="'appointments-limitation-message'">
+      <p class="m--n">{{ 'ng.appointments.limitation-message.title' | translate }}</p>
+      <p class="m--n">{{ 'ng.appointments.limitation-message.subtext' | translate }}</p>
+    </div>
+  </div>
+  <div class="my--xl--md my--l">
+    <div class="divider divider--xxs__very-light-grey"></div>
+  </div>
+  <div class="row m-0">
+    <div class="text-align--left" [attr.data-cy]="'appointments-limitation-message-description'">
+      <p
+        class="m--n font--body-regular"
+        [innerHTML]="'ng.appointments.limitation-message.description-text-one' | translate"></p>
+      <p
+        class="m--n font--body-regular"
+        [innerHTML]="'ng.appointments.limitation-message.description-text-two' | translate"></p>
+      <p class="m--n text-flow text-flow--h5">
+        {{ 'ng.appointments.limitation-message.help-phonenumber-' + appointmentType | lowercase | translate }}
+      </p>
+    </div>
+  </div>
+</div>

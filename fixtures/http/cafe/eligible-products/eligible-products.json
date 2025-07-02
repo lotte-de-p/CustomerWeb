@@ -1,0 +1,107 @@
+{
+  "eligibleproducts": [
+    {
+      "identifier": "WIGOS3_44414932",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/20047",
+      "accountnumber": "12300527",
+      "address": {
+        "street": "Oudebaan",
+        "postalcode": "3000",
+        "municipality": "Leuven",
+        "country": "België",
+        "housenr": "397",
+        "addressid": "6cc7ov007q-9whhv40nmv"
+      },
+      "freeride": {
+        "status": {
+          "eligible": true
+        },
+        "value": "3",
+        "unit": "GB"
+      },
+      "flavours": [
+        {
+          "sequence": 0,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/20048",
+          "salesofferingid": "145",
+          "recommended": false
+        },
+        {
+          "sequence": 1,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/20046",
+          "salesofferingid": "146",
+          "recommended": false
+        },
+        {
+          "sequence": 2,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/20049",
+          "salesofferingid": "148",
+          "recommended": true
+        },
+        {
+          "sequence": 3,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/1599",
+          "salesofferingid": "126",
+          "recommended": false
+        },
+        {
+          "sequence": 4,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/20050",
+          "salesofferingid": "149",
+          "recommended": false
+        },
+        {
+          "sequence": 5,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/87",
+          "salesofferingid": "111",
+          "recommended": false
+        },
+        {
+          "sequence": 6,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/94",
+          "salesofferingid": "115",
+          "recommended": false
+        },
+        {
+          "sequence": 7,
+          "availability": {
+            "orderable": true
+          },
+          "current": false,
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/1600",
+          "salesofferingid": "127",
+          "recommended": false
+        }
+      ],
+      "nextbillingdate": "2020-08-01T00:00:00.0+02:00"
+    }
+  ]
+}

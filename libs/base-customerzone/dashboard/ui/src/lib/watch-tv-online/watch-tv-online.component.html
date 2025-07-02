@@ -1,0 +1,94 @@
+<div
+  class="mybase-simple-card p--m p--l--lg background-white cursor--pointer--hover"
+  [ngClass]="{ 'height--full': fullHeight }">
+  <div class="mb--s">
+    <img
+      appMybaseDashboardImageSrcInterceptor
+      src="/assets/base-tv.svg"
+      [moduleId]="'mybase-dashboard'"
+      [attr.data-cy]="'mybase-dashboard-base-tv-logo'" />
+  </div>
+  @if (showSubtitle) {
+    <div [attr.data-cy]="'mybase-dashboard-base-tv-subtitle'" class="font--body-small color-shade_72 mb--m">
+      {{ 'ng.mybase-dashboard.watch-tv-subtitle' | translate }}
+    </div>
+  }
+  <div class="display--flex">
+    <div class="heading--6 heading--nomargin display--flex">
+      <button
+        (click)="watchApp()"
+        [attr.data-cy]="'mybase-dashboard-base-tv-in-app'"
+        target="_blank"
+        class="button button--override button--tertiary button__icon--position-left">
+        <i class="icon icon-md icon-no-size-override color-brand-primary icon-external-link"></i>
+        <span class="color-brand-primary">{{ 'ng.mybase-dashboard.watch-tv-app' | translate }}</span>
+      </button>
+      <button
+        (click)="watchOnline()"
+        [attr.data-cy]="'mybase-dashboard-base-tv-online'"
+        target="_blank"
+        class="button button--override button--tertiary button__icon--position-left">
+        <i class="icon icon-md icon-no-size-override color-brand-primary icon-external-link"></i>
+        <span class="color-brand-primary">{{ 'ng.mybase-dashboard.watch-tv-online' | translate }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<dialog #linkToStore class="border-color--all--transparent">
+  <div class="p--s">
+    <div
+      class="display--flex justify-content--end cursor--pointer--hover"
+      [attr.data-cy]="'mybase-dashboard-base-tv-dialog-close-button'"
+      (click)="closeModal()">
+      <i class="icon icon-cross icon-md icon-no-size-override"></i>
+    </div>
+    <div class="modal-body p--m">
+      <div class="heading--4 mt--n mb--l">{{ 'ng.mybase-dashboard.watch-tv-dialog-title' | translate }}</div>
+      <div class="display--flex justify-content--around">
+        <div class="ios">
+          <div class="display--flex align-items--center mb--xs">
+            <img
+              class="mr--xxs"
+              appMybaseDashboardImageSrcInterceptor
+              src="/assets/appstore-logo.png"
+              [moduleId]="'mybase-dashboard'"
+              [attr.data-cy]="'mybase-dashboard-app-store-logo'" />
+            <span class="text-flow text-flow--h6">{{
+              'ng.mybase-dashboard.watch-tv-dialog-app-store' | translate
+            }}</span>
+          </div>
+          <div class="display--flex justify-content--center">
+            <img
+              class="qr-code"
+              appMybaseDashboardImageSrcInterceptor
+              src="/assets/appstore-baseTV.svg"
+              [moduleId]="'mybase-dashboard'"
+              [attr.data-cy]="'mybase-dashboard-app-store-qr'" />
+          </div>
+        </div>
+        <div class="android">
+          <div class="display--flex align-items--center mb--xs">
+            <img
+              class="mr--xxs"
+              appMybaseDashboardImageSrcInterceptor
+              src="/assets/playstore-logo.png"
+              [moduleId]="'mybase-dashboard'"
+              [attr.data-cy]="'mybase-dashboard-play-store-logo'" />
+            <span class="text-flow text-flow--h6">{{
+              'ng.mybase-dashboard.watch-tv-dialog-play-store' | translate
+            }}</span>
+          </div>
+          <div class="display--flex justify-content--center">
+            <img
+              class="qr-code"
+              appMybaseDashboardImageSrcInterceptor
+              src="/assets/playstore-baseTV.svg"
+              [moduleId]="'mybase-dashboard'"
+              [attr.data-cy]="'mybase-dashboard-play-store-qr'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>

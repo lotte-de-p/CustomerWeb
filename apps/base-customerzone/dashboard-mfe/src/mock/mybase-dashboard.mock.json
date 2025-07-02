@@ -1,0 +1,79 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "billing": {
+      "showCard": true,
+      "pending": false,
+      "billingAccounts": [
+        {
+          "accountNumber": "783959437",
+          "openBills": [
+            {
+              "openAmount": 79.42,
+              "dueInDays": 6,
+              "showPayNowButton": true,
+              "paymentMethod": "manual"
+            },
+            {
+              "openAmount": 35.98,
+              "dueInDays": 13,
+              "showPayNowButton": true,
+              "paymentMethod": "manual"
+            }
+          ],
+          "refunds": []
+        }
+      ]
+    },
+    "mobileUsage": {
+      "showCard": true,
+      "pending": false,
+      "products": [
+        {
+          "productName": "BASE 29",
+          "msisdn": "0454545641",
+          "usageStatus": "OK"
+        }
+      ]
+    },
+    "internetUsage": {
+      "showCard": true,
+      "pending": false,
+      "products": [
+        {
+          "productName": "BASE 29",
+          "address": {
+            "street": "Ijzerenleen",
+            "houseNumber": "45",
+            "municipality": "Mechelen",
+            "country": "België",
+            "postalCode": "2800"
+          },
+          "usageStatus": "LIMIT_ALMOST_REACHED"
+        }
+      ]
+    },
+    "homeNetwork": {
+      "showCard": true,
+      "pending": false
+    },
+    "products": {
+      "showCard": true,
+      "mobile": {
+        "pending": false,
+        "products": [{ "productName": "BASE 29" }, { "productName": "BASE 9" }]
+      },
+      "dtv": {
+        "pending": false,
+        "products": [{ "productName": "BASE TV" }]
+      },
+      "internet": {
+        "pending": false,
+        "products": [{ "productName": "BASE Unlimited" }]
+      }
+    },
+    "actions": ["watch-tv", "support", "best-tariff", "easy-switch"]
+  }
+}

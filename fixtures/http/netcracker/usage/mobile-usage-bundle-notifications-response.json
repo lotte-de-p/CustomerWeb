@@ -1,0 +1,46 @@
+[
+  {
+    "pid": "21106710940",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "BundleMobileDataIncluded",
+        "preferences": [
+          {
+            "preferenceType": "InBundleData80",
+            "channels": ["Email", "SMS"]
+          },
+          {
+            "preferenceType": "InBundleData95",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "BundleMobileDataIncludedUnlimitedNational",
+        "preferences": [
+          {
+            "preferenceType": "InBundleData80",
+            "channels": ["Email", "SMS"]
+          },
+          {
+            "preferenceType": "InBundleData95",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      },
+      {
+        "preferenceGroup": "BundleMobileDataIncludedUnlimitedEU",
+        "preferences": [
+          {
+            "preferenceType": "InBundleData80",
+            "channels": ["Email", "SMS"]
+          },
+          {
+            "preferenceType": "InBundleData95",
+            "channels": ["Email", "SMS"]
+          }
+        ]
+      }
+    ]
+  }
+]

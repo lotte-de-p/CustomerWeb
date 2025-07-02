@@ -1,0 +1,12 @@
+{
+  "url": "http://localhost:8080/public/api/pay-by-mobile-service/v1/pay-by-mobile/supportinfo/companies/111394?serviceName=YoutubeMusic",
+  "method": "GET",
+  "status": 200,
+  "delay": 500,
+  "response": {
+    "companyName": "Google",
+    "email": "info@google.com",
+    "address": "Beverly Hills 90210 USA",
+    "url": "https://www.apple.com/benl/contact/"
+  }
+}

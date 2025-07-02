@@ -1,0 +1,43 @@
+.allowed-branches: &allowed-branches
+  - merge_requests
+  - master
+  - develop
+  - /^release\/[a-zA-Z0-9_.-]+$/
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - /^tech\/[a-zA-Z0-9_.-]+$/
+  - /^upgrade\/v[0-9]{2}[.][0-9]{1,2}[.][0-9]{1,2}$/
+
+.allowed-branches-no-merge-requests: &allowed-branches-no-merge-requests
+  - master
+  - develop
+  - /^release\/[a-zA-Z0-9_.-]+$/
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - /^tech\/[a-zA-Z0-9_.-]+$/
+  - /^upgrade\/v[0-9]{2}[.][0-9]{1,2}[.][0-9]{1,2}$/
+
+.allowed-branches-dev-deploy: &allowed-branches-dev-deploy
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - develop
+  - master
+
+.allowed-branches-upgrade-deploy: &allowed-branches-upgrade-deploy
+  - /^upgrade\/v[0-9]{2}[.][0-9]{1,2}[.][0-9]{1,2}$/
+
+.allowed-branches-feat-deploy: &allowed-branches-feat-deploy
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - /^release\/[a-zA-Z0-9_.-]+$/
+  - develop
+  - master
+
+.allowed-branches-stage-deploy: &allowed-branches-stage-deploy
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - /^release\/[a-zA-Z0-9_.-]+$/
+  - master
+
+.allowed-branches-prod-deploy: &allowed-branches-prod-deploy
+  - /^release\/[a-zA-Z0-9_.-]+$/
+  - /^pipeline\/[a-zA-Z0-9_.-]+$/
+  - master
+
+.allowed-branches-release: &allowed-branches-release
+  - /^release\/[a-zA-Z0-9_.-]+$/

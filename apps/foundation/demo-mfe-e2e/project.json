@@ -1,0 +1,43 @@
+{
+  "name": "demo-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/foundation/demo-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/foundation/demo-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-integrated": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/foundation/demo-mfe-e2e/playwright.integrated.config.ts",
+        "devServerTarget": "demo-mfe:serve:production",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:e2e", "scope:demo-mfe"],
+  "implicitDependencies": ["demo-mfe"]
+}

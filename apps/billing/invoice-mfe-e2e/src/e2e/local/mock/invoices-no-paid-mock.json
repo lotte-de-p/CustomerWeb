@@ -1,0 +1,15 @@
+{
+  "unpaidInvoices": {
+    "totalAmount": 12.34,
+    "invoices": [
+      {
+        "invoiceDate": "202-03-10",
+        "paymentDueDate": "2022-03-10",
+        "documentUrl": "/document",
+        "invoiceAmount": 12.34,
+        "outstandingDebt": 12.34
+      }
+    ]
+  },
+  "paidInvoices": []
+}

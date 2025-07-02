@@ -1,0 +1,169 @@
+{
+  "name": "customer-web-billing-limits-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/billing/limits-mfe/src",
+  "tags": ["scope:customer-web-billing-limits-mfe", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/customer-web-billing-limits-mfe",
+        "index": "apps/billing/limits-mfe/src/index.html",
+        "main": "apps/billing/limits-mfe/src/main.ts",
+        "polyfills": ["apps/billing/limits-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/billing/limits-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/billing/limits-mfe/src/favicon.ico",
+          "apps/billing/limits-mfe/src/assets",
+          "apps/billing/limits-mfe/src/version.json"
+        ],
+        "styles": ["apps/billing/limits-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/billing/limits-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/billing/limits-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/billing/limits-mfe/src/favicon.ico",
+            "apps/billing/limits-mfe/src/assets",
+            "apps/billing/limits-mfe/src/version.json"
+          ]
+        },
+        "mobile": {
+          "main": "apps/billing/limits-mfe/src/mobile/main.ts"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "customer-web-billing-limits-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "customer-web-billing-limits-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4211,
+        "publicHost": "http://localhost:4211"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "customer-web-billing-limits-mfe:build",
+        "extraWebpackConfig": "apps/billing/limits-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/billing/limits-mfe/**/*.ts", "apps/billing/limits-mfe/**/*.html"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "customer-web-billing-limits-mfe:build"
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/billing/limits-mfe/.storybook",
+        "browserTarget": "customer-web-billing-limits-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        },
+        "base": {
+          "styles": ["apps/billing/limits-mfe/src/styles.scss"]
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/customer-web-billing-limits-mfe",
+        "configDir": "apps/billing/limits-mfe/.storybook",
+        "browserTarget": "customer-web-billing-limits-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/billing/payment-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/billing/limits-mfe/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "customer-web-billing-limits-mfe:build-storybook",
+        "staticFilePath": "dist/storybook/customer-web-billing-limits-mfe"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "customer-web-billing-limits-mfe:build-storybook:ci"
+        }
+      }
+    },
+    "build-mobile": {
+      "executor": "nx:run-commands",
+      "options": {
+        "dependencies": ["customer-web-billing-limits-mfe:build:mobile"],
+        "commands": [
+          "nx run customer-web-billing-limits-mfe:build:mobile",
+          "cp -r dist/apps/customer-web-billing-limits-mfe/assets/config/capacitor.config.json dist/apps/customer-web-billing-limits-mfe/capacitor.config.json"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

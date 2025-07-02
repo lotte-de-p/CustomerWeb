@@ -1,0 +1,24 @@
+<div class="whitespace whitespace--extra-large"></div>
+<div
+  class="image-title-text-block image-title-text-block--vertical-align display--flex flex-direction--column align-items--center">
+  <div class="cmp-image">
+    <img
+      [src]="'/content/dam/www-telenet-touch/nl/dfd/desktop-error.png'"
+      alt=""
+      class="cmp-image__image cmp-image__image--original-size" />
+  </div>
+
+  <div class="text-align--center">
+    <div class="cmp cmp-title">
+      <h5 class="">
+        {{ 'ng.inbox-messages.error.txt' | translate }}
+      </h5>
+    </div>
+    <div class="mt--m">
+      <button class="button button--primary" (click)="handleErrorAction()">
+        <span>{{ 'ng.inbox-messages.error.btn' | translate }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="whitespace whitespace--medium"></div>

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "9156512274613905592",
+    "accountNumber": "500022566",
+    "status": "ACTIVE",
+    "defaultAccount": false,
+    "doccleCode": "65639",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": true,
+      "status": false,
+      "balance": {
+        "amount": "10",
+        "balanceType": ""
+      }
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL"
+    },
+    "billingAddress": {
+      "addressId": "9150939739613777977",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "2",
+      "postalCode": "2802",
+      "boxNr": "2",
+      "subHouseNr": "1"
+    },
+    "contactInfo": {
+      "firstName": "RJTest13",
+      "lastName": "RJTest13"
+    },
+    "email": {
+      "id": "9156147216613499660",
+      "value": "manigandan.r@telenetgroup.be"
+    },
+    "treatments": [],
+    "customerCategoryType": "RESIDENTIAL"
+  },
+  {
+    "id": "9156512274613905593",
+    "accountNumber": "500022567",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "65639",
+    "paymentInfo": {
+      "method": "MANUAL"
+    },
+    "collectionsInfo": {
+      "ogmCode": "",
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL"
+    },
+    "billingAddress": {
+      "addressId": "9150939739613777978",
+      "street": "Elektriciteitstraat",
+      "municipality": "Mechelen",
+      "country": "België",
+      "houseNr": "1",
+      "postalCode": "2802",
+      "boxNr": "67",
+      "subHouseNr": "3"
+    },
+    "contactInfo": {
+      "firstName": "RJTest13",
+      "lastName": "RJTest13"
+    },
+    "email": {
+      "id": "9156147216613499660",
+      "value": "manigandan.r@telenetgroup.be"
+    },
+    "treatments": [],
+    "customerCategoryType": "RESIDENTIAL"
+  }
+]

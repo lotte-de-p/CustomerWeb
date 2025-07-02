@@ -1,0 +1,24 @@
+include:
+  - local: '/tools/gitlab/images/distributed.yml'
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.nx:monorepo:
+  extends: .distributed
+  stage: quality
+  script:
+    - node --max-old-space-size=8192 ./tools/scripts/execute-project-sanity-checker.js
+  only: !reference [.allowed-branches]
+
+.lint:monorepo:
+  extends: .distributed
+  stage: quality
+  script:
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx affected:lint --base=$NX_BASE --head=$NX_HEAD --parallel=1 --exclude=wink-ng
+  only: !reference [.allowed-branches]
+
+.style-lint:monorepo:
+  extends: .distributed
+  stage: quality
+  script:
+    - nx run wink-core:stylelint
+  only: !reference [.allowed-branches]

@@ -1,0 +1,195 @@
+{
+  "productCode": "BFLC0000",
+  "specurl": "https://api.int.base.be/omapi/public/product/BFLC0000",
+  "nextBillingDate": "2020-07-22T00:00:00+02:00",
+  "lastUpdated": "2020-07-21T09:20:01.757+02:00",
+  "shared": {
+    "data": [
+      {
+        "name": "WIGO 9GB monthly allowance",
+        "usedUnits": "0",
+        "unitType": "GB"
+      }
+    ],
+    "text": [
+      {
+        "name": "SMS",
+        "usedUnits": "11",
+        "unitType": "number"
+      }
+    ],
+    "voice": [
+      {
+        "name": "VOICE",
+        "usedUnits": "10",
+        "unitType": "minutes"
+      }
+    ],
+    "ZBR": [
+      {
+        "name": "FreeG",
+        "usedUnits": "0",
+        "unitType": "GB"
+      },
+      {
+        "name": "Free EU",
+        "usedUnits": "0",
+        "unitType": "GB"
+      }
+    ],
+    "option": {
+      "data": [
+        {
+          "name": "OPTION DATA",
+          "startUnits": "9",
+          "remainingUnits": "9",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "GB"
+        }
+      ],
+      "text": [
+        {
+          "name": "OPTION TEXT",
+          "usedUnits": "11",
+          "unitType": "NUMBER"
+        }
+      ],
+      "voice": [
+        {
+          "name": "OPTION VOICE CALL",
+          "usedUnits": "10",
+          "unitType": "MINUTES"
+        }
+      ]
+    }
+  },
+  "outOfBundle": {
+    "usedUnits": "0",
+    "unitType": "EUR"
+  },
+  "options": [
+    {
+      "label": "Data Top 24 1.5 GB",
+      "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+      "productCode": "INTW1500",
+      "monetary": [],
+      "data": [
+        {
+          "name": "Data Top 24 1.5 GB",
+          "startUnits": "1,5",
+          "remainingUnits": "1,5",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "GB",
+          "unlimited": true,
+          "bucketType": "data unlimited"
+        }
+      ],
+      "text": [],
+      "voice": []
+    },
+    {
+      "label": "Voice Europe plus 60 min",
+      "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+      "productCode": "VOEF0060",
+      "monetary": [],
+      "data": [],
+      "text": [],
+      "voice": [
+        {
+          "name": "Voice Europe plus 60 min",
+          "startUnits": "3600",
+          "remainingUnits": "3600",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "SECONDS",
+          "unlimited": false
+        }
+      ]
+    },
+    {
+      "label": "Data Top 24 600 MB",
+      "specurl": "https://api.int.base.be/omapi/public/product/INTW0600",
+      "productCode": "INTW0600",
+      "monetary": [],
+      "data": [
+        {
+          "name": "Data Top 24 600 MB",
+          "startUnits": "600",
+          "remainingUnits": "600",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "MB",
+          "unlimited": false,
+          "bucketType": "data limited"
+        }
+      ],
+      "text": [],
+      "voice": []
+    },
+    {
+      "label": "Voice Top 24 250 min",
+      "specurl": "https://api.int.base.be/omapi/public/product/VWME0250",
+      "productCode": "VWME0250",
+      "monetary": [],
+      "data": [],
+      "text": [],
+      "voice": [
+        {
+          "name": "Voice Top 24 250 min",
+          "startUnits": "15000",
+          "remainingUnits": "15000",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "SECONDS",
+          "unlimited": false
+        }
+      ]
+    }
+  ],
+  "carryOver": {
+    "monetary": [],
+    "data": [],
+    "text": [],
+    "voice": []
+  },
+  "total": {
+    "monetary": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "EUR",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "data": {
+      "startUnits": "8",
+      "remainingUnits": "8",
+      "usedUnits": "0",
+      "unitType": "GB",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 100
+    },
+    "text": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "NUMBER",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "voice": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "SECONDS",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    }
+  },
+  "proratable": false
+}

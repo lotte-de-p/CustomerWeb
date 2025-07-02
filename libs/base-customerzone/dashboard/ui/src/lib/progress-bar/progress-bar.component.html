@@ -1,0 +1,11 @@
+<div class="mybase-progress-bar mb--xxs">
+  <div
+    [ngStyle]="{ width: progress + '%' }"
+    [ngClass]="{
+      'background-cyan-green': barColor === ProgressBarStatus.OK,
+      'background-notification--warning--light': barColor === ProgressBarStatus.WARN,
+      'background-notification--error--light': barColor === ProgressBarStatus.ERROR
+    }"
+    class="inner"
+    [attr.data-cy]="'mybase-dashboard-progress-bar-status-' + barColor"></div>
+</div>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= classify(mfeName) %></title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://www.int.telenet.be/en.pageLocaleData.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <<%= prefix %>-root></<%= prefix %>-root>
+  </body>
+</html>

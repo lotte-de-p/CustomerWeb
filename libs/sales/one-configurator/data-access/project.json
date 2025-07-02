@@ -1,0 +1,9 @@
+{
+  "name": "sales-one-configurator-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/one-configurator/data-access/src",
+  "prefix": "one-configurator",
+  "tags": ["type:data-access", "scope:sales-one-configurator", "scope:sales-mfe"],
+  "projectType": "library",
+  "targets": {}
+}

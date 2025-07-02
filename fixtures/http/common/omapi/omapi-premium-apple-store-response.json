@@ -1,0 +1,28 @@
+{
+  "serviceDetails": {
+    "premiumSerivceId": "AppleStore",
+    "details": [
+      {
+        "serviceType": "DOB",
+        "serviceStatus": "ACTIVE",
+        "serviceDescription": "iTunes & App Store purchases",
+        "serviceConfirmedDate": "20160802000000",
+        "serviceEndDate": "",
+        "premium": "Tax included",
+        "fixOrMobile": "",
+        "priceStartDate": "20160802000000",
+        "priceEndDate": "",
+        "setUpCost": "0",
+        "contentProviderStartDate": "20160820000000",
+        "contentProviderEndDate": "",
+        "contentProviderName": "Apple Inc",
+        "contentProviderStreet": "31 – 33, rue Sainte Zithe",
+        "contentProviderPostalCode": "2763",
+        "contentProviderCity": "Luxembourg",
+        "contentProviderCountry": "LUX",
+        "customerCareTelephoneOrEmail": "0800 80 407 - support@apple.com",
+        "customerCareUrl": "https://support.apple.com/"
+      }
+    ]
+  }
+}

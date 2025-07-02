@@ -1,0 +1,57 @@
+@include fadeIn;
+
+:host {
+  display: grid;
+  grid-template-rows: var(--host-grid-template-rows, 0fr);
+  background: var(--semantic-color-background-canvas-default);
+  overflow: hidden;
+  opacity: var(--host-opacity, 0);
+  z-index: var(--host-z-index, 0);
+  transition: all 0.3s ease;
+
+  @include media-header('until-md') {
+    display: none;
+  }
+
+  .container {
+    @include media-header('until-md') {
+      display: contents;
+    }
+
+    @include media-header('from-md') {
+      min-height: 0;
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: var-rem(--semantic-spacing-lg);
+    grid-auto-columns: 1fr;
+
+    @include media-header('from-md') {
+      grid-auto-flow: column;
+      padding: rem(4) 0 rem(1.6);
+    }
+  }
+
+  wink-link[appearance='menu-back'] {
+    @include media-header('from-md') {
+      display: none;
+    }
+
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: #f8f8f8; // Should be replaced when solid token is available;
+  }
+}
+
+:host([open]) {
+  --host-grid-template-rows: 1fr;
+  --host-opacity: 1;
+  --host-z-index: 1;
+
+  @include media-header('until-md') {
+    display: contents;
+  }
+}

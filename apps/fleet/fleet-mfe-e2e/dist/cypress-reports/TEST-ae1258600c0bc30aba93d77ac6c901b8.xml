@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="34.993" tests="2" failures="2">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T10:52:57" tests="0" file="src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Product Overview" timestamp="2024-07-17T10:52:57" tests="2" time="34.973" failures="2">
+    <testcase name="On page load, form should be pre-populated with values" time="4.792" classname="Product Overview On page load, form should be pre-populated with values">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;p&gt;&apos; to contain text &apos;ng.product-overview.lbl.suspended-plan&apos;, but the text was &apos; Je Telenet-diensten werden opgeschort. Hierdoor kan je geen opties bestellen of je abonnement wijzigen. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<p>' to contain text 'ng.product-overview.lbl.suspended-plan', but the text was ' Je Telenet-diensten werden opgeschort. Hierdoor kan je geen opties bestellen of je abonnement wijzigen. '
+    at checkSuspendedPlanNotification (webpack:///./src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts:115:0)
+    at Context.eval (webpack:///./src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts:53:0)
+
+      + expected - actual
+
+      -' Je Telenet-diensten werden opgeschort. Hierdoor kan je geen opties bestellen of je abonnement wijzigen. '
+      +'ng.product-overview.lbl.suspended-plan'
+      ]]></failure>
+    </testcase>
+    <testcase name="On click of more details section" time="4.972" classname="Product Overview On click of more details section">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;span&gt;&apos; to contain text &apos;ng.product-overview.lbl.unlimited&apos;, but the text was &apos;ONBEPERKT&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<span>' to contain text 'ng.product-overview.lbl.unlimited', but the text was 'ONBEPERKT'
+    at checkSpecificationValue (webpack:///./src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts:101:0)
+    at Context.eval (webpack:///./src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts:65:0)
+
+      + expected - actual
+
+      -'ONBEPERKT'
+      +'ng.product-overview.lbl.unlimited'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

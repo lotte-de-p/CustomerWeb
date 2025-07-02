@@ -1,0 +1,9 @@
+import { <%= dataAccessNameCapitalized %> } from '../<%= name %>.model';
+
+export interface <%= stateClassName %> {
+  <%= propertyName %>List: <%= dataAccessNameCapitalized %>[];
+}
+
+export const defaultState: <%= stateClassName %> = {
+  <%= propertyName %>List: [],
+};

@@ -1,0 +1,1 @@
+{"version":3,"file":"breakpoints.types.js","sourceRoot":"","sources":["../../../../../../../src/models/breakpoints.types.tsx"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,WAAW,GAAG;IACzB,MAAM,EAAE,oBAAoB;IAC5B,MAAM,EAAE,oBAAoB;CAC7B,CAAC","sourcesContent":["export const BREAKPOINTS = {\n  mobile: '(max-width: 576px)',\n  tablet: '(max-width: 769px)',\n};\n"]}

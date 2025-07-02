@@ -1,0 +1,99 @@
+<wink-title text="{{ 'ng.' + messageGroupName + '.result.title' | translate }}" html-tag="h3" spacing-y="none">
+</wink-title>
+<div class="pb--m py--xs--md">
+  <div class="col-md-8 col-7 p--n">
+    <wink-paragraph size="regular" appearance="body" [attr.data-cy]="'address-link'">
+      {{ address | formatAddress }}
+    </wink-paragraph>
+  </div>
+  <wink-link
+    appearance="default"
+    size="body-regular"
+    href="JavaScript:void(0);"
+    (click)="toAddressSelector()"
+    class="mr-20"
+    is-disabled="false"
+    data-cy="change-address">
+    {{ 'ng.' + messageGroupName + '.lbl.change.address' | translate }}
+  </wink-link>
+</div>
+<div
+  class="background-lemon color-text display--flex flex-direction--row-reverse--md flex-direction--column justify-content--between mt--m">
+  <div class="mt--m">
+    <img class="hidden-mobile" [src]="ftthDesktopImage" alt="" />
+    <img class="hidden-desktop" [src]="ftthmobileImage" alt="" />
+  </div>
+  <div data-cy="fiber-found" class="p--l">
+    <div>
+      @if (isLoggedIn) {
+        <wink-title
+          text=" {{
+            'ng.' + messageGroupName + '.fiber-' + status + '-personalised.title' | translate: { name: firstName }
+          }}"
+          html-tag="h3"
+          spacing-y="none">
+        </wink-title>
+      } @else {
+        <wink-title
+          text=" {{ 'ng.' + messageGroupName + '.fiber-' + status + '.title' | translate }}"
+          html-tag="h3"
+          spacing-y="none">
+        </wink-title>
+      }
+    </div>
+    <div class="col-12 col-md-12 p--n">
+      <wink-paragraph
+        size="small"
+        appearance="body"
+        class="font--body-small"
+        [innerHTML]="'ng.' + messageGroupName + '.fiber-' + status + '.subtitle' | translate">
+      </wink-paragraph>
+    </div>
+    <div class="col-12 col-md-12 p--n mt--s">
+      <wink-paragraph
+        size="small"
+        appearance="body"
+        class="font--body-small"
+        [innerHTML]="'ng.' + messageGroupName + '.fiber-' + status + '.text' | translate">
+      </wink-paragraph>
+    </div>
+
+    <div class="col-12 col-md-12 p--n mt--s">
+      <wink-paragraph
+        size="small"
+        appearance="body"
+        class="font--body-small"
+        [innerHTML]="'ng.' + messageGroupName + '.fiber-network' | translate">
+      </wink-paragraph>
+    </div>
+    @if (isLoggedIn) {
+      <div class="col-12 col-md-12 p--n mt--m text-align--center">
+        <wink-paragraph
+          size="small"
+          appearance="body"
+          class="font--body-small"
+          [innerHTML]="'ng.' + messageGroupName + '.request.text' | translate">
+        </wink-paragraph>
+      </div>
+      <div class="col-12 col-md-12 p--n text-align--center">
+        <wink-paragraph size="small" appearance="body" class="font--body-small">
+          <a class="text--m font--body-small link" [href]="urlRequestSubscription">
+            {{ 'ng.' + messageGroupName + '.link.switch-to-fiber' | translate }}
+          </a>
+        </wink-paragraph>
+      </div>
+    }
+    <div class="col-12 col-md-12 p--n">
+      <wink-button
+        class="mt--xxs mt--n--md"
+        [attr.data-cy]="'product-page-button'"
+        text="{{ 'ng.' + messageGroupName + '.to-product-page.button' | translate }}"
+        appearance="secondary"
+        size="md"
+        width="none"
+        element="button"
+        type="submit"
+        (click)="redirectToProductPage()"></wink-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+{
+  "id": "9170285313013824267",
+  "identifier": "0487523810",
+  "msisdn": "32487523810",
+  "accountNumber": "125792036",
+  "secondaryAccountNumber": "125793614",
+  "secondaryBillingAddressId": "9150757974413003136",
+  "referenceInformation": "TestMJSB",
+  "label": "Mobile Start +",
+  "locationId": "9170154591613916500",
+  "specurl": "https://api.int.base.be/omapi/public/product/BFLS0001",
+  "status": "ACTIVE",
+  "chars": {
+    "hasVoiceMailBox": "true"
+  },
+  "handsets": [],
+  "options": [
+    {
+      "parentId": "0487523810",
+      "label": "World Data 500 MB",
+      "specurl": "https://api.int.base.be/omapi/public/product/TLTT0001",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "20,00",
+        "recurrentTotal": "20,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "20,00",
+          "recurrentTotal": "20,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "obligationEndDate": "2024-08-11T08:59:14+02:00",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "15,33"
+        }
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": false,
+      "isIncluded": false,
+      "chars": {}
+    },
+    {
+      "parentId": "0487523810",
+      "label": "Data Top 24 250 MB",
+      "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "10,00",
+        "recurrentTotal": "10,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "10,00",
+          "recurrentTotal": "10,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2024-08-17T09:22:21+02:00",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "9,67"
+        }
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": false,
+      "isIncluded": false,
+      "chars": {}
+    }
+  ],
+  "lineLevelProducts": [
+    {
+      "identifier": "0487523810",
+      "category": "mobile",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/MOFL0000",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "Euro",
+          "recurrentDiscounted": "0,00",
+          "recurrentTotal": "0,00",
+          "recurrentDiscount": "0,00"
+        },
+        "taxExclPrices": {
+          "currency": "Euro",
+          "recurrentDiscounted": "0,00",
+          "recurrentTotal": "0,00",
+          "recurrentDiscount": "0,00"
+        }
+      },
+      "discountItems": {
+        "discounts": []
+      },
+      "isFree": true
+    }
+  ],
+  "price": {
+    "currency": "EUR",
+    "recurrentDiscounted": "10,00",
+    "recurrentTotal": "10,00",
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "10,00",
+      "recurrentTotal": "10,00",
+      "recurrentDiscount": "0,00"
+    },
+    "recurrentDiscount": "0,00"
+  },
+  "splitBillProfile": {
+    "id": "9170154608113916905",
+    "name": "New Split Billing Profile #1",
+    "type": "SB20"
+  },
+  "summaryPrices": {
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "40,00",
+      "recurrentTotal": "40,00",
+      "recurrentDiscount": "0,00"
+    }
+  },
+  "addressId": "9150757958413973182",
+  "discountItems": {
+    "discounts": []
+  },
+  "productType": "mobile",
+  "activationDate": "2024-07-02T16:33:11+02:00",
+  "hasOldSocialTariffDiscount": false
+}

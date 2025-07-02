@@ -1,0 +1,33 @@
+{
+  "name": "billing-feat-billing-account-selector",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/invoice/overview/feat-billing-account-selector/src",
+  "prefix": "feat",
+  "tags": ["type:feature", "scope:customer-web-billing-shared", "scope:customer-web-billing-invoice-mfe"],
+  "projectType": "library",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/invoice/overview/feat-billing-account-selector/**/*.ts",
+          "libs/billing/invoice/overview/feat-billing-account-selector/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "care-service-cases-service-case-ui",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/care-service-cases/service-case/ui/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/care-service-cases/service-case/ui/**/*.ts",
+          "libs/engagement/care-service-cases/service-case/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:care-service-cases-service-case", "scope:care-service-cases-mfe"]
+}

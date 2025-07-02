@@ -1,0 +1,118 @@
+<div class="container--fullscreen">
+  @if ({ simsState: simsState$ | async, enabled: enabled$ | async }; as data) {
+    @if (data.simsState) {
+      @for (simConfigurations of data.simsState.simConfigurations; track $index) {
+        <div class="background-white p--m mb--xxs">
+          <div class="ml--m">
+            <div class="display--flex justify-content--between align-items--center">
+              @if ($index === 0) {
+                <div class="heading--6 heading--nomargin">
+                  {{ 'ng.one-configurator.feat-sims.first-sim-label' | translate: { index: $index + 1 } }}
+                </div>
+                <div class="display--flex align-items--center">
+                  <div class="font--caption">
+                    {{ 'ng.one-configurator.feat-sims.label.always-included' | translate }}
+                  </div>
+                </div>
+              } @else {
+                <div class="heading--6 heading--nomargin">
+                  {{ 'ng.one-configurator.feat-sims.sim-label' | translate: { index: $index + 1 } }}
+                </div>
+                @if (data.enabled && $index === data.simsState.simConfigurations.length - 1) {
+                  <div class="display--flex align-items--center" (click)="removeSim()">
+                    <span
+                      ><a class="link font--caption-small">{{
+                        'ng.one-configurator.feat-sims.label.remove' | translate
+                      }}</a
+                      ><i class="icon icon-delete ml--xxxs"></i
+                    ></span>
+                  </div>
+                }
+              }
+            </div>
+          </div>
+          <div class="ml--m mt--xs">
+            <div class="select-tile--group display--grid grid-template-column--2--md grid-template-column--1 gap--xxs">
+              <label class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up">
+                <div class="select-tile__content display--flex flex-direction--column flex-grow p--m" style="">
+                  <div class="select-tile__content--inner display--flex flex-direction--column">
+                    <div class="display--flex gap--xxs">
+                      <input
+                        name="choice-{{ $index }}"
+                        id="choice-{{ $index }}-limited"
+                        [checked]="simConfigurations.usageType === UsageTypeEnum.LIMITED1"
+                        type="radio"
+                        (change)="updateUsageType($index, UsageTypeEnum.LIMITED1)"
+                        [disabled]="!data.enabled"
+                        class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+                      <div
+                        class="select-tile__content_text align-items--center display--flex flex-direction--row flex-grow gap--xxs justify-content--between">
+                        <div class="font--body-small-bold">
+                          {{ 'ng.one-configurator.feat-sims.label.limited' | translate }}
+                        </div>
+                        @if (
+                          simConfigurations.usageType === UsageTypeEnum.UNLIMITED &&
+                          data.simsState.priceAfterChangingOneSimToLimited !== null
+                        ) {
+                          <div class="font--caption-small">
+                            {{ data.simsState.priceAfterChangingOneSimToLimited!.price | price: locale }}
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up"
+                style="--animation-delay: 1">
+                <div
+                  class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m">
+                  <div class="select-tile__content--inner display--flex flex-direction--column">
+                    <div class="display--flex gap--xxs">
+                      <input
+                        [checked]="simConfigurations.usageType === UsageTypeEnum.UNLIMITED"
+                        id="choice-{{ $index }}-unlimited"
+                        name="choice-{{ $index }}"
+                        type="radio"
+                        (change)="updateUsageType($index, UsageTypeEnum.UNLIMITED)"
+                        [disabled]="!data.enabled"
+                        class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+                      <div
+                        class="select-tile__content_text align-items--center display--flex flex-direction--row flex-grow gap--xxs justify-content--between">
+                        <div class="font--body-small-bold">
+                          {{ 'ng.one-configurator.feat-sims.label.unlimited' | translate }}
+                        </div>
+                        @if (
+                          simConfigurations.usageType === UsageTypeEnum.LIMITED1 &&
+                          data.simsState.priceAfterChangingOneSimToUnlimited !== null
+                        ) {
+                          <div class="font--caption-small">
+                            {{ data.simsState.priceAfterChangingOneSimToUnlimited.price | price: locale }}
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      }
+      @if (data.simsState.simConfigurations.length < 5) {
+        <button
+          class="button button--tertiary button__icon--position-left"
+          (click)="addSim()"
+          [disabled]="!data.enabled">
+          <i class="icon icon-plus"></i>
+          <span>{{ 'ng.one-configurator.feat-sims.label.add-sim' | translate }}</span>
+        </button>
+      } @else {
+        <div
+          class="m--xxs font--body-small"
+          [innerHTML]="'ng.one-configurator.feat-sims.message.max-sims' | translate"></div>
+      }
+    }
+  }
+</div>

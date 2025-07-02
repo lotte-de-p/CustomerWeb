@@ -1,0 +1,16 @@
+.chevron--center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.chevron--end {
+  margin-bottom: 0;
+}
+
+.accordion__item {
+  height: 0;
+  transition: height 0.3s ease-out;
+}
+.col--1 {
+  flex-basis: calc((100% / 24) * 1);
+  max-width: calc((100% / 24) * 1);
+}

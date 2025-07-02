@@ -1,0 +1,40 @@
+@if (showSixDigitCode) {
+  <div class="mt--l">
+    <form data-testid="sms-verification-six-digit-form" [formGroup]="validateSmsCodeForm">
+      <div class="otp-container pb-5">
+        @for (input of formInputs; track $index) {
+          <input
+            #formRow
+            type="number"
+            min="0"
+            max="9"
+            [attr.data-testid]="'sms-verification-six-digit-form-input-' + $index"
+            formControlName="{{ input }}"
+            class="form__input form__input--single-number"
+            required="true"
+            placeholder="0"
+            (paste)="onPaste($event)"
+            (blur)="onBlur($index)"
+            (focus)="onFocus($index)"
+            (keyup)="onKeyUpEvent($event, $index)"
+            (keydown)="onKeyDownEvent($event, $index)" />
+        }
+      </div>
+      @if (showError()) {
+        <div class="pb--m pr--l--md pr--xxxl pl--l pl--n--md">
+          <div class="formErrorInput">
+            <div class="text--s">
+              {{ 'ng.sim-management.sms-verification.lbl.otp-code-error' | translate }}
+            </div>
+          </div>
+        </div>
+      }
+    </form>
+    <div class="resend-otp-container" data-testid="sms-verification-resend-code-button">
+      <i class="icon icon-arrow-counterclockwise-down"></i>
+      <span class="text-weight--g underline cursor--pointer ml--xxxs" (click)="generateSmsAccessCode()">{{
+        'ng.sim-management.sms-verification.recover-code' | translate
+      }}</span>
+    </div>
+  </div>
+}

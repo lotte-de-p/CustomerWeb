@@ -1,0 +1,80 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-user-line-overlay [isSourceOneApp]="isSourceOneApp" (closeOverlay)="backToProductOverview()">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-user-result-message
+        backToProductOverviewLabel="ng.fleet-user-line-remove-options.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        [isSourceOneApp]="isSourceOneApp"
+        (backToProductOverviewClicked)="backToProductOverview()">
+      </tg-fleet-user-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+    @if (isFleetUserOrderingEnabled$ | async) {
+      @if (showProduct$ | async) {
+        <div class="row" [attr.data-cy]="'remove-options'">
+          <div class="col-sm-12 p-0">
+            <div data-component-instance-id="${lineRemoveOptions.componentInstanceID}">
+              <div class="options-content">
+                <tg-fleet-user-options-overview
+                  [productLineOptions]="productLineOptions()"
+                  [selectedLine]="selectedLine()"
+                  [showAvailableOptionsContainer]="showAvailableOptionsContainer"
+                  (toggleAvailableOptionsContainer)="toggleAvailableOptions()"
+                  (updateOptions)="updateOptions($event)">
+                </tg-fleet-user-options-overview>
+                <tg-fleet-user-mobile-action-buttons
+                  primaryButtonLabel="ng.fleet-user-line-remove-options.lbl.review-selected-lines"
+                  secondaryButtonLabel="ng.fleet-user-line-remove-options.btn.revert-changes"
+                  [primaryButtonEnabled]="!selectedLine().isAffected || showAvailableOptionsContainer"
+                  [secondaryButtonEnabled]="!selectedLine().isAffected || showAvailableOptionsContainer"
+                  (primaryCallback)="showWarning()"
+                  (secondaryCallback)="revertChanges()">
+                </tg-fleet-user-mobile-action-buttons>
+                <div class="title-top">
+                  <div class="title-container">
+                    <div>
+                      <p class="hidden-mobile">
+                        {{ 'ng.fleet-user-line-remove-options.lbl.review-selected-lines' | translate }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <tg-fleet-user-selected-line-list
+                  [ngClass]="{ 'mobile-blur': showAvailableOptionsContainer }"
+                  [selectedLine]="selectedLine()">
+                </tg-fleet-user-selected-line-list>
+                <div class="sticky-bottom">
+                  <tg-fleet-user-sticky-actions
+                    class="hidden-mobile"
+                    [primaryButtonEnabled]="selectedLine().isAffected"
+                    [secondaryButtonEnabled]="selectedLine().isAffected"
+                    [secondaryButtonLabel]="'ng.fleet-user-line-remove-options.btn.revert-changes'"
+                    [primaryButtonLabel]="'ng.fleet-user-line-remove-options.btn.save-changes'"
+                    (secondaryCallback)="revertChanges()"
+                    (primaryCallback)="showWarning()">
+                  </tg-fleet-user-sticky-actions>
+                </div>
+              </div>
+              @if (isShowWarning()) {
+                <tg-fleet-user-warning-message
+                  [image]="warningImage"
+                  [imageMobile]="warningImageMobile"
+                  [primaryActionLabel]="'ng.fleet-user-line-remove-options.btn.yes'"
+                  [secondaryActionLabel]="'ng.fleet-user-line-remove-options.btn.no'"
+                  [title]="'ng.fleet-user-line-remove-options.lbl.remove-options-confirm-message'"
+                  [description]="'ng.fleet-user-line-remove-options.info.options-terminated-message'"
+                  (secondaryAction)="cancelChanges()"
+                  (primaryAction)="saveChanges()" />
+              }
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </tg-fleet-user-line-overlay>
+</tg-login>

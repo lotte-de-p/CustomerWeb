@@ -1,0 +1,422 @@
+[
+  {
+    "from_zone": "Europe Special",
+    "to_zone": "Belgium",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "Europe Special",
+    "to_zone": "Europe Special",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "Europe Special",
+    "to_zone": "ZoneEU",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "Europe Special",
+    "to_zone": "World1",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "Europe Special",
+    "to_zone": "World2",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 3.0,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "ZoneEU",
+    "to_zone": "Belgium",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 0.2,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.07
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 0.07
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "ZoneEU",
+    "to_zone": "ZoneEU",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 0.2,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.07
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 0.07
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "ZoneEU",
+    "to_zone": "Europe Special",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "ZoneEU",
+    "to_zone": "World1",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "ZoneEU",
+    "to_zone": "World2",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 3.0,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_insideEU_pre"
+  },
+  {
+    "from_zone": "World1",
+    "to_zone": "Belgium",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld1_pre"
+  },
+  {
+    "from_zone": "World1",
+    "to_zone": "World1",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld1_pre"
+  },
+  {
+    "from_zone": "World1",
+    "to_zone": "ZoneEU",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld1_pre"
+  },
+  {
+    "from_zone": "World1",
+    "to_zone": "Europe Special",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld1_pre"
+  },
+  {
+    "from_zone": "World1",
+    "to_zone": "World2",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 3.0,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld1_pre"
+  },
+  {
+    "from_zone": "World2",
+    "to_zone": "Belgium",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld2_pre"
+  },
+  {
+    "from_zone": "World2",
+    "to_zone": "World2",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld2_pre"
+  },
+  {
+    "from_zone": "World2",
+    "to_zone": "ZoneEU",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld2_pre"
+  },
+  {
+    "from_zone": "World2",
+    "to_zone": "Europe Special",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 1.8,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld2_pre"
+  },
+  {
+    "from_zone": "World2",
+    "to_zone": "World1",
+    "brand": "Telenet",
+    "category": "Residential",
+    "voice": {
+      "received": 0.0,
+      "outgoing": 3.0,
+      "same_country": 1.0
+    },
+    "sms": {
+      "received": 0.0,
+      "outgoing": 0.5
+    },
+    "mms": {
+      "received": 0.0,
+      "outgoing": 1.0
+    },
+    "data": 0.1,
+    "options": "option_voice_outsideWorld2_pre"
+  }
+]

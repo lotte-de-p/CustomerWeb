@@ -1,0 +1,68 @@
+<div class="product-overview">
+  <div>
+    <div class="pb--l pl--m pl--n--md display--flex align-items--center justify-content--between">
+      <div class="align-items--center display--flex text-weight--l">
+        <div class="text--l ml--m--md ml--xs text-capitalize">
+          {{ 'ng.product-overview.free-phone-business' | translate }}
+        </div>
+      </div>
+      <div class="text-align--right hide-until-md">
+        <div class="text-align--right hide-until-md ml--xxxl--md">
+          <a [href]="freePhoneBusinessUrl" class="font--body-regular product-overview__hide-base">
+            {{ 'ng.product-overview.lnk.manage-product' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="content-section mb-30" *ngFor="let product of fpbProducts; let idx = index">
+      <div class="content-section__details">
+        <div class="row display--flex align-items--start width--full">
+          <div class="col-12 display--flex align-items--start">
+            <div
+              class="product-overview__content-section__image display--flex align-items--center justify-content--center">
+              <i class="icon icon-md text-weight--xxs" [ngClass]="'icon-' + getProductIcon(product)"></i>
+            </div>
+            <div class="product-overview__heading display--flex--md flex-direction--column ml--m">
+              <div>
+                <div class="text-font-family--t7 text--xxm">
+                  <span [attr.data-cy]="'fpbLabel'">
+                    {{ product.productInfo.labelKey }}
+                  </span>
+                  <span *ngIf="product.handsets && product.handsets.length > 0 && product.handsets[0].handsetName">
+                    + {{ product.handsets[0].handsetName }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div class="link text--s" (click)="visibilityIndices[idx] = !visibilityIndices[idx]">
+                  <span class="text--s">{{ 'ng.product-overview.lbl.view-numbers' | translate }}</span>
+                  <a
+                    tabindex="0"
+                    (keydown)="onKeydown($event, idx)"
+                    aria-controls="product_freephone_bus_product_info"
+                    [attr.aria-expanded]="visibilityIndices[idx] ? 'true' : 'false'"
+                    [attr.aria-label]="'ng.product-overview.lbl.view-numbers' | translate">
+                    <i
+                      *ngIf="!visibilityIndices[idx]"
+                      class="icon icon-sm icon-chevron-down product-overview__icon-section"></i>
+                    <i
+                      *ngIf="visibilityIndices[idx]"
+                      class="icon icon-sm icon-chevron-up product-overview__icon-section"></i>
+                  </a>
+                </div>
+                <div
+                  class="text--s mt--m color-shade_48"
+                  *ngIf="visibilityIndices[idx]"
+                  id="product_freephone_bus_product_info">
+                  <span class="mr--xxxs" *ngFor="let child of product.children">{{ child.identifier }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <tg-product-specifications [products]="fpbProducts" [product]="product"></tg-product-specifications>
+      </div>
+    </div>
+  </div>
+</div>

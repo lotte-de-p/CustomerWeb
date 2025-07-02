@@ -1,0 +1,33 @@
+{
+  "base": {
+    "plans": [
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+        "productInfo": {
+          "name": "Based on You 40",
+          "characteristics": { "priceInclVat": "349" },
+          "services": [
+            {
+              "specifications": [
+                {
+                  "localizedContent": { "name": "Based on You 40" },
+                  "unit": "euro",
+                  "value": "40"
+                }
+              ]
+            }
+          ]
+        },
+        "externalProductCode": "BOYO0040",
+        "originalPriceVatInclusive": "649,00",
+        "discountedPriceVatInclusive": "450,00",
+        "currency": "EUR"
+      }
+    ]
+  },
+  "telenet": {
+    "originalPriceVatInclusive": "649,00",
+    "discountedPriceVatInclusive": "450,00",
+    "currency": "EUR"
+  }
+}

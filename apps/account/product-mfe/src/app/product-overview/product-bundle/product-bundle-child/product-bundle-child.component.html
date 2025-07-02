@@ -1,0 +1,163 @@
+<div class="content-section__details">
+  <div class="row display--flex align-items--center">
+    <div class="col-lg-6 col-md-6 col-xs-12 display--flex align-items--center">
+      <div class="product-overview__content-section__image display--flex align-items--center justify-content--center">
+        <i class="icon icon-md text-weight--xxs" [ngClass]="'icon-' + getProductIcon()"></i>
+      </div>
+      <div class="display--flex--md align-items--start--md">
+        <div class="ml--m">
+          <div class="text-font-family--t7 text--xxm product-overview__heading" [attr.data-cy]="'bundleProductName'">
+            {{ product.productSpec?.name || product.productInfo.name }}
+          </div>
+          <div class="display--flex--md align-items--center pt--xxs" *ngIf="product.productType === 'telephone'">
+            <div class="text--s mt--n--md">
+              <span *ngIf="product.identifier">
+                {{ product.identifier | phoneNumber }}
+              </span>
+            </div>
+          </div>
+          <div class="display--flex--md align-items--center pt--xxs" *ngIf="product.productType === 'mobile'">
+            <div class="text--s mt--n--md">
+              <span>
+                <span class="pr--xxxs">{{ product.mobileIdentifier?.length }}</span>
+                <span class="pr--xxxs">{{ 'ng.product-overview.lbl.bundleMaxline-out-of' | translate }}</span>
+                <span class="pr--xxxs">{{ product.bundleMaxlines }}</span>
+                <span>{{ 'ng.product-overview.lbl.bundleMaxline-numbers' | translate }}</span>
+              </span>
+            </div>
+          </div>
+          <div class="hide-from-md pt--xxs" *ngIf="showManageOptions()">
+            <a
+              tabindex="0"
+              (keydown)="handleManageOptions($event, plan.identifier, product, true)"
+              *ngIf="(product.isProductActive() && !product.isMultipleDTV) || !product.productType"
+              (click)="manageOptions(plan.identifier, product, true); $event.stopPropagation()"
+              class="font--body-regular link link--subtle">
+              {{ 'ng.product-overview.lnk.manage-options' | translate }}
+            </a>
+          </div>
+          <div *ngIf="hasActiveOrSuspendedProducts(plan)">
+            <div class="hide-from-md pt--xxs" *ngIf="product.productType === 'mobile'">
+              <a
+                tabindex="0"
+                (keydown)="
+                  handleRedirectToOrderSimSalesFlow(
+                    $event,
+                    changeTariffPlanUrl,
+                    'marketing',
+                    'add-sim',
+                    plan.identifier,
+                    plan.productType,
+                    plan.locationId,
+                    'add sim link clicked'
+                  )
+                "
+                *ngIf="
+                  product.mobileIdentifier &&
+                  product.bundleMaxlines &&
+                  product.mobileIdentifier.length < product.bundleMaxlines
+                "
+                (click)="
+                  redirectToOrderSimSalesFlow(
+                    changeTariffPlanUrl,
+                    'marketing',
+                    'add-sim',
+                    plan.identifier,
+                    plan.productType,
+                    plan.locationId,
+                    'add sim link clicked'
+                  )
+                "
+                class="font--body-regular link link--subtle">
+                {{ 'ng.product-overview.lnk.order-sim' | translate }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="pl--m pt--xxxs pt--n--md">
+          <span *ngIf="product.isProductActivationInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-activation-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductDisconnectionInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-disconnection-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductModificationInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-modification-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductSuspended()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-suspended' | translate
+            }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12 text-align--right hide-until-md">
+      <div class="display--flex align-items--center justify-content--end--md">
+        <div class="text-align--right" *ngIf="hasActiveOrSuspendedProducts(plan)">
+          <div class="hide-until-md" *ngIf="product.productType === 'mobile'">
+            <div
+              *ngIf="
+                product.mobileIdentifier &&
+                product.bundleMaxlines &&
+                product.mobileIdentifier.length < product.bundleMaxlines
+              ">
+              <a
+                tabindex="0"
+                (keydown)="
+                  handleRedirectToOrderSimSalesFlow(
+                    $event,
+                    changeTariffPlanUrl,
+                    'marketing',
+                    'add-sim',
+                    plan.identifier,
+                    plan.productType,
+                    plan.locationId,
+                    'add sim link clicked'
+                  )
+                "
+                class="text--xm--md text--m link link--subtle"
+                (click)="
+                  redirectToOrderSimSalesFlow(
+                    changeTariffPlanUrl,
+                    'marketing',
+                    'add-sim',
+                    plan.identifier,
+                    plan.productType,
+                    plan.locationId,
+                    'add sim link clicked'
+                  )
+                ">
+                {{ 'ng.product-overview.lnk.order-sim' | translate }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-align--right hide-until-md ml--xxxl--md" *ngIf="showManageOptions()">
+          <a
+            tabindex="0"
+            (keydown)="handleManageOptions($event, plan.identifier, product, true)"
+            *ngIf="(product.isProductActive() && !product.isMultipleDTV) || !product.productType"
+            (click)="manageOptions(plan.identifier, product, true); $event.stopPropagation()"
+            class="font--body-regular link link--subtle">
+            {{ 'ng.product-overview.lnk.manage-options' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <tg-product-specifications
+    [product]="product"
+    [hasSalesScope]="hasSalesScope"
+    [canManageProductHolding]="canManageProductHolding"
+    [changeTariffPlanUrl]="changeTariffPlanUrl"
+    [manageOptionUrl]="manageOptionUrl"
+    [isBundle]="true"
+    [componentInstanceID]="componentInstanceID"></tg-product-specifications>
+</div>

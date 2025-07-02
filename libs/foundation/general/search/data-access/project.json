@@ -1,0 +1,20 @@
+{
+  "name": "general-search-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/foundation/general/search/data-access/src",
+  "prefix": "tg-foundation-general-search",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/foundation/general/search/data-access/**/*.ts",
+          "libs/foundation/general/search/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:general-search", "scope:general-mfe"]
+}

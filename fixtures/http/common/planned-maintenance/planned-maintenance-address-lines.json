@@ -1,0 +1,160 @@
+[
+  {
+    "description": "19",
+    "identifier": "048707123",
+    "label": "Based on you 20",
+    "activationDate": "2018-11-19T00:00:00+01:00",
+    "addressId": "9152563554313410856",
+    "locationId": "9151527556651707562",
+    "status": "Active",
+    "userPIDLinked": false,
+    "isDataOnlyPlan": false,
+    "productType": "mobile",
+    "msisdn": "048707123",
+    "address": {
+      "street": "test Krankenvelden new address",
+      "country": "Belgium",
+      "municipality": "Mechelen",
+      "addressId": 123456,
+      "type": "Apartment",
+      "boxNumber": "13413432423",
+      "floorNumber": "1",
+      "houseNumber": "1",
+      "postalCode": "2800",
+      "subHouseNumber": "1C",
+      "tinaLocationId": "22",
+      "plannedMaintenance": [
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "22",
+          "startDate": "2022-08-01T18:30:00.000Z",
+          "endDate": "2022-08-01T18:30:00.000Z",
+          "isCompleted": false,
+          "isInProgress": false,
+          "isPlanned": true,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          },
+          "impact": [
+            {
+              "impactWindowStartDate": "2022-08-02T06:30:00.000Z",
+              "impactWindowEndDate": "2022-08-02T11:30:00.000Z",
+              "impactWindowNr": "1"
+            }
+          ]
+        },
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "22",
+          "startDate": "2022-02-08T18:30:00.000Z",
+          "endDate": "2022-02-08T18:30:00.000Z",
+          "isCompleted": false,
+          "isInProgress": false,
+          "isPlanned": true,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          },
+          "impact": [
+            {
+              "impactWindowStartDate": "2022-02-09T06:30:00.000Z",
+              "impactWindowEndDate": "2022-02-09T11:30:00.000Z",
+              "impactWindowNr": "1"
+            }
+          ]
+        },
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "22",
+          "startDate": "2020-01-01T18:30:00.000Z",
+          "endDate": "2020-05-01T18:30:00.000Z",
+          "isCompleted": true,
+          "isInProgress": false,
+          "isPlanned": false,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "description": "20",
+    "identifier": "DTV170345",
+    "label": "Sipadan",
+    "activationDate": "2018-11-20T00:00:00+01:00",
+    "addressId": "9152563554313410855",
+    "locationId": "9151527556651707562",
+    "status": "Active",
+    "productType": "dtv",
+    "address": {
+      "street": "Krankenvelden",
+      "country": "Belgium",
+      "municipality": "Mechelen",
+      "addressId": 12345,
+      "type": "Apartment",
+      "boxNumber": "13413432423",
+      "floorNumber": "1",
+      "houseNumber": "1",
+      "postalCode": "2800",
+      "subHouseNumber": "1C",
+      "tinaLocationId": "23",
+      "plannedMaintenance": [
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "23",
+          "startDate": "2022-02-05T18:30:00.000Z",
+          "endDate": "2022-02-09T18:30:00.000Z",
+          "isCompleted": false,
+          "isInProgress": true,
+          "isPlanned": false,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          }
+        },
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "23",
+          "startDate": "2022-02-04T18:30:00.000Z",
+          "endDate": "2022-02-09T18:30:00.000Z",
+          "isCompleted": false,
+          "isInProgress": true,
+          "isPlanned": false,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          }
+        },
+        {
+          "today": "2022-02-08T11:18:00.457Z",
+          "addressId": "23",
+          "startDate": "2020-01-01T18:30:00.000Z",
+          "endDate": "2020-05-01T18:30:00.000Z",
+          "isCompleted": true,
+          "isInProgress": false,
+          "isPlanned": false,
+          "description": {
+            "en": "There's a widespread technical problem affecting Antwerpen. You don't have to do anything. Our technicians are on their way to fix it a.s.a.p. We'll keep you informed.",
+            "nl": "Er is een algemene storing in de buurt van Antwerpen. Je hoeft niets te doen, onze techniekers zijn onderweg om het probleem op te lossen. We houden je op de hoogte.",
+            "fr": "Il y a une perturbation générale dans le quartier de Antwerpen. Vous ne devez rien faire, nos techniciens sont en route pour résoudre le problème. Nous vous tenons au courant."
+          },
+          "impact": [
+            {
+              "impactWindowStartDate": "2020-03-02T06:30:00.000Z",
+              "impactWindowEndDate": "2020-03-02T11:30:00.000Z",
+              "impactWindowNr": "1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

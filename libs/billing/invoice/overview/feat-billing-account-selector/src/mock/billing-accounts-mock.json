@@ -1,0 +1,50 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "billingAccountNumber": "123456",
+      "currentPaymentMethod": "MANUAL",
+      "dispatchMethod": "EMAIL",
+      "outstandingBalance": 0,
+      "paymentStatus": "PAID",
+      "billingAddress": {
+        "street": "Teststraat",
+        "houseNumber": "1",
+        "postalCode": "2000",
+        "municipality": "Antwerpen"
+      },
+      "defaultAccount": true
+    },
+    {
+      "billingAccountNumber": "987654",
+      "currentPaymentMethod": "DIRECT_DEBIT",
+      "dispatchMethod": "EMAIL",
+      "outstandingBalance": 123.45,
+      "paymentStatus": "UNPAID",
+      "billingAddress": {
+        "street": "Willy Wonkastraat",
+        "houseNumber": "101",
+        "postalCode": "9000",
+        "municipality": "Gent"
+      },
+      "defaultAccount": false
+    },
+    {
+      "billingAccountNumber": "453278",
+      "currentPaymentMethod": "MANUAL",
+      "dispatchMethod": "EMAIL",
+      "outstandingBalance": 954.45,
+      "paymentDueDate": "2018-01-01",
+      "paymentStatus": "OVERDUE",
+      "billingAddress": {
+        "street": "Rue de la Loi",
+        "houseNumber": "666",
+        "postalCode": "1000",
+        "municipality": "Brussel"
+      },
+      "defaultAccount": false
+    }
+  ]
+}

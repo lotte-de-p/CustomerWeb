@@ -1,0 +1,38 @@
+import { Type } from '@angular/core';
+import { StepEnum } from './step.enum';
+import { StepLayoutOptionsInterface } from './step-layout-options.interface';
+import { Observable } from 'rxjs';
+import { OmapiProduct } from '@telenet/ng-lib-omapi';
+import { StepAnalyticsOptions } from './interfaces/step-analytics-options.interface';
+type ButtonCallBack = () => Observable<boolean | Record<string, unknown>>;
+export declare class Step {
+    key: string;
+    type: StepEnum;
+    template: Type<unknown>;
+    titleParameterValue: Observable<string>;
+    component: {
+        selector: unknown;
+    };
+    withNextButton: boolean;
+    nextButtonLabel: string;
+    nextButtonCallback: ButtonCallBack;
+    prevButtonCallback: ButtonCallBack;
+    previousStepDisabled: boolean;
+    asAlternativeFirstStep: boolean;
+    image: string;
+    imageMobile: string;
+    isImageScrollable: boolean;
+    isEnabled: boolean;
+    isCompleted: boolean;
+    layoutOptions?: StepLayoutOptionsInterface;
+    overwriteFlowLabel?: string;
+    chosenProduct$?: Observable<OmapiProduct | unknown>;
+    order: number;
+    analyticsOptions?: StepAnalyticsOptions;
+    constructor(key: string);
+    isFinal(): boolean;
+    setCompleted(completedState: boolean): void;
+    isConfirm(): boolean;
+}
+export {};
+//# sourceMappingURL=step.model.d.ts.map

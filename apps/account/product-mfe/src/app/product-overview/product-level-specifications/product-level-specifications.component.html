@@ -1,0 +1,19 @@
+<div class="row display--flex--md pt--m" *ngFor="let spec of specifications" [ngClass]="{ 'pt-0': spec.isMonetary }">
+  <div
+    [ngClass]="{ 'col-md-4 col-8': spec.isValue || spec.isRange, 'col-12': !spec.isValue && !spec.isRange }"
+    [attr.data-cy]="'specificationName'"
+    *ngIf="!spec.isMonetary">
+    {{ spec.localizedContent?.name }}
+  </div>
+  <div class="col-md-2 col-4 text-align--right text-align--left--md text-weight--l mt--n--md">
+    <span *ngIf="spec.isValue && spec.value">
+      <span [attr.data-cy]="'specificationValue'">{{ getLocalizedLabel(spec.value) }}</span>
+    </span>
+    <span *ngIf="spec.isRange">
+      <span>{{ spec.minValue }}</span>
+      <span>{{ 'ng.product-overview.text.to' | translate }}</span>
+      <span>{{ spec.maxValue }}</span>
+    </span>
+    <span [attr.data-cy]="'specificationValueUnit'" *ngIf="spec.showUnit"> {{ getLocalizedLabel(spec.unit) }}</span>
+  </div>
+</div>

@@ -1,0 +1,4997 @@
+[
+  {
+    "masterAgreementName": "New Mater Service",
+    "eligibleOffers": [
+      {
+        "label": "Mobile 1",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/BFLE0001",
+        "price": {
+          "currency": "Euro",
+          "value": "5.00"
+        },
+        "options": [
+          {
+            "label": "Voice National 800 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0004",
+            "price": {
+              "currency": "Euro",
+              "value": "9.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0004",
+                "externalProductCode": "FLOB0004",
+                "labelkey": "Voice National 800 min",
+                "producttype": "OPTION",
+                "weight": 40,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus voice options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice National 800 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-800-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Nationaal 800 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-800-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Nationale 800 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-800-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "800 minutes calling"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "800 minuten bellen"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "800 minutes d'appels"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calling",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calling in Belgium and the EU"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in België en de EU zone"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appeler en Belgique et l'UE"
+                    }
+                  ],
+                  "weight": 10,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice National 800 min",
+                        "value": "800",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "40",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "800 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "800 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "800 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "9,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FDNM0002",
+                "externalProductCode": "FDNM0002",
+                "labelkey": "Data National 2 GB",
+                "producttype": "OPTION",
+                "weight": 870,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "National & Europe plus data options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 2 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-2-gb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 2 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-2-gb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 2 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-2-gb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "2 GB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "2 GB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "2 GB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 2 GB",
+                        "value": "2",
+                        "unit": "GB",
+                        "visible": true,
+                        "weight": "870",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "2 GB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "2 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "2 GB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "8,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice National 100 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FVNS0100",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FVNS0100",
+                "externalProductCode": "FVNS0100",
+                "labelkey": "Voice National 100 min",
+                "producttype": "OPTION",
+                "weight": 10,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "National & Europe plus voice options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice National 100 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-100-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Nationaal 100 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-100-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Nationale 100 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-100-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "100 minutes calling"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "100 minuten bellen"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "100 minutes d'appels"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calling",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calling in Belgium and the EU"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in België en de EU zone"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appeler en Belgique et l'UE"
+                    }
+                  ],
+                  "weight": 10,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice National 100 min",
+                        "value": "100",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "10",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "100 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "100 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "100 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "3,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice National 550 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0003",
+            "price": {
+              "currency": "Euro",
+              "value": "7.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0003",
+                "externalProductCode": "FLOB0003",
+                "labelkey": "Voice National 550 min",
+                "producttype": "OPTION",
+                "weight": 30,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "National & Europe plus voice options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice National 550 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-550-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Nationaal 550 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-550-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Nationale 550 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-550-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "550 minutes calling"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "550 minuten bellen"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "550 minutes d'appels"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calling",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calling in Belgium and the EU"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in België en de EU zone"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appeler en Belgique et l'UE"
+                    }
+                  ],
+                  "weight": 10,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice National 550 min",
+                        "value": "550",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "30",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "550 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "550 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "550 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "7,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FDNS0001",
+                "externalProductCode": "FDNS0001",
+                "labelkey": "Data National 1 GB",
+                "producttype": "OPTION",
+                "weight": 860,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus data options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 1 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-1-gb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 1 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-1-gb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 1 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-1-gb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "1 GB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "1 GB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "1 GB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": true
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 1 GB",
+                        "value": "1",
+                        "unit": "GB",
+                        "visible": true,
+                        "weight": "860",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "1 GB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "1 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "1 GB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "5,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FDNL0005",
+                "externalProductCode": "FDNL0005",
+                "labelkey": "Data National 5 GB",
+                "producttype": "OPTION",
+                "weight": 880,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus data options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 5 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-5-gb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 5 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-5-gb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 5 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-5-gb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "5 GB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "5 GB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "5 GB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 5 GB",
+                        "value": "5",
+                        "unit": "GB",
+                        "visible": true,
+                        "weight": "880",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "5 GB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "5 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "5 GB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "15,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice National 250 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FVNM0250",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FVNM0250",
+                "externalProductCode": "FVNM0250",
+                "labelkey": "Voice National 250 min",
+                "producttype": "OPTION",
+                "weight": 20,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus voice options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice National 250 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Nationaal 250 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Nationale 250 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "250 minutes calling"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "250 minuten bellen"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "250 minutes d'appels"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calling",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calling in Belgium and the EU"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in België en de EU zone"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appeler en Belgique et l'UE"
+                    }
+                  ],
+                  "weight": 10,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice National 250 min",
+                        "value": "250",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "20",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "250 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "250 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "250 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "5,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice Europe plus 400 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0005",
+            "price": {
+              "currency": "Euro",
+              "value": "16.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0005",
+                "externalProductCode": "FLOB0005",
+                "labelkey": "Voice Europe plus 400 min",
+                "producttype": "OPTION",
+                "weight": 80,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": ["National & Europe plus voice options", "B2B Options with ETF", "Fleet Options with ETF"],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice Europe plus 400 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Europa plus 400 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Europe plus 400 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "250 minutes calling EU plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "250 minuten bellen EU plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "250 minutes d’appels UE plus"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calls to numbers in Europe",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calls in/to Europe plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in/naar Europa plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels dans/vers l’Europe plus"
+                    }
+                  ],
+                  "weight": 20,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice Europe plus 400 min",
+                        "value": "250",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "80",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "250 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "250 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "250 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "16,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice Europe plus 1000 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0006",
+            "price": {
+              "currency": "Euro",
+              "value": "32.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0006",
+                "externalProductCode": "FLOB0006",
+                "labelkey": "Voice Europe plus 1000 min",
+                "producttype": "OPTION",
+                "weight": 90,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": ["National & Europe plus voice options", "B2B Options with ETF", "Fleet Options with ETF"],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice Europe plus 1000 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-1000-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Europa plus 1000 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-1000-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Europe plus 1000 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-1000-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "600 minutes  calling EU plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "600 minuten bellen EU plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "600 minutes d’appels UE plus"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calls to numbers in Europe",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calls in/to Europe plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in/naar Europa plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels dans/vers l’Europe plus"
+                    }
+                  ],
+                  "weight": 20,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice Europe plus 1000 min",
+                        "value": "600",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "90",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "600 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "600 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "600 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "32,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 200 MB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0001",
+                "externalProductCode": "FLOB0001",
+                "labelkey": "Data National 200 MB",
+                "producttype": "OPTION",
+                "weight": 840,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus data options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 200 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-mb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 200 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-mb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 200 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-mb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "200 MB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "200 MB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "200 MB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 200 MB",
+                        "value": "200",
+                        "unit": "MB",
+                        "visible": true,
+                        "weight": "840",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "200 MB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "200 MB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "200 MB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "5,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice Europe plus 180 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "VOEF0180",
+                "externalProductCode": "VOEF0180",
+                "labelkey": "Voice Europe plus 180 min",
+                "producttype": "OPTION",
+                "weight": 70,
+                "apps": [],
+                "customercategories": ["OTHER", "Business", "Production Test Business"],
+                "category": [
+                  "Voice Options",
+                  "National & Europe plus voice options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice Europe plus 180 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-180-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Europa plus 180 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-180-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Europe plus 180 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-180-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "180 minutes calling EU plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "180 minuten bellen EU plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "180 minutes d’appels UE plus"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calls to numbers in Europe",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calls in/to Europe plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in/naar Europa plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels dans/vers l’Europe plus"
+                    }
+                  ],
+                  "weight": 20,
+                  "mutualexclusion": true
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice Europe plus 180 min",
+                        "value": "180",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "70",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "180 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "180 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "180 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "8,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 25 GB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/DNUN0025",
+            "price": {
+              "currency": "Euro",
+              "value": "35.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "DNUN0025",
+                "externalProductCode": "DNUN0025",
+                "labelkey": "Data National 25 GB",
+                "producttype": "OPTION",
+                "weight": 900,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus data options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 25 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 25 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 25 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "25 GB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "25 GB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "25 GB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 25 GB",
+                        "value": "25",
+                        "unit": "GB",
+                        "visible": true,
+                        "weight": "900",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "25 GB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "25 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "25 GB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "35,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice Europe plus 60 min",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "VOEF0060",
+                "externalProductCode": "VOEF0060",
+                "labelkey": "Voice Europe plus 60 min",
+                "producttype": "OPTION",
+                "weight": 60,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus voice options",
+                  "Voice Options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice Europe plus 60 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-60-min.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Europa plus 60 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-60-min.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Europe plus 60 min",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-60-min.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "60 minutes calling EU plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "60 minuten bellen EU plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "60 minutes d’appels UE plus"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calls to numbers in Europe",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calls in/to Europe plus"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in/naar Europa plus"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels dans/vers l’Europe plus"
+                    }
+                  ],
+                  "weight": 20,
+                  "mutualexclusion": true
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice Europe plus 60 min",
+                        "value": "60",
+                        "unit": "minuten",
+                        "visible": true,
+                        "weight": "60",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "60 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "60 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "60 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "4,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 10 GB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/DNXL0010",
+            "price": {
+              "currency": "Euro",
+              "value": "25.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "DNXL0010",
+                "externalProductCode": "DNXL0010",
+                "labelkey": "Data National 10 GB",
+                "producttype": "OPTION",
+                "weight": 890,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "B2B Options with ETF",
+                  "National & Europe plus data options",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 10 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-10-gb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 10 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-10-gb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 10 GB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-10-gb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "10 GB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "10 GB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "10 GB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 10 GB",
+                        "value": "10",
+                        "unit": "GB",
+                        "visible": true,
+                        "weight": "890",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "10 GB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "10 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "10 GB de data mobiles pour une consommation en Belgique"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "25,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FLOB0002",
+                "externalProductCode": "FLOB0002",
+                "labelkey": "Data National 500 MB",
+                "producttype": "OPTION",
+                "weight": 850,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "National & Europe plus data options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Data National 500 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-mb.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Data Nationaal 500 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-mb.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Data Nationale 500 MB",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-mb.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "600 MB mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "600 MB mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "600 MB de data mobiles"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "National Data",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Mobile data"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Mobiele data"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Data mobiles"
+                    }
+                  ],
+                  "weight": 200,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_INTERNET",
+                    "experience": {
+                      "experiencetype": "SURF"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Data National 500 MB",
+                        "value": "600",
+                        "unit": "MB",
+                        "visible": true,
+                        "weight": "850",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "600 MB mobile data for use in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "600 MB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "600 MB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "3,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": false,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          },
+          {
+            "label": "Voice National Unlimited",
+            "specurl": "https://api.int.telenet.be/omapi/public/product/FVUN9999",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            },
+            "rawOmapi": {
+              "product": {
+                "productid": "FVUN9999",
+                "externalProductCode": "FVUN9999",
+                "labelkey": "Voice National Unlimited",
+                "producttype": "OPTION",
+                "weight": 50,
+                "apps": [],
+                "customercategories": ["Business", "Production Test Business"],
+                "category": [
+                  "National & Europe plus voice options",
+                  "B2B Options with ETF",
+                  "Data & voice options",
+                  "Fleet Options with ETF"
+                ],
+                "visible": true,
+                "localizedcontent": [
+                  {
+                    "locale": "en",
+                    "name": "Voice National Unlimited",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-unlimited.png"
+                  },
+                  {
+                    "locale": "nl",
+                    "name": "Telefonie Nationaal Unlimited",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-unlimited.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Téléphonie Nationale Unlimited",
+                    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-unlimited.png"
+                  }
+                ],
+                "shortdescription": {
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Unlimited calls"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Onbeperkt bellen"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels illimités"
+                    }
+                  ]
+                },
+                "subcategory": {
+                  "name": "Calling",
+                  "localizedcontent": [
+                    {
+                      "locale": "en",
+                      "name": "Calling in Belgium and the EU"
+                    },
+                    {
+                      "locale": "nl",
+                      "name": "Bellen in België en de EU zone"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appeler en Belgique et l'UE"
+                    }
+                  ],
+                  "weight": 10,
+                  "mutualexclusion": false
+                },
+                "services": [
+                  {
+                    "servicetype": "MOBILE_CALLING",
+                    "experience": {
+                      "experiencetype": "CALL"
+                    },
+                    "specifications": [
+                      {
+                        "labelkey": "Voice National Unlimited",
+                        "value": "Unlimited",
+                        "visible": true,
+                        "weight": "50",
+                        "localizedcontent": [
+                          {
+                            "locale": "en",
+                            "name": "Unlimited calls to all numbers in Belgium (also valid in the EU zone)"
+                          },
+                          {
+                            "locale": "nl",
+                            "name": "Onbeperkt bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                          },
+                          {
+                            "locale": "fr",
+                            "name": "Appels illimités vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "servicetype": "GENERAL",
+                    "experience": {
+                      "experiencetype": "GENERAL"
+                    },
+                    "specifications": []
+                  }
+                ],
+                "characteristics": {
+                  "salespricevatincl": {
+                    "value": "15,0",
+                    "unit": "EUR"
+                  },
+                  "productsegment": "TB",
+                  "productgroup": "OTHER",
+                  "esimAvailable": false
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                },
+                "unlimited": true,
+                "priceType": "Recurrent Charge",
+                "requiresInstallation": false,
+                "isYupProduct": false,
+                "isEligibleForPauseProfile": false,
+                "isEligibleForAutoPause": false,
+                "isEligibleForSettinglimits": false,
+                "languageSpecifications": [],
+                "usageBasedRatePlan": false
+              }
+            }
+          }
+        ],
+        "rawOmapi": {
+          "product": {
+            "productid": "BFLE0001",
+            "externalProductCode": "BFLE0001",
+            "labelkey": "Mobile 1",
+            "producttype": "MOBILE",
+            "weight": 20,
+            "apps": [],
+            "customercategories": ["OTHER", "Business", "Production Test Business"],
+            "category": [
+              "BFleet Voice",
+              "Flex mobile",
+              "Post-Paid Mobile",
+              "For Rules - All 1.1/1.2 Mobile Plans",
+              "For Rules - Tariff Plans for Optional Product Correlation ID"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Mobile 1",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Mobile 1",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Mobile 1",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-1.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "You only pay for what you use, and you call your colleagues for free."
+                },
+                {
+                  "locale": "nl",
+                  "name": "Betaal alleen wat je verbruikt en bel gratis onder collega's."
+                },
+                {
+                  "locale": "fr",
+                  "name": "Payez uniquement ce que vous utilisez. Tous les appels entre collègues sont gratuits."
+                }
+              ]
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Mobile 1 - CUG",
+                    "value": "Unlimited",
+                    "unit": "CUG",
+                    "visible": true,
+                    "weight": "40",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "calls and SMSes between colleagues"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "bellen en sms'en onder collega's"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "appels et SMS entre collègues"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "5,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": true
+          }
+        }
+      }
+    ],
+    "groupBundles": [
+      {
+        "label": "Voice OPEC 7500 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FVOP0125",
+        "price": {
+          "currency": "Euro",
+          "value": "2200.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FVOP0125",
+            "externalProductCode": "FVOP0125",
+            "labelkey": "Voice OPEC 7500 min",
+            "producttype": "OPTION",
+            "weight": 680,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice OPEC 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-7500-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie OPEC 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-7500-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie OPEP 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-7500-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "7500 minutes calling in and to OPEC countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "7500 minuten bellen in en naar OPEC-landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "7500 minutes d'appels dans et vers les pays de l’OPEP"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice in/to OPEC Countries",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to OPEC countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar OPEC-landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers les pays de l’OPEP"
+                }
+              ],
+              "weight": 160,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice OPEC 7500 min",
+                    "value": "7500",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "680",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Algeria, Congo, Democratic Republic of Congo, Ecuador, Gabon, Iran, Kuwait, Nigeria, Qatar, Saudi Arabia, United Arab Emirates (UAE)"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Algerije, Congo, Democratische Republiek Congo, Ecuador, Gabon, Iran, Koeweit, Nigeria, Qatar, Saudi-Arabië, Verenigde Arabische Emiraten (VAE)"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Algérie, Arabie saoudite, Congo, Équateur, Émirats arabes unis (EAU), Gabon, Iran, Koweït, Nigeria, Qatar, République démocratique du Congo"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "2200,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Europe plus 20000 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0042",
+        "price": {
+          "currency": "Euro",
+          "value": "700.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0042",
+            "externalProductCode": "FLSB0042",
+            "labelkey": "Voice Europe plus 20000 min",
+            "producttype": "OPTION",
+            "weight": 480,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Europe plus 20000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-20000-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Europa plus 20000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-20000-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Europe plus 20000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-20000-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "20000 minutes  calling EU plus"
+                },
+                {
+                  "locale": "nl",
+                  "name": "20000 minuten bellen EU plus"
+                },
+                {
+                  "locale": "fr",
+                  "name": "20000 minutes d’appels UE plus"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared voice europe plus (Calls to numbers in Europe)",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calls in/to Europe plus"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in/naar Europa plus"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans/vers l’Europe plus"
+                }
+              ],
+              "weight": 120,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Europe plus 20000 min",
+                    "value": "20000",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "480",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "600 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "600 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "600 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "700,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Blue 3 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0014",
+        "price": {
+          "currency": "Euro",
+          "value": "125.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0014",
+            "externalProductCode": "FLSB0014",
+            "labelkey": "Data Blue 3 GB",
+            "producttype": "OPTION",
+            "weight": 1330,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex data shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Blue 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-3-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Blauw 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-3-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Bleu 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-3-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "3 GB mobile data in 20 countries outside the EU zone"
+                },
+                {
+                  "locale": "nl",
+                  "name": "3 GB mobiele data in 20 landen buiten de EU-zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "3 GB de data mobiles dans 20 pays en dehors de la zone UE"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Data Blue",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in 20 countries outside the EU zone"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in 20 landen buiten de EU-zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans 20 pays en dehors de la zone UE"
+                }
+              ],
+              "weight": 310,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Blue 3 GB",
+                    "value": "3",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1330",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Russia, Saudi Arabia, Singapore, South Africa, Switzerland, Thailand, Tunisia, Turkey and the United States"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Canada, Kaapverdië, China, Egypte, Hong-Kong, India, Indonesië, Israël, Japan, Mexico, Rusland, Saudi-Arabië, Signapore, Zuid-Afrika, Zwitserland, Thailand, Tunesië, Turkije en de Verenigde Staten"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Arabie saoudite, Australie, Canada, Cap-Vert, Chine, Égypte, États-Unis, Hong Kong, Inde, Indonésie, Israël, Japon, Mexique, Russie, Singapour, Suisse, Thaïlande, Tunisie et Turquie"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "125,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Turkey 7500 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FVTU0125",
+        "price": {
+          "currency": "Euro",
+          "value": "850.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FVTU0125",
+            "externalProductCode": "FVTU0125",
+            "labelkey": "Voice Turkey 7500 min",
+            "producttype": "OPTION",
+            "weight": 770,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Turkey 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-turkey-7500-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Turkije 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-turkey-7500-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Turquie 7500 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-turkey-7500-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "7500 minutes calling in and to Turkey"
+                },
+                {
+                  "locale": "nl",
+                  "name": "7500 minuten bellen in en naar Turkije"
+                },
+                {
+                  "locale": "fr",
+                  "name": "7500 minutes d’appels dans et vers la Turquie"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice in Turkey",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to Turkey"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar Turkije"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appeler dans et vers la Turquie"
+                }
+              ],
+              "weight": 180,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Turkey 7500 min",
+                    "value": "7500",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "770"
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "850,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice National 3750 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0005",
+        "price": {
+          "currency": "Euro",
+          "value": "100.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0005",
+            "externalProductCode": "FLSB0005",
+            "labelkey": "Voice National 3750 min",
+            "producttype": "OPTION",
+            "weight": 400,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex voice shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice National 3750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-3750-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Nationaal 3750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-3750-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Nationale 3750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-3750-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "3750 minutes calling"
+                },
+                {
+                  "locale": "nl",
+                  "name": "3750 minuten bellen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "3750 minutes d'appels"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice National (Calling)",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in Belgium and the EU"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in België en de EU zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appeler en Belgique et l'UE"
+                }
+              ],
+              "weight": 110,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice National 3750 min",
+                    "value": "3750",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "400",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "3750 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "3750 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "3750 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "100,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Diamond 15000 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0037",
+        "price": {
+          "currency": "Euro",
+          "value": "900.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0037",
+            "externalProductCode": "FLSB0037",
+            "labelkey": "Voice Diamond 15000 min",
+            "producttype": "OPTION",
+            "weight": 630,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex voice shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Diamond 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-diamond-15000-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Diamant 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-diamond-15000-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Diamant 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-diamond-15000-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "150000 minutes calling in and to diamond producing countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "150000 minuten bellen in en naar diamant verhandelende landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "150000 minutes d'appels dans et vers les pays de négoce de diamants"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice Diamond",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to diamond producing countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar diamant verhandelende landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers les pays de négoce de diamants"
+                }
+              ],
+              "weight": 150,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Diamond 15000 min",
+                    "value": "15000",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "630",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Botswana, Brazil, Canada, Congo, Democratic Republic of the Congo, Ghana, Hong Kong, India, Israel, Namibia, Russia, Singapore, South Africa and the United Kingdom"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Botswana, Brazilië, Canada, Congo, Democratische Republiek Congo, Ghana, Hong Kong, India, Israel, Namibië, Rusland, Signapore, Zuid-Afrika en het Verenigd Koninkrijk"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Australie, Botswana, Brésil, Canada, Congo, Ghana, Hong Kong, Inde, Israël, Namibie, Royaume-Uni, République démocratique du Congo, Russie et Singapour"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "900,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data National 500 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0003",
+        "price": {
+          "currency": "Euro",
+          "value": "1200.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0003",
+            "externalProductCode": "FLSB0003",
+            "labelkey": "Data National 500 GB",
+            "producttype": "OPTION",
+            "weight": 1220,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex data shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data National 500 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Nationaal 500 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Nationale 500 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-500-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "500 GB mobile data"
+                },
+                {
+                  "locale": "nl",
+                  "name": "500 GB mobiele data"
+                },
+                {
+                  "locale": "fr",
+                  "name": "500 GB de data mobiles"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared bundles National Data",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles"
+                }
+              ],
+              "weight": 280,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data National 500 GB",
+                    "value": "500",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1220",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "500 GB mobile data for use in Belgium"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "500 GB mobiele data voor gebruik in België"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "500 GB de data mobiles pour une consommation en Belgique"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "1200,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Diamond 25 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0019",
+        "price": {
+          "currency": "Euro",
+          "value": "90.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0019",
+            "externalProductCode": "FLSB0019",
+            "labelkey": "Data Diamond 25 GB",
+            "producttype": "OPTION",
+            "weight": 1380,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex data shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Diamond 25 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-diamond-25-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Diamant 25 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-diamond-25-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Diamant 25 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-diamond-25-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "25 GB mobile data in diamond producing countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "25 GB mobiele data in diamant verhandelende landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "25 GB de data mobiles dans les pays de négoce de diamants"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Data diamond",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in diamond producing countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in diamant verhandelende landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans les pays de négoce de diamants"
+                }
+              ],
+              "weight": 320,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Diamond 25 GB",
+                    "value": "25",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1380",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Botswana, Brazil, Canada, Congo, Democratic Republic of the Congo, Ghana, Hong Kong, India, Israel, Namibia, Russia, Singapore, South Africa and the United Kingdom"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Botswana, Brazilië, Canada, Congo, Democratische Republiek Congo, Ghana, Hong Kong, India, Israel, Namibië, Rusland, Signapore, Zuid-Afrika en het Verenigd Koninkrijk"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Australie, Botswana, Brésil, Canada, Congo, Ghana, Hong Kong, Inde, Israël, Namibie, Royaume-Uni, République démocratique du Congo, Russie et Singapour"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "90,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Asia tech 15000 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0029",
+        "price": {
+          "currency": "Euro",
+          "value": "1500.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0029",
+            "externalProductCode": "FLSB0029",
+            "labelkey": "Voice Asia tech 15000 min",
+            "producttype": "OPTION",
+            "weight": 530,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Asia tech 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-15000-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Azië tech 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-15000-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Asie tech 15000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-15000-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "15000 minutes calling in and to Japan and South Korea"
+                },
+                {
+                  "locale": "nl",
+                  "name": "15000 minuten bellen in en naar Japan en Zuid-Korea"
+                },
+                {
+                  "locale": "fr",
+                  "name": "15000 minutes d'appels dans et vers le Japon et la Corée du Sud"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice Asia Tech",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to Japan and South Korea"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar Japan en Zuid-Korea"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers le Japon et la Corée du Sud"
+                }
+              ],
+              "weight": 130,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Asia tech 15000 min",
+                    "value": "15000",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "530"
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "1500,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Europe plus 10000 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0041",
+        "price": {
+          "currency": "Euro",
+          "value": "360.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0041",
+            "externalProductCode": "FLSB0041",
+            "labelkey": "Voice Europe plus 10000 min",
+            "producttype": "OPTION",
+            "weight": 470,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex voice shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Europe plus 10000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-10000-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Europa plus 10000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-10000-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Europe plus 10000 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-10000-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "10000 minutes calling EU plus"
+                },
+                {
+                  "locale": "nl",
+                  "name": "10000 minuten bellen EU plus"
+                },
+                {
+                  "locale": "fr",
+                  "name": "10000 minutes d’appels UE plus"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared voice europe plus (Calls to numbers in Europe)",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calls in/to Europe plus"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in/naar Europa plus"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans/vers l’Europe plus"
+                }
+              ],
+              "weight": 120,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Europe plus 10000 min",
+                    "value": "10000",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "470",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "250 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "250 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "250 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "360,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice OPEC 750 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0044",
+        "price": {
+          "currency": "Euro",
+          "value": "245.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0044",
+            "externalProductCode": "FLSB0044",
+            "labelkey": "Voice OPEC 750 min",
+            "producttype": "OPTION",
+            "weight": 650,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice OPEC 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-750-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie OPEC 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-750-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie OPEP 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-opec-750-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "750 minutes calling in and to OPEC countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "750 minuten bellen in en naar OPEC-landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "750 minutes d'appels dans et vers les pays de l’OPEP"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice in/to OPEC Countries",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to OPEC countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar OPEC-landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers les pays de l’OPEP"
+                }
+              ],
+              "weight": 160,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice OPEC 750 min",
+                    "value": "750",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "650",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Algeria, Congo, Democratic Republic of Congo, Ecuador, Gabon, Iran, Kuwait, Nigeria, Qatar, Saudi Arabia, United Arab Emirates (UAE)"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Algerije, Congo, Democratische Republiek Congo, Ecuador, Gabon, Iran, Koeweit, Nigeria, Qatar, Saudi-Arabië, Verenigde Arabische Emiraten (VAE)"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Algérie, Arabie saoudite, Congo, Équateur, Émirats arabes unis (EAU), Gabon, Iran, Koweït, Nigeria, Qatar, République démocratique du Congo"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "245,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice US & Canada 600 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0054",
+        "price": {
+          "currency": "Euro",
+          "value": "36.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0054",
+            "externalProductCode": "FLSB0054",
+            "labelkey": "Voice US & Canada 600 min",
+            "producttype": "OPTION",
+            "weight": 790,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex voice shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice US & Canada 600 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-us-&-canada-600-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie VS & Canada 600 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-us-&-canada-600-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie États-Unis & Canada 600 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-us-&-canada-600-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "600 minutes calling USA & Canada"
+                },
+                {
+                  "locale": "nl",
+                  "name": "600 minuten bellen USA & Canada"
+                },
+                {
+                  "locale": "fr",
+                  "name": "600 minutes d'appels USA & Canada"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice US & Canada",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to the Unites States and Canada"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar de Verenigde Staten en Canada"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers le États-Unis et le Canada"
+                }
+              ],
+              "weight": 190,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice US & Canada 600 min",
+                    "value": "600",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "790",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "600 minutes calling in and to the Unites States and Canada"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "600 minuten bellen in en naar de Verenigde Staten en Canada"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "600 minutes d'appels dans et vers les États-Unis et le Canada"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "36,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Voice Asia tech 750 min",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0028",
+        "price": {
+          "currency": "Euro",
+          "value": "90.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0028",
+            "externalProductCode": "FLSB0028",
+            "labelkey": "Voice Asia tech 750 min",
+            "producttype": "OPTION",
+            "weight": 500,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex voice shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Voice Asia tech 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-750-min.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Telefonie Azië tech 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-750-min.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Téléphonie Asie tech 750 min",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-asia-tech-750-min.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "750 minutes calling in and to Japan and South Korea"
+                },
+                {
+                  "locale": "nl",
+                  "name": "750 minuten bellen in en naar Japan en Zuid-Korea"
+                },
+                {
+                  "locale": "fr",
+                  "name": "750 minutes d'appels dans et vers le Japon et la Corée du Sud"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Voice Asia Tech",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Calling in and to Japan and South Korea"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Bellen in en naar Japan en Zuid-Korea"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Appels dans et vers le Japon et la Corée du Sud"
+                }
+              ],
+              "weight": 130,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_CALLING",
+                "experience": {
+                  "experiencetype": "CALL"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Voice Asia tech 750 min",
+                    "value": "750",
+                    "unit": "minuten",
+                    "visible": true,
+                    "weight": "500"
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "90,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Asia business 3 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0008",
+        "price": {
+          "currency": "Euro",
+          "value": "100.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0008",
+            "externalProductCode": "FLSB0008",
+            "labelkey": "Data Asia business 3 GB",
+            "producttype": "OPTION",
+            "weight": 1250,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex data shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Asia business 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-3-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Azië zakelijk 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-3-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Asie professionnel 3 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-3-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "3 GB mobile data in a selection of Asian countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "3 GB mobiele data in een selectie Aziatische landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "3 GB de data mobiles dans une sélection de pays asiatiques"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Data Asia Business",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in a selection of Asian countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in een selectie Aziatische landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans une sélection de pays asiatiques"
+                }
+              ],
+              "weight": 290,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Asia business 3 GB",
+                    "value": "3",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1250",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "China, Hong Kong, India, Indonesia, Japan, Malaysia, South Korea, Taiwan and Thailand"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "China, Hong Kong, India, Indonesië, Japan, Maleisië, Zuid-Korea, Taiwan en Thailand"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Chine, Corée du Sud, Hong Kong, Inde, Indonésie, Japon, Malaisie, Taïwan et Thaïlande"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "100,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data National 200 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0002",
+        "price": {
+          "currency": "Euro",
+          "value": "580.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0002",
+            "externalProductCode": "FLSB0002",
+            "labelkey": "Data National 200 GB",
+            "producttype": "OPTION",
+            "weight": 1210,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex data shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data National 200 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Nationaal 200 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Nationale 200 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-200-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "200 GB mobile data"
+                },
+                {
+                  "locale": "nl",
+                  "name": "200 GB mobiele data"
+                },
+                {
+                  "locale": "fr",
+                  "name": "200 GB de data mobiles"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared bundles National Data",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles"
+                }
+              ],
+              "weight": 280,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data National 200 GB",
+                    "value": "200",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1210",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "200 GB mobile data for use in Belgium"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "200 GB mobiele data voor gebruik in België"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "200 GB de data mobiles pour une consommation en Belgique"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "580,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Turkey 20 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0026",
+        "price": {
+          "currency": "Euro",
+          "value": "160.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0026",
+            "externalProductCode": "FLSB0026",
+            "labelkey": "Data Turkey 20 GB",
+            "producttype": "OPTION",
+            "weight": 1470,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex data shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Turkey 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-20-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Turkije 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-20-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Turquie 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-20-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "20 GB mobile data in Turkey"
+                },
+                {
+                  "locale": "nl",
+                  "name": "20 GB mobiele data in Turkije"
+                },
+                {
+                  "locale": "fr",
+                  "name": "20 GB de data mobiles en Turquie"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Data in Turkey",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in Turkey"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in Turkije"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles en Turquie"
+                }
+              ],
+              "weight": 340,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Turkey 20 GB",
+                    "value": "20",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1470"
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "160,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Asia business 20 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0010",
+        "price": {
+          "currency": "Euro",
+          "value": "580.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0010",
+            "externalProductCode": "FLSB0010",
+            "labelkey": "Data Asia business 20 GB",
+            "producttype": "OPTION",
+            "weight": 1270,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex data shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Asia business 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-20-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Azië zakelijk 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-20-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Asie professionnel 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-asia-business-20-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "20 GB mobile data in a selection of Asian countries"
+                },
+                {
+                  "locale": "nl",
+                  "name": "20 GB mobiele data in een selectie Aziatische landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "20 GB de data mobiles dans une sélection de pays asiatiques"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Data Asia Business",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in a selection of Asian countries "
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in een selectie Aziatische landen"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans une sélection de pays asiatiques"
+                }
+              ],
+              "weight": 290,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Asia business 20 GB",
+                    "value": "20",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1270",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "China, Hong Kong, India, Indonesia, Japan, Malaysia, South Korea, Taiwan and Thailand"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "China, Hong Kong, India, Indonesië, Japan, Maleisië, Zuid-Korea, Taiwan en Thailand"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Chine, Corée du Sud, Hong Kong, Inde, Indonésie, Japon, Malaisie, Taïwan et Thaïlande"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "580,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Top 24 40 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLDR2440",
+        "price": {
+          "currency": "Euro",
+          "value": "1900.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLDR2440",
+            "externalProductCode": "FLDR2440",
+            "labelkey": "Data Top 24 40 GB",
+            "producttype": "OPTION",
+            "weight": 1440,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex data shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Top 24 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-40-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Top 24 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-40-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Top 24 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-40-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "40 GB mobile data in 24 countries world"
+                },
+                {
+                  "locale": "nl",
+                  "name": "40 GB mobiele data in 24 landen wereld"
+                },
+                {
+                  "locale": "fr",
+                  "name": "40 GB de data mobiles dans 24 pays monde"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Shared Data top 24 (Mobile data World)",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in 24 countries world"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in 24 landen wereld"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans 24 pays monde"
+                }
+              ],
+              "weight": 330,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Top 24 40 GB",
+                    "value": "40",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1440",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Brazil, Canada, Chile, China, Hong Kong, India, Indonesia, Israel, Japan, Macedonia, Malaysia, Mexico, Montenegro, Morocco,  New Zeeland, Russia, Serbia, South Africa, Taiwan, Thailand, Tunisia, Turkey and the United States"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Brazilië, Canada, Chili, China, Hong Kong, India, Indonesië, Israel, Japan, Macedonië, Maleisië, Mexico, Montenegro, Marokko,  Nieuw-Zeeland, Rusland, Servië, Zuid-Afrika, Taiwan, Thailand, Tunesië, Turkije en de Verenigde Staten"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Australie, Brésil, Canada, Chili, Chine, États-Unis, Hong Kong, Inde, Indonésie, Israël, Japon, Macédoine, Malaisie, Maroc, Mexique, Monténégro,  Nouvelle-Zélande, Russie, Serbie, Taïwan, Thaïlande, Tunisie et Turquie"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "1900,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Blue 40 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0017",
+        "price": {
+          "currency": "Euro",
+          "value": "1200.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0017",
+            "externalProductCode": "FLSB0017",
+            "labelkey": "Data Blue 40 GB",
+            "producttype": "OPTION",
+            "weight": 1360,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "Flex data shared bundles",
+              "B2B Options with ETF",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Blue 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-40-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Blauw 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-40-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Bleu 40 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-40-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "40 GB mobile data in 20 countries outside the European Union"
+                },
+                {
+                  "locale": "nl",
+                  "name": "40 GB mobiele data in 20 landen buiten de Europese Unie"
+                },
+                {
+                  "locale": "fr",
+                  "name": "40 GB de data mobiles dans 20 pays en dehors de l’Union européenne"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Data Blue",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in 20 countries outside the EU zone"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in 20 landen buiten de EU-zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans 20 pays en dehors de la zone UE"
+                }
+              ],
+              "weight": 310,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Blue 40 GB",
+                    "value": "40",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1360",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Russia, Saudi Arabia, Singapore, South Africa, Switzerland, Thailand, Tunisia, Turkey and the United States"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Canada, Kaapverdië, China, Egypte, Hong-Kong, India, Indonesië, Israël, Japan, Mexico, Rusland, Saudi-Arabië, Signapore, Zuid-Afrika, Zwitserland, Thailand, Tunesië, Turkije en de Verenigde Staten"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Arabie saoudite, Australie, Canada, Cap-Vert, Chine, Égypte, États-Unis, Hong Kong, Inde, Indonésie, Israël, Japon, Mexique, Russie, Singapour, Suisse, Thaïlande, Tunisie et Turquie"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "1200,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      },
+      {
+        "label": "Data Blue 20 GB",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/FLSB0016",
+        "price": {
+          "currency": "Euro",
+          "value": "650.00"
+        },
+        "rawOmapi": {
+          "product": {
+            "productid": "FLSB0016",
+            "externalProductCode": "FLSB0016",
+            "labelkey": "Data Blue 20 GB",
+            "producttype": "OPTION",
+            "weight": 1350,
+            "apps": [],
+            "customercategories": ["Business", "Production Test Business"],
+            "category": [
+              "B2B Options with ETF",
+              "Flex data shared bundles",
+              "Fleet Options with ETF",
+              "Post-Paid Mobile"
+            ],
+            "visible": true,
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Data Blue 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-20-gb.png"
+              },
+              {
+                "locale": "nl",
+                "name": "Data Blauw 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-20-gb.png"
+              },
+              {
+                "locale": "fr",
+                "name": "Data Bleu 20 GB",
+                "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-blue-20-gb.png"
+              }
+            ],
+            "shortdescription": {
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "20 GB mobile data in 20 countries outside the EU zone"
+                },
+                {
+                  "locale": "nl",
+                  "name": "20 GB mobiele data in 20 landen buiten de EU-zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "20 GB de data mobiles dans 20 pays en dehors de la zone UE"
+                }
+              ]
+            },
+            "subcategory": {
+              "name": "Data Blue",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "name": "Mobile data in 20 countries outside the EU zone"
+                },
+                {
+                  "locale": "nl",
+                  "name": "Mobiele data in 20 landen buiten de EU-zone"
+                },
+                {
+                  "locale": "fr",
+                  "name": "Data mobiles dans 20 pays en dehors de la zone UE"
+                }
+              ],
+              "weight": 310,
+              "mutualexclusion": false
+            },
+            "services": [
+              {
+                "servicetype": "MOBILE_INTERNET",
+                "experience": {
+                  "experiencetype": "SURF"
+                },
+                "specifications": [
+                  {
+                    "labelkey": "Shared Data Blue 20 GB",
+                    "value": "20",
+                    "unit": "GB",
+                    "visible": true,
+                    "weight": "1350",
+                    "localizedcontent": [
+                      {
+                        "locale": "en",
+                        "name": "Australia, Canada, Cape Verde, China, Egypt, Hong Kong, India, Indonesia, Israel, Japan, Mexico, Russia, Saudi Arabia, Singapore, South Africa, Switzerland, Thailand, Tunisia, Turkey and the United States"
+                      },
+                      {
+                        "locale": "nl",
+                        "name": "Australië, Canada, Kaapverdië, China, Egypte, Hong-Kong, India, Indonesië, Israël, Japan, Mexico, Rusland, Saudi-Arabië, Signapore, Zuid-Afrika, Zwitserland, Thailand, Tunesië, Turkije en de Verenigde Staten"
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Afrique du Sud, Arabie saoudite, Australie, Canada, Cap-Vert, Chine, Égypte, États-Unis, Hong Kong, Inde, Indonésie, Israël, Japon, Mexique, Russie, Singapour, Suisse, Thaïlande, Tunisie et Turquie"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "servicetype": "GENERAL",
+                "experience": {
+                  "experiencetype": "GENERAL"
+                },
+                "specifications": []
+              }
+            ],
+            "characteristics": {
+              "salespricevatincl": {
+                "value": "650,0",
+                "unit": "EUR"
+              },
+              "productsegment": "TB",
+              "productgroup": "OTHER",
+              "esimAvailable": false
+            },
+            "visibilityrules": {
+              "conditionalvisibility": false
+            },
+            "unlimited": false,
+            "priceType": "Recurrent Charge",
+            "requiresInstallation": false,
+            "isYupProduct": false,
+            "isEligibleForPauseProfile": false,
+            "isEligibleForAutoPause": false,
+            "isEligibleForSettinglimits": false,
+            "languageSpecifications": [],
+            "usageBasedRatePlan": false
+          }
+        }
+      }
+    ]
+  }
+]

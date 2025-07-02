@@ -1,0 +1,20 @@
+{
+  "ng.profile-overview.role-Manager.title": "Manager",
+  "ng.profile-overview.role-Member.title": "Member",
+  "ng.profile-overview.customer-number.title": "Customer Number",
+  "ng.profile-overview.manage-personal-data-link.title": "Manage Personal Data",
+  "ng.profile-overview.manage-login-password-link.title": "MyTelenet Login and password",
+  "ng.profile-overview.social-login-link.title": "Social Login",
+  "ng.profile-overview.social-login-link.subtitle": "Facebook, Google, Itsme",
+  "ng.profile-overview.manage-other-users-link.title": "Manage other users",
+  "ng.profile-overview.connected-services-link.title": "Connected services",
+  "ng.profile-overview.easy-switch-link.title": "Easy switch",
+  "ng.profile-overview.payment-method-link.title": "Payment method",
+  "ng.profile-overview.wifi-password-link.title": "Wi-fi network and password",
+  "ng.profile-overview.sim-cards-link.title": "Manage SIM",
+  "ng.profile-overview.sim-cards-link.subtitle": "PIN & PUK code & SIM information",
+  "ng.profile-overview.privacy-settings-link.title": "Privacy settings",
+  "ng.profile-overview.more-info-link.text": "You have limited access as a member.",
+  "ng.profile-overview.more-info-link.title": "More Info.",
+  "ng.profile-overview.copy.btn": "Copy"
+}

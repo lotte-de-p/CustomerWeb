@@ -1,0 +1,60 @@
+variables:
+  CLIENT_PROJECT: inbox-messages-mfe
+  LEANIX_APPLICATION_NAME: engagement
+  CLIENT_E2E: inbox-messages-mfe-e2e
+  GITOPS_DEPLOY_FOLDER_NAME: inbox-messages
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+test:app:
+  extends: .test:app
+  rules:
+    - when: always
+
+e2e:app:
+  extends: .e2e:app
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+build:storybook:
+  extends: .build:storybook
+
+push-to-harbor:
+  extends: .push-to-harbor
+
+component-test:app:
+  extends: .component-test:app
+
+sonar:app:
+  extends: .sonar:app
+  needs:
+    - test:app
+    - component-test:app
+
+gitops-deploy-dev:
+  extends: .gitops-deploy-dev
+
+tag-stage-candidate:
+  extends: .tag-stage-candidate
+
+tag-prod-candidate:
+  extends: .tag-prod-candidate
+
+patch-stage:
+  extends: .patch-stage
+
+patch-prod:
+  extends: .patch-prod
+
+gitops-deploy-stage:
+  extends: .gitops-deploy-stage
+
+gitops-deploy-upgrade:
+  extends: .gitops-deploy-upgrade
+
+gitops-deploy-prod:
+  extends: .gitops-deploy-prod

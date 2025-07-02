@@ -1,0 +1,226 @@
+<form [formGroup]="profileDetailsForm">
+  <div>
+    <label class="mb--xxxs cursor--default">
+      {{ 'customer-registration.lbl.salutation' | translate }}
+    </label>
+    <div class="col-12 col-md-8 p-0">
+      <div class="select-tile--group display--grid grid-template-column--2 gap--m">
+        <label
+          class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+          for="Mr.">
+          <div
+            class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+            <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+              <div class="display--flex gap--m gap--l--sm">
+                <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                  <div class="heading--6 heading--nomargin pl--xxs">
+                    {{ 'customer-registration.form-mr-label' | translate }}
+                  </div>
+                </div>
+                <input
+                  name="salutationField"
+                  formControlName="salutationField"
+                  #salutationField
+                  type="radio"
+                  class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                  id="Mr."
+                  value="Mr." />
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <label
+          class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+          for="Mrs.">
+          <div
+            class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+            <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+              <div class="display--flex gap--m gap--l--sm">
+                <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                  <div class="heading--6 heading--nomargin pl--xxs">
+                    {{ 'customer-registration.form-mrs-label' | translate }}
+                  </div>
+                </div>
+                <input
+                  name="salutationField"
+                  formControlName="salutationField"
+                  #salutationField
+                  type="radio"
+                  class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                  id="Mrs."
+                  value="Mrs." />
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="mt--xl">
+    <label for="firstNameField" class="mb--xxxs cursor--default">
+      {{ 'customer-registration.form-first-name-label' | translate }}
+    </label>
+    <div class="form__input-container mb--xl--md mb--l">
+      <input
+        type="text"
+        id="firstNameField"
+        name="firstNameField"
+        [attr.data-cy]="'first-name-field'"
+        class="form__input"
+        formControlName="firstNameField"
+        #firstNameField />
+      @if (
+        profileDetailsForm.controls['firstNameField'].errors?.['required'] &&
+        profileDetailsForm.controls['firstNameField'].touched
+      ) {
+        <div class="formErrorInput" [attr.data-cy]="'first-name-field-required-error'">
+          <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+            {{ 'customer-registration.form-first-name-guidance-error-required' | translate }}
+          </div>
+        </div>
+      } @else if (
+        profileDetailsForm.controls['firstNameField'].errors?.['format'] &&
+        profileDetailsForm.controls['firstNameField'].touched
+      ) {
+        <div class="formErrorInput" [attr.data-cy]="'first-name-field-invalid-error'">
+          <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+            {{ 'customer-registration.form-first-name-guidance-error-multi-lingual-constraint' | translate }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  <div class="mt--xl">
+    <label for="lastNameField" class="mb--xxxs cursor--default">
+      {{ 'customer-registration.form-last-name-label' | translate }}
+    </label>
+    <input
+      type="text"
+      #lastNameField
+      name="lastNameField"
+      id="lastNameField"
+      formControlName="lastNameField"
+      [attr.data-cy]="'last-name-field'"
+      autocomplete="off"
+      class="form__input"
+      required="true" />
+    @if (
+      profileDetailsForm.controls['lastNameField'].errors?.['required'] &&
+      profileDetailsForm.controls['lastNameField'].touched
+    ) {
+      <div class="formErrorInput" [attr.data-cy]="'last-name-field-required-error'">
+        <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+          {{ 'customer-registration.form-last-name-guidance-error-required' | translate }}
+        </div>
+      </div>
+    } @else if (
+      profileDetailsForm.controls['lastNameField'].errors?.['format'] &&
+      profileDetailsForm.controls['lastNameField'].touched
+    ) {
+      <div class="formErrorInput" [attr.data-cy]="'last-name-field-invalid-error'">
+        <div class="text--s mt--xxxs color-notification--error--light text-align--left">
+          {{ 'customer-registration.form-last-name-guidance-error-multi-lingual-constraint' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+  <div class="mt--xl">
+    <label for="emailField" class="mb--xxxs cursor--default">
+      {{ 'customer-registration.form-email-label' | translate }}
+    </label>
+    <input
+      type="text"
+      #emailField
+      name="emailField"
+      id="emailField"
+      autocomplete="off"
+      formControlName="emailField"
+      [attr.data-cy]="'email-field'"
+      class="form__input" />
+    <div
+      class="formErrorInput mb--xxxs"
+      *ngIf="profileDetailsForm.controls['emailField'].errors && profileDetailsForm.controls['emailField'].touched">
+      <div
+        class="color-red text--s"
+        [attr.data-cy]="'email-field-required-error'"
+        *ngIf="profileDetailsForm.controls['emailField'].errors?.['required']">
+        {{ 'customer-registration.form-email-guidance-error-required' | translate }}
+      </div>
+      <div
+        class="color-red text--s"
+        [attr.data-cy]="'email-field-maxlength-error'"
+        *ngIf="
+          profileDetailsForm.controls['emailField'].errors?.['maxlength'] &&
+          !profileDetailsForm.controls['emailField'].errors?.['required'] &&
+          !profileDetailsForm.controls['emailField'].errors?.['email']
+        ">
+        {{ 'customer-registration.form-email-guidance-error-maxlength' | translate }}
+      </div>
+      <div
+        class="color-red text--s"
+        [attr.data-cy]="'email-field-invalid-error'"
+        *ngIf="
+          profileDetailsForm.controls['emailField'].errors?.['email'] &&
+          !profileDetailsForm.controls['emailField'].errors?.['required']
+        ">
+        {{ 'customer-registration.form-email-guidance-error-darwin-email-constraint' | translate }}
+      </div>
+    </div>
+  </div>
+  @if (category === 'business') {
+    <div class="mt--xl">
+      <label for="dob" class="mb--xxxs cursor--default">
+        {{ 'customer-registration.form-dob-label' | translate }}
+      </label>
+      <app-date-of-birth-picker
+        [form]="profileDetailsForm"
+        [day]="profileDetailsForm.controls['day'].value"
+        [month]="profileDetailsForm.controls['selectedMonth'].value"
+        [year]="profileDetailsForm.controls['year'].value"
+        [attr.data-cy]="'dob-field'"
+        [minDefaultLegalAge]="18"
+        [dayBasedValidationFeatureFlag]="true"
+        ngDefaultControl>
+      </app-date-of-birth-picker>
+    </div>
+  }
+  <div class="mt--xl">
+    <label class="mb--xxxs cursor--default">
+      {{ 'customer-registration.form-phone-number-label' | translate }}
+    </label>
+    <input
+      #phoneNumberField
+      type="text"
+      name="phoneNumberField"
+      id="phoneNumberField"
+      formControlName="phoneNumberField"
+      [attr.data-cy]="'phone-number-field'"
+      class="form__input"
+      required="true"
+      (blur)="formatPhoneNumber()" />
+    <div
+      class="formErrorInput mb--xxxs"
+      *ngIf="
+        profileDetailsForm.controls['phoneNumberField'].errors &&
+        profileDetailsForm.controls['phoneNumberField'].touched
+      ">
+      <div
+        class="color-red text--s"
+        [attr.data-cy]="'phone-number-field-required-error'"
+        *ngIf="profileDetailsForm.controls['phoneNumberField'].errors?.['required']; else formatError">
+        {{ 'customer-registration.form-phone-number-guidance-error-required' | translate }}
+      </div>
+      <ng-template #formatError>
+        <div
+          class="color-red text--s"
+          [attr.data-cy]="'phone-number-field-invalid-error'"
+          *ngIf="profileDetailsForm.controls['phoneNumberField'].errors?.['format']">
+          {{
+            'customer-registration.form-phone-number-guidance-error-delivery-order-phone-number-constraint' | translate
+          }}
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,9 @@
+export class SellingArgument {
+    key;
+    rank;
+    constructor(key, rank) {
+        this.key = key;
+        this.rank = rank;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VsbGluZy1hcmd1bWVudC5tb2RlbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3NyYy9wZWdhL25iYS92MS9tb2RlbHMvc2VsbGluZy1hcmd1bWVudC5tb2RlbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLE9BQU8sZUFBZTtJQUVSO0lBQ0E7SUFGbEIsWUFDa0IsR0FBVyxFQUNYLElBQVk7UUFEWixRQUFHLEdBQUgsR0FBRyxDQUFRO1FBQ1gsU0FBSSxHQUFKLElBQUksQ0FBUTtJQUMzQixDQUFDO0NBQ0wiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgU2VsbGluZ0FyZ3VtZW50IHtcbiAgY29uc3RydWN0b3IoXG4gICAgcHVibGljIHJlYWRvbmx5IGtleTogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSByYW5rOiBudW1iZXJcbiAgKSB7fVxufVxuIl19

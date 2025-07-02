@@ -1,0 +1,54 @@
+[
+  {
+    "activationDate": "2022-02-06T17:02:27",
+    "addressId": "9150308806913310558",
+    "identifier": "IDTV000014479",
+    "locationId": "9162708378813326521",
+    "status": "Active",
+    "productType": "dtv",
+    "id": "9162708446213328379",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "isInteractive": true,
+    "lineType": "SIPADAN"
+  },
+  {
+    "activationDate": "2022-02-06T17:02:27",
+    "addressId": "9150308806913310557",
+    "identifier": "IDTV000014479",
+    "locationId": "9162708378813326522",
+    "status": "Active",
+    "productType": "dtv",
+    "id": "9162708446213328379",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "isInteractive": true,
+    "lineType": "SIPADAN"
+  },
+  {
+    "activationDate": "2022-02-06T17:02:27",
+    "addressId": "9150308806913310555",
+    "identifier": "IDTV000014479",
+    "locationId": "9162708378813326524",
+    "status": "Activation in progress",
+    "productType": "dtv",
+    "id": "9162708446213328379",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "isInteractive": true,
+    "lineType": "SIPADAN"
+  },
+  {
+    "activationDate": "2022-02-06T17:02:27",
+    "addressId": "9150308806913310559",
+    "identifier": "IDTV000014479",
+    "locationId": "9162708378813326523",
+    "status": "Suspended",
+    "productType": "dtv",
+    "id": "9162708446213328379",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "isInteractive": true,
+    "lineType": "ACCESS"
+  }
+]

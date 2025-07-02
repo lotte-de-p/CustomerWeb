@@ -1,0 +1,11 @@
+{
+  "code": "OCAPI-ERR-ODPS107",
+  "cause": "Invalid serial number : 96612443393",
+  "correlationId": "df73fb7208eee1c0",
+  "errorDetails": [
+    {
+      "errorDetailCode": "500 Internal Server Error",
+      "message": "InvalidSerialNumberException"
+    }
+  ]
+}

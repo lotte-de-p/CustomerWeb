@@ -1,0 +1,13 @@
+@if (notification) {
+  <div class="notification notification--info notification--closable">
+    <div>
+      <div class="display--flex">
+        <span class="icon icon-information-shape info"></span>
+        <div class="mt--xxxs">
+          <div class="text-weight--g text--m">{{ notification.title | translate }}</div>
+          <div class="text-flow text--r text-weight--s">{{ notification.message | translate }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

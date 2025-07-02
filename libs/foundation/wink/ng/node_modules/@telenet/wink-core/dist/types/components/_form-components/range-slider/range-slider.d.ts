@@ -1,0 +1,31 @@
+import { SliderType } from './models/range-slider.types';
+export declare class RangeSlider {
+    internals: ElementInternals;
+    sliderId: string;
+    label: string;
+    helper: string;
+    minValue: number;
+    maxValue: number;
+    step: number;
+    showValues: boolean;
+    showInput: boolean;
+    errorMessage: string;
+    sliderType: SliderType;
+    bottomValue: number;
+    value: number;
+    topValueError?: string;
+    bottomValueError?: string;
+    showFromValue(): Promise<number>;
+    showToValue(): Promise<number>;
+    getDragValue(): Promise<number>;
+    componentWillRender(): void;
+    private handleValueChanged;
+    private handleValueSlider;
+    private updateValue;
+    private invertValues;
+    private calculateTooltipPosition;
+    private calculateBackground;
+    private renderSpecific;
+    private checkForErrors;
+    render(): any;
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "activationDate": "2021-09-15T09:40",
+    "addressId": "9150308807013312580",
+    "bundleIdentifier": "ONE000001664",
+    "bundleType": "C5",
+    "hasVoiceMail": false,
+    "id": "9161461005113763783",
+    "identifier": "INT000020106",
+    "internetType": "FUP",
+    "label": "ONE for 2 / ONE000001664",
+    "locationId": "9161460938613759230",
+    "productType": "bundle",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/C5FA0002",
+    "status": "Active",
+    "useSpecurl": true
+  }
+]

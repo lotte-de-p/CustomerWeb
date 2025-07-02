@@ -1,0 +1,17 @@
+{
+  "name": "sim-management-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/activate/sim-management/shared/data-access/src",
+  "prefix": "tg-activate-sim-management-data-access",
+  "tags": ["type:data-access", "scope:sim-management-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/activate/sim-management/shared/data-access/**/*.{ts,js,html}"]
+      }
+    }
+  }
+}

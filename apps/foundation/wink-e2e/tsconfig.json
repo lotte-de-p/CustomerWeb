@@ -1,0 +1,28 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["cypress", "node"],
+    "sourceMap": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react",
+    "jsxFactory": "h"
+  },
+  "include": [
+    "../node_modules/cypress",
+    "../../../libs/foundation/wink/core/src/components/**/*.cy.ts",
+    "../../../libs/foundation/wink/core/src/components/**/*.cy.tsx"
+  ],
+  "exclude": [
+    "../src/**/*.spec.tsx",
+    "../src/**/*.spec.ts",
+    "../../../libs/foundation/wink/core/dist/**"
+  ]
+}

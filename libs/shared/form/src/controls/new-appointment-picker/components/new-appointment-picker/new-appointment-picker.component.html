@@ -1,0 +1,18 @@
+<ng-container [formGroup]="form">
+  <app-form-date-picker
+    [timeslots]="timeslots"
+    [withMoment]="true"
+    [showLoadMore]="showLoadMore"
+    [updateSlots]="updateSlots"
+    (loadMore)="loadMoreSlots()"
+    formControlName="appointment"
+    (ngModelChange)="selectInstallSlotDay($event)">
+  </app-form-date-picker>
+  <app-form-moment-picker
+    *ngIf="appointment?.date && (appointmentsAvailable$ | async)"
+    [timeslot]="appointment.date"
+    [availableMoments]="availableMoments"
+    formControlName="moment"
+    (ngModelChange)="selectMoment($event)">
+  </app-form-moment-picker>
+</ng-container>

@@ -1,0 +1,20 @@
+{
+  "name": "sales-product-finder-feat-tv-experience",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/product-finder/feat-tv-experience/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/product-finder/feat-tv-experience/**/*.ts",
+          "libs/sales/product-finder/feat-tv-experience/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales/product-finder", "scope:sales-mfe"]
+}

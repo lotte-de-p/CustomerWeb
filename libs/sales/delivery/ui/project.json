@@ -1,0 +1,17 @@
+{
+  "name": "sales-delivery-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/delivery/ui/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/delivery/ui/**/*.ts", "libs/sales/delivery/ui/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:sales-delivery", "scope:sales-mfe"]
+}

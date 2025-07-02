@@ -1,0 +1,15 @@
+<div class="overlay__mask overlay__mask--fleet-portal"></div>
+@if (!isSourceOneApp) {
+  <div class="old-overlay__header">
+    <div class="overlay__section__content__close">
+      <div>
+        <div>
+          <div (click)="close()" class="icon icon-cross"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+<div class="container old-overlay__content-container" style="margin-top: 20rem">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,5 @@
+export default {
+  displayName: '<%= fullPathDasherized %>-ui',
+  preset: '<%= offsetFromRoot %>jest.preset.js',
+  coverageDirectory: '<%= offsetFromRoot %>coverage/<%= libUiPath %>',
+};

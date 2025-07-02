@@ -1,0 +1,43 @@
+<div class="stepper-page__body">
+  <div class="stepper-page__body-inner">
+    <div class="stepper-page__title">
+      <div class="text-flow text-flow--h3">{{ 'ng.product-finder.step-internet-services.header' | translate }}</div>
+      <div class="font--caption mt--xxxs stepper-page__title-label">
+        {{ 'ng.product-finder.step-internet-services.sub-header' | translate }}
+      </div>
+    </div>
+    <div class="stepper-page__content--split container">
+      <div
+        class="stepper-page__content-first stepper-page__content-first--full-width-img flex-hide-until-md sticky ml--xm--md ml--n--lg">
+        <img
+          appSalesImageSrcInterceptor
+          [moduleId]="'tg-sales-product-finder'"
+          src="/assets/sales/product-finder/internet-usage/internet-usage.png"
+          alt="Internet usage" />
+      </div>
+
+      <div id="product-finder-v2-container--internet-usage" class="stepper-page__content-second mx--s--md mx--n--lg">
+        <div *ngIf="showAtLeastOneValueSelectedError$ | async" class="mb--l mx--m mx--n--md">
+          <div class="notification notification--errorfield">
+            <span class="icon icon-error errorfield"></span>
+            <div>
+              <p>{{ 'ng.product-finder.step-internet-usage.multiple.options.error' | translate }}</p>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngIf="{ chips: chips$ | async, internetUsage: internetUsage$ | async } as o">
+          <ng-container *ngIf="o.chips && o.internetUsage">
+            <div class="Container Container--partitioned py--m--md mx--n">
+              <div class="Container--partitioned--partition Container--partitioned--partition--last-item">
+                <tg-sales-multiple-select-chip
+                  [chips]="o.chips"
+                  [ngModel]="o.internetUsage.selection"
+                  (ngModelChange)="updateInternetUsage($event)"></tg-sales-multiple-select-chip>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

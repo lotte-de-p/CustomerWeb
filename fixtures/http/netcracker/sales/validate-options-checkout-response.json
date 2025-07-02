@@ -1,0 +1,28 @@
+{
+  "isExistingPlanBundle": true,
+  "planDetails": {
+    "id": "C5FA0001",
+    "type": "Bundle"
+  },
+  "lineLevelDetails": [
+    {
+      "id": "TEOS0001",
+      "type": "IDTV_LINE"
+    },
+    {
+      "id": "FIXD0023",
+      "type": "FIXED_LINE"
+    }
+  ],
+  "locationId": "9162835435213425038",
+  "prices": {
+    "taxInclPrices": {
+      "currency": "Euro",
+      "recurrentTotal": "30,00"
+    },
+    "taxExclPrices": {
+      "currency": "Euro",
+      "recurrentTotal": "30,00"
+    }
+  }
+}

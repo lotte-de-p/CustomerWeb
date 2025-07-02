@@ -1,0 +1,7 @@
+export interface <%= classifiedStateName %> {
+  name: string | undefined;
+}
+
+export const defaultState: <%= classifiedStateName %> = {
+  name: undefined
+};

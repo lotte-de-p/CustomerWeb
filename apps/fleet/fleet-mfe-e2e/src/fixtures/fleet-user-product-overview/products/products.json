@@ -1,0 +1,323 @@
+[
+  {
+    "id": "9169608624113192191",
+    "identifier": "0484504215",
+    "msisdn": "32484504215",
+    "accountNumber": "125783837",
+    "label": "Mobile Connect",
+    "locationId": "9169608512113189874",
+    "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+    "status": "ACTIVE",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [],
+    "lineLevelProducts": [
+      {
+        "identifier": "0484504215",
+        "category": "mobile",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/MOFL0000",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          }
+        },
+        "discountItems": {
+          "discounts": []
+        },
+        "isFree": true
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "30,00",
+      "recurrentTotal": "30,00",
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "recurrentDiscount": "0,00"
+      },
+      "recurrentDiscount": "0,00"
+    },
+    "summaryPrices": {
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "recurrentDiscount": "0,00"
+      }
+    },
+    "addressId": "9150758014313395914",
+    "discountItems": {
+      "discounts": []
+    },
+    "productType": "mobile",
+    "activationDate": "2024-04-15T08:51:58+02:00",
+    "hasOldSocialTariffDiscount": false,
+    "simCardType": "PHYSICAL_SIM",
+    "simCardNumber": "8932030000205509128",
+    "pukCode": "51212812"
+  },
+  {
+    "id": "9169608624113192192",
+    "identifier": "0484504216",
+    "msisdn": "32484504216",
+    "accountNumber": "125783838",
+    "label": "Mobile Connect+",
+    "locationId": "9169608512113189875",
+    "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+    "status": "ACTIVE",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [],
+    "lineLevelProducts": [
+      {
+        "identifier": "0484504216",
+        "category": "mobile",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/MOFL0000",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          }
+        },
+        "discountItems": {
+          "discounts": []
+        },
+        "isFree": true
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "30,00",
+      "recurrentTotal": "30,00",
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "recurrentDiscount": "0,00"
+      },
+      "recurrentDiscount": "0,00"
+    },
+    "summaryPrices": {
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "recurrentDiscount": "0,00"
+      }
+    },
+    "addressId": "9150758014313395915",
+    "discountItems": {
+      "discounts": []
+    },
+    "productType": "mobile",
+    "activationDate": "2024-04-15T08:51:58+02:00",
+    "hasOldSocialTariffDiscount": false,
+    "simCardType": "E_SIM",
+    "simCardNumber": "8932030000205509200",
+    "pukCode": "51212820"
+  },
+  {
+    "id": "9169921662113238814",
+    "identifier": "0487373602",
+    "msisdn": "32487373602",
+    "accountNumber": "126920031",
+    "label": "Mobile 1",
+    "locationId": "9169858854713494010",
+    "specurl": "https://api.prd.base.be/omapi/public/product/BFLE0001",
+    "status": "ACTIVE",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [
+      {
+        "parentId": "0487373602",
+        "label": "Data National 1 GB",
+        "specurl": "https://api.prd.base.be/omapi/public/product/FDNS0001",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "5,00",
+          "recurrentTotal": "5,00",
+          "taxExclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "5,00",
+            "recurrentTotal": "5,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2024-06-23T13:00:29+02:00",
+          "price": {
+            "currency": "Euro",
+            "earlyTerminationFee": "4,84"
+          }
+        },
+        "discountItems": {
+          "discounts": []
+        },
+        "isFree": false,
+        "isIncluded": false,
+        "chars": {}
+      },
+      {
+        "parentId": "0487373602",
+        "label": "Voice National 250 min",
+        "specurl": "https://api.prd.base.be/omapi/public/product/FVNM0250",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "5,00",
+          "recurrentTotal": "5,00",
+          "taxExclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "5,00",
+            "recurrentTotal": "5,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2024-06-23T13:00:29+02:00",
+          "price": {
+            "currency": "Euro",
+            "earlyTerminationFee": "4,84"
+          }
+        },
+        "discountItems": {
+          "discounts": []
+        },
+        "isFree": false,
+        "isIncluded": false,
+        "chars": {}
+      }
+    ],
+    "lineLevelProducts": [
+      {
+        "identifier": "0487373602",
+        "category": "mobile",
+        "specurl": "https://api.prd.telenet.be/omapi/public/product/MOFL0000",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "Euro",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          }
+        },
+        "discountItems": {
+          "discounts": []
+        },
+        "isFree": true
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "5,00",
+      "recurrentTotal": "5,00",
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "5,00",
+        "recurrentTotal": "5,00",
+        "recurrentDiscount": "0,00"
+      },
+      "recurrentDiscount": "0,00"
+    },
+    "summaryPrices": {
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "15,00",
+        "recurrentTotal": "15,00",
+        "recurrentDiscount": "0,00"
+      }
+    },
+    "addressId": "9150757965713443997",
+    "discountItems": {
+      "discounts": []
+    },
+    "productType": "mobile",
+    "activationDate": "2024-05-21T14:27:14+02:00",
+    "hasOldSocialTariffDiscount": false,
+    "simCardType": "E_SIM",
+    "simCardNumber": "8932030526001029366",
+    "pukCode": "51092057"
+  },
+  {
+    "id": "9169858873913591265",
+    "identifier": "0489117278",
+    "msisdn": "32489117278",
+    "accountNumber": "126920031",
+    "label": "Mobile Start +",
+    "locationId": "9169858854713494010",
+    "specurl": "https://api.prd.base.be/omapi/public/product/BFLS0001",
+    "status": "SUSPENDED",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [],
+    "lineLevelProducts": [],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "0,00",
+      "recurrentTotal": "0,00",
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "0,00",
+        "recurrentTotal": "0,00",
+        "recurrentDiscount": "0,00"
+      },
+      "recurrentDiscount": "0,00"
+    },
+    "summaryPrices": {
+      "taxExclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "0,00",
+        "recurrentTotal": "0,00",
+        "recurrentDiscount": "0,00"
+      }
+    },
+    "addressId": "9150757965713443997",
+    "discountItems": {
+      "discounts": []
+    },
+    "productType": "mobile",
+    "activationDate": "2024-05-14T08:14:43+02:00",
+    "hasOldSocialTariffDiscount": false,
+    "simCardType": "E_SIM",
+    "simCardNumber": "8932030526001060510",
+    "pukCode": "37027775"
+  }
+]

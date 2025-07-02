@@ -1,0 +1,24 @@
+[
+  {
+    "name": "HD Digicorder",
+    "type": "DTV Box",
+    "addressId": "9165643348913614617",
+    "locationId": "9168859531813775410",
+    "serialNumber": "966313491313",
+    "parentId": "9168859549413779743",
+    "returnDueDate": "2024-01-19",
+    "lateFee": 249,
+    "status": "Disconnected"
+  },
+  {
+    "name": "Access Point",
+    "type": "Access Points",
+    "addressId": "9165643348913619999",
+    "locationId": "9168859531813779999",
+    "serialNumber": "966313499999",
+    "parentId": "9168859549413779999",
+    "returnDueDate": "2024-02-28",
+    "lateFee": 249,
+    "status": "Disconnected"
+  }
+]

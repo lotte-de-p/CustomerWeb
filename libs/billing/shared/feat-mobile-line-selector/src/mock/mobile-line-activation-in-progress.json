@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-line-selector-service/v1/mobile-lines",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "name": "customerName",
+      "msisdn": "04891297574",
+      "isDataOnly": false,
+      "status": "ACTIVATION_IN_PROGRESS"
+    },
+    {
+      "name": "",
+      "msisdn": "04891297575",
+      "isDataOnly": false,
+      "status": "ACTIVE"
+    }
+  ]
+}

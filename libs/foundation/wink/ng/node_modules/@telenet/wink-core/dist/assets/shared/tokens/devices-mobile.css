@@ -1,0 +1,21 @@
+:root  {
+--semantic-heights-componentheight-default: primitives-sizes-size-44;
+--semantic-border-sm: 0.1;
+--semantic-border-md: 0.2;
+--semantic-border-none: 0;
+--semantic-border-lg: 0.3;
+--semantic-spacing-none: 0;
+--semantic-spacing-3xs: 0.4;
+--semantic-spacing-xs: 0.8;
+--semantic-spacing-md: 1.6;
+--semantic-spacing-lg: 1.6;
+--semantic-spacing-horizontal-default: 1.6;
+--semantic-spacing-vertical-default: 1.2;
+--semantic-spacing-2xs: 0.6;
+--semantic-spacing-sm: 1.2;
+--semantic-spacing-xl: 2.4;
+--semantic-icon-sm: 1.6;
+--semantic-icon-md: 2.4;
+--semantic-icon-xl: 4;
+--semantic-icon-lg: 3.2;
+}

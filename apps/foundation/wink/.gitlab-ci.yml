@@ -1,0 +1,141 @@
+variables:
+  CLIENT_PROJECT: wink
+  LEANIX_APPLICATION_NAME: foundation
+  CLIENT_E2E: wink-e2e
+  GITOPS_DEPLOY_FOLDER_NAME: foundation/wink
+  NPM_TOKEN: ${NEXUS_AUTH_TOKEN}
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+test:app:
+  extends: .test:app
+  rules:
+    - when: always
+
+e2e:app:
+  extends: .e2e:app
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+build:storybook:
+  extends: .build:storybook
+
+build:libs:
+  extends: .build:app
+  script:
+    - npm run wink:update
+  artifacts:
+    paths:
+      - node_modules/.cache/nx
+      - libs/foundation/wink/dist
+      - libs/foundation/wink/ng/dist
+    when: always
+    expire_in: 2 weeks
+
+sonar:app:
+  extends: .sonar:app
+  needs:
+    - test:app
+    - e2e:app
+
+push-to-harbor:
+  extends: .push-to-harbor
+
+push-to-nexus:
+  image: $NODE_BUILD_IMAGE
+  stage: package
+  script:
+    - npm config set //artifact-repo.rel.apps.telenet.be/repository/eDev_NPM_Private/:_auth=${NEXUS_AUTH_TOKEN}
+    - cd libs/foundation/wink/dist
+    - npm i --cache .npm --prefer-offline
+    - npm run semantic-release
+    - CURRENT_VERSION="$(node -p -e "require('./package.json').version")"
+    - echo $CURRENT_VERSION
+    - cd ../../../..
+    - npm run wink-ng:build
+    - cd libs/foundation/wink/ng/dist
+    - npm version $CURRENT_VERSION --yes --force-publish --no-git-tag-version
+    - npm publish
+  when: manual
+  needs:
+    - build:libs
+
+gitops-deploy-dev:
+  extends: .gitops-deploy-dev
+
+.deploy-cdn-template: &deploy-cdn-template
+  image:
+    name: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y curl jq
+    - |
+      export V=$(curl --request GET \
+        --header "PRIVATE-TOKEN: ${PRIVATE_TOKEN_GL}" \
+        --url "https://gitlab.cmt.apps.telenet.be/api/v4/projects/1427/repository/tags" | jq -r '.[0].name')
+    - echo $V
+    - echo $LOCAL_WEB_CONTENT
+    - echo $S3_BUCKET
+    - aws s3 sync $LOCAL_WEB_CONTENT s3://$S3_BUCKET/$V --cache-control max-age=604800 --delete
+    - |
+      echo "Creating invalidation for distribution ID: ${CLOUDFRONT_DISTRIBUTION_ID}"
+      aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths '/*' | tee /tmp/cf_invalidation_out.json
+      INVALIDATION_ID="$(cat /tmp/cf_invalidation_out.json | jq -r '.Invalidation.Id')"
+      echo "Waiting for invalidation '${INVALIDATION_ID}' to complete..."
+      aws cloudfront wait invalidation-completed --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --id "${INVALIDATION_ID}"
+      echo "Invalidation '${INVALIDATION_ID}' completed"
+      aws cloudfront get-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --id "${INVALIDATION_ID}"
+  needs:
+    - build:libs
+  when: manual
+  only: !reference [.allowed-branches]
+
+deploy-cdn-dev:
+  <<: *deploy-cdn-template
+  tags:
+    - aem-modules-dev
+  variables:
+    LOCAL_WEB_CONTENT: ./libs/foundation/wink/dist/www
+    S3_BUCKET: customer-web-foundation-wink-dev
+    CLOUDFRONT_DISTRIBUTION_ID: E1IXOLXN84VNCL
+  stage: deploy to dev (dvp, int, sup)
+
+tag-stage-candidate:
+  extends: .tag-stage-candidate
+  only: !reference [.allowed-branches]
+
+gitops-deploy-stage:
+  extends: .gitops-deploy-stage
+  only: !reference [.allowed-branches]
+
+deploy-cdn-stage:
+  <<: *deploy-cdn-template
+  tags:
+    - aem-modules-stage
+  variables:
+    LOCAL_WEB_CONTENT: ./libs/foundation/wink/dist/www
+    S3_BUCKET: customer-web-foundation-wink-stage
+    CLOUDFRONT_DISTRIBUTION_ID: E1QWSX51N7TRA
+  stage: deploy to stage (uat, trg)
+
+tag-prod-candidate:
+  extends: .tag-prod-candidate
+  only: !reference [.allowed-branches]
+
+gitops-deploy-prod:
+  extends: .gitops-deploy-prod
+  only: !reference [.allowed-branches]
+
+deploy-cdn-prod:
+  <<: *deploy-cdn-template
+  tags:
+    - aem-modules-prod
+  variables:
+    LOCAL_WEB_CONTENT: ./libs/foundation/wink/dist/www
+    S3_BUCKET: customer-web-foundation-wink-prod
+    CLOUDFRONT_DISTRIBUTION_ID: E1SO0NDB7I61VT
+  stage: deploy by operators prd

@@ -1,0 +1,21 @@
+<div class="font--caption cur-default my--xxxs">{{ 'ng.address.lbl.zip-code' | translate }}</div>
+<input
+  #input
+  [attr.data-cy]="'feat-delivery-address-form-municipality'"
+  [matAutocomplete]="optionList"
+  autocomplete="one-time-code"
+  class="form__input"
+  [formControl]="control"
+  [placeholder]="'ng.address.form-municipality-placeholder-label' | translate"
+  (blur)="onBlur()"
+  type="text" />
+
+<mat-autocomplete
+  #optionList="matAutocomplete"
+  [displayWith]="display"
+  autoActiveFirstOption="true"
+  (optionSelected)="optionSelected($event.option.value)">
+  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+    {{ option.postalCode }} - {{ option.location }}
+  </mat-option>
+</mat-autocomplete>

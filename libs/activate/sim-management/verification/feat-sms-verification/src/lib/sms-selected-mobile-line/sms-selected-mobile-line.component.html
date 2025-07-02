@@ -1,0 +1,18 @@
+@if (selectedMobileLine) {
+  <p class="mb--l">
+    {{ 'ng.sim-management.sms-verification.subtitle' | translate }}
+  </p>
+  <div
+    data-testid="sms-verification-readonly-mobile-line"
+    class="border-color--all--shade_16 mb--m border-style--all--solid p--xs">
+    <div class="display--flex">
+      <i class="icon icon-sim-esim mr--s"></i>
+      <div>
+        <p class="text-weight--l text--m">{{ selectedMobileLine.msisdn | phoneNumber }}</p>
+        <div class="text--xs color-shade_64 text-align--left">
+          {{ selectedMobileLine.name ? selectedMobileLine.name : selectedMobileLine.tariffPlan }}
+        </div>
+      </div>
+    </div>
+  </div>
+}

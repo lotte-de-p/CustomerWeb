@@ -1,0 +1,49 @@
+{
+  "profiledetails": [
+    {
+      "pid": "41111880550",
+      "firstname": "keyur",
+      "lastname": "k3",
+      "nickname": "Refvfmcet",
+      "email": "ch_keyur@telenetgroup.be",
+      "language": "NL",
+      "phonenumber": "+32543332200",
+      "gender": "MALE",
+      "birthdate": "1934-02-02",
+      "age": 88,
+      "privacysetting": 0,
+      "role": "Contract_Holder",
+      "credential": "424771790",
+      "alias": ["ch_keyur@telenetgroup.be"],
+      "primarycredentialalias": "ch_keyur@telenetgroup.be",
+      "telenethosted": false,
+      "legacylogin": false,
+      "version": 1,
+      "status": "VALIDATED",
+      "msisdn": [],
+      "righttoobject": "Yes"
+    },
+    {
+      "pid": "41111880551",
+      "firstname": "Man",
+      "lastname": "NOPIDlinked",
+      "nickname": "Refvfmcet",
+      "email": "man_without_pid@aem.com",
+      "language": "NL",
+      "gender": "MALE",
+      "birthdate": "1934-02-02",
+      "age": 88,
+      "privacysetting": 1,
+      "role": "Manager",
+      "credential": "424771791",
+      "alias": ["man_without_pid@aem.com"],
+      "primarycredentialalias": "man_without_pid@aem.com",
+      "telenethosted": false,
+      "legacylogin": false,
+      "version": 1,
+      "status": "VALIDATED",
+      "msisdn": [],
+      "righttoobject": "No"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "product": {
+    "externalProductCode": "DNUN0025",
+    "weight": 900,
+    "apps": [],
+    "category": [
+      "B2B Options with ETF",
+      "National & Europe plus data options",
+      "Data & voice options",
+      "Fleet Options with ETF"
+    ],
+    "subcategory": {
+      "name": "National Data",
+      "weight": 200,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Data National"
+        },
+        {
+          "locale": "nl",
+          "name": "Data Nationaal"
+        },
+        {
+          "locale": "fr",
+          "name": "Data Nationale"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "25",
+            "unit": "GB",
+            "visible": true,
+            "weight": "900",
+            "labelkey": "Data National 25 GB",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "25 GB mobile data for use in Belgium (also valid in the EU zone)"
+              },
+              {
+                "locale": "nl",
+                "name": "25 GB mobiele data voor gebruik in België (ook geldig in de EU-zone)"
+              },
+              {
+                "locale": "fr",
+                "name": "25 GB de data mobiles pour une consommation en Belgique (aussi valable dans la zone UE)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      },
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "35,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "DNUN0025",
+    "labelkey": "Data National 25 GB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Data National 25 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Data Nationaal 25 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Data Nationale 25 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-national-25-gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "25 GB mobile data"
+        },
+        {
+          "locale": "nl",
+          "name": "25 GB mobiele data"
+        },
+        {
+          "locale": "fr",
+          "name": "25 GB de data mobiles"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

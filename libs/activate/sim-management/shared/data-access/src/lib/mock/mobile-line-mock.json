@@ -1,0 +1,15 @@
+{
+  "msisdn": "0472658897",
+  "name": "Freddy's SIM",
+  "tariffPlan": "Telenet Mobile 13Gb",
+  "isSuspended": false,
+  "identityId": "123456789",
+  "status": "ACTIVE",
+  "simCard": {
+    "puk": "123456",
+    "pin": "1234",
+    "iccid": "12345678901234567890",
+    "type": "PHYSICAL_SIM",
+    "status": "ACTIVE"
+  }
+}

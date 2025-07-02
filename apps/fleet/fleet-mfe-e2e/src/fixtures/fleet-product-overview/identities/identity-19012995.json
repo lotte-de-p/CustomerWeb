@@ -1,0 +1,22 @@
+{
+  "pid": "19012995",
+  "firstname": "Margaux",
+  "lastname": "Sastre",
+  "email": "margaux.sastre@telenetgroup.be",
+  "language": "FR",
+  "phonenumber": "0487335159",
+  "gender": "FEMALE",
+  "birthdate": "1970-01-01",
+  "age": 54,
+  "privacysetting": 1,
+  "role": "FLEET_MANAGER",
+  "credential": "22395863",
+  "alias": ["+32487373602", "+32489117278"],
+  "primarycredentialalias": "+32489117278",
+  "telenethosted": false,
+  "legacylogin": false,
+  "version": 1,
+  "status": "VALIDATED",
+  "msisdn": ["0487373602", "0489117278"],
+  "righttoobject": "0"
+}

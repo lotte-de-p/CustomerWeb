@@ -1,0 +1,38 @@
+<div>
+  <!-- Error banner/message for the input groups with label-modifiers -->
+  <div *ngIf="customLabel && !toHideError()">
+    <div
+      [class.form__label--error]="error"
+      [innerHTML]="getLabel() | translate"
+      class="text-flow text-flow--h3 text-align--center"></div>
+    <div class="whitespace whitespace--small"></div>
+  </div>
+</div>
+<div>
+  <div
+    *ngFor="let option of optionList; let i = index"
+    class="checkbox-container animation-show-slide-up"
+    style="{{ '--animation-delay:' + i }}">
+    <input
+      (click)="selectOption(option)"
+      [attr.disabled]="option.disabled ? 'disabled' : null"
+      [checked]="selectedOptions.includes(option)"
+      class="checkbox-container__input"
+      disabled="disabled"
+      id="checkboxCard-{{ i }}-{{ key }}"
+      name="choice-{{ key }}"
+      type="checkbox"
+      value="{{ option.value }}" />
+    <!-- Effective body -->
+    <label class="checkbox-container__label" for="checkboxCard-{{ i }}-{{ key }}">
+      <div class="checkbox-container__label__tick">
+        <i class="icon-tick"></i>
+      </div>
+      <div class="checkbox-container__label__content">
+        <div [innerHTML]="getOptionLabel(option) | translate"></div>
+        <div *ngIf="hasSubscript(option)" [innerHTML]="getSubscript(option)" class="text--small"></div>
+      </div>
+    </label>
+    <!-- End Effective Body -->
+  </div>
+</div>

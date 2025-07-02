@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 398 366" xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd">
+		<g transform="translate(-194 -219)">
+			<g transform="translate(195 219)">
+				<path d="m143 291.73v-130.83l4.7396-6.4746m6.2741-8.5708l15.999-21.856h102.99v110.7m0 8.3867v120.91h-130v-75.082" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<path d="m143 161.5h76" stroke="#979797" stroke-linejoin="round" stroke-width="2" />
+				<path d="m218.5 363v-206" stroke="#979797" stroke-linejoin="round" stroke-width="2" />
+				<circle cx="245.5" cy="199.5" r="18.5" stroke="#8C8D8E" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m245.5 184v30" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m230 199.5h30" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<polyline points="264 344 264 364 227 364 227 344 227 344" stroke="#979797" stroke-linejoin="round" stroke-width="2.52" />
+				<path d="m226.65 358.5h36.348" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m227 351.5h36.348" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m226.65 344.5h36.348" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m264 345v-33.548c0-10.191-8.2827-18.452-18.5-18.452s-18.5 8.2611-18.5 18.452v33.548" stroke="#979797" stroke-linejoin="round" stroke-width="2.52" />
+				<path d="m227 310.5h37" stroke="#979797" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5" />
+				<path d="m256.15 311v34m-20.308 0v-34" fill="#8C8D8E" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m251.5 327c0.27614 0 0.5-0.22386 0.5-0.5s-0.22386-0.5-0.5-0.5-0.5 0.22386-0.5 0.5 0.22386 0.5 0.5 0.5z" fill="#575756" stroke="#979797" stroke-linejoin="round" stroke-width="1.68" />
+				<path d="m218 304.5v3.5h-37.201-4.1208-4.038-35.28v-3.5h-3.36v-3.5h84v3.5z" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="2" />
+				<path d="m218 231.5v3.5h-80.64v-3.5h-3.36v-3.5h84v3.5z" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="2" />
+				<polyline points="227.11 157 212.7 157 212.7 153.5 211 153.5 211 150 245 150" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<polyline transform="translate(254.5 153.5) scale(-1 1) translate(-254.5 -153.5)" points="278 157 232.7 157 232.7 153.5 231 153.5 231 150 265.04 150" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<rect x="152" y="243" width="24" height="50" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="185" y="243" width="24" height="50" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m158 187.5h46" stroke="#979797" stroke-linecap="round" stroke-width="1.68" />
+				<path d="m152 259.5h19.174" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m185 259.5h18.333" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="152" y="318" width="55" height="46" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m176 357h8" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="152" y="171" width="55" height="47" stroke="#239A98" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m152 187.5h50" stroke="#239A98" stroke-linecap="round" stroke-width="1.5" />
+				<polygon points="211 150 244.5 112 278 150" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="1.68" />
+				<path d="m211 150l33.5-38 33.5 38h-67zm16.464-5.4579l17.036-19.325 16.896 19.166" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<path d="m0 364.5h396" stroke="#979797" stroke-linecap="round" stroke-width="2" />
+				<circle cx="228.5" cy="101.5" r="3.5" fill="#D8D8D8" />
+				<circle cx="19" cy="206" r="5" fill="#D8D8D8" />
+				<circle cx="291" cy="2" r="2" fill="#D8D8D8" />
+				<circle cx="137.5" cy="43.5" r="3.5" fill="#D8D8D8" />
+				<circle cx="97.5" cy="149.5" r="3.5" fill="#D8D8D8" />
+				<path d="m146 90h11.707c0-6.5019 5.2414-11.773 11.707-11.773 0.45926 0 0.91234 0.026594 1.3578 0.078333 2.5628-5.9817 8.4783-10.169 15.366-10.169 0.58972 0 1.1723 0.030695 1.7463 0.090582 0.79718-8.5421 7.9474-15.227 16.65-15.227 8.1495 0 14.937 5.8617 16.422 13.621 0.64179-0.10961 1.3014-0.16668 1.9742-0.16668 6.4655 0 11.707 5.2708 11.707 11.773h8.3621" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<path d="m6 184.27h12.595c0-8.3596 6.767-15.136 15.115-15.136 0-8.3596 6.767-15.136 15.115-15.136 8.3475 0 15.115 6.7768 15.115 15.136 7.5047 0 14.125 3.792 18.055 9.5672 2.4814-1.7873 5.5258-2.8399 8.8157-2.8399 8.3475 0 15.115 6.7768 15.115 15.136h10.076" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				<circle cx="326.5" cy="314.5" r="21.5" fill="#D8D8D8" stroke="#979797" stroke-width="2" />
+				<path d="m327 336.67v26.807" stroke="#979797" stroke-linecap="square" stroke-width="1.5" />
+				<path d="m55.366 308c-0.092337-1.1591-0.069024-2.3444 0.080161-3.5432 1.2009-9.6494 10.103-16.511 19.884-15.327 9.7807 1.1848 16.736 9.9677 15.535 19.617-1.2009 9.6494-10.103 16.511-19.884 15.327-2.5906-0.31382-4.983-1.1607-7.0781-2.4155-1.5341 4.7405-6.3116 7.8876-11.501 7.259-5.8684-0.7109-10.042-5.9806-9.321-11.77 0.72056-5.7897 6.062-9.9068 11.93-9.196 0.11894 0.014408 0.23718 0.030689 0.3547 0.048809z" fill="#D8D8D8" stroke="#979797" stroke-width="2" />
+				<circle cx="89.5" cy="325.5" r="10.5" fill="#D8D8D8" stroke="#979797" stroke-width="2" />
+				<path d="m73.5 313.88v50.498" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<polyline points="73 338 60.625 336.25 53 324" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m74 345l14-14" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m289 334h2c1.1046 0 2 0.89543 2 2v28h-6v-28c0-1.1046 0.89543-2 2-2z" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="288" y="250" width="4" height="84" stroke="#979797" stroke-width="1.5" />
+				<path d="m283 243c0 3.866 3.134 7 7 7s7-3.134 7-7" stroke="#979797" stroke-width="1.5" />
+				<path d="m280.5 243h18.879" stroke="#979797" stroke-linecap="round" stroke-width="2" />
+			</g>
+		</g>
+	</g>
+</svg>

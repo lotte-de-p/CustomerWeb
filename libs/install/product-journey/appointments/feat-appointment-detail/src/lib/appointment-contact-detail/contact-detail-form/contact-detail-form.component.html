@@ -1,0 +1,58 @@
+<div class="cards--body" [hidden]="!appointmentContactForm">
+  <form [formGroup]="appointmentContactForm">
+    <div class="form-group">
+      <div class="cards--body--inner-container">
+        <div class="col-sm-12 appointment-contact__details px--n">
+          <div>
+            <tg-form-input
+              formControlName="contactNameField"
+              labelStyle="FormGroup__label"
+              [showPlaceHolder]="false"
+              [messageGroup]="MESSAGE_GROUP"
+              [required]="true">
+            </tg-form-input>
+          </div>
+          <div>
+            <tg-form-dropdown-with-input
+              [required]="true"
+              formControlName="contactMethodField"
+              labelStyle="FormGroup__label"
+              [optionList]="contactMethodOptions"
+              [showPlaceHolder]="false"
+              [messageGroup]="MESSAGE_GROUP"
+              [customLabel]="true"></tg-form-dropdown-with-input>
+          </div>
+          <div>
+            <tg-form-input
+              formControlName="contactValueField"
+              labelStyle="FormGroup__label"
+              [showPlaceHolder]="false"
+              [messageGroup]="customMessageGroup"
+              [required]="true">
+            </tg-form-input>
+          </div>
+        </div>
+        <div class="display--inline-flex--sm display--block pt--xs" *ngIf="!showEditContactDetail">
+          <p class="pr--l">
+            <a
+              [attr.data-cy]="'cancel-save-contact-detail'"
+              class="link link--default font--body-regular-bold"
+              href="javascript:void(0)"
+              (click)="cancelSaveAppointmentContact()"
+              >{{ 'ng.appointments.contact.form.cancel-btn' | translate }}</a
+            >
+          </p>
+          <p>
+            <a
+              [attr.data-cy]="'save-contact-detail'"
+              class="link link--default font--body-regular-bold"
+              (click)="saveAppointmentContact()"
+              href="javascript:void(0)"
+              >{{ 'ng.appointments.contact.form.save-btn' | translate }}</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

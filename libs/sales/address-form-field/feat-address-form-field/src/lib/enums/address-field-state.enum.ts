@@ -1,0 +1,8 @@
+export enum AddressFieldStateEnum {
+  EMPTY = 0,
+  ZIPCODE_CHOSEN = 1,
+  STREET_CHOSEN = 2,
+  HOUSE_NUMBER_CHOSEN = 3,
+  SUB_HOUSE_NUMBER_CHOSEN = 4,
+  BOX_CHOSEN = 5,
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": ["**/cypress/**"],
+  "reporter": ["cobertura", "html", "json", "text", "text-summary"],
+  "check-coverage": true,
+  "include": [
+    "apps/telenet-customerzone-dashboard-mfe/**",
+    "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/**"
+  ],
+  "report-dir": "../../../../../coverage/cypress/engagement/telenet-customerzone-dashboard/engagement/device",
+  "cwd": "../../../../../"
+}

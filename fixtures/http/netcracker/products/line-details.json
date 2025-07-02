@@ -1,0 +1,22 @@
+{
+  "id": "9151058241113574971",
+  "identifier": "0468239791",
+  "msisdn": "32468239791",
+  "accountNumber": "999910887",
+  "secondaryBillingAccount": "999910888",
+  "label": "B-Fleet Connect",
+  "description": "Dan Fuhman",
+  "productInfo": {
+    "id": "23456"
+  },
+  "status": "ACTIVE",
+  "options": [
+    {
+      "id": "9151058241113574972",
+      "parentId": "9151058241113574971",
+      "label": "Internet World Small",
+      "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+      "status": "ACTIVE"
+    }
+  ]
+}

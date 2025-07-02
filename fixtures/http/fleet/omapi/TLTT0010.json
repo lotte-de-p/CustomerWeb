@@ -1,0 +1,117 @@
+{
+  "product": {
+    "externalProductCode": "TLTT0010",
+    "weight": 20,
+    "apps": [],
+    "category": ["Other data options", "Fleet Options with ETF"],
+    "subcategory": {
+      "name": "World Data WG",
+      "weight": 6,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "World Data WG"
+        },
+        {
+          "locale": "nl",
+          "name": "World Data WG"
+        },
+        {
+          "locale": "fr",
+          "name": "World Data WG"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "1",
+            "unit": "GB",
+            "visible": true,
+            "labelkey": "Roam World Data - 1 Gb",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "1 GB mobile data for use in all countries (not valid for satellite connections)"
+              },
+              {
+                "locale": "nl",
+                "name": "1 GB Data voor gebruik in alle landen (uitgezonderd  satelliet verbindingen)"
+              },
+              {
+                "locale": "fr",
+                "name": "1 GB de data mobiles pour une consommation dans tous les pays  (excepté connection satellite)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "78,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "TLTT0010",
+    "labelkey": "World Data WG 1 GB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "World Data WG 1 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-1-gb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "World Data WG 1 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-1-gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "World Data WG 1 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-1-gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "1GB World Data WG"
+        },
+        {
+          "locale": "nl",
+          "name": "1GB World Data WG"
+        },
+        {
+          "locale": "fr",
+          "name": "1GB World Data WG"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

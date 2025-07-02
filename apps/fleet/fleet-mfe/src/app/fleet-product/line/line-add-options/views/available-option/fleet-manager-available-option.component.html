@@ -1,0 +1,41 @@
+<div class="option-tiles">
+  <div class="title-row">
+    <em class="icon-manage-line"></em>
+    <p>{{ 'ng.line-add-options.lbl.add-options' | translate }}</p>
+  </div>
+  <div class="pt-25">
+    <p>{{ 'ng.line-add-options.lbl.add-option-info' | translate }}</p>
+  </div>
+  <div class="title">
+    <p>{{ 'ng.line-add-options.lbl.add-options' | translate }}</p>
+  </div>
+  @for (categories of productLineOptions(); track categories) {
+    <div class="option-title" [attr.data-cy]="'available-option-category'">
+      <div class="option-title-toggle" (click)="toggleCategories(categories)">
+        <span>{{ categories.category }}</span>
+        <em [ngClass]="{ open: categories.isOpen }" class="icon-chevron-down"></em>
+      </div>
+      @if (categories.isOpen) {
+        <div class="options-button-container">
+          @for (subcategory of categories.subcategory; track subcategory) {
+            @if (subcategory.visible) {
+              <button
+                class="options-button"
+                (click)="toggleOption(subcategory)"
+                [ngClass]="{ available: !subcategory.isSelected, 'previously-added': subcategory.isDisabled }"
+                [disabled]="subcategory.isDisabled"
+                [attr.data-cy]="'available-option'">
+                <span>{{ subcategory.volume }}</span>
+                @if (!subcategory.isDisabled) {
+                  <span
+                    class="separator"
+                    [ngClass]="{ 'icon-tick': subcategory.isSelected, 'icon-plus': !subcategory.isSelected }"></span>
+                }
+              </button>
+            }
+          }
+        </div>
+      }
+    </div>
+  }
+</div>

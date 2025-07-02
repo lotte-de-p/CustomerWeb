@@ -1,0 +1,14 @@
+[
+  {
+    "identityId": "1234678",
+    "msisdn": "0472653310",
+    "firstName": "William",
+    "lastName": "manager"
+  },
+  {
+    "identityId": "1234679",
+    "msisdn": "0472653311",
+    "firstName": "John",
+    "lastName": "manager"
+  }
+]

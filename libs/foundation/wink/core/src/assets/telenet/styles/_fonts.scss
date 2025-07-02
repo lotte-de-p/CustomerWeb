@@ -1,0 +1,32 @@
+@font-face {
+  font-family: TelenetAlbra-Regular;
+  src:
+    url('../assets/telenet/fonts/Telenet-Albra-Regular.woff2') format('woff2'),
+    url('../assets/telenet/fonts/Telenet-Albra-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: TelenetAlbra-Semi;
+  src:
+    url('../assets/telenet/fonts/Telenet-Albra-Sans-Semi.woff2') format('woff2'),
+    url('../assets/telenet/fonts/Telenet-Albra-Sans-Semi.woff') format('woff');
+}
+@font-face {
+  font-family: TelenetAlbra-Medium;
+  src:
+    url('../assets/telenet/fonts/Telenet-Albra-Medium.woff2') format('woff2'),
+    url('../assets/telenet/fonts/Telenet-Albra-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: TelenetAlbra-Bold;
+  src:
+    url('../assets/telenet/fonts/Telenet-Albra-Bold.woff2') format('woff2'),
+    url('../assets/telenet/fonts/Telenet-Albra-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: TelenetAlbra-Black;
+  src:
+    url('../assets/telenet/fonts/Telenet-Albra-Black.woff2') format('woff2'),
+    url('../assets/telenet/fonts/Telenet-Albra-Black.woff') format('woff');
+}
+
+@import '../../base/styles/fonts';

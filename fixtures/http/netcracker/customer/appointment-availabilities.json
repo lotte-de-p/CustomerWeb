@@ -1,0 +1,45 @@
+{
+  "salesOrderId": "9158335339913759337",
+  "availabilities": [
+    {
+      "date": "2020-06-12",
+      "dateTime": "2018-10-28",
+      "slots": [
+        {
+          "availabilityId": "123",
+          "start": "08:14",
+          "end": "10:00",
+          "timeslotCode": "MORNING",
+          "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0002"
+        },
+        {
+          "availabilityId": "1213",
+          "start": "08:14",
+          "end": "10:00",
+          "timeslotCode": "EVENING",
+          "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0003"
+        }
+      ]
+    },
+    {
+      "date": "2020-06-15",
+      "dateTime": "2018-10-14",
+      "slots": [
+        {
+          "availabilityId": "123",
+          "start": "08:14",
+          "end": "10:00",
+          "timeslotCode": "MORNING",
+          "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0000"
+        },
+        {
+          "availabilityId": "1213",
+          "start": "08:14",
+          "end": "10:00",
+          "timeslotCode": "DAY",
+          "specurl": "https://api.sup.telenet.be/omapi/public/product/APPT0000"
+        }
+      ]
+    }
+  ]
+}

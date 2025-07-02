@@ -1,0 +1,14 @@
+<app-message [messageGroupName]="MESSAGE_GROUP">
+  <wink-pricing
+    attr.brand="{{ brand.toLowerCase() }}"
+    attr.theme="telenet-{{ theme }}"
+    attr.appearance="{{ appearance }}"
+    [alignment]="winkAlignment"
+    [appearance]="appearance"
+    [annotation]="annotation"
+    [duration]="duration"
+    [price]="normalPrice"
+    [startingFrom]="startingFromLbl"
+    [priceStrikethrough]="priceStrikethrough"
+    [frequency]="frequency"></wink-pricing>
+</app-message>

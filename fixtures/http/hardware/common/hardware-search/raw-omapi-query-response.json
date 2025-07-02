@@ -1,0 +1,646 @@
+{
+  "products": [
+    {
+      "id": "_4pDu3UBF4SHOPKWMaFt",
+      "labelKey": "IPHONE SE 2020",
+      "brand": {
+        "sortOrder": "15",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "key": "brand_en",
+            "value": ["Base_en", "Telenet_en"]
+          }
+        ]
+      },
+      "visible": true,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "IPHONE SE 2020",
+          "logo": "https://toestellen.telenet.be/media/catalog/product/cache/9cdac7ef785d7a50a4aef4b93e207eb4/1/5/151992.png"
+        }
+      ],
+      "variants": [
+        {
+          "productId": "2067009",
+          "enabled": "true",
+          "created": "2020-05-19T13:54:49+00:00",
+          "updated": "2020-07-08T07:38:41+00:00",
+          "prices": {
+            "base": {
+              "plans": [
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+                  "productInfo": {
+                    "services": [
+                      {
+                        "specifications": [
+                          {
+                            "unit": "unit",
+                            "value": "value",
+                            "localizedContent": {
+                              "name": "spec"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "externalProductCode": "BOYO0040",
+                  "originalPriceVatExclusive": 649,
+                  "discountedPriceVatExclusive": 500,
+                  "currency": "EUR"
+                }
+              ]
+            },
+            "telenet": {
+              "plans": []
+            },
+            "telenetFleet": {
+              "originalPriceVatExclusive": 792.56,
+              "discountedPriceVatExclusive": 726.45,
+              "basicDiscountVatExclusive": 66.11,
+              "recylingTaxes": {
+                "amountAuvibel": 3.0,
+                "amountBebat": 0.06,
+                "amountRecupel": 0.04
+              },
+              "currency": "EUR"
+            }
+          },
+          "stockDetails": {},
+          "images": [
+            {
+              "attributeKey": "main_image",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/a/a/9/0/aa903ac118e2b725e45dc55c4d0baa39e5357492_iPhone_12_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "main_image_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_1",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/a/a/9/0/aa903ac118e2b725e45dc55c4d0baa39e5357492_iPhone_12_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "image_1_en"
+                }
+              ]
+            }
+          ],
+          "manBrand": {
+            "sortOrder": "17",
+            "attributeGroup": {
+              "code": "general",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "General"
+                }
+              ]
+            },
+            "localizedContent": [
+              {
+                "locale": "en",
+                "key": "brand_en",
+                "value": ["Apple EN"]
+              }
+            ]
+          },
+          "tag": {
+            "base": {
+              "options": [
+                {
+                  "attributeKey": "online_excl_base",
+                  "localizedContent": [
+                    {
+                      "locale": "nl",
+                      "key": "Online Exclusive Base_nl",
+                      "value": ["Online Exclusive Base_nl"]
+                    },
+                    {
+                      "locale": "fr",
+                      "key": "Online Exclusive Base_fr",
+                      "value": ["Online Exclusive Base_fr"]
+                    },
+                    {
+                      "locale": "en",
+                      "key": "Online Exclusive Base_en",
+                      "value": ["Online Exclusive Base_en"]
+                    }
+                  ]
+                }
+              ]
+            },
+            "telenet": {
+              "options": [
+                {
+                  "attributeKey": "online_excl_telenet",
+                  "localizedContent": [
+                    {
+                      "locale": "nl",
+                      "key": "Online Exclusive_nl",
+                      "value": ["Online Exclusive_nl"]
+                    },
+                    {
+                      "locale": "fr",
+                      "key": "Online Exclusive_fr",
+                      "value": ["Online Exclusive_fr"]
+                    },
+                    {
+                      "locale": "en",
+                      "key": "Online Exclusive_en",
+                      "value": ["Online Exclusive_en"]
+                    }
+                  ]
+                },
+                {
+                  "attributeKey": "cp_label",
+                  "startDate": "2021-03-13T00:00:00+00:00",
+                  "endDate": "2027-04-25T00:00:00+00:00",
+                  "localizedContent": [
+                    {
+                      "locale": "nl",
+                      "key": "CashBack_10%_nl",
+                      "value": ["CashBack_10%_nl"]
+                    },
+                    {
+                      "locale": "fr",
+                      "key": "CashBack_10%_fr",
+                      "value": ["CashBack_10%_fr"]
+                    },
+                    {
+                      "locale": "en",
+                      "key": "CashBack_10%",
+                      "value": ["CashBack_10%"]
+                    }
+                  ],
+                  "promoURL": {
+                    "localizedContent": []
+                  },
+                  "promoDescription": {
+                    "localizedContent": []
+                  },
+                  "promoImage": {
+                    "localizedContent": [
+                      {
+                        "locale": "fr",
+                        "key": "Cashback Image FR",
+                        "value": [
+                          "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png"
+                        ]
+                      },
+                      {
+                        "locale": "nl",
+                        "key": "Cashback Promo Image NL",
+                        "value": [
+                          "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png"
+                        ]
+                      },
+                      {
+                        "locale": "en",
+                        "key": "Cashback Promo Image EN",
+                        "value": [
+                          "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "contractMonths": {
+            "base": {
+              "attributeKey": "contract_months_base",
+              "value": "24",
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "Contract Months_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Contract Months_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "Contract Months_en"
+                }
+              ]
+            },
+            "telenet": {
+              "attributeKey": "contract_months_base_soho",
+              "value": "24",
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "Contract Months_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Contract Months_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "Contract Months_en"
+                }
+              ]
+            }
+          },
+          "color": {
+            "sortOrder": "0",
+            "hexCode": "#000000",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "General_en"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "characteristics": [
+            {
+              "attributeKey": "status",
+              "sortOrder": "1",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedContent": [
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "localizedContent": [
+                {
+                  "locale": "en",
+                  "key": "status_en",
+                  "value": ["status_active_EN"]
+                }
+              ]
+            },
+            {
+              "attributeKey": "internal_memory",
+              "unit": "GB",
+              "value": "1",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedContent": [
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              }
+            },
+            {
+              "attributeGroup": {}
+            },
+            {
+              "attributeKey": "attributeKey",
+              "sortOrder": "1",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedContent": [
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              }
+            }
+          ],
+          "shortdescription": {
+            "localizedcontent": [
+              {
+                "local": "en",
+                "name": "IPHONE SE 2020 64GB Blue"
+              }
+            ]
+          },
+          "onlinePositionBase": 3,
+          "onlinePositionTelenet": 4,
+          "onlinePositionBaseSoho": 5,
+          "onlinePositionTelenetFleet": 6,
+          "onlinePositionTelenetSoho": 7
+        },
+        {
+          "prices": {
+            "base": {
+              "plans": [
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0027",
+                  "productInfo": {
+                    "services": [
+                      {
+                        "specifications": [
+                          {
+                            "unit": "unit",
+                            "maxValue": "maxValue",
+                            "localizedContent": {
+                              "name": "spec"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "externalProductCode": "BOYO0027",
+                  "originalPriceVatInclusive": 649,
+                  "discountedPriceVatInclusive": 450,
+                  "currency": "EUR"
+                }
+              ]
+            },
+            "telenet": {
+              "originalPriceVatInclusive": 649,
+              "discountedPriceVatInclusive": 450,
+              "currency": "EUR",
+              "onTopPromos": [
+                {
+                  "onTopPromoPriceVatInclusive": 450
+                }
+              ]
+            },
+            "telenetFleet": {
+              "originalPriceVatInclusive": 792.56,
+              "discountedPriceVatInclusive": 726.45,
+              "basicDiscountVatExclusive": 66.11,
+              "recylingTaxes": {
+                "amountAuvibel": 3.0,
+                "amountBebat": 0.06,
+                "amountRecupel": 0.04
+              },
+              "currency": "EUR"
+            }
+          },
+          "stockDetails": {},
+          "color": {
+            "sortOrder": "0",
+            "hexCode": "#000000",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "General_en"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "onlinePositionBase": 2,
+          "onlinePositionTelenet": 3,
+          "onlinePositionBaseSoho": 4,
+          "onlinePositionTelenetFleet": 5,
+          "onlinePositionTelenetSoho": 6
+        },
+        {
+          "prices": {
+            "telenet": {
+              "originalPriceVatInclusive": 649,
+              "discountedPriceVatInclusive": 450,
+              "currency": "EUR"
+            }
+          }
+        }
+      ],
+      "shortDescription": {
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "data": "Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden.",
+            "logo": "https://telenet-acc.cloud.akeneo.com/api/rest/v1/media-files/9/9/3/1/99318de8c704758633e3e1b1f8a6192626f0497a_iphone_se_black_select_2020.png/download"
+          },
+          {
+            "locale": "fr",
+            "data": "Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden.",
+            "logo": "https://telenet-acc.cloud.akeneo.com/api/rest/v1/media-files/9/9/3/1/99318de8c704758633e3e1b1f8a6192626f0497a_iphone_se_black_select_2020.png/download"
+          },
+          {
+            "locale": "en",
+            "data": "Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden.",
+            "logo": "https://telenet-acc.cloud.akeneo.com/api/rest/v1/media-files/9/9/3/1/99318de8c704758633e3e1b1f8a6192626f0497a_iphone_se_black_select_2020.png/download"
+          }
+        ]
+      },
+      "longdescription": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          }
+        ]
+      },
+      "manBrand": {
+        "sortOrder": "17",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "value": "Apple"
+            }
+          ]
+        },
+        "localizedContent": [
+          {
+            "locale": "en",
+            "key": "brand_en",
+            "value": []
+          }
+        ]
+      }
+    },
+    {
+      "manBrand": {},
+      "variants": [
+        {
+          "productId": "2067009"
+        }
+      ]
+    },
+    {
+      "manBrand": {
+        "localizedContent": [
+          {
+            "locale": "en",
+            "key": "brand_en",
+            "value": "Apple"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "productId": "2067009"
+        }
+      ]
+    }
+  ],
+  "totalProducts": 3,
+  "facets": {
+    "categories": [
+      {
+        "name": "Phone",
+        "code": "phone_telenet",
+        "sortOrder": 2,
+        "subCategories": [
+          {
+            "sortOrder": 1,
+            "name": "Smartphone",
+            "code": "smartphone"
+          }
+        ]
+      },
+      {
+        "name": "Accessories",
+        "code": "accessories",
+        "sortOrder": 1,
+        "subCategories": [
+          {
+            "sortOrder": 1,
+            "name": "Charger",
+            "code": "charger"
+          },
+          {
+            "sortOrder": 2,
+            "name": "Cover",
+            "code": "cover"
+          },
+          {
+            "name": "Some accessory",
+            "code": "some_accessory"
+          }
+        ]
+      },
+      {
+        "name": "3rd subcategory",
+        "code": "accessories",
+        "sortOrder": 3,
+        "subCategories": []
+      }
+    ],
+    "manBrand": [
+      {
+        "name": "Apple",
+        "quantity": 8
+      },
+      {
+        "name": "Samsung",
+        "quantity": 3
+      }
+    ],
+    "internalMemory": [
+      {
+        "name": "64  TB",
+        "quantity": 8
+      },
+      {
+        "name": "128  MB",
+        "quantity": 6
+      },
+      {
+        "name": "512  KB",
+        "quantity": 4
+      },
+      {
+        "name": "256  KB",
+        "quantity": 4
+      },
+      {
+        "name": "256  GB",
+        "quantity": 3
+      },
+      {
+        "name": "2  TB",
+        "quantity": 8
+      },
+      {
+        "name": "100  MB",
+        "quantity": 6
+      },
+      {
+        "name": "10  GB",
+        "quantity": 3
+      }
+    ],
+    "operating_system": [
+      {
+        "name": "Andriod",
+        "quantity": 7
+      },
+      {
+        "name": "iOS",
+        "quantity": 4
+      }
+    ],
+    "main_camera": [
+      {
+        "name": "Good",
+        "quantity": 7
+      },
+      {
+        "name": "Very Good",
+        "quantity": 4
+      },
+      {
+        "name": "Excellent",
+        "quantity": 1
+      }
+    ],
+    "screenSize": {
+      "minScreenSize": 40.1,
+      "maxScreenSize": 80.5
+    },
+    "color": [
+      {
+        "name": "White",
+        "quantity": 3
+      },
+      {
+        "name": "Black",
+        "quantity": 2
+      },
+      {
+        "name": "Red",
+        "quantity": 1
+      }
+    ]
+  }
+}

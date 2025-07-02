@@ -1,0 +1,22 @@
+{
+  "activationDate": "2021-03-28T12:38:59+01:00",
+  "cancellationDate": "2021-03-24T12:38:59+01:00",
+  "epc": "TIPS0001",
+  "status": "Active",
+  "customerProductId": "2",
+  "planName": "Telenet Incentive Plan / TIP000000011",
+  "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+  "tipMRC": {
+    "vatExcl": "45.00",
+    "vatIncl": "12.1"
+  },
+  "tipUsage": {
+    "vatExcl": "80.22",
+    "vatIncl": "12.1"
+  },
+  "tipNRC": {
+    "vatExcl": "9.17",
+    "vatIncl": "12.1"
+  },
+  "noOfEmployees": "20"
+}

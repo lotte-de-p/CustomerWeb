@@ -1,0 +1,54 @@
+[
+  {
+    "emailAddress": "ravi.patel1@telenetgroup.be",
+    "firstName": "Amt",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "123455",
+    "employeeCustomerNumber": "1200001010",
+    "status": "ACTIVE",
+    "tipPlanName": "TIP11",
+    "customerProductId": "100212121",
+    "epc": "23232",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23232",
+    "activationDate": "2021-03-26T10:58:45+01:00"
+  },
+  {
+    "emailAddress": "ravi.patel2@telenetgroup.be",
+    "firstName": "Cod",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "1133",
+    "employeeCustomerNumber": "1200001011",
+    "status": "INVITED",
+    "tipPlanName": "TIP12",
+    "customerProductId": "100212122",
+    "epc": "23233",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23233",
+    "activationDate": "2021-03-27T10:58:45+01:00"
+  },
+  {
+    "emailAddress": "ravi.patel2@telenetgroup.be",
+    "firstName": "Cod",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "1133",
+    "employeeCustomerNumber": "1200001011",
+    "status": "PENDING FOR MIGRATION",
+    "tipPlanName": "TIP12",
+    "customerProductId": "100212122",
+    "epc": "23233",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23233",
+    "activationDate": "2021-03-27T10:58:45+01:00"
+  },
+  {
+    "emailAddress": "ravi.patel2@telenetgroup.be",
+    "firstName": "Cod",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "1133",
+    "employeeCustomerNumber": "1200001011",
+    "status": "SWAPPING",
+    "tipPlanName": "TIP12",
+    "customerProductId": "100212122",
+    "epc": "23233",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23233",
+    "activationDate": "2021-03-27T10:58:45+01:00"
+  }
+]

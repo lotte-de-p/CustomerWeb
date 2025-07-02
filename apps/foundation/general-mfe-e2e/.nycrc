@@ -1,0 +1,15 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "include": ["../general-mfe/**", "../general-mfe-e2e/**", "../../../libs/foundation/general/**", "../../../libs/foundation/general/**"],
+  "reporter": [
+    "lcovonly",
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "report-dir": "../../../coverage/apps/foundation/general-mfe-e2e",
+  "cwd": "../../../"
+}

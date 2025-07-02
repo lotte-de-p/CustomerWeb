@@ -1,0 +1,49 @@
+{
+  "usedSlots": [
+    {
+      "etf": {
+        "currency": "EUR",
+        "value": "37,50"
+      },
+      "endDateOfContract": "2021-11-11",
+      "id": "9158799647113525211",
+      "name": "M5 Lite LTE"
+    },
+    {
+      "etf": {
+        "currency": "EUR",
+        "value": "47,50"
+      },
+      "endDateOfContract": "2021-11-12",
+      "id": "9158799647113525212",
+      "name": "M5 Lite"
+    },
+    {
+      "etf": {
+        "currency": "EUR",
+        "value": "27,50"
+      },
+      "endDateOfContract": "2021-11-13",
+      "id": "9158799647113525213",
+      "name": "M5"
+    },
+    {
+      "etf": {
+        "currency": "EUR",
+        "value": "57,50"
+      },
+      "endDateOfContract": "2021-11-14",
+      "id": "9158799647113525214",
+      "name": "M5 Lite X"
+    },
+    {
+      "etf": {
+        "currency": "EUR",
+        "value": "17,50"
+      },
+      "endDateOfContract": "2021-11-15",
+      "id": "9158799647113525215",
+      "name": "New M5 Lite X"
+    }
+  ]
+}

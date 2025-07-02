@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="110px" viewBox="0 0 108 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <defs>
+        <path d="M52,104 C80.718807,104 104,80.718807 104,52 C104,44.2431839 102.301602,36.8830499 99.2563938,30.2711853 C96.7933399,24.9233151 93.4491959,20.0649664 89.4100008,15.8821783 C79.953759,6.08976789 66.6880502,0 52,0 C23.281193,0 0,23.281193 0,52 C0,80.718807 23.281193,104 52,104 Z" id="path-1"></path>
+        <circle id="path-3" cx="47" cy="47" r="47"></circle>
+        <path d="M47,94 C72.9573832,94 94,72.9573832 94,47 C94,39.9890316 92.4649096,33.3366028 89.7125098,27.3604944 C87.486288,22.5268425 84.4636963,18.1356427 80.8128854,14.3550458 C72.2658975,5.50421329 60.2757377,0 47,0 C21.0426168,0 0,21.0426168 0,47 C0,72.9573832 21.0426168,94 47,94 Z" id="path-5"></path>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="108" height="110"></rect>
+        <g id="Path" transform="translate(2.000000, 3.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+        </g>
+        <path d="M80.9873386,10.5424698 C73.1200016,5.75647343 63.8819052,3 54,3 C25.281193,3 2,26.281193 2,55 C2,83.718807 25.281193,107 54,107 L54,107 C82.718807,107 106,83.718807 106,55 C106,41.5335687 100.88109,29.2627228 92.4829422,20.0271342" id="Path" stroke="#8C8D8E" stroke-width="2" stroke-linecap="round"></path>
+        <g id="25-021526-facebook_profile_picture_affects_chances_of_getting_hired" transform="translate(7.000000, 8.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Mask" fill="#F2F2F2" xlink:href="#path-3"></use>
+        </g>
+        <line x1="11" y1="75.5" x2="29" y2="75.5" id="Line-17" stroke="#C5C6C6" stroke-linecap="round"></line>
+        <line x1="79" y1="75.5" x2="97" y2="75.5" id="Line-17-Copy" stroke="#C5C6C6" stroke-linecap="round"></line>
+        <path d="M78.3924022,14.8172323 C71.2815399,10.4914279 62.931722,8 54,8 C28.0426168,8 7,29.0426168 7,55 C7,80.9573832 28.0426168,102 54,102 L54,102 C79.9573832,102 101,80.9573832 101,55 C101,42.8284178 96.373293,31.737461 88.7826593,23.3899097" id="Path" stroke="#8C8D8E" stroke-width="0.933333333" stroke-linecap="round"></path>
+        <path d="M40.8018228,57.9344236 C44.1861463,61.6604849 49.0698616,64 54.5,64 L54.5,64 C64.7172679,64 73,55.7172679 73,45.5 C73,35.2827321 64.7172679,27 54.5,27 C44.2827321,27 36,35.2827321 36,45.5 C36,48.6361959 36.7803877,51.5901225 38.1575704,54.178187" id="Path" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round"></path>
+        <g id="Path" transform="translate(7.000000, 8.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Mask" stroke="#F2F2F2" stroke-width="2" xlink:href="#path-5"></use>
+            <path d="M32.7763158,100.184211 L73.5921053,100.184211 L73.5921053,82.8684211 C73.5921053,68.1820069 61.6864142,56.2763158 47,56.2763158 C32.3135858,56.2763158 20.4078947,68.1820069 20.4078947,82.8684211 L20.4078947,100.184211 L27.2105263,100.184211" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round" mask="url(#mask-6)"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.prepare:version:
+  image: $NODE_BUILD_IMAGE
+  stage: prepare
+  script:
+    - CURRENT_VERSION="$(node -p -e "require('./package.json').version")"
+    - NEW_VERSION="${CURRENT_VERSION%.*}.$CI_PIPELINE_ID"
+    - echo "VERSION=${NEW_VERSION}" | tee version
+  artifacts:
+    reports:
+      dotenv: version
+    expire_in: never
+  only: !reference [.allowed-branches]
+  retry:
+    max: 2
+    when: runner_system_failure

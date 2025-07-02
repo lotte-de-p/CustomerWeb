@@ -1,0 +1,27 @@
+{
+  "identifier": "DTV2710555",
+  "customerproductid": "158495352",
+  "lineIdentifier": "DTV2710544",
+  "accountnumber": "72093824",
+  "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+  "rateclassid": "44",
+  "rateclassdescription": "Telenet Digital TV",
+  "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+  "products": [],
+  "options": [
+    {
+      "specurl": "https://api.int.telenet.be/omapi/public/product/633",
+      "label": "internet.feature.mars.bundleoption",
+      "rawOmapi": {}
+    }
+  ],
+  "address": {
+    "street": "Hazel",
+    "postalcode": "9340",
+    "municipality": "Lede",
+    "country": "België",
+    "housenr": "63",
+    "addressid": "6cc7yy007q-9x3xae07dk"
+  },
+  "rawOmapi": {}
+}

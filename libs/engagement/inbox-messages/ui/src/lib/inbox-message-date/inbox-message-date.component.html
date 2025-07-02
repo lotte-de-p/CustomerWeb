@@ -1,0 +1,8 @@
+<div [ngClass]="{ 'display--inline-flex': !isRead() }">
+  <p class="font--caption text-weight--xl skeleton--text skeleton--one-line">
+    {{
+      'ng.inbox-messages.message-added-' + messageAdded().unit.toLowerCase() + '.txt'
+        | translate: { value: messageAdded().amount }
+    }}
+  </p>
+</div>

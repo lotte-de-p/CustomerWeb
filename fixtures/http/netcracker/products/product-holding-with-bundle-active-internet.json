@@ -1,0 +1,97 @@
+{
+  "id": "9160805847613018763",
+  "identifier": "YUPW000000557",
+  "accountNumber": "500502621",
+  "label": "WIGO 35GB - year upfront payment",
+  "locationId": "9160805665913010871",
+  "specurl": "https://api.int.telenet.be/omapi/public/product/YUPW0025",
+  "status": "ACTIVE",
+  "handsets": [],
+  "options": [
+    {
+      "label": "Fixed Line",
+      "specurl": "https://api.trg.telenet.be/omapi/public/product/FLIN0001",
+      "status": "ACTIVE",
+      "isIncludedOption": true,
+      "isLineLevelProduct": false,
+      "productType": "internet",
+      "productInfo": {
+        "externalProductCode": "IOPT0104"
+      }
+    },
+    {
+      "label": "Safesurf",
+      "specurl": "https://api.trg.telenet.be/omapi/public/product/OIKO0102",
+      "status": "NOT_ACTIVE",
+      "isIncludedOption": true,
+      "isLineLevelProduct": false,
+      "productType": "internet"
+    }
+  ],
+  "addressId": "9150308781213403379",
+  "productType": "bundle",
+  "children": [
+    {
+      "id": "9162325822213090264",
+      "identifier": "INT000000696",
+      "accountNumber": "105217685",
+      "label": "All-Internet",
+      "locationId": "9162325781813080985",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/INTF0200",
+      "status": "ACTIVE",
+      "handsets": [],
+      "options": [
+        {
+          "label": "Fixed Line",
+          "status": "ACTIVE",
+          "isIncludedOption": true,
+          "isLineLevelProduct": false,
+          "productType": "internet",
+          "productInfo": {
+            "externalProductCode": "IOPT0104"
+          },
+          "chars": {
+            "broadbandUuids": "2345783244"
+          },
+          "rawOmapi": {
+            "product": {
+              "externalProductCode": "IOPT0104"
+            }
+          }
+        }
+      ],
+      "addressId": "9150757945313162202",
+      "productType": "internet",
+      "children": [],
+      "collectionStatus": "Green",
+      "showPlanUpgradeBanner": true
+    },
+    {
+      "id": "9162325822213090266",
+      "identifier": "INT000000697",
+      "accountNumber": "105217685",
+      "label": "All-Internet1",
+      "locationId": "9162325781813080985",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/INTF0201",
+      "status": "SUSPENDED",
+      "handsets": [],
+      "options": [
+        {
+          "label": "Fixed Line",
+          "status": "ACTIVE",
+          "isIncludedOption": true,
+          "isLineLevelProduct": false,
+          "productType": "internet"
+        }
+      ],
+      "addressId": "9150757945313162202",
+      "productType": "internet",
+      "children": [],
+      "collectionStatus": "Green",
+      "showPlanUpgradeBanner": true
+    }
+  ],
+  "collectionStatus": "Green",
+  "bundleType": "WIGO",
+  "showPlanUpgradeBanner": true
+}

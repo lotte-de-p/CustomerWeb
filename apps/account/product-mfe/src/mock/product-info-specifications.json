@@ -1,0 +1,91 @@
+[
+  {
+    "labelKey": "spec-fixedinternet-volume-download-fup",
+    "unit": "GB",
+    "value": "unlimited",
+    "visible": true,
+    "weight": "10",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Onbeperkt surfen"
+    },
+    "serviceType": "FIXED_INTERNET",
+    "id": "INTF0200",
+    "showUnit": false,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": true
+  },
+  {
+    "labelKey": "spec-fixedinternet-mailbox-volume",
+    "unit": "GB",
+    "value": "5",
+    "visible": true,
+    "weight": "20",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Per mailbox"
+    },
+    "serviceType": "FIXED_INTERNET",
+    "id": "INTF0200",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "spec-fixedinternet-speed-download",
+    "unit": "Mbps",
+    "value": "300",
+    "visible": true,
+    "weight": "40",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Downloadsnelheid: tot"
+    },
+    "serviceType": "FIXED_INTERNET",
+    "id": "INTF0200",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "spec-fixedinternet-speed-upload",
+    "unit": "Mbps",
+    "value": "20",
+    "visible": true,
+    "weight": "50",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Uploadsnelheid: tot"
+    },
+    "serviceType": "FIXED_INTERNET",
+    "id": "INTF0200",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "spec-fixedinternet-mailbox-included",
+    "value": "10",
+    "visible": true,
+    "weight": "60",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Mailboxen"
+    },
+    "serviceType": "FIXED_INTERNET",
+    "id": "INTF0200",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  }
+]

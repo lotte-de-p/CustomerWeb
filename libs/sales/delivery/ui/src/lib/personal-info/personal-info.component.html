@@ -1,0 +1,34 @@
+<div class="sales-display-info__content__row mb-0">
+  <i class="icon-md sales-display-info__content__row__icon icon-user"></i>
+  <p class="sales-display-info__content__row__description">
+    <span
+      [attr.data-cy]="'delivery-personal-info-full-name'"
+      class="mr--l sales-display-info__content__row__description__sub-title"
+      data-cs-mask="">
+      {{ personalInfo?.firstname }} {{ personalInfo?.lastname }}
+    </span>
+    <span class="space-nowrap"></span>
+  </p>
+</div>
+<div class="sales-display-info__content__row mb-0">
+  <i class="icon-md sales-display-info__content__row__icon icon-mobile"></i>
+  <p class="sales-display-info__content__row__description">
+    <span
+      [attr.data-cy]="'delivery-personal-info-mobile'"
+      class="mr--l sales-display-info__content__row__description__sub-title"
+      data-cs-mask=""
+      >{{ personalInfo?.mobile | phoneNumber }}</span
+    ><span class="space-nowrap"></span>
+  </p>
+</div>
+<div class="sales-display-info__content__row mb-0">
+  <i class="icon-email icon-md sales-display-info__content__row__icon"></i>
+  <p class="sales-display-info__content__row__description">
+    <span
+      [attr.data-cy]="'delivery-personal-info-email'"
+      class="mr--l sales-display-info__content__row__description__sub-title"
+      data-cs-mask=""
+      >{{ personalInfo?.email }}</span
+    ><span class="space-nowrap"></span>
+  </p>
+</div>

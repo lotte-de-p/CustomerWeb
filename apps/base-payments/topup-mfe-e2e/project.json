@@ -1,0 +1,28 @@
+{
+  "name": "topup-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/base-payments/topup-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/base-payments/topup-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "implicitDependencies": ["topup-mfe"]
+}

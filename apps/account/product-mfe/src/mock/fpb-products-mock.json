@@ -1,0 +1,3603 @@
+[
+  {
+    "children": [
+      {
+        "id": "9166480962313395291",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BSCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "BSCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Basic Communication",
+          "visible": true,
+          "weight": 570,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 20 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Basic Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "20"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165638576413172145",
+        "identifier": "015134216",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166480963213395291",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BSCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "BSCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Basic Communication",
+          "visible": true,
+          "weight": 570,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 20 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Basic Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "20"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165638576413172145",
+        "identifier": "015134213",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166480965313395291",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BSCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "BSCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Basic Communication",
+          "visible": true,
+          "weight": 570,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 20 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Basic Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "20"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165638576413172145",
+        "identifier": "015134217",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166480966213395291",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BSCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "BSCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Basic Communication",
+          "visible": true,
+          "weight": 570,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 20 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Basic Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "20"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165638576413172145",
+        "identifier": "015134214",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166480969213395291",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BSCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "BSCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Basic Communication",
+          "visible": true,
+          "weight": 570,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "basic-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 20 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Basic Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Basic Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "20"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165638576413172145",
+        "identifier": "015134215",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      }
+    ],
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "BSCM0100",
+      "isYupProduct": false,
+      "externalProductCode": "BSCM0100",
+      "productType": "BUNDLE",
+      "categories": [
+        "for-rules---basicsmart-communication",
+        "for-rules---b2b-fixed-and-bundles-category",
+        "for-rules---b2b-products-for-installation-fee",
+        "for-rules---technical-line-slostv-equipmentmbp-b2b",
+        "for-rules---offerings-can-be-returned",
+        "for-rules---bundles-mobile-fix--b2b",
+        "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+        "telephony-solutions",
+        "for-rules---fpb-top-products",
+        "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+        "post-paid-mobile",
+        "for-rules---b2b-products-with-requires-installation"
+      ],
+      "customerCategories": ["business", "production-test-business"],
+      "subCategory": {},
+      "labelKey": "Basic Communication",
+      "visible": true,
+      "weight": 570,
+      "services": [
+        {
+          "serviceType": "FIXED_CALLING",
+          "specifications": [
+            {
+              "labelKey": "voice",
+              "unit": "minutes",
+              "value": "1000",
+              "visible": true,
+              "weight": "10",
+              "productType": "TELEPHONE",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Stel zelf in hoe je je individuele oproepen beantwoordt: Gebruik je persoonlijke assistent, schakel je oproepen door en personaliseer je voicemail. "
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "CALL"
+          }
+        },
+        {
+          "serviceType": "FEATURE",
+          "specifications": [
+            {
+              "labelKey": "basic-flavour",
+              "visible": true,
+              "weight": "20",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+              }
+            },
+            {
+              "labelKey": "basic-flavour",
+              "visible": true,
+              "weight": "30",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Je klant haken niet meer in omwille van een bezettoon. "
+              }
+            },
+            {
+              "labelKey": "basic-flavour",
+              "visible": true,
+              "weight": "40",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Jij krijgt tot 20 vaste nummers."
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "FEATURE"
+          }
+        }
+      ],
+      "apps": [],
+      "localizedContent": [
+        {
+          "locale": "en",
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+        },
+        {
+          "locale": "nl",
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+        },
+        {
+          "locale": "fr",
+          "name": "Basic Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png"
+        }
+      ],
+      "shortDescription": {
+        "localizedContent": {
+          "locale": "nl",
+          "name": "Basic Communication"
+        }
+      },
+      "visibilityRules": {
+        "conditionalVisibility": false
+      },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "FMC",
+        "productSubGroup": "",
+        "productSegment": "TB",
+        "priceInclVat": 10,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": true,
+      "isExternalContentPack": "false",
+      "isEligibleForSettinglimits": false,
+      "isEligibleForAutoPause": false,
+      "isEligibleForPauseProfile": false,
+      "isFPBProduct": true,
+      "name": "Basic Communication",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/basic-communication.png",
+      "productConstituents": [
+        {
+          "type": "fixed_telephone",
+          "minCount": "1",
+          "maxCount": "20"
+        }
+      ]
+    },
+    "handsets": [],
+    "productType": "bundle",
+    "addressId": "9165638576413172145",
+    "identifier": "s300267",
+    "hasIncludedOptions": false,
+    "options": [],
+    "hasExtraOptions": false,
+    "accountNumber": 501297115,
+    "label": "Basic Communication",
+    "specUrl": "https://api.int.telenet.be/omapi/public/product/BSCM0100",
+    "status": "ACTIVE",
+    "price": {
+      "taxInclPrices": {}
+    },
+    "isUnderMove": false,
+    "locationId": "9166473871713726820",
+    "showModemUpgradeBanner": false
+  },
+  {
+    "children": [
+      {
+        "id": "9166481340213426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134225",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481340313426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134219",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481340413426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134221",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481343413426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134223",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481344313426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134218",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481346413426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134226",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481347213426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134224",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481347313426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134228",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481348013426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134220",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      },
+      {
+        "id": "9166481349413426028",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "SMCM0100",
+          "isYupProduct": false,
+          "externalProductCode": "SMCM0100",
+          "productType": "BUNDLE",
+          "categories": [
+            "for-rules---basicsmart-communication",
+            "for-rules---b2b-fixed-and-bundles-category",
+            "for-rules---b2b-products-for-installation-fee",
+            "for-rules---technical-line-slostv-equipmentmbp-b2b",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---bundles-mobile-fix--b2b",
+            "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+            "telephony-solutions",
+            "for-rules---fpb-top-products",
+            "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+            "post-paid-mobile",
+            "for-rules---b2b-products-with-requires-installation"
+          ],
+          "customerCategories": ["business", "production-test-business"],
+          "subCategory": {},
+          "labelKey": "Smart Communication",
+          "visible": true,
+          "weight": 580,
+          "services": [
+            {
+              "serviceType": "FIXED_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "voice",
+                  "unit": "minutes",
+                  "value": "1000",
+                  "visible": true,
+                  "weight": "10",
+                  "productType": "TELEPHONE",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "30",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Je klant haken niet meer in omwille van een bezettoon. "
+                  }
+                },
+                {
+                  "labelKey": "smart-flavour",
+                  "visible": true,
+                  "weight": "40",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Jij krijgt tot 23 vaste nummers."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Smart Communication",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+            }
+          ],
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "Smart Communication"
+            }
+          },
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "FMC",
+            "productSubGroup": "",
+            "productSegment": "TB",
+            "priceInclVat": 20,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": true,
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+          "productConstituents": [
+            {
+              "type": "fixed_telephone",
+              "minCount": "1",
+              "maxCount": "23"
+            }
+          ]
+        },
+        "handsets": [],
+        "productType": "telephone",
+        "addressId": "9165289653013737417",
+        "identifier": "015134227",
+        "hasIncludedOptions": false,
+        "options": [],
+        "hasExtraOptions": false,
+        "label": "VOIP Landline B2B",
+        "productSpec": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "LNLN0100",
+          "isYupProduct": false,
+          "externalProductCode": "LNLN0100",
+          "productType": "FIXED LINE",
+          "categories": [
+            "for-rules---b2b-products-for-mailbox",
+            "for-rules---offerings-can-be-returned",
+            "for-rules---voip-cpe-which-requiremight-require-installation"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "VOIP Landline B2B",
+          "visible": true,
+          "weight": 0,
+          "services": [],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "VOIP Landline",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOIP Vaste lijn",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Ligne fixe VOIP",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "20",
+          "isExternalContentPack": "false",
+          "isEligibleForSettinglimits": false,
+          "isEligibleForAutoPause": false,
+          "isEligibleForPauseProfile": false,
+          "isFPBProduct": false,
+          "name": "VOIP Vaste lijn",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voip-landline-b2b.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "bundleMaxlines": null
+      }
+    ],
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "SMCM0100",
+      "isYupProduct": false,
+      "externalProductCode": "SMCM0100",
+      "productType": "BUNDLE",
+      "categories": [
+        "for-rules---basicsmart-communication",
+        "for-rules---b2b-fixed-and-bundles-category",
+        "for-rules---b2b-products-for-installation-fee",
+        "for-rules---technical-line-slostv-equipmentmbp-b2b",
+        "for-rules---offerings-can-be-returned",
+        "for-rules---bundles-mobile-fix--b2b",
+        "for-rules---b2b-offerings-which-are-not-required-interventionrequired-installation",
+        "telephony-solutions",
+        "for-rules---fpb-top-products",
+        "for-rules---fpb-top-products-and-cpe-which-might-require-installation",
+        "post-paid-mobile",
+        "for-rules---b2b-products-with-requires-installation"
+      ],
+      "customerCategories": ["business", "production-test-business"],
+      "subCategory": {},
+      "labelKey": "Smart Communication",
+      "visible": true,
+      "weight": 580,
+      "services": [
+        {
+          "serviceType": "FIXED_CALLING",
+          "specifications": [
+            {
+              "labelKey": "voice",
+              "unit": "minutes",
+              "value": "1000",
+              "visible": true,
+              "weight": "10",
+              "productType": "TELEPHONE",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "CALL"
+          }
+        },
+        {
+          "serviceType": "FEATURE",
+          "specifications": [
+            {
+              "labelKey": "smart-flavour",
+              "visible": true,
+              "weight": "20",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+              }
+            },
+            {
+              "labelKey": "smart-flavour",
+              "visible": true,
+              "weight": "30",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Je klant haken niet meer in omwille van een bezettoon. "
+              }
+            },
+            {
+              "labelKey": "smart-flavour",
+              "visible": true,
+              "weight": "40",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Jij krijgt tot 23 vaste nummers."
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "FEATURE"
+          }
+        }
+      ],
+      "apps": [],
+      "localizedContent": [
+        {
+          "locale": "en",
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+        },
+        {
+          "locale": "nl",
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+        },
+        {
+          "locale": "fr",
+          "name": "Smart Communication",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png"
+        }
+      ],
+      "shortDescription": {
+        "localizedContent": {
+          "locale": "nl",
+          "name": "Smart Communication"
+        }
+      },
+      "visibilityRules": {
+        "conditionalVisibility": false
+      },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "FMC",
+        "productSubGroup": "",
+        "productSegment": "TB",
+        "priceInclVat": 20,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": true,
+      "isExternalContentPack": "false",
+      "isEligibleForSettinglimits": false,
+      "isEligibleForAutoPause": false,
+      "isEligibleForPauseProfile": false,
+      "isFPBProduct": true,
+      "name": "Smart Communication",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/smart-communication.png",
+      "productConstituents": [
+        {
+          "type": "fixed_telephone",
+          "minCount": "1",
+          "maxCount": "23"
+        }
+      ]
+    },
+    "handsets": [],
+    "productType": "bundle",
+    "addressId": "9165289653013737417",
+    "identifier": "s300268",
+    "hasIncludedOptions": false,
+    "options": [],
+    "hasExtraOptions": false,
+    "accountNumber": 501297115,
+    "label": "Smart Communication",
+    "specUrl": "https://api.int.telenet.be/omapi/public/product/SMCM0100",
+    "status": "ACTIVE",
+    "price": {
+      "taxInclPrices": {}
+    },
+    "isUnderMove": false,
+    "locationId": "9166481318513422777",
+    "showModemUpgradeBanner": false
+  }
+]

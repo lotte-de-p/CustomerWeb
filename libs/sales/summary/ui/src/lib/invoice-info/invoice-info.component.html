@@ -1,0 +1,23 @@
+<div>
+  <div class="sales-display-info">
+    <h5 class="m-0">{{ 'ng.sales-checkout.lbl.billing-address-overlay.your-address' | translate }}</h5>
+  </div>
+  <div
+    class="sales-display-info pb--l border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey">
+    <div class="sales-display-info__content">
+      <div class="sales-display-info__content__row mb--xs">
+        <i class="icon-md sales-display-info__content__row__icon icon-euro"></i>
+        <p
+          class="sales-display-info__content__row__description"
+          data-cs-mask=""
+          [attr.data-cy]="'invoice-info-address'">
+          {{ invoiceInfo?.street }} {{ invoiceInfo?.houseNumber }}
+          <ng-container *ngIf="invoiceInfo?.subHouseNumber">/{{ invoiceInfo?.subHouseNumber }}</ng-container>
+          <ng-container *ngIf="invoiceInfo?.box">/{{ invoiceInfo?.box }}</ng-container
+          >,<br />
+          {{ invoiceInfo?.postalCode }} {{ invoiceInfo?.municipality }}, {{ invoiceInfo?.country }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

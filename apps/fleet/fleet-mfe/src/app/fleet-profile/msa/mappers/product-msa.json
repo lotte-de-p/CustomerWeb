@@ -1,0 +1,1264 @@
+[
+  {
+    "masterAgreementName": "BALCAEN ET FILS 1468",
+    "eligibleOffers": [
+      {
+        "label": "Mobile Contact +",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLC0002",
+        "price": {
+          "currency": "Euro",
+          "value": "20.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 400 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0005",
+            "price": {
+              "currency": "Euro",
+              "value": "16.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 1000 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0006",
+            "price": {
+              "currency": "Euro",
+              "value": "32.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 180 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 60 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Start",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLS0000",
+        "price": {
+          "currency": "Euro",
+          "value": "10.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Voice National 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0003",
+            "price": {
+              "currency": "Euro",
+              "value": "7.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice National 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVNS0100",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 400 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0005",
+            "price": {
+              "currency": "Euro",
+              "value": "16.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 1000 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0006",
+            "price": {
+              "currency": "Euro",
+              "value": "32.00"
+            }
+          },
+          {
+            "label": "Voice National 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0004",
+            "price": {
+              "currency": "Euro",
+              "value": "9.00"
+            }
+          },
+          {
+            "label": "Voice National 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVNM0250",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 180 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 60 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice National Unlimited",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVUN9999",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 8",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0008",
+        "price": {
+          "currency": "Euro",
+          "value": "8.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 28",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0028",
+        "price": {
+          "currency": "Euro",
+          "value": "28.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 4",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0004",
+        "price": {
+          "currency": "Euro",
+          "value": "4.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Limitless",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLU0002",
+        "price": {
+          "currency": "Euro",
+          "value": "33.00"
+        },
+        "options": [
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 400 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0005",
+            "price": {
+              "currency": "Euro",
+              "value": "16.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 1000 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0006",
+            "price": {
+              "currency": "Euro",
+              "value": "32.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 180 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 60 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile World",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLW0000",
+        "price": {
+          "currency": "Euro",
+          "value": "60.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 12",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0012",
+        "price": {
+          "currency": "Euro",
+          "value": "12.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 50",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0050",
+        "price": {
+          "currency": "Euro",
+          "value": "50.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile 1",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLE0001",
+        "price": {
+          "currency": "Euro",
+          "value": "5.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Voice National 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0003",
+            "price": {
+              "currency": "Euro",
+              "value": "7.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice National 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVNS0100",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 400 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0005",
+            "price": {
+              "currency": "Euro",
+              "value": "16.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 1000 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0006",
+            "price": {
+              "currency": "Euro",
+              "value": "32.00"
+            }
+          },
+          {
+            "label": "Voice National 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0004",
+            "price": {
+              "currency": "Euro",
+              "value": "9.00"
+            }
+          },
+          {
+            "label": "Voice National 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVNM0250",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 180 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Europe plus 60 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice National Unlimited",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FVUN9999",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Data 20",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/FDATA0020",
+        "price": {
+          "currency": "Euro",
+          "value": "20.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Mobile Europe",
+        "specurl": "https://api.trg.telenet.be/omapi/public/product/BFLE0002",
+        "price": {
+          "currency": "Euro",
+          "value": "45.00"
+        },
+        "options": [
+          {
+            "label": "Data National 2 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNM0002",
+            "price": {
+              "currency": "Euro",
+              "value": "8.00"
+            }
+          },
+          {
+            "label": "Data National 5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNL0005",
+            "price": {
+              "currency": "Euro",
+              "value": "15.00"
+            }
+          },
+          {
+            "label": "Data National 1 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FDNS0001",
+            "price": {
+              "currency": "Euro",
+              "value": "5.00"
+            }
+          },
+          {
+            "label": "Data Top 24 3 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/IRXL2403",
+            "price": {
+              "currency": "Euro",
+              "value": "75.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 550 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0025",
+            "price": {
+              "currency": "Euro",
+              "value": "30.00"
+            }
+          },
+          {
+            "label": "Data Top 24 250 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0250",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Data Top 24 600 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW0600",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Data Top 24 1,5 GB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/INTW1500",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          },
+          {
+            "label": "Data National 500 MB",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0002",
+            "price": {
+              "currency": "Euro",
+              "value": "3.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 250 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "20.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 100 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/VWSM0100",
+            "price": {
+              "currency": "Euro",
+              "value": "10.00"
+            }
+          },
+          {
+            "label": "Voice Top 24 800 min",
+            "specurl": "https://api.trg.telenet.be/omapi/public/product/FLOB0026",
+            "price": {
+              "currency": "Euro",
+              "value": "40.00"
+            }
+          }
+        ]
+      }
+    ],
+    "groupBundles": []
+  }
+]

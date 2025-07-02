@@ -1,0 +1,99 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.sonar:npm-libs:
+  stage: build
+  image:
+    name: $SONAR_IMAGE
+    entrypoint: ['']
+  dependencies:
+    - prepare:version
+    - test:npm-libs
+  artifacts:
+    paths:
+      - nyc-merged-coverage
+      - coverage-final
+      - coverage
+    when: always
+    expire_in: 2 days
+  variables:
+    SONAR_USER_HOME: '${CI_PROJECT_DIR}/.sonar' # Defines the location of the analysis task cache
+    GIT_DEPTH: '0' # Tells git to fetch all the branches of the project, required by the analysis tas
+  needs:
+    - test:npm-libs #the tests must be executed first in order to get the coverage
+    - prepare:version
+  cache:
+    - key:
+        files:
+          - package.json
+          - package-lock.json
+      paths:
+        - node_modules/
+        - .npm/
+      policy: pull
+    - key: '${CI_JOB_NAME}'
+      paths:
+        - .sonar/cache
+  before_script:
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  script:
+    - >
+      node ./tools/scripts/sonar-for-tagged-projects.js
+      --tags="build:npm-library"
+      -Dsonar.projectKey=customer-web-monorepo:libs
+      -Dsonar.projectName=monorepo-libs
+      -Dsonar.projectVersion=${VERSION}
+      -Dsonar.javascript.lcov.reportPaths=./nyc-merged-coverage/lcov.info
+  allow_failure: false
+  only: !reference [.allowed-branches]
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.sonar:app:
+  stage: build
+  image:
+    name: $SONAR_IMAGE
+    entrypoint: ['']
+  variables:
+    SONAR_USER_HOME: '${CI_PROJECT_DIR}/.sonar' # Defines the location of the analysis task cache
+    GIT_DEPTH: '0' # Tells git to fetch all the branches of the project, required by the analysis tas
+  needs:
+    - e2e:app #the tests must be executed first in order to get the coverage
+    - test:app
+    - component-test:app
+  artifacts:
+    paths:
+      - nyc-merged-coverage
+      - coverage-final
+      - coverage
+    when: always
+    expire_in: 2 days
+  cache:
+    - key:
+        files:
+          - package.json
+          - package-lock.json
+      paths:
+        - node_modules/
+        - .npm/
+      policy: pull
+    - key: '${CI_JOB_NAME}'
+      paths:
+        - .sonar/cache
+  before_script:
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  script:
+    - >
+      node ./tools/scripts/sonar-for-tagged-projects.js
+      --tags="scope:${CLIENT_PROJECT}"
+      -Dsonar.projectKey=customer-web-monorepo:apps:${CLIENT_PROJECT}
+      -Dsonar.projectName=customer-web-monorepo:apps:${CLIENT_PROJECT}
+      -Dsonar.javascript.lcov.reportPaths=./nyc-merged-coverage/lcov.info,**/playwright/**/lcov.info
+      -Dsonar.projectVersion=${CI_PIPELINE_ID}
+  allow_failure: false
+  rules:
+    - when: always
+  retry:
+    max: 2
+    when: runner_system_failure

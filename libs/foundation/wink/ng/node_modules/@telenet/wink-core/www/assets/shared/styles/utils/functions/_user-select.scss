@@ -1,0 +1,27 @@
+@mixin user-select-none {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+// shared class but should it have a separate file?
+
+@mixin state-focus-outline {
+  outline-offset: 0.1rem;
+  outline: 0.2rem solid var(--semantic-color-border-focus);
+  border-radius: 0.1rem;
+}
+
+@mixin state-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

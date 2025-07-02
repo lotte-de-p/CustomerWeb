@@ -1,0 +1,8 @@
+<div id="sticky-sales-cart__section">
+  <div class="sales-cart-row--shadow-review">
+    @for (orderItem of orderItems$ | async; track orderItem.name) {
+      <tg-order-configurator-order-ui-order-item-with-discount
+        [orderItem]="orderItem"></tg-order-configurator-order-ui-order-item-with-discount>
+    }
+  </div>
+</div>

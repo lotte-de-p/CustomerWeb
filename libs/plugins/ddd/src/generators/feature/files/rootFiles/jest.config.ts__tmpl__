@@ -1,0 +1,5 @@
+export default {
+  displayName: '<%= projectName %>',
+  preset: '<%= offsetFromRoot %>jest.preset.js',
+  coverageDirectory: '<%= offsetFromRoot %>coverage/<%= featureRootPath %>',
+};

@@ -1,0 +1,51 @@
+[
+  {
+    "description": "19",
+    "identifier": "048707123",
+    "label": "Based on you 20",
+    "activationDate": "2018-11-19T00:00:00+01:00",
+    "addressId": "9152563554313410856",
+    "locationId": "9151527556651707562",
+    "status": "Active",
+    "userPIDLinked": false,
+    "isDataOnlyPlan": false,
+    "productType": "mobile",
+    "msisdn": "048707123",
+    "address": {
+      "street": "New Krankenvelden",
+      "country": "Belgium",
+      "municipality": "Mechelen",
+      "addressId": 12345,
+      "type": "Apartment",
+      "boxNumber": "13413432423",
+      "floorNumber": "1",
+      "houseNumber": "1",
+      "postalCode": "2800",
+      "subHouseNumber": "1C",
+      "tinaLocationId": "22"
+    }
+  },
+  {
+    "description": "20",
+    "identifier": "DTV170345",
+    "label": "Sipadan",
+    "activationDate": "2018-11-20T00:00:00+01:00",
+    "addressId": "9152563554313410855",
+    "locationId": "9151527556651707562",
+    "status": "Active",
+    "productType": "dtv",
+    "address": {
+      "street": "Krankenvelden",
+      "country": "Belgium",
+      "municipality": "Mechelen",
+      "addressId": 12345,
+      "type": "Apartment",
+      "boxNumber": "13413432423",
+      "floorNumber": "1",
+      "houseNumber": "1",
+      "postalCode": "2800",
+      "subHouseNumber": "1C",
+      "tinaLocationId": "23"
+    }
+  }
+]

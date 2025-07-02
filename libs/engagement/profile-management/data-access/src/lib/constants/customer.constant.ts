@@ -1,0 +1,15 @@
+export const CustomerConstants = {
+  MESSAGE_GROUP: 'profile-management',
+  EMPTY: '',
+  API_VERSION_V1: 'v1',
+  API_VERSION_V2: 'v2',
+  CUSTOMER_SERVICE_PREFIX: '/public/api/customer-service/',
+  CLIENT_SERVICE_PREFIX: '/public/api/profile-management-cs/',
+  ENDPOINT_IDENTITY: '/identities',
+  ENDPOINT_PROFILE_PICTURE: '/profile-picture',
+  ENDPOINT_SOCIAL_LOGINS: '/idps',
+  ENDPOINT_UNLINK_SOCIAL_LOGIN: '/idp',
+  ENDPOINT_AUTHENTICATORS: '/authenticators',
+  ENDPOINT_2FA: '/2fa',
+  NO: 'No',
+} as const;

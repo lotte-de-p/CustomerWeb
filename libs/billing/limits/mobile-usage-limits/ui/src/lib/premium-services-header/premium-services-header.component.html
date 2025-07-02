@@ -1,0 +1,9 @@
+<div [attr.data-cy]="'premium-services-header'">
+  <h4 class="heading--nomargin" [attr.data-cy]="'premium-services-title'">
+    @if (isMember) {
+      {{ 'ng.mobile-usage-limits.title.member-premium-services-limit' | translate }}
+    } @else {
+      {{ 'ng.mobile-usage-limits.title.premium-services-limit' | translate }}
+    }
+  </h4>
+</div>

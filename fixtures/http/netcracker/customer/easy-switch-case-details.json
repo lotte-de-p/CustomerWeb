@@ -1,0 +1,43 @@
+{
+  "salesOrderCaseSummary": [
+    {
+      "salesOrderId": "9162713974613877635",
+      "addressId": "12211331",
+      "esEligbilbleServices": [
+        {
+          "name": "Internet",
+          "bpiId": "9162714011213879217"
+        },
+        {
+          "name": "TV",
+          "bpiId": "9162714018113879217"
+        }
+      ],
+      "easySwitchCaseInfo": [
+        {
+          "easySwitchSummaryInfo": [
+            {
+              "emailId": "test@staff.telenet.be",
+              "donorCustNumber": "98765432",
+              "deactivationNumbers": [],
+              "deactivationDate": "20220207T000000.000 GMT",
+              "easySwitchId": "23456789",
+              "ponrPassed": false,
+              "esLinkedProductInfo": [
+                {
+                  "name": "Internet",
+                  "bpiId": "9162714018113879217"
+                }
+              ],
+              "portInNumbers": [],
+              "operatorName": "Proximus"
+            }
+          ],
+          "id": "S-57604",
+          "status": "Pending-Completion"
+        }
+      ],
+      "esEligibilityFlag": true
+    }
+  ]
+}

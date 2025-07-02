@@ -1,0 +1,17 @@
+{
+  "name": "sales-events-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/events/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/events/data-access/**/*.ts", "libs/sales/events/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:sales-mfe"]
+}

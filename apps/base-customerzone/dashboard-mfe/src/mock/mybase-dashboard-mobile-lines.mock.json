@@ -1,0 +1,20 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/mobile/lines",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "default": true,
+      "msisdn": "0480031261",
+      "productName": "BASE 29",
+      "dataOnly": false
+    },
+    {
+      "default": false,
+      "msisdn": "0480031269",
+      "productName": "BASE 30",
+      "dataOnly": true,
+      "simAlias": "Sim Alias"
+    }
+  ]
+}

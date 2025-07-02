@@ -1,0 +1,16 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/tv",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "productIdentifier": "BDTV050002513",
+    "actions": [
+      "manage-content-packs",
+      "watch-tv-online",
+      "add-remove-tv-box",
+      "manage-your-device",
+      "product-overview",
+      "return-device"
+    ]
+  }
+}

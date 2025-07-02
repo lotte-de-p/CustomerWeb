@@ -1,0 +1,118 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": [
+      "es2020",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@sales-mfe/*": [
+        "apps/sales/sales-mfe/src/*"
+      ],
+      "@sales/address-form-field/data-access": ["libs/sales/address-form-field/data-access/src/index.ts"],
+      "@sales/address-form-field/feat-address-form-field": [
+        "libs/sales/address-form-field/feat-address-form-field/src/index.ts"
+      ],
+      "@sales/confirmation/feat-confirmation": ["libs/sales/confirmation/feat-confirmation/src/index.ts"],
+      "@sales/customer-registration/data-access": ["libs/sales/customer-registration/data-access/src/index.ts"],
+      "@sales/customer-registration/feat-personal-details": [
+        "libs/sales/customer-registration/feat-personal-details/src/index.ts"
+      ],
+      "@sales/delivery/data-access": ["libs/sales/delivery/data-access/src/index.ts"],
+      "@sales/delivery/feat-delivery": ["libs/sales/delivery/feat-delivery/src/index.ts"],
+      "@sales/delivery/ui": ["libs/sales/delivery/ui/src/index.ts"],
+      "@sales/error/data-access": ["libs/sales/error/data-access/src/index.ts"],
+      "@sales/error/feat-error": ["libs/sales/error/feat-error/src/index.ts"],
+      "@sales/etf/data-access": ["libs/sales/etf/data-access/src/index.ts"],
+      "@sales/etf/feat-etf": ["libs/sales/etf/feat-etf/src/index.ts"],
+      "@sales/etf/ui": ["libs/sales/etf/ui/src/index.ts"],
+      "@sales/shared/address/data-access": ["libs/sales/shared/address/data-access/src/index.ts"],
+      "@sales/events/data-access": ["libs/sales/events/data-access/src/index.ts"],
+      "@sales/events/feat-analytics": ["libs/sales/events/feat-analytics/src/index.ts"],
+      "@sales/fixed-line/feat-fixed-line": ["libs/sales/fixed-line/feat-fixed-line/src/index.ts"],
+      "@sales/goliath/data-access": ["libs/sales/goliath/data-access/src/index.ts"],
+      "@sales/hardware-checkout/data-access": ["libs/sales/hardware-checkout/data-access/src/index.ts"],
+      "@sales/internet-checkout/data-access": ["libs/sales/internet-checkout/data-access/src/index.ts"],
+      "@sales/mobile-lines/data-access": ["libs/sales/mobile-lines/data-access/src/index.ts"],
+      "@sales/mobile-lines/feat-mobile-lines": ["libs/sales/mobile-lines/feat-mobile-lines/src/index.ts"],
+      "@sales/product-finder/data-access": ["libs/sales/product-finder/data-access/src/index.ts"],
+      "@sales/product-finder/feat-household": ["libs/sales/product-finder/feat-household/src/index.ts"],
+      "@sales/product-finder/feat-internet-usage": ["libs/sales/product-finder/feat-internet-usage/src/index.ts"],
+      "@sales/product-finder/feat-intro": ["libs/sales/product-finder/feat-intro/src/index.ts"],
+      "@sales/product-finder/feat-mobile-usage": ["libs/sales/product-finder/feat-mobile-usage/src/index.ts"],
+      "@sales/product-finder/feat-number-of-sims": ["libs/sales/product-finder/feat-number-of-sims/src/index.ts"],
+      "@sales/product-finder/feat-preference": ["libs/sales/product-finder/feat-preference/src/index.ts"],
+      "@sales/product-finder/feat-results-screen": ["libs/sales/product-finder/feat-results-screen/src/index.ts"],
+      "@sales/product-finder/feat-stepper": ["libs/sales/product-finder/feat-stepper/src/index.ts"],
+      "@sales/product-finder/feat-tv-channels": ["libs/sales/product-finder/feat-tv-channels/src/index.ts"],
+      "@sales/product-finder/feat-tv-experience": ["libs/sales/product-finder/feat-tv-experience/src/index.ts"],
+      "@sales/products-details/data-access": ["libs/sales/products-details/data-access/src/index.ts"],
+      "@sales/products-details/feat-products-details": [
+        "libs/sales/products-details/feat-products-details/src/index.ts"
+      ],
+      "@sales/shared/data-access": ["libs/sales/shared/data-access/src/index.ts"],
+      "@sales/shared/feature-sales-stepper": ["libs/sales/shared/feature-sales-stepper/src/index.ts"],
+      "@sales/shared/ingenico-form": ["libs/sales/shared/feat-ingenico-form/src/index.ts"],
+      "@sales/shared/ui": ["libs/sales/shared/ui/src/index.ts"],
+      "@sales/shared/util": ["libs/sales/shared/util/src/index.ts"],
+      "@sales/summary/data-access": ["libs/sales/summary/data-access/src/index.ts"],
+      "@sales/summary/feat-summary": ["libs/sales/summary/feat-summary/src/index.ts"],
+      "@sales/summary/ui": ["libs/sales/summary/ui/src/index.ts"],
+      "@sales/thank-you/data-access": ["libs/sales/thank-you/data-access/src/index.ts"],
+      "@sales/thank-you/feat-thank-you": ["libs/sales/thank-you/feat-thank-you/src/index.ts"],
+      "@telenet/ng-lib-account": ["libs/shared/account/src/index.ts"],
+      "@telenet/ng-lib-config": ["libs/shared/config/src/index.ts"],
+      "@telenet/ng-lib-datalayer": ["libs/shared/datalayer/src/index.ts"],
+      "@telenet/ng-lib-form": ["libs/shared/form/src/index.ts"],
+      "@telenet/ng-lib-layout": ["libs/shared/layout/src/index.ts"],
+      "@telenet/ng-lib-message": ["libs/shared/message/src/index.ts"],
+      "@telenet/ng-lib-ocapi": ["libs/shared/ocapi/src/index.ts"],
+      "@telenet/ng-lib-omapi": ["libs/shared/omapi/src/index.ts"],
+      "@telenet/ng-lib-omapi-query": ["libs/shared/omapi-query/src/index.ts"],
+      "@telenet/ng-lib-page": ["libs/shared/page/src/index.ts"],
+      "@telenet/ng-lib-personalisation": ["libs/shared/personalisation/src/index.ts"],
+      "@telenet/ng-lib-shared": ["libs/shared/shared/src/index.ts"],
+      "@telenet/ng-lib-sofy": ["libs/shared/sofy/src/index.ts"],
+      "@telenet/ng-lib-step-flow": ["libs/shared/step-flow/src/index.ts"],
+      "@telenet/wink-core/loader": ["libs/foundation/wink/dist/loader/index.js"],
+      "@telenet/wink-core/shared": ["libs/foundation/wink/core/src/assets/shared/index.ts"],
+      "factory.ts": ["node_modules/factory.ts/lib/index.d.ts"],
+      "@tools/e2e": ["tools/e2e/index.ts"],
+      "@telenet/wink-ng": ["libs/foundation/wink/ng/src/index.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../sales-mfe/**/*.ts",
+    "../sales-mfe/**/*.js",
+    "../../../libs/sales/**/*.ts",
+    "../../../libs/sales/**/*.js"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

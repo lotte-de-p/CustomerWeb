@@ -1,0 +1,56 @@
+<div *ngIf="orderItemWithDiscount" class="mobile-line mobile-line--step">
+  <div class="tracker--step__content">
+    <div class="display--block display--flex--md justify-content--between">
+      <div class="header-accordion--title">
+        <div class="header-accordion--title__text">
+          <div class="text-flow text-flow--body text-weight--g">
+            {{ orderItemWithDiscount.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="m-0 mt-20" />
+  </div>
+  <div class="tracker--step__content mb--m">
+    <div class="text--xm font-weight--bold"></div>
+    <div class="mt-20">
+      <div class="text--s text-weight--r mt--l">{{ 'ng.sales-checkout.text.etf-buy-off-message' | translate }}</div>
+      <div class="form-group mt-30">
+        <div class="mb--m">
+          <div class="form__radio--button-group">
+            <div class="form__radio--button mobile-lines__form-button-height">
+              <input
+                class="form__radio--button__input"
+                id="btn-yes"
+                name="radio-buttons-group"
+                type="radio"
+                value="yes" />
+              <label
+                (click)="setOrderItemTerminationState(orderItemWithDiscount, true)"
+                [attr.data-cy]="'feat-etf-order-item-etf-yes-button'"
+                class="form__radio--button__label text-weight--g"
+                for="btn-yes">
+                {{ 'ng.sales-checkout.lbl.etf-terminate-contract-yes' | translate }}
+              </label>
+            </div>
+            <div class="form__radio--button mobile-lines__form-button-height">
+              <input
+                class="form__radio--button__input"
+                id="btn-no"
+                name="radio-buttons-group"
+                type="radio"
+                value="no" />
+              <label
+                (click)="setOrderItemTerminationState(orderItemWithDiscount, false)"
+                [attr.data-cy]="'feat-etf-order-item-etf-no-button'"
+                class="form__radio--button__label text-weight--g"
+                for="btn-no">
+                {{ 'ng.sales-checkout.lbl.etf-terminate-contract-no' | translate }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()" id="appointment-overview">
+  <app-message class="text-flow text-flow--h5" [messageGroupName]="messageGroupName"></app-message>
+  <ng-template #appointmentsOverviewSkeleton>
+    <tg-appointment-skeleton></tg-appointment-skeleton>
+  </ng-template>
+  <ng-container *ngIf="appointmentDetailsLoaded$ | async; else appointmentsOverviewSkeleton">
+    <div
+      *ngrxLet="{
+        outdoorAppointment: outdoorAppointments$,
+        appointments: appointments$
+      } as vm"
+      class="appointments care--appointments"
+      [ngClass]="{ 'px--m px--n--md': isBaseCustomer, 'px--xxxs': !isBaseCustomer }">
+      <div *ngrxLet="error$; let error" class="row m-0">
+        <div *ngIf="!error && vm.appointments?.length" class="col-12 p--n">
+          <tg-appointment-selector [isBaseCustomer]="isBaseCustomer"></tg-appointment-selector>
+        </div>
+
+        <div
+          class="col-12 px--n py--m"
+          *ngIf="!error && !vm.appointments?.length && !vm.outdoorAppointment?.locationIds?.length">
+          <div class="notification notification--info" #noAppointmentsNotification>
+            <span class="icon icon-information-shape info"></span>
+            <div>
+              <p
+                [attr.data-cy]="'noAppointments'"
+                [innerHTML]="'ng.appointments.info.appointments-not-available' | translate"></p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          *ngIf="vm.outdoorAppointment?.locationIds?.length && !vm.appointments?.length"
+          class="notification notification--info col-12 my--m"
+          [attr.data-cy]="'outdoor-appointment'">
+          <span class="icon icon-information-shape info" data-cy="notification-info-box-icon"></span>
+          <div>
+            <div [innerHTML]="'ng.appointments.details-outdoor-appointment' | translate"></div>
+          </div>
+        </div>
+
+        <div class="col-12 p--n">
+          <tg-appointment-details
+            [isMaster]="isMaster"
+            [allowFiberRepairChanges]="allowFiberRepairChanges"
+            [usefulInformationInstallUrl]="usefulInformationInstallUrl"
+            [usefulInformationMoveUrl]="usefulInformationMoveUrl"
+            [usefulInformationRepairUrl]="usefulInformationRepairUrl"
+            [postInstallationInstructionInstallUrl]="postInstallationInstructionInstallUrl"
+            [postInstallationInstructionMoveUrl]="postInstallationInstructionMoveUrl"
+            [postInstallationInstructionRepairUrl]="postInstallationInstructionRepairUrl"
+            [usefulInformationFiberInstallUrl]="usefulInformationFiberInstallUrl"
+            [usefulInformationFiberMoveUrl]="usefulInformationFiberMoveUrl"
+            [usefulInformationFiberRepairUrl]="usefulInformationFiberRepairUrl"
+            [postInstallationInstructionFiberInstallUrl]="postInstallationInstructionFiberInstallUrl"
+            [postInstallationInstructionFiberMoveUrl]="postInstallationInstructionFiberMoveUrl"
+            [postInstallationInstructionFiberRepairUrl]="postInstallationInstructionFiberRepairUrl"
+            [messageGroupName]="messageGroupName">
+          </tg-appointment-details>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</tg-login>

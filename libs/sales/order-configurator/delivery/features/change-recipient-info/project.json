@@ -1,0 +1,26 @@
+{
+  "name": "sales-order-configurator-delivery-feat-change-recipient-info",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/order-configurator/delivery/features/change-recipient-info/src",
+  "prefix": "sales-order-configurator-delivery",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/delivery/features/change-recipient-info/**/*.ts",
+          "libs/sales/order-configurator/delivery/features/change-recipient-info/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:order-configurator-mfe"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "sales-appointment-data-access",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/appointment/data-access/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/appointment/data-access/**/*.ts",
+          "libs/sales/appointment/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:sales-appointment", "scope:sales-mfe"]
+}

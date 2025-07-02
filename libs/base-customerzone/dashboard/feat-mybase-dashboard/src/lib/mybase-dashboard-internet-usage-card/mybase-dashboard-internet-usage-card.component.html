@@ -1,0 +1,138 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white mt--l--md"
+  [attr.data-cy]="'mybase-dashboard-internet-usage-card'">
+  <div
+    (click)="redirectToUsage(smoothSurfing)"
+    class="display--flex justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m"
+    [ngClass]="{ 'cursor--pointer': smoothSurfing }">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">
+        {{ 'ng.mybase-dashboard.internet-usage-card.title' | translate }}
+      </span>
+    </div>
+    @if (smoothSurfing) {
+      <i
+        class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override display--flex align-items--center"
+        [attr.data-cy]="'mybase-dashboard-internet-usage-card-header-icon'"></i>
+    }
+  </div>
+  <!-- pt--xxxs -->
+  <div [attr.data-cy]="'mybase-dashboard-usage-card-internet'">
+    @if (smoothSurfing) {
+      <div
+        (click)="redirectToUsage(smoothSurfing)"
+        class="mybase-dashboard--card--content cursor--pointer"
+        [attr.data-cy]="'mybase-dashboard-internet-usage-card-status-ok'">
+        <div class="display--flex flex-direction--column align-items--center">
+          <img
+            appMybaseDashboardImageSrcInterceptor
+            class="hide-until-md"
+            src="/assets/internet-usage.svg"
+            [moduleId]="'tg-mybase-dashboard'"
+            [attr.data-cy]="'mybase-dashboard-internet-usage-card-smooth-surfing'" />
+          <img
+            appMybaseDashboardImageSrcInterceptor
+            class="hide-from-md"
+            src="/assets/internet-usage-mobile-view.svg"
+            [moduleId]="'tg-mybase-dashboard'"
+            [attr.data-cy]="'mybase-dashboard-internet-usage-card-smooth-surfing'" />
+          <div class="mybase-dashboard--card--content--status mt--xxs">
+            <div class="heading--6 m--n">
+              {{ 'ng.mybase-dashboard.usages.smooth-surfing' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    } @else {
+      @for (usage of internetUsage; track $index; let first = $first) {
+        <div
+          class="mybase-dashboard--card--content display--flex justify-content--between"
+          [ngClass]="{ 'pt--xs': !first }">
+          <div
+            class="display--flex flex-grow cursor--pointer--hover overflow-hidden-flex"
+            (click)="redirectToUsage(true, usage.productIdentifier)">
+            <div class="mybase-dashboard--card--content--status overflow-hidden-flex">
+              <div class="display--flex">
+                @switch (usage.usageStatus) {
+                  @case ('LIMIT_ALMOST_REACHED') {
+                    <i
+                      class="icon icon-alert-shape-filled color-orange icon-md icon-no-size-override"
+                      [attr.data-cy]="'mybase-dashboard-internet-usage-card-limit-almost-reached'"></i>
+                    <div class="heading--6 mt--n ml--xs overflow-hidden-flex">
+                      <div class="display--flex justify-content--between">
+                        <span>{{ 'ng.mybase-dashboard.limit-almost-reached-internet' | translate }}</span>
+                        <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+                      </div>
+                      <div class="font--body-small color-shade_72 mt--xxxs text-ellipsis" data-cs-mask>
+                        {{ usage.productName }}
+                        @if (internetUsage.length > 1 && usage.address) {
+                          <span [attr.data-cy]="'mybase-dashboard-internet-usage-card-limit-almost-reached-multiple'"
+                            >-
+                            {{
+                              getCompleteAddress(
+                                usage.address.street,
+                                usage.address.houseNumber,
+                                usage.address.subHouseNumber,
+                                usage.address.boxNumber
+                              )
+                            }}
+                            {{ usage.address.postalCode }} {{ usage.address.municipality }},
+                            {{ usage.address.country }}</span
+                          >
+                        }
+                      </div>
+                    </div>
+                  }
+                  @case ('LIMIT_EXCEEDED') {
+                    <i
+                      class="icon icon-error-shape-filled color-red icon-md icon-no-size-override"
+                      [attr.data-cy]="'mybase-dashboard-internet-usage-card-limit-exceeded'"></i>
+                    <div class="heading--6 mt--n ml--xs overflow-hidden-flex">
+                      <div class="display--flex justify-content--between">
+                        <span>{{ 'ng.mybase-dashboard.limit-exceeded-internet' | translate }}</span>
+                        <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+                      </div>
+                      <div class="font--body-small color-shade_72 mt--xxxs text-ellipsis" data-cs-mask>
+                        {{ usage.productName }}
+                        @if (internetUsage.length > 1 && usage.address) {
+                          <span [attr.data-cy]="'mybase-dashboard-internet-usage-card-limit-exceeded-multiple'"
+                            >-
+                            {{
+                              getCompleteAddress(
+                                usage.address.street,
+                                usage.address.houseNumber,
+                                usage.address.subHouseNumber,
+                                usage.address.boxNumber
+                              )
+                            }}
+                            {{ usage.address.postalCode }} {{ usage.address.municipality }},
+                            {{ usage.address.country }}</span
+                          >
+                        }
+                      </div>
+                    </div>
+                  }
+
+                  @case ('LIMIT_EXCEEDED_SLOW_SPEED') {
+                    <i
+                      class="icon icon-error-shape-filled color-red icon-md icon-no-size-override"
+                      [attr.data-cy]="'mybase-dashboard-internet-usage-card-limit-exceeded'"></i>
+                    <div class="heading--6 mt--n ml--xs overflow-hidden-flex">
+                      <div class="display--flex justify-content--between">
+                        <span>{{ 'ng.mybase-dashboard.slow-speed-internet' | translate }}</span>
+                        <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+                      </div>
+                      <div class="font--body-small color-shade_72">
+                        {{ usage.productName }}
+                      </div>
+                    </div>
+                  }
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>

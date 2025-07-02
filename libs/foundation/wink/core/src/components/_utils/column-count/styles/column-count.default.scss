@@ -1,0 +1,23 @@
+:host {
+  display: contents;
+
+  .cols {
+    column-count: 4;
+    column-width: rem(27);
+    column-gap: var-rem(--semantic-spacing-lg);
+
+    &.cols-count {
+      @for $column-count from 1 through 3 {
+        &-#{$column-count} {
+          column-count: #{$column-count};
+        }
+      }
+    }
+
+    ::slotted(*) {
+      display: block;
+      break-inside: avoid;
+      margin-bottom: var-rem(--semantic-spacing-lg);
+    }
+  }
+}

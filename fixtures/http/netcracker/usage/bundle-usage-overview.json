@@ -1,0 +1,18 @@
+{
+  "usage": [
+    {
+      "productType": "internet",
+      "used": "50",
+      "totalAvailable": "100",
+      "usedPercentage": 50,
+      "unitType": "GB"
+    },
+    {
+      "productType": "mobile",
+      "used": "50",
+      "totalAvailable": "100",
+      "usedPercentage": 50,
+      "unitType": "GB"
+    }
+  ]
+}

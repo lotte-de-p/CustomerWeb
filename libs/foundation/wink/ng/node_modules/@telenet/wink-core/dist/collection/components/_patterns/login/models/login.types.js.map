@@ -1,0 +1,1 @@
+{"version":3,"file":"login.types.js","sourceRoot":"","sources":["../../../../../../../../../../src/components/_patterns/login/models/login.types.tsx"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,kBAAkB,GAAG;IAChC,KAAK,EAAE,OAAO;IACd,KAAK,EAAE,OAAO;CACN,CAAC","sourcesContent":["export const LOGIN_ALTERNATIVES = {\n  itsme: 'itsme',\n  gmail: 'gmail',\n} as const;\n"]}

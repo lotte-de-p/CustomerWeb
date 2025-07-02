@@ -1,0 +1,20 @@
+{
+  "name": "entertainment-management-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/account/entertainment-management/data-access/src",
+  "prefix": "tg-entertainment-management",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/account/entertainment-management/data-access/**/*.ts",
+          "libs/account/entertainment-management/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:entertainment-management", "scope:entertainment-management-mfe"]
+}

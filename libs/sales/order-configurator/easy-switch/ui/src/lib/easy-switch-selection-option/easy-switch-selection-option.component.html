@@ -1,0 +1,25 @@
+<label
+  class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white ng-star-inserted">
+  <div class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m">
+    <div class="select-tile__content--inner display--flex flex-direction--column">
+      <div class="display--flex gap--m gap--l--sm">
+        <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+          @if (badgeText) {
+            <div class="select-tile__badge_container display--flex gap--xxs flex-wrap--wrap">
+              <div class="cmp-badge">
+                <div class="background-bright-blue_40 background-cyan-blue display--inline-flex">
+                  <span class="font--caption-bold">{{ badgeText | translate }}</span>
+                </div>
+              </div>
+            </div>
+          }
+          <div class="heading--6 heading--nomargin">{{ heading | translate }}</div>
+          @if (label) {
+            <div class="font--caption-bold ng-star-inserted">{{ label | translate }}</div>
+          }
+        </div>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</label>

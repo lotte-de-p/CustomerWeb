@@ -1,0 +1,10 @@
+{
+  "code": "OCAPI-ERR-500",
+  "correlationId": "3f154d885f88e7b7",
+  "errorDetails": [
+    {
+      "errorDetailCode": "500 Internal Server Error",
+      "message": "Error is be.telenet.edev.ocapi.sales.service.order.exception.InternalServerException"
+    }
+  ]
+}

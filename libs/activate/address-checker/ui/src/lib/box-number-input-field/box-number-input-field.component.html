@@ -1,0 +1,24 @@
+<div class="input-v2--wrapper mb--m">
+  <label class="label-v2" for="new-bn" id="boxNumber:Label">
+    <div class="label-v2__label">
+      <div [ngClass]="{ 'label-v2--disabled': controls?.disabled }" class="font--caption cur-default my--xxxs">
+        {{ 'ng.' + messageGroup + '.lbl.box-number' | translate }}
+      </div>
+    </div>
+  </label>
+  <div class="display--flex width--full">
+    <input
+      [formControl]="formControl"
+      aria-describedby="boxNumber:Helper boxNumber:Error"
+      autocomplete="off"
+      class="input-v2"
+      id="new-bn"
+      type="text" />
+  </div>
+</div>
+<div
+  *ngIf="controls?.touched && (controls?.hasError('pattern') || controls?.hasError('invalid'))"
+  class="formErrorInput text-align--left"
+  data-cy="error-on-boxNumber">
+  <div>{{ 'ng.' + messageGroup + '.boxNumber-pattern.error' | translate }}</div>
+</div>

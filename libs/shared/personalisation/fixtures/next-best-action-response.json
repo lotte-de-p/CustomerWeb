@@ -1,0 +1,42 @@
+{
+  "nextBestActions": {
+    "customerNumber": "123456789",
+    "interactionId": "123456789",
+    "channel": "WEB",
+    "containerName": "NextBestAction",
+    "actions": [
+      {
+        "rank": "1",
+        "group": "Sales",
+        "issue": "Xsell",
+        "name": "ONE1",
+        "productType": "oneApp",
+        "treatment": "SASE_ONE1_PP3m11e",
+        "campaignId": "pp.C5.3m.xA",
+        "sellingArguments": [
+          {
+            "key": "C5_VFM1",
+            "rank": 1
+          },
+          {
+            "key": "C5_VFM3",
+            "rank": 2
+          },
+          {
+            "key": "C5_VFM5",
+            "rank": 3
+          }
+        ],
+        "sdata": {
+          "offers": [
+            {
+              "id": "42797",
+              "type": "Product",
+              "offers": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

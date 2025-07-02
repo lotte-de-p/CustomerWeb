@@ -1,0 +1,74 @@
+<div class="form-group" [formGroup]="form" id="subscription-option-{{ accountType }}">
+  <div class="label-modifier-box card-mini">
+    <div class="my--m">
+      <input
+        type="radio"
+        name="accountType"
+        id="choice-{{ accountType }}"
+        class="label-modifier-radio"
+        formControlName="accountType"
+        [value]="accountType" />
+
+      <div class="label-modifier--append label-modifier--container cursor--pointer">
+        <div class="label-modifier--body">
+          <div class="label-modifier--body--inner-container">
+            <label for="choice-{{ accountType }}" class="label-modifier-radio__label"></label>
+
+            <div class="label-modifier-content__header-text"></div>
+            <div class="label-modifier-content__header">
+              <i class="icon icon-tick"></i>
+            </div>
+
+            <div class="label-modifier-content__desc"></div>
+
+            <div class="label-modifier-content__body">
+              <div class="text-flow text-flow--button label-modifier-content__body-label">
+                {{ label | translate }}
+              </div>
+
+              <div class="text-flow text-flow--legal"></div>
+            </div>
+            <div class="label-modifier-content__timing"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if (form.get('accountType')?.value == accountType) {
+    <div class="my--l">
+      @if (
+        form.get('accountType')?.value === AccountType.PREPAID ||
+        form.get('accountType')?.value === AccountType.SUBSCRIPTION
+      ) {
+        <div class="font--body-regular-bold">
+          {{ 'ng.e-sim-activation.porting.lbl.enter-current-sim-card' | translate }}
+        </div>
+        <input type="text" class="form__input input-v2" formControlName="iccid" data-testid="sim-porting-input-iccid" />
+
+        @if ((form.get('iccid')?.touched || isSubmitted) && form.get('iccid')?.errors) {
+          <div class="formErrorInput" data-testid="sim-porting-input-iccid-error">
+            {{ 'ng.e-sim-activation.porting.error.iccid-not-filled-in' | translate }}
+          </div>
+        }
+      }
+
+      @if (form.get('accountType')?.value === AccountType.BUSINESS_SUBSCRIPTION) {
+        <div class="font--body-regular-bold">
+          {{ 'ng.e-sim-activation.porting.lbl.enter-current-account-number' | translate }}
+        </div>
+        <input
+          type="text"
+          class="form__input input-v2"
+          formControlName="accountNumber"
+          data-testid="sim-porting-input-account-number" />
+
+        @if ((form.get('accountNumber')?.touched || isSubmitted) && form.get('accountNumber')?.errors) {
+          <div class="formErrorInput" data-testid="sim-porting-input-accountNumber-error">
+            {{ 'ng.e-sim-activation.porting.error.account-number-not-filled-in' | translate }}
+          </div>
+        }
+      }
+    </div>
+  }
+</div>

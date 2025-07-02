@@ -1,0 +1,20 @@
+{
+  "name": "sales-hardware-checkout-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/hardware-checkout/data-access/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/hardware-checkout/data-access/**/*.ts",
+          "libs/sales/hardware-checkout/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:sales-hardware-checkout", "scope:sales-mfe"]
+}

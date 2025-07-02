@@ -1,0 +1,69 @@
+<div [attr.data-cy]="'mobile-usage-limits-out-of-bundle-section'" class="pt--xl--md pt--l pr-0">
+  <care-billing-mobile-usage-limits-out-of-bundle-limits-notification
+    [currentOutOfBundleLimit]="currentOutOfBundleLimit">
+  </care-billing-mobile-usage-limits-out-of-bundle-limits-notification>
+
+  <tg-slide-menu
+    [showMenu]="showOutOfBundleLimit"
+    (closeMenu)="handleLimitUpdate(false)"
+    [isStickyFooter]="true"
+    [hideCloseButton]="false"
+    [title]="'ng.mobile-usage-limits.title.manage-out-of-bundle' | translate"
+    [attr.data-cy]="'out-of-bundle-select'">
+    <header>
+      <div class="px--m">
+        <div class="font--body-regular mb--m">
+          <div class="display--flex justify-content--between align-items--baseline gap--xxs">
+            <div class="flex-grow">
+              <p
+                [attr.data-cy]="'out-of-bundle-select-description'"
+                class="form-item__input__label mb--l color-shade_72">
+                {{ 'ng.mobile-usage-limits.lbl.manage-out-of-bundle-description' | translate }}
+              </p>
+              <p [attr.data-cy]="'out-of-bundle-select-limit'" class="font--caption color-shade_64">
+                {{ 'ng.mobile-usage-limits.lbl.select-out-of-bundle-limit' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      [attr.data-cy]="'out-of-bundle-select-values'"
+      class="select-tile--group display--grid grid-template-column--1--sm gap--xm px--m">
+      <form [formGroup]="outOfBundleLimitsForm" class="form-group">
+        <ng-container *ngFor="let limit of outOfBundleLimits; let index = index">
+          <label class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up mb--m">
+            <div
+              class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+              <div class="select-tile__content--inner display--flex flex-direction--column">
+                <div class="display--flex gap--m gap--l--sm">
+                  <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                    <div [attr.data-cy]="'out-of-bundle-selected-value-' + index" class="heading--5 heading--nomargin">
+                      @if (limit === 'NO LIMIT') {
+                        <span>{{ 'ng.mobile-usage-limits.lbl.no-limit' | translate }}</span>
+                      } @else {
+                        <span class="icon icon-md font-weight--bold"> {{ limit | price | euroSign }} </span>
+                      }
+                    </div>
+                  </div>
+                  <input
+                    type="radio"
+                    [attr.data-cy]="'out-of-bundle-selected-radio-' + index"
+                    [value]="limit"
+                    formControlName="selectedLimit"
+                    class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+                </div>
+              </div>
+            </div>
+          </label>
+        </ng-container>
+      </form>
+    </div>
+
+    <footer>
+      <care-billing-mobile-usage-limits-update-mobile-usage-limits (clickEvent)="handleLimitUpdate($event)">
+      </care-billing-mobile-usage-limits-update-mobile-usage-limits>
+    </footer>
+  </tg-slide-menu>
+</div>

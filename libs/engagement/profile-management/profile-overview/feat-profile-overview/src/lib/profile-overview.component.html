@@ -1,0 +1,33 @@
+<tg-login (componentCanRender)="initAfterLoggedIn($event)">
+  @if (loading$ | async) {
+    <tg-pm-profile-overview-skeleton></tg-pm-profile-overview-skeleton>
+  } @else {
+    <ng-container *ngIf="profileOverview$ | async as profileOverview; else loadingError">
+      <div class="manage-profile-details care-page background-shade_04">
+        <tg-pm-profile-overview-header
+          [isMember]="isMember"
+          [hasProfilePicture]="profileOverview.hasProfilePicture"
+          [profileOverview]="profileOverview"
+          [profilePictureUrl]="profilePictureUrl"
+          [moreInfoLink]="profileOverviewUrls.memberMoreInfoLink"
+          [isBaseCustomer]="isBaseCustomer"
+          (linkClick)="handleLinkClick($event, true)">
+        </tg-pm-profile-overview-header>
+
+        <tg-pm-profile-overview-nav-links
+          [isMember]="isMember"
+          [isBaseCustomer]="isBaseCustomer"
+          [profileOverview]="profileOverview"
+          [navLinkUrls]="profileOverviewUrls"
+          (linkClick)="handleLinkClick($event)">
+        </tg-pm-profile-overview-nav-links>
+      </div>
+    </ng-container>
+
+    <ng-template #loadingError>
+      @if (loadError$ | async) {
+        <tg-pm-profile-overview-error (errorAction)="handleErrorAction()"></tg-pm-profile-overview-error>
+      }
+    </ng-template>
+  }
+</tg-login>

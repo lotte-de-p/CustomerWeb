@@ -1,0 +1,37 @@
+{
+  "type": "Geographical Address",
+  "country": "België",
+  "countryCode": "BE",
+  "municipality": "Mechelen",
+  "postalCode": "2800",
+  "street": "Elektriciteitstraat",
+  "streetId": "9153462896013523500",
+  "houseNumber": "6",
+  "address": [
+    {
+      "id": "9153462896013523517",
+      "boxNumber": "5",
+      "floorNumber": "2",
+      "tinaLocationId": "2"
+    },
+    {
+      "addressid": "9152527990413378524",
+      "subhousenr": "5",
+      "boxnr": "115/t",
+      "floor": "7",
+      "tinaLocationId": "2"
+    },
+    {
+      "id": "9153462896013523444",
+      "boxNumber": "3",
+      "subHouseNumber": "6A",
+      "floorNumber": "2",
+      "tinaLocationId": "2"
+    },
+    {
+      "id": "9153462896013523444",
+      "floorNumber": "2",
+      "tinaLocationId": "2"
+    }
+  ]
+}

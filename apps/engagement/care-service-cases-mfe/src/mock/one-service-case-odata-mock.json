@@ -1,0 +1,15 @@
+{
+  "url": "http://localhost:8080/public/api/customer-service/v1/service-case-details",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "007008",
+      "type": "MOVE",
+      "status": "OPEN",
+      "creationDate": "2023-12-09T14:00:00.000Z",
+      "deadlineDate": "2023-11-29T14:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    }
+  ]
+}

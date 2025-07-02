@@ -1,0 +1,11 @@
+{
+  "ng.inbox-messages.message-added-years.txt": "{{value}} years ago",
+  "ng.inbox-messages.message-added-days.txt": "{{value}} days ago",
+  "ng.inbox-messages.message-added-months.txt": "{{value}} months ago",
+  "ng.inbox-messages.badge.txt": "New",
+  "ng.inbox-messages.important-messages.lbl": "Important",
+  "ng.inbox-messages.other-messages.lbl": "Other messages",
+  "ng.inbox-messages.notification-icon.txt": "Messages",
+  "ng.inbox-messages.no-messages.txt": "You have no notifications yet",
+  "ng.inbox-messages.delete.txt": "Delete"
+}

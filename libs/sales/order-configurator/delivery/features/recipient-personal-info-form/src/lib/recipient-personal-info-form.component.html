@@ -1,0 +1,90 @@
+<div [formGroup]="personalInfoForm" class="content-section mb-30 p--xl--md p--l mx--n--md mx--l ng-star-inserted">
+  <div class="sales-display-info__content__row mb-30">
+    <div class="sales-display-info__content__row__description">
+      <h6 class="mt-0">{{ 'ng.sales-checkout.text.delivery-contact-header' | translate }}</h6>
+    </div>
+  </div>
+  <div class="row">
+    @if (validateOnInit) {
+      <div class="col-sm-12 form-group">
+        <div
+          class="col-sm-12 form-group notification notification--info"
+          data-cy="feat-delivery-personal-info-check-required-fields-info">
+          <span class="icon-error-shape"></span>
+          <div>{{ 'ng.address.check-required-fields.info' | translate }}</div>
+        </div>
+      </div>
+    }
+    <div class="col-sm-12 form-group">
+      <label class="font--caption cur-default color-shade_64" for="firstName">{{
+        'ng.address.lbl.first-name' | translate
+      }}</label>
+      <input
+        (blur)="onFieldChanged()"
+        [attr.data-testid]="'feat-delivery-personal-info-form-first-name-field'"
+        class="form__input ng-untouched ng-pristine ng-valid"
+        formControlName="firstname"
+        id="firstName" />
+      @if (personalInfoForm.get('firstname')?.touched && personalInfoForm.get('firstname')?.hasError('required')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.firstname-required.error' | translate }}
+        </div>
+      }
+    </div>
+    <div class="col-sm-12 form-group">
+      <label class="font--caption cur-default color-shade_64" for="lastName"
+        >{{ 'ng.address.lbl.last-name' | translate }}
+      </label>
+      <input
+        (blur)="onFieldChanged()"
+        [attr.data-testid]="'feat-delivery-personal-info-form-last-name-field'"
+        class="form__input ng-untouched ng-pristine ng-valid"
+        formControlName="lastname"
+        id="lastName" />
+      @if (personalInfoForm.get('lastname')?.touched && personalInfoForm.get('lastname')?.hasError('required')) {
+        <div class="formErrorInput text-align--left">
+          {{ 'ng.address.lastname-required.error' | translate }}
+        </div>
+      }
+    </div>
+    <div class="col-sm-12 form-group ng-star-inserted">
+      <label class="font--caption cur-default color-shade_64" for="mobile">{{
+        'ng.address.lbl.phone-number' | translate
+      }}</label>
+      <input
+        (blur)="onFieldChanged()"
+        [attr.data-testid]="'feat-delivery-personal-info-form-mobile-field'"
+        class="form__input ng-untouched ng-pristine ng-valid"
+        formControlName="mobile"
+        id="mobile"
+        inputmode="numeric"
+        type="text" />
+      @if (personalInfoForm.get('mobile')?.touched && personalInfoForm.get('mobile')?.hasError('required')) {
+        <div
+          class="formErrorInput text-align--left"
+          [attr.data-testid]="'feat-delivery-personal-info-form-mobile-field-validation-required'">
+          {{ 'ng.address.phonenumber-required.error' | translate }}
+        </div>
+      }
+    </div>
+    <div class="col-sm-12 form-group ng-star-inserted">
+      <label class="font--caption cur-default color-shade_64" for="deliveryEmail">{{
+        'ng.address.lbl.email-address' | translate
+      }}</label>
+      <input
+        (blur)="onFieldChanged()"
+        [attr.data-testid]="'feat-delivery-personal-info-form-email-field'"
+        class="form__input ng-untouched ng-pristine ng-valid"
+        formControlName="email"
+        id="deliveryEmail"
+        type="text" />
+      @if (personalInfoForm.get('email')?.touched && personalInfoForm.get('email')?.hasError('email')) {
+        <div
+          [attr.data-testid]="'feat-delivery-personal-info-form-email-field-validation-required'"
+          class="formErrorInput text-align--left">
+          {{ 'ng.address.emailaddress-invalid.error' | translate }}
+        </div>
+      }
+    </div>
+  </div>
+</div>

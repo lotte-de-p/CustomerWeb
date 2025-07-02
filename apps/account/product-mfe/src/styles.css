@@ -1,0 +1,138 @@
+@import 'node_modules/atomic-library/public/styles/telenet-generic-classes.css';
+@import 'node_modules/atomic-library/public/styles/telenet-plugins.css';
+@import 'node_modules/atomic-library/public/styles/telenet-fonts.css';
+@import 'node_modules/atomic-library/public/styles/telenet-themes.css';
+@import 'node_modules/atomic-library/public/styles/telenet-atomic-comps.css';
+@import 'node_modules/atomic-library/public/styles/telenet-aem-cats/care.css';
+/*
+    !DO NOT ADD CSS HERE!
+
+    This file is local to the SPA only. It does not get exposed via the MFE Components.
+    For now, the way of working is to duplicate CSS to component-level CSS where it is required.
+
+    If large amounts of CSS are shared between components, we could look into creating separate CSS files, which would get
+    injected as a component stylesheet, as those are exposed via the MFE Components.
+*/
+.cdk-visually-hidden {
+  display: none;
+}
+
+.col--24 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.col--23 {
+  flex-basis: calc((100% / 24) * 23);
+  max-width: calc((100% / 24) * 23);
+}
+
+.col--22 {
+  flex-basis: calc((100% / 24) * 22);
+  max-width: calc((100% / 24) * 22);
+}
+
+.col--21 {
+  flex-basis: calc((100% / 24) * 21);
+  max-width: calc((100% / 24) * 21);
+}
+
+.col--20 {
+  flex-basis: calc((100% / 24) * 20);
+  max-width: calc((100% / 24) * 20);
+}
+
+.col--19 {
+  flex-basis: calc((100% / 24) * 19);
+  max-width: calc((100% / 24) * 19);
+}
+
+.col--18 {
+  flex-basis: calc((100% / 24) * 18);
+  max-width: calc((100% / 24) * 18);
+}
+
+.col--17 {
+  flex-basis: calc((100% / 24) * 17);
+  max-width: calc((100% / 24) * 17);
+}
+
+.col--16 {
+  flex-basis: calc((100% / 24) * 16);
+  max-width: calc((100% / 24) * 16);
+}
+
+.col--15 {
+  flex-basis: calc((100% / 24) * 15);
+  max-width: calc((100% / 24) * 15);
+}
+
+.col--14 {
+  flex-basis: calc((100% / 24) * 14);
+  max-width: calc((100% / 24) * 14);
+}
+
+.col--13 {
+  flex-basis: calc((100% / 24) * 13);
+  max-width: calc((100% / 24) * 13);
+}
+
+.col--12 {
+  flex-basis: calc((100% / 24) * 12);
+  max-width: calc((100% / 24) * 12);
+}
+
+.col--11 {
+  flex-basis: calc((100% / 24) * 11);
+  max-width: calc((100% / 24) * 11);
+}
+
+.col--10 {
+  flex-basis: calc((100% / 24) * 10);
+  max-width: calc((100% / 24) * 10);
+}
+
+.col--9 {
+  flex-basis: calc((100% / 24) * 9);
+  max-width: calc((100% / 24) * 9);
+}
+
+.col--8 {
+  flex-basis: calc((100% / 24) * 8);
+  max-width: calc((100% / 24) * 8);
+}
+
+.col--7 {
+  flex-basis: calc((100% / 24) * 7);
+  max-width: calc((100% / 24) * 7);
+}
+
+.col--6 {
+  flex-basis: calc((100% / 24) * 6);
+  max-width: calc((100% / 24) * 6);
+}
+
+.col--5 {
+  flex-basis: calc((100% / 24) * 5);
+  max-width: calc((100% / 24) * 5);
+}
+
+.col--4 {
+  flex-basis: calc((100% / 24) * 4);
+  max-width: calc((100% / 24) * 4);
+}
+
+.col--3 {
+  flex-basis: calc((100% / 24) * 3);
+  max-width: calc((100% / 24) * 3);
+}
+
+.col--2 {
+  flex-basis: calc((100% / 24) * 2);
+  max-width: calc((100% / 24) * 2);
+}
+
+.col--1 {
+  flex-basis: calc((100% / 24) * 1);
+  max-width: calc((100% / 24) * 1);
+}

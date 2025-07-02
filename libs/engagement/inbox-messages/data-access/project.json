@@ -1,0 +1,20 @@
+{
+  "name": "inbox-messages-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/inbox-messages/data-access/src",
+  "prefix": "tg-inbox-messages",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/inbox-messages/data-access/**/*.ts",
+          "libs/engagement/inbox-messages/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:inbox-messages", "scope:inbox-messages-mfe"]
+}

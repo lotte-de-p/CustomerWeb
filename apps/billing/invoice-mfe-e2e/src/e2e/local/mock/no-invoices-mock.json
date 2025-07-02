@@ -1,0 +1,7 @@
+{
+  "unpaidInvoices": {
+    "totalAmount": 0,
+    "invoices": []
+  },
+  "paidInvoices": []
+}

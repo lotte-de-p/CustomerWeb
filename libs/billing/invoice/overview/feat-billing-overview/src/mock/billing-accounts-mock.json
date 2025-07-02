@@ -1,0 +1,94 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "billingAccountNumber": "123456",
+      "dispatchMethod": "PAPER",
+      "outstandingBalance": -500,
+      "paymentStatus": "PAID",
+      "currentPaymentMethod": "MANUAL",
+      "lastPaymentMethod": "DIRECT_DEBIT",
+      "email": "xmwzezestelle@gmail.com",
+      "mobilePhoneNumber": "0467713972",
+      "isEligibleForManualPayment": false,
+      "billingAddress": {
+        "street": "Teststraat",
+        "houseNumber": "1",
+        "postalCode": "2000",
+        "municipality": "Antwerpen"
+      },
+      "collectionsTreatmentMessage": "AVOID_EXTRA_COSTS",
+      "customerCategory": "BUSINESS"
+    },
+    {
+      "billingAccountNumber": "987654",
+      "dispatchMethod": "EMAIL_SMS",
+      "outstandingBalance": 123.45,
+      "paymentStatus": "UNPAID",
+      "currentPaymentMethod": "DIRECT_DEBIT",
+      "email": "test@gmail.com",
+      "mobilePhoneNumber": "0467713977",
+      "isEligibleForManualPayment": false,
+      "billingAddress": {
+        "street": "Willy Wonkastraat",
+        "houseNumber": "101",
+        "postalCode": "9000",
+        "municipality": "Gent"
+      }
+    },
+    {
+      "billingAccountNumber": "453278",
+      "dispatchMethod": "DOCCLE",
+      "outstandingBalance": 954.45,
+      "paymentDueDate": "2018-01-01",
+      "paymentStatus": "OVERDUE",
+      "currentPaymentMethod": "MANUAL",
+      "email": "testnow@gmail.com",
+      "mobilePhoneNumber": "0467713975",
+      "isEligibleForManualPayment": false,
+      "billingAddress": {
+        "street": "Rue de la Loi",
+        "houseNumber": "666",
+        "postalCode": "1000",
+        "municipality": "Brussel"
+      },
+      "collectionsTreatmentMessage": "RESUME_SUSPENDED_SERVICES"
+    },
+    {
+      "billingAccountNumber": "123456 - DD failed",
+      "dispatchMethod": "PAPER",
+      "outstandingBalance": 0,
+      "paymentStatus": "UNPAID",
+      "currentPaymentMethod": "DIRECT_DEBIT",
+      "email": "xmwzezestelle@gmail.com",
+      "mobilePhoneNumber": "0467713978",
+      "isEligibleForManualPayment": true,
+      "billingAddress": {
+        "street": "Teststraat",
+        "houseNumber": "1",
+        "postalCode": "2000",
+        "municipality": "Antwerpen"
+      },
+      "collectionsTreatment": "PAYMENT_PLAN"
+    },
+    {
+      "billingAccountNumber": "983212",
+      "dispatchMethod": "PAPER",
+      "outstandingBalance": 0,
+      "paymentStatus": "PAID",
+      "currentPaymentMethod": "MANUAL",
+      "lastPaymentMethod": "DIRECT_DEBIT",
+      "email": "xmwzezestelle@gmail.com",
+      "mobilePhoneNumber": "0467713972",
+      "isEligibleForManualPayment": false,
+      "billingAddress": {
+        "street": "Teststraat",
+        "houseNumber": "1",
+        "postalCode": "2000",
+        "municipality": "Antwerpen"
+      }
+    }
+  ]
+}

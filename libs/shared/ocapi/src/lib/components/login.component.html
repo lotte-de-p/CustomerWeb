@@ -1,0 +1,215 @@
+<ng-container *ngIf="show">
+  <ng-container *ngIf="isLoggedIn()">
+    <ng-content></ng-content>
+  </ng-container>
+
+  <div *ngIf="!isLoggedIn()">
+    <div *ngIf="mode === 'overlay'; else noOverlay">
+      <ng-container [ngTemplateOutlet]="overlay"> </ng-container>
+    </div>
+  </div>
+</ng-container>
+<ng-template #noOverlay>
+  <ng-container [ngSwitch]="getLoginStatus()">
+    <ng-container *ngSwitchCase="loginEnum.NOT_LOGGED_IN">
+      <div class="notification notification--warning">
+        <span class="icon icon-error-shape warn">{{ 'ng.general-login.lbl.not-logged-in' | translate }}</span>
+        <a (click)="login()" class="button button--primary cta-secondary" [attr.data-cy]="'login-button-link'">{{
+          'ng.general-login.btn.not-logged-in' | translate
+        }}</a>
+      </div>
+    </ng-container>
+
+    <div *ngSwitchCase="loginEnum.NARROWED" class="notification notification--warning">
+      <span class="icon icon-error-shape warn">{{ 'ng.general.login.lbl.narrowed' | translate }}</span>
+      <div (click)="login(true)" class="button button--primary cta-secondary">
+        {{ 'ng.general.login.btn.narrowed' | translate }}
+      </div>
+    </div>
+
+    <div *ngSwitchCase="loginEnum.INSUFFICIENT_PERMISSIONS" class="notification notification--warning">
+      <span class="icon icon-alert-shape warn">{{ 'ng.general-login.insufficient-rights-link.text' | translate }}</span>
+      <div (click)="login(true)" class="button button--primary cta-secondary button--width-auto">
+        {{ 'ng.general-login.insufficient-rights-link' | translate }}
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #overlay>
+  <ng-container [ngTemplateOutlet]="headerTitleAndSubtitle"> </ng-container>
+  <div class="end-journey__section__content__action">
+    <div
+      class="login-sales-journey row align-items--stretch justify-content--center col-lg-6 col-md-10 col-12 m--auto mb--g">
+      <ng-container [ngSwitch]="getLoginStatus()">
+        <ng-container *ngSwitchCase="loginEnum.NOT_LOGGED_IN">
+          <ng-container [ngTemplateOutlet]="loginOrRegister"> </ng-container>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="loginEnum.NARROWED">
+          <ng-container [ngTemplateOutlet]="loginOrRegister"> </ng-container>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="loginEnum.INSUFFICIENT_PERMISSIONS">
+          <ng-container [ngTemplateOutlet]="onlyLogin"> </ng-container>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #headerTitleAndSubtitle>
+  <div class="login-sales-journey-title px--xm px--n--md col-lg-5 col-md-7 col-12 m--auto">
+    <div
+      *ngIf="getLoginStatus() === loginEnum.INSUFFICIENT_PERMISSIONS; else otherThanInsufficientRights"
+      class="display--flex flex-direction--column">
+      <h3>
+        {{ 'general.lbl.overlay-login-title-insufficient-rights' | translate }}
+      </h3>
+      <p class="font--body-regular pb--s">
+        {{ 'general.lbl.overlay-login-sub-title-insufficient-rights' | translate }}
+      </p>
+    </div>
+    <ng-template #otherThanInsufficientRights>
+      <div *ngIf="getLoginStatus() !== loginEnum.INSUFFICIENT_PERMISSIONS">
+        <div *ngIf="source === 'EMAIL'" class="display--flex flex-direction--column">
+          <h3>
+            {{ 'general.lbl.overlay-login-title-abandon-cart' | translate }}
+          </h3>
+          <p class="font--body-regular pb--s">
+            {{ 'general.lbl.overlay-login-sub-title-abandon-cart' | translate }}
+          </p>
+        </div>
+        <div *ngIf="source !== 'EMAIL'" class="display--flex flex-direction--column">
+          <h3>
+            {{ 'general.lbl.overlay-login-title' | translate }}
+          </h3>
+          <p class="font--body-regular pb--s">
+            {{ 'general.lbl.overlay-login-sub-title' | translate }}
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</ng-template>
+<ng-template #onlyRegister>
+  <div
+    class="display--flex flex-direction--column justify-content--between background-white col-lg-5 col-md-4 col-12 px--xl pb--xl pt--xxs">
+    <div class="text-align--center">
+      <h5 class="heading--5">
+        {{ 'general.lbl.not-a-customer' | translate: { brand: brand } }}
+      </h5>
+    </div>
+    <div *ngIf="brand !== 'BASE'">
+      <div class="display--block" *ngIf="styleHint === 'sales'">
+        <div>
+          <div class="display--block">
+            <div
+              ng-class="showItsMeRegistrationOption ? 'mb--xxl' : 'mt--xxxl mb--xs'"
+              class="pb--xs text-align--center">
+              <span class="font--caption" [innerHtml]="'general.lbl.need-more-info' | translate"> </span>
+            </div>
+            <div *ngIf="showItsMeRegistrationOption" class="width--full">
+              <div class="font--caption text-align--center pb--xs">
+                {{ 'general.lbl.register-with-itsme-help' | translate }}
+              </div>
+              <button
+                class="button button--secondary button--fullwidth register-with-itsme"
+                (click)="register('itsme')">
+                <span>
+                  {{ 'general.lbl.register-with-itsme' | translate }}
+                </span>
+              </button>
+              <div class="divider--xxs__mid-grey my--xl"></div>
+            </div>
+            <button class="button button--secondary button--fullwidth" (click)="register('internal')">
+              {{ 'general.lbl.register' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="brand === 'BASE'">
+      <div class="display--block" *ngIf="styleHint === 'sales'">
+        <div>
+          <div class="display--block mt--xs">
+            <div *ngIf="showItsMeRegistrationOption" class="width--full mb--xs">
+              <div class="font--caption pb--xs text-align--center">
+                {{ 'general.lbl.register-with-itsme-help' | translate }}
+              </div>
+              <button
+                class="button button--secondary button--fullwidth button__icon--position-left register-with-itsme pt--m pb--m"
+                (click)="register('itsme')">
+                <span class="ml--s--md">
+                  {{ 'general.lbl.register-with-itsme' | translate }}
+                </span>
+              </button>
+              <div class="divider--xxs__mid-grey my--xl"></div>
+            </div>
+            <button
+              class="button button--secondary button--fullwidth button__icon--position-left pt-10 pb-10"
+              (click)="register('internal')">
+              {{ 'general.lbl.register' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #onlyLogin>
+  <div
+    class="display--flex flex-direction--column justify-content--between background-white col-lg-5 col-md-4 col-12 px--xl pb--xl pt--xxs mr--xm--md mr--n mb--n--md mb--m">
+    <div class="text-align--center">
+      <h5 class="heading--5" *ngIf="getLoginStatus() === loginEnum.INSUFFICIENT_PERMISSIONS">
+        {{ 'general.lbl.login-again-insufficient-rights' | translate }}
+      </h5>
+      <div *ngIf="getLoginStatus() !== loginEnum.INSUFFICIENT_PERMISSIONS">
+        <h5 class="heading--5" *ngIf="source === 'EMAIL'">
+          {{ 'general.lbl.login-again-abandon-cart' | translate }}
+        </h5>
+        <h5 class="heading--5" *ngIf="source !== 'EMAIL'">
+          {{ 'general.lbl.already-a-customer' | translate: { brand: brand } }}
+        </h5>
+      </div>
+    </div>
+    <div class="m--auto">
+      <img
+        class="hide-until-md"
+        src="/etc/designs/aff-telenetgroup/atomic/clientlibs/clientlib-atomic/graphics/base-login-desktop.svg"
+        alt="login"
+        *ngIf="brand === 'BASE'" />
+      <img
+        class="hide-from-md"
+        src="/etc/designs/aff-telenetgroup/atomic/clientlibs/clientlib-atomic/graphics/base-login-mobile.svg"
+        alt="login"
+        *ngIf="brand === 'BASE'" />
+      <img
+        class="hide-until-md"
+        src="/etc/designs/aff-telenetgroup/atomic/clientlibs/clientlib-atomic/graphics/telenet-login-desktop.svg"
+        alt="login"
+        *ngIf="brand !== 'BASE'" />
+      <img
+        class="hide-from-md"
+        src="/etc/designs/aff-telenetgroup/atomic/clientlibs/clientlib-atomic/graphics/telenet-login-mobile.svg"
+        alt="login"
+        *ngIf="brand !== 'BASE'" />
+    </div>
+    <button
+      class="button button--primary button--fullwidth"
+      *ngIf="getLoginStatus() === loginEnum.INSUFFICIENT_PERMISSIONS"
+      (click)="login(true)">
+      {{ 'general.login-link' | translate }}
+    </button>
+    <button
+      class="button button--primary button--fullwidth"
+      *ngIf="getLoginStatus() !== loginEnum.INSUFFICIENT_PERMISSIONS"
+      (click)="login()">
+      {{ 'general.login-link' | translate }}
+    </button>
+  </div>
+</ng-template>
+<ng-template #loginOrRegister>
+  <ng-container [ngTemplateOutlet]="onlyLogin"> </ng-container>
+  <ng-container *ngIf="showRegistrationOptions()" [ngTemplateOutlet]="onlyRegister"> </ng-container>
+</ng-template>

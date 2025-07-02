@@ -1,0 +1,48 @@
+<div class="stepper-page__body">
+  <div class="stepper-page__body-inner">
+    <div class="stepper-page__title">
+      <div class="text-flow text-flow--h3">{{ 'ng.product-finder.step-tv-experience.header' | translate }}</div>
+
+      <div class="font--caption mt--xxxs stepper-page__title-label">
+        {{ 'ng.product-finder.step-tv-experience.sub-header' | translate }}
+      </div>
+    </div>
+
+    <div class="stepper-page__content--split container">
+      <div
+        class="stepper-page__content-first stepper-page__content-first--full-width-img flex-hide-until-md sticky ml--xm--md ml--n--lg">
+        <img
+          appSalesImageSrcInterceptor
+          [moduleId]="'tg-sales-product-finder'"
+          src="/assets/sales/product-finder/tv-experience/tv-experience.png"
+          alt="tv experience image" />
+      </div>
+
+      <div id="product-finder-v2-container" class="stepper-page__content-second mx--s--md mx--n--lg">
+        <div *ngIf="showAtLeastOneValueSelectedError$ | async" class="mb--m mx--l mx--n--md">
+          <div class="notification notification--errorfield">
+            <span class="icon icon-error-shape errorfield"></span>
+            <div>
+              <p>{{ 'ng.product-finder.step-tv-experience.multiple.tv-experience.error' | translate }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="Container Container--partitioned py--m--md mx--n">
+          <div class="Container--partitioned--partition Container--partitioned--partition--last-item">
+            <div class="select-tile--group display--grid grid-template-column--1--sm gap--xm mx--m--md">
+              <ng-container *ngIf="{ checkboxes: checkboxes$ | async, tvExperience: tvExperience$ | async } as o">
+                <ng-container *ngIf="o.checkboxes && o.tvExperience">
+                  <tg-sales-multi-select-checkbox
+                    [checkboxes]="o.checkboxes"
+                    [ngModel]="o.tvExperience.selection"
+                    (ngModelChange)="updateTvExperience($event)">
+                  </tg-sales-multi-select-checkbox>
+                </ng-container>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

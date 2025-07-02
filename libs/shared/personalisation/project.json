@@ -1,0 +1,41 @@
+{
+  "name": "personalisation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/personalisation/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/personalisation/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/personalisation/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/personalisation/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-personalisation"],
+      "options": {
+        "jestConfig": "libs/shared/personalisation/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/personalisation/src/**/*.ts", "libs/shared/personalisation/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:personalisation"],
+  "implicitDependencies": ["shared"]
+}

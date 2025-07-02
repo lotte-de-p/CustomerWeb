@@ -1,0 +1,10 @@
+<div class="px--xl--md pb--xl--md px--l pb--l" [attr.data-cy]="'premium-services-member-notification'">
+  <span class="font--body-regular mr--xxs--md">
+    {{ 'ng.mobile-usage-limits.lbl.max-additional-premium-usages' | translate }}
+  </span>
+  @if (currentPremiumLimit) {
+    <span class="text-weight--l">
+      {{ 'ng.mobile-usage-limits.lbl.limit' | translate: { value: currentPremiumLimit } }}
+    </span>
+  }
+</div>

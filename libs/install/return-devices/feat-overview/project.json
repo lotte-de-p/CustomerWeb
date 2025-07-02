@@ -1,0 +1,17 @@
+{
+  "name": "return-devices-overview",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/install/return-devices/feat-overview/src",
+  "prefix": "tg-return-devices",
+  "tags": ["type:feature", "scope:return-devices-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/install/return-devices/feat-overview/**/*.{ts,js,html}"]
+      }
+    }
+  }
+}

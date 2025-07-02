@@ -1,0 +1,5 @@
+<div class="notification" [ngClass]="getClass()">
+  <span class="icon" [ngClass]="getIconClass()">{{
+    translateHelperService.getText('error.' + labelKey) | translate
+  }}</span>
+</div>

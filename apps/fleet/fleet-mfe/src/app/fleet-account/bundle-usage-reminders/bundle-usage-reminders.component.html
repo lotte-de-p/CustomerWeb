@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-12 p-0">
+    <app-message [messageGroupName]="messageGroupName"></app-message>
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false"></app-loader>
+    <tg-login (componentCanRender)="initAfterLoggedIn()" [messageGroupName]="messageGroupName" [scopes]="scopes">
+      <div class="bundle-usage-reminders">
+        <div class="pt-20"></div>
+        <ng-container *ngIf="showForm">
+          <form [formGroup]="usageReminderForm" [attr.data-cy]="'bundle-usage-reminders-form'">
+            <div class="usage-section">
+              <div class="usage-section--out-of-bundle">
+                <span class="section-heading">
+                  {{ 'ng.bundle-usage-reminders.lbl.out-of-bundle' | translate }}
+                </span>
+                <div class="CheckboxSwitch">
+                  <input
+                    type="checkbox"
+                    class="CheckboxSwitch-input"
+                    id="enableReminder"
+                    formControlName="enableReminder"
+                    [attr.data-cy]="'enable-reminder-checkbox'" />
+                  <label class="CheckboxSwitch-control" for="enableReminder">&nbsp;</label>
+                </div>
+              </div>
+              <div class="usage-section--notification mt-10">
+                <p class="notification-text">
+                  {{ 'ng.bundle-usage-reminders.lbl.notification-exceed' | translate }}
+                </p>
+                <div
+                  class="threshold-section"
+                  [attr.data-cy]="'over-consumption-threshold-section'"
+                  *ngIf="displayOverConsumptionThresholdInput()">
+                  <p>
+                    {{ 'ng.bundle-usage-reminders.lbl.threshold' | translate }}
+                  </p>
+                  <div class="threshold-form align-items--center">
+                    <span class="currency-symbol">€</span>
+                    <tg-form-input
+                      formControlName="overConsumptionThreshold"
+                      [messageGroup]="messageGroupName"
+                      [showPlaceHolder]="true"
+                      [hideLabel]="true"
+                      [required]="true"
+                      [mask]="{ maskValue: '0*', dropSpecialCharacters: true }"
+                      inputmode="numeric"
+                      [attr.data-cy]="'over-consumption-threshold-input'">
+                    </tg-form-input>
+                  </div>
+                </div>
+              </div>
+              <div class="usage-section--group-bundle">
+                <div class="bundle-section">
+                  <span class="section-heading">
+                    {{ 'ng.bundle-usage-reminders.lbl.group-bundle' | translate }}
+                  </span>
+                </div>
+                <p class="section-subheading bundle-subsection">
+                  {{ 'ng.bundle-usage-reminders.lbl.note' | translate }}
+                </p>
+                <div class="actions">
+                  <p class="change-text">
+                    {{ 'ng.bundle-usage-reminders.lbl.notification-info' | translate }}
+                  </p>
+                  <button
+                    class="button button--primary save-btn"
+                    [disabled]="isSaveButtonDisabled()"
+                    (click)="saveUsageReminder()"
+                    [attr.data-cy]="'save-button'">
+                    {{ 'ng.bundle-usage-reminders.btn.save' | translate }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </ng-container>
+      </div>
+    </tg-login>
+  </div>
+</div>

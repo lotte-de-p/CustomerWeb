@@ -1,0 +1,17 @@
+{
+  "name": "product-journey-appointments-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/install/product-journey/appointments/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/install/product-journey/appointments/data-access/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:product-journey-mfe", "scope:product-journey-appointments"]
+}

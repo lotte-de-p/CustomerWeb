@@ -1,0 +1,2 @@
+export const <%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_PAGE_LANDING = '/';
+export const <%= underscore(mfeNameWithoutSuffix).toUpperCase() %>_SELECTOR_ROOT = '<%= prefix %>-root';

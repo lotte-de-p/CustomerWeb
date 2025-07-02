@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.229" tests="1" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-02T13:33:06" tests="0" file="src/e2e/fleet-product/usage/fleet-user-mobile-usage-overview-demo-one/fleet-user-mobile-usage-overview-demo-one.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Fleet User Mobile Usage Overview Demo One" timestamp="2024-09-02T13:33:06" tests="1" time="2.198" failures="0">
+    <testcase name="On page load, form should be pre-populated with values" time="1.454" classname="Fleet User Mobile Usage Overview Demo One On page load, form should be pre-populated with values">
+    </testcase>
+  </testsuite>
+</testsuites>

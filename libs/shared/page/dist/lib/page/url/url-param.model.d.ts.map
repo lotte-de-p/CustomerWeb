@@ -1,0 +1,1 @@
+{"version":3,"file":"url-param.model.d.ts","sourceRoot":"","sources":["../../../../src/lib/page/url/url-param.model.ts"],"names":[],"mappings":"AAAA,qBAAa,QAAQ;IACnB,GAAG,EAAE,MAAM,CAAC;IACZ,KAAK,EAAE,MAAM,CAAC;gBAEF,GAAG,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM;IAKtC,WAAW,IAAI,MAAM;CAGtB"}

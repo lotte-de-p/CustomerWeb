@@ -1,0 +1,12 @@
+/*
+    !DO NOT ADD CSS HERE!
+
+    This file is local to the SPA only. It does not get exposed via the MFE Components.
+    For now, the way of working is to duplicate CSS to component-level CSS where it is required.
+
+    If large amounts of CSS are shared between components, we could look into creating separate CSS files, which would get
+    injected as a component stylesheet, as those are exposed via the MFE Components.
+*/
+.cdk-visually-hidden {
+  display: none;
+}

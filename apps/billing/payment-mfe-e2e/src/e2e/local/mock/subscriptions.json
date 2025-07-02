@@ -1,0 +1,59 @@
+[
+  {
+    "serviceName": "applestore",
+    "companyId": 111393,
+    "recurring": true,
+    "renewalPeriod": {
+      "period": 14,
+      "units": "days"
+    },
+    "startDate": "2024-03-10",
+    "endDate": "2025-05-10",
+    "price": 12.5,
+    "priceUnit": "EUR",
+    "serviceTranslation": {
+      "en": "Apple Music",
+      "nl": "Apple Muziek",
+      "fr": "Apple Musique"
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "serviceName": "YoutubeMusic",
+    "companyId": 111394,
+    "recurring": false,
+    "renewalPeriod": {
+      "period": null,
+      "units": ""
+    },
+    "startDate": "2022-03-12",
+    "endDate": "2025-05-10",
+    "price": 125.3,
+    "priceUnit": "EUR",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "serviceName": "netflix",
+    "companyId": 111395,
+    "recurring": false,
+    "renewalPeriod": {
+      "period": null,
+      "units": ""
+    },
+    "startDate": "2022-03-12",
+    "endDate": "2024-05-10",
+    "price": 125.3,
+    "priceUnit": "EUR",
+    "serviceTranslation": {
+      "en": "Netflix",
+      "nl": "Netflix",
+      "fr": "Netflix"
+    },
+    "status": "EXPIRED"
+  }
+]

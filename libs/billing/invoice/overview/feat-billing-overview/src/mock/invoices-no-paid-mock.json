@@ -1,0 +1,22 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "unpaidInvoices": {
+      "totalAmount": 12.34,
+      "invoices": [
+        {
+          "invoiceDate": "202-03-10",
+          "paymentDueDate": "2022-03-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 12.34,
+          "invoiceNumber": "abcxxx",
+          "outstandingDebt": 12.34,
+          "ogmCode": "+++490/5829/80701+++"
+        }
+      ]
+    },
+    "paidInvoices": []
+  }
+}

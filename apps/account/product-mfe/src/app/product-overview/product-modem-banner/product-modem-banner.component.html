@@ -1,0 +1,22 @@
+<div class="content-section mb-30 p--xl--md p--l">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="text--xm text-weight--g">
+        {{ 'ng.product-overview.lbl.modem-upgrade-banner-title' | translate }}
+      </div>
+      <div class="text--xm">
+        {{ 'ng.product-overview.lbl.modem-upgrade-banner-description' | translate }}
+      </div>
+    </div>
+    <div class="col-md-4 pt--n--md pt--m text-align--right--md">
+      <button
+        [attr.data-cy]="'modemUpgradeButton'"
+        *ngIf="changeTariffPlanUrl !== '/'"
+        class="button button--primary"
+        (click)="redirectToSalesFlow('marketing', locationId, 'modem-swap', 'email')"
+        type="button">
+        {{ 'ng.product-overview.btn.modem-upgrade' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

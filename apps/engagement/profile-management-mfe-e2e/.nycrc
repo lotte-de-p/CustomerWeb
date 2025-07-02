@@ -1,0 +1,30 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "json",
+    "cobertura",
+    "html-spa",
+    "html",
+    "text"
+  ],
+  "check-coverage": true,
+  "exclude": [
+          "../../../**/*.spec.ts",
+          "../../../**/dist/**",
+          "../../../**/*.json",
+          "../../../**/*.mock.ts"
+        ],
+  "include": [
+    "../profile-management-mfe/**",
+    "../profile-management-mfe-e2e/**",
+      "../../../libs/engagement/profile-management/**"
+  ],
+  "report-dir": "../../../coverage/apps/engagement/profile-management-mfe-e2e",
+  "cwd": "../../../"
+}

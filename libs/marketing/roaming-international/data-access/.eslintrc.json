@@ -1,0 +1,16 @@
+{
+  "extends": ["../../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {},
+      "extends": ["plugin:@nrwl/nx/angular"]
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@nrwl/nx/angular-template"],
+      "rules": {}
+    }
+  ]
+}

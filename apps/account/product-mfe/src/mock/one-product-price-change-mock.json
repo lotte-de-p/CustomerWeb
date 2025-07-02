@@ -1,0 +1,44 @@
+{
+  "url": "http://localhost:8080/public/api/product-price-change-service/v1/product-price-changes",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "accountNumber": "501190681",
+      "productPriceChanges": [
+        {
+          "address": {
+            "addressId": "5775899",
+            "street": "Kruierstraat",
+            "postalCode": "8660",
+            "city": "De Panne",
+            "country": "België",
+            "houseNumber": "8"
+          },
+          "billingFrequency": "YEARLY",
+          "priceChange": 10.47,
+          "vatInclusive": true,
+          "priceAccordingToConsumption": true,
+          "products": [
+            {
+              "description": {
+                "nl": "Auteursrechten",
+                "fr": "Droits d'auteur"
+              },
+              "oldPrice": 59.04,
+              "newPrice": 61.8
+            },
+            {
+              "description": {
+                "nl": "Abonnement kabel-tv",
+                "fr": "Abonnement télédistribution"
+              },
+              "oldPrice": 164.05,
+              "newPrice": 171.76
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

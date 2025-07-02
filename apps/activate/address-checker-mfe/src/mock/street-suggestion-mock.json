@@ -1,0 +1,6 @@
+{
+  "url": "http://localhost:8080/address/v1/suggest/street?municipalityGeoId=47bda15e-83c4-6b81-e054-00144f80cbe2&searchTerm=A",
+  "method": "GET",
+  "status": 200,
+  "response": ["Avenue Mutsaard", "Avenue Houba de Strooper"]
+}

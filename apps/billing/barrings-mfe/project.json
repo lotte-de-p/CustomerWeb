@@ -1,0 +1,169 @@
+{
+  "name": "customer-web-billing-barrings-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "",
+  "sourceRoot": "apps/billing/barrings-mfe/src",
+  "tags": ["scope:customer-web-billing-barrings-mfe", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/customer-web-billing-barrings-mfe",
+        "index": "apps/billing/barrings-mfe/src/index.html",
+        "main": "apps/billing/barrings-mfe/src/main.ts",
+        "polyfills": ["apps/billing/barrings-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/billing/barrings-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/billing/barrings-mfe/src/favicon.ico",
+          "apps/billing/barrings-mfe/src/assets",
+          "apps/billing/barrings-mfe/src/version.json"
+        ],
+        "styles": ["apps/billing/barrings-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/billing/barrings-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/billing/barrings-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/billing/barrings-mfe/src/favicon.ico",
+            "apps/billing/barrings-mfe/src/assets",
+            "apps/billing/barrings-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "mobile": {
+          "main": "apps/billing/barrings-mfe/src/mobile/main.ts"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "customer-web-billing-barrings-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "customer-web-billing-barrings-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4211,
+        "publicHost": "http://localhost:4211"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "customer-web-billing-barrings-mfe:build",
+        "extraWebpackConfig": "apps/billing/barrings-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/billing/barrings-mfe/**/*.ts", "apps/billing/barrings-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/billing/barrings-mfe/.storybook",
+        "browserTarget": "customer-web-billing-barrings-mfe:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/billing/barrings-mfe/.storybook",
+        "browserTarget": "billing/barrings-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/billing/barrings-mfe/src/styles.scss"],
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/customer-web-billing-barrings-mfe",
+        "configDir": "apps/billing/barrings-mfe/.storybook",
+        "browserTarget": "customer-web-billing-barrings-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/billing/barrings-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-mobile": {
+      "executor": "@telenet/aem-monorepo-plugin:build-mobile",
+      "options": {
+        "appPath": "apps/billing/barrings-mfe",
+        "skipGenerateI18n": false
+      }
+    },
+    "generate-i18n": {
+      "executor": "@telenet/aem-monorepo-plugin:i18n",
+      "options": {
+        "appPath": "apps/billing/barrings-mfe",
+        "prefixes": "ng.mobile-barrings"
+      }
+    }
+  }
+}

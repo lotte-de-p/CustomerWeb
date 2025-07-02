@@ -1,0 +1,15 @@
+{
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": true,
+    "compact": false,
+    "merge": true,
+    "reporter": [
+      "json",
+      "html-spa",
+      "text"
+    ],
+    "include": [
+    "../customer-registration-mfe/**", "../customer-registration-mfe-e2e/**", "../../../libs/sales/**"],
+    "report-dir": "../../../coverage/apps/sales/customer-registration-mfe-e2e",
+    "cwd": "../../../"
+}

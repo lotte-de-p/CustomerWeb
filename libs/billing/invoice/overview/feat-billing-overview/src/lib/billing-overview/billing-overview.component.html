@@ -1,0 +1,257 @@
+<tg-login [scopes]="scopes" data-testid="billing-overview">
+  <tg-billing-account-selector
+    class="pt--l--md"
+    [homePageLink]="homePageLink"
+    [isTelenetCustomer]="isTelenetCustomer"
+    [showBillScenario]="showBillScenario"></tg-billing-account-selector>
+  <div class="mt--xl" *ngIf="selectedBillingAccount() as selectedBillingAccount">
+    <tg-billing-overview-treatment-message
+      *ngIf="selectedBillingAccount.collectionsTreatmentMessage"
+      [collectionsTreatmentMessage]="
+        selectedBillingAccount.collectionsTreatmentMessage
+      "></tg-billing-overview-treatment-message>
+    <div [ngClass]="{ 'mt--l': selectedBillingAccount.collectionsTreatmentMessage }">
+      <wink-notification
+        *ngIf="isPaymentPlanActive()"
+        appearance="information"
+        has-close-icon="false"
+        data-testid="billing-overview-payment-plan-notification">
+        <wink-title
+          slot="heading"
+          html-tag="h5"
+          spacing-y="bottom"
+          text="{{ 'ng.billing-overview.lbl.payment-plan.title' | translate }}"></wink-title>
+        <wink-paragraph slot="content" appearance="body" size="regular"
+          >{{ 'ng.billing-overview.lbl.payment-plan.description' | translate }}
+        </wink-paragraph>
+      </wink-notification>
+    </div>
+  </div>
+  <ng-container *ngIf="loading(); else invoiceOverviewBlock">
+    <tg-billing-overview-skeleton></tg-billing-overview-skeleton>
+  </ng-container>
+  <ng-template #invoiceOverviewBlock>
+    <ng-container *ngIf="error()">
+      <tg-error-notification
+        data-testid="billing-overview-error"
+        [description]="'ng.billing-overview.error-overview-description' | translate"
+        [label]="'ng.billing-overview.error-overview-label' | translate"></tg-error-notification>
+    </ng-container>
+    <ng-container *ngIf="invoiceOverview() as invoiceOverview">
+      <tg-billing-overview-no-bills
+        *ngIf="
+          !invoiceOverview.unpaidInvoices.invoices.length &&
+            !invoiceOverview.paidInvoices.length &&
+            !paidInvoicesAvailable();
+          else invoicesPresent
+        "
+        [isTelenet]="isTelenetCustomer"
+        [telenetImg]="noBills"
+        [baseImg]="noBillsBase"
+        [text]="'ng.billing-overview.no-bills-yet' | translate" />
+      <ng-template #invoicesPresent>
+        <div class="invoice-overview-to-pay">
+          <div
+            class="display--flex justify-content--between mt--xxl mb--m"
+            *ngIf="invoiceOverview.unpaidInvoices.invoices.length">
+            <div class="heading--4 my--n">
+              {{ 'ng.billing-overview.to-pay' | translate }}
+            </div>
+            <span
+              *ngIf="isBusinessCustomer()"
+              data-testid="billing-overview-vat-inclusive"
+              class="font--body-small transparent_white_64 align-content--end"></span>
+          </div>
+
+          <ng-container *ngIf="selectedBillingAccount() as selectedBillingAccount">
+            <div
+              *ngIf="
+                invoiceOverview.unpaidInvoices.invoices.length && invoiceOverview.unpaidInvoices.totalAmount > 0;
+                else noUnpaid
+              ">
+              <div
+                *ngFor="let invoice of invoiceOverview.unpaidInvoices.invoices; let last = last"
+                class="background-white"
+                [ngClass]="{ 'mb--l': !last && isBusinessCustomer() }">
+                <tg-billing-unpaid-invoice
+                  [invoice]="invoice"
+                  [onlinePaymentLink]="getOnlinePaymentUrl(selectedBillingAccount, invoice)"
+                  [isEligibleForPayment]="isEligibleForPayment"
+                  [displayUnpaidStatus]="
+                    invoiceOverview.unpaidInvoices.invoices.length > 1 &&
+                    !isBusinessCustomer() &&
+                    !selectedBillingAccount?.isEligibleForManualPayment
+                  "
+                  [paymentMethod]="selectedBillingAccount.currentPaymentMethod"
+                  [isBusinessCustomer]="isBusinessCustomer() || false"
+                  [areExplicitBillScenariosAvailable]="areExplicitBillScenariosAvailable" />
+                <div
+                  *ngIf="!isBusinessCustomer()"
+                  class="border-width--b--r border--b--r border-color--all--light-grey"
+                  [ngClass]="{ 'border-style--b--solid': !last }"></div>
+              </div>
+
+              <ng-container *ngIf="isEligibleForPayment && !isBusinessCustomer()">
+                <div class="background-white">
+                  <div
+                    class="mx--l py--m border-width--t--r border--t--r border-color--t--light-grey border-style--t--solid display--flex flex-direction--column gap--s">
+                    <tg-billing-overview-unpaid-status
+                      *ngIf="
+                        invoiceOverview.unpaidInvoices.invoices.length === 1 &&
+                        !selectedBillingAccount?.isEligibleForManualPayment
+                      "
+                      [paymentMethod]="selectedBillingAccount.currentPaymentMethod"
+                      [paymentDueDate]="invoiceOverview.unpaidInvoices.invoices[0].paymentDueDate"
+                      [paymentStatus]="
+                        invoiceOverview.unpaidInvoices.invoices[0].paymentStatus
+                      "></tg-billing-overview-unpaid-status>
+                    <tg-billing-unpaid-status-notification
+                      *ngIf="selectedBillingAccount.isEligibleForManualPayment"
+                      icon="icon-error-shape-filled"
+                      textClass="color-notification--error--light">
+                      {{ 'ng.billing-overview.direct-debit.failed' | translate }}
+                    </tg-billing-unpaid-status-notification>
+                    <tg-billing-overview-pay
+                      [translationKey]="
+                        invoiceOverview.unpaidInvoices.invoices.length === 1
+                          ? 'ng.billing-overview.pay'
+                          : 'ng.billing-overview.total-pay'
+                      "
+                      [onlinePaymentLink]="
+                        getOnlinePaymentUrl(selectedBillingAccount, invoiceOverview.unpaidInvoices.invoices[0])
+                      "
+                      [amount]="invoiceOverview.unpaidInvoices.totalAmount"
+                      [locale]="locale"></tg-billing-overview-pay>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <ng-template #noUnpaid>
+              <tg-billing-overview-no-bills
+                data-testid="billing-overview-no-unpaid-bills"
+                [totalAmount]="selectedBillingAccount.outstandingBalance"
+                [isTelenet]="isTelenetCustomer"
+                [telenetImg]="noUnpaidBills"
+                [baseImg]="noUnpaidBillsBase"
+                [text]="'ng.billing-overview.no-unpaid-bills-yet' | translate"
+                [locale]="locale" />
+            </ng-template>
+          </ng-container>
+        </div>
+        <div
+          *ngIf="isPaymentMethodUpdated"
+          class="invoice-overview-payment-method-change mt--l--md mt--m"
+          data-testid="billing-overview-payment-method-changed">
+          <div class="display--flex flex-direction--column mt--m--md mb--s mt--s">
+            <div class="heading--5 my--n mb--xxs--md">
+              {{ 'ng.billing-overview.planned-section' | translate }}
+            </div>
+            <tg-billing-overview-payment-method-changed
+              [updatedPaymentMethod]="updatedPaymentMethod"></tg-billing-overview-payment-method-changed>
+          </div>
+        </div>
+        <div class="invoice-overview-paid" *ngIf="paidInvoicesAvailable">
+          <div class="display--flex justify-content--between mt--xl mb--m">
+            <div class="heading--4 my--n">{{ 'ng.billing-overview.paid' | translate }}</div>
+            <span
+              *ngIf="isBusinessCustomer()"
+              data-testid="billing-overview-vat-inclusive"
+              class="font--body-small transparent_white_64 align-content--end"
+              >{{ 'ng.billing-overview.incl.VAT' | translate }}</span
+            >
+          </div>
+          <div class="background-white pb--m" *ngIf="selectedBillingAccount() as selectedBillingAccount">
+            <div *ngFor="let invoiceGroup of invoiceOverview.paidInvoices">
+              <div class="mx--l pt--l color-shade_72" data-testid="billing-overview-paid-invoice-year">
+                {{ invoiceGroup.invoiceYear }}
+              </div>
+              <div *ngFor="let invoice of invoiceGroup.invoices; let last = last" class="invoice pl--l">
+                <tg-billing-paid-invoice
+                  [invoice]="invoice"
+                  [paymentMethod]="selectedBillingAccount.currentPaymentMethod"
+                  [areExplicitBillScenariosAvailable]="areExplicitBillScenariosAvailable" />
+                <tg-billing-overview-explicit-bill-scenarios
+                  data-testid="billing-overview-paid-bill-scenario"
+                  *ngIf="areExplicitBillScenariosAvailable"
+                  [billingScenarios]="invoice.billingScenarios || []"></tg-billing-overview-explicit-bill-scenarios>
+                <div
+                  class="border-width--b--r border--b--r border-color--all--light-grey"
+                  [ngClass]="{ 'border-style--b--solid': !last }"></div>
+              </div>
+            </div>
+            <ng-container *ngIf="showAll(); else loadMoreLink">
+              <div
+                class="pt--m display--flex justify-content--center align-items--center flex-direction--column"
+                data-testid="billing-overview-all-loaded">
+                <wink-img
+                  brandImage
+                  [isTelenet]="isTelenetCustomer"
+                  [img]="allLoaded"
+                  [telenetImg]="allLoaded"
+                  [baseImg]="allLoadedBase"></wink-img>
+                <b>{{ 'ng.billing-overview.end-of-online-history' | translate }}</b>
+                <div class="color-shade_72" [innerHTML]="'ng.billing-overview.missing-invoices' | translate"></div>
+              </div>
+            </ng-container>
+            <ng-template #loadMoreLink>
+              <wink-button
+                (click)="loadMore()"
+                data-testid="billing-overview-view-all-invoices"
+                class="ml--l mt--m"
+                text="{{ 'ng.billing-overview.view-all-invoices' | translate }}"
+                type="button"
+                appearance="tertiary"
+                size="md"
+                width="none"
+                status="none">
+              </wink-button>
+            </ng-template>
+          </div>
+        </div>
+        <div
+          class="invoice-overview-export mt--m"
+          *ngIf="isBusinessCustomer() && selectedBillingAccount() as billingAccount">
+          <tg-billing-overview-export
+            [billingAccountNumber]="billingAccount.billingAccountNumber"></tg-billing-overview-export>
+        </div>
+      </ng-template>
+    </ng-container>
+  </ng-template>
+  <ng-container *ngIf="selectedBillingAccount() as selectedBillingAccount">
+    <h4 data-testid="billing-overview-title-billing-settings">
+      {{ 'ng.billing-overview.title.billing-settings' | translate }}
+    </h4>
+    <div
+      class="background-white mt--l py--l--md p--m px--n--md display--flex width--full flex-direction--column flex-direction--row--md">
+      <div
+        class="mr--s--md px--l--md mb--m mb--n--md flex--1"
+        [attr.data-testid]="'billing-overview-current-payment-method-card'">
+        <tg-billing-overview-current-summary
+          [headerText]="'ng.billing-overview.title.current-payment-method' | translate"
+          [descriptions]="selectedBillingAccount | toDescriptions: selectedBillingAccount.currentPaymentMethod"
+          [billingSettingsUrl]="getBillingSettingsUrl(selectedBillingAccount)"
+          [type]="'PAYMENT_METHOD'"
+          [updatedPaymentMethod]="updatedPaymentMethod"
+          [attr.data-testid]="'billing-overview-title-current-payment-method'">
+        </tg-billing-overview-current-summary>
+      </div>
+      <div class="border--r--r border-width--r--r border-color--r--shade_16"></div>
+      <div class="divider--xxs__light-grey"></div>
+      <div
+        class="ml--s--md px--l--md mt--m mb--n--md flex--1 mt--n--md"
+        [attr.data-testid]="'billing-overview-current-delivery-method-card'">
+        <tg-billing-overview-current-summary
+          [headerText]="'ng.billing-overview.title.current-delivery-method' | translate"
+          [descriptions]="selectedBillingAccount | toDescriptions: selectedBillingAccount.dispatchMethod"
+          [billingSettingsUrl]="getBillingSettingsUrl(selectedBillingAccount)"
+          [type]="'DELIVERY_METHOD'"
+          [attr.data-testid]="'billing-overview-title-current-delivery-method'"></tg-billing-overview-current-summary>
+      </div>
+    </div>
+    <div class="background-white px--l--md pb--l px--m">
+      <tg-billing-payment-encouragement
+        [paymentMethod]="selectedBillingAccount.currentPaymentMethod"
+        [dispatchMethod]="selectedBillingAccount.dispatchMethod"></tg-billing-payment-encouragement>
+    </div>
+  </ng-container>
+</tg-login>

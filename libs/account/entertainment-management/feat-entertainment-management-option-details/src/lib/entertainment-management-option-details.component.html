@@ -1,0 +1,20 @@
+<tg-login [scopes]="scope" (componentCanRender)="initAfterLoggedIn()">
+  @if (selectEntertainmentOptionDetails$ | async) {
+    <wink-button
+      (click)="navigateToOptions()"
+      class="cursor--pointer"
+      text="Back"
+      type="button"
+      element="a"
+      appearance="secondary"
+      size="md">
+    </wink-button>
+    @if ((selectEntertainmentOptionDetailsType$ | async) == 'tiered') {
+      <tg-entertainment-management-tiered-list
+        [data]="(selectEntertainmentOptionDetails$ | async)!"></tg-entertainment-management-tiered-list>
+    } @else if ((selectEntertainmentOptionDetailsType$ | async) == 'standalone') {
+      <tg-entertainment-management-standalone
+        [data]="(selectEntertainmentOptionDetails$ | async)!"></tg-entertainment-management-standalone>
+    }
+  }
+</tg-login>

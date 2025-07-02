@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 1`] = `
+"import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { TestEffects } from './test.effects';
+import { testFeature } from './test.reducer';
+
+@NgModule({
+  imports: [EffectsModule.forFeature([TestEffects]), StoreModule.forFeature(testFeature)],
+})
+export class TestNgrxModule {}
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 2`] = `
+"export interface TestState {
+}
+
+export const defaultState: TestState = {
+};
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 3`] = `
+"import { createFeatureSelector } from '@ngrx/store';
+
+import { TestState } from './test.state';
+
+export const featureState = createFeatureSelector<TestState>('testFeature');
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 4`] = `
+"import { Action, createFeature, createReducer } from '@ngrx/store';
+
+import { TestState, defaultState } from './test.state';
+
+export const reducer = createReducer(
+  defaultState,
+);
+
+export function testReducer(state: TestState = defaultState, action: Action): TestState {
+  return reducer(state, action);
+}
+
+export const testFeature = createFeature({
+  name: 'testFeature',
+  reducer: testReducer,
+});
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 5`] = `
+"import { Injectable } from '@angular/core';
+import { Actions } from '@ngrx/effects';
+import * as fromActions from './test.actions';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class TestEffects {
+  constructor(private readonly actions$: Actions) {}
+}
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 6`] = `
+"import { TestBed } from '@angular/core/testing';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { Action } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
+
+import * as testActions from './test.actions';
+import { TestEffects } from './test.effects';
+
+describe('TestEffects', () => {
+  let effects: TestEffects;
+  let actions$: Observable<Action>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        TestEffects,
+        provideMockStore(),
+        provideMockActions(() => actions$),
+      ],
+    });
+
+    effects = TestBed.inject(TestEffects);
+  });
+
+  it(\`should create\`, () => {
+    expect(effects).toBeTruthy();
+  });
+});
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 7`] = `
+"import { createAction, props } from '@ngrx/store';
+
+export const exampleAction = createAction('[test-lib - test] example');
+export const exampleSuccessAction = createAction(
+  '[test-lib - test] example success response',
+  props<{ message: string }>()
+);
+export const exampleErrorAction = createAction('[test-lib - test] example Error', props<{ error: Error }>());
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 8`] = `null`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 9`] = `null`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 10`] = `
+"import { createFeatureSelector } from '@ngrx/store';
+
+import { TestState } from './test.state';
+
+export const featureState = createFeatureSelector<TestState>('testFeature');
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 11`] = `
+"import { Action, createFeature, createReducer } from '@ngrx/store';
+
+import { TestState, defaultState } from './test.state';
+
+export const reducer = createReducer(
+  defaultState,
+);
+
+export function testReducer(state: TestState = defaultState, action: Action): TestState {
+  return reducer(state, action);
+}
+
+export const testFeature = createFeature({
+  name: 'testFeature',
+  reducer: testReducer,
+});
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 12`] = `
+"import { Injectable } from '@angular/core';
+import { Actions } from '@ngrx/effects';
+import * as fromActions from './test.actions';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class TestEffects {
+  constructor(private readonly actions$: Actions) {}
+}
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 13`] = `
+"import { TestBed } from '@angular/core/testing';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { Action } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
+
+import * as testActions from './test.actions';
+import { TestEffects } from './test.effects';
+
+describe('TestEffects', () => {
+  let effects: TestEffects;
+  let actions$: Observable<Action>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        TestEffects,
+        provideMockStore(),
+        provideMockActions(() => actions$),
+      ],
+    });
+
+    effects = TestBed.inject(TestEffects);
+  });
+
+  it(\`should create\`, () => {
+    expect(effects).toBeTruthy();
+  });
+});
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 14`] = `
+"import { createAction, props } from '@ngrx/store';
+
+export const exampleAction = createAction('[test-lib - test] example');
+export const exampleSuccessAction = createAction(
+  '[test-lib - test] example success response',
+  props<{ message: string }>()
+);
+export const exampleErrorAction = createAction('[test-lib - test] example Error', props<{ error: Error }>());
+"
+`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 15`] = `null`;
+
+exports[`state generator When a facade should be generated should generate the ngrx state files 16`] = `null`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 1`] = `
+"import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { TestEffects } from './test.effects';
+import { testFeature } from './test.reducer';
+
+@NgModule({
+  imports: [EffectsModule.forFeature([TestEffects]), StoreModule.forFeature(testFeature)],
+})
+export class TestNgrxModule {}
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 2`] = `
+"export interface TestState {
+}
+
+export const defaultState: TestState = {
+};
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 3`] = `
+"import { createFeatureSelector } from '@ngrx/store';
+
+import { TestState } from './test.state';
+
+export const featureState = createFeatureSelector<TestState>('testFeature');
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 4`] = `
+"import { Action, createFeature, createReducer } from '@ngrx/store';
+
+import { TestState, defaultState } from './test.state';
+
+export const reducer = createReducer(
+  defaultState,
+);
+
+export function testReducer(state: TestState = defaultState, action: Action): TestState {
+  return reducer(state, action);
+}
+
+export const testFeature = createFeature({
+  name: 'testFeature',
+  reducer: testReducer,
+});
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 5`] = `
+"import { Injectable } from '@angular/core';
+import { Actions } from '@ngrx/effects';
+import * as fromActions from './test.actions';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class TestEffects {
+  constructor(private readonly actions$: Actions) {}
+}
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 6`] = `
+"import { TestBed } from '@angular/core/testing';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { Action } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
+
+import * as testActions from './test.actions';
+import { TestEffects } from './test.effects';
+
+describe('TestEffects', () => {
+  let effects: TestEffects;
+  let actions$: Observable<Action>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        TestEffects,
+        provideMockStore(),
+        provideMockActions(() => actions$),
+      ],
+    });
+
+    effects = TestBed.inject(TestEffects);
+  });
+
+  it(\`should create\`, () => {
+    expect(effects).toBeTruthy();
+  });
+});
+"
+`;
+
+exports[`state generator When no facade should be generated should generate the ngrx state files 7`] = `
+"import { createAction, props } from '@ngrx/store';
+
+export const exampleAction = createAction('[test-lib - test] example');
+export const exampleSuccessAction = createAction(
+  '[test-lib - test] example success response',
+  props<{ message: string }>()
+);
+export const exampleErrorAction = createAction('[test-lib - test] example Error', props<{ error: Error }>());
+"
+`;

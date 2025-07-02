@@ -1,0 +1,59 @@
+<tg-login
+  (componentCanRender)="initAfterLoggedIn()"
+  [messageGroupName]="messageGroupName"
+  [scopes]="scopes"
+  id="fleet-user-mobile-usage-overview">
+  <app-loader [enableLoader]="enableLoader" [pageType]="pageType" [enableMask]="enableMask" [startByDefault]="false">
+  </app-loader>
+  @if (messageGroupNames?.length > 0) {
+    <ng-container>
+      @for (messageGroupName of messageGroupNames; track messageGroupName) {
+        <app-message-flow [messageGroupName]="messageGroupName"></app-message-flow>
+      }
+    </ng-container>
+  }
+  <app-message-flow [messageGroupName]="customMessageGroupName"></app-message-flow>
+  @if (!showCardView) {
+    <app-message-flow [messageGroupName]="messageGroupName">
+      @if (isProductStatusLoaded) {
+        <app-bundle-line-selector
+          [messageGroupName]="messageGroupName"
+          (bundleLines)="getBundleLines($event)"></app-bundle-line-selector>
+      }
+      @if (mobileUsage) {
+        <ng-container>
+          <div class="mobile-overview-usage content-section">
+            <div class="content-section__details">
+              <app-usage-blob
+                [usage]="mobileUsage"
+                [autoPause]="mobileAutoPause"
+                [selectedAccountIdentifier]="selectedAccountIdentifier"
+                [isConnect5Bundle]="isConnect5Bundle"
+                [componentInstanceID]="componentInstanceID"
+                [enableSB20SBBudget]="isSB20SBBudgetEnabled"
+                (messageEvent)="setMessageGroups($event)"
+                (updateUsage)="updateUsage($event)">
+              </app-usage-blob>
+              <app-consumption-data
+                [usage]="mobileUsage"
+                [enableSBBudget]="isSB20SBBudgetEnabled"
+                [autoPause]="mobileAutoPause"
+                (messageEvent)="setMessageGroups($event)">
+              </app-consumption-data>
+            </div>
+          </div>
+        </ng-container>
+      }
+    </app-message-flow>
+  }
+
+  @if (showCardView && isProductStatusLoaded) {
+    <ng-container>
+      <app-bundle-card
+        [mobileUsageOverviewURL]="usageDetailsLink"
+        [cardTitle]="cardTitle"
+        [hasMobileProduct]="hasMobileProduct"
+        [hasNotActiveAndPendingActivationMobileLines]="hasNotActiveAndPendingActivationMobileLines"></app-bundle-card>
+    </ng-container>
+  }
+</tg-login>

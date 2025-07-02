@@ -1,0 +1,45 @@
+<div *ngIf="customLabel">
+  <!-- optional class can be added, defined by parent component -->
+  <div class="text-flow text-flow--h3" [class.form__label--error]="error">{{ getLabel() | translate }}</div>
+  <div class="whitespace whitespace--tiny"></div>
+
+  <!-- Error banner/message for the input groups with label-modifiers -->
+</div>
+<div class="label-modifier-box card-mini">
+  <div
+    class="label-modifier-slot animation-show-slide-up"
+    *ngFor="let option of optionList; let i = index"
+    [style]="'--animation-delay:' + i">
+    <input
+      type="radio"
+      name="choice-{{ key }}"
+      value="{{ option.value }}"
+      id="choice-{{ i }}-{{ key }}"
+      class="label-modifier-radio"
+      [checked]="selectedOption && option.value === selectedOption.value" />
+    <div class="label-modifier--append label-modifier--container cursor--pointer">
+      <div class="label-modifier--body">
+        <div class="label-modifier--body--inner-container">
+          <label
+            for="choice-{{ i }}-{{ key }}"
+            class="label-modifier-radio__label"
+            (click)="selectOption(option)"></label>
+          <div class="label-modifier-content__header">
+            <i class="icon icon-tick"></i>
+          </div>
+          <div class="label-modifier-content__body">
+            <div
+              class="text-flow text-flow--button label-modifier-content__body-label"
+              [innerHTML]="getOptionLabel(option) | translate"></div>
+            <div
+              *ngIf="option.text && option.text !== ''"
+              class="text-flow text-flow--legal label-modifier-content__body-range"
+              [innerHTML]="getOptionSubLabel(option) | translate"></div>
+          </div>
+          <div class="label-modifier-content__timing"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Error label-message for the default input group -->
+</div>

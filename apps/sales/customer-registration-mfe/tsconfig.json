@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": false,
+    "strictPropertyInitialization": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": false
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json",
+    },
+    {
+      "path": "./tsconfig.spec.json",
+    },
+    {
+      "path": "./tsconfig.editor.json",
+    },
+  ],
+  "extends": "../../../tsconfig.base.json",
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "esModuleInterop": true
+  },
+}

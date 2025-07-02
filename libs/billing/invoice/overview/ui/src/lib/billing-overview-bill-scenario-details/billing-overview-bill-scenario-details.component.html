@@ -1,0 +1,114 @@
+<div data-testid="bill-scenarios" #billScenarios>
+  <wink-button appearance="tertiary" size="md" element="a" icon="chevron-right" (click)="open($event)"></wink-button>
+</div>
+<tg-slide-menu
+  [showMenu]="showMenu"
+  [backgroundColor]="'background-shade_04'"
+  (closeMenu)="close()"
+  padding="px--xs"
+  data-testid="billing-scenario-details">
+  <div>
+    <div class="mb--l">
+      <tg-billing-overview-download-error-message-notification
+        data-testid="bill-scenario-details-error-notification"
+        #errorNotification
+        *ngIf="showError"></tg-billing-overview-download-error-message-notification>
+    </div>
+    <div>
+      <wink-title
+        data-testid="bill-scenario-details-header"
+        class="custom-font-weight"
+        [text]="'ng.billing-overview.bill-scenario-details-header' | translate: { invoiceDate: formattedInvoiceDate() }"
+        html-tag="h5"
+        spacing-y="none"></wink-title>
+    </div>
+    <div class="display--flex gap--s">
+      <div class="display--flex">
+        <wink-icon
+          data-testid="bill-scenario-details-invoice-reference-icon"
+          icon="file"
+          appearance="default"
+          [iconColor]="'subtlest'"
+          size="sm"></wink-icon>
+        <wink-paragraph
+          data-testid="bill-scenario-details-invoice-reference-salutation"
+          size="regular"
+          appearance="caption"
+          class="gap--xxxs color-transparent_shade_64">
+          {{ 'ng.billing-overview.bill-scenario-invoice-reference-salutation' | translate }}
+          {{ invoice.invoiceNumber }}
+        </wink-paragraph>
+      </div>
+    </div>
+    <div class="my--l">
+      <div>
+        <tg-billing-overview-amount
+          data-testid="bill-scenario-details-invoice-amount"
+          [invoiceAmount]="invoice.invoiceAmount"
+          [outstandingDebt]="0"
+          [locale]="locale" />
+      </div>
+      <div>
+        <tg-billing-overview-unpaid-status
+          data-testid="bill-scenario-details-invoice-unpaid-status"
+          *ngIf="paymentStatus === 'unpaid'"
+          [paymentMethod]="paymentMethod"
+          [paymentDueDate]="invoice.paymentDueDate"
+          [paymentStatus]="invoice.paymentStatus" />
+        <tg-billing-overview-paid-status
+          data-testid="bill-scenario-details-invoice-paid-status"
+          *ngIf="paymentStatus === 'paid'" />
+      </div>
+    </div>
+    <div *ngIf="invoice?.billingScenarios">
+      <div *ngIf="invoice?.billingScenarios">
+        <div *ngFor="let groupedScenario of groupedScenarios; let last = last" class="my--m">
+          <div class="background-streamz-white content-section">
+            <div class="m--l">
+              <wink-title
+                data-testid="bill-scenario-details-invoice-scenario-title"
+                [text]="groupedScenario.type | translate"
+                html-tag="h6"
+                spacing-y="none"></wink-title>
+            </div>
+            <div class="divider--xxs__light-grey mx--l"></div>
+            <div *ngFor="let scenarioName of groupedScenario.scenarioNames; let last = last">
+              <tg-billing-overview-bill-shock-message
+                data-testid="bill-scenario-details-invoice-bill-shock-message"
+                [scenario]="scenarioName"></tg-billing-overview-bill-shock-message>
+              <div *ngIf="!last" class="divider--xxs__light-grey mx--l"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt--m">
+        <wink-button
+          data-testid="bill-scenario-details-bill-shock-download-invoice-button"
+          appearance="secondary"
+          size="md"
+          width="full"
+          icon="download"
+          [iconPosition]="'left'"
+          type="button"
+          class="mb--xl"
+          [status]="loading ? 'loading' : 'none'"
+          [loadingText]="'ng.billing-overview.export-in-progress-info' | translate"
+          [text]="'ng.billing-overview.lbl.bill-shock-download-invoice-button' | translate"
+          (click)="downloadInvoice()"></wink-button>
+        <ng-container *ngIf="paymentStatus === 'unpaid'">
+          <hr />
+          <footer>
+            <wink-button
+              data-testid="bill-scenario-details-bill-shock-redirect-to-payment-button"
+              text="{{ 'ng.billing-overview.lbl.bill-shock-redirect-to-payment' | translate }}"
+              appearance="primary"
+              size="md"
+              width="full"
+              type="button"
+              (click)="redirectToOnlinePayment($event)"></wink-button>
+          </footer>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</tg-slide-menu>

@@ -1,0 +1,84 @@
+<div class="minimal-page" [attr.data-cy]="'mobile-number-page'">
+  <div class="Panel container--care">
+    <div class="p--m--sm p--n--md p--s mb--l display--flex row width--full">
+      <div class="col-6">
+        <div class="pb--n--md px--l">
+          <div class="my--n mx--auto height--auto">
+            <div
+              class="hidden-desktop text-align--left--md pb--m--md pb--s text--m line-height--20 text-weight--g color-mid-grey">
+              {{ 'ng.create-fleet-profile.title.create-profile' | translate }}
+            </div>
+            <div [inlineSVG]="profileImagePath">
+              <img [src]="profileImagePath" alt="profileImage" class="width--full" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div id="scrollPoint"></div>
+        <div class="width--auto--md width--full pb--l--md pb--m">
+          <div class="text-align--center text-align--left--md mb--xxs--sm mb--s line-height--24">
+            <div
+              class="hidden-mobile color-mid-grey text-align--left--md pb--m--md pb--s text--m line-height--20 text-weight--g">
+              {{ 'ng.create-fleet-profile.title.create-profile' | translate }}
+            </div>
+            <div class="text--xl line-height--28--md line-height--20 text-weight--g text--l pb--s">
+              {{ 'ng.create-fleet-profile.lbl.create-profile-description' | translate }}
+            </div>
+            <div>
+              {{ 'ng.create-fleet-profile.lbl.create-profile-note' | translate }}
+            </div>
+            <div class="notification notification--success" *ngIf="isInvitationSent">
+              <span class="icon icon-check-shape success">
+                {{ 'resend-invitation.response-success-resend-invitation' | translate }}
+              </span>
+            </div>
+          </div>
+          <div>
+            <form>
+              <div class="form-group mobile-number">
+                <label for="phone-input" class="cursor--default">
+                  {{ 'ng.create-fleet-profile.lbl.create-profile-number-field' | translate }}
+                </label>
+                <input
+                  type="text"
+                  id="phone-input"
+                  class="form__input"
+                  placeholder="{{ 'ng.create-fleet-profile.lbl.create-profile-number-field-placeholder' | translate }}"
+                  [attr.data-cy]="'phone-number-field'"
+                  [attr.data-testid]="'phone-number-field'"
+                  [formControl]="phoneNumber" />
+                <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+                  <div class="formErrorInput" *ngIf="phoneNumber.errors['pattern']" [attr.data-cy]="'invalid-format'">
+                    {{ 'ng.create-fleet-profile.error.mobile-number-constraint' | translate }}
+                  </div>
+                  <div class="formErrorInput" *ngIf="phoneNumber.errors['required']" [attr.data-cy]="'required'">
+                    {{ 'ng.create-fleet-profile.error.mobile-number-mandatory' | translate }}
+                  </div>
+                  <div class="formErrorInput" *ngIf="invalidFleetNumberError" [attr.data-cy]="'invalid-fleet-number'">
+                    {{ 'ng.create-fleet-profile.error.invalid-fleet-number' | translate }}
+                  </div>
+                  <div class="formErrorInput" *ngIf="accountAlreadyExistsError" [attr.data-cy]="'account-exist'">
+                    {{ 'ng.create-fleet-profile.error.active-profile' | translate }}
+                  </div>
+                  <div class="formErrorInput" *ngIf="activeAccountValidationError" [attr.data-cy]="'active-account'">
+                    {{ 'ng.create-fleet-profile.error.inactive-profile' | translate }}
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="text--s line-height--20 color-dark-grey pb--xxs mt--l">
+            {{ 'ng.create-fleet-profile.lbl.disclaimer-title' | translate }}
+          </div>
+          <div class="text--xs line-height--12 color-mid-grey">
+            <span
+              [innerHtml]="
+                'ng.create-fleet-profile.lbl.disclaimer-info' | translate: { privacyLink: privacyLink }
+              "></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,484 @@
+{
+  "product": {
+    "productid": "WIGO0025",
+    "externalProductCode": "WIGO0025",
+    "labelkey": "WIGO 25GB",
+    "producttype": "bundle",
+    "weight": 260,
+    "apps": [],
+    "customercategories": ["Residential", "Event/Demo", "Production Test"],
+    "category": [
+      "For Rules - Offerings for (120531)",
+      "For Rules - (9) Personeelskorting Telenet",
+      "For Rules - Partner Discount",
+      "For Sponsor Discount - All TLO Products",
+      "For Rules - (453) Externe medewerkers korting",
+      "For Rules - TLOs for WIGO Service Policies",
+      "For Rules - Price reduction during 3 months",
+      "For Rules - WIGO 4P High Tier Bundles",
+      "For Rules - Bundle TLOs",
+      "For Rules - Plans for Freeride",
+      "For Rules - TLOs with Speedboost",
+      "For Rules - Fixed and Bundles Category",
+      "For Discount - offerings for Free Activation discount",
+      "4P Bundle",
+      "For Rules - WIGO Bundles",
+      "For Rules - WIGO 4P Bundles",
+      "For Rules - RES Digital TV and Bundles with Digital TV",
+      "For Rules - Multi DTV Promo",
+      "For Discount - 4P/3P Bundles",
+      "For Rules - All-Internet + TV, WIGO",
+      "For Rules - All-Internet + TV, WIGO for (100650)",
+      "For Rules - RES Bundles",
+      "For Rules - WIGO for (126941)",
+      "For Rules - For (112721) discount",
+      "For Rules - For (124951) discount",
+      "For Rules - For (114321) discount",
+      "For Rules - Available for eSIM",
+      "Post-Paid Mobile"
+    ],
+    "visible": false,
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "WIGO 25GB",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/wigo-25gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "WIGO 25GB",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/wigo-25gb.png"
+      },
+      {
+        "locale": "en",
+        "name": "WIGO 25GB",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/wigo-25gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "WIGO 25GB",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "WIGO 25GB",
+          "logo": ""
+        },
+        {
+          "locale": "en",
+          "name": "WIGO 25GB",
+          "logo": ""
+        }
+      ]
+    },
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "VOICE",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Unlimited calls",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Unlimited calls",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Unlimited calls",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "TEXT",
+            "value": "unlimited",
+            "unit": "number",
+            "visible": true,
+            "weight": "30",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "unlimited sms in Belgium and EU",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "unlimited sms in Belgium and EU",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "unlimited sms in Belgium and EU",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "TV",
+        "experience": {
+          "experiencetype": "ENTERTAINMENT"
+        },
+        "specifications": [
+          {
+            "labelkey": "DTV",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Dtv/Tv box",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Dtv/Tv box",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Dtv/Tv box",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "WIGO 25GB monthly allowance",
+            "value": "25",
+            "unit": "GB",
+            "visible": true,
+            "weight": "15",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "WIGO 25GB mobile data",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "WIGO 25GB mobile data",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "WIGO 25GB mobile data",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "Free EU",
+            "producttype": "MOBILE",
+            "value": "19",
+            "unit": "GB",
+            "visible": true,
+            "weight": "17",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "mobile data in EU",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "mobiele data in EU",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "données mobiles en EU",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "FreeG",
+            "producttype": "MOBILE",
+            "value": "100",
+            "unit": "GB",
+            "visible": true,
+            "weight": "16",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "mobile data in Belgium",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "mobiele data in België",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "données mobiles en Belgique",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "FIXED_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "VOICE",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "fixed Unlimited calls",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "fixed Unlimited calls",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "fixed Unlimited calls",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "FIXED_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.fixedinternet.volume.download.fup",
+            "value": "unlimited",
+            "unit": "GB",
+            "visible": true,
+            "weight": "15",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "unlimited WIGO Data",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "unlimited WIGO Data",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "unlimited WIGO Data",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.bundle.mobile.maxlines",
+            "value": "5",
+            "visible": true,
+            "weight": "1"
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "124,0",
+        "unit": "EUR"
+      },
+      "productsegment": "RMD",
+      "productgroup": "OTHER"
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "constituents": [
+      {
+        "type": "internet_line",
+        "minCount": "1",
+        "maxCount": "1"
+      },
+      {
+        "type": "mobile_line",
+        "minCount": "0",
+        "maxCount": "5"
+      },
+      {
+        "type": "dtv[EOS]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "dtv[SIPADAN]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "fixed_telephone",
+        "minCount": "0",
+        "maxCount": "1"
+      }
+    ],
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "80",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "95",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false
+            }
+          ]
+        },
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncludedUnlimitedNational",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "80",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "95",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false
+            }
+          ]
+        },
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncludedUnlimitedEU",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "80",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "95",
+              "isEditable": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false
+            }
+          ]
+        }
+      ],
+      "internet": [
+        {
+          "category": "FUP",
+          "preferenceGroup": "InternetFUP",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Internet100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "usageLimits": {
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": true,
+            "values": [],
+            "minValue": "0 Euro",
+            "maxValue": "300 Euro",
+            "defaultValue": "125 Euro"
+          }
+        ]
+      }
+    },
+    "requiresInstallation": true,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

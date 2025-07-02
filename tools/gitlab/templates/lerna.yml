@@ -1,0 +1,25 @@
+include:
+  - local: '/tools/gitlab/images/distributed.yml'
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.publish:npm-libs:
+  image: $NODE_BUILD_IMAGE
+  stage: package
+  extends: .distributed-base
+  dependencies:
+    - prepare:version
+  script:
+    - ls
+    - npm config set //artifact-repo.rel.apps.telenet.be/repository/eDev_NPM_Private/:_auth=${NEXUS_AUTH_TOKEN} #Is set in Gitlab environment variables
+    - git config --global user.email "${GITLAB_USER_EMAIL:-$GITLAB_USER_EMAIL}" && git config --global user.name "${GITLAB_USER_LOGIN:-$GITLAB_USER_LOGIN}"
+    - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
+    - lerna version $VERSION --yes --force-publish --no-git-tag-version # version package.json without commit.
+    - nx run-many --target build --all --parallel=1 #build code
+    - git commit -a -m "local commit without push to prevent lerna publish from failing." #local commit
+    - lerna publish from-package --yes --registry ${NEXUS_HOST_URL}/repository/eDev_NPM_Private/ #publish to Nexus
+  when: manual
+  needs:
+    - build:monorepo
+    - prepare:version
+    - sonar:npm-libs
+  only: !reference [.allowed-branches-no-merge-requests]

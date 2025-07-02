@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="141px" height="104px" viewBox="0 0 141 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Central Success Illustration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-33.3%" y="-33.3%" width="166.7%" height="166.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="SIM-Management---Aligned-to-Base" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SIM-Management---Re-assign-12.0" transform="translate(-653.000000, -226.000000)">
+            <g id="Group-2" transform="translate(440.000000, 228.000000)">
+                <g id="Central-Success-Illustration" transform="translate(215.000000, 0.000000)">
+                    <g id="Group" transform="translate(17.000000, 2.000000)" stroke="#179A99" stroke-linecap="round" stroke-width="3">
+                        <g id="Tick">
+                            <path d="M81.6552166,13.7753016 C90.5110425,22.4829853 96,34.5998637 96,48 C96,74.5097599 74.5097599,96 48,96 C21.4902401,96 0,74.5097599 0,48 C0,21.492164 21.4902401,3.55271368e-15 48,3.55271368e-15 C56.9962724,3.55271368e-15 65.4153673,2.47609123 72.6108461,6.77991102" id="Stroke-65"></path>
+                            <polyline id="Stroke-67" stroke-linejoin="round" points="24 54.3644808 43.2492698 73.7142857 72 25.7142857"></polyline>
+                        </g>
+                    </g>
+                    <circle id="Oval-2-Copy-9" fill="#FDC400" fill-rule="nonzero" cx="121" cy="94" r="8"></circle>
+                    <circle id="Oval-2-Copy-10" fill="#F5B0A3" fill-rule="nonzero" cx="135" cy="71" r="4"></circle>
+                    <circle id="Oval-2-Copy-11" fill="#68B5C8" fill-rule="nonzero" filter="url(#filter-1)" cx="4.5" cy="4.5" r="4.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

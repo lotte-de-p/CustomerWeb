@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="background-shade_04">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Return Devices MFE</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <script src="https://www.int.telenet.be/en.pageLocaleData.js"></script>
+
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.int.telenet.be/ocapi',
+          'omapi-url': 'https://api.int.telenet.be/omapi',
+          'openid-auth-url': 'https://login.int.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.int.telenet.be/openid',
+          'openid-client-id': 'ocapi',
+        };
+      })();
+    </script>
+  <link rel="stylesheet" href="styles.css"></head>
+  <body class="background-shade_04">
+    <tg-return-devices-local></tg-return-devices-local>
+  <script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>

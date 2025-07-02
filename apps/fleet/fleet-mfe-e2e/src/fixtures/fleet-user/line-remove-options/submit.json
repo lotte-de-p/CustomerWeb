@@ -1,0 +1,125 @@
+{
+  "status": "Submitting",
+  "customerId": "9158437347613404263",
+  "id": "9166671059613918354",
+  "name": "Order #0038929698",
+  "prices": {
+    "taxInclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "21,78",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "21,78",
+      "upfrontTotal": "0,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "18,00",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "18,00",
+      "upfrontTotal": "0,00"
+    }
+  },
+  "lineItems": [
+    {
+      "orderItems": [
+        {
+          "id": "9166671055213918454",
+          "name": "Mobile 1 / 0498341490",
+          "type": "New Option Acquisition",
+          "publicateNumber": false,
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "2,42",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "2,42",
+              "upfrontTotal": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "2,00",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "2,00",
+              "upfrontTotal": "0,00"
+            }
+          },
+          "locationId": "9158437342713404263",
+          "parentId": "9166671059613918354",
+          "specurl": "http://localhost:10081/omapi/public/product/BFLE0001",
+          "orderItems": [
+            {
+              "id": "9166671052313919064",
+              "name": "Voice Europe plus 400 min",
+              "type": "New Line Acquisition",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "19,36",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "19,36",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "16,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "16,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9158437342713404263",
+              "parentId": "9166671055213918454",
+              "specurl": "http://localhost:10081/omapi/public/product/FLOB0005",
+              "orderItems": [],
+              "status": "ADD",
+              "chars": {},
+              "discountItems": {},
+              "prepaidProduct": false
+            }
+          ],
+          "status": "DISCONNECTED",
+          "billingAccountId": "9158437591813165746",
+          "productIdentifier": "0498341490",
+          "billingAddressId": "9150758002313655069",
+          "discountItems": {},
+          "prepaidProduct": false
+        }
+      ],
+      "publicateNumber": false
+    }
+  ],
+  "lineCount": 0,
+  "token": "72eb5f53-770d-49d5-904e-984e0c0cba44",
+  "pricesWereUpdated": false,
+  "manualAddress": false,
+  "hwitems": {
+    "orderItems": []
+  },
+  "manualProcessingRequired": false,
+  "feasibilityCheckRequired": false,
+  "modemSwapReq": false
+}

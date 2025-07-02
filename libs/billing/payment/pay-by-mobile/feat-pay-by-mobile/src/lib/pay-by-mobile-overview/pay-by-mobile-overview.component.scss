@@ -1,0 +1,13 @@
+.transaction,
+.subscription {
+  transition: background-color 0.1s ease;
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: rgba(#291d18, 04%);
+  }
+
+  &:active {
+    background-color: rgba(#291d18, 08%);
+  }
+}

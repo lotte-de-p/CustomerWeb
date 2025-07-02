@@ -1,0 +1,42 @@
+<div class="sales-cart m-0">
+  <div
+    class="background-white display--flex align-items--center justify-content--between p--l border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey">
+    <h4 class="heading--nomargin">{{ 'ng.sales-checkout.order-confirmation.your-order.title' | translate }}</h4>
+    <p class="font--caption color-black" *ngIf="prices?.vatInclusive">
+      {{ 'ng.sales-checkout.shopping-cart.lbl.all-prices-inclusive-vat' | translate }}
+    </p>
+    <p class="font--caption color-black" *ngIf="!prices?.vatInclusive">
+      {{ 'ng.sales-checkout.shopping-cart.lbl.all-prices-exclusive-vat' | translate }}
+    </p>
+  </div>
+
+  <div class="sales-cart__section sales-cart-row--shadow mb-0">
+    <tg-sales-summary-order-items [viewModel]="orderItems"></tg-sales-summary-order-items>
+    <div class="mt-10">
+      <div class="width--full color-black pb-0">
+        <tg-sales-summary-order-totals
+          *ngIf="prices && prices.subTotals"
+          [prices]="prices.subTotals"
+          [type]="TotalsType.subTotals"></tg-sales-summary-order-totals>
+        <tg-sales-summary-order-totals *ngIf="prices" [prices]="prices.totals"></tg-sales-summary-order-totals>
+      </div>
+    </div>
+    <div
+      class="shopping-cart-footer border--top--light-grey border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey p--l mb-10 background-lemon">
+      <div class="order-totals-footer__action mr-0 ml-0">
+        <button
+          class="button button--primary button--width-auto"
+          type="button"
+          (click)="onOrderClick()"
+          [attr.data-cy]="'order-footer-submit-button'">
+          {{ 'ng.sales-checkout.order-button.order' | translate }}
+        </button>
+      </div>
+      <div style="display: none">
+        <form action="" enctype="application/x-www-form-urlencoded" method="POST">
+          <input name="submit" type="submit" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

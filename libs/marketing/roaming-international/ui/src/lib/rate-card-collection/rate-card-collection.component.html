@@ -1,0 +1,10 @@
+<div class="row display--flex flex-direction--row align-items--center align-items--stretch">
+  <div
+    class="col-12 display--flex flex-direction--column"
+    [ngClass]="ratesOverview.length === 3 ? 'col-md-4' : 'col-md-6 col-lg-3'"
+    *ngFor="let rate of ratesOverview">
+    <tg-marketing-roaming-international-ui-rate-card
+      [rate]="rate"
+      class="display--flex flex-grow"></tg-marketing-roaming-international-ui-rate-card>
+  </div>
+</div>

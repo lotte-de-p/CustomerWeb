@@ -1,0 +1,48 @@
+{
+  "contactdetails": {
+    "contactinfo": {
+      "emails": [
+        {
+          "id": "9161437696213335737",
+          "value": "ashwini.bijavaara.shivalinga.swamy@staff.telenet.be"
+        }
+      ],
+      "phones": [
+        {
+          "id": "9161445265713668051",
+          "value": "0485937768"
+        }
+      ]
+    },
+    "privacyProfile": [
+      {
+        "privacySettingId": "9148200020213665171",
+        "name": "1 - General",
+        "isEnabled": false
+      },
+      {
+        "privacySettingId": "9148200020213665170",
+        "name": "2 - Oriented",
+        "isEnabled": true
+      },
+      {
+        "privacySettingId": "9148200020213665172",
+        "name": "3 - Personal",
+        "isEnabled": false
+      },
+      {
+        "privacySettingId": "9148200020213665173",
+        "name": "4 - Unique",
+        "isEnabled": false
+      }
+    ],
+    "rightToObject": "No",
+    "language": "EN",
+    "individual": {
+      "epithet": "Mrs.",
+      "firstname": "rohini",
+      "lastname": "bogata"
+    },
+    "birthdate": "1977-09-13"
+  }
+}

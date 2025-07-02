@@ -1,0 +1,53 @@
+<ng-container *ngIf="isEPCPresentInList">
+  <div style="height: 100%; max-height: 200px; overflow-y: scroll">
+    <form [formGroup]="parentForm" class="form-group">
+      <ng-container *ngIf="options && options.length">
+        <div>
+          <div class="text--m font-weight--bold">{{ 'ng.mock-marketing.label.options' | translate }}</div>
+        </div>
+        <div class="radio-checkbox--horizontal">
+          <ng-container *ngFor="let option of options; let i = index">
+            <div class="display--flex justify-content--between pb--xxxs">
+              <label for="option-{{ i }}-{{ epc }}" class="label label--small color-text m-0">
+                <span>{{ option.label }}</span>
+              </label>
+              <div class="CheckboxSwitch" style="display: flex">
+                <input
+                  type="checkbox"
+                  id="option-{{ i }}-{{ epc }}"
+                  class="CheckboxSwitch-input"
+                  (change)="onOptionSelection(option, $event)" />
+                <label for="option-{{ i }}-{{ epc }}" class="CheckboxSwitch-control">&nbsp;</label>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="contentpacks && contentpacks.length">
+        <div class="pt--xxs">
+          <div class="text--m font-weight--bold">{{ 'ng.mock-marketing.label.contentpacks' | translate }}</div>
+        </div>
+        <div class="radio-checkbox--horizontal">
+          <ng-container *ngFor="let contentpack of contentpacks; let i = index">
+            <div class="display--flex justify-content--between pb--xxxs">
+              <label for="contentpack-{{ i }}-{{ epc }}" class="label label--small color-text m-0">
+                <span>{{ contentpack.label }}</span>
+              </label>
+              <div class="CheckboxSwitch" style="display: flex">
+                <input
+                  type="checkbox"
+                  id="contentpack-{{ i }}-{{ epc }}"
+                  class="CheckboxSwitch-input"
+                  [checked]="isChecked(contentpack.productInfo!!)"
+                  [disabled]="isDisabled(contentpack.productInfo!!)"
+                  (change)="onContentpackSelection(contentpack.productInfo!!, $event)" />
+                <label for="contentpack-{{ i }}-{{ epc }}" class="CheckboxSwitch-control">&nbsp;</label>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </form>
+  </div>
+</ng-container>

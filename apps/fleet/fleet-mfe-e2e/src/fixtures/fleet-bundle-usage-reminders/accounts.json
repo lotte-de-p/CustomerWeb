@@ -1,0 +1,90 @@
+[
+  {
+    "id": "9165132461413271658",
+    "accountNumber": "501052973",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "46338",
+    "paymentInfo": {
+      "method": "MANUAL",
+      "lastpaymentMethod": "MANUAL"
+    },
+    "collectionsInfo": {
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308812813941360",
+      "street": "Grensweg",
+      "municipality": "Zutendaal",
+      "country": "België",
+      "houseNr": "16",
+      "postalCode": "3690"
+    },
+    "contactInfo": {
+      "firstName": "NELANTHIWHIZZ",
+      "lastName": "NOV"
+    },
+    "email": {
+      "id": "9165132393913255409",
+      "value": "nelanthi@staff.telenet.be"
+    },
+    "mobile": {
+      "id": "9165132394913255409",
+      "value": "0465858456"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS",
+    "isEligibleForManualPayment": false,
+    "hasFailedDDPayment": false,
+    "inCollection": false
+  },
+  {
+    "id": "9165132461413271658",
+    "accountNumber": "501052974",
+    "status": "ACTIVE",
+    "defaultAccount": true,
+    "doccleCode": "46338",
+    "paymentInfo": {
+      "method": "MANUAL",
+      "lastpaymentMethod": "MANUAL"
+    },
+    "collectionsInfo": {
+      "paymentPlan": false,
+      "status": false
+    },
+    "dispatchMethod": {
+      "current": "DIGITAL",
+      "communicationMethod": "EMAIL_PHONE_NUMBER"
+    },
+    "billingAddress": {
+      "addressId": "9150308812813941360",
+      "street": "Grensweg",
+      "municipality": "Zutendaal",
+      "country": "België",
+      "houseNr": "16",
+      "postalCode": "3690"
+    },
+    "contactInfo": {
+      "firstName": "NELANTHIWHIZZ",
+      "lastName": "NOV"
+    },
+    "email": {
+      "id": "9165132393913255409",
+      "value": "nelanthi@staff.telenet.be"
+    },
+    "mobile": {
+      "id": "9165132394913255409",
+      "value": "0465858456"
+    },
+    "treatments": [],
+    "customerCategoryType": "BUSINESS",
+    "isEligibleForManualPayment": false,
+    "hasFailedDDPayment": false,
+    "inCollection": false
+  }
+]

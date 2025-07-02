@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="144px" viewBox="0 0 144 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>NotaTelenetCustomer</title>
+    <g id="NotaTelenetCustomer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustrations/OnlineDeals/Desktop-Copy-3" transform="translate(1.000000, 4.000000)">
+            <rect id="Rectangle" stroke="#239A98" stroke-width="1.5" x="109.4" y="69" width="19.2" height="35.4" rx="3.50000024"></rect>
+            <path d="M10.4,31.2 L10.4,25.8 C10.4,24.1431458 11.7431458,22.8 13.4,22.8 L45.8,22.8 C47.4568542,22.8 48.8,24.1431458 48.8,25.8 L48.8,70.2 C48.8,71.8568542 47.4568542,73.2 45.8,73.2 L13.4,73.2 C11.7431458,73.2 10.4,71.8568542 10.4,70.2 L10.4,36 L10.4,36" id="Path" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round"></path>
+            <circle id="Oval" fill="#8C8D8E" cx="119.3" cy="100.5" r="1.5"></circle>
+            <circle id="Oval-Copy" fill="#239A98" cx="29.9" cy="68.1" r="1.5"></circle>
+            <circle id="Oval" fill="#239A98" cx="73.9" cy="86.1" r="1.5"></circle>
+            <path d="M26.8,76.2 C43.0693226,76.2 67.4733064,76.2 100.011952,76.2 C103.042547,76.2 105.49933,78.6680303 105.49933,81.7125 C105.49933,87.8214193 105.49933,89.3839193 105.49933,92.4" id="Path" stroke="#239A98" stroke-width="1.5" stroke-linecap="round" transform="translate(66.149665, 84.300000) rotate(-180.000000) translate(-66.149665, -84.300000) "></path>
+            <path d="M45.1618841,96.8975026 L101.438116,96.8975026 C102.542685,96.8975026 103.438116,97.7929331 103.438116,98.8975026 C103.438116,99.0451306 103.421771,99.1923047 103.389379,99.3363352 L102.538476,103.119859 C101.922691,105.857938 99.4911577,107.803361 96.6846885,107.803361 L49.9153115,107.803361 C47.1088423,107.803361 44.6773086,105.857938 44.0615236,103.119859 L43.2106214,99.3363352 C42.9682609,98.2586826 43.6453989,97.1886005 44.7230515,96.94624 C44.8670819,96.913848 45.0142561,96.8975026 45.1618841,96.8975026 Z" id="Rectangle" stroke="#8C8D8E" stroke-width="1.5" stroke-linejoin="round"></path>
+            <ellipse id="Oval" fill="#8C8D8E" cx="96.6213592" cy="102.350432" rx="1.37184466" ry="1.36323234"></ellipse>
+            <path d="M121,63 C105.335412,63 85.2889875,63 57.6821446,63 C54.6515491,63 52.194766,60.5319697 52.194766,57.4875 C52.194766,49.691247 52.194766,34.4709283 52.194766,30.6" id="Path" stroke="#239A98" stroke-width="1.5" stroke-linecap="round" transform="translate(86.597383, 46.800000) rotate(-180.000000) translate(-86.597383, -46.800000) "></path>
+            <line x1="25.4" y1="26.4" x2="34.4" y2="26.4" id="Line-5-Copy" stroke="#239A98" stroke-width="1.5" stroke-linecap="round"></line>
+            <line x1="116" y1="71.4" x2="122.6" y2="71.4" id="Line-5" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round"></line>
+            <circle id="Oval" fill="#C5C6C6" cx="4.6" cy="112.8" r="1.8"></circle>
+            <circle id="Oval-Copy-5" fill="#F2F2F2" cx="64.6" cy="18" r="6"></circle>
+            <circle id="Oval-Copy-6" fill="#239A98" cx="121" cy="24" r="3.6"></circle>
+            <circle id="Oval" fill="#239A98" cx="100" cy="111" r="1.2"></circle>
+            <circle id="Oval" fill="#C5C6C6" cx="140.2" cy="7.2" r="1.8"></circle>
+            <circle id="Oval-Copy-2" fill="#F2F2F2" cx="4.5" cy="4.5" r="4.5"></circle>
+            <circle id="Oval-Copy-3" fill="#C5C6C6" cx="114.3" cy="134.2" r="1.8"></circle>
+            <line x1="8" y1="60" x2="8" y2="69" id="Line" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round"></line>
+            <line x1="48.6067961" y1="102.350432" x2="66.8980583" y2="102.350432" id="Line-17" stroke="#8C8D8E" stroke-width="1.5" stroke-linecap="round"></line>
+        </g>
+    </g>
+</svg>

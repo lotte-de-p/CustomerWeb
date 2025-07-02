@@ -1,0 +1,15 @@
+export enum MsaConstants {
+  TARIFF_PLAN = 'tariffPlan',
+  NOT_AVAILABLE = 'N/A',
+  MAX_SELECTED_OPTION = 5,
+  PRICE_PER_MONTH = 'p/m',
+  EVENT_NAME_GROUP_BUNDLE_CONSULTED = 'group bundles consulted',
+  EVENT_NAME_TARIFF_PLAN_SELECTED = 'tariff plan selected',
+  MOBILE_INTERNET = 'MOBILE_INTERNET',
+  MOBILE_CALLING = 'MOBILE_CALLING',
+  EVENT_ATTRIBUTE_ITEM_NAME = 'item-name',
+  EVENT_TYPE_CLICK = 'click',
+  MESSAGE_GROUP = 'msa',
+  MSA_TAB_TARIFF_PLANS = 'ng.msa.lbl.tariff-plan',
+  MSA_TAB_GROUP_BUNDLES = 'ng.msa.lbl.group-bundle',
+}

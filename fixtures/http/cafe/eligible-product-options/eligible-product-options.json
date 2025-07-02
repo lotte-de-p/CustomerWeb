@@ -1,0 +1,59 @@
+{
+  "eligibleproductoptions": [
+    {
+      "identifier": "z197642",
+      "specurl": "https://api.uat.telenet.be/omapi/public/product/2161",
+      "nextbillingdate": "2022-06-19T00:00:00.0+02:00",
+      "address": {
+        "street": "Oude Baan",
+        "postalcode": "2800",
+        "municipality": "Mechelen",
+        "country": "België",
+        "housenr": "90",
+        "addressid": "6cc8d3007q-9xefu00i17"
+      },
+      "options": [
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/36738",
+          "sequence": 0,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/3160",
+          "sequence": 1,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/617",
+          "sequence": 2,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/23675",
+          "sequence": 3,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        },
+        {
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/196",
+          "sequence": 4,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        }
+      ]
+    }
+  ]
+}

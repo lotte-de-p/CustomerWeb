@@ -1,0 +1,53 @@
+{
+  "msisdn": "0467621145",
+  "label": "Based on you 15",
+  "specurl": "https://api.int.base.be/omapi/public/product/NC680",
+  "status": "ACTIVE",
+  "splitBillProfile": {
+    "id": "01",
+    "name": "sample"
+  },
+  "secondaryBillingAddressId": "9150757953013640830",
+  "handsets": [],
+  "options": [
+    {
+      "label": "Option Spotify",
+      "specurl": "https://api.int.base.be/omapi/public/product/NC1070",
+      "status": "ACTIVE",
+      "price": {
+        "currency": "EUR",
+        "oneTimeDiscount": "0,0",
+        "oneTimeTotal": "0,0",
+        "oneTimeDiscounted": "0,0",
+        "recurrentDiscount": "0,0",
+        "recurrentTotal": "10,0",
+        "recurrentDiscounted": "10,0"
+      }
+    },
+    {
+      "label": "Option EU data small",
+      "specurl": "https://api.int.base.be/omapi/public/product/NC1052",
+      "status": "ACTIVE",
+      "price": {
+        "currency": "EUR",
+        "oneTimeDiscount": "0,0",
+        "oneTimeTotal": "0,0",
+        "oneTimeDiscounted": "0,0",
+        "recurrentDiscount": "0,0",
+        "recurrentTotal": "10,0",
+        "recurrentDiscounted": "10,0"
+      }
+    }
+  ],
+  "price": {
+    "currency": "EUR",
+    "oneTimeDiscount": "0,0",
+    "oneTimeTotal": "0,0",
+    "oneTimeDiscounted": "0,0",
+    "recurrentDiscount": "0,0",
+    "recurrentTotal": "15,0",
+    "recurrentDiscounted": "15,0",
+    "netAmount": "35,0"
+  },
+  "referenceInformation": "HR Managers"
+}

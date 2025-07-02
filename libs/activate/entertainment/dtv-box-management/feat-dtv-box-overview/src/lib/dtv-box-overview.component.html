@@ -1,0 +1,112 @@
+<tg-login
+  (componentCanRender)="initAfterLoggedIn()"
+  [messageGroupName]="messageGroupName"
+  [scopes]="scopes"
+  data-cy="dtv-box-overview">
+  <ng-container
+    *ngrxLet="{
+      selectedDtvSubscription: selectedDtvSubscription$,
+      subscriptions: subscriptions$,
+      addresses: addresses$,
+      selectedAddress: selectedAddress$,
+      isPinCodeReset: isPinCodeReset$,
+      showSecurityCode: showSecurityCode$
+    } as vm">
+    <app-loader
+      [enableLoader]="enableLoader"
+      [enableMask]="enableMask"
+      [pageType]="pageType"
+      [startByDefault]="false"></app-loader>
+
+    <app-message [messageGroupName]="messageGroupName"></app-message>
+
+    @if (vm.subscriptions?.length === 0) {
+      <div class="notification notification--info">
+        <span class="icon icon-information-shape info" data-cy="dtv-box-no-subscription-notification">
+          {{ 'ng.dtv-details.info.no-subscriptions' | translate }}
+        </span>
+      </div>
+    } @else {
+      <tg-entertainment-dtv-box-subscription-selector
+        (addressLineSelected)="setAddress($event)"
+        [addresses]="vm.addresses"
+        [selectedAddress]="vm.selectedAddress"
+        class="p--xs">
+      </tg-entertainment-dtv-box-subscription-selector>
+
+      @for (subscription of vm.selectedDtvSubscription; track subscription.identifier) {
+        <h4>DTV Decoders for subscription {{ subscription.identifier }}</h4>
+        @if (vm.showSecurityCode && resetSubscriptionIdentifier === subscription.identifier) {
+          <div class="notification notification--info">
+            <span class="icon icon-information-shape info" data-cy="dtv-box-show-security-code">
+              {{ 'ng.dtv-details.info.resetpin' | translate: { code: securityCode } }}
+            </span>
+          </div>
+        }
+
+        @if (vm.isPinCodeReset && resetSubscriptionIdentifier === subscription.identifier) {
+          <div class="notification notification--success">
+            <span class="icon-success" data-cy="dtv-box-reset-pin-notification">
+              @if (subscription.dtvBoxes?.length === 1) {
+                {{ 'ng.dtv-details.success.single-box-success' | translate }}
+              } @else {
+                {{ 'ng.dtv-details.success.multiple-boxes-success' | translate }}
+              }
+            </span>
+          </div>
+        }
+
+        @if (subscription.dtvBoxes.length == 0) {
+          <div class="notification notification--info">
+            <span class="icon icon-information-shape info" data-cy="dtv-box-no-boxes-notification">
+              {{ 'ng.dtv-details.no-boxes.info' | translate }}
+            </span>
+          </div>
+        } @else {
+          <div class="pt--l" data-cy="dtv-boxes-overview-details">
+            <div class="mb--l m--auto col-md-12 col-xs-12">
+              <div class="content-section background-white p--xxl--md p--l ml--n--md mr--n--md">
+                @for (dtvBox of subscription.dtvBoxes; let i = $index; track dtvBox.serialNumber) {
+                  <tg-entertainment-dtv-box-detail
+                    [attr.data-cy]="'dtv-box-detail-' + i"
+                    [dtvBox]="dtvBox"
+                    [imagePath]="imagePath"></tg-entertainment-dtv-box-detail>
+                }
+                @if (subscription.dtvBoxes?.length !== 0 && isTypeUnanimous(subscription.dtvBoxes)) {
+                  <ng-container
+                    [ngTemplateOutlet]="reset"
+                    [ngTemplateOutletContext]="{
+                      subscription: subscription
+                    }">
+                  </ng-container>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      }
+    }
+  </ng-container>
+</tg-login>
+
+<ng-template #reset let-subscription="subscription">
+  <div class="row display--flex" data-cy="dtv-box-reset-row">
+    <div class="col-12 pt--n--md pt--l pl--s">
+      <h5>{{ 'ng.dtv-details.btn.reset-pin-code' | translate }}</h5>
+    </div>
+    <div class="col-md-9 col-12 pl--s">
+      <div
+        [innerHTML]="'ng.dtv-details.lbl.reset-pin-code-more-info' | translate"
+        class="text-align--left"
+        data-cy="dtv-box-reset-pin-code-more-info"></div>
+    </div>
+    <div class="col-md-3 col-12 pt--m pt--n--md pl--n--md text-align--left">
+      <button
+        (click)="onResetPinCode(subscription)"
+        class="button button--primary"
+        data-cy="dtv-box-reset-pin-code-button">
+        <span>{{ 'ng.dtv-details.btn.reset-pin-code' | translate }}</span>
+      </button>
+    </div>
+  </div>
+</ng-template>

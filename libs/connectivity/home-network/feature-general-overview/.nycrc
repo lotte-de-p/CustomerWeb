@@ -1,0 +1,12 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": ["**/cypress/**"],
+  "reporter": ["cobertura", "html", "json", "text", "text-summary"],
+  "check-coverage": true,
+  "include": ["apps/home-network-mfe/**", "libs/connectivity/home-network/feature-general-overview/**"],
+  "report-dir": "../../../../coverage/cypress/connectivity/home-network/general-overview",
+  "cwd": "../../../../"
+}

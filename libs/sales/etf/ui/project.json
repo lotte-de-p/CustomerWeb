@@ -1,0 +1,17 @@
+{
+  "name": "sales-etf-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/etf/ui/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/etf/ui/**/*.ts", "libs/sales/etf/ui/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:sales-etf", "scope:sales-mfe"]
+}

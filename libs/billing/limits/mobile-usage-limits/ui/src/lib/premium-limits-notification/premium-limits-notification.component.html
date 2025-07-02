@@ -1,0 +1,12 @@
+<div>
+  <div
+    [attr.data-cy]="'mobile-usage-limits-premium-services-current-usage-header'"
+    class="font--body-small color-shade_72">
+    {{ 'ng.mobile-usage-limits.lbl.premium-services-current-limit' | translate }}:
+  </div>
+  <div
+    [attr.data-cy]="'mobile-usage-limits-premium-services-current-usage'"
+    class="heading--5 heading--nomargin text-weight--xl">
+    {{ 'ng.mobile-usage-limits.lbl.limit' | translate: { value: currentPremiumLimit } }}
+  </div>
+</div>

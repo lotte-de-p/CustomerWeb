@@ -1,0 +1,10 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  standalone: true,
+  selector: '<%= prefix %>-title',
+  template: `<h1 [attr.data-testid]="'title'">{{ title }}</h1> `,
+})
+export class TitleComponent {
+  @Input() title = 'My title component works!';
+}

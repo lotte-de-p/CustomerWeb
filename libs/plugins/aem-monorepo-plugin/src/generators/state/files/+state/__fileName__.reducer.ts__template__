@@ -1,0 +1,16 @@
+import { Action, createFeature, createReducer } from '@ngrx/store';
+
+import { <%= stateClassName %>, defaultState } from './<%= fileName %>.state';
+
+export const reducer = createReducer(
+  defaultState,
+);
+
+export function <%= reducerName %>(state: <%= stateClassName %> = defaultState, action: Action): <%= stateClassName %> {
+  return reducer(state, action);
+}
+
+export const <%= featureName %> = createFeature({
+  name: '<%= featureName %>',
+  reducer: <%= reducerName %>,
+});

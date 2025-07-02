@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "lcovonly",
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+    "apps/billing/payment-mfe/**",
+    "apps/billing/payment-mfe-e2e/**"
+  ],
+  "report-dir": "../../../coverage/apps/customer-web-billing-payment-e2e",
+  "cwd": "../../../"
+}

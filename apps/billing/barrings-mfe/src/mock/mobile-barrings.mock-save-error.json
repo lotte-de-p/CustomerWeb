@@ -1,0 +1,6 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-barrings-service/v1/mobile-barrings/0489129799",
+  "method": "PATCH",
+  "status": 500,
+  "response": {}
+}

@@ -1,0 +1,30 @@
+<aside class="sidebar" (appClickOutside)="close()" [ngClass]="{ slide: showMenu }">
+  <div class="sidebar__menu display--flex flex-direction--column" [ngClass]="backgroundColor">
+    <div class="p--l position--top position--sticky width--full sidebar__index" [ngClass]="backgroundColor">
+      <div class="sidebar__heading display--flex align-items--center justify-content--end">
+        @if (!hideCloseButton) {
+          <div for="menu-control" class="sidebar__close cursor--pointer" (click)="close()">
+            <i class="icon icon-cross icon-md icon-no-size-override"></i>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="sidebar__content px--xxs pb--l">
+      <div
+        *ngIf="!hideTitle"
+        [attr.data-cy]="'sheet-title'"
+        class="heading--5 mt--n px--m"
+        [ngClass]="{ 'mt--n': !hideCloseButton, 'mt--xl': hideCloseButton }">
+        {{ title }}
+      </div>
+      <div [ngClass]="padding">
+        <ng-content></ng-content>
+      </div>
+    </div>
+    <div class="sidebar__footer position--sticky position--bottom px--l px--m--n mb--l">
+      <ng-content select="footer"></ng-content>
+    </div>
+  </div>
+</aside>
+<div *ngIf="!hideCloseButton" (click)="close()" [ngClass]="{ slide: showMenu }" class="slide-menu-overlay"></div>
+<div *ngIf="hideCloseButton" [ngClass]="{ slide: showMenu }" class="slide-menu-overlay"></div>

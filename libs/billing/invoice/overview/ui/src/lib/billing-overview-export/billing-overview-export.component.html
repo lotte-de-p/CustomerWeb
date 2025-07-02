@@ -1,0 +1,68 @@
+<ng-container>
+  <div
+    class="display--flex justify-content--between p--m cursor--pointer invoice-overview-export align-items--center"
+    (click)="open($event)"
+    data-testid="billing-overview-export">
+    <div class="display--flex gap--m align-items--center">
+      <wink-icon icon="download" appearance="secondary"></wink-icon>
+      <span class="">{{ 'ng.billing-overview.export-explanation' | translate }}</span>
+    </div>
+    <div>
+      <wink-icon icon="chevron-right"></wink-icon>
+    </div>
+  </div>
+  <tg-slide-menu
+    padding="px--xs"
+    [showMenu]="showMenu"
+    (closeMenu)="close()"
+    data-testid="billing-overview-export-content">
+    <div class="mb--xl">
+      <wink-notification appearance="error" has-close-icon="false" *ngIf="error">
+        <wink-title
+          slot="heading"
+          html-tag="h6"
+          spacing-y="none"
+          data-testid="billing-overview-export-failure"
+          [text]="'ng.billing-overview.export-failed' | translate: { exportType: error }"></wink-title>
+      </wink-notification>
+    </div>
+    <div class="heading--4 mt--n">{{ 'ng.billing-overview.export-title' | translate }}</div>
+    <div class="color-shade_64">{{ 'ng.billing-overview.export-description' | translate }}</div>
+    <div class="heading--5 mb--l">{{ 'ng.billing-overview.export-as' | translate }}</div>
+    <div class="display--flex gap--l flex-grow--sm">
+      <div class="export-button flex--1">
+        <wink-button
+          data-testid="billing-overview-export-pdf"
+          [status]="downloading === 'pdf' ? 'loading' : 'none'"
+          [loadingText]="'ng.billing-overview.export-in-progress-info' | translate"
+          appearance="secondary"
+          icon="file-pdf"
+          size="md"
+          iconPosition="left"
+          width="full"
+          (click)="export('pdf')"
+          [text]="'ng.billing-overview.export-pdf' | translate"></wink-button>
+      </div>
+      <div class="export-button flex--1">
+        <wink-button
+          data-testid="billing-overview-export-csv"
+          [status]="downloading === 'csv' ? 'loading' : 'none'"
+          [loadingText]="'ng.billing-overview.export-in-progress-info' | translate"
+          width="full"
+          appearance="secondary"
+          icon="file-xls"
+          (click)="export('csv')"
+          [text]="'ng.billing-overview.export-csv' | translate"></wink-button>
+      </div>
+    </div>
+    <div class="display--flex mt--l justify-content--start--md justify-content--center">
+      <wink-button
+        data-testid="billing-overview-export-zip"
+        [loadingText]="'ng.billing-overview.export-in-progress-info' | translate"
+        [status]="downloading === 'zip' ? 'loading' : 'none'"
+        appearance="tertiary"
+        (click)="export('zip')"
+        [text]="'ng.billing-overview.export-all' | translate"></wink-button>
+    </div>
+  </tg-slide-menu>
+</ng-container>

@@ -1,0 +1,23 @@
+<div class="background-white p--xl mb--l">
+  <div class="display--flex justify-content--between">
+    <div class="heading--4 my--n">
+      {{ 'ng.sim-management.lbl.esim-ready-for-activation' | translate }}
+    </div>
+    <div>
+      <button
+        class="button button--primary"
+        data-testid="sim-management-activate-esim-button"
+        (click)="onActivateESimClick()">
+        <span>{{ 'ng.sim-management.btn.activate-esim' | translate }}</span>
+      </button>
+    </div>
+  </div>
+  <div class="font--body-small color-shade_64">
+    <div>
+      {{ 'ng.sim-management.txt.activate-e-sim-pt-1' | translate }}
+    </div>
+    <div>
+      {{ 'ng.sim-management.txt.activate-e-sim-pt-2' | translate }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+{
+  "macAddress": "34:2C:C4:F1:0E:D0",
+  "lastSeen": "6/16/20 10:02 PM",
+  "type": "HGW",
+  "modemType": "HGW-Wireless",
+  "model": "F3896LG",
+  "lastSeenLight": "AMBER",
+  "hgwInfo": {
+    "wirelessInterfaceInfos": [
+      {
+        "currentWifiChannel": "CHANNEL_11",
+        "currentWifiFrequency": "2.4GHZ",
+        "active": true
+      },
+      {
+        "currentWifiChannel": "CHANNEL_36",
+        "currentWifiFrequency": "5GHZ",
+        "active": true
+      }
+    ]
+  },
+  "children": [
+    {
+      "macAddress": "C8:D1:2A:4E:44:01",
+      "lastSeen": "6/17/20 9:06 AM",
+      "type": "PLUME_POD",
+      "model": "PG9073",
+      "lastSeenLight": "GREEN",
+      "children": [],
+      "clients": [],
+      "ipAddressInfos": [
+        {
+          "ipAddress": "192.168.0.199",
+          "ipType": "IPv4"
+        },
+        {
+          "ipAddress": "2a02:1811:430:7000:cad1:2aff:fe4e:4401",
+          "ipType": "IPv6"
+        }
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "macAddress": "44:73:D6:0B:CF:3D",
+      "connectedInterface": "WLAN_5GHZ",
+      "vendor": "Logitech",
+      "ipAddressInfos": [
+        {
+          "ipAddress": "192.168.0.158",
+          "ipType": "IPv4"
+        }
+      ]
+    },
+    {
+      "macAddress": "FC:03:9F:63:B4:EF",
+      "connectedInterface": "WLAN_5GHZ",
+      "vendor": "Samsung",
+      "ipAddressInfos": [
+        {
+          "ipAddress": "192.168.0.246",
+          "ipType": "IPv4"
+        }
+      ]
+    },
+    {
+      "macAddress": "00:26:73:3E:DA:75",
+      "connectedInterface": "ETHERNET",
+      "ipAddressInfos": [
+        {
+          "ipAddress": "192.168.0.99",
+          "ipType": "IPv4"
+        }
+      ]
+    }
+  ],
+  "ipAddressInfos": [
+    {
+      "ipAddress": "94.225.211.51",
+      "ipType": "IPv4"
+    },
+    {
+      "ipAddress": "2a02:181f:1:4021:6900:b45:3330:cb45",
+      "ipType": "IPv6"
+    }
+  ]
+}

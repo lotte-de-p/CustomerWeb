@@ -1,0 +1,40 @@
+<div class="draggable-table">
+  <div class="draggable-table__column selected-row">
+    <div class="column-header">
+      <span class="column-header__option-title">{{ 'ng.msa.lbl.option' | translate }}</span>
+    </div>
+    <div class="row-header" *ngFor="let option of options">
+      <div class="row-header-text">{{ option.label }}</div>
+    </div>
+  </div>
+  <div class="draggable-table__column" [ngClass]="{ pinned: offer.isSelected }" *ngFor="let offer of eligibleOffers">
+    <div class="column-header">
+      <p class="column-header__data-section" *ngIf="isDataPlan(offer)">
+        {{ 'ng.msa.lbl.data-plans' | translate }}
+      </p>
+      <p class="column-header__data-section" *ngIf="!isDataPlan(offer)">
+        {{ 'ng.msa.lbl.mobile-plans' | translate }}
+      </p>
+      <div class="row-header-text word-break--ellipsis" [attr.data-cy]="'offer-label'">{{ offer.label }}</div>
+      <div class="row-header-subtext" *ngIf="offer.price.amount">
+        {{ 'ng.msa.info.price' | translate }}{{ getOfferPrice(offer) }}
+      </div>
+      <div class="column-header__pin-section" *ngIf="!offer.isSelected" (click)="selectionToggled.emit(offer)">
+        <a class="button button--secondary" [attr.data-cy]="'pin-button'">{{ 'ng.msa.lbl.pin' | translate }}</a>
+      </div>
+      <div class="column-header__pin-section" *ngIf="offer.isSelected" (click)="selectionToggled.emit(offer)">
+        <a class="button button--secondary" [attr.data-cy]="'unpin-button'">{{ 'ng.msa.lbl.unpin' | translate }}</a>
+      </div>
+    </div>
+    <div class="column-cell" *ngFor="let option of options">
+      <div class="cell-text" *ngIf="currentOptionPriceIsAvailable(offer, option.label)">
+        {{ 'ng.msa.info.price' | translate }}{{ getCurrentOptionPrice(offer, option.label) }}
+      </div>
+      <div class="cell-text" *ngIf="!currentOptionPriceIsAvailable(offer, option.label)">
+        {{ 'ng.msa.lbl.not-available' | translate }}
+      </div>
+      <div class="row-header-subtext" *ngIf="option.isIncluded">{{ 'ng.msa.lbl.included' | translate }}</div>
+    </div>
+  </div>
+</div>
+ga

@@ -1,0 +1,10 @@
+<ng-container *ngIf="loading()">
+  <div class="mb--xxs row">
+    <div class="col-xs-4 col-sm-1">
+      <p class="skeleton skeleton--basic skeleton--text skeleton--one-line"></p>
+    </div>
+  </div>
+  @for (messageSkeleton of messageSkeletons; track messageSkeleton) {
+    <div class="notification skeleton skeleton--basic skeleton--container mb--l--sm"></div>
+  }
+</ng-container>

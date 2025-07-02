@@ -1,0 +1,26 @@
+include:
+  - local: '/tools/gitlab/images/distributed.yml'
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.prepare:node-and-npm:
+  extends: .distributed
+  image: $CI_HARBOR_REGISTRY/dockerhub/cypress/included:13.6.3
+  stage: prepare
+  script:
+    - |-
+      if [ -d "./node_modules" ]; then
+        echo 'Skipping npm ci as node_modules is already present'
+      else
+        npm set cache .npm
+        npm ci --prefer-offline --no-audit
+      fi
+  cache:
+    - key:
+        files:
+          - package.json
+          - package-lock.json
+      paths:
+        - node_modules/
+        - .npm/
+      when: on_success
+  only: !reference [.allowed-branches]

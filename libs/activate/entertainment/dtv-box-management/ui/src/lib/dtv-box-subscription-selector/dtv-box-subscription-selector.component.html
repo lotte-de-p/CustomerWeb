@@ -1,0 +1,71 @@
+<div [ngClass]="{ 'line-selector--header': isBaseCustomer }">
+  <div
+    [ngClass]="{ 'justify-content--normal--md justify-content--between pt--m--md': isBaseCustomer }"
+    class="display--flex flex-direction--row--md align-items--center">
+    <div
+      [attr.data-cy]="'address-value'"
+      [ngClass]="{
+        'line-selector--title mt-0 mb-0': isBaseCustomer,
+        'line-selector-telenet--title': !isBaseCustomer
+      }"
+      class="text-flow--text word-break--ellipsis">
+      @if (selectedAddress) {
+        {{ selectedAddress | formatAddress }}
+      }
+    </div>
+
+    @if (addresses && addresses.length > 1) {
+      <span
+        [ngClass]="{
+          'line-selector--open text-font-family--t5': isBaseCustomer,
+          'line-selector-telenet--open': !isBaseCustomer
+        }"
+        class="link ml--xxs text-weight--l"
+        (click)="openAddressSelection()"
+        href="javascript:void(0)"
+        [attr.data-cy]="'address-selector'"
+        >{{ 'ng.dtv-box.select.address' | translate }}
+      </span>
+    }
+  </div>
+</div>
+
+<tg-entertainment-dtv-box-slide-menu
+  (closeMenu)="close()"
+  [showMenu]="showMenu"
+  [title]="'ng.dtv-box.select-address.lbl.title' | translate">
+  <ng-container
+    [ngTemplateOutletContext]="{
+      addresses: addresses,
+      selectedAddress: selectedAddress
+    }"
+    [ngTemplateOutlet]="addressList">
+  </ng-container>
+</tg-entertainment-dtv-box-slide-menu>
+
+<ng-template #addressList let-addresses="addresses" let-selectedAddress="selectedAddress">
+  <ul data-cy="address-selector-list">
+    @for (address of addresses; track address; let i = $index) {
+      <li (click)="selectAddressLine(address)" [attr.data-cy]="'address-selector-option-' + i" class="px--xs">
+        <div
+          class="border-width--b--r border--b--r border-color--all--light-grey cursor--pointer display--flex justify-content--between mx--xs align-items--center"
+          tabindex="0">
+          <div class="py--l align-items--center display--flex overflow--hidden position--relative">
+            <span class="mr--xs">
+              <i class="icon-house icon icon-md"></i>
+            </span>
+            <div class="font--body-regular-bold break-word">
+              {{ address | formatAddress }}
+            </div>
+          </div>
+          @if (address?.id === selectedAddress?.id) {
+            <div class="px--xs">
+              <i
+                class="ml--xs color-text-t-black-b-white background-brand-primary color-te icon icon-sm icon-tick return-address-selected text-weight--xxs color-mid-grey"></i>
+            </div>
+          }
+        </div>
+      </li>
+    }
+  </ul>
+</ng-template>

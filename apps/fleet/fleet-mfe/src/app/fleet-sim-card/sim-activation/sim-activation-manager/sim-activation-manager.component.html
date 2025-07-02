@@ -1,0 +1,29 @@
+<div class="activate-sim">
+  <app-message [messageGroupName]="messageGroupName"></app-message>
+  <div class="title pl-20 pr-20">
+    <div>{{ 'ng.activate-sim.lbl.activate-sim' | translate }}</div>
+  </div>
+  <form [formGroup]="form" autocomplete="off" novalidate>
+    <div class="activate-sim__container">
+      <div class="item pl-20 pr-20">
+        <div>{{ 'ng.activate-sim.lbl.choose-date' | translate }}</div>
+        <div>{{ fromDate | date: 'dd/MM/yyyy' }} - {{ toDate | date: 'dd/MM/yyyy' }}</div>
+      </div>
+      <div class="set-date">
+        <app-datepicker
+          [minDate]="fromDate"
+          [maxDate]="toDate"
+          [customLabel]="customLabel"
+          formControlName="simActivationDateFormControl">
+        </app-datepicker>
+        <button
+          class="submit-date button button--primary"
+          id="activateSim"
+          (click)="activateSim()"
+          [disabled]="!form.valid">
+          <span>{{ 'ng.activate-sim.btn.set-date' | translate }}</span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

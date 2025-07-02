@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.971" tests="1" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-13T10:16:37" tests="0" file="src/e2e/local/billing-account-selector.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="BillingAccountSelector" timestamp="2024-09-13T10:16:37" tests="1" time="3.928" failures="0">
+    <testcase name="should navigate to a component including the billing account selector when checkbox is enabled" time="2.755" classname="BillingAccountSelector should navigate to a component including the billing account selector when checkbox is enabled">
+    </testcase>
+  </testsuite>
+</testsuites>

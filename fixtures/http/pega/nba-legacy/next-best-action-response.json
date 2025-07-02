@@ -1,0 +1,17 @@
+[
+  {
+    "productIdentifier": "0421232323",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO35",
+    "interactionId": "8583105007322905269",
+    "rank": "1",
+    "offeringId": "BOYO0035",
+    "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+    "options": [
+      {
+        "offeringId": "123",
+        "action": "ADD"
+      }
+    ]
+  }
+]

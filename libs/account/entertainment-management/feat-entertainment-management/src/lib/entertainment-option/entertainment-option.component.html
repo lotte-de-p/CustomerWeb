@@ -1,0 +1,30 @@
+@for (option of data; track option) {
+  <div class="Container background-white py--m px--m cursor--pointer mb--m" (click)="navigateToDetailsPage(option.id!)">
+    <div class="display--flex justify-content--between align-items--center">
+      <div class="display--flex align-items--center">
+        <img
+          data-testid="entertainment-option-logo"
+          class="border-radius--circle display--inline-block option-logo"
+          [src]="option.logo"
+          alt="" />
+
+        <div class="ml--xs">
+          <div data-testid="entertainment-option-name">{{ option.name[lang] }}</div>
+          @if (option.price) {
+            <div data-testid="entertainment-option-price" class="color-shade_48 font--caption">
+              {{ option.price | price | euroSign }}/{{ 'ng.entertainment-management.lbl.month' | translate }}
+            </div>
+          } @else if (option.priceAsOf) {
+            <div data-testid="entertainment-option-price" class="color-shade_48 font--caption">
+              {{ 'ng.entertainment-management.lbl.from' | translate }}
+              {{ option.priceAsOf | price | euroSign }}/{{ 'ng.entertainment-management.lbl.month' | translate }}
+            </div>
+          }
+        </div>
+      </div>
+      <div>
+        <i class="icon icon-sm icon-chevron-right color-shade_48"></i>
+      </div>
+    </div>
+  </div>
+}

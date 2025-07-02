@@ -1,0 +1,42 @@
+{
+  "category": "outofbundle",
+  "preferenceGroups": [
+    {
+      "category": "outofbundle",
+      "preferenceGroup": "Mobileoutofbundle",
+      "threshold": [
+        {
+          "communicationPreferenceType": "outofbundle75",
+          "communicationPreferenceTypeValue": "NA",
+          "isEditable": true,
+          "selected": true,
+          "selectedValues": ["50 Euro"],
+          "values": ["0 Euro", "5 Euro", "10 Euro", "15 Euro", "25 Euro", "30 Euro", "50 Euro", "75 Euro", "100 Euro"]
+        }
+      ]
+    }
+  ],
+  "pids": [
+    {
+      "pid": "6181394",
+      "firstname": "Kiran",
+      "lastname": "Geeraerts",
+      "email": "kiran@telenet.be",
+      "language": "NL",
+      "phonenumber": "0496811029",
+      "gender": "FEMALE",
+      "birthdate": "1979-08-14",
+      "privacysetting": 2,
+      "role": "MANAGER",
+      "credential": "t020237",
+      "primarycredentialalias": "kiran@telenet.be",
+      "telenethosted": true,
+      "legacylogin": false,
+      "version": 9,
+      "status": "VALIDATED",
+      "msisdn": ["0496811029"],
+      "isInvitedProfile": false,
+      "selected": true
+    }
+  ]
+}

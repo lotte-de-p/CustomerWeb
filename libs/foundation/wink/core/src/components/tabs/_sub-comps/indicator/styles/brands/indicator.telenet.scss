@@ -1,0 +1,8 @@
+@import '../vars/vars.telenet';
+@import '../indicator.default';
+
+:host {
+  .indicator {
+    @include telenet-backdrop-mask;
+  }
+}

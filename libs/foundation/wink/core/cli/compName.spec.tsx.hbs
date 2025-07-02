@@ -1,0 +1,25 @@
+import { newSpecPage } from '@stencil/core/testing';
+import { {{PascalCase compName}} } from './{{compName}}';
+
+describe('wink-{{compName}}', () => {
+  it('should create an instance of {{PascalCase compName}} class component', () => {
+    const comp = new {{PascalCase compName}}();
+
+    expect(comp).toBeInstanceOf({{PascalCase compName}});
+  });
+
+  it('should render the element wink-{{compName}}', async () => {
+    const page = await newSpecPage({
+    components: [{{PascalCase compName}}],
+      html: `<wink-{{compName}}></wink-{{compName}}>`,
+    });
+
+  expect(page.root).toEqualHtml(`
+    <wink-{{compName}}>
+      <mock:shadow-root>
+        Content of you component (wink-{{compName}}) goes here!!!
+      </mock:shadow-root>
+    </wink-{{compName}}>
+  `);
+  });
+});

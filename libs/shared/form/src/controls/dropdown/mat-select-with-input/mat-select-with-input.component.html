@@ -1,0 +1,47 @@
+<mat-form-field class="width--full" appearance="fill">
+  <div
+    *ngIf="customLabel"
+    [ngClass]="{ labelStyle: this.labelStyle }"
+    class="display--flex align-items--center justify-content--between">
+    <div>
+      <label for="{{ key }}">{{ getLabel() | translate }}</label>
+      <div *ngIf="toolTipRequired" class="tooltip position--relative inline-block">
+        <div
+          class="tooltip__icon-section display--flex flex-direction--row--sm flex-direction--row-reverse align-items--center justify-content--center cursor--pointer my--xxxs">
+          <i class="icon icon-information-shape"></i>
+        </div>
+        <div class="tooltip__info-section tooltip__info-section__arrow-left tooltip__info-section__auto-width">
+          <div class="horizontal-center-align">
+            <div class="info-section__description">
+              <div class="info-section__description__text">
+                {{ getTooltip() | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="fl-right" *ngIf="!required">{{ getLabel() + '.optional' | translate }}</label>
+  </div>
+  <mat-select
+    #selectDropdown
+    [(ngModel)]="selectedOption"
+    [attr.data-cy]="messageGroup + '.select.' + key"
+    [disabled]="disabled"
+    (closed)="checkErrors()"
+    [ngClass]="{ 'form__input--disabled': disabled, 'form__input--error': error }"
+    [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''">
+    <mat-option *ngIf="optionList?.length === 0" disabled></mat-option>
+    <mat-option
+      [attr.data-cy]="messageGroup + '.' + key + '.option.' + option.value"
+      (click)="changeSelectedValue()"
+      class="select-dropdown__options__list cursor---pointer"
+      *ngFor="let option of optionList"
+      [value]="option">
+      {{ option.label }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div [attr.data-cy]="messageGroup + '.error.' + key" class="formErrorInput Form__input__invalid-message" *ngIf="error">
+  {{ getText() | translate }}
+</div>

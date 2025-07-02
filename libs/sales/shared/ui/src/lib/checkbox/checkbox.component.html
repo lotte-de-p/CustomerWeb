@@ -1,0 +1,25 @@
+<label
+  class="select-tile position--relative display--flex align-items--start gap--m gap--l--sm color-text p--m p--l--sm m--n">
+  <div class="select-tile__content display--flex flex-direction--column align-self--stretch flex-grow">
+    <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+      <div class="display--flex gap--m gap--l--sm">
+        <div class="select-tile__content_text display--flex flex-direction--column flex-grow">
+          <i
+            *ngIf="iconClass"
+            class="display--inline-flex aspect-ratio--1-1 width--fit-content icon icon-md icon-no-size-override"
+            [ngClass]="iconClass"></i>
+          <div class="heading--6 heading--nomargin">
+            {{ label | translate }}
+          </div>
+        </div>
+        <input
+          [checked]="checked"
+          (change)="onToggle($event)"
+          (blur)="onTouched()"
+          name="checkbox-01"
+          type="checkbox"
+          class="select-tile__input display--flex align-items-center justify-content--center font--body-regular cursor--pointer" />
+      </div>
+    </div>
+  </div>
+</label>

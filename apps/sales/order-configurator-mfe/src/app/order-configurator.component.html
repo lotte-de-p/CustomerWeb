@@ -1,0 +1,12 @@
+@if (errors$ && (errors$ | async); as errors) {
+  @for (error of errors; track error) {
+    <div [attr.data-testid]="'feat-error'">{{ error.message }}</div>
+  }
+}
+@if (initialised && errors$ && (errors$ | async)?.length === 0) {
+  <tg-sales-stepper
+    [steps]="componentSteps"
+    [showNavigation]="true"
+    [showBackButton]="true"
+    [showStepProgressBar]="true"></tg-sales-stepper>
+}

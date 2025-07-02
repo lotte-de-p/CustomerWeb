@@ -1,0 +1,18 @@
+<div class="sticky-bottom">
+  <div class="button-container" [ngClass]="{ 'blur-on-confirmation': blur }">
+    <button
+      class="button button--tertiary"
+      [ngClass]="{ disabled: !secondaryButtonEnabled }"
+      (click)="secondaryCallback.emit()"
+      [attr.data-cy]="'secondary-btn'">
+      {{ secondaryButtonLabel | translate }}
+    </button>
+    <button
+      class="button button--primary"
+      [ngClass]="{ disabled: !primaryButtonEnabled }"
+      (click)="primaryCallback.emit()"
+      [attr.data-cy]="'primary-btn'">
+      {{ primaryButtonLabel | translate }}
+    </button>
+  </div>
+</div>

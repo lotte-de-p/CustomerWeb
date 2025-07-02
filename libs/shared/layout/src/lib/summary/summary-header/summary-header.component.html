@@ -1,0 +1,29 @@
+<div class="summary-content--row flex-direction--column">
+  <div class="display--flex justify-content--between mb--xxs width--full">
+    <div class="text-block__left text-font-family--t4 text-weight--g text--m">
+      {{ title | translate }}
+    </div>
+    <div
+      *ngIf="!linkText && noLinkText"
+      [tgMargin]="{ position: 'l', size: 's' }"
+      class="text-block__right"
+      tgFontColor="brand-2e"
+      tgFontFamily="t4"
+      tgFontSize="m"
+      tgFontWeight="m">
+      {{ noLinkText | translate }}
+    </div>
+
+    <div
+      (click)="linkClicked.emit()"
+      *ngIf="linkText"
+      [tgMargin]="{ position: 'l', size: 's' }"
+      class="link link--unstyled text-flow text-flow--hyperlink"
+      tgFontColor="brand-2e"
+      tgFontFamily="t4"
+      tgFontSize="m"
+      tgFontWeight="m">
+      {{ linkText }}
+    </div>
+  </div>
+</div>

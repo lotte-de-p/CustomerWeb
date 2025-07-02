@@ -1,0 +1,28 @@
+<div class="mt--m">
+  <div *ngIf="isTelenetBrand" class="divider divider--xxxs__grey mb--s"></div>
+  <span class="text-font-family--t7">{{ 'ng.product-overview.lbl.included-options' | translate }}</span>
+  <div *ngIf="product.options">
+    <div *ngFor="let option of product.options">
+      <div class="pt--xs" *ngIf="option.isIncludedOption">
+        <div [attr.data-cy]="'includedOptionLabel'">
+          {{ option.label }}
+        </div>
+        <tg-product-options-specifications
+          [isTelenetBrand]="isTelenetBrand"
+          [services]="option?.productInfo?.services"></tg-product-options-specifications>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="product.contentPacks">
+    <div *ngFor="let pack of product.contentPacks">
+      <div class="pt--xs" *ngIf="pack.isIncludedOption">
+        <div>
+          {{ pack.label }}
+        </div>
+        <tg-product-options-specifications
+          [isTelenetBrand]="isTelenetBrand"
+          [services]="pack?.productInfo?.services"></tg-product-options-specifications>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="80.050" tests="10" failures="5" skipped="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T10:47:28" tests="0" file="src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Navigation List" timestamp="2024-07-17T10:47:28" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Show address nav item" timestamp="2024-07-17T10:47:28" tests="2" time="16.459" failures="1">
+    <testcase name="should show the address nav item if it is a split bill user" time="4.383" classname="Line Navigation List Show address nav item should show the address nav item if it is a split bill user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.col-sm-12.col-md-4&gt;&apos; to contain text &apos;ng.line-navigation-list.link.address&apos;, but the text was &apos;Terug naar simkaart beherenGebruikersdetailsAdresProductenBlokkeringenAPNVerbruikslimietenMeer&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.col-sm-12.col-md-4>' to contain text 'ng.line-navigation-list.link.address', but the text was 'Terug naar simkaart beherenGebruikersdetailsAdresProductenBlokkeringenAPNVerbruikslimietenMeer'
+    at Context.eval (webpack:///./src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts:14:0)
+
+      + expected - actual
+
+      -'Terug naar simkaart beherenGebruikersdetailsAdresProductenBlokkeringenAPNVerbruikslimietenMeer'
+      +'ng.line-navigation-list.link.address'
+      ]]></failure>
+    </testcase>
+    <testcase name="should not show the address nav item if it is not a split bill user" time="0.485" classname="Line Navigation List Show address nav item should not show the address nav item if it is not a split bill user">
+    </testcase>
+  </testsuite>
+  <testsuite name="Show identification nav item regardless of profile details" timestamp="2024-07-17T10:47:45" tests="4" time="59.097" failures="4">
+    <testcase name="Ff the status in profile details is validated" time="4.370" classname="Line Navigation List Show identification nav item regardless of profile details Ff the status in profile details is validated">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.col-sm-12.col-md-4&gt;&apos; to contain text &apos;ng.line-navigation-list.link.identification&apos;, but the text was &apos;Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.col-sm-12.col-md-4>' to contain text 'ng.line-navigation-list.link.identification', but the text was 'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+    at Context.eval (webpack:///./src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts:40:0)
+
+      + expected - actual
+
+      -'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+      +'ng.line-navigation-list.link.identification'
+      ]]></failure>
+    </testcase>
+    <testcase name="If the status in profile details is pending" time="4.392" classname="Line Navigation List Show identification nav item regardless of profile details If the status in profile details is pending">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.col-sm-12.col-md-4&gt;&apos; to contain text &apos;ng.line-navigation-list.link.identification&apos;, but the text was &apos;Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.col-sm-12.col-md-4>' to contain text 'ng.line-navigation-list.link.identification', but the text was 'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+    at Context.eval (webpack:///./src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts:52:0)
+
+      + expected - actual
+
+      -'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+      +'ng.line-navigation-list.link.identification'
+      ]]></failure>
+    </testcase>
+    <testcase name="If the status in profile details is invited" time="4.383" classname="Line Navigation List Show identification nav item regardless of profile details If the status in profile details is invited">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.col-sm-12.col-md-4&gt;&apos; to contain text &apos;ng.line-navigation-list.link.identification&apos;, but the text was &apos;Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.col-sm-12.col-md-4>' to contain text 'ng.line-navigation-list.link.identification', but the text was 'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+    at Context.eval (webpack:///./src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts:64:0)
+
+      + expected - actual
+
+      -'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+      +'ng.line-navigation-list.link.identification'
+      ]]></failure>
+    </testcase>
+    <testcase name="If the profile details is empty" time="4.391" classname="Line Navigation List Show identification nav item regardless of profile details If the profile details is empty">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.col-sm-12.col-md-4&gt;&apos; to contain text &apos;ng.line-navigation-list.link.identification&apos;, but the text was &apos;Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.col-sm-12.col-md-4>' to contain text 'ng.line-navigation-list.link.identification', but the text was 'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+    at Context.eval (webpack:///./src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts:76:0)
+
+      + expected - actual
+
+      -'Terug naar simkaart beherenGebruikersdetailsProductenBlokkeringenAPNVerbruikslimietenMeer'
+      +'ng.line-navigation-list.link.identification'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Navigation" timestamp="2024-07-17T10:48:44" tests="1" time="0.015" failures="0">
+  </testsuite>
+  <testsuite name="Default navigation item" timestamp="2024-07-17T10:48:44" tests="3" time="4.455" failures="0">
+    <testcase name="should first check if a default nav item is present in the URL" time="0.516" classname="Line Navigation List Default navigation item should first check if a default nav item is present in the URL">
+    </testcase>
+    <testcase name="should show the default nav item from the navigation data if the URL does not contain a default" time="0.509" classname="Line Navigation List Default navigation item should show the default nav item from the navigation data if the URL does not contain a default">
+    </testcase>
+    <testcase name="should show the first nav item in the list if there is no default in URL and navigation data" time="0.507" classname="Line Navigation List Default navigation item should show the first nav item in the list if there is no default in URL and navigation data">
+    </testcase>
+  </testsuite>
+</testsuites>

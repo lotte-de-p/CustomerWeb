@@ -1,0 +1,25 @@
+ARG CI_HARBOR_REGISTRY
+ARG CLIENT_PROJECT
+
+# Use official nginx image as the base image
+FROM ${CI_HARBOR_REGISTRY}/dockerhub/library/nginx:1.23.3
+
+ARG BUILD_VERSION
+ARG BUILD_DATE
+ARG PROJECT_DIST_FOLDER
+ARG STORYBOOK_DIST_FOLDER
+
+# Copy the build output to replace the default nginx contents.
+COPY ${STORYBOOK_DIST_FOLDER}/ /usr/share/nginx/html/
+COPY ${PROJECT_DIST_FOLDER}/version.json /usr/share/nginx/html/
+RUN ls /usr/share/nginx/html/
+
+# Copy custom nginx configuration to replace the default configuration
+COPY nginx/* /etc/nginx/
+
+RUN sed -i "s/\${BUILD_VERSION}/${BUILD_VERSION}/g"  /usr/share/nginx/html/version.json && \
+ sed -i "s/\${BUILD_DATE}/${BUILD_DATE}/g"  /usr/share/nginx/html/version.json
+
+
+# Expose port 80
+EXPOSE 8080

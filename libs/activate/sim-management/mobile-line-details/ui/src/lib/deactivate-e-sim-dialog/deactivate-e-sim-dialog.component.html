@@ -1,0 +1,31 @@
+<div class="overlay" data-testid="sim-management-deactivate-e-sim-dialog">
+  <div class="overlay__mask"></div>
+  <div class="overlay__section">
+    <div class="overlay__section__content">
+      <div
+        class="overlay__section__content__close icon-close"
+        data-testid="sim-management-deactivate-e-sim-dialog-close-icon"
+        (click)="onCloseClick()"></div>
+      <div class="overlay__section__content__title">
+        <div class="heading--4 mt--n">{{ 'ng.sim-management.deactivate-e-sim-dialog.title' | translate }}</div>
+      </div>
+      <div class="overlay__section__content__description">
+        {{ 'ng.sim-management.deactivate-e-sim-dialog.description' | translate }}
+      </div>
+      <div class="overlay__section__content__action justify-content--center">
+        <a
+          (click)="onCancelClick()"
+          data-testid="sim-management-deactivate-e-sim-dialog-cancel-button"
+          class="button button--secondary"
+          >{{ 'ng.sim-management.deactivate-e-sim-dialog.btn-cancel' | translate }}</a
+        >
+        <a
+          (click)="onConfirmClick()"
+          data-testid="sim-management-deactivate-e-sim-dialog-deactivate-button"
+          class="button button--primary"
+          >{{ 'ng.sim-management.deactivate-e-sim-dialog.btn-deactivate' | translate }}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "json",
+    "cobertura",
+    "html-spa",
+    "text-summary",
+    "text"
+  ],
+  "check-coverage": true,
+  "include": [
+    "../sim-management-mfe/**",
+    "../sim-management-e2e/**",
+      "../../../libs/activate/sim-management/**"
+  ],
+  "report-dir": "../../../coverage/apps/activate/sim-management-mfe-e2e",
+  "cwd": "../../../"
+}

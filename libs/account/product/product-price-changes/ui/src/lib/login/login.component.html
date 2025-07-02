@@ -1,0 +1,49 @@
+<form [formGroup]="loginForm" data-cy="custom-login-form">
+  <div class="openid-login-page__container align-items--center">
+    <div class="m--n openid-login-page__container--inner">
+      <div class="openid-login-page__container--form-login-section p--n">
+        <div class="form-group mb--l">
+          <label for="customerNumber">{{ 'ng.product-price-changes.login-customer-number.lbl' | translate }}</label>
+          <div class="form__input-container">
+            <input
+              data-cy="custom-login-form-customer-number"
+              type="number"
+              formControlName="customerNumber"
+              id="customerNumber"
+              class="form__input"
+              [ngClass]="{ 'ng-invalid': authenticationError }"
+              required="required"
+              value=""
+              placeholder="{{ 'ng.product-price-changes.login-customer-number.placeholder' | translate }}" />
+          </div>
+        </div>
+        <div class="form-group mb--l">
+          <label for="lastName">{{ 'ng.product-price-changes.login-last-name.lbl' | translate }}</label>
+          <div class="form__input-container">
+            <input
+              data-cy="custom-login-form-lastname"
+              type="text"
+              formControlName="lastName"
+              id="lastName"
+              class="form__input"
+              [ngClass]="{ 'ng-invalid': authenticationError }"
+              required="required"
+              value=""
+              placeholder="{{ 'ng.product-price-changes.login-last-name.placeholder' | translate }}" />
+          </div>
+        </div>
+        <button
+          data-cy="custom-login-form-button"
+          class="button button--primary__dark button--fullwidth mb--l"
+          (click)="doLogin(loginForm.value)">
+          <span>{{ 'ng.product-price-changes.login.btn' | translate }}</span>
+        </button>
+        <div *ngIf="clientNumberInformationUrl">
+          <a [href]="clientNumberInformationUrl" class="link" data-cy="custom-login-form-link">{{
+            'ng.product-price-changes.client.information' | translate
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

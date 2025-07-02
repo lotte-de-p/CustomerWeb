@@ -1,0 +1,37 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": [
+      "es2020",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "paths": {
+      "@customer-web-billing-limits-mfe/*": [
+        "apps/billing/limits-mfe/src/*"
+      ],
+      "@customer-web-billing-limits-mfe-global/*": [
+        "apps/billing/limits-mfe/global/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../limits-mfe/**/*.ts",
+    "../limits-mfe/**/*.js"
+  ]
+}

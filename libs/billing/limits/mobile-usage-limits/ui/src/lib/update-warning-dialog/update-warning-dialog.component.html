@@ -1,0 +1,35 @@
+<tg-slide-menu
+  [showMenu]="showWarningDialog"
+  (closeMenu)="onCancel()"
+  [title]="(showWarningDialog ? dialogData.warningText : '') | translate"
+  [hideCloseButton]="true"
+  [cancelClickOutside]="true"
+  [attr.data-cy]="'mobile-usage-limits-out-of-bundle-select'">
+  <div [attr.data-cy]="'update-warning-dialog'" class="px--m">
+    <div *ngIf="showWarningDialog">
+      <div class="pb-30">
+        <div [attr.data-cy]="'update-warning-dialog-description'" class="overlay__section__content__description">
+          <span class="color-shade_72" [innerHTML]="dialogData.warningDetails | translate"></span>
+        </div>
+        <div class="flex-direction--row--md flex-direction--column-reverse p--n--sm pt--n pb--n mt--l display--flex">
+          <div
+            class="pl-0 pr-0 display--flex mt--n--sm mb--xm--sm mr--n--sm mt--n mr--n mb--m ml--n"
+            (click)="onCancel()">
+            <label
+              [attr.data-cy]="'update-warning-dialog-cancel-button-text'"
+              class="button button--secondary font-weight--black button--fullwidth">
+              {{ dialogData.cancelButtonText | translate }}
+            </label>
+          </div>
+          <div
+            [attr.data-cy]="'update-warning-dialog-confirm-button-text'"
+            class="pl-0 pr-0 display--flex mt--n--sm ml--m--md mb--xm--sm mr--n--sm mt--n mr--n mb--m ml--n">
+            <label (click)="onConfirm()" class="button button--primary button--fullwidth">
+              {{ dialogData.confirmButtonText | translate }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</tg-slide-menu>

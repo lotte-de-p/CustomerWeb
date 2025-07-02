@@ -1,0 +1,39 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "billing": {
+      "showCard": true,
+      "pending": true
+    },
+    "mobileUsage": {
+      "showCard": true,
+      "pending": true
+    },
+    "internetUsage": {
+      "showCard": true,
+      "pending": true
+    },
+    "homeNetwork": {
+      "showCard": true,
+      "pending": true
+    },
+    "products": {
+      "showCard": true,
+      "mobile": {
+        "pending": true,
+        "products": [{ "productName": "BASE 29" }, { "productName": "BASE 9" }]
+      },
+      "dtv": {
+        "pending": true,
+        "products": [{ "productName": "BASE TV" }]
+      },
+      "internet": {
+        "pending": true,
+        "products": [{ "productName": "BASE Unlimited" }]
+      }
+    },
+    "actions": []
+  }
+}

@@ -1,0 +1,91 @@
+<form [formGroup]="form" class="col-sm-12" [ngClass]="{ 'col-md-7': !fullScreen, 'col-md-12': fullScreen }">
+  <div class="form-group">
+    <tg-form-input
+      [labelPrefix]="messageGroupName"
+      formControlName="description"
+      labelStyle="FormGroup__label"
+      [showPlaceHolder]="false"
+      [required]="false">
+    </tg-form-input>
+  </div>
+  <div
+    class="identification-details-found"
+    [ngClass]="{ 'disabled-elements': isContactDetailsNotEditable }"
+    *ngIf="!showIdentificationDetailsBtn">
+    <div class="form-group">
+      <tg-form-dropdown-with-input
+        labelStyle="FormGroup__label"
+        formControlName="salutation"
+        [labelPrefix]="messageGroupName"
+        [showPlaceHolder]="true"
+        [customLabel]="true"
+        [required]="true"
+        [optionList]="salutationOptionList">
+      </tg-form-dropdown-with-input>
+    </div>
+
+    <div class="form-group">
+      <tg-form-input
+        [labelPrefix]="messageGroupName"
+        formControlName="firstName"
+        labelStyle="FormGroup__label"
+        [required]="true"
+        [attr.disabled]="isContactDetailsNotEditable"
+        [showPlaceHolder]="false">
+      </tg-form-input>
+    </div>
+    <div class="form-group">
+      <tg-form-input
+        [labelPrefix]="messageGroupName"
+        formControlName="lastName"
+        [required]="true"
+        labelStyle="FormGroup__label"
+        [attr.disabled]="isContactDetailsNotEditable"
+        [showPlaceHolder]="false">
+      </tg-form-input>
+    </div>
+    <div class="form-group">
+      <label> {{ getLabel('birth-date') | translate }}</label>
+      <app-date-of-birth-picker
+        [form]="form"
+        [day]="day"
+        [month]="month"
+        [year]="year"
+        [dayBasedValidationFeatureFlag]="true"
+        ngDefaultControl>
+      </app-date-of-birth-picker>
+    </div>
+    <div formGroupName="email" class="form-group">
+      <tg-form-input
+        formControlName="emailValue"
+        [labelPrefix]="messageGroupName"
+        labelStyle="FormGroup__label"
+        [attr.disabled]="isContactDetailsNotEditable"
+        [required]="true"
+        [showPlaceHolder]="false">
+      </tg-form-input>
+    </div>
+    <div formGroupName="phoneNumber" class="form-group">
+      <tg-form-input
+        formControlName="phoneNumberValue"
+        [labelPrefix]="messageGroupName"
+        labelStyle="FormGroup__label"
+        [attr.disabled]="isContactDetailsNotEditable"
+        [required]="true"
+        [showPlaceHolder]="false"
+        (changeInput)="autoFormatPhoneNumber()">
+      </tg-form-input>
+    </div>
+    <div class="form-group">
+      <tg-form-dropdown-with-input
+        formControlName="language"
+        [labelPrefix]="messageGroupName"
+        [showPlaceHolder]="true"
+        [customLabel]="true"
+        [required]="true"
+        [attr.disabled]="isContactDetailsNotEditable"
+        [optionList]="languages">
+      </tg-form-dropdown-with-input>
+    </div>
+  </div>
+</form>

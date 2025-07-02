@@ -1,0 +1,36 @@
+{
+  "name": "sales-summary-feat-summary",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/summary/feat-summary/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/summary/feat-summary/**/*.ts", "libs/sales/summary/feat-summary/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/summary/feat-summary/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/summary/feat-summary/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-summary", "scope:sales-mfe"]
+}

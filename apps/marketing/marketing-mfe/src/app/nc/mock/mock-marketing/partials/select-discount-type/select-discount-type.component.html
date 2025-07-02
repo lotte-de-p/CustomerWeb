@@ -1,0 +1,35 @@
+<form [formGroup]="parentForm" class="form-group">
+  <div class="radio-checkbox--horizontal text-align--left">
+    <div class="radio-checkbox">
+      <div class="radio form__radio" style="--animation-delay: 0">
+        <input
+          type="radio"
+          id="basicDiscount-{{ idx }}"
+          class="form__radio__input"
+          formControlName="selectedDiscountType"
+          [value]="BASIC_DISCOUNT" />
+        <label class="form__radio__label" for="basicDiscount-{{ idx }}">&nbsp;</label>
+      </div>
+      <label for="basicDiscount-{{ idx }}" class="text--s">{{
+        'ng.mock-marketing.text.basic-discount' | translate
+      }}</label>
+    </div>
+    <div class="radio-checkbox">
+      <div class="radio form__radio" style="--animation-delay: 1">
+        <input
+          type="radio"
+          id="onTopDiscount-{{ idx }}"
+          class="form__radio__input"
+          formControlName="selectedDiscountType"
+          [value]="ON_TOP_DISCOUNT" />
+        <label class="form__radio__label" for="onTopDiscount-{{ idx }}">&nbsp;</label>
+      </div>
+      <label for="onTopDiscount-{{ idx }}" class="text--s">{{
+        'ng.mock-marketing.text.on-top-discount' | translate
+      }}</label>
+    </div>
+  </div>
+  <div class="card-info" *ngIf="parentForm.controls['selectedDiscountType'].value === ON_TOP_DISCOUNT">
+    <tg-marketing-nc-discount-form [parentForm]="parentForm" [idx]="idx"></tg-marketing-nc-discount-form>
+  </div>
+</form>

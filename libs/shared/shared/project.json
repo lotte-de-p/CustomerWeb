@@ -1,0 +1,73 @@
+{
+  "name": "shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/shared/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/shared/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/shared/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/shared/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-shared"],
+      "options": {
+        "jestConfig": "libs/shared/shared/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/shared/src/**/*.ts", "libs/shared/shared/src/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/shared/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/shared/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/shared/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "demo-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:shared"]
+}

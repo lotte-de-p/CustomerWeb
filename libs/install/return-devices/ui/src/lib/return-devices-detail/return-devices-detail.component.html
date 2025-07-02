@@ -1,0 +1,150 @@
+<div
+  class="content-section background-white card-content p--l"
+  style="margin-left: 0; margin-right: 0"
+  (click)="onToggleClick()">
+  <div class="row" data-cy="device-detail-row">
+    <div class="col-7">
+      <div class="text-flow text-flow--h4" data-cy="device-detail-name">
+        {{ device.name }}
+        <div
+          class="status-indicator display--inline-block vertical-align--middle status-indicator ml--m--md ml--n"
+          [class.status-indicator--negative]="device.returnStatus === ReturnStatusEnum.EXPIRED"
+          [class.status-indicator--positive]="device.returnStatus === ReturnStatusEnum.TO_BE_EXPECTED"
+          [class.status-indicator--warning]="device.returnStatus === ReturnStatusEnum.URGENT">
+          <span data-cy="device-detail-status">
+            {{ 'ng.return-devices.status-' + device.returnStatus | translate }}
+          </span>
+        </div>
+      </div>
+      <div class="font--body-regular-bold pt--xs">
+        {{ 'ng.return-devices.lbl.serial-number' | translate }}
+      </div>
+      <div data-cy="device-serialnumber" class="color-shade_48 font--body-small">{{ device.serialNumber }}</div>
+      @if (device.returnDueDate) {
+        <div class="font--body-regular-bold pt--xs">
+          {{ 'ng.return-devices.lbl.return-before' | translate }}
+        </div>
+        <div class="color-shade_48 font--body-small" data-cy="device-detail-return-due-date">
+          {{ device.returnDueDate | date: 'dd/MM/yyyy' }}
+        </div>
+      }
+    </div>
+    <div class="text-align--center col-4 pt--l">
+      <img
+        [tgReturnDevicesImageSrcInterceptor]="imagePath"
+        class="image-section return-devices-list__image-section"
+        src="/assets/{{ device.typeImageName }}.png"
+        data-cy="device-detail-type-image" />
+    </div>
+    <div class="col-1 p--n display--flex justify-content--end">
+      <i [ngClass]="device.isToggled ? 'icon-chevron-up' : 'icon-chevron-down'" data-cy="device-detail-chevron"></i>
+    </div>
+  </div>
+  @if (device.returnStatus !== ReturnStatusEnum.TO_BE_EXPECTED && !device.isToggled) {
+    <div class="row mt--m">
+      <div class="col">
+        <i
+          class="icon icon-md icon-error-shape-filled"
+          [class.color-notification--error--light]="device.returnStatus === ReturnStatusEnum.EXPIRED"
+          [class.color-notification--warning--light]="device.returnStatus === ReturnStatusEnum.URGENT"></i>
+      </div>
+      <div>
+        <div class="font--body-regular-bold">
+          @if (device.returnStatus === ReturnStatusEnum.URGENT) {
+            {{ 'ng.return-devices.fee-warning-title' | translate }}
+          } @else if (device.returnStatus === ReturnStatusEnum.EXPIRED) {
+            {{ 'ng.return-devices.fee-error-title' | translate }}
+          }
+        </div>
+        <div class="font--body-small">
+          {{
+            (device.returnStatus === ReturnStatusEnum.EXPIRED
+              ? 'ng.return-devices.fee-error-content'
+              : 'ng.return-devices.fee-warning-content'
+            )
+              | translate
+                : {
+                    dueDateFee:
+                      device.lateFee
+                      | currency: 'EUR' : 'symbol' : (device.lateFee % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+                  }
+          }}
+        </div>
+      </div>
+    </div>
+  }
+  @if (device.isToggled) {
+    @if (device.lateFee > 0 && device.returnStatus !== ReturnStatusEnum.TO_BE_EXPECTED) {
+      <div class="row my--l" data-cy="device-detail-more-details-row">
+        <div class="col-12">
+          <div
+            class="notification"
+            [class.notification--errorfield]="device.returnStatus === ReturnStatusEnum.EXPIRED"
+            [class.notification--warning]="device.returnStatus === ReturnStatusEnum.URGENT"
+            data-cy="device-detail-late-fee-box">
+            <span
+              class="icon"
+              [ngClass]="
+                device.returnStatus === ReturnStatusEnum.EXPIRED
+                  ? 'icon-error-shape errorfield'
+                  : 'icon-alert-shape warning'
+              "></span>
+            <div>
+              <div class="text-flow--h6 text-weight--xl mb--m">
+                {{ 'ng.return-devices.fee-warning-title' | translate }}
+              </div>
+              <span data-cy="device-detail-late-fee-description">
+                {{
+                  'ng.return-devices.fee-warning-content'
+                    | translate
+                      : {
+                          dueDateFee:
+                            device.lateFee
+                            | currency: 'EUR' : 'symbol' : (device.lateFee % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+                        }
+                }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    <div class="m--n display--flex" data-cy="device-detail-prepare-package-details">
+      <div class="px--m">
+        <i class="icon icon-printer"></i>
+      </div>
+      <div>
+        <div class="text-flow--h6 text-weight--xl pb--m">
+          {{ 'ng.return-devices.prepare-package-title' | translate }}
+        </div>
+        <div>
+          <span class="text-weight--l">{{ 'ng.return-devices.prepare-package-content' | translate }}</span>
+        </div>
+        <ul class="list-style--bullit pt--m">
+          <li>{{ 'ng.return-devices.prepare-package-mobile-coverage-extender' | translate }}</li>
+          <li>
+            {{ 'ng.return-devices.prepare-package-old-decoder' | translate }}<br />
+            <span class="text-weight--l">{{ 'ng.return-devices.prepare-package-return-everything' | translate }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider divider--s__very-light-grey my--xs" />
+
+    <div>
+      <button
+        (click)="onGenerateReturnLabelClick()"
+        [clickPushToAnalytics]="{
+          attributeName: 'return point button',
+          eventName: DatalayerEventNames.BUTTON_CLICKED,
+          messageGroupName: messageGroupName
+        }"
+        class="button button--secondary button--small button__icon--position-left"
+        data-cy="device-detail-print-button">
+        <i class="icon icon-printer"></i>
+        <span>{{ 'ng.return-devices.lbl.generate-return-label' | translate }}</span>
+      </button>
+    </div>
+  }
+</div>

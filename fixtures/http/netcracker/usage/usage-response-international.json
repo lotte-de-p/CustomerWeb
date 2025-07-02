@@ -1,0 +1,215 @@
+{
+  "productCode": "BOYO0015",
+  "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0015",
+  "nextBillingDate": "2018-12-06T00:00:00+01:00",
+  "lastUpdated": "2019-09-26T11:14:02.17+02:00",
+  "previousBillingDate": "2018-03-03T17:32:44.466+01:00",
+  "included": {
+    "monetary": [
+      {
+        "daysUntil": "",
+        "name": "spec.mobilemonetary.volume.national/EU",
+        "startUnits": "15",
+        "remainingUnits": "15",
+        "usedUnits": "0",
+        "usedPercentage": 0,
+        "unitType": "EUR",
+        "unlimited": false,
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "monetary.volume.national/EU"
+      }
+    ],
+    "data": [
+      {
+        "daysUntil": "",
+        "name": "Unlimited Internet",
+        "remainingUnits": "0.72",
+        "startUnits": "8",
+        "unitType": "GB",
+        "unlimited": true,
+        "usedPercentage": 91,
+        "usedUnits": "7.28",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "data outside Europe"
+      },
+      {
+        "daysUntil": "",
+        "name": "Unlimited Internet",
+        "remainingUnits": "0",
+        "startUnits": "8",
+        "unitType": "GB",
+        "unlimited": false,
+        "usedPercentage": 100,
+        "usedUnits": "8",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "data outside Europe"
+      },
+      {
+        "daysUntil": "",
+        "name": "Unlimited Internet",
+        "remainingUnits": "2048",
+        "startUnits": "10240",
+        "unitType": "MB",
+        "unlimited": false,
+        "usedPercentage": 80,
+        "usedUnits": "8192",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "data outside Europe"
+      },
+      {
+        "daysUntil": "",
+        "name": "Unlimited Internet",
+        "remainingUnits": "0",
+        "startUnits": "10",
+        "unitType": "GB",
+        "unlimited": false,
+        "usedPercentage": 102,
+        "usedUnits": "10.2",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "data outside Europe"
+      }
+    ],
+    "voice": [
+      {
+        "daysUntil": "",
+        "name": "250 mins",
+        "remainingUnits": "100",
+        "startUnits": "250",
+        "unitType": "MINUTES",
+        "unlimited": false,
+        "usedPercentage": 50,
+        "usedUnits": "150",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "minutes outside Europe"
+      }
+    ],
+    "text": [
+      {
+        "daysUntil": "",
+        "name": "SMS",
+        "remainingUnits": "100",
+        "startUnits": "250",
+        "unitType": "NUMBER",
+        "unlimited": true,
+        "usedPercentage": 0,
+        "usedUnits": "150",
+        "validity": "2020-05-04T12:30:31.393Z",
+        "bucketType": "texts outside Europe"
+      }
+    ]
+  },
+  "outOfBundle": {
+    "usedUnits": "0",
+    "unitType": "EUR"
+  },
+  "extraUsages": [
+    {
+      "name": "All voice & data",
+      "startUnits": "6",
+      "remainingUnits": "6",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "EUR",
+      "unlimited": false,
+      "bucketType": "Split Billing Cap"
+    }
+  ],
+  "credit": {
+    "remainingUnits": "100",
+    "unitType": "euro"
+  },
+  "options": [
+    {
+      "label": "Dataroaming Preferred netw L",
+      "specurl": "https://api.sup.base.be/omapi/public/product/INTW0100",
+      "productCode": "INTW0100",
+      "monetary": [],
+      "data": [
+        {
+          "name": "spec.mobileinternet.data.world",
+          "startUnits": "100",
+          "remainingUnits": "100",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "MB",
+          "unlimited": false
+        }
+      ],
+      "text": [],
+      "voice": []
+    },
+    {
+      "label": "Option Voice Europe 60 min",
+      "specurl": "https://api.sup.base.be/omapi/public/product/VOEU0060",
+      "productCode": "VOEU0060",
+      "monetary": [],
+      "data": [],
+      "text": [],
+      "voice": [
+        {
+          "name": "spec.mobilecalling.minutes.national/EU",
+          "startUnits": "3600",
+          "remainingUnits": "3600",
+          "usedUnits": "0",
+          "usedPercentage": 0,
+          "unitType": "SECONDS",
+          "unlimited": false,
+          "bucketType": "voice"
+        }
+      ]
+    }
+  ],
+  "carryOver": {
+    "monetary": [
+      {
+        "name": "spec.mobilemonetary.volume.national/EU",
+        "startUnits": "0",
+        "remainingUnits": "0",
+        "usedUnits": "0",
+        "usedPercentage": 0,
+        "unitType": "EUR",
+        "unlimited": false
+      }
+    ],
+    "data": [],
+    "text": [],
+    "voice": []
+  },
+  "total": {
+    "monetary": {
+      "startUnits": "15",
+      "remainingUnits": "15",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "EUR",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 100
+    },
+    "data": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "unitType": "MB",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "text": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "NUMBER",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    },
+    "voice": {
+      "startUnits": "0",
+      "remainingUnits": "0",
+      "usedUnits": "0",
+      "usedPercentage": 0,
+      "unitType": "SECONDS",
+      "initialCarryOverPercentage": 0,
+      "initialIncludedPercentage": 0
+    }
+  }
+}

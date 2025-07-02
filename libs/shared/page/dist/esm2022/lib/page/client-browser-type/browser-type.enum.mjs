@@ -1,0 +1,11 @@
+export var BrowserTypeEnum;
+(function (BrowserTypeEnum) {
+    BrowserTypeEnum[BrowserTypeEnum["EDGE"] = 0] = "EDGE";
+    BrowserTypeEnum[BrowserTypeEnum["OPERA"] = 1] = "OPERA";
+    BrowserTypeEnum[BrowserTypeEnum["CHROME"] = 2] = "CHROME";
+    BrowserTypeEnum[BrowserTypeEnum["INTERNET_EXPLORER"] = 3] = "INTERNET_EXPLORER";
+    BrowserTypeEnum[BrowserTypeEnum["FIREFOX"] = 4] = "FIREFOX";
+    BrowserTypeEnum[BrowserTypeEnum["SAFARI"] = 5] = "SAFARI";
+    BrowserTypeEnum[BrowserTypeEnum["UNKNOWN"] = 6] = "UNKNOWN";
+})(BrowserTypeEnum || (BrowserTypeEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJvd3Nlci10eXBlLmVudW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvbGliL3BhZ2UvY2xpZW50LWJyb3dzZXItdHlwZS9icm93c2VyLXR5cGUuZW51bS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLENBQU4sSUFBWSxlQVFYO0FBUkQsV0FBWSxlQUFlO0lBQ3pCLHFEQUFJLENBQUE7SUFDSix1REFBSyxDQUFBO0lBQ0wseURBQU0sQ0FBQTtJQUNOLCtFQUFpQixDQUFBO0lBQ2pCLDJEQUFPLENBQUE7SUFDUCx5REFBTSxDQUFBO0lBQ04sMkRBQU8sQ0FBQTtBQUNULENBQUMsRUFSVyxlQUFlLEtBQWYsZUFBZSxRQVExQiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBlbnVtIEJyb3dzZXJUeXBlRW51bSB7XG4gIEVER0UsXG4gIE9QRVJBLFxuICBDSFJPTUUsXG4gIElOVEVSTkVUX0VYUExPUkVSLFxuICBGSVJFRk9YLFxuICBTQUZBUkksXG4gIFVOS05PV04sXG59XG4iXX0=

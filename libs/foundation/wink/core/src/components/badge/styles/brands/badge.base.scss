@@ -1,0 +1,10 @@
+@import '../vars/vars.base';
+@import '../badge.default';
+
+:host {
+  --font-family: AkagiProBook;
+}
+
+:host([is-bold]) {
+  --font-family: AkagiProBold;
+}

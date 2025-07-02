@@ -1,0 +1,52 @@
+{
+  "name": "fleet-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/fleet/fleet-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fleet/fleet-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "fleet-mfe:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "fleet-mfe:serve:production"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fleet/fleet-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "fleet-mfe:serve:coverage",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fleet/fleet-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "fleet-mfe:serve:coverage",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "fleet-mfe:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fleet/fleet-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:fleet-mfe"],
+  "implicitDependencies": ["fleet-mfe"]
+}

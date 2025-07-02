@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="31.113" tests="16" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-12T08:03:53" tests="0" file="src/e2e/fleet-user/line-remove-options/line-remove-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Remove Options" timestamp="2024-09-12T08:03:53" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="As a fleet user I can use remove options on desktop" timestamp="2024-09-12T08:03:53" tests="9" time="0.000" failures="0">
+    <testcase name="AC 1: Fleet User goes to products detail page when remove options is selected then the add options wizard is opened" time="1.220" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 1: Fleet User goes to products detail page when remove options is selected then the add options wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option " time="0.800" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option ">
+    </testcase>
+    <testcase name="AC 3: Fleet User removes an option in the wizard when he selected to remove this option then the option is shown under  " time="0.834" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 3: Fleet User removes an option in the wizard when he selected to remove this option then the option is shown under  ">
+    </testcase>
+    <testcase name="AC 4: Fleet User is in the wizard and sees all the options he already has under Previously added " time="0.660" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 4: Fleet User is in the wizard and sees all the options he already has under Previously added ">
+    </testcase>
+    <testcase name="AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again " time="0.913" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again ">
+    </testcase>
+    <testcase name="AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.839" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line " time="0.993" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line ">
+    </testcase>
+    <testcase name="AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again " time="0.985" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again ">
+    </testcase>
+    <testcase name="AC 10: Fleet User should not see buttons that allow him to go back to Fleet Portal when he&apos;s coming from oneApp" time="1.518" classname="Line Remove Options As a fleet user I can use remove options on desktop AC 10: Fleet User should not see buttons that allow him to go back to Fleet Portal when he&apos;s coming from oneApp">
+    </testcase>
+  </testsuite>
+  <testsuite name="Split bill guard checks" timestamp="2024-09-12T08:04:09" tests="2" time="4.887" failures="0">
+    <testcase name="should show error message when fleet user ordering is not enabled" time="1.094" classname="Line Remove Options As a fleet user I can use remove options on desktop Split bill guard checks should show error message when fleet user ordering is not enabled">
+    </testcase>
+    <testcase name="should show error message when product is not of type SB20" time="1.035" classname="Line Remove Options As a fleet user I can use remove options on desktop Split bill guard checks should show error message when product is not of type SB20">
+    </testcase>
+  </testsuite>
+  <testsuite name="As a fleet user I can use remove options on my mobile" timestamp="2024-09-12T08:04:13" tests="5" time="10.365" failures="0">
+    <testcase name="AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option " time="0.856" classname="Line Remove Options As a fleet user I can use remove options on my mobile AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option ">
+    </testcase>
+    <testcase name="AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again " time="1.039" classname="Line Remove Options As a fleet user I can use remove options on my mobile AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again ">
+    </testcase>
+    <testcase name="AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.844" classname="Line Remove Options As a fleet user I can use remove options on my mobile AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line " time="0.916" classname="Line Remove Options As a fleet user I can use remove options on my mobile AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line ">
+    </testcase>
+    <testcase name="AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again " time="0.944" classname="Line Remove Options As a fleet user I can use remove options on my mobile AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again ">
+    </testcase>
+  </testsuite>
+</testsuites>

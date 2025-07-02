@@ -1,0 +1,7 @@
+export var AppointmentPickerTypeEnum;
+(function (AppointmentPickerTypeEnum) {
+    AppointmentPickerTypeEnum[AppointmentPickerTypeEnum["BY_DATE"] = 0] = "BY_DATE";
+    AppointmentPickerTypeEnum[AppointmentPickerTypeEnum["BY_MOMENT"] = 1] = "BY_MOMENT";
+    AppointmentPickerTypeEnum[AppointmentPickerTypeEnum["BY_TIME"] = 2] = "BY_TIME";
+})(AppointmentPickerTypeEnum || (AppointmentPickerTypeEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwb2ludG1lbnQtcGlja2VyLXR5cGUuZW51bS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jb250cm9scy9hcHBvaW50bWVudC1waWNrZXIvYXBwb2ludG1lbnQtcGlja2VyLXR5cGUuZW51bS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLENBQU4sSUFBWSx5QkFJWDtBQUpELFdBQVkseUJBQXlCO0lBQ25DLCtFQUFPLENBQUE7SUFDUCxtRkFBUyxDQUFBO0lBQ1QsK0VBQU8sQ0FBQTtBQUNULENBQUMsRUFKVyx5QkFBeUIsS0FBekIseUJBQXlCLFFBSXBDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gQXBwb2ludG1lbnRQaWNrZXJUeXBlRW51bSB7XG4gIEJZX0RBVEUsXG4gIEJZX01PTUVOVCxcbiAgQllfVElNRSxcbn1cbiJdfQ==

@@ -1,0 +1,96 @@
+<div
+  class="lines-section mt-35"
+  [ngClass]="toggleClass ? 'ml-0' : ''"
+  style="position: fixed; right: 0; width: 70%; margin-left: 0">
+  <div class="label-content">
+    <div class="left">
+      <label>{{ 'ng.line-add-options.lbl.phone-number' | translate }}</label>
+    </div>
+    <div class="right">
+      <label>{{ 'ng.line-add-options.lbl.options' | translate }}</label>
+    </div>
+  </div>
+  @for (selectedLine of selectedLines(); track selectedLine) {
+    <div class="options-content">
+      @if (showLineDetails(selectedLine)) {
+        <div class="content">
+          <div class="left">
+            <label class="hidden-desktop">{{ 'ng.line-add-options.lbl.phone-number' | translate }}</label>
+            @if (selectedLine.msisdn) {
+              <label>{{ selectedLine.msisdn | phoneNumber }}</label>
+            }
+          </div>
+          <div class="right">
+            <div [attr.data-cy]="'upgraded-options'">
+              @if (hasUpgradedOptions(selectedLine)) {
+                <p>{{ 'ng.line-add-options.lbl.upgraded' | translate }}</p>
+              }
+              @for (option of selectedLine.options; track option) {
+                <div>
+                  @if (option.isOptionUpgraded) {
+                    <div class="right-content-upgraded">
+                      <div class="subtitle-content" [attr.data-cy]="'upgraded-option'">
+                        <p>{{ option.category }}</p>
+                        <button>{{ option.volume }}</button>
+                      </div>
+                      <p>
+                        {{
+                          'ng.line-add-options.lbl.upgrade-from'
+                            | translate
+                              : {
+                                  category: option.category,
+                                  oldData: option.oldVolume,
+                                  newData: option.volume
+                                }
+                        }}
+                      </p>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+            <div [attr.data-cy]="'new-options'">
+              @if (hasAddedOptions(selectedLine)) {
+                <label>{{ 'ng.line-add-options.lbl.added' | translate }}</label>
+              }
+              @for (option of selectedLine.options; track option) {
+                <div>
+                  @if (option.isOptionAdded) {
+                    <div class="right-content-upgraded">
+                      <div class="subtitle-content" [attr.data-cy]="'added-option'">
+                        <p>{{ option.category }}</p>
+                        <button>{{ option.volume }}</button>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+            <div class="text--r text--xxs">
+              @if (selectedLine.options.length === 0) {
+                <span class="text--r text--xxs">{{ 'ng.line-add-options.lbl.no-options-added' | translate }}</span>
+              }
+            </div>
+            <div>
+              @if (showPreviouslyAddedOption(selectedLine)) {
+                <label>{{ 'ng.line-add-options.lbl.previously-added' | translate }}</label>
+              }
+              @for (option of selectedLine.options; track option) {
+                <div>
+                  @if (isActiveOption(option)) {
+                    <div class="right-content-upgraded">
+                      <div class="subtitle-content">
+                        <p class="prev-added-title">{{ option.category }}</p>
+                        <button class="btn-disabled">{{ option.volume }}</button>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

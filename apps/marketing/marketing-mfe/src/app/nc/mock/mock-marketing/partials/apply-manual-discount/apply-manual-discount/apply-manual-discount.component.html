@@ -1,0 +1,36 @@
+<form [formGroup]="parentForm" class="form-group">
+  <div class="row text-align--left pb--xxs">
+    <div class="select-dropdown-section mr-10">
+      <select formControlName="manualSelectedDiscount" class="form-control select-dropdown ml--xxs">
+        <option selected="" class="placeholder-option" [disabled]="true">
+          {{ 'ng.mock-marketing.text.option-placeholder-select-discount' | translate }}
+        </option>
+        <option value="cid">{{ 'ng.mock-marketing.text.cid-code' | translate }}</option>
+        <option value="campaign">{{ 'ng.mock-marketing.text.campaign-code' | translate }}</option>
+      </select>
+      <div class="icon icon-chevron-down position--absolute text--m text-weight--g"></div>
+    </div>
+  </div>
+  <div
+    class="card-info"
+    *ngIf="
+      parentForm.controls['manualSelectedDiscount'].value === cid ||
+      parentForm.controls['manualSelectedDiscount'].value === campaign
+    ">
+    <div>
+      <div class="col-sm-6 pl-0">
+        <label for="discountCode-{{ productType }}-{{ sku }}-{{ idx }}" class="text-align--left text--s">{{
+          'ng.mock-marketing.text.campaign-promotion-Code' | translate
+        }}</label>
+        <input
+          type="text"
+          class="form__input"
+          id="discountCode-{{ productType }}-{{ sku }}-{{ idx }}"
+          formControlName="discountCode" />
+      </div>
+    </div>
+    <div class="formErrorInput mb-10" *ngIf="!parentForm.valid">
+      {{ 'ng.mock-marketing.warning.form-error' | translate }}
+    </div>
+  </div>
+</form>

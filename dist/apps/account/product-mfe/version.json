@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Customer Web Account Product application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

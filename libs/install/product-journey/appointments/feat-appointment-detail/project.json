@@ -1,0 +1,53 @@
+{
+  "name": "product-journey-appointments-feat-appointment-detail",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/install/product-journey/appointments/feat-appointment-detail/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/install/product-journey/appointments/feat-appointment-detail/**/*.ts",
+          "libs/install/product-journey/appointments/feat-appointment-detail/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/install/product-journey/appointments/feat-appointment-detail/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "product-journey-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/install/product-journey/appointments/feat-appointment-detail/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "product-journey-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/install/product-journey/appointments/feat-appointment-detail/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "product-journey-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:product-journey-appointments", "scope:product-journey-mfe"]
+}

@@ -1,0 +1,3840 @@
+{
+  "mutuallyExclusiveGroups": [],
+  "groupedOptions": [
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0014",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0014",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "Streamz",
+            "weight": 5,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Streamz",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Streamz"
+          },
+          "labelKey": "Streamz",
+          "visible": true,
+          "weight": 740,
+          "services": [
+            {
+              "serviceType": "Play",
+              "specifications": [
+                {
+                  "labelKey": "the-play-sports-app-and-website-watching-sports-in-a-new-dimension",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "The Play Sports app and website nl"
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "ENTERTAINMENT"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 11,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0018",
+                "TVPK0015",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0015"],
+              "unit": ""
+            }
+          ],
+          "name": "Streamz",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "11,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0018",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0018",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "Streamz",
+            "weight": 5,
+            "mutualExclusion": false,
+            "localizedName": "Streamz"
+          },
+          "labelKey": "Streamz+",
+          "visible": false,
+          "weight": 745,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 19,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0015",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0015"],
+              "unit": ""
+            }
+          ],
+          "name": "Streamz+",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz+.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "19,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0015",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0015",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "PLAY",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Play",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Play"
+          },
+          "labelKey": "Play More",
+          "visible": false,
+          "weight": 745,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 24,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0018",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            }
+          ],
+          "name": "Play More",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "24,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0016",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0016",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "PLAY",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedName": "Play"
+          },
+          "labelKey": "Play Sports",
+          "visible": false,
+          "weight": 750,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": true,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 29,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": ["TVPK0017", "TVPK0106", "TVPK0107", "TVPK0109"],
+              "unit": ""
+            },
+            {
+              "key": "callcontentpackdicsountedpriceapi",
+              "values": ["true"],
+              "unit": ""
+            }
+          ],
+          "name": "Play Sports",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "29,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false,
+        "discountedPrice": "24,95",
+        "discount": "5,00",
+        "isDiscountForPlayMore": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0021",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0021",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "VRT",
+            "weight": 20,
+            "mutualExclusion": false,
+            "localizedName": "VRT"
+          },
+          "labelKey": "VRT net gemist",
+          "visible": false,
+          "weight": 765,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0018",
+                "TVPK0015",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0107",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0101", "TVPK0108", "TVPK0102", "TVPK0103"],
+              "unit": ""
+            }
+          ],
+          "name": "VRT net gemist",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "5,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0012",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0012",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Option FR",
+          "visible": false,
+          "weight": 700,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Option FR",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/option-fr.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "5,45"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0005",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0005",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Be tv",
+          "visible": false,
+          "weight": 705,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 24,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Be tv",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "24,99"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0006",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0006",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Be tv Sport",
+          "visible": false,
+          "weight": 710,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 16,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Be tv Sport",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv-sport.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "16,40"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0020",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0020",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "VOO Sport",
+          "visible": false,
+          "weight": 715,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 2,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "VOO Sport",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "2,00"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0013",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0013",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "+18",
+            "weight": 40,
+            "mutualExclusion": false,
+            "localizedName": "+18"
+          },
+          "labelKey": "Passion XL",
+          "visible": false,
+          "weight": 760,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 19,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Passion XL",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/passion-xl.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "19,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0002",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0002",
+          "productType": "OPTION",
+          "subCategory": {},
+          "labelKey": "Basic Content Pack",
+          "visible": true,
+          "weight": 250,
+          "services": [
+            {
+              "serviceType": "Content Pack",
+              "specifications": [
+                {
+                  "labelKey": "8-sports-channels-in-hd",
+                  "visible": true,
+                  "weight": "5",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Sports channels in HD nl",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "the-best-setting-on-and-off-the-field",
+                  "visible": true,
+                  "weight": "6",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "The best setting on and off the field nl"
+                  }
+                },
+                {
+                  "labelKey": "the-play-sports-app-and-website-watching-sports-in-a-new-dimension",
+                  "visible": true,
+                  "weight": "4",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "The Play Sports app and website nl"
+                  }
+                },
+                {
+                  "labelKey": "the-widest-range-of-top-sports-football-cyclocross-formula-1-golf-tennis-local-ball-sports-and-more",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "The widest range of top sports nl"
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "ENTERTAINMENT"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "name": "Basic Content Pack",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/basic-content-pack.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "0,00"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      }
+    ]
+  ],
+  "productType": "bundle",
+  "productIdentifier": "INTDTV000001118",
+  "currentOption": {
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "TVPK0015",
+      "isYupProduct": false,
+      "externalProductCode": "TVPK0015",
+      "productType": "OPTION",
+      "subCategory": {
+        "name": "PLAY",
+        "weight": 10,
+        "mutualExclusion": false,
+        "localizedName": "Play"
+      },
+      "labelKey": "Play More",
+      "visible": false,
+      "weight": 745,
+      "services": [
+        {
+          "serviceType": "FEATURE",
+          "specifications": [
+            {
+              "labelKey": "",
+              "visible": true,
+              "weight": "0",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                "logo": ""
+              }
+            },
+            {
+              "labelKey": "",
+              "visible": true,
+              "weight": "1",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                "logo": ""
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "FEATURE"
+          }
+        }
+      ],
+      "shortDescription": {},
+      "visibilityRules": {
+        "conditionalVisibility": false
+      },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "OTHER",
+        "productSubGroup": "",
+        "productSegment": "ALL",
+        "priceInclVat": 24,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": false,
+      "maxCount": "1",
+      "chars": [
+        {
+          "key": "mutuallyexclusivetocontentpack",
+          "values": [
+            "TVPK0014",
+            "TVPK0018",
+            "TVPK0021",
+            "TVPK0017",
+            "TVPK0100",
+            "TVPK0108",
+            "TVPK0103",
+            "TVPK0105",
+            "TVPK0101"
+          ],
+          "unit": ""
+        }
+      ],
+      "name": "Play More",
+      "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png",
+      "productConstituents": []
+    },
+    "price": {
+      "currency": "Euro",
+      "amount": "24,95"
+    },
+    "category": "dtv",
+    "rank": "3",
+    "otherPlatformWarningMsg": true,
+    "isFree": false
+  },
+  "activeProduct": {
+    "success": true,
+    "id": "9160547446113102148",
+    "locationId": "9160475129213193325",
+    "identifier": "INTDTV000001118",
+    "accountNumber": "500489821",
+    "label": "Basic Internet + Telenet TV",
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "TWOP0000",
+      "isYupProduct": false,
+      "externalProductCode": "TWOP0000",
+      "productType": "BUNDLE",
+      "subCategory": {},
+      "labelKey": "Basic Internet + Telenet TV",
+      "visible": false,
+      "weight": 370,
+      "services": [
+        {
+          "serviceType": "INTERNET",
+          "specifications": [
+            {
+              "labelKey": "-spec-fixedinternet-volume-download-cap",
+              "unit": "GB",
+              "value": "150",
+              "visible": true,
+              "weight": "20",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Basic Internet Allowance",
+                "logo": ""
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "SURF"
+          }
+        },
+        {
+          "serviceType": "TV",
+          "specifications": [
+            {
+              "labelKey": "dtv",
+              "visible": true,
+              "weight": "10",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Dtv/Tv box",
+                "logo": ""
+              }
+            }
+          ],
+          "experience": {
+            "experienceType": "ENTERTAINMENT"
+          }
+        }
+      ],
+      "apps": [],
+      "shortDescription": {
+        "localizedContent": {
+          "locale": "nl",
+          "name": "Basic Internet + Telenet TV",
+          "logo": ""
+        }
+      },
+      "visibilityRules": {
+        "conditionalVisibility": false
+      },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "OTHER",
+        "productSubGroup": "",
+        "productSegment": "RMD",
+        "priceInclVat": 55,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": true,
+      "name": "Basic Internet + Telenet TV",
+      "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/basic-internet-+-telenet-tv.png",
+      "usageLimits": {
+        "premiumService": {
+          "preferenceGroup": "PremiumServices",
+          "limits": [
+            {
+              "communicationPreferenceType": "OutBundleFraud",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      },
+      "usagenotifications": {
+        "mobile": [],
+        "internet": [
+          {
+            "category": "CAP",
+            "preferenceGroup": "InternetCAP",
+            "threshold": [
+              {
+                "communicationPreferenceType": "Internet80",
+                "communicationPreferenceTypeValue": "80",
+                "isEditable": true,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "Internet90",
+                "communicationPreferenceTypeValue": "90",
+                "isEditable": true,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "Internet100",
+                "communicationPreferenceTypeValue": "100",
+                "isEditable": true,
+                "values": []
+              }
+            ]
+          }
+        ]
+      },
+      "productConstituents": [
+        {
+          "type": "internet_line",
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "type": "dtv[SIPADAN]",
+          "minCount": "0",
+          "maxCount": "1"
+        },
+        {
+          "type": "dtv[EOS]",
+          "minCount": "0",
+          "maxCount": "1"
+        }
+      ]
+    },
+    "status": "ACTIVE",
+    "smartPhones": [],
+    "options": [
+      {
+        "label": "VRT net gemist",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0021",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0021",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "VRT",
+            "weight": 20,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "VRT",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "VRT",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "VRT",
+                "logo": ""
+              }
+            ],
+            "localizedName": "VRT"
+          },
+          "labelKey": "VRT net gemist",
+          "visible": false,
+          "weight": 765,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "\nZoveel van de beste tv-series om een ​​fan te worden van de meest indrukwekkende series ter wereld, met plezier voor kinderen en tieners.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "De genoemde internetsnelheden zijn theoretische maciumsnelheden wanneer een pc of laptop met een kabel op de modem is aangesloten. De daadwerkelijke internetsnelheid kan worden beïnvloed door verkeer en andere technische factoren (zoals wifi, internetbekabeling, processor, etc), maar de afstand van de verbinding tot het knooppunt heeft geen invloed op de daadwerkelijke internetsnelheid die je kunt behalen.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0018",
+                "TVPK0015",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0107",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0101", "TVPK0108", "TVPK0102", "TVPK0103"],
+              "unit": ""
+            }
+          ],
+          "name": "VRT net gemist",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentTotal": "5,95",
+            "recurrentDiscount": "0,00",
+            "recurrentDiscounted": "5,95"
+          }
+        },
+        "contract": {
+          "obligationEndDate": "2021-09-11T02:00:38+02:00",
+          "duration": "1",
+          "price": {}
+        },
+        "discountItem": {},
+        "isIncluded": false,
+        "category": "dtv",
+        "rank": "3",
+        "activeTrialPack": {},
+        "chars": {
+          "brodbandUuids": ""
+        }
+      },
+      {
+        "label": "WiFree",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "WiFi0001",
+          "isYupProduct": false,
+          "externalProductCode": "WiFi0001",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "",
+                "logo": ""
+              }
+            ],
+            "localizedName": ""
+          },
+          "labelKey": "WiFree",
+          "visible": true,
+          "weight": 590,
+          "services": [
+            {
+              "serviceType": "INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "wifree",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Internet Options",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "INTERNET"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": false,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Met Telenet Wi-Free u als Telenet internetklant ook onderweg surfen via WiFi. Dit op meer dan 1,5 miljoen locaties in Vlaanderen en Brussel. U registreert zich één keer, daarna maakt uw apparaat automatisch verbinding als er Wi-Free in de buurt is.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "WiFree",
+          "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentDiscounted": "0,00"
+          }
+        },
+        "contract": {},
+        "discountItem": {},
+        "isIncluded": true,
+        "category": "internet",
+        "rank": "2",
+        "activeTrialPack": {},
+        "chars": {
+          "brodbandUuids": ""
+        }
+      },
+      {
+        "label": "WiFree",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "WiFi0001",
+          "isYupProduct": false,
+          "externalProductCode": "WiFi0001",
+          "productType": "OPTION",
+          "subCategory": {
+            "name": "",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "",
+                "logo": ""
+              }
+            ],
+            "localizedName": ""
+          },
+          "labelKey": "WiFree",
+          "visible": true,
+          "weight": 590,
+          "services": [
+            {
+              "serviceType": "INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "wifree",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Internet Options",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "INTERNET"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": false,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Met Telenet Wi-Free u als Telenet internetklant ook onderweg surfen via WiFi. Dit op meer dan 1,5 miljoen locaties in Vlaanderen en Brussel. U registreert zich één keer, daarna maakt uw apparaat automatisch verbinding als er Wi-Free in de buurt is.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "WiFree",
+          "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png",
+          "productConstituents": []
+        },
+        "status": "ACTIVE",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentDiscounted": "0,00"
+          }
+        },
+        "contract": {},
+        "discountItem": {},
+        "isIncluded": true,
+        "category": "internet",
+        "rank": "2",
+        "activeTrialPack": {},
+        "parentId": "015895154",
+        "chars": {
+          "brodbandUuids": ""
+        }
+      }
+    ],
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "57,01",
+        "recurrentDiscount": "0,00",
+        "recurrentDiscounted": "57,01"
+      }
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "68,91",
+        "recurrentDiscount": "0,00",
+        "recurrentDiscounted": "68,91"
+      }
+    },
+    "discountItem": {},
+    "hasUsage": true,
+    "lineLevelProducts": [
+      {
+        "category": "dtv",
+        "identifier": "IDTV000007277",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TSIP0001",
+          "isYupProduct": false,
+          "productType": "DTV Line",
+          "externalProductCode": "TSIP0001",
+          "subCategory": {
+            "name": "",
+            "weight": 0,
+            "mutualExclusion": false,
+            "localizedName": ""
+          },
+          "labelKey": "iDTV Access (Sipadan)",
+          "visible": false,
+          "weight": 0,
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "",
+              "logo": ""
+            }
+          },
+          "rates": [],
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": true,
+          "maxCount": "1",
+          "chars": [],
+          "name": "Digital Tv",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/idtv-access-(sipadan).png",
+          "productConstituents": []
+        }
+      },
+      {
+        "category": "internet",
+        "identifier": "INT000016098",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "INLN0001",
+          "isYupProduct": false,
+          "externalProductCode": "INLN0001",
+          "productType": "INTERNET LINE",
+          "subCategory": {
+            "name": "",
+            "weight": 0,
+            "mutualExclusion": false,
+            "localizedName": ""
+          },
+          "labelKey": "Internet Service",
+          "visible": false,
+          "weight": 0,
+          "shortDescription": {
+            "localizedContent": {
+              "locale": "nl",
+              "name": "",
+              "logo": ""
+            }
+          },
+          "rates": [],
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "chars": [],
+          "name": "Internet",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/internet-service.png",
+          "productConstituents": []
+        }
+      }
+    ]
+  },
+  "categoryOptions": [
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "BERU0001",
+          "isYupProduct": false,
+          "externalProductCode": "BERU0001",
+          "productType": "OPTION",
+          "categories": [
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "for-rules---options-with-etf",
+            "bundle-options",
+            "bundle-options",
+            "bundle-options",
+            "voice-options",
+            "for-rules---generic-optional-product"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "International Calling",
+          "visible": false,
+          "weight": 630,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "international-calling-mobil-tel-discount",
+                  "unit": "minutes",
+                  "value": "2000",
+                  "visible": true,
+                  "weight": "10",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "International Calling Mobil",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FIXED VOICE",
+              "specifications": [
+                {
+                  "labelKey": "international-calling-fixed-tel-discount",
+                  "unit": "minutes",
+                  "value": "2000",
+                  "visible": true,
+                  "weight": "20",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "International Calling Fixed",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "CALL"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": false,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "Do you often call abroad? Then the International Calling option is really for you. This gives you 2,000 minutes to call landline and mobile numbers abroad for € 10 per month.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": false,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "To these EU countries: Austria, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, French Guiana, Germany, Gibraltar (UK), Greece, Guadeloupe, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Martinique, Mayotte, Netherlands, Norway, Poland, Portugal, Réunion, Romania, Saint-Barthélemy, Saint Martin, San Marino, Slovakia, Slovenia, Spain, Sweden, United Kingdom and Andorra.\nAnd to Morocco, Turkey, the US, Canada, Democratic Republic of congo, Switzerland and Faroe Islands.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "International Calling",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/international-calling.png"
+            },
+            {
+              "locale": "fr",
+              "name": "International Calling",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/international-calling.png"
+            },
+            {
+              "locale": "en",
+              "name": "International Calling",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/international-calling.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "name": "International Calling",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/international-calling.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00"
+        },
+        "category": "bundle",
+        "rank": "1",
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "IOPT0005",
+          "isYupProduct": false,
+          "externalProductCode": "IOPT0005",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "internet-options",
+            "for-rules---options-with-etf",
+            "for-rules---speedboost-options"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "",
+                "logo": ""
+              }
+            ],
+            "localizedName": ""
+          },
+          "labelKey": "Giga Speedboost",
+          "visible": true,
+          "weight": 550,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "speedboost",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The very first Gigabit internet in Belgium is there. Ready to stream, download and play in flash. With 'n Giga Speedboost you can achieve top speeds of 1 Gigabit per second!"
+                  }
+                },
+                {
+                  "labelKey": "speedboost",
+                  "visible": false,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "How do you achieve up to 1Gigabit per second?\\nYou can achieve a top speed of up to 1Gbps or 1,000Mbps when you are connected to the modem via a network cable with a good computer (fast processor, no viruses, etc.) note that your top speed can be influenced by a number of factors."
+                  }
+                },
+                {
+                  "labelKey": "speedboost",
+                  "visible": false,
+                  "weight": "2",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve."
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Giga Speedboost",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/giga-speedboost.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Giga Speedboost",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/giga-speedboost.png"
+            },
+            {
+              "locale": "en",
+              "name": "Giga Speedboost",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/giga-speedboost.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Giga Speedboost",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/giga-speedboost.png"
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "15,00"
+        },
+        "category": "internet",
+        "rank": "2",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "WiFi0001",
+          "isYupProduct": false,
+          "externalProductCode": "WiFi0001",
+          "productType": "OPTION",
+          "categories": ["location-less-services"],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "",
+                "logo": ""
+              }
+            ],
+            "localizedName": ""
+          },
+          "labelKey": "WiFree",
+          "visible": true,
+          "weight": 590,
+          "services": [
+            {
+              "serviceType": "FIXED_INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "wifree",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "Internet Options",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "INTERNET"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": false,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "With Telenet Wi-Free, as a Telenet internet customer you can also surf on the road via WiFi . This at more than 1.5 million locations in Flanders and Brussels . You register once, afterwards your device connects automatically if there is Wi-Free nearby.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "WiFree",
+              "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png"
+            },
+            {
+              "locale": "fr",
+              "name": "WiFree",
+              "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png"
+            },
+            {
+              "locale": "en",
+              "name": "WiFree",
+              "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "WiFree",
+          "logo": "https://customerzone.uat.base.be/content/dam/www-base-be/img/self-service/products/wifree.png",
+          "productConstituents": []
+        },
+        "isIncluded": true,
+        "category": "internet",
+        "rank": "2",
+        "price": {
+          "amount": "0,00"
+        }
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0012",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0012",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "content-packs",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Option FR",
+          "visible": false,
+          "weight": 700,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Option FR",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/option-fr.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Option FR",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/option-fr.png"
+            },
+            {
+              "locale": "en",
+              "name": "Option FR",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/option-fr.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Option FR",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/option-fr.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "5,45"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0005",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0005",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---content-packs-for-vip-discount",
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "content-packs",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Be tv",
+          "visible": false,
+          "weight": 705,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Be tv",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Be tv",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv.png"
+            },
+            {
+              "locale": "en",
+              "name": "Be tv",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 24,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Be tv",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "24,99"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0006",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0006",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---content-packs-for-vip-discount",
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "content-packs",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "Be tv Sport",
+          "visible": false,
+          "weight": 710,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Be tv Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv-sport.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Be tv Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv-sport.png"
+            },
+            {
+              "locale": "en",
+              "name": "Be tv Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv-sport.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 16,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Be tv Sport",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/be-tv-sport.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "16,40"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0020",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0020",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---content-packs-for-vip-discount",
+            "content-packs",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "FRENCH",
+            "weight": 30,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "FRENCH",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "FRENCH",
+                "logo": ""
+              }
+            ],
+            "localizedName": "FRENCH"
+          },
+          "labelKey": "VOO Sport",
+          "visible": false,
+          "weight": 715,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            },
+            {
+              "locale": "fr",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            },
+            {
+              "locale": "en",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            },
+            {
+              "locale": "fr",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            },
+            {
+              "locale": "en",
+              "name": "VOO Sport",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 2,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "VOO Sport",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/voo-sport.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "2,00"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0014",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0014",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "for-rules---content-packs-playmoresports",
+            "content-packs",
+            "for-rules---streamz",
+            "for-rules---streamz-play-more",
+            "content-packs",
+            "content-packs",
+            "for-rules---streamzstreamzplay-moreplay-sports-res--b2b",
+            "for-rules---streamzstreamzplay-more-res--b2b",
+            "for-rules---cps-and-trials-for-streamz-app"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "Streamz",
+            "weight": 5,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Streamz",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Streamz"
+          },
+          "labelKey": "Streamz",
+          "visible": true,
+          "weight": 740,
+          "services": [
+            {
+              "serviceType": "Play",
+              "specifications": [
+                {
+                  "labelKey": "the-play-sports-app-and-website-watching-sports-in-a-new-dimension",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The Play Sports app and website en"
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "ENTERTAINMENT"
+              }
+            },
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Streamz",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Streamz",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz.png"
+            },
+            {
+              "locale": "en",
+              "name": "Streamz",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 11,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0018",
+                "TVPK0015",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0015"],
+              "unit": ""
+            }
+          ],
+          "name": "Streamz",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "11,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0018",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0018",
+          "productType": "OPTION",
+          "categories": [
+            "content-packs",
+            "content-packs",
+            "content-packs",
+            "for-rules---streamzstreamzplay-moreplay-sports-res--b2b",
+            "for-rules---streamzstreamzplay-more-res--b2b",
+            "for-rules---cps-and-trials-for-streamz-app"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "Streamz",
+            "weight": 5,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Streamz",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Streamz",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Streamz"
+          },
+          "labelKey": "Streamz+",
+          "visible": false,
+          "weight": 745,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Streamz+",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz+.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Streamz+",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz+.png"
+            },
+            {
+              "locale": "en",
+              "name": "Streamz+",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz+.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 19,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0015",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0015"],
+              "unit": ""
+            }
+          ],
+          "name": "Streamz+",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/streamz+.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "19,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0015",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0015",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---content-packs-for-vip-discount",
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "for-rules---content-packs-playmoresports",
+            "content-packs",
+            "content-packs",
+            "for-rules---play-more",
+            "for-rules---streamz-play-more",
+            "content-packs",
+            "for-rules---play-more-and-play-sports-res--b2b",
+            "content-packs",
+            "for-rules---streamzstreamzplay-moreplay-sports-res--b2b",
+            "for-rules---cps-and-trials-for-streamz-app",
+            "for-rules---streamzstreamzplay-more-res--b2b"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "PLAY",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Play",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Play"
+          },
+          "labelKey": "Play More",
+          "visible": false,
+          "weight": 745,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            },
+            {
+              "locale": "en",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            },
+            {
+              "locale": "en",
+              "name": "Play More",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 24,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0018",
+                "TVPK0021",
+                "TVPK0017",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0101"
+              ],
+              "unit": ""
+            }
+          ],
+          "name": "Play More",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-more.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "24,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": true
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0016",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0016",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---content-packs-for-vip-discount",
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "for-rules---play-sport-cp",
+            "for-rules---content-packs-playmoresports",
+            "content-packs",
+            "content-packs",
+            "for-rules---play-sports",
+            "content-packs",
+            "for-rules---play-more-and-play-sports-res--b2b",
+            "content-packs",
+            "for-rules---streamzstreamzplay-moreplay-sports-res--b2b"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "PLAY",
+            "weight": 10,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Play",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Play",
+                "logo": ""
+              }
+            ],
+            "localizedName": "Play"
+          },
+          "labelKey": "Play Sports",
+          "visible": false,
+          "weight": 750,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            },
+            {
+              "locale": "en",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            },
+            {
+              "locale": "nl",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            },
+            {
+              "locale": "en",
+              "name": "Play Sports",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": true,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 29,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": ["TVPK0017", "TVPK0106", "TVPK0107", "TVPK0109"],
+              "unit": ""
+            },
+            {
+              "key": "callcontentpackdicsountedpriceapi",
+              "values": ["true"],
+              "unit": ""
+            }
+          ],
+          "name": "Play Sports",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/play-sports.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "29,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0013",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0013",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "content-packs",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "+18",
+            "weight": 40,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "+18",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "+18",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "+18",
+                "logo": ""
+              }
+            ],
+            "localizedName": "+18"
+          },
+          "labelKey": "Passion XL",
+          "visible": false,
+          "weight": 760,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Passion XL",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/passion-xl.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Passion XL",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/passion-xl.png"
+            },
+            {
+              "locale": "en",
+              "name": "Passion XL",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/passion-xl.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 19,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Passion XL",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/passion-xl.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "19,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "TVPK0021",
+          "isYupProduct": false,
+          "externalProductCode": "TVPK0021",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "content-packs",
+            "content-packs"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business",
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {
+            "name": "VRT",
+            "weight": 20,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "VRT",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "VRT",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "VRT",
+                "logo": ""
+              }
+            ],
+            "localizedName": "VRT"
+          },
+          "labelKey": "VRT net gemist",
+          "visible": false,
+          "weight": 765,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "So many top TV series to become a fan of the most impressive home grown series,viewing fun for kids and teens.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "The stated internet speeds are theoretical macium speeds when when a PC or laptop is connected to the modem with a cable. The actual internet speed can be influenced by traffic and other technical factors(such as wifi, internet cabling, processor,etc).However, the distance from the connection to the node does not affect the actual internet speed that you can achieve.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            },
+            {
+              "locale": "fr",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            },
+            {
+              "locale": "en",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            },
+            {
+              "locale": "nl",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            },
+            {
+              "locale": "fr",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            },
+            {
+              "locale": "en",
+              "name": "VRT net gemist",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "chars": [
+            {
+              "key": "mutuallyexclusivetocontentpack",
+              "values": [
+                "TVPK0014",
+                "TVPK0018",
+                "TVPK0015",
+                "TVPK0100",
+                "TVPK0108",
+                "TVPK0103",
+                "TVPK0105",
+                "TVPK0107",
+                "TVPK0101"
+              ],
+              "unit": ""
+            },
+            {
+              "key": "hideaddbuttonwhenpackactive",
+              "values": ["TVPK0101", "TVPK0108", "TVPK0102", "TVPK0103"],
+              "unit": ""
+            }
+          ],
+          "name": "VRT net gemist",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/vrt-net-gemist.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "5,95"
+        },
+        "category": "dtv",
+        "rank": "3",
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "FTOP0001",
+          "isYupProduct": false,
+          "externalProductCode": "FTOP0001",
+          "productType": "OPTION",
+          "categories": [
+            "for-rules---9-personeelskorting-telenet",
+            "for-rules---partner-discount",
+            "for-rules---453-externe-medewerkers-korting",
+            "for-rules---options-with-etf",
+            "for-rules---services-top-lines",
+            "for-rules---services-top-lines-and-caller-displays",
+            "for-rules---services-top-lines-and-call-forwardings",
+            "for-rules---services-top-lines-and-signal-2nd-calls",
+            "services-top-line"
+          ],
+          "customerCategories": [
+            "all",
+            "residential",
+            "production-test-business",
+            "internal",
+            "production-test",
+            "eventdemo",
+            "business"
+          ],
+          "subCategory": {},
+          "labelKey": "Services Top-line",
+          "visible": false,
+          "weight": 585,
+          "services": [
+            {
+              "serviceType": "FEATURE",
+              "specifications": [
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "Via the Know-your-caller service,  you can  see the name and number of the caller on the screen of your device. The choice is yours: pick it up or just let it ring.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "1",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "You expecting an important call on your landline, but you are away from home? Then, use the  call forwarding service and do not miss a call, ever. Using this you can forward calls to another (mobile) number where you can be reached. Even abroad.",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "2",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "You are already on the call and someone is trying to reach you on the same? Then you will hear a  signal indicating the 2nd call. You then have the choice: answer the call immediately, alternately talk to both conversation partners, or have the 2nd call forwarded to the Message Service. Handy, right?",
+                    "logo": ""
+                  }
+                },
+                {
+                  "labelKey": "",
+                  "visible": true,
+                  "weight": "3",
+                  "localizedContent": {
+                    "locale": "en",
+                    "name": "Are you not at home or are you not able to record for a while? Fortunately, there is the  Telenet Message Service , an answering machine without a device, with your own personal message. Do you have a new voicemail message? Then you can see this on your landline telephone via a light, message or signal.",
+                    "logo": ""
+                  }
+                }
+              ],
+              "experience": {
+                "experienceType": "FEATURE"
+              }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Diensten Toplijn",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/services-top-line.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Services Ligne Top",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/services-top-line.png"
+            },
+            {
+              "locale": "en",
+              "name": "Services Top-line",
+              "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/services-top-line.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": {
+            "conditionalVisibility": false
+          },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "ALL",
+            "priceInclVat": 4,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "maxCount": "1",
+          "name": "Services Top-line",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/services-top-line.png",
+          "productConstituents": []
+        },
+        "price": {
+          "currency": "Euro",
+          "amount": "4,50"
+        },
+        "category": "telephone",
+        "rank": "4",
+        "otherPlatformWarningMsg": false
+      }
+    ]
+  ]
+}

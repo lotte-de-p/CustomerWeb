@@ -1,0 +1,1539 @@
+{
+  "products": [
+    {
+      "tag": {
+        "sortOrder": "16",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "tag_nl",
+            "value": ["Online Exclusive_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "tag_fr",
+            "value": ["Online Exclusive_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "color_en",
+            "value": ["Online Exclusive_en"]
+          }
+        ]
+      },
+      "productFamily": "smartphones",
+      "labelkey": "IPHONE SE 2020",
+      "brand": {
+        "sortOrder": "15",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "brand_nl",
+            "value": ["Base_nl", "Telenet_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "brand_fr",
+            "value": ["Base_fr", "Telenet_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "brand_en",
+            "value": ["Base_en", "Telenet_en"]
+          }
+        ]
+      },
+      "visible": true,
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        },
+        {
+          "locale": "fr",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        },
+        {
+          "locale": "en",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        }
+      ],
+      "variants": [
+        {
+          "productId": "2038207",
+          "enabled": "true",
+          "created": "2020-05-19T13:54:49+00:00",
+          "updated": "2020-07-08T07:38:41+00:00",
+          "prices": {
+            "base": {
+              "plans": [
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+                  "externalProductCode": "BOYO0040",
+                  "originalPriceVatInclusive": "649",
+                  "discountedPriceVatInclusive": "450",
+                  "currency": "EUR"
+                },
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0027",
+                  "externalProductCode": "BOYO0027",
+                  "originalPriceVatInclusive": "649",
+                  "discountedPriceVatInclusive": "500",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            "telenet": {
+              "originalPriceVatInclusive": "649",
+              "discountedPriceVatInclusive": "450",
+              "currency": "EUR"
+            }
+          },
+          "images": [
+            {
+              "attributeKey": "main_image",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "main_image_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "main_image_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "main_image_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_1",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "image_1_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "image_1_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "image_1_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_2",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "image_2_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "image_2_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "image_2_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_3",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "image_3_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "image_3_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "image_3_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_4",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "image_4_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "image_4_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "image_4_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "image_5",
+              "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "image_5_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "image_5_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "image_5_en"
+                }
+              ]
+            }
+          ],
+          "man_brand": {
+            "sortOrder": "17",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "General"
+                },
+                {
+                  "locale": "fr",
+                  "key": "General"
+                },
+                {
+                  "locale": "nl",
+                  "key": "General"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "key": "color_nl",
+                "value": ["Black NL"]
+              },
+              {
+                "locale": "fr",
+                "key": "color_fr",
+                "value": ["Black FR"]
+              },
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "color": {
+            "hexCode": "#000000",
+            "sortOrder": "0",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "General_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "General_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "General_en"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "key": "color_nl",
+                "value": ["Black NL"]
+              },
+              {
+                "locale": "fr",
+                "key": "color_fr",
+                "value": ["Black FR"]
+              },
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "characteristics": [
+            {
+              "attributeKey": "status",
+              "sortOrder": "1",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "status_nl",
+                  "value": ["status_active_NL"]
+                },
+                {
+                  "locale": "fr",
+                  "key": "status_fr",
+                  "value": ["status_active_FR"]
+                },
+                {
+                  "locale": "en",
+                  "key": "status_en",
+                  "value": ["status_active_EN"]
+                }
+              ]
+            },
+            {
+              "attributeKey": "internal_memory",
+              "sortOrder": "2",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "value": "64.0000",
+              "unit": "GIGABYTE",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "internal_memory_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "internal_memory_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "internal_memory_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "ean",
+              "sortOrder": "3",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "value": "190199503922",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "ean_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "ean_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "ean_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "fingerprint_sensor",
+              "sortOrder": "4",
+              "attributeGroup": {
+                "code": "marketing",
+                "sortOrder": "1",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Marketing_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Marketing_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Marketing_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "fingerprint_sensor_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "fingerprint_sensor_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "fingerprint_sensor"
+                }
+              ]
+            },
+            {
+              "attributeKey": "touchscreen",
+              "sortOrder": "5",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "touchscreen_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "touchscreen_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "touchscreen"
+                }
+              ]
+            },
+            {
+              "attributeKey": "fast_charging_yes_no",
+              "sortOrder": "6",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Fast Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Fast Charging_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Fast Charging"
+                }
+              ]
+            },
+            {
+              "attributeKey": "wireless_charging",
+              "sortOrder": "7",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Wireless Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Wireless Charging_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Wireless Charging"
+                }
+              ]
+            },
+            {
+              "attributeKey": "front_camera",
+              "sortOrder": "8",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "7",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Front Camera Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Front Camera_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Front Camera"
+                }
+              ]
+            },
+            {
+              "attributeKey": "main_camera",
+              "sortOrder": "10",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "12",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Main Camera NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Main Camera FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Main Camera"
+                }
+              ]
+            },
+            {
+              "attributeKey": "dual_sim",
+              "sortOrder": "9",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Specifications_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Specifications_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Specifications_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Dual Sim NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Dual Sim FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Dual Sim"
+                }
+              ]
+            },
+            {
+              "attributeKey": "gsm_bands",
+              "sortOrder": "11",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Specifications_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Specifications_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Specifications_en"
+                  }
+                ]
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "GSM Bands(Primary SIM) NL",
+                  "value": ["850", "900", "1800", "1900"]
+                },
+                {
+                  "locale": "fr",
+                  "key": "GSM Bands(Primary SIM) FR",
+                  "value": ["850", "900", "1800", "1900"]
+                },
+                {
+                  "locale": "en",
+                  "key": "GSM Bands(Primary SIM)",
+                  "value": ["850", "900", "1800", "1900"]
+                }
+              ]
+            },
+            {
+              "attributeKey": "thickness",
+              "sortOrder": "12",
+              "attributeGroup": {
+                "code": "technical",
+                "sortOrder": "3",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Technical_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Technical_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Technical_en"
+                  }
+                ]
+              },
+              "value": "7.3000",
+              "unit": "MILLIMETER",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Thickness NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Thickness FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Thickness"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "productId": "11800162",
+          "enabled": "true",
+          "created": "2020-05-19T13:54:49+00:00",
+          "updated": "2020-07-08T07:38:41+00:00",
+          "prices": {
+            "base": {
+              "plans": [
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+                  "externalProductCode": "BOYO0040",
+                  "originalPriceVatInclusive": "649",
+                  "discountedPriceVatInclusive": "450",
+                  "currency": "EUR"
+                },
+                {
+                  "specurl": "https://api.int.base.be/omapi/public/product/BOYO0027",
+                  "externalProductCode": "BOYO0027",
+                  "originalPriceVatInclusive": "649",
+                  "discountedPriceVatInclusive": "500",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            "telenet": {
+              "originalPriceVatInclusive": "649",
+              "discountedPriceVatInclusive": "450",
+              "currency": "EUR"
+            }
+          },
+          "man_brand": {
+            "sortOrder": "17",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "en",
+                  "key": "General"
+                },
+                {
+                  "locale": "fr",
+                  "key": "General"
+                },
+                {
+                  "locale": "nl",
+                  "key": "General"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "key": "color_nl",
+                "value": ["Black NL"]
+              },
+              {
+                "locale": "fr",
+                "key": "color_fr",
+                "value": ["Black FR"]
+              },
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "color": {
+            "hexCode": "#000000",
+            "sortOrder": "0",
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "General_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "General_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "General_en"
+                }
+              ]
+            },
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "key": "color_nl",
+                "value": ["Black NL"]
+              },
+              {
+                "locale": "fr",
+                "key": "color_fr",
+                "value": ["Black FR"]
+              },
+              {
+                "locale": "en",
+                "key": "color_en",
+                "value": ["Black EN"]
+              }
+            ]
+          },
+          "characteristics": [
+            {
+              "attributeKey": "status",
+              "sortOrder": "1",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "status_nl",
+                  "value": ["status_active_NL"]
+                },
+                {
+                  "locale": "fr",
+                  "key": "status_fr",
+                  "value": ["status_active_FR"]
+                },
+                {
+                  "locale": "en",
+                  "key": "status_en",
+                  "value": ["status_active_EN"]
+                }
+              ]
+            },
+            {
+              "attributeKey": "internal_memory",
+              "sortOrder": "2",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "value": "64.0000",
+              "unit": "GIGABYTE",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "internal_memory_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "internal_memory_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "internal_memory_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "ean",
+              "sortOrder": "3",
+              "attributeGroup": {
+                "code": "general",
+                "sortOrder": "0",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "General_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "General_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "General_en"
+                  }
+                ]
+              },
+              "value": "190199503922",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "ean_nl"
+                },
+                {
+                  "locale": "fr",
+                  "key": "ean_fr"
+                },
+                {
+                  "locale": "en",
+                  "key": "ean_en"
+                }
+              ]
+            },
+            {
+              "attributeKey": "fingerprint_sensor",
+              "sortOrder": "4",
+              "attributeGroup": {
+                "code": "marketing",
+                "sortOrder": "1",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Marketing_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Marketing_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Marketing_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "fingerprint_sensor_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "fingerprint_sensor_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "fingerprint_sensor"
+                }
+              ]
+            },
+            {
+              "attributeKey": "touchscreen",
+              "sortOrder": "5",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "touchscreen_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "touchscreen_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "touchscreen"
+                }
+              ]
+            },
+            {
+              "attributeKey": "fast_charging_yes_no",
+              "sortOrder": "6",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Fast Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Fast Charging_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Fast Charging"
+                }
+              ]
+            },
+            {
+              "attributeKey": "wireless_charging",
+              "sortOrder": "7",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Wireless Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Wireless Charging_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Wireless Charging"
+                }
+              ]
+            },
+            {
+              "attributeKey": "front_camera",
+              "sortOrder": "8",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "7",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Front Camera Charging_NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Front Camera_FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Front Camera"
+                }
+              ]
+            },
+            {
+              "attributeKey": "main_camera",
+              "sortOrder": "10",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Media_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Media_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Media_en"
+                  }
+                ]
+              },
+              "value": "12",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Main Camera NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Main Camera FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Main Camera"
+                }
+              ]
+            },
+            {
+              "attributeKey": "dual_sim",
+              "sortOrder": "9",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Specifications_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Specifications_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Specifications_en"
+                  }
+                ]
+              },
+              "value": "true",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Dual Sim NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Dual Sim FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Dual Sim"
+                }
+              ]
+            },
+            {
+              "attributeKey": "gsm_bands",
+              "sortOrder": "11",
+              "attributeGroup": {
+                "code": "media",
+                "sortOrder": "2",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Specifications_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Specifications_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Specifications_en"
+                  }
+                ]
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "GSM Bands(Primary SIM) NL",
+                  "value": ["850", "900", "1800", "1900"]
+                },
+                {
+                  "locale": "fr",
+                  "key": "GSM Bands(Primary SIM) FR",
+                  "value": ["850", "900", "1800", "1900"]
+                },
+                {
+                  "locale": "en",
+                  "key": "GSM Bands(Primary SIM)",
+                  "value": ["850", "900", "1800", "1900"]
+                }
+              ]
+            },
+            {
+              "attributeKey": "thickness",
+              "sortOrder": "12",
+              "attributeGroup": {
+                "code": "technical",
+                "sortOrder": "3",
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "key": "Technical_nl"
+                  },
+                  {
+                    "locale": "fr",
+                    "key": "Technical_fr"
+                  },
+                  {
+                    "locale": "en",
+                    "key": "Technical_en"
+                  }
+                ]
+              },
+              "value": "7.3000",
+              "unit": "MILLIMETER",
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "key": "Thickness NL"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Thickness FR"
+                },
+                {
+                  "locale": "en",
+                  "key": "Thickness"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "shortdescription": {
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          },
+          {
+            "locale": "fr",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          },
+          {
+            "locale": "en",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          }
+        ]
+      },
+      "man_brand": {
+        "sortOrder": "17",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "color_nl",
+            "value": ["Black NL"]
+          },
+          {
+            "locale": "fr",
+            "key": "color_fr",
+            "value": ["Black FR"]
+          },
+          {
+            "locale": "en",
+            "key": "color_en",
+            "value": ["Black EN"]
+          }
+        ]
+      }
+    },
+    {
+      "tag": {
+        "sortOrder": "16",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "tag_nl",
+            "value": ["Online Exclusive_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "tag_fr",
+            "value": ["Online Exclusive_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "color_en",
+            "value": ["Online Exclusive_en"]
+          }
+        ]
+      },
+      "labelkey": "IPHONE SE 2020",
+      "brand": {
+        "sortOrder": "15",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "brand_nl",
+            "value": ["Base_nl", "Telenet_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "brand_fr",
+            "value": ["Base_fr", "Telenet_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "brand_en",
+            "value": ["Base_en", "Telenet_en"]
+          }
+        ]
+      },
+      "visible": true,
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        },
+        {
+          "locale": "fr",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        },
+        {
+          "locale": "en",
+          "name": "IPHONE SE 2020",
+          "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/flex-unlimited.png"
+        }
+      ],
+      "shortdescription": {
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          },
+          {
+            "locale": "fr",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          },
+          {
+            "locale": "en",
+            "name": "<p><span style=\"color: rgb(17, 17, 17); font-family: &quot;Open Sans&quot;, Arial, Helvetica, Verdana, sans-serif;\">Apple iPhone SE 64 GB Zwart is een echte krachtpatser in een herkenbaar jasje. Dankzij de razendsnelle A13 Bionic chip laden al je apps in enkele seconden. </span><br></p>"
+          }
+        ]
+      },
+      "man_brand": {
+        "sortOrder": "17",
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedcontent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        },
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "key": "color_nl",
+            "value": ["Black NL"]
+          },
+          {
+            "locale": "fr",
+            "key": "color_fr",
+            "value": ["Black FR"]
+          },
+          {
+            "locale": "en",
+            "key": "color_en",
+            "value": ["Black EN"]
+          }
+        ]
+      }
+    }
+  ]
+}

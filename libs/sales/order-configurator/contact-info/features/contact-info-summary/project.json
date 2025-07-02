@@ -1,0 +1,26 @@
+{
+  "name": "sales-order-configurator-contact-info-feat-contact-info-summary",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/order-configurator/contact-info/features/contact-info-summary/src",
+  "prefix": "sales-order-configurator-contact-info",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/contact-info/features/contact-info-summary/**/*.ts",
+          "libs/sales/order-configurator/contact-info/features/contact-info-summary/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:order-configurator-mfe"]
+}

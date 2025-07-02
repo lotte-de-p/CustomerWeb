@@ -1,0 +1,41 @@
+import { EventEmitter, Injector } from '@angular/core';
+import { ControlValueAccessor, FormGroup } from '@angular/forms';
+import { LanguageService } from '@telenet/ng-lib-page';
+import { TimeslotMomentEnum } from '../../../../enums';
+import { FormErrorService, MessageGroupDirective } from '../../../../errors';
+import { AppointmentTransformerSlot } from '../../../../models';
+import { AppointmentInterface, SlideConfigInterface, TimeslotAvailabilityInterface } from '../../interfaces';
+import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class InputNewAppointmentPickerComponent implements ControlValueAccessor {
+    languageService: LanguageService;
+    messageGroupDirective: MessageGroupDirective;
+    injector: Injector;
+    timeslots: AppointmentTransformerSlot[];
+    updateSlots: AppointmentTransformerSlot[];
+    selectableMoments: TimeslotMomentEnum[];
+    showLoadMore: boolean;
+    dateSlideConfig: SlideConfigInterface;
+    loadMore: EventEmitter<any>;
+    private readonly formBuilder;
+    form: FormGroup;
+    availableMoments: TimeslotAvailabilityInterface[];
+    appointmentsAvailable$: Observable<boolean>;
+    appointment: AppointmentInterface;
+    error: unknown;
+    formService: FormErrorService;
+    constructor(languageService: LanguageService, formService: FormErrorService, messageGroupDirective: MessageGroupDirective, injector: Injector);
+    onChange(_: AppointmentInterface): void;
+    onTouch(_: boolean): void;
+    registerOnChange(fn: VoidFunction): void;
+    registerOnTouched(fn: VoidFunction): void;
+    writeValue(value: AppointmentInterface): void;
+    selectInstallSlotDay(appointmentSlot: AppointmentTransformerSlot): void;
+    selectMoment(moment: TimeslotMomentEnum): void;
+    private static getNewAppointment;
+    private setAvailableMoments;
+    loadMoreSlots(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputNewAppointmentPickerComponent, [null, null, { optional: true; }, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputNewAppointmentPickerComponent, "app-form-new-appointment-picker", never, { "timeslots": { "alias": "timeslots"; "required": false; }; "updateSlots": { "alias": "updateSlots"; "required": false; }; "selectableMoments": { "alias": "selectableMoments"; "required": false; }; "showLoadMore": { "alias": "showLoadMore"; "required": false; }; "dateSlideConfig": { "alias": "dateSlideConfig"; "required": false; }; }, { "loadMore": "loadMore"; }, never, never, false, never>;
+}
+//# sourceMappingURL=new-appointment-picker.component.d.ts.map

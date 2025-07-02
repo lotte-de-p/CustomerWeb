@@ -1,0 +1,20 @@
+{
+  "url": "http://localhost:8080/oauth/userdetails",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "customer_number": "1202415514",
+    "identity_id": "41112622841",
+    "username": "Manager_1202415514_wijqlm@telenetgroup.be",
+    "login_alias": "2d03828d-8cc4-4f57-a810-24730342b5cd",
+    "first_name": "Leon",
+    "last_name": "Beaulieu",
+    "scopes": ["customeraccount", "D_hardwarediscounts"],
+    "explicit_login": true,
+    "narrowed_scope": false,
+    "bss_system": "NETCRACKER",
+    "auth_age": 344689,
+    "is_pid": true,
+    "role": "MANAGER"
+  }
+}

@@ -1,0 +1,56 @@
+<tg-activate-sim-management-activation-ui-step-container
+  data-testid="sim-porting"
+  [title]="'ng.e-sim-activation.porting.lbl.title'"
+  [description]="'ng.e-sim-activation.porting.txt.description'"
+  [progress]="'66'"
+  (backClick)="onBackClick()"
+  (submitClick)="onSubmitClick()">
+  <ng-container left-content>
+    <div class="col-6 hide-until-sm text-align--center">
+      <img
+        [tgActivateSimManagementImageSrcInterceptor]="imagePath"
+        [moduleId]="SimManagementComponentId.SIM_MANAGEMENT_SIM_ACTIVATION"
+        src="/assets/mobile-secure.svg" />
+    </div>
+  </ng-container>
+  <ng-container content>
+    <div class="background-white p--xxl">
+      <div class="text-flow text-flow--h3 align-items--center display--flex mt--xm mb--xl--md">
+        <span>{{ 'ng.e-sim-activation.porting.txt.choose-subscription' | translate }}</span>
+      </div>
+
+      @if (actionResultMessage$ | async; as message) {
+        <tg-activate-sim-management-ui-notification [message]="message"></tg-activate-sim-management-ui-notification>
+      }
+
+      <form [formGroup]="portingForm">
+        @if (portingForm.get('accountType')?.errors && isSubmitted) {
+          <div class="formErrorInput" data-testid="sim-porting-input-account-type-error">
+            {{ 'ng.e-sim-activation.porting.error.subscription-not-chosen' | translate }}
+          </div>
+        }
+
+        <tg-activate-sim-management-activation-ui-subscription-option
+          [accountType]="AccountType.PREPAID"
+          label="ng.e-sim-activation.porting.lbl.prepaid"
+          [form]="portingForm"
+          [isSubmitted]="isSubmitted">
+        </tg-activate-sim-management-activation-ui-subscription-option>
+
+        <tg-activate-sim-management-activation-ui-subscription-option
+          [accountType]="AccountType.SUBSCRIPTION"
+          label="ng.e-sim-activation.porting.lbl.subscription"
+          [form]="portingForm"
+          [isSubmitted]="isSubmitted">
+        </tg-activate-sim-management-activation-ui-subscription-option>
+
+        <tg-activate-sim-management-activation-ui-subscription-option
+          [accountType]="AccountType.BUSINESS_SUBSCRIPTION"
+          label="ng.e-sim-activation.porting.lbl.business"
+          [form]="portingForm"
+          [isSubmitted]="isSubmitted">
+        </tg-activate-sim-management-activation-ui-subscription-option>
+      </form>
+    </div>
+  </ng-container>
+</tg-activate-sim-management-activation-ui-step-container>

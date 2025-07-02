@@ -1,0 +1,88 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-user-line-overlay [isSourceOneApp]="isSourceOneApp" (closeOverlay)="backToProductOverview()">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-user-result-message
+        backToProductOverviewLabel="ng.fleet-user-line-change-tariff-plan.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        [isSourceOneApp]="isSourceOneApp"
+        (backToProductOverviewClicked)="backToProductOverview()">
+      </tg-fleet-user-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+
+    @if (isFleetUserOrderingEnabled$ | async) {
+      @if (showProduct$ | async) {
+        <div class="row" [attr.data-cy]="'line-change-tariff-plan'">
+          <div class="col-sm-12 p-0">
+            <div>
+              <div class="options-content">
+                @if (!loading) {
+                  <tg-fleet-user-mobile-action-buttons
+                    primaryButtonLabel="ng.fleet-user-line-change-tariff-plan.btn.save-changes"
+                    secondaryButtonLabel="ng.fleet-user-line-change-tariff-plan.btn.revert-changes"
+                    [primaryButtonEnabled]="hasNoChanges() || showAvailableOptionsContainer"
+                    [secondaryButtonEnabled]="hasNoChanges() || showAvailableOptionsContainer"
+                    (primaryCallback)="toggleWarningMessage()"
+                    (secondaryCallback)="revertChanges()" />
+                  <tg-available-options
+                    [selectedLine]="initialProduct"
+                    [newTariffPlan]="newTariffPlan"
+                    [mobilePlans]="mobilePlans"
+                    [dataPlans]="dataPlans"
+                    [showAvailableOptions]="showAvailableOptionsContainer"
+                    [isCategorySelected]="isCategorySelected"
+                    (tariffPlanSelected)="onSelectTariff($event)"
+                    (toggleAvailableOptionsContainer)="toggleAvailableOptions()"></tg-available-options>
+                  <div
+                    class="title-top hidden-mobile"
+                    [ngClass]="{ 'blur-on-confirmation': isChangesConfirmed && containsDisconnectedStatus() }">
+                    <div class="title-container">
+                      <p class="hidden-mobile">
+                        {{ 'ng.fleet-user-line-change-tariff-plan.lbl.review-selected-lines' | translate }}
+                      </p>
+                    </div>
+                  </div>
+                  <tg-line-items
+                    [ngClass]="{ 'mobile-blur': showAvailableOptionsContainer }"
+                    [disconnectedActiveTariffPlanOptions]="disconnectedActiveTariffPlanOptions()"
+                    [isChangesConfirmed]="isChangesConfirmed"
+                    [lineProductDetails]="product"
+                    [selectedTariffPlan]="newTariffPlan"
+                    [tariffPlanOptions]="tariffPlanOptions">
+                  </tg-line-items>
+                  @if (isChangesConfirmed) {
+                    <tg-fleet-user-warning-message
+                      [image]="confirmationImage"
+                      [title]="
+                        'ng.fleet-user-line-change-tariff-plan.lbl.affected-options-count'
+                          | translate: { count: affectedLineCount() }
+                      "
+                      [description]="'ng.fleet-user-line-change-tariff-plan.text.confirmation-message'"
+                      [primaryActionLabel]="'ng.fleet-user-line-change-tariff-plan.btn.continue'"
+                      [secondaryActionLabel]="'ng.fleet-user-line-change-tariff-plan.btn.revert-confirm'"
+                      (secondaryAction)="toggleWarningMessage()"
+                      (primaryAction)="submitTariffPlanFromWarning()"></tg-fleet-user-warning-message>
+                  }
+                  <tg-fleet-user-sticky-actions
+                    class="hidden-mobile"
+                    [primaryButtonEnabled]="!!newTariffPlan"
+                    [secondaryButtonEnabled]="!!newTariffPlan"
+                    [secondaryButtonLabel]="'ng.fleet-user-line-change-tariff-plan.btn.revert-changes'"
+                    [primaryButtonLabel]="'ng.fleet-user-line-change-tariff-plan.btn.save-changes'"
+                    (secondaryCallback)="revertChanges()"
+                    (primaryCallback)="submitDetails()">
+                  </tg-fleet-user-sticky-actions>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </tg-fleet-user-line-overlay>
+</tg-login>

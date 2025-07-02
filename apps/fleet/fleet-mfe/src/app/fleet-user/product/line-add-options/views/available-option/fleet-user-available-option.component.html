@@ -1,0 +1,58 @@
+<div class="option-tiles mobile-option-tiles">
+  <div class="title-row justify-content--between">
+    <div class="display--flex flex-direction--row">
+      <em class="icon-manage-line"></em>
+      <p>{{ 'ng.fleet-user-line-add-options.lbl.add-options' | translate }}</p>
+    </div>
+    <div class="hidden-desktop">
+      <em
+        [ngClass]="showAvailableOptionsContainer ? 'icon-chevron-up' : 'icon-chevron-down'"
+        (click)="toggleAvailableOptions()"></em>
+    </div>
+  </div>
+  <div class="pt-25 pb-25">
+    <p>{{ 'ng.fleet-user-line-add-options.lbl.add-option-info' | translate }}</p>
+  </div>
+
+  <div class="pb-25 hidden-desktop">
+    <p class="text-flow--h5">{{ selectedLine.identifier | translate }}</p>
+  </div>
+  <div [ngClass]="{ 'hidden-mobile': !showAvailableOptionsContainer }">
+    <div class="title hidden-mobile">
+      <p>{{ 'ng.fleet-user-line-add-options.lbl.add-options' | translate }}</p>
+    </div>
+    @for (category of groupedOptions; track category) {
+      <div class="option-title" [attr.data-cy]="'available-option-category'">
+        <div class="option-title-toggle" (click)="toggleCategories(category)">
+          <span>{{ category.category }}</span>
+          <em [ngClass]="{ open: category.isOpen }" class="icon-chevron-down"></em>
+        </div>
+        @if (category.isOpen) {
+          <div class="options-button-container mobile-options-button-container">
+            @for (lineOption of category.lineOptions; track lineOption) {
+              @if (lineOption.visible) {
+                <button
+                  class="options-button"
+                  (click)="addOption(lineOption)"
+                  [ngClass]="{ available: !lineOption.isSelected, 'previously-added': lineOption.isDisabled }"
+                  [disabled]="lineOption.isDisabled"
+                  [attr.data-cy]="'available-option'">
+                  <div class="justify-content--between width--full display--flex">
+                    <span>{{ lineOption.volume }}</span>
+                    <span>{{ currencySymbol }}{{ lineOption.price.amount }}</span>
+                  </div>
+                  @if (!lineOption.isDisabled) {
+                    <span
+                      class="separator"
+                      [attr.data-cy]="'available-option-icon'"
+                      [ngClass]="{ 'icon-tick': lineOption.isSelected, 'icon-plus': !lineOption.isSelected }"></span>
+                  }
+                </button>
+              }
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "url": "http://localhost:8080/address/v1/suggest/number?municipalityGeoId=47bda15e-83c4-6b81-e054-00144f80cbe2&streetName=Avenue Mutsaard&searchTerm=7",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "geoId": "5d587b3d-b278-70bc-e053-579c000a0533",
+      "houseNumber": "75",
+      "unit": "66"
+    },
+    {
+      "geoId": "5d587b3d-b278-70bc-e053-579c000a0534",
+      "houseNumber": "76",
+      "unit": "66"
+    }
+  ]
+}

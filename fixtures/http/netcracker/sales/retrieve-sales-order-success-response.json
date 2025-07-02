@@ -1,0 +1,864 @@
+{
+  "status": "Entering",
+  "customerId": "9152763807413632111",
+  "id": "9154577186413050110",
+  "name": "Order #0000366191",
+  "pricesWereUpdated": false,
+  "manualInstallationAddress": false,
+  "feasibilityCheckRequired": true,
+  "contractSummaryReRequired": false,
+  "isSlotAvailable": false,
+  "isBundleFamilySame": false,
+  "installation": {
+    "type": "Home Delivery Telenet Hardware",
+    "addressId": "9153462896013523517",
+    "appointment": {
+      "date": "2020-12-22",
+      "timeSlotCode": "MORNING",
+      "priceCategory": "APPT0000"
+    },
+    "manualAddress": {
+      "country": "België",
+      "houseNumber": "100",
+      "municipality": "Mechelen",
+      "postalCode": "2800",
+      "street": "Elektriciteitstraat",
+      "streetId": "9150308777313971234"
+    },
+    "orderItems": [
+      {
+        "id": "9158975116513237477",
+        "name": "Activation fixed services",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "50,00",
+            "oneTimeTotal": "50,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "50,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          }
+        },
+        "specurl": "https://api.int.base.be/omapi/public/product/FACT0001",
+        "orderItems": [],
+        "status": "ADD",
+        "discountItems": {
+          "discounts": [
+            {
+              "specurl": "https://api.int.base.be/omapi/public/product/9154529983265802243",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "50,00"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "50,00"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "9158975125613238323",
+        "name": "Installation Fee",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          }
+        },
+        "specurl": "https://api.int.base.be/omapi/public/product/INSF0001",
+        "orderItems": [],
+        "status": "ADD",
+        "discountItems": {
+          "discounts": [
+            {
+              "specurl": "https://api.int.base.be/omapi/public/product/9154529983265802239",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "0,00"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "relocate": {
+      "date": "01-01-2022",
+      "oldAddressId": "98721321325"
+    }
+  },
+  "prices": {
+    "taxInclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "15,00",
+      "oneTimeTotal": "125,00",
+      "oneTimeDiscounted": "110,00",
+      "recurrentDiscount": "25,00",
+      "recurrentTotal": "55,00",
+      "recurrentDiscounted": "30,00",
+      "oneTimeDiscountedOnNextInvoice": "25,00",
+      "upfrontTotal": "250,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "5,00",
+      "oneTimeTotal": "95,00",
+      "oneTimeDiscounted": "90,00",
+      "recurrentDiscount": "22,00",
+      "recurrentTotal": "40,00",
+      "recurrentDiscounted": "18,00",
+      "oneTimeDiscountedOnNextInvoice": "20,00",
+      "upfrontTotal": "200,00"
+    }
+  },
+  "lineItems": [
+    {
+      "type": "New Line Acquisition",
+      "acquisitionType": "NEW",
+      "orderItems": [
+        {
+          "id": "9154577959152539825",
+          "name": "15 Based on you",
+          "chars": {
+            "endDate": "2019-07-18"
+          },
+          "eligibleForEasySwitch": true,
+          "isMobileLineConfigured": false,
+          "productIdentifier": "0465658599",
+          "mobileLinesInNewBundle": "Less",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "15,00",
+              "oneTimeTotal": "125,00",
+              "oneTimeDiscounted": "110,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "5,00",
+              "oneTimeTotal": "95,00",
+              "oneTimeDiscounted": "90,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            }
+          },
+          "locationId": "9152763807413632788",
+          "parentId": "9154577186413050110",
+          "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0015",
+          "billingAddressId": "9153462896013523517",
+          "discountItems": {
+            "discounts": [
+              {
+                "specurl": "https://api.int.base.be/omapi/public/product/9157542971313500638",
+                "prices": {
+                  "taxInclPrices": {
+                    "currency": "Euro",
+                    "oneTimeTotal": "0,00",
+                    "discountPrice": "20,00",
+                    "recurrentTotal": "0,00",
+                    "oneTimeDiscounted": "0,00",
+                    "recurrentDiscounted": "0,00"
+                  },
+                  "taxExclPrices": {
+                    "currency": "EUR",
+                    "oneTimeTotal": "0,00",
+                    "discountPrice": "20,00",
+                    "recurrentTotal": "0,00",
+                    "oneTimeDiscounted": "0,00",
+                    "recurrentDiscounted": "0,00"
+                  }
+                }
+              },
+              {
+                "specurl": "https://api.int.base.be/omapi/public/product/9157542971313501638",
+                "prices": {
+                  "taxInclPrices": {
+                    "currency": "Euro",
+                    "oneTimeTotal": "0,00",
+                    "discountPrice": "05,00",
+                    "recurrentTotal": "0,00",
+                    "oneTimeDiscounted": "0,00",
+                    "recurrentDiscounted": "0,00"
+                  },
+                  "taxExclPrices": {
+                    "currency": "EUR",
+                    "oneTimeTotal": "0,00",
+                    "discountPrice": "05,00",
+                    "recurrentTotal": "0,00",
+                    "oneTimeDiscounted": "0,00",
+                    "recurrentDiscounted": "0,00"
+                  }
+                }
+              }
+            ]
+          },
+          "billingAddress": {
+            "manualAddress": {
+              "postalCode": "2900",
+              "municipality": "Antwerp",
+              "houseNumber": "8",
+              "subHouseNumber": "6",
+              "boxNumber": "8",
+              "street": "Elecktristraat",
+              "streetId": "9154577186413050111"
+            }
+          },
+          "eligibility": "ADD",
+          "productInfo": {
+            "categories": ["POST-PAID-MOBILE"]
+          },
+          "orderItems": [
+            {
+              "id": "9153662764313918101",
+              "name": "Unlimited call",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9154577959152539825",
+              "specurl": "https://api.sup.base.be/omapi/public/product/UNLM0002",
+              "orderItems": [],
+              "status": "ADD"
+            },
+            {
+              "id": "9153662764313918102",
+              "name": "SPOTIFY",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9154577959152539825",
+              "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+              "orderItems": [],
+              "status": "ADD"
+            },
+            {
+              "id": "9153662764313918428",
+              "name": "Samsung",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "recurrentDiscounted": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "recurrentDiscounted": "0,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153662764113918312",
+              "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+              "orderItems": [
+                {
+                  "id": "9153662764313918428",
+                  "name": "Samsung OTC",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "50,00",
+                      "oneTimeTotal": "500,00",
+                      "oneTimeDiscounted": "450,00",
+                      "recurrentDiscount": "0,00",
+                      "recurrentTotal": "0,00",
+                      "recurrentDiscounted": "0,00",
+                      "upfrontTotal": "99,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "50,00",
+                      "oneTimeTotal": "450,00",
+                      "oneTimeDiscounted": "400,00",
+                      "recurrentDiscount": "0,00",
+                      "recurrentTotal": "0,00",
+                      "recurrentDiscounted": "0,00",
+                      "upfrontTotal": "99,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+                  "orderItems": [],
+                  "status": "ADD"
+                }
+              ],
+              "status": "ADD"
+            }
+          ],
+          "status": "ADD",
+          "validations": [
+            {
+              "typeOfProblem": "CUSTOMER_INFO_NOT_FILLED",
+              "validationPriority": "ERROR(10)",
+              "message": "Mandatory fields on the customer Account needs to be fill-in properly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productIdentifier": "0489093146",
+      "acquisitionType": "NEW",
+      "type": "Modify Product",
+      "orderItems": [
+        {
+          "id": "9154577959152539825",
+          "name": "45 Based on you / 0489093146",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "15,00",
+              "oneTimeTotal": "125,00",
+              "oneTimeDiscounted": "110,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "5,00",
+              "oneTimeTotal": "95,00",
+              "oneTimeDiscounted": "90,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            }
+          },
+          "locationId": "9151718264451773823",
+          "parentId": "9153661678313855656",
+          "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0045",
+          "billingAddressId": "9153462896013523517",
+          "discountItems": [],
+          "orderItems": [
+            {
+              "id": "9153662764313918428",
+              "name": "Unlimited call",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153662764113918312",
+              "specurl": "https://api.sup.base.be/omapi/public/product/UNLM0002",
+              "orderItems": [],
+              "status": "ADD"
+            },
+            {
+              "id": "9153662764313918428",
+              "name": "SPOTIFY",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153662764113918312",
+              "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+              "orderItems": [
+                {
+                  "id": "9153662764313918428",
+                  "name": "Cancellation Fee",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "0,00",
+                      "oneTimeTotal": "20,00",
+                      "recurrentDiscount": "0,00",
+                      "oneTimeDiscountedOnNextInvoice": "20,00",
+                      "recurrentTotal": "0,00",
+                      "oneTimeDiscounted": "20,00",
+                      "recurrentDiscounted": "0,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "0,00",
+                      "oneTimeTotal": "20,00",
+                      "recurrentDiscount": "0,00",
+                      "recurrentTotal": "0,00",
+                      "oneTimeDiscountedOnNextInvoice": "20,00",
+                      "oneTimeDiscounted": "20,00",
+                      "recurrentDiscounted": "0,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https: //api.sup.base.be/omapi/public/product/CANF0001",
+                  "orderItems": [],
+                  "status": "ADD"
+                }
+              ],
+              "status": "DISCONNECT"
+            },
+            {
+              "id": "9153662764313918428",
+              "name": "Call to Europe",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153662764113918312",
+              "specurl": "https://api.sup.base.be/omapi/public/product/EUROPE10",
+              "orderItems": [],
+              "status": "ADDED"
+            }
+          ],
+          "status": "MODIFY"
+        },
+        {
+          "id": "9154577959152539825",
+          "name": "25 Based on you / 0489093146",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "15,00",
+              "oneTimeTotal": "125,00",
+              "oneTimeDiscounted": "110,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "5,00",
+              "oneTimeTotal": "95,00",
+              "oneTimeDiscounted": "90,00",
+              "recurrentDiscount": "20,00",
+              "recurrentTotal": "40,00",
+              "recurrentDiscounted": "20,00"
+            }
+          },
+          "locationId": "9151718264451773823",
+          "parentId": "9153661678313855656",
+          "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0025",
+          "billingAddressId": "9153462896013523517",
+          "discountItems": [],
+          "orderItems": [],
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ],
+  "deliveryItems": [
+    {
+      "id": "9154577959152539888",
+      "name": "Delivery",
+      "type": "SIM Card Delivery",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "EUR",
+          "oneTimeDiscount": "0,00",
+          "oneTimeTotal": "20,00",
+          "oneTimeDiscounted": "20,00",
+          "recurrentDiscount": "0,00",
+          "recurrentTotal": "30,00",
+          "recurrentDiscounted": "30,00"
+        },
+        "taxExclPrices": {
+          "currency": "EUR",
+          "oneTimeDiscount": "0,00",
+          "oneTimeTotal": "15,00",
+          "oneTimeDiscounted": "15,00",
+          "recurrentDiscount": "0,00",
+          "recurrentTotal": "25,00",
+          "recurrentDiscounted": "25,00"
+        }
+      },
+      "parentId": "9154577186413050110",
+      "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+      "chars": {
+        "email": "test@gmail.com",
+        "phoneNumber": "0466322909",
+        "locationId": "91527638074136327777",
+        "contactFirstName": "Hello",
+        "contactLastName": "World",
+        "companyName": "Telenet",
+        "deliveryEmail": "test_delivery@gmail.com",
+        "address": {
+          "country": "België",
+          "municipality": "AnonymousLocation",
+          "houseNumber": "10",
+          "subHouseNumber": "10a",
+          "boxNumber": "101",
+          "street": "Elektriciteitstraat",
+          "streetId": "9153462896013523500",
+          "postalCode": "2800"
+        }
+      },
+      "orderItems": [],
+      "status": "ADD"
+    }
+  ],
+  "lineCount": 3,
+  "token": "dd7256b1-5eca-4d16-b4d3-a0a2401a0bdc",
+  "validations": [
+    {
+      "typeOfProblem": "CUSTOMER_INFO_NOT_FILLED",
+      "validationPriority": "ERROR(10)",
+      "message": "Mandatory fields on the customer Account needs to be fill-in properly."
+    }
+  ],
+  "feasibilityCheckResult": {
+    "isFeasible": true,
+    "interventionRequired": true,
+    "availableInstallationOptions": [
+      {
+        "name": "Comfort Install",
+        "installTypeGroup": "Technical Installation",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "85,00",
+            "oneTimeDiscounted": "85,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "85,00",
+            "oneTimeDiscounted": "85,00"
+          }
+        }
+      },
+      {
+        "name": "Home Delivery Telenet Hardware",
+        "id": "9157756134513930585",
+        "installTypeGroup": "Self Installation",
+        "deliveryGroup": "Secured Home Delivery",
+        "filterRemovalRequired": true,
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "oneTimeDiscounted": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "oneTimeDiscounted": "0,00"
+          }
+        }
+      },
+      {
+        "name": "Pick-up Delivery Telenet Hardware",
+        "id": "9157756131213930587",
+        "installTypeGroup": "Self Installation",
+        "deliveryGroup": "Home Delivery Other Equipment",
+        "filterRemovalRequired": true,
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "oneTimeDiscounted": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "oneTimeDiscounted": "0,00"
+          }
+        }
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "WRN-POC-10196",
+      "description": "You did not register all available mobile lines. If the customer wants less mobile lines, change the product to avoid extra costs. If you want to register extra mobile lines at a later date, submit the order."
+    },
+    {
+      "code": "WRN-POC-10201",
+      "description": "The address of the customer does not support the full internet speed of ONEup for 1 / ONEUP000000812. Inform the customer and consider registering a product with lower internet speed."
+    }
+  ],
+  "mobileLinesInNewBundle": "Less",
+  "hwItems": {
+    "type": "Home Delivery Telenet Hardware",
+    "addressId": "9153462896013523517",
+    "appointment": {
+      "date": "2020-12-22",
+      "timeSlotCode": "MORNING",
+      "priceCategory": "APPT0000"
+    },
+    "manualAddress": {
+      "country": "België",
+      "houseNumber": "100",
+      "municipality": "Mechelen",
+      "postalCode": "2800",
+      "street": "Elektriciteitstraat",
+      "streetId": "9150308777313971234"
+    },
+    "orderItems": [
+      {
+        "id": "9158975116513237477",
+        "name": "Activation fixed services",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "50,00",
+            "oneTimeTotal": "50,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "50,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          }
+        },
+        "specurl": "https://api.int.base.be/omapi/public/product/FACT0001",
+        "orderItems": [],
+        "status": "ADD",
+        "discountItems": {
+          "discounts": [
+            {
+              "specurl": "https://api.int.base.be/omapi/public/product/9154529983265802243",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "50,00"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "50,00"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "9158975125613238323",
+        "name": "Installation Fee",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscountedOnNextInvoice": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00",
+            "upfrontTotal": "0,00"
+          }
+        },
+        "specurl": "https://api.int.base.be/omapi/public/product/INSF0001",
+        "orderItems": [],
+        "status": "ADD",
+        "discountItems": {
+          "discounts": [
+            {
+              "specurl": "https://api.int.base.be/omapi/public/product/9154529983265802239",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "Euro",
+                  "oneTimeTotal": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "discountPrice": "0,00"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "relocate": {
+      "date": "01-01-2022",
+      "oldAddressId": "98721321325"
+    }
+  }
+}

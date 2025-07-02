@@ -1,0 +1,22 @@
+<div class="background-white p--l display--flex flex-direction--row align-items--center">
+  <wink-icon
+    icon="arrows-counterclockwise"
+    appearance="primary"
+    size="lg"
+    data-testid="billing-overview-payment-method-changed-icon"></wink-icon>
+  <div class="px--l">
+    <wink-title
+      slot="heading"
+      html-tag="h6"
+      spacing-y="bottom"
+      data-testid="billing-overview-payment-method-changed-header"
+      text="{{ header | translate }}"></wink-title>
+    <wink-paragraph
+      size="regular"
+      appearance="body"
+      class="font--body-small"
+      data-testid="billing-overview-payment-method-changed-description">
+      {{ message | translate }}
+    </wink-paragraph>
+  </div>
+</div>

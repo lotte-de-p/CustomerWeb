@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Customer Web Billing Limits Application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

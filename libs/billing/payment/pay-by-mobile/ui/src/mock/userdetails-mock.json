@@ -1,0 +1,20 @@
+{
+  "url": "http://localhost:8080/oauth/userdetails",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "customer_number": "1202407495",
+    "identity_id": "41111893388",
+    "username": "automation.abcd.dgyhl@staff.telenet.be",
+    "login_alias": "01fd69e2-8af2-4565-9cf4-4a983dbbaef0",
+    "first_name": "Louis",
+    "last_name": "Dam",
+    "scopes": ["paybymobile"],
+    "explicit_login": true,
+    "narrowed_scope": false,
+    "bss_system": "NETCRACKER",
+    "auth_age": 1340,
+    "is_pid": true,
+    "role": "MANAGER"
+  }
+}

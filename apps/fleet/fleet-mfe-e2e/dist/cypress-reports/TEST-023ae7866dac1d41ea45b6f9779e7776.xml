@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="23.416" tests="8" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-11T07:42:08" tests="0" file="src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Bundle usage reminders" timestamp="2024-07-11T07:42:08" tests="8" time="23.389" failures="1">
+    <testcase name="should show enabled checkbox and threshold 50" time="0.810" classname="Bundle usage reminders should show enabled checkbox and threshold 50">
+    </testcase>
+    <testcase name="should show disabled checkbox and hide threshold input" time="0.496" classname="Bundle usage reminders should show disabled checkbox and hide threshold input">
+    </testcase>
+    <testcase name="should show enabled checkbox and empty threshold input when threshold value is default value" time="0.441" classname="Bundle usage reminders should show enabled checkbox and empty threshold input when threshold value is default value">
+    </testcase>
+    <testcase name="should save a threshold" time="0.736" classname="Bundle usage reminders should save a threshold">
+    </testcase>
+    <testcase name="should display an error message and disable the save button when threshold is empty" time="0.647" classname="Bundle usage reminders should display an error message and disable the save button when threshold is empty">
+    </testcase>
+    <testcase name="should not display the form and show error message when it cannot retrieve the threshold" time="0.444" classname="Bundle usage reminders should not display the form and show error message when it cannot retrieve the threshold">
+    </testcase>
+    <testcase name="should disable the form when threshold is in progress" time="0.435" classname="Bundle usage reminders should disable the form when threshold is in progress">
+    </testcase>
+    <testcase name="should update the form and clear the messages when you switch to a different billing account" time="5.081" classname="Bundle usage reminders should update the form and clear the messages when you switch to a different billing account">
+      <failure message="Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`&lt;div class=&quot;account-selector__list account-selector__list__first-item account-selector__list--with-icon account-selector__list__first-item--closed&quot; data-cy=&quot;billing-account-selector&quot;&gt;...&lt;/div&gt;`
+
+is being covered by another element:
+
+`&lt;div class=&quot;container max-100vw p--g justify-content--between flex-direction--row sticky-header sticky-header--shadow&quot;&gt;...&lt;/div&gt;`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`<div class="account-selector__list account-selector__list__first-item account-selector__list--with-icon account-selector__list__first-item--closed" data-cy="billing-account-selector">...</div>`
+
+is being covered by another element:
+
+`<div class="container max-100vw p--g justify-content--between flex-direction--row sticky-header sticky-header--shadow">...</div>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+    at ensureIsDescendent (http://localhost:4201/__cypress/runner/cypress_runner.js:111947:68)
+    at ensureDescendents (http://localhost:4201/__cypress/runner/cypress_runner.js:111998:5)
+    at ensureDescendentsAndScroll (http://localhost:4201/__cypress/runner/cypress_runner.js:112004:14)
+    at ensureElIsNotCovered (http://localhost:4201/__cypress/runner/cypress_runner.js:112135:5)
+    at runAllChecks (http://localhost:4201/__cypress/runner/cypress_runner.js:112334:52)
+    at retryActionability (http://localhost:4201/__cypress/runner/cypress_runner.js:112371:16)
+    at tryCatcher (http://localhost:4201/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise.attempt.Promise.try (http://localhost:4201/__cypress/runner/cypress_runner.js:4315:29)
+    at whenStable (http://localhost:4201/__cypress/runner/cypress_runner.js:143918:68)
+    at <unknown> (http://localhost:4201/__cypress/runner/cypress_runner.js:143859:14)
+    at tryCatcher (http://localhost:4201/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (http://localhost:4201/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (http://localhost:4201/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (http://localhost:4201/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (http://localhost:4201/__cypress/runner/cypress_runner.js:1701:18)
+    at Promise._fulfill (http://localhost:4201/__cypress/runner/cypress_runner.js:1645:18)
+    at <unknown> (http://localhost:4201/__cypress/runner/cypress_runner.js:5450:46)
+From Your Spec Code:
+    at Context.eval (webpack:///./src/support/commands.ts:66:0)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,34 @@
+variables:
+  CLIENT_PROJECT: monorepo-storybook
+  LEANIX_APPLICATION_NAME: foundation
+  GITOPS_DEPLOY_FOLDER_NAME: monorepo-storybook
+  CLIENT_E2E: monorepo-storybook-e2e
+  CYPRESS_CHROME_FORCE_SANDBOX: '1'
+  TZ: 'Europe/Brussels' #Setting the environment Time Zone
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+e2e:app:
+  extends: .e2e:app
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+build:storybook:
+  extends: .build:storybook
+
+push-to-harbor:
+  extends: .push-to-harbor
+  only: !reference [.allowed-branches-dev-deploy]
+
+gitops-deploy-dev:
+  extends: .gitops-deploy-dev
+
+patch-stage:
+  extends: .patch-stage
+
+patch-prod:
+  extends: .patch-prod

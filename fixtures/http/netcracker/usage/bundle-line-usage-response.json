@@ -1,0 +1,49 @@
+{
+  "productCode": "WIGO0009",
+  "specurl": "https://api.uat.base.be/omapi/public/product/WIGO0009",
+  "nextBillingDate": "2020-07-23T00:00:00+02:00",
+  "included": {
+    "data": [],
+    "text": [],
+    "voice": []
+  },
+  "shared": {
+    "data": [
+      {
+        "name": "WIGO 9GB monthly allowance",
+        "usedUnits": "0",
+        "unitType": "GB"
+      }
+    ],
+    "text": [
+      {
+        "name": "SMS",
+        "usedUnits": "11",
+        "unitType": "NUMBER"
+      }
+    ],
+    "voice": [
+      {
+        "name": "VOICE",
+        "usedUnits": "10",
+        "unitType": "MINUTES"
+      }
+    ],
+    "ZBR": [
+      {
+        "name": "FreeG",
+        "usedUnits": "0",
+        "unitType": "GB"
+      },
+      {
+        "name": "Free EU",
+        "usedUnits": "1",
+        "unitType": "GB"
+      }
+    ]
+  },
+  "outOfBundle": {
+    "usedUnits": "0",
+    "unitType": "EUR"
+  }
+}

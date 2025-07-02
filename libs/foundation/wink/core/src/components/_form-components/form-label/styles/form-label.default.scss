@@ -1,0 +1,83 @@
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .label--content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label--text {
+    color: var(--semantic-color-text-default);
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+    background-color: transparent;
+
+    &:has(wink-tooltip) {
+      display: inline-flex;
+    }
+
+    @include media('until-lg') {
+      font-size: rem(1.4);
+      line-height: rem(2);
+    }
+
+    wink-tooltip {
+      margin-left: var-rem(--semantic-spacing-2xs);
+    }
+  }
+
+  .label--helper {
+    color: var(--semantic-color-text-subtlest);
+    font-size: rem(1.4);
+    line-height: rem(2);
+
+    @include media('until-lg') {
+      font-size: rem(1.2);
+      line-height: rem(1.6);
+    }
+  }
+
+  .label--optional {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: rem(1.4);
+    line-height: rem(2);
+    color: var(--semantic-color-text-subtlest);
+    --wink-link-color--default: var(--semantic-color-text-subtlest);
+    --wink-link-color--visited: var(--semantic-color-text-subtlest);
+    --wink-link-color--hover: var(--semantic-color-text-subtlest);
+
+    p {
+      margin: unset;
+    }
+  }
+
+  &.label--subcomponent {
+    .label--text {
+      color: var(--semantic-color-text-default);
+      font-size: rem(1.8);
+      line-height: rem(2.8);
+      @include media('until-lg') {
+        font-size: rem(1.6);
+        line-height: rem(2);
+      }
+    }
+
+    .label--helper {
+      color: var(--semantic-color-text-subtlest);
+      font-size: rem(1.4);
+      line-height: rem(2);
+      @include media('until-lg') {
+        font-size: rem(1.2);
+        line-height: rem(1.6);
+      }
+    }
+  }
+
+  &.label--disabled {
+    opacity: calc(var(--semantic-opacity-disabled) / 10);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Care FTTH application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

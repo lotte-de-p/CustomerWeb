@@ -1,0 +1,1 @@
+{"version":3,"file":"belgian-eid-validator.d.ts","sourceRoot":"","sources":["../../src/validators/belgian-eid-validator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAI7D,qBAAa,mBAAoB,SAAQ,UAAU;IACjD,MAAM,CAAC,aAAa,CAAC,OAAO,EAAE,eAAe;;;IAgB7C,OAAO,CAAC,MAAM,CAAC,UAAU;CAa1B"}

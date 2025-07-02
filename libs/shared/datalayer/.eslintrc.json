@@ -1,0 +1,18 @@
+{
+  "extends": ["../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "tsconfig.spec.json"],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@telenet/ng-lib-datalayer",
+            "message": "Use relative imports when it comes to the same library"
+          }
+        ]
+      }
+    ],
+    "@typescript-eslint/no-duplicate-enum-values": "warn"
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "status": "FAILURE",
+    "employeeReferenceNumber": "1234",
+    "emailAddress": "test7@.test.com",
+    "errorCode": "TIPERR_06",
+    "errorDescription": "Duplicate Entries Found"
+  }
+]

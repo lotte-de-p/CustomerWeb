@@ -1,0 +1,7 @@
+export enum PortalStorageKeys {
+  TOKEN_ACCESS = 'TOKEN-ACCESS',
+  TOKEN_REFRESH = 'TOKEN-REFRESH',
+  NAV_PORTAL = 'NAV-PORTAL',
+  REFRESH = 'REFRESH',
+  COUNT = 'COUNT',
+}

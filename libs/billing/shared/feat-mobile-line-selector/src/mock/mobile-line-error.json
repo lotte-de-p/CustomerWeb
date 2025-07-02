@@ -1,0 +1,12 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-line-selector-service/v1/mobile-lines",
+  "method": "GET",
+  "status": 500,
+  "response": [
+    {
+      "code": "OCAPI-ERR-036",
+      "cause": "Missing endpoint configuration for Url [/mobile-line-selector-service/v1/mobile-lines] & Method [GET]",
+      "correlationId": "e5e6a95a-925c-4d0d-a359-977de6e739ad"
+    }
+  ]
+}

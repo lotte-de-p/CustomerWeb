@@ -1,0 +1,171 @@
+.slider-container {
+  display: flex;
+
+  &-range {
+    flex-direction: column;
+    gap: var-rem(--semantic-spacing-xl);
+
+    .slider-specific {
+      width: 100%;
+    }
+  }
+
+  &-single {
+    flex-wrap: wrap;
+
+    wink-form-label {
+      width: 100%;
+      margin-bottom: var-rem(--semantic-spacing-xl);
+    }
+
+    .slider-specific {
+      margin-left: var-rem(--semantic-spacing-md);
+    }
+
+    .slider {
+      cursor: pointer;
+      pointer-events: all;
+    }
+  }
+}
+
+.slider-wrapper {
+  font-family: TelenetAlbra, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: var-rem(--semantic-typography-font-size-desktop-sm);
+  line-height: var-rem(--semantic-typography-line-height-desktop-sm);
+  color: var(--semantic-color-text-default);
+  width: 100%;
+  padding-top: var-rem(--semantic-spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var-rem(--semantic-spacing-sm);
+}
+
+.slider-controls {
+  position: relative;
+  width: 100%;
+  height: var-rem(--semantic-spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:has(.slider:focus),
+  &:has(.slider:hover) {
+    .slider-tooltip {
+      opacity: 1;
+    }
+  }
+}
+
+.slider-tooltip {
+  position: absolute;
+  top: calc(var-rem(--semantic-icon-xl) * -1);
+  font-size: var-rem(--semantic-typography-font-size-desktop-xs);
+  line-height: var-rem(--semantic-typography-line-height-desktop-xs);
+  text-align: center;
+  background-color: var(--semantic-color-background-input-outlined);
+  color: var(--semantic-color-text-default);
+  padding: var-rem(--semantic-spacing-2xs);
+  border-radius: var-rem(--semantic-border-lg);
+  box-shadow: 0 var-rem(--semantic-spacing-2xs) var-rem(--semantic-spacing-xs) 0
+    var(--semantic-color-background-input-filled);
+  transform: translateX(-50%);
+  min-width: var-rem(--semantic-icon-md);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+
+  &-shown .slider-tooltip {
+    opacity: 1;
+  }
+}
+
+.slider {
+  --size: calc(var(--semantic-icon-md) + (var(--semantic-spacing-3xs) * 2));
+
+  appearance: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: rem(4.4);
+  background-color: transparent;
+  pointer-events: none;
+
+  @mixin styling-thumb {
+    appearance: none;
+    height: var-rem(--size);
+    width: var-rem(--size);
+    background-clip: padding-box;
+    background-color: var(--semantic-color-background-surface-action-default);
+    border-radius: 50%;
+    margin-top: calc((var-rem(--size) * -0.5) + (var-rem(--semantic-spacing-3xs) / 2));
+    margin-left: calc(var-rem(--semantic-spacing-3xs) * -0.5);
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+
+  @mixin styling-track {
+    width: 100%;
+    height: var-rem(--semantic-spacing-3xs);
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    animation: 0.2s;
+  }
+
+  @mixin styling-thumb-hover {
+    --size: calc(var(--semantic-icon-md) + var(--semantic-spacing-3xs) + (var(--semantic-spacing-3xs) * 2));
+
+    border: var-rem(--semantic-spacing-3xs) solid var(--semantic-color-background-surface-bold-hovered);
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include styling-track();
+  }
+
+  &::-webkit-slider-thumb {
+    @include styling-thumb();
+    border: var-rem(--semantic-spacing-3xs) solid transparent;
+
+    &:hover {
+      @include styling-thumb-hover();
+    }
+  }
+
+  &::-moz-range-track {
+    @include styling-track();
+
+    &:hover {
+      @include styling-thumb-hover();
+    }
+  }
+
+  &::-moz-range-thumb {
+    @include styling-thumb();
+    border: var-rem(--semantic-spacing-3xs) solid var(--semantic-color-background-input-outlined);
+  }
+}
+
+.slider-track {
+  position: absolute;
+  left: 0;
+  width: calc(100% - (var-rem(--semantic-border-lg) * 2));
+  height: var-rem(--semantic-spacing-3xs);
+  margin: 0 var-rem(--semantic-border-lg);
+  border-radius: var-rem(--semantic-spacing-3xs);
+}
+
+.slider-tooltip-wrapper {
+  position: relative;
+  width: calc(100% - (var-rem(--semantic-border-lg) * 2));
+  height: 100%;
+  margin: 0 var-rem(--semantic-spacing-xs);
+}
+
+.slider-specific {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var-rem(--semantic-spacing-sm);
+}

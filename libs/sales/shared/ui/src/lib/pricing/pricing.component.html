@@ -1,0 +1,22 @@
+<div class="flex-wrap--wrap promo-highlight display--flex flex-direction--row align-items--end theme--{{ this.theme }}">
+  <ng-container *ngIf="discountedPrice !== undefined; else showNormalPrice">
+    <div
+      class="promo-highlight__second-row text-decoration--line-through align-items--baseline font--caption space-nowrap">
+      <tg-sales-pricing-price [amount]="normalPrice" [rendition]="'small'"></tg-sales-pricing-price>
+    </div>
+    <tg-sales-pricing-price [amount]="discountedPrice"></tg-sales-pricing-price>
+  </ng-container>
+
+  <ng-template #showNormalPrice>
+    <tg-sales-pricing-price [amount]="normalPrice"></tg-sales-pricing-price>
+  </ng-template>
+
+  <ng-container *ngIf="durationInMonths">
+    <div
+      [innerHtml]="'ng.pricing.lbl.frequency' | translate"
+      class="promo-highlight__fourth-row align-items--baseline font--caption space-nowrap"></div>
+    <div
+      [innerHtml]="'ng.pricing.lbl.duration' | translate: { value: durationInMonths }"
+      class="promo-highlight__fifth-row align-items--baseline font--caption space-nowrap"></div>
+  </ng-container>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.692" tests="2" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-16T12:52:30" tests="0" file="src/e2e/fleet-product/product-overview/product-overview.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Product Overview" timestamp="2024-07-16T12:52:30" tests="2" time="4.668" failures="0">
+    <testcase name="On page load, form should be pre-populated with values" time="1.156" classname="Product Overview On page load, form should be pre-populated with values">
+    </testcase>
+    <testcase name="On click of more details section" time="0.811" classname="Product Overview On click of more details section">
+    </testcase>
+  </testsuite>
+</testsuites>

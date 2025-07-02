@@ -1,0 +1,50 @@
+<div class="hide-until-md display--flex">
+  <ng-container *ngTemplateOutlet="useAnotherDiscountSection"></ng-container>
+  <ng-container *ngTemplateOutlet="goToOverviewSection"></ng-container>
+</div>
+<div class="background-white hide-from-md px--m">
+  <ng-container *ngTemplateOutlet="useAnotherDiscountSection"></ng-container>
+  <div class="divider divider--s__light-grey"></div>
+  <ng-container *ngTemplateOutlet="goToOverviewSection"></ng-container>
+</div>
+
+<ng-template #useAnotherDiscountSection>
+  <div class="Container background-white py--m pt--m--md p--m--sm col-md-6 px--m--md">
+    <div class="display--flex--md align-items--center">
+      <wink-icon
+        data-testid="hardware-discount-another-discount-icon"
+        class="mr--m--md mb--n--md mb--m"
+        appearance="secondary"
+        icon="promo-percent"
+        size="md"
+        brand="telenet"></wink-icon>
+      <div data-testid="hardware-discount-another-discount-info">
+        <h6 class="heading--nomargin">{{ 'ng.hardware-discount.use-another-discount' | translate }}</h6>
+        <div class="font--body-small color-shade_72">{{ 'ng.hardware-discount.cancel-contract-info' | translate }}</div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #goToOverviewSection>
+  <div
+    class="background-white py--m pt--m--md p--m--sm px--m--md col-md-6 ml--m--md display--flex--md align-items--center">
+    <div class="display--flex--md align-items--center">
+      <wink-icon
+        data-testid="hardware-discount-previous-bills-icon"
+        class="mr--m--md mb--n--md mb--m"
+        appearance="secondary"
+        icon="bill"
+        size="md"
+        brand="telenet"></wink-icon>
+      <div data-testid="hardware-discount-previous-bills-title">
+        <h6 class="heading--nomargin">{{ 'ng.hardware-discount.lbl.previous-bills-title' | translate }}</h6>
+        <div
+          class="font--body-small color-shade_72 text-flow text-flow--hyperlink cursor--pointer"
+          data-testid="hardware-discount-previous-bills-link"
+          (click)="redirectToHardwareBills()">
+          {{ 'ng.hardware-discount.lbl.go-to-overview' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

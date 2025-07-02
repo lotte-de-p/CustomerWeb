@@ -1,0 +1,180 @@
+@mixin font-body-large {
+  @include media('from-md') {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  @include media('from-lg') {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+@mixin font-body-large-bold {
+  @include media('from-md') {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  @include media('from-lg') {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 900;
+}
+@mixin font-body-regular {
+  @include media('from-md') {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  @include media('from-lg') {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+@mixin font-body-regular-bold {
+  @include media('from-md') {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  @include media('from-lg') {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 900;
+}
+@mixin font-body-small {
+  @include media('from-md') {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  @include media('from-lg') {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+@mixin font-body-small-bold {
+  @include media('from-md') {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  @include media('from-lg') {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 900;
+}
+@mixin font-caption-bold {
+  @include media('from-md') {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Bold, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+@mixin font-caption {
+  @include media('from-md') {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@mixin font-caption-small {
+  @include media('from-md') {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@mixin font-text-icon {
+  @include media('from-md') {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  @include media('from-lg') {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  font-family: TelenetTextIcon, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+@mixin font-none {
+  line-height: 0;
+  font-size: 0;
+}
+@mixin font-custom-dfd-navigation {
+  @include media('from-md') {
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}

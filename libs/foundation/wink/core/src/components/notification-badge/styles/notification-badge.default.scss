@@ -1,0 +1,63 @@
+:host {
+  display: inline-block;
+  position: relative;
+  height: fit-content;
+  isolation: isolate;
+
+  .notification-badge {
+    display: inline-block;
+    font-family: var(--font-family), Arial, sans-serif;
+    width: var-rem(--semantic-spacing-xs);
+    height: var-rem(--semantic-spacing-xs);
+    background-color: var(--semantic-color-icon-error);
+    color: var(--semantic-color-text-inverse-on-brand);
+    border-radius: rem(100);
+
+    &.hidden {
+      display: none;
+    }
+
+    .dot {
+      width: var-rem(--semantic-spacing-3xs);
+      height: var-rem(--semantic-spacing-3xs);
+      background-color: var(--semantic-color-text-inverse-on-brand);
+      border-radius: 100%;
+    }
+  }
+}
+
+:host([size='md']) {
+  .notification-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var-rem(--semantic-spacing-md);
+    max-height: var-rem(--semantic-spacing-md);
+    width: fit-content;
+    padding: var-rem(--semantic-border-sm) var-rem(--semantic-spacing-2xs) 0;
+    font-size: rem(1.2);
+    &.hidden {
+      display: none;
+    }
+
+    &:has(.dot) {
+      padding: 0 var-rem(--semantic-spacing-2xs);
+    }
+  }
+}
+
+:host(.has-slot) {
+  .notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
+
+:host(.has-slot[size='md']) {
+  .notification-badge {
+    top: calc(var-rem(--semantic-spacing-3xs) * -1);
+    right: calc(var-rem(--semantic-spacing-3xs) * -1);
+  }
+}

@@ -1,0 +1,16 @@
+import { Meta } from "@storybook/web-components";
+import { html } from "lit-html";
+  import { BADGES } from '../../models';
+
+export default {
+  title: "COMPONENTS/{{capitalizeFirstWord compName}}",
+  component: "{{PascalCase compName}}",
+  parameters: {
+  badges: [BADGES.inProgress],
+  },
+  argTypes: {},
+  args: {},
+  render: args => html`<wink-{{compName}} some-arg="${args.someArg}"></wink-{{compName}}>`
+} as Meta;
+
+export const Default = {};

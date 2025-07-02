@@ -1,0 +1,34 @@
+<div class="sales-display-info__content__row mb--xs">
+  <i class="icon-md sales-display-info__content__row__icon icon-locations"></i>
+  <div class="sales-display-info__content__row__description">
+    <div class="display--flex">
+      <span
+        [attr.data-cy]="'delivery-address-housenumber-street'"
+        class="sales-display-info__content__row__description__sub-title"
+        data-cs-mask="">
+        {{ deliveryAddress?.street }} {{ deliveryAddress?.houseNumber }}
+      </span>
+      <span
+        [attr.data-cy]="'delivery-address-sub-housenumber'"
+        class="sales-display-info__content__row__description__sub-title"
+        *ngIf="deliveryAddress?.subHouseNumber"
+        >/{{ deliveryAddress?.subHouseNumber }}</span
+      >
+      <span
+        [attr.data-cy]="'delivery-address-box'"
+        class="mr--l sales-display-info__content__row__description__sub-title"
+        *ngIf="deliveryAddress?.box"
+        >/{{ deliveryAddress?.box }}</span
+      >
+    </div>
+    <div class="display--flex" data-cs-mask="">
+      <span [attr.data-cy]="'delivery-address-postalcode'" class="space-nowrap">{{ deliveryAddress?.postalCode }}</span
+      >&nbsp;
+      <span [attr.data-cy]="'delivery-address-municipality'" class="space-nowrap">{{
+        deliveryAddress?.municipality
+      }}</span
+      >,
+      <span [attr.data-cy]="'delivery-address-country'" class="space-nowrap">&nbsp;{{ deliveryAddress?.country }}</span>
+    </div>
+  </div>
+</div>

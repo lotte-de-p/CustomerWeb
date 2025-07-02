@@ -1,0 +1,22 @@
+<div
+  class="display--flex align-items--center p--m p--l--lg background-white cursor--pointer--hover mb--s"
+  (click)="onActionCardClick()">
+  @if (iconClass) {
+    <div class="display--flex justify-content--center align-items--center mr--s product-icon">
+      <i class="icon icon-md icon-no-size-override" [ngClass]="iconClass"></i>
+    </div>
+  }
+  <div class="display--flex flex-grow flex-direction--column">
+    @if (title) {
+      <div class="heading--6 heading--nomargin">
+        {{ title | translate }}
+      </div>
+    }
+    @if (description) {
+      <div class="font--caption color-shade_48 display--grid mr--l">
+        <span class="word-break--ellipsis">{{ description | translate }}</span>
+      </div>
+    }
+  </div>
+  <div class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></div>
+</div>

@@ -1,0 +1,1 @@
+{"version":3,"file":"appointment.interface.d.ts","sourceRoot":"","sources":["../../../../src/controls/new-appointment-picker/interfaces/appointment.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,0BAA0B,EAAE,MAAM,oDAAoD,CAAC;AAChG,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAElE,MAAM,WAAW,oBAAoB;IACnC,IAAI,CAAC,EAAE,0BAA0B,CAAC;IAClC,MAAM,CAAC,EAAE,kBAAkB,CAAC;CAC7B"}

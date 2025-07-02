@@ -1,0 +1,6 @@
+@import '../vars/vars.telenet';
+@import '../pricing.default';
+
+:host([brand='telenet'][appearance='patch']) {
+  @include telenet-backdrop-mask;
+}

@@ -1,0 +1,102 @@
+{
+  "product": {
+    "externalProductCode": "TLTT0019",
+    "weight": 12,
+    "apps": [],
+    "category": ["Fleet Options with ETF", "Other data options"],
+    "subcategory": {
+      "name": "World Data WG",
+      "weight": 12,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "World Data WG"
+        },
+        {
+          "locale": "nl",
+          "name": "World Data WG"
+        },
+        {
+          "locale": "fr",
+          "name": "World Data WG"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "500",
+            "unit": "MB++",
+            "visible": true,
+            "weight": "1",
+            "labelkey": "World Data WG 500MB++",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "500 MB mobile data for use in all countries (not valid for satellite connections)"
+              },
+              {
+                "locale": "nl",
+                "name": "500 MB Data voor gebruik in alle landen (uitgezonderd  satelliet verbindingen)"
+              },
+              {
+                "locale": "fr",
+                "name": "500 MB de data mobiles pour une consommation dans tous les pays  (excepté connection satellite)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "39,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "TLTT0019",
+    "labelkey": "World Data WG 500 MB++",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "World Data WG 500 MB++",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-500-mb++.png"
+      },
+      {
+        "locale": "nl",
+        "name": "World Data WG 500 MB++",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-500-mb++.png"
+      },
+      {
+        "locale": "fr",
+        "name": "World Data WG 500 MB++",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-wg-500-mb++.png"
+      }
+    ],
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

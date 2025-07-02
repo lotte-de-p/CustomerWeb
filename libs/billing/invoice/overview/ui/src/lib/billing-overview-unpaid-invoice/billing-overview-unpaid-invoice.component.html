@@ -1,0 +1,67 @@
+<div data-testid="billing-overview-unpaid-invoice">
+  <div class="pl--l invoice-info cursor--pointer" (click)="handleClickEvent()">
+    <div class="display--flex justify-content--between">
+      <div class="display--flex py--l flex-direction--column gap--s width--full">
+        <div class="display--flex align-items--center gap--m justify-content--between">
+          <div class="display--flex align-items--center">
+            <div class="invoice-icon">
+              <tg-billing-overview-icon [invoiceAmount]="invoice.invoiceAmount"></tg-billing-overview-icon>
+            </div>
+            <span data-testid="billing-overview-invoice-date">{{
+              invoice.invoiceDate | date: 'd MMMM' : '+0200' : locale
+            }}</span>
+          </div>
+          <div>
+            <tg-billing-overview-download
+              *ngIf="!areExplicitBillScenariosAvailable"
+              [invoice]="invoice"
+              #download></tg-billing-overview-download>
+            <tg-billing-overview-bill-scenario-details
+              *ngIf="areExplicitBillScenariosAvailable"
+              [paymentMethod]="paymentMethod"
+              [invoice]="invoice"
+              [onlinePaymentLink]="onlinePaymentLink"
+              [paymentStatus]="'unpaid'"></tg-billing-overview-bill-scenario-details>
+          </div>
+        </div>
+        <div>
+          <tg-billing-overview-amount
+            [invoiceAmount]="invoice.invoiceAmount"
+            [outstandingDebt]="invoice.outstandingDebt"
+            [locale]="locale" />
+          <tg-billing-overview-explicit-bill-scenarios
+            data-testid="billing-overview-unpaid-bill-scenario"
+            *ngIf="areExplicitBillScenariosAvailable"
+            [billingScenarios]="invoice.billingScenarios || []"></tg-billing-overview-explicit-bill-scenarios>
+          <tg-billing-overview-unpaid-status
+            *ngIf="displayUnpaidStatus"
+            [paymentMethod]="paymentMethod"
+            [paymentDueDate]="invoice.paymentDueDate"
+            [paymentStatus]="invoice.paymentStatus" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="isBusinessCustomer && isEligibleForPayment">
+    <div
+      class="px--l py--m border-width--t--r border--t--r border-color--t--light-grey border-style--t--solid display--flex flex-direction--column gap--s">
+      <tg-billing-overview-unpaid-status
+        *ngIf="paymentMethod === 'MANUAL'; else directDebitFailure"
+        [paymentMethod]="paymentMethod"
+        [paymentDueDate]="invoice.paymentDueDate"
+        [paymentStatus]="invoice.paymentStatus" />
+      <ng-template #directDebitFailure>
+        <tg-billing-unpaid-status-notification
+          icon="icon-error-shape-filled"
+          textClass="color-notification--error--light">
+          {{ 'ng.billing-overview.direct-debit.failed' | translate }}
+        </tg-billing-unpaid-status-notification>
+      </ng-template>
+      <tg-billing-overview-pay
+        [onlinePaymentLink]="onlinePaymentLink"
+        [amount]="invoice.outstandingDebt"
+        [locale]="locale" />
+    </div>
+  </ng-container>
+</div>

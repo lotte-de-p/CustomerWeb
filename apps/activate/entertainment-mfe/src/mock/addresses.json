@@ -1,0 +1,34 @@
+{
+  "url": "http://localhost:8080/public/api/return-devices-service/v1/addresses",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "9165640897913195848",
+      "country": "België",
+      "countryCode": "BE",
+      "city": "Mechelen",
+      "postalCode": "2800",
+      "street": "Sipadan straat",
+      "houseNumber": "59953"
+    },
+    {
+      "id": "9165640896713195831",
+      "country": "België",
+      "countryCode": "BE",
+      "city": "Mechelen",
+      "postalCode": "2800",
+      "street": "Nodevices straat",
+      "houseNumber": "59978"
+    },
+    {
+      "id": "9165640887413194976",
+      "country": "België",
+      "countryCode": "BE",
+      "city": "Mechelen",
+      "postalCode": "2800",
+      "street": "Eos straat",
+      "houseNumber": "59873"
+    }
+  ]
+}

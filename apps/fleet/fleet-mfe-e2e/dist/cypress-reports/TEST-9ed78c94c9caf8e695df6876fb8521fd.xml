@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.338" tests="9" failures="0" skipped="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-11T07:54:17" tests="0" file="src/e2e/fleet-product/line-add-options/line-add-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Add Options" timestamp="2024-07-11T07:54:17" tests="9" time="10.310" failures="0">
+    <testcase name="AC 1: Fleet Manager goes to products detail page when add options is selected then the add options wizard is opened" time="0.941" classname="Line Add Options AC 1: Fleet Manager goes to products detail page when add options is selected then the add options wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet Manager opens the add options wizard when fleet manager he sees an option that is already in his sim line he can not add this option again " time="0.749" classname="Line Add Options AC 2: Fleet Manager opens the add options wizard when fleet manager he sees an option that is already in his sim line he can not add this option again ">
+    </testcase>
+    <testcase name="AC 3: Fleet Manager opens the add options wizard when fleet manager tried to add multiple options from the same cateogry only one is allowed " time="0.907" classname="Line Add Options AC 3: Fleet Manager opens the add options wizard when fleet manager tried to add multiple options from the same cateogry only one is allowed ">
+    </testcase>
+    <testcase name="AC 4: Fleet Manager adds an option in the wizard when he did not have another option from this category before then the added option is shown under the subtitle Added " time="0.774" classname="Line Add Options AC 4: Fleet Manager adds an option in the wizard when he did not have another option from this category before then the added option is shown under the subtitle Added ">
+    </testcase>
+    <testcase name="AC 5: Fleet Manager adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated " time="0.734" classname="Line Add Options AC 5: Fleet Manager adds an option in the wizard when he already had an option in this category before then the added option is shown under the subtitle Updated ">
+    </testcase>
+    <testcase name="AC 7: Fleet Manager added  options in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.861" classname="Line Add Options AC 7: Fleet Manager added  options in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8: Fleet Manager adds an option in the wizard when he saves his changes then the options  that are selected are in his SIM Line " time="0.892" classname="Line Add Options AC 8: Fleet Manager adds an option in the wizard when he saves his changes then the options  that are selected are in his SIM Line ">
+    </testcase>
+    <testcase name="AC 9: Fleet Manager adds an option in the wizard when he saves his changes then he changes his mind and cancels it the manager is redirected to the wizard again " time="0.894" classname="Line Add Options AC 9: Fleet Manager adds an option in the wizard when he saves his changes then he changes his mind and cancels it the manager is redirected to the wizard again ">
+    </testcase>
+  </testsuite>
+</testsuites>

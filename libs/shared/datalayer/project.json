@@ -1,0 +1,40 @@
+{
+  "name": "datalayer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/datalayer/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/datalayer/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/datalayer/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/datalayer/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-datalayer"],
+      "options": {
+        "jestConfig": "libs/shared/datalayer/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/datalayer/src/**/*.ts", "libs/shared/datalayer/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:datalayer"]
+}

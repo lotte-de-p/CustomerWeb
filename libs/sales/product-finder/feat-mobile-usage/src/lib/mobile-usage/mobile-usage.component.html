@@ -1,0 +1,71 @@
+<div class="stepper-page__body">
+  <div class="stepper-page__body-inner">
+    <div class="stepper-page__title">
+      <div class="text-flow text-flow--h3">{{ 'ng.product-finder.step-mobile-usage.header' | translate }}</div>
+      <div class="font--caption mt--xxxs stepper-page__title-label">
+        {{ 'ng.product-finder.step-mobile-usage.sub-header' | translate }}
+      </div>
+    </div>
+    <div class="stepper-page__content--split container">
+      <div
+        class="stepper-page__content-first stepper-page__content-first--full-width-img flex-hide-until-md sticky ml--xm--md ml--n--lg">
+        <img
+          appSalesImageSrcInterceptor
+          [moduleId]="'tg-sales-product-finder'"
+          src="/assets/sales/product-finder/mobile-usage/mobile-usage.png"
+          alt="mobile usage image" />
+      </div>
+
+      <div class="stepper-page__content-second mx--s--md mx--n--lg">
+        <div *ngIf="showAtLeastOneValueSelectedError$ | async" class="mb--m mx--l mx--n--md">
+          <div class="notification notification--errorfield">
+            <span class="icon icon-error errorfield"></span>
+            <div>
+              <p>{{ 'ng.product-finder.step-mobile-usage.multiple.options.error' | translate }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="Container Container--partitioned py--m--md mx--n">
+          <div class="Container--partitioned--partition Container--partitioned--partition--last-item">
+            <ng-container *ngIf="{ chips: chips$ | async, mobileUsage: mobileUsage$ | async } as o">
+              <ng-container *ngIf="o.chips && o.mobileUsage">
+                <ng-container *ngFor="let mobileLine of o.mobileUsage.mobileLines; let i = index">
+                  <div
+                    class="header-accordion mb--m mx--m--md cursor--pointer"
+                    [ngClass]="mobileLine.collapsed ? 'header-accordion--closed' : 'header-accordion--opened'"
+                    (click)="updateMobileLineCollapsed(i, !mobileLine.collapsed)">
+                    <div class="header-accordion--title">
+                      <div class="header-accordion--title__text">
+                        <div class="display--flex align-items--center text-flow text-flow--h4">
+                          <span
+                            *ngIf="mobileLine.error"
+                            class="icon icon-error-shape mr--xxs color-notification--error--light"></span>
+                          <span class="mt--xxxs">
+                            {{ 'ng.product-finder.step-mobile-usage.mobile-number' | translate }} {{ i + 1 }}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header-accordion--link text-flow text-flow--h4">
+                      <div class="header-accordion--link__icon text-flow text-flow--h4">
+                        <i class="text-weight--g icon-chevron-down icon-md"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <tg-sales-multiple-select-chip
+                    [hidden]="mobileLine.collapsed"
+                    [chips]="o.chips"
+                    [ngModel]="o.mobileUsage.mobileLines[i].selection"
+                    (ngModelChange)="updateMobileLineSelection(i, $event)">
+                  </tg-sales-multiple-select-chip>
+                  <div
+                    class="product-finder-mobile-usage--divider divider--xxs__light-grey my--xl--md my--l mx--m--md"></div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

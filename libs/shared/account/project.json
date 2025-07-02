@@ -1,0 +1,40 @@
+{
+  "name": "account",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/account/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/account/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/account/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/account/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-account"],
+      "options": {
+        "jestConfig": "libs/shared/account/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/account/src/**/*.ts", "libs/shared/account/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:account"]
+}

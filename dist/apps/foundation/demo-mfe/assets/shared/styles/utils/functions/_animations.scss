@@ -1,0 +1,23 @@
+@mixin fadeIn {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin slideUp {
+  @keyframes slideUp {
+    from {
+      transform: translateY(3rem);
+    }
+
+    to {
+      transform: translateY(0rem);
+    }
+  }
+}

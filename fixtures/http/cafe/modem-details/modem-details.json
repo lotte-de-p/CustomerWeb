@@ -1,0 +1,34 @@
+{
+  "modemdetails": [
+    {
+      "macaddress": "8C:35:3B:4B:42:DF",
+      "modemtype": "DOC 24*8 WIRELESS",
+      "hardware": "unknown",
+      "cableroutername": "CAP90DOND02",
+      "internetlineidentifier": "u580135",
+      "installationaddress": {
+        "street": "Liersesteenweg",
+        "postalcode": "2800",
+        "municipality": "Mechelen",
+        "country": "België",
+        "housenr": "4",
+        "addressid": "6cc7yy007q-9w0jd90hst"
+      }
+    },
+    {
+      "macaddress": "5C:35:3B:4B:42:DF",
+      "modemtype": "DOC 3 WIRELESS",
+      "hardware": "unknown",
+      "cableroutername": "CAP70DEND01",
+      "installationaddress": {
+        "street": "Hamsesteenweg",
+        "postalcode": "9200",
+        "municipality": "Dendermonde",
+        "country": "België",
+        "subhousenr": "A",
+        "housenr": "23",
+        "addressid": "8aa7yy008f-8w1jd90hst"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+<div
+  [ngClass]="{ 'line-selector--header': isBaseCustomer }"
+  *ngrxLet="{
+    openAppointments: openAppointments$,
+    completedAppointments: completedAppointments$,
+    selectedAppointment: selectedAppointment$
+  } as vm">
+  <div
+    class="display--flex align-items--center pb--xl--md"
+    *ngIf="vm?.selectedAppointment"
+    [ngClass]="{ 'justify-content--normal--md justify-content--between pt--m--md': isBaseCustomer }">
+    <div
+      data-cs-mask
+      data-cy="selected-appointment-address"
+      class="mr--m"
+      [ngClass]="{
+        'line-selector--title mt-0 mb-0': isBaseCustomer,
+        'line-selector-telenet--title': !isBaseCustomer
+      }"
+      *ngIf="vm?.selectedAppointment?.address">
+      {{ vm?.selectedAppointment?.address?.street }}
+      {{ vm?.selectedAppointment?.address?.houseNumber
+      }}{{ vm?.selectedAppointment?.address?.boxNumber ? '/' + vm?.selectedAppointment?.address?.boxNumber : '' }},
+      {{ vm?.selectedAppointment?.address?.zip }}
+      {{ vm?.selectedAppointment?.address?.city }}
+    </div>
+    <div>
+      <span
+        class="cursor--pointer"
+        [ngClass]="{
+          'line-selector--open text-font-family--t5': isBaseCustomer,
+          'line-selector-telenet--open': !isBaseCustomer
+        }"
+        tabindex="-1"
+        data-cy="change-appointment"
+        (click)="open()"
+        *ngIf="
+          (vm?.openAppointments?.length || 0) > 1 ||
+          (vm?.completedAppointments?.length || 0) > 1 ||
+          (vm?.openAppointments?.length || 0) + (vm?.completedAppointments?.length || 0) > 1
+        "
+        >{{ 'ng.appointments.lbl.change-appointment' | translate }}</span
+      >
+    </div>
+  </div>
+  <tg-slide-menu [showMenu]="showMenu" (closeMenu)="close()" [title]="'ng.appointments.lbl.title' | translate">
+    <ng-container
+      [ngTemplateOutlet]="appointmentsList"
+      [ngTemplateOutletContext]="{
+        appointments: vm?.openAppointments,
+        selectedAppointment: vm?.selectedAppointment
+      }">
+    </ng-container>
+    <div
+      *ngIf="vm?.completedAppointments?.length && vm?.openAppointments?.length"
+      [attr.data-cy]="'appointment-show-history'"
+      class="mx--xs px--m display--flex justify-content--between cursor--pointer pt--xl border-style--t--solid border-width--t--r border--t--r border-color--all--light-grey"
+      (click)="showHistory = !showHistory">
+      <div class="text-flow text-flow--h5">
+        {{ 'ng.appointments.lbl.history' | translate }}
+      </div>
+      <i class="icon icon-md" [ngClass]="{ 'icon-chevron-up': showHistory, 'icon-chevron-down': !showHistory }"></i>
+    </div>
+    <div *ngIf="showHistory || (!vm?.openAppointments?.length && vm?.completedAppointments?.length)">
+      <ng-container
+        [ngTemplateOutlet]="appointmentsList"
+        [ngTemplateOutletContext]="{
+          appointments: vm?.completedAppointments,
+          selectedAppointment: vm?.selectedAppointment,
+          isAppointmentClosed: true
+        }">
+      </ng-container>
+    </div>
+  </tg-slide-menu>
+</div>
+
+<ng-template
+  #appointmentsList
+  let-appointments="appointments"
+  let-selectedAppointment="selectedAppointment"
+  let-isAppointmentClosed="isAppointmentClosed">
+  <ul data-cy="appointments-list">
+    <li
+      *ngFor="let appointment of appointments; let i = index; let last = last"
+      (click)="selectAppointment(appointment, isAppointmentClosed)"
+      [attr.data-cy]="'appointment-selector-option-' + i"
+      class="px--xs">
+      <div
+        class="px--s border-width--b--r border--b--r border-color--all--light-grey cursor--pointer display--flex justify-content--between width--full align-items--center appointment-list"
+        tabindex="0"
+        [ngClass]="{ 'border-style--b--solid': !last || appointments?.completedAppointments?.length }">
+        <div class="py--l align-items--center display--flex overflow--hidden position--relative">
+          <span class="mr--xs">
+            <i class="icon-calendar icon icon-md"></i>
+          </span>
+          <div *ngIf="appointment?.address" class="overflow--hidden">
+            <div data-cs-mask class="font--body-regular break-word">
+              {{ appointment?.address?.street }}
+              {{ appointment?.address?.houseNumber
+              }}{{ appointment?.address?.boxNumber ? '/' + appointment?.address?.boxNumber : '' }},
+              {{ appointment?.address?.zip }} {{ appointment?.address?.city }}
+            </div>
+            <span
+              class="status-indicator"
+              [attr.data-cy]="'appointment-selector-status'"
+              [ngClass]="
+                appointment?.getDisplayStatus === STATUS_NEW ? 'status-indicator--neutral' : 'status-indicator--warning'
+              "
+              *ngIf="appointment?.isUpcomingAppointment"
+              [innerHTML]="
+                'ng.appointments.lbl.appointment-status-with-date-' + appointment?.getDisplayStatus
+                  | lowercase
+                  | translate: { appointmentDate: appointment?.appointmentDate | date: 'dd/MM/yyyy' }
+              ">
+            </span>
+            <span
+              [attr.data-cy]="'appointment-side-nav-date'"
+              class="status-indicator"
+              [ngClass]="
+                appointment?.getDisplayStatus === STATUS_COMPLETED
+                  ? 'status-indicator--positive'
+                  : 'status-indicator--negative'
+              "
+              *ngIf="!appointment?.isUpcomingAppointment"
+              [innerHtml]="
+                'ng.appointments.lbl.appointment-status-with-date-' + appointment?.getDisplayStatus
+                  | lowercase
+                  | translate: { appointmentDate: appointment?.appointmentDate | date: 'dd/MM/yyyy' }
+              ">
+            </span>
+          </div>
+        </div>
+        <div class="px--xs" *ngIf="appointment?.appointmentId === selectedAppointment?.appointmentId">
+          <i
+            class="ml--xs color-text-t-black-b-white background-brand-primary color-te icon icon-sm icon-tick appointment-selected text-weight--xxs color-mid-grey"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>

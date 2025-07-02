@@ -1,0 +1,35 @@
+<div class="overlay" data-testid="hardware-discount-download-error-dialog">
+  <div class="overlay__mask"></div>
+  <div class="overlay__section">
+    <div class="background-white text-align--center p--l mx--xs">
+      <div class="display--flex align-items--center justify-content--end pb--s">
+        <wink-icon
+          appearance="default"
+          icon="cross"
+          size="md"
+          brand="telenet"
+          class="cursor--pointer"
+          (click)="closeDialog()"></wink-icon>
+      </div>
+      <div class="overlay__section__content__title heading--5 heading--nomargin">
+        {{ 'ng.hardware-discount.download.overlay.error-title' | translate }}
+      </div>
+      <div class="overlay__section__content__description">
+        {{ 'ng.hardware-discount.download.overlay.error-description' | translate }}
+      </div>
+      <div class="mt--l">
+        <wink-button
+          (click)="closeDialog()"
+          text="{{ 'ng.hardware-discount.download.overlay.btn-cancel' | translate }}"
+          data-testid="hardware-discount-download-error-dialog-close"
+          element="a"
+          type="button"
+          appearance="primary"
+          size="md"
+          width="full"
+          status="none">
+        </wink-button>
+      </div>
+    </div>
+  </div>
+</div>

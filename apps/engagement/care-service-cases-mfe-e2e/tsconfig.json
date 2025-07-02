@@ -1,0 +1,31 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["cypress", "node"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "cypress.config.ts",
+    "../care-service-cases-mfe/**/*.ts",
+    "../care-service-cases-mfe/**/*.js",
+    "../../../libs/engagement/care-service-cases/**/*.ts",
+    "../../../libs/engagement/care-service-cases/**/*.js"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

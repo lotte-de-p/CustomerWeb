@@ -1,0 +1,108 @@
+{
+  "internalCategory": "POST-PAID-MOBILE",
+  "productId": "TWOP0010",
+  "externalProductCode": "TWOP0010",
+  "productType": "BUNDLE",
+  "categories": [
+    "for-rules---offerings-for-120531",
+    "for-rules---fixed-and-bundles-category",
+    "for-rules---price-reduction-during-3-months",
+    "for-rules---2p-bundles",
+    "for-rules---res-digital-tv-and-bundles-with-digital-tv",
+    "for-rules---multi-dtv-promo",
+    "for-discount---2nd-home-promo-3p-bundles--internet",
+    "for-discount---2p3p-bundles--internet",
+    "for-rules---all-internet--tv-wigo",
+    "for-rules---all-internet--tv-wigo-for-100650",
+    "for-rules---all-internet-for-107800",
+    "2p-bundle",
+    "for-rules---2nd-home-promo-manual"
+  ],
+  "customerCategories": ["residential", "eventdemo", "production-test"],
+  "subCategory": {},
+  "labelKey": "All-Internet + Telenet TV",
+  "visible": false,
+  "weight": 380,
+  "services": [
+    {
+      "experience": {
+        "experienceType": "SURF"
+      },
+      "serviceType": "FIXED_INTERNET",
+      "specifications": [
+        {
+          "labelKey": "spec-fixedinternet-volume-download-fup",
+          "unit": "GB",
+          "value": "unlimited",
+          "visible": true,
+          "weight": "21",
+          "localizedContent": {
+            "locale": "en",
+            "name": "unlimited Data",
+            "logo": ""
+          }
+        }
+      ]
+    },
+    {
+      "experience": {
+        "experienceType": "ENTERTAINMENT"
+      },
+      "serviceType": "TV",
+      "specifications": [
+        {
+          "labelKey": "dtv",
+          "visible": true,
+          "weight": "10",
+          "localizedContent": {
+            "locale": "en",
+            "name": "Dtv/Tv box",
+            "logo": ""
+          }
+        }
+      ]
+    }
+  ],
+  "apps": [],
+  "localizedContent": [
+    {
+      "locale": "nl",
+      "name": "All-Internet + Telenet TV",
+      "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv.png"
+    },
+    {
+      "locale": "fr",
+      "name": "All-Internet + Telenet TV",
+      "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv.png"
+    },
+    {
+      "locale": "en",
+      "name": "All-Internet + Telenet TV",
+      "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv.png"
+    }
+  ],
+  "shortDescription": {
+    "localizedContent": {
+      "locale": "en",
+      "name": "All-Internet + Telenet TV",
+      "logo": ""
+    }
+  },
+  "visibilityRules": {
+    "conditionalVisibility": false
+  },
+  "unlimited": false,
+  "priceType": "Recurrent Charge",
+  "name": "All-Internet + Telenet TV",
+  "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/all-internet-+-telenet-tv.png",
+  "characteristics": {
+    "productGroup": "OTHER",
+    "productSubGroup": "",
+    "productSegment": "RMD",
+    "priceInclVat": 0,
+    "recipientsMandatory": false,
+    "prices": {}
+  },
+  "usageBasedRatePlan": false,
+  "requiresInstallation": true
+}

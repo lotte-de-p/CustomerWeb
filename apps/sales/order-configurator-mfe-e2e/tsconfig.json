@@ -1,0 +1,23 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "../../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["cypress", "node"],
+    "sourceMap": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "*.ts", "../order-configurator-mfe/**/*.ts", "../order-configurator-mfe/**/*.js"],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

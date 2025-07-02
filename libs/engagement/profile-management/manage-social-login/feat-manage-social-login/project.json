@@ -1,0 +1,26 @@
+{
+  "name": "feat-manage-social-login",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/engagement/profile-management/manage-social-login/feat-manage-social-login/src",
+  "projectType": "library",
+  "prefix": "lib",
+  "tags": [
+    "type:feature",
+    "scope:profile-management",
+    "scope:profile-management-mfe",
+    "scope:profile-management-manage-social-login",
+    "scope:profile-management-manage-social-login-feat-manage-social-login"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/profile-management/manage-social-login/feat-manage-social-login/**/*.ts",
+          "libs/engagement/profile-management/manage-social-login/feat-manage-social-login/**/*.html"
+        ]
+      }
+    }
+  }
+}

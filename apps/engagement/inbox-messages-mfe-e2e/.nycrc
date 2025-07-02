@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+  "../inbox-messages-mfe/**",
+  "../inbox-messages-mfe-e2e/**",
+  "../../../libs/engagement/inbox-messages/**"
+  ],
+  "report-dir": "../../../coverage/apps/engagement/inbox-messages-mfe-e2e",
+  "cwd": "../../../"
+}

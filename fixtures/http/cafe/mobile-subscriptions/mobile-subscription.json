@@ -1,0 +1,13 @@
+{
+  "identifier": "0468163537",
+  "specurl": "https://api.uat.telenet.be/omapi/public/product/726",
+  "sim": "8941019000000334157",
+  "pin": "4415",
+  "puk": "40003415",
+  "activationstate": "active",
+  "paused": false,
+  "bundle": {
+    "identifier": "WIGO40_44403894",
+    "specurl": "https://api.uat.telenet.be/omapi/public/product/94"
+  }
+}

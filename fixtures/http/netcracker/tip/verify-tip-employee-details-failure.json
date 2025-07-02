@@ -1,0 +1,5 @@
+{
+  "status": "FAILURE",
+  "errorCode": "TIPERR_01",
+  "errorDescription": "Billing account not found for given customer account"
+}

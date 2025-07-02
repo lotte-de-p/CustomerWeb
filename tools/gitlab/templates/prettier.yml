@@ -1,0 +1,28 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.format:monorepo:
+  image: $NODE_BUILD_IMAGE
+  stage: quality
+  allow_failure: false
+  before_script:
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  script:
+    - nx format:check
+  only: !reference [.allowed-branches]
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.format:app:
+  image: $NODE_BUILD_IMAGE
+  stage: quality
+  allow_failure: false
+  before_script:
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  script:
+    - cd ${CI_PROJECT_DIR}/apps/${CLIENT_PROJECT}
+    - nx format:check
+  retry:
+    max: 2
+    when: runner_system_failure

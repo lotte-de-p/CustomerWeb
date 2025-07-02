@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.941" tests="10" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-11T06:32:52" tests="0" file="src/e2e/fleet-sim-card/line-navigation-list/line-navigation-list.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Navigation List" timestamp="2024-07-11T06:32:52" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Show address nav item" timestamp="2024-07-11T06:32:52" tests="2" time="2.151" failures="0">
+    <testcase name="should show the address nav item if it is a split bill user" time="0.895" classname="Line Navigation List Show address nav item should show the address nav item if it is a split bill user">
+    </testcase>
+    <testcase name="should not show the address nav item if it is not a split bill user" time="0.585" classname="Line Navigation List Show address nav item should not show the address nav item if it is not a split bill user">
+    </testcase>
+  </testsuite>
+  <testsuite name="Show identification nav item regardless of profile details" timestamp="2024-07-11T06:32:54" tests="4" time="4.125" failures="0">
+    <testcase name="Ff the status in profile details is validated" time="0.694" classname="Line Navigation List Show identification nav item regardless of profile details Ff the status in profile details is validated">
+    </testcase>
+    <testcase name="If the status in profile details is pending" time="0.701" classname="Line Navigation List Show identification nav item regardless of profile details If the status in profile details is pending">
+    </testcase>
+    <testcase name="If the status in profile details is invited" time="0.718" classname="Line Navigation List Show identification nav item regardless of profile details If the status in profile details is invited">
+    </testcase>
+    <testcase name="If the profile details is empty" time="0.790" classname="Line Navigation List Show identification nav item regardless of profile details If the profile details is empty">
+    </testcase>
+  </testsuite>
+  <testsuite name="Navigation" timestamp="2024-07-11T06:32:58" tests="1" time="1.353" failures="0">
+    <testcase name="should navigate to, highlight and show content of a nav item" time="1.039" classname="Line Navigation List Navigation should navigate to, highlight and show content of a nav item">
+    </testcase>
+  </testsuite>
+  <testsuite name="Default navigation item" timestamp="2024-07-11T06:33:00" tests="3" time="3.287" failures="0">
+    <testcase name="should first check if a default nav item is present in the URL" time="0.540" classname="Line Navigation List Default navigation item should first check if a default nav item is present in the URL">
+    </testcase>
+    <testcase name="should show the default nav item from the navigation data if the URL does not contain a default" time="0.529" classname="Line Navigation List Default navigation item should show the default nav item from the navigation data if the URL does not contain a default">
+    </testcase>
+    <testcase name="should show the first nav item in the list if there is no default in URL and navigation data" time="0.517" classname="Line Navigation List Default navigation item should show the first nav item in the list if there is no default in URL and navigation data">
+    </testcase>
+  </testsuite>
+</testsuites>

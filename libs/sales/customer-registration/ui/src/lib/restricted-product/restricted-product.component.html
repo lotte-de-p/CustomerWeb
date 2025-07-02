@@ -1,0 +1,9 @@
+<div class="notification-disclaimer text-align--center">
+  <div class="icon icon-information-shape" [attr.data-cy]="'customer-registration-restricted-product-icon'"></div>
+  <div class="notification-disclaimer__title">
+    {{ 'customer-registration.lbl.restricted-product-' + this.currentCategory | translate }}
+  </div>
+  <p class="notification-disclaimer__desc">
+    {{ 'customer-registration.lbl.see-our-products-' + this.currentCategory | translate: { link: marketingURL } }}
+  </p>
+</div>

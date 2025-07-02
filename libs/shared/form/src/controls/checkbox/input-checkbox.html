@@ -1,0 +1,14 @@
+<div class="radio-checkbox">
+  <div class="form__checkbox">
+    <input
+      type="checkbox"
+      class="form__checkbox__input"
+      id="{{ key }}"
+      [checked]="value"
+      (ngModelChange)="updateValue($event)"
+      [(ngModel)]="value" />
+    <label class="form__checkbox__label {{ checkBoxModifier }}" for="{{ key }}">&nbsp;</label>
+  </div>
+  <label class="label--large color-text" for="{{ key }}" [innerHTML]="getLabel() | translate"></label>
+  <div #errorContainer></div>
+</div>

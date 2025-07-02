@@ -1,0 +1,314 @@
+[
+  {
+    "date": "2023-10-30T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "494222085"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "20932628"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "47913535"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "2034180210"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-10-31T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "1451761764"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "727247028"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "1307256806"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "1808283189"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-01T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "902493659"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "147795740"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "262769421"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "1253506442"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-02T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791339"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633850"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234553"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520497"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-03T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791312"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633812"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234512"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520412"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-04T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791323"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633823"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234523"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520423"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-05T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791334"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633834"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234534"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520434"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-06T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791345"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633845"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234545"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520445"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-07T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791356"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633856"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234556"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520456"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-08T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791367"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633867"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234567"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520467"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-09T00:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791378"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633878"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234578"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520478"
+      }
+    ],
+    "isCustomMoment": false
+  },
+  {
+    "date": "2023-11-09T23:00:00.000Z",
+    "timeSlots": [
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "MORNING",
+        "availabiltyId": "463791389"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "LUNCH",
+        "availabiltyId": "226633889"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "AFTERNOON",
+        "availabiltyId": "417234589"
+      },
+      {
+        "specUrl": "https://api.int.telenet.be/omapi/public/product/APPT0000",
+        "code": "DAY",
+        "availabiltyId": "114520489"
+      }
+    ],
+    "isCustomMoment": false
+  }
+]

@@ -1,0 +1,33 @@
+<div class="manage-social-login">
+  <div class="overlay manage-profile-details--change-role">
+    <div class="overlay__mask overlay__mask--backdrop backdrop-filter--3 animation--fade-in"></div>
+    <div class="overlay__section">
+      <div class="overlay__section__content--wrapper animation--slide-down-to-screen center-align p-0 ml-0 mr-0">
+        <div class="overlay__section__content__description">
+          <div
+            class="invite-new-user__invite-close position--fixed fl-inherit cursor--pointer icon icon-cross"
+            (click)="closeDialog()"></div>
+          <div
+            class="content-section background-transparent_white_12 p--xl--md p--m manage-profile-details__details-content">
+            <div class="text-align--center text--l--sm text--xxm font-weight--black mb--l mt--l">
+              {{ 'ng.manage-social-login.title.want-to-unlink-social-login' | translate }}
+            </div>
+            <div
+              class="flex-direction--row--sm flex-direction--column-reverse justify-content--center p--n--sm pt--n pb--n mt--l display--flex">
+              <div class="col-sm-6 p-0">
+                <button class="button button--secondary button--fullwidth" (click)="closeDialog()">
+                  <span>{{ 'ng.manage-social-login.unlink.btn.cancel' | translate }}</span>
+                </button>
+              </div>
+              <div class="display--flex mt--n--sm ml--m--sm mb--xm--sm mr--n--sm mt--n mr--n mb--m ml--n col-sm-6">
+                <button class="button button--primary button--fullwidth" (click)="unlinkSocialLogin()">
+                  <span>{{ 'ng.manage-social-login.unlink.btn.ok' | translate }}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="app" class="content-wrap">
+  <div id="page-loader"></div>
+  <tg-header />
+  <div class="m--auto mt--xxg pt--l">
+    @if (includeBillingAccountSelector$ | async) {
+      <tg-local-billing-account-selector />
+    }
+    @if (includeMobileLineSelector$ | async) {
+      <tg-local-mobile-line-selector />
+    }
+    <router-outlet />
+  </div>
+</div>

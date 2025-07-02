@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:8080/public/api/return-devices-service/v1/return-devices",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "type": "DTV Box",
+      "name": "HD Digicorder",
+      "addressId": "9165643348913618888",
+      "locationId": "9168859531813778888",
+      "serialNumber": "966313498888",
+      "status": "Disconnected",
+      "parentId": "9168859549413778888",
+      "returnDueDate": "2024-04-19",
+      "lateFee": 249
+    },
+    {
+      "type": "DTV Box",
+      "name": "HD Digicorder",
+      "addressId": "9165643348913618888",
+      "locationId": "9168859531813775410",
+      "serialNumber": "966313491313",
+      "status": "Disconnected",
+      "parentId": "9168859549413779743",
+      "returnDueDate": null,
+      "lateFee": 249
+    },
+    {
+      "type": "DTV Box",
+      "name": "HD Digicorder",
+      "addressId": "9165643348913618888",
+      "locationId": "9168859531813779999",
+      "serialNumber": "966313499999",
+      "status": "Disconnected",
+      "parentId": "9168859549413779999",
+      "returnDueDate": "2024-03-28",
+      "lateFee": 249
+    },
+    {
+      "type": "modem",
+      "name": "Modem Return",
+      "addressId": "9165643348913618888",
+      "locationId": "9168859531813776666",
+      "serialNumber": "966313496666",
+      "status": "Completed",
+      "parentId": "9168859549413776666",
+      "lateFee": 0
+    },
+    {
+      "type": "modem",
+      "name": "Modem Return",
+      "addressId": "9165643348913617778",
+      "locationId": "9168859531813776666",
+      "serialNumber": "181987698715",
+      "status": "Completed",
+      "parentId": "9168859549413776666",
+      "lateFee": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<div
+  class="promo-highlight display--flex flex-direction--column align-items--center--md align-items--baseline flex-wrap--wrap">
+  <div class="display--flex align-items--start align-items--center--md flex-direction--column">
+    <div
+      *ngIf="strikeThroughPrice"
+      [attr.data-tid]="'strike-through'"
+      class="promo-highlight__second-row text-decoration--line-through align-items--baseline font--caption space-nowrap mx--xxxs mb--xxxs">
+      {{ strikeThroughPrice | price | euroSign }}
+    </div>
+    <div class="display--flex flex-direction--row flex-direction--column--md align-items--center">
+      <div class="promo-highlight__third-row display--flex justify-content--center space-nowrap">
+        <span *ngIf="!isFrench" [attr.data-tid]="'nl'" class="font--body-regular-bold">€</span>
+        <span class="text-flow text-flow--h2" [attr.data-tid]="'integer'">{{ integer }}</span>
+        <span class="font--body-regular-bold" [attr.data-tid]="'decimal'">,{{ decimal }}</span>
+        <span *ngIf="isFrench" class="font--body-regular-bold" [attr.data-tid]="'fr'">€</span>
+      </div>
+    </div>
+  </div>
+</div>

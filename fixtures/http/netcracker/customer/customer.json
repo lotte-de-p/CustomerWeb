@@ -1,0 +1,37 @@
+{
+  "category": "BUSINESS",
+  "id": "9160260121713978223",
+  "status": "Active",
+  "brand": "Telenet",
+  "products": [],
+  "legalAddress": {
+    "name": "6",
+    "id": "9153462896013523517"
+  },
+  "commercialAddress": {
+    "name": "6",
+    "id": "9153462896013523517"
+  },
+  "accountNumber": "1200045276",
+  "name": "LastManager",
+  "serviceAddresses": [
+    {
+      "name": "6",
+      "id": "9153462896013523517"
+    }
+  ],
+  "firstName": "Lastmanager",
+  "lastName": "test",
+  "companyName": "LastManager",
+  "belgianEnterpriseNumber": "1147.787.439",
+  "legalForm": "ECOZAKEN",
+  "customerLocations": [
+    {
+      "address": {
+        "id": "9145466696013668158"
+      },
+      "id": "9157893760813473879",
+      "name": "Belgium, 2800 Mechelen, Elektriciteitstraat"
+    }
+  ]
+}

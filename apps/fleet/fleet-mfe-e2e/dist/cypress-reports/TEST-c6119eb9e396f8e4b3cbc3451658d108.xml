@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.340" tests="9" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-03T05:50:13" tests="0" file="src/e2e/fleet-product/line-add-options/line-add-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Add Options" timestamp="2024-07-03T05:50:13" tests="9" time="1.315" failures="1">
+    <testcase name="&quot;before each&quot; hook for &quot;AC 1: Fleet Manager goes to products detail page when add options is selected then the add options wizard is opened&quot;" time="0.217" classname="Line Add Options &quot;before each&quot; hook for &quot;AC 1: Fleet Manager goes to products detail page when add options is selected then the add options wizard is opened&quot;">
+      <failure message="BFLE0001 is not defined
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Line Add Options`" type="ReferenceError"><![CDATA[ReferenceError: BFLE0001 is not defined
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Line Add Options`
+    at Context.eval (webpack:///./src/e2e/fleet-product/line-add-options/line-add-options.spec.cy.ts:54:0)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

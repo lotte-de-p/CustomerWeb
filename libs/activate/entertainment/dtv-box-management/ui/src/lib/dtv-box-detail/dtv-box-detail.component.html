@@ -1,0 +1,51 @@
+<div class="row" data-cy="dtv-box-detail-row">
+  <div class="col-md-7 col-12 pl--m--md pl--s pt--n--md pt--xl">
+    <div class="font--body-large-bold mb--l">
+      <span data-cy="dtv-box-detail-type-name"
+        ><i class="icon icon-laptop"></i>
+        {{ dtvBox.name }}
+        @if (dtvBox.modelNumber) {
+          <span data-cy="dtv-box-model-number">({{ dtvBox.modelNumber }})</span>
+        }
+      </span>
+    </div>
+    <div class="row mb--xxxs">
+      <div class="col-md-8">
+        <div class="font--body-regular-bold mb--xxxs mb--n--md">
+          {{ 'ng.dtv-details.title.contract-type' | translate }}
+        </div>
+      </div>
+      <div class="col-md-4 pl--n--md pr-0">
+        <span data-cy="dtv-box-detail-sale-type">{{ 'ng.dtv-details.lbl.' + dtvBox.saleType | translate }}</span>
+      </div>
+    </div>
+    <div class="row mt--l mb--xxxs">
+      <div class="col-md-8">
+        <div class="font--body-regular-bold mb--xxxs mb--n--md">
+          {{ 'ng.dtv-details.title.mac-address' | translate }}
+        </div>
+      </div>
+      <div class="col-md-4 pl--n--md pr-0">
+        <span data-cy="dtv-box-detail-mac-address">{{ dtvBox.macAddress }}</span>
+      </div>
+    </div>
+    <div class="row mt--l mb--xxxs">
+      <div class="col-md-8">
+        <div class="font--body-regular-bold mb--xxxs mb--n--md">
+          {{ 'ng.dtv-details.title.serial-number' | translate }}
+        </div>
+      </div>
+      <div class="col-md-4 pl--n--md pr-0">
+        <span data-cy="dtv-box-detail-serial-number">{{ dtvBox.serialNumber }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-12 pl--n--md pl--s text-align--center text-align--right--md">
+    <img
+      [alt]="dtvBox.name"
+      [tgEntertainmentDtvBoxImageSrcInterceptor]="imagePath"
+      data-cy="dtv-box-detail-type-image"
+      src="/assets/{{ dtvBox.modelImageName }}" />
+  </div>
+</div>
+<div class="divider divider--s__very-light-grey mt--l mb--l"></div>

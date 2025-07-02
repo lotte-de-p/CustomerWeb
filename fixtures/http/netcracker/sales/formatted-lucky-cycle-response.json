@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "reason": "ok",
+  "code": 800,
+  "hash": "jet2gmjefknqpagjae6np7pp",
+  "data": {
+    "canPlay": true,
+    "message": "ok",
+    "code": 800,
+    "itemUid": "9158903454313180202",
+    "userUid": "9158444850613362907",
+    "computedHash": "jet2gmjefknqpagjae6np7pp",
+    "pokeCounter": 1,
+    "valuePlayed": "10.0",
+    "clusterId": null,
+    "status": "poke",
+    "result": 0,
+    "htmlData": "<script id=\"sc1\" type=\"text/javascript\">\n\tsetTimeout(function(){\n\n\tdocument.getElementById(\"light-close\").onclick = function() {\n\t\tdocument.getElementById('lc_lightbox').style.display='none';\n\t};\n\tdocument.getElementById(\"lc_lightbox\").onclick = function() {\n\t\tdocument.getElementById('lc_lightbox').style.display='none';\n\t};\n\tdocument.getElementById(\"lc_launch_lightbox\").onclick = function() {\n\t\tlaunch();\n\t};\n}, 50);\n\tfunction launch()\n\t{\n\t\tdocument.getElementById('lc_lightbox').style.display='block';\n\t}\n\n\tsetTimeout(function(){document.getElementById('lc_lightbox').style.display='block';}, 50)\n\t</script>\n<style>\n\t@media all{\n\t.featherlight{\n\tdisplay:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:2147483647;text-align:center;white-space:nowrap;cursor:pointer;\n\tbackground:rgb(0,0,0);\n    background: transparent\\9;\n    background:rgba(0,0,0,0.4);\n    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);\n    zoom: 1;\n    }\n    .featherlight:nth-child(n) {\n    \tfilter: none;\n\t}\n\n    .featherlight:before{content:'';display:inline-block;height:100%;vertical-align:middle;margin-right:-.25em}.featherlight .featherlight-content{position:relative;text-align:left;vertical-align:middle;display:inline-block;overflow:hidden;padding:25px 25px 0;border-bottom:25px solid transparent;margin-left:5%;margin-right:5%;max-height:95%;background:transparent;cursor:auto;white-space:normal}.featherlight .featherlight-inner{display:block}\n\n\t.featherlight .featherlight-close-icon{\n\t\tbackground: url(https://a.luckycycle.com/fancybox_close.png);\n\n\t\tposition: absolute;\n\t\ttop:7px;\n\t\tright: 0px;\n\t\twidth: 36px;\n\t\theight: 36px;\n\t\tcursor: pointer;\n\t\tz-index: 8040;\n\t}\n\n\t.featherlight .featherlight-image{width:100%}.featherlight-iframe .featherlight-content{border-bottom:0;padding:0}.featherlight iframe{border:0}}\n\t.featherlight .featherlight-content {\n\t\toverflow-y: auto;\n\t\tmax-width: 560px;\n\t\twidth: 100%\n\t}\n\n\t@media (max-width: 600px) {\n\t\t.featherlight .featherlight-content {\n\t\t\twidth:91%;\n\t\t}\n\t}\n\t.featherlight-content {\n\t  overflow-y: scroll;\n\t  scrollbar-width: none; /* Firefox */\n\t  -ms-overflow-style: none;  /* Internet Explorer 10+ */\n\t}\n\t.featherlight-content::-webkit-scrollbar { /* WebKit */\n\t  width: 0; height: 0;\n\t  display: none;\n\t}\n\n</style>\n<a class='js_after_poke' href='#' id='lc_launch_lightbox'><img class='js_after_poke' src='https://clients.luckycycle.com/assets/px.png' style=\"max-width: 100%;display:block;height: auto;\"></a>\n<div class=\"featherlight featherlight-iframe\" id =\"lc_lightbox\">\n\t<div class=\"featherlight-content\">\n\t\t<span class=\"featherlight-close-icon featherlight-close\" id='light-close'></span>\n\t\t<div id=\"mylightbox\" class=\"lightbox featherlight-inner\">\n\t\t\t<iframe class='js_after_poke' frameborder='1' height='650' width='100%' target='_blank' align='center' scrolling='no' style='border-width:0;' src='https://www.luckycycle.com/play/jet2gmjefknqpagjae6np7pp'></iframe>\n\t\t</div>\n\t</div>\n</div>\n",
+    "boxVisible": true,
+    "appConfig": {},
+    "appStrings": {}
+  }
+}

@@ -1,0 +1,210 @@
+<tg-login [messageGroupName]="messageGroupName" (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes">
+  <div *ngIf="failedOrders$ | async as failedSalesOrders">
+    <div *ngIf="hasAny(failedSalesOrders)">
+      <div>
+        <div class="product-row-item label-row product-row-item__failed-orders__label-row">
+          <div class="product-row-item__items label-profile mt--m">
+            <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+              <label class="product-row-item__failed-orders-label font-weight--black">
+                {{ 'ng.order-history.lbl.order-reference' | translate }}
+              </label>
+            </div>
+            <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+              <label class="product-row-item__failed-orders-label font-weight--black">
+                {{ 'ng.order-history.lbl.date-created' | translate }}
+              </label>
+            </div>
+            <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+              <label class="product-row-item__failed-orders-label font-weight--black">
+                {{ 'ng.order-history.lbl.summary' | translate }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngIf="hasAny(failedSalesOrders)">
+          <div
+            *ngFor="let pendingSalesOrder of failedSalesOrders"
+            class="product-row-item product-row-item__failed-orders content-row no-scroll">
+            <div class="content-section mb-0 mb--m--md">
+              <div class="product-row-item__items consult-profile">
+                <div class="product-row-item__item consult-profile">
+                  <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                    {{ 'ng.order-history.lbl.order-reference' | translate }}
+                  </label>
+                  <p class="text-weight--g">
+                    {{ pendingSalesOrder.orderNumber }}
+                    <span
+                      class="background-very-light-grey border-radius--all--l ml--l--lg ml--s--md ml--l text-weight--g text--m text--xm--md pt--xxxs pb--xxxs pr--s--md pl--s--md pr--xs pl--xs">
+                      {{ pendingSalesOrder.orderItems?.length }}
+                    </span>
+                  </p>
+                </div>
+                <div class="product-row-item__item consult-profile">
+                  <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                    {{ 'ng.order-history.lbl.date-created' | translate }}
+                  </label>
+                  <p>{{ pendingSalesOrder.dateCreated }}</p>
+                </div>
+                <div class="product-row-item__item consult-profile">
+                  <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                    {{ 'ng.order-history.lbl.summary' | translate }}
+                  </label>
+                  <p>{{ pendingSalesOrder.status }}</p>
+                </div>
+                <div class="product-row-item__item consult-profile pb-0 hide-until-md text-align--right">
+                  <i
+                    *ngIf="hasAny(pendingSalesOrder.orderItems!)"
+                    (click)="toggle(pendingSalesOrder.orderNumber!)"
+                    class="icon-chevron-down"
+                    [ngClass]="isToggled(pendingSalesOrder.orderNumber!) ? 'icon-chevron-up' : 'icon-chevron-down'">
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="hasAny(pendingSalesOrder.orderItems!)" class="product-row-item__failed-orders__data">
+              <div class="divider divider--xxs__very-light-grey hide-until-md"></div>
+              <div
+                *ngIf="isToggled(pendingSalesOrder.orderNumber!)"
+                class="product-row-item label-row product-row-item__failed-orders__data--label">
+                <div class="product-row-item__items label-profile mt--m">
+                  <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+                    <label class="product-row-item__failed-orders-label font-weight--black">
+                      {{ 'ng.order-history.lbl.product-name' | translate }}
+                    </label>
+                  </div>
+                  <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+                    <label class="product-row-item__failed-orders-label font-weight--black">
+                      {{ 'ng.order-history.lbl.number' | translate }}
+                    </label>
+                  </div>
+                  <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+                    <label class="product-row-item__failed-orders-label font-weight--black">
+                      {{ 'ng.order-history.lbl.status' | translate }}
+                    </label>
+                  </div>
+                  <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+                    <label class="product-row-item__failed-orders-label font-weight--black">
+                      {{ 'ng.order-history.lbl.order' | translate }}
+                    </label>
+                  </div>
+                  <div class="product-row-item__item label-profile hidden-mobile-row-item cursor--pointer">
+                    <label class="product-row-item__failed-orders-label font-weight--black"></label>
+                  </div>
+                  <div class="hidden-mobile-row-item cursor--pointer"></div>
+                </div>
+              </div>
+              <ng-container *ngIf="isToggled(pendingSalesOrder.orderNumber!)">
+                <div
+                  *ngFor="let orderItem of pendingSalesOrder.orderItems"
+                  class="product-row-item content-row product-row-item__failed-orders__data--items">
+                  <div class="content-section">
+                    <div class="product-row-item__items consult-profile">
+                      <div class="product-row-item__item consult-profile">
+                        <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                          {{ 'ng.order-history.lbl.product-name' | translate }}
+                        </label>
+                        <p class="text-weight--g">{{ orderItem.name }}</p>
+                      </div>
+                      <div class="product-row-item__item consult-profile hide-from-md">
+                        <span
+                          *ngIf="hasAny(orderItem.validations!)"
+                          class="background-red color-white border-radius--all--l pt--xxs pb--xxs pr--m pl--m text-uppercase text--s">
+                          {{ 'ng.order-history.lbl.order-failed' | translate }}
+                        </span>
+                        <span
+                          *ngIf="!hasAny(orderItem.validations!)"
+                          class="background-blue-green color-white border-radius--all--l pt--xxs pb--xxs pr--m pl--m text-uppercase text--s">
+                          {{ 'ng.order-history.lbl.order-pending' | translate }}
+                        </span>
+                      </div>
+                      <div class="product-row-item__item consult-profile">
+                        <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                          {{ 'ng.order-history.lbl.number' | translate }}
+                        </label>
+                        <p>{{ orderItem.identifier }}</p>
+                      </div>
+                      <div class="product-row-item__item consult-profile hide-until-md">
+                        <span
+                          *ngIf="hasAny(orderItem.validations!)"
+                          class="background-red color-white border-radius--all--l pt--xxs pb--xxs pr--m pl--m text-uppercase text--s">
+                          {{ 'ng.order-history.lbl.order-failed' | translate }}
+                        </span>
+                        <span
+                          *ngIf="!hasAny(orderItem.validations!)"
+                          class="background-blue-green color-white border-radius--all--l pt--xxs pb--xxs pr--m pl--m text-uppercase text--s">
+                          {{ 'ng.order-history.lbl.order-pending' | translate }}
+                        </span>
+                      </div>
+                      <div class="product-row-item__item consult-profile">
+                        <label class="hidden-desktop-row-item product-row-item__failed-orders-label text--m">
+                          {{ 'ng.order-history.lbl.status' | translate }}
+                        </label>
+                        <p>{{ orderItem.action }}</p>
+                      </div>
+                      <div class="product-row-item__item consult-profile hide-until-md">
+                        <a
+                          *ngIf="hasAny(orderItem.orderItems!)"
+                          (click)="toggle(orderItem.identifier!)"
+                          class="link link--no-underline secondary">
+                          {{ 'ng.order-history.lbl.view-options' | translate }}
+                        </a>
+                        <i
+                          *ngIf="hasAny(orderItem.orderItems!)"
+                          (click)="toggle(orderItem.identifier!)"
+                          class="icon-chevron-down ml-10"
+                          [ngClass]="isToggled(orderItem.identifier!) ? 'icon-chevron-up' : 'icon-chevron-down'">
+                        </i>
+                      </div>
+                    </div>
+                    <div *ngIf="isToggled(orderItem.identifier!) && hasAny(orderItem.orderItems!)">
+                      <div class="divider divider--xxs__very-light-grey hide-until-md"></div>
+                      <div
+                        class="display--flex product-row-item__failed-orders__data--items__options flex-direction--row--md flex-direction--column">
+                        <label class="hide-from-md product-row-item__failed-orders-label text-uppercase pb--m text--m">
+                          {{ 'ng.order-history.lbl.options' | translate }}
+                        </label>
+                        <span *ngFor="let options of orderItem.orderItems" class="text--m mb--s mb--s--md">
+                          {{ options.name }}
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="hasAny(orderItem.orderItems!)"
+                      class="divider divider--xxs__very-light-grey hide-from-md"></div>
+                    <div
+                      *ngIf="hasAny(orderItem.orderItems!)"
+                      class="product-row-item__item consult-profile pb-0 mt--l mb--l mb--n--md mt--n--md hide-from-md text-align--center">
+                      <span class="mr--s" (click)="toggle(orderItem.identifier!)"
+                        >{{ 'ng.order-history.lbl.view-options' | translate }}
+                      </span>
+                      <i
+                        (click)="toggle(orderItem.identifier!)"
+                        class="icon-chevron-down"
+                        [ngClass]="isToggled(orderItem.identifier!) ? 'icon-chevron-up' : 'icon-chevron-down'">
+                      </i>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+              <div class="divider divider--xxs__very-light-grey hide-from-md"></div>
+              <div
+                class="product-row-item__item consult-profile pb-0 mt--l mb--l mb--n--md mt--n--md hide-from-md text-align--center">
+                <span
+                  *ngIf="hasAny(pendingSalesOrder.orderItems!)"
+                  (click)="toggle(pendingSalesOrder.orderNumber!)"
+                  class="mr--s">
+                  {{ 'ng.order-history.lbl.view-orders' | translate }}
+                </span>
+                <i
+                  (click)="toggle(pendingSalesOrder.orderNumber!)"
+                  class="icon-chevron-down"
+                  [ngClass]="isToggled(pendingSalesOrder.orderNumber!) ? 'icon-chevron-up' : 'icon-chevron-down'">
+                </i>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</tg-login>

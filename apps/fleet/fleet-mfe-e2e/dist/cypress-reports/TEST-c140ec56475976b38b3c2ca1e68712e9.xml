@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.176" tests="10" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-08-29T06:07:08" tests="0" file="src/e2e/fleet-user/line-remove-options/line-remove-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Remove Options" timestamp="2024-08-29T06:07:08" tests="8" time="0.000" failures="0">
+    <testcase name="AC 1: Fleet User goes to products detail page when remove options is selected then the add options wizard is opened" time="1.456" classname="Line Remove Options AC 1: Fleet User goes to products detail page when remove options is selected then the add options wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option " time="0.852" classname="Line Remove Options AC 2: Fleet User opens the remove options wizard when fleet user he sees an option that is not in his sim line he can not remove this option ">
+    </testcase>
+    <testcase name="AC 3: Fleet User removes an option in the wizard when he selected to remove this option then the option is shown under  " time="0.873" classname="Line Remove Options AC 3: Fleet User removes an option in the wizard when he selected to remove this option then the option is shown under  ">
+    </testcase>
+    <testcase name="AC 4: Fleet User is in the wizard and sees all the options he already has under Previously added " time="0.660" classname="Line Remove Options AC 4: Fleet User is in the wizard and sees all the options he already has under Previously added ">
+    </testcase>
+    <testcase name="AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again " time="0.996" classname="Line Remove Options AC 6: Fleet User added  options in the wizard when he clicks on undo changes then added options are unselected again ">
+    </testcase>
+    <testcase name="AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.930" classname="Line Remove Options AC 7: Fleet User removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line " time="0.989" classname="Line Remove Options AC 8: Fleet User removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line ">
+    </testcase>
+    <testcase name="AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again " time="0.973" classname="Line Remove Options AC 9: Fleet User removes an option in the wizard when he saves his changes then he changes his mind and cancels it the user sees the wizard again ">
+    </testcase>
+  </testsuite>
+  <testsuite name="Split bill guard checks" timestamp="2024-08-29T06:07:16" tests="2" time="3.199" failures="0">
+    <testcase name="should show error message when fleet user ordering is not enabled" time="1.148" classname="Line Remove Options Split bill guard checks should show error message when fleet user ordering is not enabled">
+    </testcase>
+    <testcase name="should show error message when product is not of type SB20" time="1.186" classname="Line Remove Options Split bill guard checks should show error message when product is not of type SB20">
+    </testcase>
+  </testsuite>
+</testsuites>

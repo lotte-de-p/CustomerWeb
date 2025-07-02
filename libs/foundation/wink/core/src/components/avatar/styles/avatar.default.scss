@@ -1,0 +1,33 @@
+:host {
+  display: inline-block;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+:host([size='sm']) {
+  img {
+    height: rem(2.4);
+    width: rem(2.4);
+  }
+}
+:host([size='md']) {
+  img {
+    height: rem(4);
+    width: rem(4);
+  }
+}
+:host([size='lg']) {
+  img {
+    height: rem(4.8);
+    width: rem(4.8);
+  }
+}
+:host([size='xl']) {
+  img {
+    height: rem(7.2);
+    width: rem(7.2);
+  }
+}

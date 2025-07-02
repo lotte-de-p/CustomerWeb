@@ -1,0 +1,20 @@
+{
+  "mobile": {
+    "outOfBundle": {
+      "currentUsage": "0.00",
+      "limit": {}
+    },
+    "premiumService": {
+      "id": "9162247156013358283",
+      "policyName": "PremiumUsageSpendLimit",
+      "currentUsage": "0",
+      "limit": {
+        "id": "9162247156513358395",
+        "enabled": true,
+        "value": "125.00",
+        "unitType": "Euro",
+        "originalUnitType": "Euro"
+      }
+    }
+  }
+}

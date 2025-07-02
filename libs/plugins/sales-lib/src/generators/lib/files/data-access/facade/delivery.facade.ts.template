@@ -1,0 +1,14 @@
+import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { <%= classifiedStateName %> } from '../+state/<%= name %>.state';
+import { name } from "../+state/<%= name %>.selectors";
+
+@Injectable({ providedIn: 'root' })
+export class <%= classifiedName %>Facade {
+  name$: Observable<string | undefined> = this.store.select(name);
+
+  constructor(private readonly store: Store<<%= classifiedStateName %>>) {
+    console.log(this.store);
+  }
+}

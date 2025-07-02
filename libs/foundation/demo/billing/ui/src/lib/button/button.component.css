@@ -1,0 +1,30 @@
+.button__size--small {
+  padding: 0 4px !important;
+  min-height: 1.3rem;
+  font-size: 14px;
+  line-height: 25px;
+  height: 36px;
+  min-width: 0;
+}
+
+.button__size--normal {
+  padding: 4px 10px !important;
+  min-height: 3rem;
+  font-size: 16px;
+  font-weight: 700;
+  height: 36px;
+  min-width: 0;
+}
+
+.button__size--dense {
+  padding: 0 6px !important;
+  min-height: 1.5rem;
+  font-size: 14px;
+  line-height: 25px;
+  min-width: 0;
+  border: none !important;
+}
+
+.cur-not-allowed {
+  cursor: not-allowed !important;
+}

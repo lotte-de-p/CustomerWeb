@@ -1,0 +1,16 @@
+{
+  "/content/dam/www-telenet-touch/default/images/hardware-checkout": {
+    "target": "http://localhost:4205",
+    "secure": false,
+    "pathRewrite": {
+      "^/content/dam/www-telenet-touch/default/images/hardware-checkout": "/assets/sales/hardware-checkout"
+    }
+  },
+  "/telenet/data/municipalities": {
+    "target": "http://localhost:4205",
+    "secure": false,
+    "pathRewrite": {
+      "^/telenet/data/municipalities": "/assets/data/municipalities.json"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="hide-until-md">
+  @if (isAddressFormVisible) {
+    <form [formGroup]="addressForm" (ngSubmit)="onSubmitForm()" class="form-group ng-untouched ng-pristine ng-invalid">
+      <div class="divider--xxs__light-grey mt--l mx--xxs ng-star-inserted"></div>
+      <h5>
+        {{ 'ng.sales-checkout.lbl.installation-address-form.title' | translate }}
+      </h5>
+      <tg-sales-address-form-field formControlName="address"></tg-sales-address-form-field>
+      <div class="sales-flow__content__delivery__action mt-20 pl--n--md pl--s text-align--right">
+        <a href="#" class="link mr--m" (click)="onCloseForm(); $event.preventDefault()">
+          <span>{{ 'ng.sales-checkout.button.cancel' | translate }}</span>
+        </a>
+        <button class="button button--secondary mt--xs mt--n--sm" type="submit">
+          {{ 'ng.sales-checkout.button.save' | translate }}
+        </button>
+      </div>
+    </form>
+  }
+</div>

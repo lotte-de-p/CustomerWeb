@@ -1,0 +1,112 @@
+:host {
+  --semantic-duration-very-fast: 100ms;
+  --semantic-duration-fast: 200ms;
+  --semantic-duration-medium: 300ms;
+  --semantic-duration-slow: 400ms;
+  --semantic-duration-very-slow: 500ms;
+
+  --semantic-easing-productive-ease-in: cubic-bezier(0.11, 0, 0.5, 0);
+  --semantic-easing-productive-ease-out: cubic-bezier(0.5, 1, 0.89, 1);
+  --semantic-easing-productive-ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+
+  font-family: TelenetAlbra-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: rem(1.8);
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--semantic-color-background-canvas-default);
+  color: var(--semantic-color-text-default);
+  animation-name: toastFadeOut;
+  animation-duration: var(--semantic-duration-slow);
+  animation-timing-function: var(--semantic-easing-productive-ease-in-out);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  height: fit-content;
+
+  @include media('from-sm') {
+    width: fit-content;
+    justify-content: center;
+  }
+
+  & .toast {
+    &-icon {
+      margin-right: var-rem(--semantic-spacing-sm);
+
+      &-positive {
+        --wink-icon-color: var(--semantic-color-icon-succes);
+      }
+
+      &-negative {
+        --wink-icon-color: var(--semantic-color-icon-error);
+      }
+    }
+
+    &-text {
+      margin: var-rem(--semantic-spacing-xs) var-rem(--semantic-spacing-md) var-rem(--semantic-spacing-3xs) 0;
+    }
+
+    &-link {
+      --wink-link-color--default: var(--semantic-color-text-default);
+      --wink-link-color--visited: var(--semantic-color-text-default);
+      --wink-link-color--hover: var(--semantic-color-text-default);
+
+      margin: var-rem(--semantic-spacing-3xs) var-rem(--semantic-spacing-md) 0 0;
+    }
+
+    &-close {
+      color: #{var(--semantic-color-icon-inverse)};
+
+      padding-left: var-rem(--semantic-spacing-md);
+      border-left: rem(0.1) solid var(--semantic-color-border-button-default);
+      margin-left: auto;
+
+      @include media('from-md') {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+:host([is-open]),
+:host([is-open='true']) {
+  animation-name: toastFadeIn;
+  pointer-events: auto;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    padding: 0 var-rem(--semantic-spacing-md);
+  }
+  to {
+    opacity: 1;
+    padding: var-rem(--semantic-spacing-md);
+  }
+}
+
+@keyframes toastFadeOut {
+  0% {
+    opacity: 1;
+    max-height: rem(7);
+    padding: var-rem(--semantic-spacing-md);
+    margin-top: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    padding: 0 var-rem(--semantic-spacing-md);
+    margin-top: rem(-1.6);
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  :host {
+    animation-duration: 0;
+  }
+}

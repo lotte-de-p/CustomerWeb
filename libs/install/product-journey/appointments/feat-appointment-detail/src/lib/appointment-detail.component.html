@@ -1,0 +1,300 @@
+<div
+  *ngrxLet="{
+    outdoorAppointment: outdoorAppointment$,
+    appointment: selectedAppointmentVM$
+  } as vm"
+  class="appointments__content mt--xl mt--n--md">
+  <div *ngIf="vm.appointment">
+    <tg-appointment-cancellation
+      *ngIf="showCancelDialog"
+      [selectedAppointment]="vm.appointment"
+      (closeCancellation)="toggleCancelDialog($event)"
+      [messageGroupName]="messageGroupName">
+    </tg-appointment-cancellation>
+    <tg-scheduled-appointment-info
+      [isScheduledAppointment]="vm.appointment?.isScheduledAppointment"
+      [appointmentType]="vm.appointment?.appointmentType">
+    </tg-scheduled-appointment-info>
+    <div class="display--flex flex-direction--column flex-direction--row--md">
+      <p class="pb--xxxs pb--n--md pr--xs" [attr.data-cy]="'appointment-status'">
+        <span
+          class="status-indicator"
+          [ngClass]="
+            vm.appointment?.getDisplayStatus === STATUS_NEW ? 'status-indicator--neutral' : 'status-indicator--warning'
+          "
+          *ngIf="vm.appointment?.isUpcomingAppointment"
+          [innerHTML]="
+            'ng.appointments.lbl.appointment-status-' + vm.appointment?.getDisplayStatus | lowercase | translate
+          ">
+        </span>
+        <span
+          class="status-indicator"
+          [ngClass]="
+            vm.appointment?.getDisplayStatus === STATUS_COMPLETED
+              ? 'status-indicator--positive'
+              : 'status-indicator--negative'
+          "
+          *ngIf="!vm.appointment?.isUpcomingAppointment"
+          [innerHtml]="
+            'ng.appointments.lbl.appointment-status-' + vm.appointment?.getDisplayStatus | lowercase | translate
+          ">
+        </span>
+      </p>
+      <h4
+        class="mt-0"
+        [attr.data-cy]="'appointment-type'"
+        [innerHtml]="
+          'ng.appointments.details-' + vm.appointment?.appointmentType + '.lbl' | lowercase | translate
+        "></h4>
+    </div>
+    <tg-appointment-notification
+      class="mb--xxs"
+      [allowFiberRepairChanges]="allowFiberRepairChanges"
+      [selectedAppointment]="vm.appointment">
+    </tg-appointment-notification>
+    <div class="content-section mt--m">
+      <div class="p--xl--md p--m">
+        <div>
+          <div class="display--flex flex-wrap--wrap" *ngIf="!vm.appointment?.isNewAppointment">
+            <div class="col-md-6 col-12 mb--xl--md mb--l p--n">
+              <h5 class="mt-0">{{ 'ng.appointments.details.date' | translate }}</h5>
+              <p class="font--body-regular m-0" [attr.data-cy]="'appointment-date'">
+                {{ vm.appointment?.dayLabelKey ?? '' | translate }} {{ vm.appointment?.dayOfMonth }}
+                {{ vm.appointment?.monthLabelKey ?? '' | translate }},
+                {{ vm.appointment?.appointmentDate ?? '' | date: 'yyyy' }}
+              </p>
+              <p class="font--body-regular m-0" [attr.data-cy]="'appointment-time'">
+                {{ vm.appointment?.timeslotCodeLabelKey ?? '' | translate }}
+                ({{ vm.appointment?.timeSlot?.startTime }} - {{ vm.appointment?.timeSlot?.endTime }})
+              </p>
+            </div>
+            <div
+              class="col-md-6 col-12 mb--xl--md mb--l p--n"
+              [attr.data-cy]="'reschedule-appointment'"
+              *ngIf="vm.appointment?.isUpcomingAppointment && !vm.appointment?.isScheduledAppointment">
+              <h5 class="mt-0">
+                {{
+                  'ng.appointments.details.reschedule-cancel.' + vm.appointment?.appointmentType + '.lbl'
+                    | lowercase
+                    | translate
+                }}
+              </h5>
+              <div *ngIf="vm.appointment?.customer?.notificationContact">
+                <span>
+                  {{
+                    'ng.appointments.details.contact.info'
+                      | translate: { contactType: vm.appointment?.customer?.notificationMethod | lowercase }
+                  }}
+                </span>
+                <span
+                  data-cs-mask
+                  *ngIf="
+                    vm.appointment?.customer?.notificationMethod === SMS ||
+                    vm.appointment?.customer?.notificationMethod === VOICE
+                  "
+                  >{{ vm.appointment?.customer?.notificationContact | phoneNumber }}</span
+                >
+                <span data-cs-mask *ngIf="vm.appointment?.customer?.notificationMethod === EMAIL">{{
+                  vm.appointment?.customer?.notificationContact
+                }}</span>
+              </div>
+              <ng-container *ngIf="allowFiberRepairChanges">
+                <div
+                  *ngIf="
+                    (vm.appointment?.fiberAppointment && vm.appointment?.isRepairAppointment) ||
+                    !vm.appointment?.fiberAppointment
+                  "
+                  class="display--flex pt--xs">
+                  <ng-container [ngTemplateOutlet]="showLink"></ng-container>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!allowFiberRepairChanges">
+                <div *ngIf="!vm.appointment?.fiberAppointment" class="display--flex pt--xs">
+                  <ng-container [ngTemplateOutlet]="showLink"></ng-container>
+                </div>
+              </ng-container>
+              <ng-template #showLink>
+                <p class="pr--l">
+                  <a
+                    [attr.data-cy]="'request-reschedule'"
+                    class="link font--body-regular-bold"
+                    href="javascript:void(0)"
+                    [ngClass]="!isMaster ? 'disabled-state' : ''"
+                    (click)="requestRescheduleAppointment(vm.appointment)"
+                    >{{ 'ng.appointments.details.reschedule.link' | translate }}</a
+                  >
+                </p>
+                <p *ngIf="vm.appointment?.isRepairAppointment">
+                  <a
+                    [attr.data-cy]="'cancel-appointment'"
+                    class="link font--body-regular-bold"
+                    href="javascript:void(0)"
+                    [ngClass]="!isMaster ? 'disabled-state' : ''"
+                    (click)="toggleCancelDialog(true)"
+                    [clickPushToAnalytics]="{
+                      attributeName: 'cancel appointment start',
+                      eventName: DatalayerEventNames.EVENT_NAME_SELF_SERVICE_FLOW_STARTED,
+                      messageGroupName: messageGroupName
+                    }"
+                    >{{ 'ng.appointments.details.cancel.link' | translate }}</a
+                  >
+                </p>
+              </ng-template>
+            </div>
+          </div>
+
+          <div class="mb--xl--md mb--l" *ngIf="!vm.appointment?.isNewAppointment">
+            <div class="divider divider--xxs__very-light-grey"></div>
+          </div>
+
+          <div class="display--flex flex-wrap--wrap">
+            <div
+              *ngIf="vm.appointment?.productsInfo?.length && !vm.appointment.isRepairAppointment"
+              class="col-md-6 col-12 p--n mb--xl--md mb--l">
+              <h5 class="mt-0">{{ 'ng.appointments.details.product' | translate }}</h5>
+              <p
+                [attr.data-cy]="'product-name'"
+                class="font--body-regular m-0"
+                *ngFor="let product of vm.appointment?.productsInfo">
+                {{ product.name }}
+              </p>
+            </div>
+
+            <div *ngIf="vm.appointment?.isUpcomingAppointment" class="col-md-6 col-12 p--n">
+              <div *ngIf="vm.appointment?.cost" class="mb--xl--md mb--l">
+                <h5
+                  class="mt-0"
+                  [innerHTML]="
+                    'ng.appointments.details.' + (vm.appointment?.appointmentType | lowercase) + '-cost.lbl' | translate
+                  "></h5>
+                <p
+                  [attr.data-cy]="'appointment-cost'"
+                  *ngIf="vm.appointment?.cost !== '0'"
+                  class="font--body-regular m-0"
+                  [innerHtml]="
+                    'ng.appointments.details.cost.info'
+                      | translate: { appointmentCost: vm.appointment?.cost ?? '' | price | replaceDecimals }
+                  "></p>
+                <p
+                  [attr.data-cy]="'appointment-cost'"
+                  *ngIf="vm.appointment?.cost === '0'"
+                  class="font--body-regular m-0"
+                  [innerHtml]="'ng.appointments.date-fromfree.lbl' | translate"></p>
+              </div>
+              <div
+                [attr.data-cy]="'appointment-free-cost'"
+                class="mb--xl--md mb--l"
+                *ngIf="!vm.appointment?.cost && !vm.appointment?.isRepairAppointment">
+                <h5
+                  class="mt-0"
+                  [innerHTML]="
+                    'ng.appointments.details.' + (vm.appointment?.appointmentType | lowercase) + '-cost.lbl' | translate
+                  "></h5>
+                <p class="font--body-regular m-0" [innerHtml]="'ng.appointments.date-fromfree.lbl' | translate"></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mb--xl--md mb--l"
+            *ngIf="vm.appointment?.productsInfo?.length && !vm.appointment.isRepairAppointment">
+            <div class="divider divider--xxs__very-light-grey"></div>
+          </div>
+          <div class="display--flex flex-wrap--wrap">
+            <div class="col-md-6 col-12 p--n" [attr.data-cy]="'appointment-address'">
+              <h5
+                class="mt-0"
+                [innerHTML]="
+                  'ng.appointments.details.' + (vm.appointment?.appointmentType | lowercase) + '-address.lbl'
+                    | translate
+                "></h5>
+              <p data-cs-mask class="font--body-regular m-0">
+                {{ vm.appointment?.address?.street }} {{ vm.appointment?.address?.houseNumber
+                }}{{ vm.appointment?.address?.boxNumber ? '/' + vm.appointment?.address?.boxNumber : '' }},
+              </p>
+              <p data-cs-mask class="font--body-regular m-0">
+                {{ vm.appointment?.address?.zip }} {{ vm.appointment?.address?.city }},
+                {{ vm.appointment?.address?.country }}
+              </p>
+            </div>
+
+            <div class="col-md-6 col-12 p--n" [attr.data-cy]="'appointment-cost-policy'">
+              <div *ngIf="vm.appointment?.cableAppointment" class="mt--n--md mt--l">
+                <h5 class="mb-0 cursor--default">{{ 'ng.appointments.lbl.cable-service' | translate }}</h5>
+                <p class="font--body-regular m-0 pt--xs">
+                  {{ 'ng.appointments.lbl.cable-appointment-details' | translate }}
+                </p>
+              </div>
+              <div *ngIf="vm.appointment?.isRepairAppointment" class="mt--n--md mt--l">
+                <h5 class="cursor--default mt-0">{{ 'ng.appointments.lbl.repair-cost' | translate }}</h5>
+                <p
+                  class="font--body-regular m-0 pt--xs"
+                  [innerHTML]="'ng.appointments.details.cost-policy.lbl' | translate"
+                  [clickPushToAnalytics]="{
+                    attributeName: 'repair cost policy',
+                    eventName: DatalayerEventNames.LINK_CLICKED,
+                    messageGroupName: messageGroupName
+                  }"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt--xl--md mt--l" *ngIf="showOutdoorAppointmentInfo(vm.appointment, vm.outdoorAppointment)">
+          <div class="divider divider--xxs__very-light-grey mb--xl--md mb--l"></div>
+          <div class="display--flex" [attr.data-cy]="'outdoor-appointment'">
+            <p
+              class="icon icon-sm icon-information status-indicator--neutral info color-white font--body-small mr--s"
+              data-cy="notification-info-box-icon"></p>
+            <div>
+              <div [innerHTML]="'ng.appointments.details-outdoor-appointment' | translate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <tg-appointment-additional-info
+      [appointmentStatus]="vm.appointment?.appointmentStatus"
+      [usefulInformationHtml]="usefulInformationHtml">
+    </tg-appointment-additional-info>
+    <tg-post-installation-info
+      [appointmentStatus]="vm.appointment?.appointmentStatus"
+      [postInstallationHtml]="postInstallationHtml">
+    </tg-post-installation-info>
+    <div *ngrxLet="availableTimeSlotsVM$">
+      <tg-appointment-available-time-slots
+        *ngIf="showDatePicker"
+        [selectedAppointment]="vm.appointment"
+        [availableTimeSlots]="availableTimeSlots"
+        [updatedSlots]="updatedSlots"
+        [startDate]="startDate"
+        [disableLoadMore]="disableLoadMoreSlots"
+        (selectedTimeSlot)="onValidSelectedTimeSlot($event)"
+        (loadMoreTimeSlot)="loadMoreAvailableSlot($event, vm.appointment)">
+      </tg-appointment-available-time-slots>
+    </div>
+    <tg-appointment-contact-detail
+      [isMaster]="isMaster"
+      [appointment]="vm.appointment"
+      [showEditContactDetail]="showEditContactDetail"
+      [messageGroupName]="messageGroupName">
+    </tg-appointment-contact-detail>
+    <div class="fl-right--md text-align--center pt--g--md pt--l" *ngIf="showDatePicker">
+      <button
+        [attr.data-cy]="'cancel-reschedule'"
+        *ngIf="!vm.appointment?.isNewAppointment"
+        class="button button--secondary"
+        [innerHTML]="'ng.appointments.date-cancelreschedule.lbl' | translate"
+        (click)="cancelReschedule()"></button>
+      <button
+        [attr.data-cy]="'confirm-reschedule'"
+        [disabled]="!validSelectedTimeSlot"
+        [ngClass]="!validSelectedTimeSlot ? 'disabled-state' : ''"
+        class="button button--primary button--alternate mt--m mt--n--sm"
+        [innerHTML]="
+          'ng.appointments.date-' +
+            (vm.appointment?.isNewAppointment ? 'requestappointment' : 'rescheduleappointment') +
+            '.lbl' | translate
+        "
+        (click)="rescheduleAppointment(vm.appointment)"></button>
+    </div>
+  </div>
+</div>

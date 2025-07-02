@@ -1,0 +1,2 @@
+import{a as n}from"./p-8fb054cb.js";const r=["telenet","base"];const t=localStorage.getItem("currentBrand")||"telenet";n((n=>{const e=n.getAttribute("brand")||t;if(!r.includes(e)){n.setAttribute("brand",t)}n.setAttribute("brand",t);return e}));
+//# sourceMappingURL=p-36f7551c.js.map

@@ -1,0 +1,15 @@
+import { TitleComponent } from './title.component';
+
+describe('TitleComponent', () => {
+  describe(`Given a primary title`, () => {
+    beforeEach(() => {
+      cy.mount(TitleComponent, {
+        componentProperties: {},
+      });
+    });
+
+    it('should render', () => {
+      cy.get('[data-testid="title"]').should('have.text', 'My title component works!');
+    });
+  });
+});

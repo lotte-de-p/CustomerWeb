@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ProductJourneyMfe</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="https://www.int.telenet.be/en.pageLocaleData.js"></script>
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.int.telenet.be/ocapi',
+          'omapi-url': 'https://api.int.telenet.be/omapi',
+          'omapi-query-url': 'https://api.int.telenet.be/omapi-query/public',
+          'openid-auth-url': 'https://login.int.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.int.telenet.be/openid',
+          'gateway-url': 'https://api.int.telenet.be',
+          'sofy-url': 'https://int.sofy-dev.awscloud.external.telenet.be',
+          'gsa-url': 'https://api.int.telenet.be/searchapi/gsa/api/',
+          'openid-client-id': 'ocapi',
+          'oauth-callback-url': '',
+          'php-eshop-url': 'https://shop.int.telenet.be/shop/nl',
+          'base-ac-systems-url': 'https://base.rest.ac-systems.com',
+          'recaptcha-api-url': 'https://www.google.com/recaptcha/api.js',
+          'recaptcha-site-key': '6Ld15hAbAAAAABL4l8LoTnBv-CBkhYE8Ukwc3aMQ',
+          'recaptcha-v3-site-key': '6Lc2hCQbAAAAACaxx5NvByzCNYI4NSpgqsrrT4Wp',
+          'ocapi-login-endpoint-url': 'https://api.int.telenet.be/ocapi/login/authorization/telenet_be',
+        };
+      })();
+    </script>
+  <link rel="stylesheet" href="styles.css"></head>
+  <body class="background-shade_04">
+    <tg-product-journey></tg-product-journey>
+  <script src="polyfills.js" type="module"></script><script src="scripts.js" defer></script><script src="main.js" type="module"></script></body>
+</html>

@@ -1,0 +1,340 @@
+{
+  "selection": false,
+  "id": "9156751881913337592",
+  "locationId": "9150308785513909000",
+  "identifier": "0487075583",
+  "activationDate": "2022-01-01T16:39:45+02:00",
+  "lineIdentifier": "DTV9847474",
+  "msisdn": "32487075583",
+  "accountNumber": "100000411",
+  "referenceInformation": "referenceInformation",
+  "secondaryAccountNumber": "100000423",
+  "secondaryBillingAddressId": "1234",
+  "label": "Pro Connect",
+  "specurl": "https://api.sup.base.be/omapi/public/product/PROC0001",
+  "status": "SUSPENDED",
+  "handsets": [
+    {
+      "label": "ZTE BLADE V8 LITE BLU 4G 16GB",
+      "hwcvpItemCode": "212126",
+      "queryurl": "https://api.sup.base.be/omapi/public/product/EQUI0109",
+      "contract": {
+        "duration": "24",
+        "obligationEndDate": "3000-04-02T14:37:35",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "63,33"
+        }
+      }
+    }
+  ],
+  "discountItems": {
+    "discountDescriptions": [
+      {
+        "localizedNames": {
+          "FR": "RÃ©duction de 50% pendant 3 mois",
+          "EN": "Reduction of 50% during 3 months",
+          "NL": "50% korting gedurende 3 maanden"
+        },
+        "name": "Reduction of 50% during 3 months"
+      }
+    ],
+    "discounts": [
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/9157542971313500638",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "Euro",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "20,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "20,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00"
+          }
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/9157542971313501638",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "Euro",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "05,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "0,00",
+            "recurrentDiscount": "05,00",
+            "recurrentTotal": "0,00",
+            "oneTimeDiscounted": "0,00",
+            "recurrentDiscounted": "0,00"
+          }
+        }
+      }
+    ]
+  },
+  "options": [
+    {
+      "label": "Option Spotify",
+      "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0001",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "7,00",
+        "recurrentTotal": "0,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscount": "3,00",
+          "recurrentDiscounted": "7,00",
+          "recurrentTotal": "10,00"
+        }
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2019-06-16T13:46:17",
+        "price": {}
+      },
+      "chars": {
+        "broadbandUuids": "12-123-123"
+      }
+    },
+    {
+      "label": "Voice Europe 60 MIN",
+      "specurl": "https://api.sup.base.be/omapi/public/product/VOES0060",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "4,00",
+        "recurrentTotal": "0,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "4,00",
+          "recurrentTotal": "0,00"
+        }
+      },
+      "status": "ACTIVE",
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2019-09-11T13:24:11",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "0,00"
+        }
+      },
+      "chars": {
+        "broadbandUuids": ""
+      }
+    },
+    {
+      "label": "Prepaid Europe 60 MIN",
+      "specurl": "https://api.sup.base.be/omapi/public/product/VOES0060",
+      "category": "internet",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "4,00",
+        "recurrentTotal": "0,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "oneTimeTotal": "4,00",
+          "oneTimeDiscount": "1,00",
+          "oneTimeDiscounted": "3,00"
+        }
+      },
+      "status": "DISCONNECTED",
+      "activeTrialPack": {
+        "id": "TVPK0100",
+        "label": "Entertainment Trial",
+        "status": "ACTIVE",
+        "deactivationDate": "2021-01-24T18:02:58"
+      },
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2019-09-11T13:24:11",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "0,00"
+        }
+      },
+      "chars": {
+        "broadbandUuids": ""
+      }
+    },
+    {
+      "label": "Prepaid Europe 60 MIN",
+      "specurl": "https://api.sup.base.be/omapi/public/product/VOES0060",
+      "category": "telephone",
+      "parentId": "015895154",
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "4,00",
+        "recurrentTotal": "0,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "oneTimeTotal": "4,00",
+          "oneTimeDiscount": "1,00",
+          "oneTimeDiscounted": "3,00"
+        }
+      },
+      "status": "DISCONNECTED",
+      "activeTrialPack": {
+        "id": "TVPK0100",
+        "label": "Entertainment Trial",
+        "status": "ACTIVE",
+        "deactivationDate": "2021-01-24T18:02:58"
+      },
+      "contract": {
+        "duration": "1",
+        "obligationEndDate": "2019-09-11T13:24:11",
+        "price": {
+          "currency": "Euro",
+          "earlyTerminationFee": "0,00"
+        }
+      },
+      "chars": {
+        "broadbandUuids": ""
+      }
+    }
+  ],
+  "price": {
+    "currency": "EUR",
+    "recurrentDiscounted": "0,00",
+    "recurrentTotal": "0,00",
+    "taxInclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "15,00",
+      "recurrentTotal": "50,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "recurrentDiscounted": "25,00",
+      "recurrentTotal": "40,00"
+    }
+  },
+  "summaryPrices": {
+    "taxInclPrices": {
+      "currency": "Euro",
+      "recurrentDiscounted": "17,99",
+      "recurrentTotal": "19,99",
+      "recurrentDiscount": "0,00"
+    },
+    "taxExclPrices": {
+      "currency": "Euro",
+      "recurrentDiscounted": "17,99",
+      "recurrentTotal": "19,99",
+      "recurrentDiscount": "0,00"
+    }
+  },
+  "lineLevelProducts": [
+    {
+      "category": "dtv",
+      "identifier": "IDTV000007277",
+      "productInfo": {
+        "internalCategory": "POST-PAID-MOBILE",
+        "productId": "TSIP0001",
+        "isYupProduct": false,
+        "productType": "DTV Line",
+        "externalProductCode": "TSIP0001",
+        "subCategory": {
+          "name": "",
+          "weight": 0,
+          "mutualExclusion": false,
+          "localizedName": ""
+        },
+        "labelKey": "iDTV Access (Sipadan)",
+        "visible": false,
+        "weight": 0,
+        "shortDescription": {
+          "localizedContent": {
+            "locale": "nl",
+            "name": "",
+            "logo": ""
+          }
+        },
+        "rates": [],
+        "visibilityRules": {
+          "conditionalVisibility": false
+        },
+        "unlimited": false,
+        "eligibleForDiscount": false,
+        "priceType": "Recurrent Charge",
+        "characteristics": {
+          "productGroup": "OTHER",
+          "productSubGroup": "",
+          "productSegment": "ALL",
+          "priceInclVat": 0,
+          "recipientsMandatory": false,
+          "esimAvailable": false
+        },
+        "usageBasedRatePlan": false,
+        "requiresInstallation": true,
+        "maxCount": "1",
+        "chars": [],
+        "name": "Digital Tv",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/idtv-access-(sipadan).png",
+        "productConstituents": []
+      }
+    },
+    {
+      "category": "internet",
+      "identifier": "INT000016098",
+      "productInfo": {
+        "internalCategory": "POST-PAID-MOBILE",
+        "productId": "INLN0001",
+        "isYupProduct": false,
+        "externalProductCode": "INLN0001",
+        "productType": "INTERNET LINE",
+        "subCategory": {
+          "name": "",
+          "weight": 0,
+          "mutualExclusion": false,
+          "localizedName": ""
+        },
+        "labelKey": "Internet Service",
+        "visible": false,
+        "weight": 0,
+        "shortDescription": {
+          "localizedContent": {
+            "locale": "nl",
+            "name": "",
+            "logo": ""
+          }
+        },
+        "rates": [],
+        "visibilityRules": {
+          "conditionalVisibility": false
+        },
+        "unlimited": false,
+        "eligibleForDiscount": false,
+        "priceType": "Recurrent Charge",
+        "characteristics": {
+          "productGroup": "OTHER",
+          "productSubGroup": "",
+          "productSegment": "RMD",
+          "priceInclVat": 0,
+          "recipientsMandatory": false,
+          "esimAvailable": false
+        },
+        "usageBasedRatePlan": false,
+        "requiresInstallation": false,
+        "chars": [],
+        "name": "Internet",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/internet-service.png",
+        "productConstituents": []
+      }
+    }
+  ]
+}

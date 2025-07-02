@@ -1,0 +1,130 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div class="mybase-dashboard-internet">
+    @if (myBaseDashboardInternetError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <tg-mybase-dashboard-error [error]="(myBaseDashboardInternetError$ | async)!"></tg-mybase-dashboard-error>
+        </div>
+      </div>
+    } @else {
+      <div class="row">
+        <div class="col-12">
+          <tg-address-selector
+            [data]="(internetLines$ | async)!"
+            (selectInternetAddress)="selectInternetAddress($event)"
+            (analyticsData)="addAnalyticsEvent($event)"></tg-address-selector>
+        </div>
+      </div>
+      @if ((myBaseDashboardInternetLoading$ | async) === false) {
+        <div class="row">
+          @if ((myBaseDashboardInternetInternetUsage$ | async)?.showCard) {
+            <div class="col-12 col-md-6 col-lg-4 mb--m mt--xxxs--md">
+              @if ((myBaseDashboardInternetInternetUsage$ | async)?.limited) {
+                <tg-mybase-dashboard-internet-usage-limited
+                  [data]="(myBaseDashboardInternetInternetUsage$ | async)!"
+                  [internetUsageUrl]="internetUsageUrl"
+                  (analyticsData)="addAnalyticsEvent($event)"></tg-mybase-dashboard-internet-usage-limited>
+              } @else if ((myBaseDashboardInternetInternetUsage$ | async)?.unlimited) {
+                <tg-mybase-dashboard-internet-usage-unlimited
+                  [data]="(myBaseDashboardInternetInternetUsage$ | async)!"
+                  [internetUsageUrl]="internetUsageUrl"
+                  (analyticsData)="addAnalyticsEvent($event)"></tg-mybase-dashboard-internet-usage-unlimited>
+              }
+            </div>
+          }
+          @if (myBaseDashboardInternetShowHomeNetwork$ | async) {
+            <div class="col-12 col-md-6 col-lg-4 mb--m mt--xxxs--md">
+              <tg-mybase-dashboard-home-network
+                [homeNetworkUrl]="homeNetworkUrl"
+                [wifiPassportUrl]="wifiPassportUrl"
+                [marginTop]="false"
+                [componentPrefix]="'ng.mybase-dashboard-internet'"
+                [isLevel1]="false"
+                (analyticsData)="addAnalyticsEvent($event)"></tg-mybase-dashboard-home-network>
+            </div>
+          }
+          <div class="col-12 col-md-6 col-lg-4">
+            <div>
+              @if ((topLevelNavigationCards$ | async)?.length) {
+                <tg-mybase-navigation-cards
+                  [internetUsageNotificationUrl]="internetUsageNotificationUrl"
+                  [speedTestUrl]="speedTestUrl"
+                  [productOverviewUrl]="productOverviewUrl"
+                  [myDeviceUrl]="myDeviceUrl"
+                  [type]="'internet'"
+                  [devicesUsingNetworkUrl]="devicesUsingNetworkUrl"
+                  [mobileTitle]="'ng.mybase-dashboard-internet.navigation-cards.title' | translate"
+                  [data]="(topLevelNavigationCards$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"></tg-mybase-navigation-cards>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            @if ((bottomLevelNavigationCards$ | async)?.length) {
+              <tg-mybase-navigation-cards
+                [internetUsageNotificationUrl]="internetUsageNotificationUrl"
+                [speedTestUrl]="speedTestUrl"
+                [productOverviewUrl]="productOverviewUrl"
+                [myDeviceUrl]="myDeviceUrl"
+                [devicesUsingNetworkUrl]="devicesUsingNetworkUrl"
+                [customClassGrid]="'col-lg-4'"
+                [type]="'internet'"
+                [data]="(bottomLevelNavigationCards$ | async)!"
+                (analyticsData)="addAnalyticsEvent($event)"></tg-mybase-navigation-cards>
+            }
+          </div>
+        </div>
+        <div>
+          <div>
+            <tg-mybase-services-cards
+              [easySwitchUrl]="easySwitchUrl"
+              [bestTariffUrl]="bestTariffUrl"
+              [returnDeviceUrl]="returnDeviceUrl"
+              [type]="'internet'"
+              [data]="(myBaseDashboardInternetServices$ | async)!"
+              (analyticsData)="addAnalyticsEvent($event)">
+            </tg-mybase-services-cards>
+          </div>
+        </div>
+      }
+      @if (myBaseDashboardInternetLoading$ | async) {
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb--l">
+            <div class="height--full skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb--l">
+            <div class="height--full skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="row">
+              <div class="col-12 mb--l">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+              <div class="col-12 mb--l">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-12 mb--l">
+              <div class="skeleton skeleton--basic skeleton--container skeleton--title p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</tg-login>

@@ -1,0 +1,133 @@
+<ng-container *ngIf="navLinkUrls() as navLinkUrls">
+  <div class="row display--flex width--full">
+    <div class="col-sm-12 col-md-6 pr--n pr--xxs--md">
+      <div class="content-section">
+        <ul class="link-list">
+          <li class="link-list__item" *ngIf="navLinkUrls.managePersonalDataUrl as navLink">
+            <tg-pm-profile-overview-nav-link
+              [icon]="'user'"
+              [type]="'manage-personal-data'"
+              [isBaseCustomer]="isBaseCustomer()"
+              [link]="navLink"
+              (linkClick)="handleLinkClick($event)">
+            </tg-pm-profile-overview-nav-link>
+          </li>
+          <li class="link-list__item" *ngIf="navLinkUrls.loginPasswordUrl as navLink">
+            <tg-pm-profile-overview-nav-link
+              [icon]="'lock'"
+              [type]="'manage-login-password'"
+              [isBaseCustomer]="isBaseCustomer()"
+              [link]="navLink"
+              (linkClick)="handleLinkClick($event)">
+            </tg-pm-profile-overview-nav-link>
+          </li>
+          <li class="link-list__item" *ngIf="navLinkUrls.manageSocialLoginUrl as navLink">
+            <tg-pm-profile-overview-nav-link
+              [icon]="'users-community'"
+              [type]="'social-login'"
+              [isBaseCustomer]="isBaseCustomer()"
+              [link]="navLink"
+              (linkClick)="handleLinkClick($event)">
+            </tg-pm-profile-overview-nav-link>
+          </li>
+          <li class="link-list__item" *ngIf="navLinkUrls.connectedServicesUrl as navLink">
+            <tg-pm-profile-overview-nav-link
+              [icon]="'link'"
+              [type]="'connected-services'"
+              [isBaseCustomer]="isBaseCustomer()"
+              [link]="navLink"
+              [subTitle]="true"
+              (linkClick)="handleLinkClick($event)">
+            </tg-pm-profile-overview-nav-link>
+          </li>
+          @if (!isMember()) {
+            <li class="link-list__item" *ngIf="navLinkUrls.manageUsersUrl as navLink">
+              <tg-pm-profile-overview-nav-link
+                [icon]="'users'"
+                [type]="'manage-other-users'"
+                [isBaseCustomer]="isBaseCustomer()"
+                [link]="navLink"
+                (linkClick)="handleLinkClick($event)">
+              </tg-pm-profile-overview-nav-link>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 pr--n">
+      @if (!isMember()) {
+        @if (showProductRelatedLinks()) {
+          <div class="content-section">
+            <ul class="link-list">
+              @if (profileOverview().canManageDtvProducts || profileOverview().canManageInternetProducts) {
+                <li class="link-list__item" *ngIf="navLinkUrls.easySwitchUrl as navLink">
+                  <tg-pm-profile-overview-nav-link
+                    [icon]="'arrows-left-right'"
+                    [type]="'easy-switch'"
+                    [link]="navLink"
+                    [isBaseCustomer]="isBaseCustomer()"
+                    [subTitle]="true"
+                    (linkClick)="handleLinkClick($event)">
+                  </tg-pm-profile-overview-nav-link>
+                </li>
+              }
+              <li class="link-list__item" *ngIf="navLinkUrls.invoiceSettingsUrl as navLink">
+                <tg-pm-profile-overview-nav-link
+                  [icon]="'bill'"
+                  [type]="'payment-method'"
+                  [link]="navLink"
+                  [isBaseCustomer]="isBaseCustomer()"
+                  (linkClick)="handleLinkClick($event)">
+                </tg-pm-profile-overview-nav-link>
+              </li>
+            </ul>
+          </div>
+        }
+
+        @if (showConnectivityOptions()) {
+          <div class="content-section">
+            <ul class="link-list">
+              @if (profileOverview().canManageInternetProducts) {
+                <li class="link-list__item" *ngIf="navLinkUrls.wifiPasswordUrl as navLink">
+                  <tg-pm-profile-overview-nav-link
+                    [icon]="'qr-code-scan'"
+                    [type]="'wifi-password'"
+                    [link]="navLink"
+                    [isBaseCustomer]="isBaseCustomer()"
+                    (linkClick)="handleLinkClick($event)">
+                  </tg-pm-profile-overview-nav-link>
+                </li>
+              }
+
+              @if (profileOverview().canManageSimCards) {
+                <li class="link-list__item" *ngIf="navLinkUrls.simManagementPageUrl as link">
+                  <tg-pm-profile-overview-nav-link
+                    [icon]="'sim-card'"
+                    [type]="'sim-cards'"
+                    [link]="link"
+                    [isBaseCustomer]="isBaseCustomer()"
+                    (linkClick)="handleLinkClick($event)">
+                  </tg-pm-profile-overview-nav-link>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      }
+      <div class="content-section" *ngIf="navLinkUrls.privacySettingsUrl as navLink">
+        <ul class="link-list">
+          <li class="link-list__item">
+            <tg-pm-profile-overview-nav-link
+              [icon]="'eye-off'"
+              [type]="'privacy-settings'"
+              [link]="navLink"
+              [isBaseCustomer]="isBaseCustomer()"
+              (linkClick)="handleLinkClick($event)">
+            </tg-pm-profile-overview-nav-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-container>

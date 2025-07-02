@@ -1,0 +1,93 @@
+<form [formGroup]="form">
+  <div class="form-group dob-field">
+    <div class="dob-field__content text-align--left">
+      <div class="date-field-day">
+        <tg-form-input
+          #day
+          labelPrefix="dob.error"
+          formControlName="day"
+          [attr.data-cy]="'day-of-birth-field'"
+          [hideLabel]="true"
+          [required]="true"
+          [showPlaceHolder]="true"
+          [showError]="false"
+          [mask]="{ maskValue: 'd0', dropSpecialCharacters: true }">
+        </tg-form-input>
+        <div class="formErrorInput" *ngIf="form.controls['day'].errors && form.controls['day'].touched">
+          <div
+            class="text--s"
+            *ngIf="form.controls['day'].errors?.['required']"
+            [attr.data-cy]="'day-field-required-error'">
+            {{ 'ng.dob.error-day-required' | translate }}
+          </div>
+          <div
+            class="text--s"
+            [attr.data-cy]="'day-invalid-error'"
+            *ngIf="form.controls['day'].errors?.['invalidDate']">
+            {{ 'ng.dob.error-day-invalid' | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="form-group dob-picker__selectdiv">
+        <div class="dob-picker__dropdowns ml-5">
+          <div class="select-dropdown-section display--flex">
+            <select
+              #selectedMonth
+              id="dob-month-mobile"
+              class="form-control select-dropdown mb-0"
+              name="dob-month-mobile"
+              formControlName="selectedMonth"
+              [attr.data-cy]="'month-of-birth-field'">
+              <option value="" class="placeholder-option" [selected]="true" hidden>
+                {{ 'ng.dob.lbl.select-month-placeholder' | translate }}
+              </option>
+              <option selected *ngFor="let option of options" value="{{ option.value | number }}">
+                {{ option.label }}
+              </option>
+            </select>
+            <div class="icon icon-chevron-down position--absolute text--m text-weight--g"></div>
+          </div>
+          <div
+            class="formErrorInput"
+            *ngIf="form.controls['selectedMonth'].errors && form.controls['selectedMonth'].touched">
+            <div
+              class="text--s"
+              [attr.data-cy]="'month-of-birth-field-required-error'"
+              *ngIf="form.controls['selectedMonth'].errors?.['required']">
+              {{ 'ng.dob.error-month-required' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="date-field-year">
+        <tg-form-input
+          #year
+          [required]="true"
+          [hideLabel]="true"
+          formControlName="year"
+          [attr.data-cy]="'year-of-birth-field'"
+          [showPlaceHolder]="true"
+          [showError]="false"
+          labelPrefix="dob.error"
+          [mask]="{ maskValue: '0000', dropSpecialCharacters: true }">
+        </tg-form-input>
+        <div class="formErrorInput" *ngIf="form.controls['year'].errors && form.controls['year'].touched">
+          <div
+            class="text--s"
+            *ngIf="form.controls['year'].errors?.['required']"
+            [attr.data-cy]="'year-of-birth-field-required-error'">
+            {{ 'ng.dob.error-year-required' | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="formErrorInput"
+      [attr.data-cy]="'year-of-birth-field-invalid-error'"
+      *ngIf="this.form.errors?.['invalidBirthDate']">
+      <div class="text--s mt-5">
+        {{ this.form.errors?.['invalidBirthDate'] }}
+      </div>
+    </div>
+  </div>
+</form>

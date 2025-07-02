@@ -1,0 +1,181 @@
+[
+  {
+    "id": "BFLC0001",
+    "label": "Mobile Connect",
+    "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+    "price": {
+      "currency": "Euro",
+      "amount": "30,00"
+    },
+    "eligibleOffers": [
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLT0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "25,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLU0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "35,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLT0005",
+        "price": {
+          "currency": "Euro",
+          "amount": "40,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLT0002",
+        "price": {
+          "currency": "Euro",
+          "amount": "30,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLT0006",
+        "price": {
+          "currency": "Euro",
+          "amount": "45,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/FDATA0004",
+        "price": {
+          "currency": "Euro",
+          "amount": "4,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLC0000",
+        "price": {
+          "currency": "Euro",
+          "amount": "20,00"
+        }
+      },
+      {
+        "specurl": "https://api.int.base.be/omapi/public/product/BFLS0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00"
+        }
+      }
+    ],
+    "optionProducts": [
+      {
+        "id": "TLTT0001",
+        "label": "World Data 500 MB",
+        "specurl": "https://api.int.base.be/omapi/public/product/TLTT0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "39,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "TLTT0004",
+        "label": "World Data 2 GB",
+        "specurl": "https://api.int.base.be/omapi/public/product/TLTT0004",
+        "price": {
+          "currency": "Euro",
+          "amount": "156,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "FDDB0006",
+        "label": "Data Diamond 600 MB",
+        "specurl": "https://api.int.base.be/omapi/public/product/FDDB0006",
+        "price": {
+          "currency": "Euro",
+          "amount": "8,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "FDTU0025",
+        "label": "Data Turkey 250 MB",
+        "specurl": "https://api.int.base.be/omapi/public/product/FDTU0025",
+        "price": {
+          "currency": "Euro",
+          "amount": "4,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "FDOP0015",
+        "label": "Data OPEC 1,5 GB",
+        "specurl": "https://api.int.base.be/omapi/public/product/FDOP0015",
+        "price": {
+          "currency": "Euro",
+          "amount": "60,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "TLTT0019",
+        "label": "World Data WG 500 MB++",
+        "specurl": "https://api.int.base.be/omapi/public/product/TLTT0019",
+        "price": {
+          "currency": "Euro",
+          "amount": "39,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "TLTT0010",
+        "label": "World Data WG 1 GB",
+        "specurl": "https://api.int.base.be/omapi/public/product/TLTT0010",
+        "price": {
+          "currency": "Euro",
+          "amount": "78,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "TLTT0003",
+        "label": "World Data 1.5 GB",
+        "specurl": "https://api.int.base.be/omapi/public/product/TLTT0003",
+        "price": {
+          "currency": "Euro",
+          "amount": "117,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "INTW0250",
+        "label": "Data Top 24 250 MB",
+        "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "FLOB0010",
+        "label": "Data Blue 3 GB",
+        "specurl": "https://api.int.base.be/omapi/public/product/FLOB0010",
+        "price": {
+          "currency": "Euro",
+          "amount": "60,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      }
+    ]
+  }
+]

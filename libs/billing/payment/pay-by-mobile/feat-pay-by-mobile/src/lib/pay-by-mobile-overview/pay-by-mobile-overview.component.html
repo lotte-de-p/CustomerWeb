@@ -1,0 +1,97 @@
+<tg-login [scopes]="scopes" data-testid="pay-by-mobile">
+  <app-message-flow [messageGroupName]="messageGroupName"></app-message-flow>
+  <tg-mobile-line-selector (mobileLineSelected)="onSelectMobileLine($event)"></tg-mobile-line-selector>
+  <tg-billing-pay-by-mobile-msisdn-blocked-warning
+    *ngIf="msisdnBarred()"></tg-billing-pay-by-mobile-msisdn-blocked-warning>
+  <ng-template #transactionSkeleton>
+    <tg-billing-pay-by-mobile-skeleton
+      *ngIf="selectedMobileLine?.status !== 'ACTIVATION_IN_PROGRESS'"></tg-billing-pay-by-mobile-skeleton>
+  </ng-template>
+  <div *ngIf="selectedMobileLine">
+    <div
+      id="transactions"
+      *ngIf="transactionsLoaded() as loaded; else transactionSkeleton"
+      class="background-white mt--s">
+      <div class="pt--xl px--xl pb--s">
+        <div data-cy="transactions-title" class="heading--4 my--n">
+          {{ 'ng.pay-by-mobile.lbl.transactions' | translate }}
+        </div>
+        <div class="color-shade_72">
+          {{ 'ng.pay-by-mobile.lbl.transactions.description' | translate }}
+        </div>
+      </div>
+      <div class="px--xl pb--xl" *ngIf="transactions().length === 0; else transactionContent">
+        <tg-billing-pay-by-mobile-no-content />
+      </div>
+      <ng-template #transactionContent>
+        <div class="pb--xl">
+          <div *ngFor="let transaction of transactions(); let last = last" class="transaction">
+            <div class="px--xl">
+              <tg-billing-pay-by-mobile-transaction [transaction]="transaction"></tg-billing-pay-by-mobile-transaction>
+              <div
+                class="border--b--r border-width--b--r border-color--b--light-grey"
+                [ngClass]="{ 'border-style--b--solid': !last }"></div>
+            </div>
+          </div>
+          <div class="px--xl mt--s" *ngIf="moreTransactionsAvailable()">
+            <wink-button
+              (click)="loadMoreTransactions()"
+              data-testid="transactions-load-more"
+              text="{{ 'ng.pay-by-mobile.transactions.load-more' | translate }}"
+              type="button"
+              appearance="tertiary"
+              size="md"
+              width="none"
+              status="none">
+            </wink-button>
+          </div>
+          <div class="px--xl mt--s" *ngIf="lessTransactionsAvailable()">
+            <wink-button
+              (click)="loadInitialTransactions()"
+              data-testid="transactions-show-less"
+              text="{{ 'ng.pay-by-mobile.transactions.show-less' | translate }}"
+              type="button"
+              appearance="tertiary"
+              size="md"
+              width="none"
+              status="none">
+            </wink-button>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+
+    <ng-template #subscriptionSkeleton>
+      <tg-billing-pay-by-mobile-skeleton></tg-billing-pay-by-mobile-skeleton>
+    </ng-template>
+    <div *ngIf="subscriptionsLoaded() as loaded; else subscriptionSkeleton" class="background-white mt--xl">
+      <div class="pt--xl px--xl pb--s">
+        <div data-testid="subscriptions-title" class="heading--4 my--n display-flex flex-direction-column">
+          {{ 'ng.pay-by-mobile.lbl.subscriptions' | translate }}
+        </div>
+        <div class="color-shade_72">
+          {{ 'ng.pay-by-mobile.lbl.subscriptions.description' | translate }}
+        </div>
+      </div>
+      <div class="px--xl pb--xl" *ngIf="subscriptions().length === 0; else subscriptionContent">
+        <tg-billing-pay-by-mobile-no-content />
+      </div>
+      <ng-template #subscriptionContent>
+        <div class="pb--xl">
+          <div *ngFor="let subscription of subscriptions(); let last = last" class="transaction">
+            <div class="px--xl">
+              <tg-billing-pay-by-mobile-subscription
+                (confirmCancellation)="handleConfirmCancellation($event)"
+                [subscription]="subscription"
+                [msisdn]="selectedMobileLine?.msisdn || ''">
+              </tg-billing-pay-by-mobile-subscription>
+              <div
+                class="border--b--r border-width--b--r border-color--b--light-grey"
+                [ngClass]="{ 'border-style--b--solid': !last }"></div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</tg-login>

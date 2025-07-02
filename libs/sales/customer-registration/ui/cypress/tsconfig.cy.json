@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.spec.json",
+  "compilerOptions": {
+    "outDir": "../../../../../dist/out-tsc",
+    "module": "es2020",
+    "strict": true,
+    "types": ["cypress", "node"],
+    "preserveSymlinks": true
+  },
+  "files": ["../**/*.cy.ts"],
+  "exclude": [],
+  "include": [
+    "support/**/*.ts",
+    "../cypress.config.ts",
+    "../**/*.cy.ts",
+    "../**/*.cy.tsx",
+    "../**/*.cy.js",
+    "../**/*.cy.jsx",
+    "../**/*.d.ts"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "url": "http://localhost:8080/public/api/customer-service/v1/service-case-details",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "007009",
+      "type": "MOVE",
+      "status": "RESOLVED",
+      "creationDate": "2023-04-09T22:00:00.000Z",
+      "deadlineDate": "2023-12-19T06:00:00.000Z",
+      "productType": "Internet"
+    }
+  ]
+}

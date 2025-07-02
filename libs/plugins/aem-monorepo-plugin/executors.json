@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "executors": {
+    "build": {
+      "implementation": "./src/executors/build/executor",
+      "schema": "./src/executors/build/schema.json",
+      "description": "build executor"
+    },
+    "i18n": {
+      "implementation": "./src/executors/i18n/executor",
+      "schema": "./src/executors/i18n/schema.json",
+      "description": "i18n executor"
+    },
+    "build-mobile": {
+      "implementation": "./src/executors/build-mobile/executor",
+      "schema": "./src/executors/build-mobile/schema.json",
+      "description": "Executor to build mobile application and move capacitor.config.json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@if (!isMember) {
+  <p
+    [attr.data-cy]="'mobile-usage-limits-out-of-bundle-section-description'"
+    class="font--body-regular pt--xxs color-shade_72 col-12 col-md-10">
+    {{ 'ng.mobile-usage-limits.lbl.out-of-bundle-description' | translate }}
+  </p>
+} @else {
+  <p
+    [attr.data-cy]="'mobile-usage-limits-out-of-bundle-section-description-member'"
+    class="font--body-regular pt--xxs color-shade_72 col-12 col-md-10">
+    {{ 'ng.mobile-usage-limits.lbl.member-out-of-bundle-description' | translate }}
+  </p>
+}

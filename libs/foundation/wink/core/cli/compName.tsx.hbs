@@ -1,0 +1,17 @@
+import { Component, h, Host } from '@stencil/core';
+
+@Component({
+  tag: 'wink-{{compName}}',
+  styleUrls: {
+    telenet: 'styles/brands/{{compName}}.telenet.scss',
+    base: 'styles/brands/{{compName}}.base.scss',
+  },
+  shadow: true,
+})
+export class {{PascalCase compName}} {
+  render() {
+    return (
+      <Host>Content of {{compName}} goes here!!!</Host>
+    );
+  }
+}

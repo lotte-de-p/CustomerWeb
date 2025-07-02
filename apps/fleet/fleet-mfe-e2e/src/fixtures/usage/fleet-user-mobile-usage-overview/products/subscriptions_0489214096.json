@@ -1,0 +1,16 @@
+[
+  {
+    "activationDate": "2024-05-16T13:17:26",
+    "addressId": "9150758031713443176",
+    "identifier": "0489214096",
+    "label": "Mobile Contact + / 0489214096",
+    "locationId": "9169878030613641368",
+    "status": "Active",
+    "productType": "mobile",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "specurl": "https://api.uat.telenet.be/omapi/public/product/BFLC0002",
+    "useSpecurl": true,
+    "hasVoiceMail": true
+  }
+]

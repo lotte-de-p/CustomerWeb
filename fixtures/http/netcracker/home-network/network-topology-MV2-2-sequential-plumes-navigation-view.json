@@ -1,0 +1,111 @@
+{
+  "macAddress": "D8:33:B7:BA:56:11",
+  "lastSeen": "9/5/22 2:45 PM",
+  "type": "HGW",
+  "modemType": "HGW-Wireless",
+  "model": "F3896LG",
+  "lastSeenLight": "GREEN",
+  "hgwInfo": {
+    "wirelessInterfaceInfos": []
+  },
+  "children": [
+    {
+      "macAddress": "98:3B:67:FC:BD:88",
+      "lastSeen": "9/5/22 3:06 PM",
+      "type": "PLUME_POD",
+      "model": "LG203X",
+      "lastSeenLight": "GREEN",
+      "children": [
+        {
+          "macAddress": "98:3B:67:FC:BD:64",
+          "lastSeen": "9/5/22 3:06 PM",
+          "type": "PLUME_POD",
+          "model": "LG203X",
+          "lastSeenLight": "GREEN",
+          "clients": [],
+          "ipAddressInfos": [
+            {
+              "ipAddress": "2a02:1800:a3:9e00::7d",
+              "ipType": "IPv6"
+            },
+            {
+              "ipAddress": "fe80::9a3b:67ff:fefc:bd64",
+              "ipType": "IPv6"
+            },
+            {
+              "ipAddress": "192.168.0.113",
+              "ipType": "IPv4"
+            },
+            {
+              "ipAddress": "2a02:1800:a3:9e00::7d",
+              "ipType": "IPv6"
+            }
+          ]
+        }
+      ],
+      "clients": [
+        {
+          "macAddress": "44:73:D6:0B:CF:3D",
+          "connectedInterface": "WLAN_5GHZ",
+          "vendor": "Logitech",
+          "ipAddressInfos": [
+            {
+              "ipAddress": "192.168.0.158",
+              "ipType": "IPv4"
+            }
+          ]
+        },
+        {
+          "macAddress": "FC:03:9F:63:B4:EF",
+          "connectedInterface": "WLAN_5GHZ",
+          "vendor": "Samsung",
+          "ipAddressInfos": [
+            {
+              "ipAddress": "192.168.0.246",
+              "ipType": "IPv4"
+            }
+          ]
+        },
+        {
+          "macAddress": "00:26:73:3E:DA:75",
+          "connectedInterface": "ETHERNET",
+          "ipAddressInfos": [
+            {
+              "ipAddress": "192.168.0.99",
+              "ipType": "IPv4"
+            }
+          ]
+        }
+      ],
+      "ipAddressInfos": [
+        {
+          "ipAddress": "2a02:1800:a3:9e00::4a",
+          "ipType": "IPv6"
+        },
+        {
+          "ipAddress": "2a02:1800:a3:9e00::4a",
+          "ipType": "IPv6"
+        },
+        {
+          "ipAddress": "192.168.0.179",
+          "ipType": "IPv4"
+        },
+        {
+          "ipAddress": "fe80::9a3b:67ff:fefc:bd88",
+          "ipType": "IPv6"
+        }
+      ]
+    }
+  ],
+  "clients": [],
+  "ipAddressInfos": [
+    {
+      "ipAddress": "213.119.244.76",
+      "ipType": "IPv4"
+    },
+    {
+      "ipAddress": "2a02:1800:a0:1103:8d14:6b1b:251b:53bf",
+      "ipType": "IPv6"
+    }
+  ]
+}

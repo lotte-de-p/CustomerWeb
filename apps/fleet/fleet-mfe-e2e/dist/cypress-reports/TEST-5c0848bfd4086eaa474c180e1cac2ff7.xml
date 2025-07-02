@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.442" tests="3" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T06:02:42" tests="0" file="src/e2e/fleet-sim-card/sim-activation/sim-activation-user/sim-activation-user.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Fleet SIM User Activation" timestamp="2024-07-17T06:02:42" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="On page load" timestamp="2024-07-17T06:02:42" tests="3" time="5.412" failures="0">
+    <testcase name="should display page title" time="1.099" classname="Fleet SIM User Activation On page load should display page title">
+    </testcase>
+    <testcase name="should display inputs" time="0.474" classname="Fleet SIM User Activation On page load should display inputs">
+    </testcase>
+    <testcase name="should display disabled activate button" time="0.448" classname="Fleet SIM User Activation On page load should display disabled activate button">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,148 @@
+{
+  "name": "customer-registration-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/sales/customer-registration-mfe/src",
+  "tags": ["type:app", "scope:customer-registration-mfe"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sales/customer-registration-mfe",
+        "index": "apps/sales/customer-registration-mfe/src/index.html",
+        "main": "apps/sales/customer-registration-mfe/src/main.ts",
+        "polyfills": "apps/sales/customer-registration-mfe/src/polyfills.ts",
+        "tsConfig": "apps/sales/customer-registration-mfe/tsconfig.app.json",
+        "aot": true,
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/sales/customer-registration-mfe/src/favicon.ico",
+          "apps/sales/customer-registration-mfe/src/assets",
+          "apps/sales/customer-registration-mfe/src/version.json",
+          {
+            "glob": "**/*",
+            "input": "apps/sales/customer-registration-mfe/src/assets",
+            "output": "assets/"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/atomic-library/public",
+            "output": "assets/"
+          }
+        ],
+        "styles": ["apps/sales/customer-registration-mfe/src/styles.scss"],
+        "scripts": [
+          "apps/sales/customer-registration-mfe/src/assets/plugins/json-url/json-url-single.js",
+          "node_modules/tg-loader/dist/loader-plugin.js"
+        ],
+        "customWebpackConfig": {
+          "path": "apps/sales/customer-registration-mfe/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/sales/customer-registration-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        },
+        "coverage": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "customWebpackConfig": {
+            "path": "apps/sales/customer-registration-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "customer-registration-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "customer-registration-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "customer-registration-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4205,
+        "publicHost": "http://localhost:4205",
+        "buildTarget": "customer-registration-mfe:build",
+        "host": "0.0.0.0",
+        "disableHostCheck": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/sales/customer-registration-mfe/**/*.ts",
+          "apps/sales/customer-registration-mfe/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/sales/customer-registration-mfe/.storybook",
+        "browserTarget": "customer-registration-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/customer-registration-mfe",
+        "configDir": "apps/sales/customer-registration-mfe/.storybook",
+        "browserTarget": "customer-registration-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/sales/customer-registration-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

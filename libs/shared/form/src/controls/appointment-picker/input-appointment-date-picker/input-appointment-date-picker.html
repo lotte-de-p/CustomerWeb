@@ -1,0 +1,187 @@
+<ng-container *ngIf="!enableAppointmentsUI">
+  <h6 class="text-flow text-flow--h3 section__title text-align--left">{{ datePickerLabel | translate }}</h6>
+  <ng-container *ngIf="!(appointmentsAvailable$ | async)" [ngTemplateOutlet]="noAppointmentSlots"></ng-container>
+  <ngx-slick-carousel
+    *ngIf="(appointmentsAvailable$ | async)"
+    class="label-modifier-box slick-slider card-date card-date-with-value"
+    #slickModal="slick-carousel"
+    [config]="slideConfig">
+    <ng-container *ngIf="!reRender">
+      <ng-container *ngFor="let appointmentSlot of timeslots; let i = index">
+        <div
+          ngxSlickItem
+          class="label-modifier-slot slick-slide animation-show-slide-up"
+          [attr.style]="consumerType === consumerTypeEnum.NC ? getSlideUpAnimationStyling(0) : getSlideUpAnimationStyling(i)">
+          <input
+            type="radio"
+            name="day"
+            value="{{ appointmentSlot.date | date:'ddmm' }}"
+            id="day-{{ i }}"
+            class="label-modifier-radio"
+            [disabled]="isDisabled(appointmentSlot)"
+            [checked]="appointmentSlot === selectedTimeslot" />
+          <div
+            [attr.data-cy]="'appointment-date-picker-'+i"
+            class="label-modifier--append label-modifier--container cursor--pointer"
+            [class.disabled]="isDisabled(appointmentSlot)">
+            <div class="label-modifier--body">
+              <div class="label-modifier--body--inner-container">
+                <label
+                  for="day-{{ i }}"
+                  class="label-modifier-radio__label"
+                  (click)="selectInstallSlotDay(appointmentSlot)"></label>
+                <div class="text-flow text-flow--label label-modifier-content__header">
+                  {{ appointmentSlot.date | date:'EEEE' }}
+                </div>
+                <div class="text-flow text-flow--body label-modifier-content__body">
+                  {{ appointmentSlot.date | date:'dd' }}
+                </div>
+                <div class="text-flow text-flow--label label-modifier-content__timing" *ngIf="shouldRenderMoment()">
+                  <i
+                    class="icon icon-sunrise"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.MORNING)"></i>
+                  <i
+                    class="icon icon-sun"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.LUNCH)"></i>
+                  <i
+                    class="icon icon-sun-half-semifilled"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.AFTERNOON)"></i>
+                  <i
+                    class="icon icon-moon"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.EVENING)"></i>
+                </div>
+                <div class="text-flow text-flow--label label-modifier-content__footer">
+                  {{ appointmentSlot.date | date:'MMMM yyyy' }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+    <form (ngSubmit)="loadMoreSlots()" *ngIf="showLoadMore && !reRender && (appointmentsAvailable$ | async)">
+      <button
+        class="button button--secondary mt-50"
+        [class.disabled]="disableLoadMore"
+        [innerHTML]="'ng.sales-checkout.appointment.date-loadmore.lbl' | translate"></button>
+    </form>
+  </ngx-slick-carousel>
+</ng-container>
+
+<ng-container *ngIf="enableAppointmentsUI">
+  <div
+    class="display--flex justify-content--between ng-star-inserted align-items--center--md flex-direction--row--md flex-direction--column mt--m">
+    <h6 class="text-flow text-flow--h3 section__title text-align--left">{{ datePickerLabel | translate }}</h6>
+    <div class="display--flex justify-content--between justify-content--end--md mb--m mb--n--md">
+      <a
+        href="javascript:void(0)"
+        (click)="loadPreviousSlots()"
+        class="link link--with-icon mr--l"
+        [ngClass]="{
+            'disabled' : disablePrevious
+          }"
+        ><i class="icon icon-chevron-left"></i
+        ><span class="text-flow text-flow--button"
+          >{{'ng.sales-checkout.appointment.previous.button' | translate}}</span
+        ></a
+      >
+      <a
+        href="javascript:void(0)"
+        (click)="loadMoreSlots()"
+        class="link link--with-icon"
+        [ngClass]="{
+            'disabled' : disableNext
+          }"
+        ><i class="icon icon-chevron-right icon--after"></i
+        ><span class="text-flow text-flow--button">{{'ng.sales-checkout.appointment.next.button' | translate}}</span></a
+      >
+    </div>
+  </div>
+  <div>
+    <ng-container
+      *ngIf="!(appointmentsAvailable$ | async)"
+      [ngTemplateOutlet]="noAppointmentSlots"
+      [ngTemplateOutletContext]="{'disableLoadMore': disableNext}"></ng-container>
+    <ng-container *ngIf="!reRender && (appointmentsAvailable$ | async)">
+      <div class="hide-until-md col-12">
+        <div
+          class="display--flex"
+          [attr.style]="consumerType === consumerTypeEnum.NC ? getSlideUpAnimationStyling(0) : getSlideUpAnimationStyling(0)">
+          <div
+            class="select-tile--group display--grid grid-template-column--3 grid-template-column--7--md gap--m mb--m col-12">
+            <ng-container
+              *ngFor="let appointmentSlot of currentSlots | slice: 0:(noOfAppointmentSlotsPerPage/2); let i = index">
+              <ng-container
+                [ngTemplateOutlet]="slides"
+                [ngTemplateOutletContext]="
+                {appointmentSlot: appointmentSlot, i: i}"></ng-container>
+            </ng-container>
+          </div>
+        </div>
+        <div
+          class="display--flex"
+          [attr.style]="consumerType === consumerTypeEnum.NC ? getSlideUpAnimationStyling(0) : getSlideUpAnimationStyling(1)">
+          <div
+            class="select-tile--group display--grid grid-template-column--3 grid-template-column--7--md gap--m mb--m col-12">
+            <ng-container
+              *ngFor="let appointmentSlot of currentSlots | slice: (noOfAppointmentSlotsPerPage/2):noOfAppointmentSlotsPerPage; let i = index">
+              <ng-container
+                [ngTemplateOutlet]="slides"
+                [ngTemplateOutletContext]="
+                {appointmentSlot: appointmentSlot, i: (i+(noOfAppointmentSlotsPerPage/2))}"></ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="hide-from-md">
+        <div
+          class="display--grid"
+          [attr.style]="consumerType === consumerTypeEnum.NC ? getSlideUpAnimationStyling(0) : getSlideUpAnimationStyling(0)">
+          <div
+            class="select-tile--group display--grid grid-template-column--3 grid-template-column--7--md gap--xxs mb--xxs">
+            <ng-container *ngFor="let appointmentSlot of currentSlots; let i = index">
+              <ng-container
+                [ngTemplateOutlet]="slides"
+                [ngTemplateOutletContext]="
+              {appointmentSlot: appointmentSlot, i: i+noOfAppointmentSlotsPerPage}"></ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #slides let-appointmentSlot="appointmentSlot" let-i="i">
+  <div class="animation-show-slide-up">
+    <label
+      [attr.data-cy]="'appointment-date-'+i"
+      (click)="selectInstallSlotDay(appointmentSlot)"
+      for="day-{{ i }}"
+      class="select-tile position--relative display--flex align-items--start gap--m gap--l--sm color-text p--m p--xs--sm p--l--lg m--n background-white">
+      <input
+        type="radio"
+        name="day"
+        value="{{ appointmentSlot.date | date:'ddmm' }}"
+        id="day-{{ i }}"
+        class="select-tile__input display--flex align-items--center justify-content--center font--body-regular hidden-input-box cursor--pointer"
+        [checked]="appointmentSlot === selectedTimeslot"
+        [disabled]="isDisabled(appointmentSlot)" />
+      <div class="select-tile__content display--flex flex-direction--column align-self--stretch flex-grow">
+        <div class="select-tile__content--inner display--flex gap--xm">
+          <div class="select-tile__content_text display--flex flex-direction--column flex-grow align-items--center">
+            <div class="font--caption mb--xxs">{{ appointmentSlot.date | date:'EEEE' | titlecase}}</div>
+            <div class="text-flow text-flow--h5 hide-until-md">{{ appointmentSlot.date | date:'dd/MM' }}</div>
+            <div class="text-flow text-flow--h6 hide-from-md">{{ appointmentSlot.date | date:'dd/MM' }}</div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</ng-template>
+
+<ng-template #noAppointmentSlots let-disableLoadMore="disableLoadMore">
+  <app-no-available-appointment-date
+    (loadMoreSlots)="loadMoreSlots()"
+    [messageGroup]="messageGroup"
+    [disableLoadMore]="disableLoadMore"></app-no-available-appointment-date>
+</ng-template>

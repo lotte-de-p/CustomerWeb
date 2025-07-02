@@ -1,0 +1,68 @@
+{
+  "name": "entertainment-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/activate/entertainment-mfe-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/activate/entertainment-mfe-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "entertainment-mfe:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "entertainment-mfe:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "entertainment-mfe:serve-static"
+        }
+      }
+    },
+    "e2e-integrated": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/activate/entertainment-mfe-e2e/playwright.integrated.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/activate/entertainment-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "entertainment-mfe:storybook",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/activate/entertainment-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "entertainment-mfe:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "entertainment-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/activate/entertainment-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:entertainment-mfe"],
+  "implicitDependencies": ["entertainment-mfe"]
+}

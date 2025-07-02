@@ -1,0 +1,4 @@
+export enum ErrorRedirectUrlEnum {
+  CUSTOMER_SERVICE_REDIRECT_URL,
+  CONTACT_US_REDIRECT_URL,
+}

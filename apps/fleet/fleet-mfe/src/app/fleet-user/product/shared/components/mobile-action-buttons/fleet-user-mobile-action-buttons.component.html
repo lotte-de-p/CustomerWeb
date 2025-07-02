@@ -1,0 +1,20 @@
+<div class="toggle-content-bottom hidden-desktop mb-m" style="z-index: 100">
+  <button
+    class="button button--secondary"
+    (click)="secondaryCallback.emit()"
+    [attr.data-cy]="'revert-changes-mobile'"
+    [ngClass]="{
+      disabled: secondaryButtonEnabled
+    }">
+    {{ secondaryButtonLabel | translate }}
+  </button>
+  <button
+    class="button button--primary"
+    (click)="primaryCallback.emit()"
+    [attr.data-cy]="'confirm-changes-mobile'"
+    [ngClass]="{
+      disabled: primaryButtonEnabled
+    }">
+    {{ primaryButtonLabel | translate }}
+  </button>
+</div>

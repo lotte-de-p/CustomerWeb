@@ -1,0 +1,63 @@
+{
+  "url": "http://localhost:8080/public/api/customer-service/v1/service-case-details",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "007008",
+      "type": "MOVE",
+      "status": "OPEN",
+      "creationDate": "2023-12-09T14:00:00.000Z",
+      "deadlineDate": "2023-11-29T14:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "966488",
+      "type": "INSTALL",
+      "status": "OPEN",
+      "creationDate": "2023-09-17T22:00:00.000Z",
+      "deadlineDate": "2023-12-30T23:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "739464",
+      "type": "HOME_DELIVERY",
+      "status": "OPEN",
+      "creationDate": "2023-09-18T22:00:00.000Z",
+      "deadlineDate": "2023-12-30T23:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "628136",
+      "type": "MOVE",
+      "status": "OPEN",
+      "creationDate": "2023-09-19T22:00:00.000Z",
+      "deadlineDate": "2023-12-30T23:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "696596",
+      "type": "REPAIR",
+      "status": "OPEN",
+      "creationDate": "2023-09-20T22:00:00.000Z",
+      "deadlineDate": "2023-12-30T23:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "419514",
+      "type": "TAKEOVER",
+      "status": "OPEN",
+      "creationDate": "2023-09-21T22:00:00.000Z",
+      "deadlineDate": "2023-12-30T23:00:00.000Z",
+      "productType": "Internet, DTV, fixed line"
+    },
+    {
+      "id": "007009",
+      "type": "MOVE",
+      "status": "RESOLVED",
+      "creationDate": "2023-04-09T22:00:00.000Z",
+      "deadlineDate": "2023-12-19T06:00:00.000Z",
+      "productType": "Internet"
+    }
+  ]
+}

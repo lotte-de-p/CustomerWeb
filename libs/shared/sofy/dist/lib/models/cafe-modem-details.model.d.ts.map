@@ -1,0 +1,1 @@
+{"version":3,"file":"cafe-modem-details.model.d.ts","sourceRoot":"","sources":["../../../src/lib/models/cafe-modem-details.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAAE,MAAM,2BAA2B,CAAC;AAEjE,qBAAa,qBAAqB;IAChC,YAAY,EAAE,oBAAoB,EAAE,CAAC;IAE9B,gBAAgB,CAAC,YAAY,EAAE,oBAAoB,EAAE,GAAG,qBAAqB;CAIrF"}

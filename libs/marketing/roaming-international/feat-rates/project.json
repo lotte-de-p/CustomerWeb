@@ -1,0 +1,53 @@
+{
+  "name": "marketing-roaming-international-feat-rates",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/marketing/roaming-international/feat-rates/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/marketing/roaming-international/feat-rates/**/*.ts",
+          "libs/marketing/roaming-international/feat-rates/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/marketing/roaming-international/feat-rates/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "marketing-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/marketing/roaming-international/feat-rates/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "marketing-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/marketing/roaming-international/feat-rates/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "marketing-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:marketing-roaming-international", "scope:marketing-mfe"]
+}

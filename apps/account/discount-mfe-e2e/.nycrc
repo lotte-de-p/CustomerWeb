@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+  "../discount-mfe/**",
+  "../discount-mfe-e2e/**",
+  "../../../libs/account/discount/**"
+  ],
+  "report-dir": "../../../coverage/apps/account/discount-mfe-e2e",
+  "cwd": "../../../"
+}

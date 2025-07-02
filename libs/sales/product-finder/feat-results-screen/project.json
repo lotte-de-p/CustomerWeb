@@ -1,0 +1,20 @@
+{
+  "name": "sales-product-finder-feat-results-screen",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/product-finder/feat-results-screen/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/product-finder/feat-results-screen/**/*.ts",
+          "libs/sales/product-finder/feat-results-screen/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales/product-finder", "scope:sales-mfe"]
+}

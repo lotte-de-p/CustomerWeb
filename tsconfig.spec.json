@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts"],
+  "exclude": ["**/test-setup.ts", "**/*.stories.ts"]
+}

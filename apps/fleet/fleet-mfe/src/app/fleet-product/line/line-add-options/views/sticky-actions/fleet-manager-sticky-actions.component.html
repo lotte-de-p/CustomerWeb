@@ -1,0 +1,18 @@
+<div class="sticky-bottom">
+  <div class="button-container">
+    <button
+      class="button button--tertiary"
+      (click)="revertChangesData()"
+      [ngClass]="{ disabled: hasNoChanges() }"
+      [attr.data-cy]="'revert-changes'">
+      {{ 'ng.line-add-options.btn.revert-changes' | translate }}
+    </button>
+    <button
+      class="button button--primary"
+      (click)="showWarningContent()"
+      [ngClass]="{ disabled: hasNoChanges() }"
+      [attr.data-cy]="'confirm-changes'">
+      {{ 'ng.line-add-options.btn.confirm' | translate }}
+    </button>
+  </div>
+</div>

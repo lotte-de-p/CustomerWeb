@@ -1,0 +1,11 @@
+[
+  {
+    "mobile": "0483523244",
+    "sim": "8932030000113443782",
+    "puk": "81304518",
+    "label": "Mobile Connect",
+    "specurl": "https://api.prd.base.be/omapi/public/product/BFLC0001",
+    "status": "Active",
+    "simType": "E_SIM"
+  }
+]

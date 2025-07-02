@@ -1,0 +1,20 @@
+{
+  "name": "sales-order-configurator-domains-delivery",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/order-configurator/delivery/domain/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:order-configurator-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/delivery/domain/**/*.ts",
+          "libs/sales/order-configurator/delivery/domain/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "useDefineForClassFields": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "strictPropertyInitialization": false,
+    "inlineSourceMap": true
+  },
+  "include": ["./src/index.ts"],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./cypress/tsconfig.cy.json"
+    }
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInputAccessModifiers": true,
+  }
+}

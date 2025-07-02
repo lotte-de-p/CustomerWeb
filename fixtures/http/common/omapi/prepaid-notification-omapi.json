@@ -1,0 +1,428 @@
+{
+  "product": {
+    "productid": "MYPR0000",
+    "externalProductCode": "MYPR0000",
+    "labelkey": "My Prepaid",
+    "producttype": "MOBILE",
+    "weight": 100,
+    "apps": [],
+    "customercategories": ["Residential", "Production Test", "Event/Demo"],
+    "category": ["PrePaid Mobile"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "My Prepaid",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/my-prepaid.png"
+      },
+      {
+        "locale": "fr",
+        "name": "My Prepaid",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/my-prepaid.png"
+      },
+      {
+        "locale": "en",
+        "name": "My Prepaid",
+        "logo": "https://customerzone.int.base.be/content/dam/www-base-be/img/self-service/products/my-prepaid.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Herlaadkaart met gratis minuten naar BASE",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Carte prépayée avec minutes gratuites vers BASE",
+          "logo": ""
+        },
+        {
+          "locale": "en",
+          "name": "Prepaid card with free minutes to BASE",
+          "logo": ""
+        }
+      ]
+    },
+    "rates": [
+      {
+        "type": "call to other networks",
+        "unit": "MIN",
+        "cost": "0,25",
+        "currency": "EUR"
+      },
+      {
+        "type": "Mobile data",
+        "unit": "MB",
+        "cost": "0.50",
+        "currency": "EUR"
+      },
+      {
+        "type": "SMS",
+        "unit": "SMS",
+        "cost": "0.12",
+        "currency": "EUR"
+      },
+      {
+        "type": "MMS",
+        "unit": "MMS",
+        "cost": "0.25",
+        "currency": "EUR"
+      }
+    ],
+    "services": [
+      {
+        "servicetype": "MOBILE_MONETARY",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobilemonetary.volume.all",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Herlaadbedrag",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Montant de recharge",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Top-up value",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "Reload Onnet Voice Allowance",
+            "visible": true,
+            "weight": "20",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "belminuten naar BASE",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "minutes d'appel vers BASE",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "minutes to BASE",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "Reload National EU SMS Allowance",
+            "visible": true,
+            "weight": "30",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "bonus-sms'en",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "SMS bonus",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "bonus texts",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "Reload National EU Data Allowance",
+            "visible": true,
+            "weight": "40",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "data",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "données",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "data",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": 0,
+        "unit": "EUR"
+      },
+      "prices": {
+        "activationFee": 0
+      },
+      "productsegment": "RMD",
+      "productgroup": "OTHER"
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "unlimitedInternet": false,
+    "priceType": "Non Recurrent Charge",
+    "constituents": [],
+    "languageSpecifications": [
+      {
+        "labelkey": "Reload Onnet Voice Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "Belminuten naar BASE"
+          },
+          {
+            "locale": "fr",
+            "name": "Minutes d'appel vers BASE"
+          },
+          {
+            "locale": "en",
+            "name": "Minutes to BASE"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload National EU Voice Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "bonusminuten"
+          },
+          {
+            "locale": "fr",
+            "name": "minutes bonus"
+          },
+          {
+            "locale": "en",
+            "name": "bonus minutes"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload National EU ev&WE Voice Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "Bonusminuten voor 's avonds en in het weekend"
+          },
+          {
+            "locale": "fr",
+            "name": "Minutes bonus pour le soir et le week-end"
+          },
+          {
+            "locale": "en",
+            "name": "Bonus minutes for evenings and weekends"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload On Net SMS Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "SMS bonus vers BASE"
+          },
+          {
+            "locale": "fr",
+            "name": "bonus-sms'en naar BASE"
+          },
+          {
+            "locale": "en",
+            "name": "bonus texts to BASE"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload National EU SMS Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "bonus-sms'en"
+          },
+          {
+            "locale": "fr",
+            "name": "SMS bonus"
+          },
+          {
+            "locale": "en",
+            "name": "bonus texts"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload National EU ev&WE SMS Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "Bonus-sms'en voor 's avonds en in het weekend"
+          },
+          {
+            "locale": "fr",
+            "name": "SMS bonus pour le soir et le week-end"
+          },
+          {
+            "locale": "en",
+            "name": "Bonus texts for evenings and weekends"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload National EU Data Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "Data"
+          },
+          {
+            "locale": "fr",
+            "name": "Données"
+          },
+          {
+            "locale": "en",
+            "name": "Data"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload Mobile Belgium Turk Voice Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "bonusminuten"
+          },
+          {
+            "locale": "fr",
+            "name": "minutes bonus"
+          },
+          {
+            "locale": "en",
+            "name": "bonus minutes"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload Fix Belgium Turk Onnet Voice Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "Minuten naar BASE en vaste lijn"
+          },
+          {
+            "locale": "fr",
+            "name": "Minutes vers BASE et Ligne Fixe"
+          },
+          {
+            "locale": "en",
+            "name": "Minutes to BASE and FixedLine"
+          }
+        ]
+      },
+      {
+        "labelkey": "Reload International SMS Allowance",
+        "visible": false,
+        "localizedcontent": [
+          {
+            "locale": "nl",
+            "name": "bonus-sms'en Internationaal"
+          },
+          {
+            "locale": "fr",
+            "name": "SMS bonus International"
+          },
+          {
+            "locale": "en",
+            "name": "Bonus texts International"
+          }
+        ]
+      }
+    ],
+    "requiresInstallation": false,
+    "usageBasedRatePlan": false,
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "included",
+          "preferenceGroup": "PrePaidBucketBalance",
+          "threshold": [
+            {
+              "communicationPreferenceType": "BucketThresholdReached"
+            },
+            {
+              "communicationPreferenceType": "BucketCompletelyUsed"
+            },
+            {
+              "communicationPreferenceType": "BucketNearlyExpired",
+              "communicationPreferenceTypeValue": "5"
+            },
+            {
+              "communicationPreferenceType": "BucketExpired"
+            }
+          ]
+        },
+        {
+          "category": "credit",
+          "preferenceGroup": "PrePaidMoneyBalance",
+          "threshold": [
+            {
+              "communicationPreferenceType": "MoneyBalanceThresholdReached",
+              "communicationPreferenceTypeValue": "2"
+            },
+            {
+              "communicationPreferenceType": "MoneyBalanceCompletelyUsed",
+              "communicationPreferenceTypeValue": "0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

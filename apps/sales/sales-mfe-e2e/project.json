@@ -1,0 +1,52 @@
+{
+  "name": "sales-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sales/sales-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sales/sales-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "sales-mfe:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "sales-mfe:serve:production"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sales/sales-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "sales-mfe:serve:coverage",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sales/sales-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "sales-mfe:serve:coverage",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "sales-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sales/sales-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:sales-mfe"],
+  "implicitDependencies": ["sales-mfe"]
+}

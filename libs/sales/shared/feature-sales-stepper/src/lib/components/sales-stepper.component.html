@@ -1,0 +1,67 @@
+<tg-sales-component-viewer [componentSteps]="steps"></tg-sales-component-viewer>
+<div
+  *ngIf="showNavigation"
+  [attr.data-cy]="'navigation-bar'"
+  [class.disabled]="isLoading"
+  [class.sticky-footer--flow__dynamic-shadow]="dynamicShadow"
+  class="sticky-footer-v2 position--fixed background-white width--full py--m px--xm p--xm--md display--flex justify-content--center align-items--center box-sizing--inherit shadow--xs-inverse position--bottom position--left">
+  <div
+    class="sticky-footer-v2__container width--full default-max-site-width display--flex justify-content--between align-items--center">
+    <!-- left arrow and back text-->
+    <div class="back-section">
+      <ng-container *ngIf="showBackButton">
+        <ng-template [ngIf]="(stepFacade.isFirstStep$ | async) === false" [ngIfElse]="browserBackButton">
+          <button
+            (click)="goToPreviousStep()"
+            [attr.data-cy]="'navigation-bar-previous'"
+            [class.disabled]="isLoading"
+            class="button button--secondary button__icon--position-left">
+            <i class="icon icon-chevron-left"></i>
+            <span>{{ 'ng.step-flow.previous-step-label' | translate }}</span>
+          </button>
+        </ng-template>
+        <ng-template #browserBackButton>
+          <button
+            (click)="browserBack()"
+            [attr.data-cy]="'navigation-bar-previous'"
+            [class.disabled]="isLoading"
+            class="button button--secondary button__icon--position-left">
+            <i class="icon icon-chevron-left"></i>
+            <span>{{ 'ng.step-flow.previous-step-label' | translate }}</span>
+          </button>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div
+      *ngIf="this.showSalesContactNumber"
+      class="display--flex flex-direction--column font-weight--bold align-items--center">
+      <div>
+        <span>{{ messageGroup + '.info.free-sales-number' }}</span>
+      </div>
+      <a
+        ><span>{{ messageGroup + '.free-sales-number' | translate }}</span></a
+      >
+      <div>
+        <span>{{ messageGroup + '.info.free-sales-number' }}</span>
+      </div>
+      <a>{{ messageGroup + '.free-sales-number' | translate }}</a>
+    </div>
+    <div [class.next-section]="currentStepNumber !== 1 && !isConfirmationStep">
+      <button
+        (click)="goToNextStep()"
+        [attr.data-cy]="'navigation-bar-next'"
+        [attr.data-testid]="'navigation-bar-next'"
+        [class.disabled]="isLoading"
+        [class.visibility--hide]="!hasNextStep"
+        class="button button--primary button__icon--position-right">
+        <ng-container *ngIf="buttonTextOverride$ | async as labelKey; else defaultLabel">
+          <span>{{ labelKey | translate }}</span>
+        </ng-container>
+        <ng-template #defaultLabel>
+          <span>{{ this.nextStepLabel | translate }}</span></ng-template
+        >
+        <i class="icon icon-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+{
+  "name": "ocapi",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ocapi/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/ocapi/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ocapi/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ocapi/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-ocapi"],
+      "options": {
+        "jestConfig": "libs/shared/ocapi/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ocapi/src/**/*.ts", "libs/shared/ocapi/src/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/ocapi/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/ocapi/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo-mfe:build",
+        "tsConfig": "libs/shared/ocapi/cypress/tsconfig.cy.json",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/ocapi/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "demo-mfe:build"
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:ocapi"]
+}

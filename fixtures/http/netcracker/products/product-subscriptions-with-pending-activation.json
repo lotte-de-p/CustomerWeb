@@ -1,0 +1,86 @@
+[
+  {
+    "description": "Freephone Europe Pro",
+    "id": "917476364863439",
+    "identifier": "767767677",
+    "externalProductCode": "INT0100",
+    "label": "Internetline Europe Pro/INT0100",
+    "addressId": "9152527990413378524",
+    "locationId": "9152565163813591022",
+    "status": "Pending Activation",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-22T00:00:00+01:00",
+    "productType": "dtv",
+    "pid": "120016945",
+    "name": "test",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/DITV0000",
+    "useSpecurl": false,
+    "salesOrderId": "9158792452913340860",
+    "productOrders": [
+      {
+        "id": "9158792479213344127",
+        "status": "Processing",
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "addressId": "9150308794313940052",
+    "identifier": "INT000002368",
+    "label": "Basic Internet / INT000002368",
+    "locationId": "9158791883013237064",
+    "status": "Pending Activation",
+    "productType": "internet",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTB0000",
+    "id": "9158792476813344026",
+    "useSpecurl": false,
+    "salesOrderId": "9158792452913340860",
+    "productOrders": [
+      {
+        "id": "9158792479213344127",
+        "status": "Processing",
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Waiting"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "addressId": "9150308794313940053",
+    "identifier": "INT000002367",
+    "label": "Internet / INT000002367",
+    "locationId": "9158791883013237064",
+    "status": "Pending Activation",
+    "productType": "internet",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTB0000",
+    "id": "9158792476813344026",
+    "useSpecurl": false,
+    "productOrders": [
+      {
+        "id": "9158792479213344127",
+        "status": "Processing",
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Complete"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

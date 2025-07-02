@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "category": "shared-BundleMobileDataIncludedUnlimitedNational",
+      "preferenceGroups": [
+        {
+          "category": "shared-BundleMobileDataIncluded",
+          "preferenceGroup": "BundleMobileDataIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleData80",
+              "communicationPreferenceTypeValue": "75",
+              "selected": true
+            },
+            {
+              "communicationPreferenceType": "InBundleData95",
+              "communicationPreferenceTypeValue": "90",
+              "selected": false
+            },
+            {
+              "communicationPreferenceType": "InBundleData100",
+              "communicationPreferenceTypeValue": "100",
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "pids": [
+        {
+          "pid": "41106704021",
+          "firstname": "Member3",
+          "lastname": "Nick12",
+          "email": "nick12member3@aem.com",
+          "language": "NL",
+          "phonenumber": "+32468598915",
+          "gender": "MALE",
+          "birthdate": "1999-09-28",
+          "privacysetting": 1,
+          "role": "Member",
+          "credential": "419593105",
+          "telenethosted": false,
+          "legacylogin": false,
+          "version": 1,
+          "msisdn": ["+32468598915"],
+          "isInvitedProfile": false,
+          "selected": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "macAddress": "30-65-EC-6F-C4-58",
+  "wifiWpsEnabled": true,
+  "singleSSIDRoamingSettings": {
+    "securityType": {
+      "possibleValues": ["WPA2_PSK"]
+    },
+    "forbiddenSsidNames": [
+      "telenet",
+      "liberty global",
+      "virgin media",
+      "ziggo",
+      "horizon wi-free",
+      "upc wifispots",
+      "upc wi-free",
+      "unitymedia wifispot",
+      "unitymedia public wifispot",
+      "vtr",
+      "libertypr",
+      "none"
+    ],
+    "forbiddenSsidWords": ["secure", "mobile", "office", "hotspot", "homespot", "wifree", "wifi"]
+  },
+  "wirelessInterfaces": [
+    {
+      "wifiFrequency": "2.4GHz",
+      "ssids": [
+        {
+          "name": "telenet-1802849",
+          "networkKey": "MCbdkfczu5sw",
+          "broadcast": true,
+          "ssidSequence": 1,
+          "securityType": {
+            "value": "WPAWPA2_PSK",
+            "possibleValues": ["OPEN", "WPA_PSK", "WPA2_PSK", "WPAWPA2_PSK"]
+          },
+          "encryptionType": "TKIP_AES"
+        }
+      ],
+      "active": true,
+      "wifiChannel": {
+        "value": "AUTO",
+        "possibleValues": [
+          "AUTO",
+          "CHANNEL_1",
+          "CHANNEL_2",
+          "CHANNEL_3",
+          "CHANNEL_4",
+          "CHANNEL_5",
+          "CHANNEL_6",
+          "CHANNEL_7",
+          "CHANNEL_8",
+          "CHANNEL_9",
+          "CHANNEL_10",
+          "CHANNEL_11"
+        ]
+      },
+      "wifiChannelWidth": {
+        "value": "20MHz",
+        "possibleValues": ["W_AUTO", "W_20"]
+      },
+      "wifiStandard": {
+        "value": "BGN",
+        "possibleValues": ["BGN", "N"]
+      }
+    },
+    {
+      "active": true,
+      "wifiFrequency": "5GHz",
+      "ssids": [
+        {
+          "name": "telenet-1802849",
+          "networkKey": "MCbdkfczu5sw",
+          "broadcast": true,
+          "ssidSequence": 1,
+          "securityType": {
+            "value": "WPAWPA2_PSK",
+            "possibleValues": ["OPEN", "WPA_PSK", "WPA2_PSK", "WPAWPA2_PSK"]
+          },
+          "encryptionType": "TKIP_AES"
+        }
+      ],
+      "wifiChannel": {
+        "value": "AUTO",
+        "possibleValues": [
+          "AUTO",
+          "CHANNEL_36",
+          "CHANNEL_40",
+          "CHANNEL_44",
+          "CHANNEL_48",
+          "CHANNEL_52",
+          "CHANNEL_56",
+          "CHANNEL_60",
+          "CHANNEL_64",
+          "CHANNEL_100",
+          "CHANNEL_104",
+          "CHANNEL_108",
+          "CHANNEL_112",
+          "CHANNEL_116",
+          "CHANNEL_120",
+          "CHANNEL_124",
+          "CHANNEL_128",
+          "CHANNEL_132",
+          "CHANNEL_136",
+          "CHANNEL_140"
+        ]
+      },
+      "wifiChannelWidth": {
+        "value": "80MHz",
+        "possibleValues": ["W_AUTO", "W_20", "W_40"]
+      },
+      "wifiStandard": {
+        "value": "ANAC",
+        "possibleValues": ["A", "AN", "ANAC"]
+      }
+    }
+  ],
+  "wirelessInterfaceSSIDValidation": {
+    "forbiddenSsidNames": [
+      "telenet",
+      "liberty global",
+      "virgin media",
+      "ziggo",
+      "horizon wi-free",
+      "upc wifispots",
+      "upc wi-free",
+      "unitymedia wifispot",
+      "unitymedia public wifispot",
+      "vtr",
+      "libertypr",
+      "none"
+    ],
+    "forbiddenSsidWords": ["secure", "mobile", "office", "hotspot", "homespot", "wifree", "wifi"]
+  }
+}

@@ -1,0 +1,48 @@
+<div
+  class="stepper-page__body mt--g"
+  *ngIf="error"
+  [partitioned]="true"
+  [shadow]="false"
+  [tgPadding]="{ size: 'l' }"
+  tgContainer
+  [attr.data-cy]="'error-page'">
+  <div class="stepper-page__body-inner mt--g">
+    <div class="stepper-page__content--split container mt--g">
+      <div
+        [attr.data-cy]="'error-image'"
+        *ngIf="error.image"
+        class="stepper-page__content-first flex-hide-until-sm"
+        [inlineSVG]="error.image"
+        [resolveSVGUrl]="false"></div>
+      <div
+        [attr.data-cy]="'error-image-mobile'"
+        class="stepper-page__content-first flex-hide-from-sm"
+        [inlineSVG]="error.mobileImage"
+        [resolveSVGUrl]="false"></div>
+      <div class="stepper-page__content-second">
+        <div id="c5-order-correction" class="stepper-page__content-second">
+          <div class="connect-five connect-five--feedback">
+            <div
+              [attr.data-cy]="'error-title'"
+              tgTextFlow="h1"
+              [tgMargin]="{ position: 'b', size: 'm' }"
+              [innerHTML]="error.titleKey | translate"></div>
+            <div
+              [attr.data-cy]="'error-body'"
+              tgTextFlow="body"
+              [tgMargin]="{ position: 'b', size: 'm' }"
+              [innerHTML]="error.descriptionKey | translate"></div>
+
+            <button
+              [attr.data-cy]="'error-button'"
+              *ngIf="error.redirectUrl"
+              class="button button--primary"
+              (click)="redirect()">
+              {{ error.buttonTextKey | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

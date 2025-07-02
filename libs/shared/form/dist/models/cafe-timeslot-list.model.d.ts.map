@@ -1,0 +1,1 @@
+{"version":3,"file":"cafe-timeslot-list.model.d.ts","sourceRoot":"","sources":["../../src/models/cafe-timeslot-list.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,kBAAkB,CAAC;AAEhD,qBAAa,gBAAgB;IAC3B,SAAS,EAAE,IAAI,EAAE,CAAC;IAClB,SAAS,EAAE,YAAY,EAAE,CAAM;IAC/B,uBAAuB,EAAE,MAAM,CAAC;IAEhC,gBAAgB,IAAI,YAAY;IAKhC,eAAe,IAAI,YAAY;IAK/B,OAAO,CAAC,eAAe;CAQxB"}

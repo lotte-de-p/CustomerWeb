@@ -1,0 +1,150 @@
+{
+  "name": "topup-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/base-payments/topup-mfe/src",
+  "prefix": "tg-base-payments-topup",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/base-payments/topup-mfe",
+        "index": "apps/base-payments/topup-mfe/src/index.html",
+        "main": "apps/base-payments/topup-mfe/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/base-payments/topup-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/base-payments/topup-mfe/src/favicon.ico",
+          "apps/base-payments/topup-mfe/src/assets",
+          "apps/base-payments/topup-mfe/src/version.json"
+        ],
+        "styles": ["apps/base-payments/topup-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/base-payments/topup-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "3mb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/base-payments/topup-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/base-payments/topup-mfe/src/favicon.ico",
+            "apps/base-payments/topup-mfe/src/assets",
+            "apps/base-payments/topup-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "coverage": {
+        "buildOptimizer": false,
+        "optimization": false,
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "customWebpackConfig": {
+          "path": "apps/base-payments/topup-mfe-e2e/coverage.webpack.ts"
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "topup-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "topup-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "topup-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/base-payments/topup-mfe/**/*.ts", "apps/base-payments/topup-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/base-payments/topup-mfe/.storybook",
+        "browserTarget": "topup-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/base-payments/topup-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "topup-mfe:build-storybook",
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/topup-mfe",
+        "configDir": "apps/base-payments/topup-mfe/.storybook",
+        "browserTarget": "topup-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/base-payments/topup-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:app", "scope:topup-mfe"]
+}

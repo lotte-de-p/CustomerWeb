@@ -1,0 +1,1 @@
+const e={negative:"negative",positive:"positive",actionable:"actionable",feedback:"feedback"};export{e as T};

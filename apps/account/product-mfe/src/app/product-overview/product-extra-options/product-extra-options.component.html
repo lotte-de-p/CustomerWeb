@@ -1,0 +1,15 @@
+<div class="mt--m">
+  <span class="text-font-family--t7">{{ 'ng.product-overview.lbl.extra-options-added' | translate }}</span>
+  <div *ngFor="let option of options">
+    <div *ngIf="!option.isIncludedOption" [ngClass]="{ 'pt--xs': isTelenetBrand, 'pt--xxxs': !isTelenetBrand }">
+      <div>
+        <i *ngIf="!isTelenetBrand" class="icon icon-check mr--xxs icon-md"></i>
+        <span *ngIf="option.activeOptions">{{ option.activeOptions + ' ' }}</span>
+        <span [attr.data-cy]="'extraOptionLabel'">{{ option.label }}</span>
+      </div>
+      <tg-product-options-specifications
+        [isTelenetBrand]="isTelenetBrand"
+        [services]="option?.productInfo?.services"></tg-product-options-specifications>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+[
+  {
+    "macAddress": "30:65:EC:6F:C4:58",
+    "type": "POWERLINE_WIRELESS_ACCESS_POINT",
+    "wifiWpsEnabled": true,
+    "wirelessInterfaces": [
+      {
+        "active": true,
+        "ssids": [
+          {
+            "name": "WirelessAccessPoint-1",
+            "networkKey": "MCbdkfczu5sw",
+            "ssidSequence": 1,
+            "securityType": {
+              "value": "WPA2_PSK"
+            },
+            "encryptionType": "TKIP_AES"
+          }
+        ],
+        "wifiFrequency": "2.4GHz"
+      },
+      {
+        "active": true,
+        "ssids": [
+          {
+            "name": "WirelessAccessPoint-2",
+            "networkKey": "MCbdkfczu5sw",
+            "ssidSequence": 1,
+            "securityType": {
+              "value": "WPA2_PSK"
+            },
+            "encryptionType": "TKIP_AES"
+          }
+        ],
+        "wifiFrequency": "5GHz"
+      }
+    ]
+  },
+  {
+    "macAddress": "30:65:EC:6F:C4:58",
+    "type": "WIRELESS_ACCESS_POINT",
+    "wifiWpsEnabled": true,
+    "wirelessInterfaces": [
+      {
+        "active": true,
+        "ssids": [
+          {
+            "name": "Access-123",
+            "networkKey": "MCbdkfczu5sw",
+            "ssidSequence": 1,
+            "securityType": {
+              "value": "WPA2_PSK"
+            },
+            "encryptionType": "TKIP_AES"
+          }
+        ],
+        "wifiFrequency": "2.4GHz"
+      },
+      {
+        "active": true,
+        "ssids": [
+          {
+            "name": "Access-456",
+            "networkKey": "MCbdkfczu5sw",
+            "ssidSequence": 1,
+            "securityType": {
+              "value": "WPA2_PSK"
+            },
+            "encryptionType": "TKIP_AES"
+          }
+        ],
+        "wifiFrequency": "5GHz"
+      }
+    ]
+  }
+]

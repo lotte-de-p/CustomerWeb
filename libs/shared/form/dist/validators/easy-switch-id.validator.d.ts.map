@@ -1,0 +1,1 @@
+{"version":3,"file":"easy-switch-id.validator.d.ts","sourceRoot":"","sources":["../../src/validators/easy-switch-id.validator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAG7D,qBAAa,qBAAsB,SAAQ,UAAU;IACnD,MAAM,CAAC,mBAAmB,CAAC,OAAO,EAAE,eAAe;;;CAQpD"}

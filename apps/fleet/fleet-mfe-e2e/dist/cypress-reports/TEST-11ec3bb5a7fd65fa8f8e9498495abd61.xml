@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="22.273" tests="4" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-16T12:41:28" tests="0" file="src/e2e/local/home.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Home" timestamp="2024-07-16T12:41:28" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Page Loading and navigation" timestamp="2024-07-16T12:41:28" tests="4" time="22.239" failures="1">
+    <testcase name="should load the home component" time="0.949" classname="Home Page Loading and navigation should load the home component">
+    </testcase>
+    <testcase name="should show all the routes" time="4.739" classname="Home Page Loading and navigation should show all the routes">
+      <failure message="Timed out retrying after 4000ms: Too many elements found. Found &apos;22&apos;, expected &apos;21&apos;." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Too many elements found. Found '22', expected '21'.
+    at Context.eval (webpack:///./src/e2e/local/home.spec.cy.ts:14:0)
+
+      + expected - actual
+
+      -22
+      +21
+      ]]></failure>
+    </testcase>
+    <testcase name="should allow searching components" time="0.597" classname="Home Page Loading and navigation should allow searching components">
+    </testcase>
+    <testcase name="should allow navigating to components" time="0.478" classname="Home Page Loading and navigation should allow navigating to components">
+    </testcase>
+  </testsuite>
+</testsuites>

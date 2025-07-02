@@ -1,0 +1,31 @@
+<div *ngIf="customLabel">
+  <div class="label-input-flow">{{ getLabel() | translate }}</div>
+  <div class="whitespace whitespace--tiny"></div>
+</div>
+<div *ngIf="error" class="notification notification--errorfield">
+  <span class="icon icon-error-shape errorfield">{{ getText() | translate }}</span>
+</div>
+<div class="radio-checkbox--horizontal">
+  <ng-container *ngFor="let option of optionList; let i = index">
+    <div class="radio-checkbox mb--xxs mb--n--sm">
+      <div class="radio form__radio" style="--animation-delay: i">
+        <input
+          [checked]="selectedOption && option.value === selectedOption.value"
+          class="form__radio__input"
+          id="form-input-radio-{{ i }}-{{ key }}"
+          name="radio-group-name-{{ i }}-{{ key }} "
+          type="radio" />
+        <label (click)="selectOption(option)" class="form__radio__label" for="form-input-radio-{{ i }}-{{ key }}"
+          >&nbsp;</label
+        >
+      </div>
+      <label
+        (click)="selectOption(option)"
+        [innerHTML]="getOptionLabel(option) | translate"
+        class="label--large"
+        for="form-input-radio-{{ i }}-{{ key }}">
+      </label>
+    </div>
+    <div tgWhitespace="tiny"></div>
+  </ng-container>
+</div>

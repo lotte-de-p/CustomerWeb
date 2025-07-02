@@ -1,0 +1,65 @@
+{
+  "product": {
+    "externalProductCode": "MOFL0000",
+    "apps": [],
+    "category": [
+      "B2B Mobile Line Category",
+      "For Rules - Mobile Line TLOs",
+      "Post-Paid Mobile",
+      "For Rules - All 1.1/1.2 Mobile Lines"
+    ],
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "0,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "MOFL0000",
+    "labelkey": "Fleet Mobile Line",
+    "producttype": "Mobile Line",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Fleet Mobile Line",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/fleet-mobile-line.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Fleet Mobile Line",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/fleet-mobile-line.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Fleet Mobile Line",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/fleet-mobile-line.png"
+      }
+    ],
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

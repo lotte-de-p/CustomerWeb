@@ -1,0 +1,20 @@
+{
+  "name": "mybase-dashboard-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/base-customerzone/dashboard/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/base-customerzone/dashboard/data-access/**/*.ts",
+          "libs/base-customerzone/dashboard/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:mybase-dashboard", "scope:mybase-dashboard-mfe", "scope:dashboard-mfe"]
+}

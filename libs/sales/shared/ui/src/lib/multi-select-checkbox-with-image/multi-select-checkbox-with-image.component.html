@@ -1,0 +1,23 @@
+<div class="select-tile--group display--grid grid-template-column--1--sm gap--xm">
+  <ng-container *ngFor="let checkbox of checkboxes">
+    <div class="display--flex align-items--center justify-content--between">
+      <div class="select-checkbox-with-image--label col-8">
+        <tg-sales-checkbox
+          [label]="checkbox.label"
+          [ngModel]="isChecked(checkbox)"
+          (ngModelChange)="toggleCheckbox(checkbox)">
+        </tg-sales-checkbox>
+      </div>
+      <div class="ml--s col-4">
+        <img
+          appSalesImageSrcInterceptor
+          [moduleId]="'tg-sales-product-finder'"
+          [src]="checkbox.imgSrc"
+          alt="TV channels" />
+        <p class="font--caption-small mt--xxxs">
+          {{ 'ng.product-finder.step-tv-channels.additional-channel-information' | translate }}
+        </p>
+      </div>
+    </div>
+  </ng-container>
+</div>

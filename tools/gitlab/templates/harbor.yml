@@ -1,0 +1,65 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.push-to-harbor:
+  stage: package
+  image:
+    name: $KANIKO_IMAGE
+    entrypoint: ['']
+  variables:
+    KANIKO_ARGS: ''
+    HARBOR_MONOREPO_SUBFOLDER: 'customer-web-monorepo'
+    DOCKERFILE_NAME: Dockerfile.nginx
+  script:
+    - source ./project_path.env
+    - IMAGE_NAME=${LEANIX_APPLICATION_NAME:+$LEANIX_APPLICATION_NAME-}$CLIENT_PROJECT
+    # Check if the modified CLIENT_PROJECT (with '-mfe' removed) matches LEANIX_APPLICATION_NAME.
+    # If true, set IMAGE_NAME to the value of CLIENT_PROJECT.
+    # ${CLIENT_PROJECT%-mfe} removes the '-mfe' suffix from CLIENT_PROJECT if it exists.
+    - |
+      if [ "${CLIENT_PROJECT%-mfe}" == "$LEANIX_APPLICATION_NAME" ]; then
+        IMAGE_NAME="$CLIENT_PROJECT"
+      fi
+
+    - PROJECT_DIST_FOLDER=${PROJECT_DIST_FOLDER:-dist/${CLIENT_PROJECT_LOCATION}}
+    - echo "client project ${CLIENT_PROJECT}"
+    - echo "client location ${CLIENT_PROJECT_LOCATION}"
+    - echo "client dist folder ${PROJECT_DIST_FOLDER}"
+    - echo "storybook dist folder ${STORYBOOK_DIST_FOLDER}"
+    - echo "Version:${VERSION}"
+    - echo "Harbor image name:${IMAGE_NAME}"
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_HARBOR_REGISTRY\":{\"username\":\"$CI_HARBOR_REGISTRY_USERNAME\",\"password\":\"$CI_HARBOR_REGISTRY_PASSWORD\"}}}"
+      - > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR  --dockerfile $CI_PROJECT_DIR/${CLIENT_PROJECT_LOCATION}/$DOCKERFILE_NAME
+      - --build-arg "CI_HARBOR_REGISTRY=${CI_HARBOR_REGISTRY}"
+      - --build-arg "BUILD_VERSION=${VERSION}"
+      - --build-arg "PROJECT_DIST_FOLDER=${PROJECT_DIST_FOLDER}"
+      - --build-arg "STORYBOOK_DIST_FOLDER=${STORYBOOK_DIST_FOLDER}"
+      - --build-arg "BUILD_DATE=$(TZ=CET date -R)"
+      - --build-arg "LEANIX_APPLICATION_NAME=${LEANIX_APPLICATION_NAME}"
+      - --build-arg "CLIENT_PROJECT=${CLIENT_PROJECT}"
+      - --label "APP_VERSION=${VERSION}"
+      - --label "CI_PROJECT_URL=${CI_PROJECT_URL}"
+      - --label "CI_COMMIT_REF_NAME=${CI_COMMIT_REF_NAME}"
+      - --label "CI_COMMIT_SHA=${CI_COMMIT_SHA}"
+      - --label "CI_COMMIT_TIMESTAMP=${CI_COMMIT_TIMESTAMP}"
+      - --label "CI_PROJECT_NAME=${CI_PROJECT_NAME}"
+      - --label "CI_PIPELINE_ID=${CI_PIPELINE_ID}"
+      - --label "CI_PIPELINE_IID=${CI_PIPELINE_IID}"
+      - --label "CI_PIPELINE_URL=${CI_PIPELINE_URL}"
+      - --destination ${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/${HARBOR_MONOREPO_SUBFOLDER}/${IMAGE_NAME}:${VERSION}
+    - |
+      cat << EOF  > deploy.env
+      IMAGE_REF=${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/${HARBOR_MONOREPO_SUBFOLDER}/${IMAGE_NAME}:$VERSION
+      EOF
+  after_script:
+    - cat deploy.env
+  artifacts:
+    reports:
+      dotenv: deploy.env
+    expire_in: never
+  only: !reference [.allowed-branches-no-merge-requests]
+  retry:
+    max: 2
+    when: runner_system_failure

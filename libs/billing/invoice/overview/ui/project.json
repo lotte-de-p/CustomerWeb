@@ -1,0 +1,17 @@
+{
+  "name": "billing-invoice-overview-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/billing/invoice/overview/ui/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/billing/invoice/overview/ui/**/*.ts", "libs/billing/invoice/overview/ui/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:customer-web-billing-invoice", "scope:customer-web-billing-invoice-mfe"]
+}

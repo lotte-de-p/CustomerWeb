@@ -1,0 +1,43 @@
+import { TestBed } from '@angular/core/testing';
+
+import { <%= dataAccessNameCapitalized %>Service } from './<%= name %>.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { <%= dataAccessNameCapitalized %> } from './<%= name %>.model';
+
+describe('<%= dataAccessNameCapitalized %>Service', () => {
+  let service: <%= dataAccessNameCapitalized %>Service;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [<%= dataAccessNameCapitalized %>Service],
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(<%= dataAccessNameCapitalized %>Service);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  describe(`When calling get<%= dataAccessNameCapitalized %>`, () => {
+    it(`should return a list of <%= name %>`, (done) => {
+      service.get<%= dataAccessNameCapitalized %>List().subscribe((<%= propertyName %>List: <%= dataAccessNameCapitalized %>[]) => {
+        expect(<%= propertyName %>List).toEqual([
+          {
+            id: '1',
+            name: 'Test1',
+          },
+          {
+            id: '2',
+            name: 'Test2',
+          },
+          {
+            id: '3',
+            name: 'Test3',
+          },
+        ]);
+        done();
+      });
+    });
+  });
+});

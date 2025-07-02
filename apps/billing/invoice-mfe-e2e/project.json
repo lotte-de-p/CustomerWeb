@@ -1,0 +1,46 @@
+{
+  "name": "customer-web-billing-invoice-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/billing/invoice-mfe-e2e/src",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/billing/invoice-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "e2e-integrated": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/billing/invoice-mfe-e2e/playwright.integrated.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:e2e", "scope:customer-web-billing-invoice-mfe"],
+  "implicitDependencies": ["customer-web-billing-invoice-mfe"]
+}

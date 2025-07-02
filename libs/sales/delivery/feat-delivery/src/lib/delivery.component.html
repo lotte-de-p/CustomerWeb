@@ -1,0 +1,94 @@
+<ng-container *ngIf="viewState === viewStateEnum.OVERLAY_CLOSED">
+  <div [attr.data-cy]="'feat-delivery'" class="sales-checkout container--medium">
+    <div class="sales-page__container__title sales-page__container__title--secondary">
+      <div class="display--flex flex-direction--column">
+        <div class="sales-page__container__title__header text-align--center--md text-align--left">
+          {{ 'ng.sales-checkout.lbl.title.delivery' | translate }}
+        </div>
+        <p class="text-align--center--md text-align--left">
+          {{ 'ng.sales-checkout.lbl.sub-title.delivery' | translate }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+      <div class="col-sm-12 sales-checkout">
+        <div>
+          <div class="stepper-page__body-inner p-0">
+            <div class="stepper-page__content--split container mobile-lines">
+              <div class="stepper-page__content-first flex-hide-until-md position--sticky--md position--top--md">
+                <div
+                  *ngIf="viewModel"
+                  [inlineSVG]="viewModel.stepImage"
+                  [resolveSVGUrl]="false"
+                  class="stepper-page__content-first flex-hide-until-sm"></div>
+              </div>
+              <div class="stepper-page__content-second">
+                <div class="stepper-move" id="undefined">
+                  <div class="text-flow text-flow--label stepper-page__title-label m-0"></div>
+                  <div>
+                    <div class="sales-flow">
+                      <div class="sales-flow__content__delivery mb--xxxg">
+                        <div class="content-section p--l">
+                          <h6 class="pb-5 m-0">{{ 'ng.sales-checkout.text.delivery-content-title' | translate }}</h6>
+                          <tg-sales-delivery-items
+                            [deliveryItems]="viewModel.deliveryItems$ | async"></tg-sales-delivery-items>
+                        </div>
+                        <div class="m-0 content-section">
+                          <h6 class="pl--xl pt--l m-0">
+                            {{ 'ng.sales-checkout.text.delivery-address-title' | translate }}
+                          </h6>
+                        </div>
+                        <div>
+                          <div class="background-white pb-10">
+                            <div class="installation-location__error px--xl pt--xs">
+                              <tg-sales-delivery-notification
+                                *ngFor="let notification of viewModel.notifications$ | async"
+                                [notification]="notification"></tg-sales-delivery-notification>
+                            </div>
+                          </div>
+                        </div>
+                        <form class="form-group mb-0 ng-untouched ng-pristine ng-valid" novalidate="">
+                          <div class="sales-flow__content__delivery__section mb--xg">
+                            <div class="sales-display-info--delivery-address mb-0">
+                              <div class="sales-display-info__content">
+                                <tg-sales-delivery-delivery-address
+                                  [deliveryAddress]="viewModel.deliveryAddress$ | async">
+                                </tg-sales-delivery-delivery-address>
+                                <div class="divider divider--s__very-light-grey mb--l"></div>
+                                <tg-sales-delivery-personal-info [personalInfo]="viewModel.personalInfo$ | async">
+                                </tg-sales-delivery-personal-info>
+                              </div>
+                            </div>
+                            <div class="display--flex color-black pl--xl--md pb--xs--md px--xm">
+                              <a
+                                [tgSalesTrackClickEvent]="{ name: 'change address option selected' }"
+                                (click)="setChangeAddressState()"
+                                [attr.data-cy]="'change-delivery-address-button'"
+                                class="button button--primary mb--l">
+                                {{ 'ng.sales-checkout.delivery-change-address' | translate }}
+                              </a>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="viewState === viewStateEnum.OVERLAY_OPEN">
+  <tg-sales-change-delivery-info
+    (closeOverlay)="cancelNewPersonalInfo()"
+    (saveNewPersonalInfo)="saveNewPersonalInfo($event)"
+    [validatePersonalInfoOnInit]="viewModel.validatePersonalInfoOnInit"
+    [deliveryAddress]="viewModel.deliveryAddress$ | async"
+    [personalInfo]="viewModel.personalInfo$ | async">
+  </tg-sales-change-delivery-info>
+</ng-container>

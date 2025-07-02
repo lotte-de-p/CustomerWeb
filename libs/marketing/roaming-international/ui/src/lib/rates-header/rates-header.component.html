@@ -1,0 +1,23 @@
+<div class="cmp-responsivegrid__container pt--xm">
+  <div class="mt--xxl mt--xxl--sm mb--xm mb--xxl--sm cmp-title">
+    <h1 class="text-align--left heading--nomargin display--inline-block">
+      {{
+        rateType === 'INTERNATIONAL'
+          ? ('ng.roaming-international-rates.international-rates-header.title' | translate)
+          : ('ng.roaming-international-rates.roaming-rates-header.title' | translate)
+      }}
+    </h1>
+  </div>
+
+  <div>
+    <div class="cmp-text mb--xm">
+      <p>
+        {{
+          rateType === 'INTERNATIONAL'
+            ? ('ng.roaming-international-rates.international-rates-header.body' | translate)
+            : ('ng.roaming-international-rates.roaming-rates-header.body' | translate)
+        }}
+      </p>
+    </div>
+  </div>
+</div>

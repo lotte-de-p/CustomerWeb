@@ -1,0 +1,99 @@
+[
+  {
+    "productIdentifier": "0421232323",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO35",
+    "interactionId": "8583105007322905269",
+    "rank": "1",
+    "offeringId": "BOYO0035",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "productIdentifier": "0421232323",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO45",
+    "interactionId": "8583105007322905269",
+    "rank": "2",
+    "offeringId": "BOYO0045",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "productIdentifier": "0421232323",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO15",
+    "interactionId": "8583105007322905269",
+    "rank": "3",
+    "offeringId": "BOYO0015",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "productIdentifier": "0421232324",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO45",
+    "interactionId": "8583105007322905269",
+    "rank": "4",
+    "offeringId": "BOYO0045",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "productIdentifier": "0421232324",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO45",
+    "interactionId": "8583105007322905269",
+    "rank": "8",
+    "offeringId": "BOYO0045",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "productIdentifier": "0421232324",
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO35",
+    "interactionId": "8583105007322905269",
+    "rank": "5",
+    "offeringId": "BOYO0035",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  },
+  {
+    "treatmentId": "REOF_BOY35UC_WEBT2",
+    "description": "Upgrade to BOYO35",
+    "interactionId": "8583105007322905269",
+    "rank": "5",
+    "offeringId": "BOYO0035",
+    "options": [
+      {
+        "offeringId": "UNML002",
+        "action": "ADD"
+      }
+    ]
+  }
+]

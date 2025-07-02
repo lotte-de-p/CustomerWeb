@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:8080/public/api/pay-by-mobile-service/v1/pay-by-mobile/transactions/0489129746",
+  "method": "GET",
+  "status": 200,
+  "delay": 100,
+  "response": [
+    {
+      "serviceName": "Apple Music",
+      "companyId": 111393,
+      "date": "2023-10-17T10:56:24",
+      "price": "0.01",
+      "priceUnit": "EUR",
+      "description": "Payment Apple Music.",
+      "serviceTranslation": {
+        "en": "Apple Music",
+        "nl": "Apple Muziek",
+        "fr": "Apple Musique"
+      }
+    }
+  ]
+}

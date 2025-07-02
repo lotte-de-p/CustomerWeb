@@ -1,0 +1,6 @@
+{
+  "customerType": "FLEET",
+  "contractHolderPresent": true,
+  "msisdnAlreadyLinked": true,
+  "hasDeviceWithMACAddress": true
+}

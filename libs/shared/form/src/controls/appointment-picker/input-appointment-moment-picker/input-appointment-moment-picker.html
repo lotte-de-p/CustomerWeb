@@ -1,0 +1,141 @@
+<h6 class="text-flow text-flow--h3 section__title text-align--left ml-5">{{ momentPickerLabel | translate }}</h6>
+<ng-container *ngIf="{ appointmentsAvailable: appointmentsAvailable$ | async } as data">
+  <app-no-available-appointment-date
+    *ngIf="!data.appointmentsAvailable && !selectedMoment"
+    (loadMoreSlots)="loadMoreSlots()"
+    [disableLoadMore]="(startDate >= endDate && enableAppointmentsUI)"
+    [messageGroup]="messageGroup"></app-no-available-appointment-date>
+  <ng-container *ngIf="data.appointmentsAvailable || selectedMoment">
+    <ng-container *ngIf="(consumerType === consumerTypeEnum.NC); else momentBAUTemplate">
+      <ng-container *ngIf="!reRender">
+        <ngx-slick-carousel
+          *ngIf="!enableAppointmentsUI"
+          class="label-modifier-box card-mini card-mini--with-icon-and-amount card-mini--radio-circle-box"
+          style="align-items: center; display: flex; flex-wrap: nowrap"
+          #slickModalMoment="slick-carousel"
+          [config]="slideConfig">
+          <ng-container *ngFor="let moment of generateMoments(); let i = index">
+            <div
+              ngxSlickItem
+              class="label-modifier-slot animation-show-slide-up"
+              [attr.style]="getSlideUpAnimationStyling(i)">
+              <ng-container
+                [ngTemplateOutlet]="slots"
+                [ngTemplateOutletContext]="{moment: moment,
+                                                                i: i,
+                                                                selectedMoment: selectedMoment,
+                                                                timeFormat: (moment | timeslotFormat),
+                                                                label: (getLabel(moment) | translate)}">
+              </ng-container>
+            </div>
+          </ng-container>
+        </ngx-slick-carousel>
+        <ng-container *ngIf="enableAppointmentsUI">
+          <div
+            class="select-tile--group display--grid grid-template-column--5--md grid-template-column--2 gap--m--md gap--xxs">
+            <ng-container *ngFor="let moment of generateMoments(); let i = index">
+              <ng-container
+                [ngTemplateOutlet]="slotsForReserveAppointment"
+                [ngTemplateOutletContext]="{moment: moment,
+                                                                  i: i,
+                                                                  selectedMoment: selectedMoment,
+                                                                  timeFormat: (moment | timeslotFormat),
+                                                                  label: (getLabel(moment) | translate)}">
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #momentBAUTemplate>
+  <div class="label-modifier-box card-mini card-mini--with-icon">
+    <ng-container *ngIf="!reRender">
+      <ng-container *ngFor="let moment of generateMoments(); let i = index">
+        <div
+          class="label-modifier label-modifier-slot animation-show-slide-up"
+          [attr.style]="getSlideUpAnimationStyling(i)"
+          *ngIf="getTimeslotMomentDisplay(moment)">
+          <ng-container
+            [ngTemplateOutlet]="slots"
+            [ngTemplateOutletContext]="
+            {moment: moment,i: i,
+            selectedMoment: selectedMoment,
+            timeFormat: (getTimeslotMomentDisplay(moment) | translate),label: (getLabel(moment) | translate)}">
+          </ng-container>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template
+  #slots
+  let-timeFormat="timeFormat"
+  let-moment="moment"
+  let-i="i"
+  let-selectedMoment="selectedMoment"
+  let-label="label">
+  <input
+    type="radio"
+    name="time"
+    value="{{ moment }}"
+    id="time-{{ i }}"
+    class="label-modifier-radio"
+    [checked]="moment === selectedMoment" />
+  <div
+    [attr.data-cy]="'appointment-time-picker-'+moment?.toLowerCase()"
+    class="label-modifier--append label-modifier--container cursor--pointer"
+    [class.disabled]="isDisabled(moment)">
+    <div class="label-modifier--body">
+      <div class="label-modifier--body--inner-container">
+        <label for="time-{{ i }}" class="label-modifier-radio__label" (click)="selectMoment(moment)"></label>
+        <div class="label-modifier-content__header">
+          <span
+            class="radio-circle-box display--inline-flex justify-content--center align-items--center align-self--center border-radius--circle"></span>
+        </div>
+        <div class="label-modifier-content__body">
+          <div class="text-flow text-flow--button label-modifier-content__body-label">{{ label }}</div>
+          <div class="text-flow text-flow--legal label-modifier-box-content__body-range">{{ timeFormat }}</div>
+        </div>
+        <div class="label-modifier-box-content__timing icon icon-{{ getIcon(moment) }}appointment"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template
+  #slotsForReserveAppointment
+  let-timeFormat="timeFormat"
+  let-moment="moment"
+  let-i="i"
+  let-selectedMoment="selectedMoment"
+  let-label="label">
+  <div class="animation-show-slide-up appointment-moment-picker--with-order">
+    <label
+      [attr.data-cy]="'appointment-time-'+i"
+      for="time-{{ i }}"
+      class="select-tile position--relative display--flex align-items--start gap--m gap--l--sm color-text p--m p--l--sm m--n background-white"
+      style="--animation-delay: 0"
+      (click)="selectMoment(moment)">
+      <input
+        type="radio"
+        name="time"
+        value="{{ moment }}"
+        id="time-{{ i }}"
+        class="select-tile__input display--flex align-items--center justify-content--center font--body-regular hidden-input-box cursor--pointer"
+        [checked]="moment === selectedMoment"
+        [disabled]="isDisabled(moment)" />
+      <div class="select-tile__content display--flex flex-direction--column align-self--stretch flex-grow">
+        <div class="select-tile__content--inner display--flex gap--m gap--l--sm">
+          <div class="select-tile__content_text display--flex flex-direction--column flex-grow">
+            <div class="heading--6 heading--nomargin">{{ label }}</div>
+            <div class="font--caption-bold">{{ timeFormat }}</div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</ng-template>

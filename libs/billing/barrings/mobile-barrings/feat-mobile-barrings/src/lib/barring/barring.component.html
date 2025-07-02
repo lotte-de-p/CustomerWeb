@@ -1,0 +1,50 @@
+<div class="background-white">
+  <div class="barring-header display--flex justify-content--between align-items--center p--xl">
+    <div class="title heading--4 m--n">{{ 'ng.mobile-barrings.group.title.' + barringGroupData.code | translate }}</div>
+    <tg-barring-selector
+      [isReadOnly]="isReadOnly"
+      [barringSettings]="barringGroupData"
+      [globalBarringEnabled]="globalBarringEnabled"
+      [bannerLinkIsClicked]="bannerLinkClicked"
+      [suspendedNumber]="suspendedNumber"
+      [originalValueOfGeneralBarring]="originalValueOfGeneralBarring"
+      (saveBarrings)="saveBarrings.emit()"
+      (toggleBarring)="switchBarring($event)"
+      (cancel)="cancel.emit()"
+      (addAnalyticsEvent)="addAnalyticsEvent.emit($event)"></tg-barring-selector>
+  </div>
+  <div class="divider divider--s__very-light-grey"></div>
+  <div class="barring-details p--xl">
+    @if (barringGroupData.disabledByFraud) {
+      <div class="background-notification--info--light--shade_16 p--m mb--l display--flex">
+        <i class="icon icon-md icon-information-shape color-notification--info--light mr--l"></i>
+        <div>
+          <div class="heading--6 mt--n mb--m">
+            {{ 'ng.mobile-barrings.disabled-by-fraud.title' | translate }}
+          </div>
+          <div class="font--body-regular">
+            {{ 'ng.mobile-barrings.disabled-by-fraud.explanation' | translate }}
+          </div>
+        </div>
+      </div>
+    }
+    <div class="barring-text mb--l text-flow text-flow--detail">
+      {{ 'ng.mobile-barrings.group.description.' + barringGroupData.code | translate }}
+    </div>
+    <div class="current-barring-title font--caption">
+      {{ 'ng.mobile-barrings.group.current-bar' | translate }}
+    </div>
+    @if (!activeBarrings.length) {
+      <div class="current-barring text-flow text-flow--h6">
+        {{ 'ng.mobile-barrings.group.no-restrictions' | translate }}
+      </div>
+    }
+    @for (activeBar of activeBarrings; track activeBar) {
+      <ul
+        class="current-barring display--flex align-items--center text-flow text-flow--h6 listing--bullit"
+        [ngClass]="{ 'listing--none': activeBarrings.length === 1, ' pl--m': activeBarrings.length !== 1 }">
+        <li>{{ activeBar }}</li>
+      </ul>
+    }
+  </div>
+</div>

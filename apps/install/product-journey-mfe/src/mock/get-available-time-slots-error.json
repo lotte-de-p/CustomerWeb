@@ -1,0 +1,11 @@
+{
+  "url": "http://localhost:8080/public/api/appointments-service/v1/appointments/TI_1518555414_20230731_112415/available-time-slots",
+  "method": "GET",
+  "status": 400,
+  "response": {
+    "status": 400,
+    "source": "USP",
+    "code": "ERR_USP_125",
+    "message": "Timeslots can't be returned as Appointment Booking not allowed"
+  }
+}

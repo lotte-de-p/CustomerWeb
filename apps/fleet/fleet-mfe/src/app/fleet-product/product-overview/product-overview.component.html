@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-loader [enableLoader]="true" [pageType]="'fleet-page'" [enableMask]="true" [startByDefault]="false">
+    </app-loader>
+    <tg-login (componentCanRender)="initAfterLoggedIn($event)" [messageGroupName]="messageGroupName" [scopes]="scopes">
+      <div class="product-overview">
+        <tg-product-notifications
+          [showSuspendedPlanNotificationMessage]="showSuspendedPlanNotificationMessage"
+          [showMoveNotificationMessage]="showMoveNotificationMessage"></tg-product-notifications>
+        <app-message-flow [messageGroupName]="messageGroupName" class="width--full"></app-message-flow>
+
+        @if (selectedAccountProducts.length > 0) {
+          <tg-product-standalone
+            [isFleetUserOrderingEnabled]="isFleetUserOrderingEnabled$ | async"
+            [isSplitBill20AddOptionsEnabled]="isSplitBill20AddOptionsEnabled"
+            [isSplitBill20RemoveOptionsEnabled]="isSplitBill20RemoveOptionsEnabled"
+            [isSplitBill20ChangeTariffPlanEnabled]="isSplitBill20ChangeTariffPlanEnabled"
+            [standAloneProducts]="selectedAccountProducts"
+            [canManageProductHolding]="canManageProductHolding"
+            [manageOptionUrl]="manageOptionUrl"
+            [componentInstanceID]="componentInstanceID"
+            (openChangeTariffPlanForProduct)="openChangeTariffPlanForProduct($event)"
+            (openAddOptionsOverlayForProduct)="openAddOptionsOverlayForProduct($event)"
+            (openRemoveOptionsOverlayForProduct)="openRemoveOptionsOverlayForProduct($event)"></tg-product-standalone>
+        }
+      </div>
+    </tg-login>
+  </div>
+</div>

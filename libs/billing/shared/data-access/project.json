@@ -1,0 +1,17 @@
+{
+  "name": "billing-shared-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/shared/data-access/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:customer-web-billing-shared", "scope:customer-web-billing-payment-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/billing/shared/data-access/**/*.ts"]
+      }
+    }
+  }
+}

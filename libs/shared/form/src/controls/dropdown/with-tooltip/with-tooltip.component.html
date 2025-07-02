@@ -1,0 +1,60 @@
+<div class="form-group position--relative">
+  <div
+    *ngIf="customLabel"
+    [ngClass]="{ labelStyle: this.labelStyle }"
+    class="display--flex align-items--center justify-content--between">
+    <div>
+      <label for="{{ key }}">{{ getLabel() | translate }}</label>
+      <div class="tooltip position--relative display--inline-block">
+        <div
+          class="tooltip__icon-section display--flex flex-direction--row--sm flex-direction--row-reverse align-items--center justify-content--center cursor--pointer my--xxxs">
+          <i class="icon icon-information-shape"></i>
+        </div>
+        <div class="tooltip__info-section tooltip__info-section__arrow-left tooltip__info-section__auto-width">
+          <div class="horizontal-center-align">
+            <div class="info-section__description">
+              <div class="info-section__description__text">
+                {{ getTooltip() | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="fl-right" *ngIf="!required">{{ getLabel() + '.optional' | translate }}</label>
+  </div>
+  <div class="select-dropdown-section default">
+    <div class="form-control select-dropdown p--n">
+      <input
+        id="{{ key }}"
+        type="text"
+        [ngClass]="{ 'form__input--disabled': disabled, 'form__input--error': error }"
+        class="form__input form-control cursor--pointer ellipsis"
+        name="{{ key }}"
+        [(ngModel)]="value"
+        [disabled]="disabled"
+        [required]="required"
+        [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''"
+        [class.ng-invalid-custom]="error"
+        (focusout)="focusOut()"
+        (click)="toggle()"
+        readonly />
+      <div
+        class="icon position--absolute text--m text-weight--g"
+        [ngClass]="shouldShowDropdown ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+    </div>
+  </div>
+  <div *ngIf="shouldShowDropdown" class="select-dropdown__options position--absolute width--full">
+    <ul class="select-dropdown__options__content pl--n m--n position--relative">
+      <li
+        *ngFor="let option of optionList"
+        (mousedown)="updateValue(option)"
+        class="select-dropdown__options__list cursor---pointer">
+        {{ option.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="formErrorInput Form__input__invalid-message" *ngIf="error">
+    {{ getText() | translate }}
+  </div>
+</div>

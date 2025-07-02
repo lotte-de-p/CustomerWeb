@@ -1,0 +1,33 @@
+[
+  {
+    "amount": "28",
+    "validity": "2021-06-05T11:40:47.070Z",
+    "currency": "EUR",
+    "bonuses": [
+      {
+        "name": "Top-Up 20 for BASE prepaid BASE 2015 Reload National EU SMS Allowance",
+        "bucketName": "Reload National EU SMS Allowance",
+        "validityPeriod": 30,
+        "bucketAmount": 9999999.0,
+        "value": "unlimited",
+        "bucketType": "SMS/MMS",
+        "unit": "SMS/MMS"
+      }
+    ]
+  },
+  {
+    "amount": "20",
+    "validity": "2021-06-05T11:40:47.070Z",
+    "currency": "EUR",
+    "bonuses": [
+      {
+        "name": "Top-Up 20 for BASE prepaid BASE 2015 Reload National EU SMS Allowance",
+        "bucketName": "Reload National EU SMS Allowance",
+        "validityPeriod": 30,
+        "bucketAmount": 9999999.0,
+        "bucketType": "SMS/MMS",
+        "unit": "SMS/MMS"
+      }
+    ]
+  }
+]

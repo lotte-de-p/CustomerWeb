@@ -1,0 +1,24 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-account-entertainment-management-cs/v1/entertainment-options",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "activeOptions": [
+      {
+        "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGL9fnpsjqDMA/company-logo_200_200/company-logo_200_200/0/1631785975476/streamz_be_logo?e=2147483647&v=beta&t=AmRVzLRt5qqSMrgTRWanMT1Wbh0_P2z5y8qzn4MqXq4",
+        "weight": 17,
+        "name": {
+          "fr": "Streamz Base",
+          "nl": "Streamz Basis",
+          "en": "Streamz Basic"
+        },
+        "description": {
+          "fr": "Les meilleures séries flamandes et internationales.",
+          "nl": "De beste Vlaamse én internationale series.",
+          "en": "The best Flemish and international series."
+        },
+        "price": 5.0
+      }
+    ]
+  }
+}

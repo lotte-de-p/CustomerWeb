@@ -1,0 +1,125 @@
+{
+  "product": {
+    "externalProductCode": "INTW0250",
+    "weight": 1110,
+    "apps": [],
+    "category": ["Other data options", "B2B Options with ETF", "Data & voice options", "Fleet Options with ETF"],
+    "subcategory": {
+      "name": "Mobile data top 24 World",
+      "weight": 260,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Data Top 24"
+        },
+        {
+          "locale": "nl",
+          "name": "Data Top 24"
+        },
+        {
+          "locale": "fr",
+          "name": "Data Top 24"
+        }
+      ],
+      "mutualexclusion": true
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "250",
+            "unit": "MB",
+            "visible": true,
+            "weight": "1110",
+            "labelkey": "Data Top 24 250 MB",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Australia, Brazil, Canada, Chile, China, Hong Kong, India, Indonesia, Israel, Japan, Macedonia, Malaysia, Mexico, Montenegro, Morocco,  New Zeeland, Russia, Serbia, South Africa, Taiwan, Thailand, Tunisia, Turkey and the United States"
+              },
+              {
+                "locale": "nl",
+                "name": "Australië, Brazilië, Canada, Chili, China, Hong Kong, India, Indonesië, Israel, Japan, Macedonië, Maleisië, Mexico, Montenegro, Marokko,  Nieuw-Zeeland, Rusland, Servië, Zuid-Afrika, Taiwan, Thailand, Tunesië, Turkije en de Verenigde Staten"
+              },
+              {
+                "locale": "fr",
+                "name": "Afrique du Sud, Australie, Brésil, Canada, Chili, Chine, États-Unis, Hong Kong, Inde, Indonésie, Israël, Japon, Macédoine, Malaisie, Maroc, Mexique, Monténégro,  Nouvelle-Zélande, Russie, Serbie, Taïwan, Thaïlande, Tunisie et Turquie"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      },
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "10,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "INTW0250",
+    "labelkey": "Data Top 24 250 MB",
+    "producttype": "OPTION",
+    "customercategories": ["OTHER", "Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Data Top 24 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-250-mb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Data Top 24 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-250-mb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Data Top 24 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-top-24-250-mb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "250 MB mobile data in 24 countries world"
+        },
+        {
+          "locale": "nl",
+          "name": "250 MB mobiele data in 24 landen wereld\n"
+        },
+        {
+          "locale": "fr",
+          "name": "250 MB de data mobiles dans 24 pays monde"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

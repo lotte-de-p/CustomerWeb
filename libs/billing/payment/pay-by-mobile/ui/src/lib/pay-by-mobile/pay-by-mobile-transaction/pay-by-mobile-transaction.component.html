@@ -1,0 +1,96 @@
+<ng-container>
+  <div
+    data-testid="pay-by-mobile-transaction"
+    class="py--l cursor--pointer display--flex align-items--center justify-content--between"
+    (click)="open($event)">
+    <div class="display--flex gap--m align-items--center">
+      <tg-billing-transaction-logo [serviceName]="transaction.serviceName"></tg-billing-transaction-logo>
+      <div class="display--flex gap--xxs flex-direction--column">
+        <div class="heading--6 mt--n" data-testid="transaction-service">
+          @switch (lang) {
+            @case (LanguageEnum.NL) {
+              {{ transaction.serviceTranslation.nl }}
+            }
+            @case (LanguageEnum.FR) {
+              {{ transaction.serviceTranslation.fr }}
+            }
+            @default {
+              {{ transaction.serviceTranslation.en }}
+            }
+          }
+        </div>
+        <div class="font--body-small color-shade_72" data-testid="transaction-date">
+          {{ transaction.date | date: 'd MMMM YYYY' : '+0200' : locale }}
+        </div>
+      </div>
+    </div>
+    <div class="display--flex gap--s align-items--center">
+      <div class="heading--5 mb--n mt--xxxs" data-testid="transaction-price">
+        {{ transaction.price | price: locale }}
+      </div>
+      <wink-icon icon="chevron-right"></wink-icon>
+    </div>
+  </div>
+  <tg-slide-menu
+    [showMenu]="showDetails"
+    (closeMenu)="close()"
+    [title]="'ng.pay-by-mobile.transaction.title' | translate">
+    <div class="p--m" data-testid="transaction-detail">
+      <div class="display--flex justify-content--between">
+        <div class="display--flex flex-direction--row gap--m align-items--center">
+          <tg-billing-transaction-logo [serviceName]="transaction.serviceName"></tg-billing-transaction-logo>
+          <div class="heading--6 mt--n" data-testid="transaction-detail-service">
+            @switch (lang) {
+              @case (LanguageEnum.NL) {
+                {{ transaction.serviceTranslation.nl }}
+              }
+              @case (LanguageEnum.FR) {
+                {{ transaction.serviceTranslation.fr }}
+              }
+              @default {
+                {{ transaction.serviceTranslation.en }}
+              }
+            }
+          </div>
+        </div>
+        <div class="heading--5 mb--n mt--xxxs" data-testid="transaction-detail-price">
+          {{ transaction.price | price: locale }}
+        </div>
+      </div>
+      <div class="mt--m font--body-small color-shade_72" data-testid="transaction-detail-date">
+        {{ transaction.date | date: 'd MMMM YYYY' : '+0200' : locale }}
+      </div>
+      <div *ngIf="company; else loading">
+        <div class="mt--m">
+          <div class="mt--m font--body-small color-shade_72">
+            {{ 'ng.pay-by-mobile.transaction.company.name' | translate }}
+          </div>
+          <div data-testid="transaction-detail-company-name">{{ company.companyName }}</div>
+        </div>
+        <div class="mt--m">
+          <div class="font--body-small color-shade_72">
+            {{ 'ng.pay-by-mobile.transaction.company.email' | translate }}
+          </div>
+          <div data-testid="transaction-detail-company-email">{{ company.email }}</div>
+        </div>
+        <div class="mt--m" *ngIf="company.url">
+          <a
+            [href]="company.url"
+            class="display--flex align-items--center link link--unstyled"
+            data-testid="transaction-detail-company-url">
+            <span class="text-decoration--underline">{{
+              'ng.pay-by-mobile.transaction.company.support' | translate
+            }}</span>
+            <wink-icon icon="external-link" size="sm" style="margin-top: -8px" class="ml--xxs"></wink-icon>
+          </a>
+        </div>
+      </div>
+      <ng-template #loading>
+        <div
+          data-testid="transaction-company-loading"
+          class="loading--circular"
+          style="width: 50px; height: 50px"></div>
+      </ng-template>
+    </div>
+  </tg-slide-menu>
+</ng-container>

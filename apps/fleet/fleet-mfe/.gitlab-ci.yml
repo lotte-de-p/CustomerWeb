@@ -1,0 +1,63 @@
+variables:
+  CLIENT_PROJECT: fleet-mfe
+  LEANIX_APPLICATION_NAME: fleet
+  CLIENT_E2E: fleet-mfe-e2e
+  GITOPS_DEPLOY_FOLDER_NAME: fleet
+
+include:
+  - local: '/tools/gitlab/base/application.yml'
+
+test:app:
+  extends: .test:app
+  rules:
+    - when: always
+
+e2e:app:
+  extends: .e2e:app
+  rules:
+    - when: always
+
+build:app:
+  extends: .build:app
+
+push-to-harbor:
+  extends: .push-to-harbor
+  variables:
+    DOCKERFILE_NAME: nginx.Dockerfile
+
+component-test:app:
+  extends: .component-test:app
+
+sonar:app:
+  extends: .sonar:app
+  needs:
+    - e2e:app
+    - test:app
+  allow_failure: true
+
+gitops-deploy-dvp:
+  extends: .gitops-deploy-dev
+
+gitops-deploy-upgrade:
+  extends: .gitops-deploy-upgrade
+
+gitops-deploy-stage:
+  extends: .gitops-deploy-stage
+  only: !reference [.allowed-branches-dev-deploy]
+
+gitops-deploy-prod:
+  extends: .gitops-deploy-prod
+  only: !reference [.allowed-branches-dev-deploy]
+
+tag-stage-candidate:
+  extends: .tag-stage-candidate
+  only: !reference [.allowed-branches-dev-deploy]
+
+tag-prod-candidate:
+  extends: .tag-prod-candidate
+
+patch-stage:
+  extends: .patch-stage
+
+patch-prod:
+  extends: .patch-prod

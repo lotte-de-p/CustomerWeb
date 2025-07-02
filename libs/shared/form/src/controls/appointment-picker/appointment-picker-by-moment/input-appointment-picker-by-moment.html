@@ -1,0 +1,55 @@
+<div class="appointment-picker">
+  <div class="section-time mx--xs--md">
+    <div
+      class="notification notification--errorfield notification--errorfield--flow"
+      [ngClass]="{'mb-15' : consumerType === consumerTypeEnum.NC}"
+      *ngIf="hasError('slot_required')">
+      <span class="icon icon-error-shape errorfield">{{ momentPickerErrorLabel | translate }}</span>
+    </div>
+    <app-form-appointment-moment-picker
+      [messageGroup]="messageGroup"
+      [timeslots]="timeslots"
+      [startDate]="startDate"
+      [endDate]="endDate"
+      [selectedMoment]="selectedAppointmentMoment"
+      (momentSelected)="setSelectedAppointmentMoment($event)"
+      (loadMore)="loadMoreSlots($event)"
+      [consumerType]="consumerType"
+      [updateSlots]="updateSlots"
+      (scrollTo)="scrollSectionTo($event)"
+      [isDeviceLandscape]="isDeviceLandscape"
+      [enableAppointmentsUI]="enableAppointmentsUI"
+      [momentPickerLabel]="momentPickerLabel">
+    </app-form-appointment-moment-picker>
+  </div>
+  <app-no-available-appointment-date
+    *ngIf="!timeslots?.length || !updateSlots?.length"
+    (loadMoreSlots)="loadMoreSlots()"
+    [messageGroup]="messageGroup"></app-no-available-appointment-date>
+  <div class="section-date mx--xs--md" *ngIf="selectedAppointmentMoment">
+    <div class="notification notification--errorfield notification--errorfield--flow" *ngIf="hasError('day_required')">
+      <span class="icon icon-error-shape errorfield">{{ datePickerErrorLabel | translate }}</span>
+    </div>
+    <app-form-appointment-date-picker
+      *ngIf="timeslots?.length || updateSlots?.length"
+      [messageGroup]="messageGroup"
+      [timeslots]="timeslots"
+      [startDate]="startDate"
+      [endDate]="endDate"
+      [selectedTimeslot]="selectedAppointmentSlot"
+      [slidesToScroll]="slidesToScroll"
+      [momentFilter]="selectedAppointmentMoment"
+      (appointmentSelected)="setSelectedAppointmentSlot($event)"
+      [showLoadMore]="showLoadMore"
+      [disableLoadMore]="disableLoadMore"
+      (loadMore)="loadMoreSlots($event)"
+      [updateSlots]="updateSlots"
+      [consumerType]="consumerType"
+      [slidesToShow]="slidesToShow"
+      [appointmentPickerType]="appointmentPickerType"
+      [isDeviceLandscape]="isDeviceLandscape"
+      [enableAppointmentsUI]="enableAppointmentsUI"
+      [datePickerLabel]="datePickerLabel">
+    </app-form-appointment-date-picker>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<tg-login [scopes]="['activatesim']" (componentCanRender)="initAfterLoggedIn()">
+  <tg-activate-sim-management-activation-ui-step-container
+    data-testid="e-sim-activation-ready"
+    [submitLabel]="'ng.sim-management.e-sim-activation.btn.proceed'"
+    [backLabel]="'ng.sim-management.e-sim-activation.btn.back'"
+    (backClick)="browserBack()"
+    (submitClick)="onReturnToSimCardsClick()">
+    <ng-container left-content data-testid="e-sim-activation-ready">
+      <div class="col-6 mt--l pt--s text-align--center hidden-mobile">
+        @if (eSimProfileData) {
+          <qrcode [width]="300" [qrdata]="eSimProfileData" data-testid="e-sim-activation-qr-code"></qrcode>
+        }
+        <div class="text-flow--label">
+          {{ 'ng.sim-management.e-sim-activation.lbl.e-sim-profile' | translate }}
+        </div>
+      </div>
+    </ng-container>
+    <ng-container content data-testid="e-sim-activation-ready">
+      <div class="text-align--center pb--l hidden-desktop">
+        @if (eSimProfileData) {
+          <qrcode [width]="300" [qrdata]="eSimProfileData" data-testid="e-sim-activation-qr-code"></qrcode>
+        }
+      </div>
+      <div class="p--s">
+        <h3 class="heading--nomargin pb--l" data-testid="sim-validation-title">
+          {{ 'ng.sim-management.e-sim-activation.lbl.activation-ready' | translate }}
+        </h3>
+        <p class="pb--l">
+          {{ 'ng.sim-management.e-sim-activation.qr.explanation-' + customerBrandSuffix | translate }}
+        </p>
+        <p class="hidden-desktop">
+          {{ 'ng.sim-management.e-sim-activation.send.to.email.message-mobile' | translate }}
+        </p>
+        <p class="hidden-mobile">{{ 'ng.sim-management.e-sim-activation.send.to.email.message' | translate }}</p>
+        <tg-sim-management-e-sim-activation-security-code [pin]="pin" [puk]="puk">
+        </tg-sim-management-e-sim-activation-security-code>
+      </div>
+    </ng-container>
+  </tg-activate-sim-management-activation-ui-step-container>
+</tg-login>

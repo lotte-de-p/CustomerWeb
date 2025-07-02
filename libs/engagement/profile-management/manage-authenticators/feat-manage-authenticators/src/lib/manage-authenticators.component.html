@@ -1,0 +1,30 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  @if ((loading$ | async) && !(loadSpinner$ | async)) {
+    <tg-pm-manage-authenticators-skeleton></tg-pm-manage-authenticators-skeleton>
+  } @else if ((loadSpinner$ | async) && !(loading$ | async)) {
+    <tg-pm-manage-authenticators-loader></tg-pm-manage-authenticators-loader>
+  } @else {
+    <ng-container *ngIf="authenticators$ | async as authenticators; else loadingError">
+      <tg-pm-manage-authenticators-notification *ngIf="loadError$ | async as error" [error]="error">
+      </tg-pm-manage-authenticators-notification>
+      <tg-pm-manage-authenticators-overview
+        [authenticators$]="authenticators$"
+        [activationItsmeSuccessPageUrl]="activationItsmeSuccessPageUrl"
+        [deactivationItsmeSuccessPageUrl]="deactivationItsmeSuccessPageUrl"
+        [activationPasskeySuccessPageUrl]="activationPasskeySuccessPageUrl"
+        [deactivationPasskeySuccessPageUrl]="deactivationPasskeySuccessPageUrl"
+        [activationAuthenticatorSuccessPageUrl]="activationAuthenticatorSuccessPageUrl"
+        [deactivationAuthenticatorSuccessPageUrl]="deactivationAuthenticatorSuccessPageUrl"
+        [activation2FASuccessPageUrl]="activation2FASuccessPageUrl"
+        [deactivation2FASuccessPageUrl]="deactivation2FASuccessPageUrl"
+        [profileSettingsPageUrl]="profileSettingsPageUrl">
+      </tg-pm-manage-authenticators-overview>
+    </ng-container>
+
+    <ng-template #loadingError>
+      @if (loadError$ | async) {
+        <tg-pm-manage-authenticators-error (errorAction)="handleErrorAction()"></tg-pm-manage-authenticators-error>
+      }
+    </ng-template>
+  }
+</tg-login>

@@ -1,0 +1,232 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.harbor-image-tagging: &harbor-image-tagging
+  image:
+    name: ${CI_HARBOR_REGISTRY}/quay/containers/skopeo:v1
+    entrypoint: ['']
+  variables:
+    CLIENT_PROJECT: $CLIENT_PROJECT
+  script:
+    - echo "Version " $VERSION
+    - echo "Target environment " ${TARGET_ENVIRONMENT}
+    - HARBOR_PROJECT_NAME=${LEANIX_APPLICATION_NAME:+$LEANIX_APPLICATION_NAME-}$CLIENT_PROJECT
+    # Check if the modified CLIENT_PROJECT (with '-mfe' removed) matches LEANIX_APPLICATION_NAME.
+    # If true, set HARBOR_PROJECT_NAME to the value of CLIENT_PROJECT.
+    # ${CLIENT_PROJECT%-mfe} removes the '-mfe' suffix from CLIENT_PROJECT if it exists.
+    - |
+      if [ "${CLIENT_PROJECT%-mfe}" == "$LEANIX_APPLICATION_NAME" ]; then
+        HARBOR_PROJECT_NAME="$CLIENT_PROJECT"
+      fi
+
+    - skopeo login -u $CI_HARBOR_REGISTRY_USERNAME -p $CI_HARBOR_REGISTRY_PASSWORD $CI_HARBOR_REGISTRY
+    - skopeo copy docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:${VERSION} docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:${TARGET_ENVIRONMENT}
+  retry:
+    max: 2
+    when: runner_system_failure
+  needs:
+    - job: component-test:app
+      artifacts: false
+      optional: true
+    - job: build:app
+      artifacts: false
+      optional: true
+    - job: build:storybook
+      artifacts: false
+      optional: true
+    - job: e2e:app
+      artifacts: false
+      optional: true
+    - job: test:app
+      artifacts: false
+      optional: true
+    - job: sonar:app
+      artifacts: false
+      optional: true
+
+.update-gitops-deploy-repository: &update-gitops-deploy-repository
+  image:
+    name: $KUBECTL_IMAGE
+    entrypoint: ['']
+  environment:
+    name: ${TARGET_AWS_ENVIRONMENT}/${ENVIRONMENT_PROJECT_NAME}
+  resource_group: 'customer-web-deployment'
+  script:
+    #_____0____ Install git
+    - apk update && apk add git
+
+    #_____1____ Set variables
+    - HARBOR_PROJECT_NAME=${LEANIX_APPLICATION_NAME:+$LEANIX_APPLICATION_NAME-}$CLIENT_PROJECT
+
+    # Check if the modified CLIENT_PROJECT (with '-mfe' removed) matches LEANIX_APPLICATION_NAME.
+    # If true, set HARBOR_PROJECT_NAME to the value of CLIENT_PROJECT.
+    # ${CLIENT_PROJECT%-mfe} removes the '-mfe' suffix from CLIENT_PROJECT if it exists.
+    - |
+      if [ "${CLIENT_PROJECT%-mfe}" == "$LEANIX_APPLICATION_NAME" ]; then
+        HARBOR_PROJECT_NAME="$CLIENT_PROJECT"
+      fi
+
+    - IMAGE_REF=${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:$VERSION
+    - V3_GITOPS_FOLDER=${V3_GITOPS_DEPLOY_FOLDER_NAME:-${LEANIX_APPLICATION_NAME}/${CLIENT_PROJECT%-mfe}}
+    - echo $V3_GITOPS_FOLDER
+    # Function to commit and push changes
+    - |
+      commit_and_push() {
+        git add .
+        local changes=$(git status --porcelain | wc -l)
+        if [ "$changes" -gt "0" ]; then
+          git status
+          git commit -m "bumping version of ${HARBOR_PROJECT_NAME} to ${VERSION}"
+          git pull --rebase origin ${GIT_OPS_BRANCH}
+          git push origin "${GIT_OPS_BRANCH}" -o ci.skip
+        fi
+      }
+
+    # Function to clone repo and update image reference
+    # TODO refactor this function once v3 is up and running
+    - |
+      clone_and_update() {
+        local repo_url=$1
+        local token=$2
+        local repo_dir=$3
+
+        git clone --branch "main" "https://oauth2:${token}@${CI_SERVER_HOST}/css/css-frontend/$repo_url.git" "$repo_dir"
+        cd $repo_dir
+
+        case $repo_dir in
+          "GIT_OPS_MODULE_OLD")
+            for folder_env in "$TARGET_ENVIRONMENT" "$TARGET_AWS_ENVIRONMENT"; do
+              full_repo_dir="deploy/$GITOPS_DEPLOY_FOLDER_NAME/$folder_env"
+                if [ -d "$full_repo_dir" ]; then
+                    cd "$full_repo_dir"
+                    kustomize edit set image "${IMAGE_REF}"
+                    cd -
+                fi
+            done
+            ;;
+          "GIT_OPS_MODULE_V3")
+            full_repo_dir="deploy/$V3_GITOPS_FOLDER/$TARGET_AWS_ENVIRONMENT"
+            if [ -d "$full_repo_dir" ]; then
+                cd "$full_repo_dir"
+                kustomize edit set image mfe-container-image="${IMAGE_REF}"
+                cd -
+            fi
+            ;;
+          *)
+            echo "Repo directory '$repo_dir' doesn't exist"
+                  return
+            ;;
+        esac
+
+        commit_and_push
+      }
+
+    #_____2____ Checkout GIT_OPS branch
+    - git config --global user.email "${GIT_USER_EMAIL:-$GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GIT_USER_NAME:-$GITLAB_USER_NAME}"
+
+    #_____3____ Clone and update the first GitOps repository
+    - clone_and_update "aem/gitops-aem-modules" "$GITLAB_TOKEN_GITOPS" "GIT_OPS_MODULE_OLD"
+
+    #_____4____ Clone and update the second GitOps repository
+    - clone_and_update "customer-web/gitops" "$GITLAB_CUSTOMER_WEB_GITOPS_TOKEN" "GIT_OPS_MODULE_V3"
+
+    #_____5____ Tag the harbor image with the environment it was deployed to
+    - echo "Tagging image ${HARBOR_PROJECT_NAME} with env tag ${TARGET_ENVIRONMENT}"
+    - skopeo login -u $CI_HARBOR_REGISTRY_USERNAME -p $CI_HARBOR_REGISTRY_PASSWORD $CI_HARBOR_REGISTRY
+    - skopeo copy docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:${VERSION} docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:${TARGET_ENVIRONMENT}
+
+    #_____6____ Add latest tag if the environment is dvp
+    - |
+      if [ "${TARGET_ENVIRONMENT}" = "dvp" ]; then
+        skopeo copy docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:${VERSION} docker://${CI_HARBOR_REGISTRY}/${CI_HARBOR_PROJECT}/customer-web-monorepo/${HARBOR_PROJECT_NAME}:latest
+      fi
+
+.gitops-deploy-dev:
+  <<: *update-gitops-deploy-repository
+  stage: deploy to dev (dvp, int, sup)
+  variables:
+    TARGET_ENVIRONMENT: dvp
+    TARGET_AWS_ENVIRONMENT: dev
+  needs:
+    - job: push-to-harbor
+      artifacts: false
+  only: !reference [.allowed-branches-dev-deploy]
+  retry:
+    max: 2
+
+.gitops-deploy-upgrade:
+  <<: *update-gitops-deploy-repository
+  stage: deploy to upgrade (edp)
+  variables:
+    TARGET_ENVIRONMENT: upgrade
+    TARGET_AWS_ENVIRONMENT: upgrade
+  needs:
+    - job: push-to-harbor
+      artifacts: false
+  only: !reference [.allowed-branches-upgrade-deploy]
+  retry:
+    max: 2
+
+.gitops-deploy-stage:
+  <<: *update-gitops-deploy-repository
+  stage: deploy to stage (uat, trg)
+  variables:
+    TARGET_ENVIRONMENT: uat
+    TARGET_AWS_ENVIRONMENT: stage
+  needs:
+    - job: push-to-harbor
+      artifacts: false
+    - tag-stage-candidate
+  only: !reference [.allowed-branches-stage-deploy]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.gitops-deploy-prod:
+  <<: *update-gitops-deploy-repository
+  stage: deploy by operators prd
+  variables:
+    TARGET_ENVIRONMENT: prd
+    TARGET_AWS_ENVIRONMENT: prod
+  needs:
+    - job: push-to-harbor
+      artifacts: false
+  only: !reference [.allowed-branches-prod-deploy]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.dev-tagging:
+  <<: *harbor-image-tagging
+  stage: deploy to dev (dvp, int, sup)
+  variables:
+    TARGET_ENVIRONMENT: dev
+  only: !reference [.allowed-branches-dev-deploy]
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.tag-stage-candidate:
+  <<: *harbor-image-tagging
+  stage: tag images for release (done by devs)
+  variables:
+    TARGET_ENVIRONMENT: stage-candidate
+  only: !reference [.allowed-branches-stage-deploy]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.tag-prod-candidate:
+  <<: *harbor-image-tagging
+  stage: tag images for release (done by devs)
+  variables:
+    TARGET_ENVIRONMENT: prod-candidate
+  only: !reference [.allowed-branches-prod-deploy]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure

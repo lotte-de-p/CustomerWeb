@@ -1,0 +1,47 @@
+<div class="mb--l mb--m--md" data-cs-mask>
+  <div class="display--flex align-items--center col-12">
+    <div class="address-selector--title mr--xs mt--n mb--n word-break--ellipsis">
+      {{ selectedInternetAddress?.completeAddress }}
+    </div>
+    @if (internetLines.length > 1) {
+      <div class="col-4 p--n">
+        <div
+          (click)="slideMenu(true, $event)"
+          class="address-selector--open text-font-family--t5 cursor--pointer width--fit-content">
+          {{ 'ng.mybase-dashboard-internet.line-selector.open-button' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+
+  <tg-slide-menu
+    (closeMenu)="slideMenu(false)"
+    [showMenu]="showMenu"
+    [title]="'ng.mybase-dashboard-internet.line-selector.menu-title' | translate">
+    @for (line of internetLines; track line.productIdentifier; let last = $last) {
+      <div
+        (click)="selectLine(line)"
+        class="display--flex align-items--center justify-content--between px--m address--line cursor--pointer">
+        <div
+          class="display--flex align-items--center col-12 py--l"
+          [ngClass]="{
+            'border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey': !last
+          }">
+          <i class="icon icon-md icon-no-size-override icon-house col-1"></i>
+          <div class="col-11 p--n">
+            <div class="heading--6 m--n display--flex justify-content--between">
+              <div class="ml--xxs word-break--ellipsis">
+                {{ line.completeAddress }}
+              </div>
+              @if (line.productIdentifier === selectedInternetAddress?.productIdentifier) {
+                <div class="ml--s">
+                  <i class="icon icon-md icon-no-size-override icon-check-shape-filled color-brand-primary"></i>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </tg-slide-menu>
+</div>

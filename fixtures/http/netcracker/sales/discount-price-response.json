@@ -1,0 +1,13 @@
+{
+  "productIdentifier": "INTDTV000001054",
+  "discountedPrice": [
+    {
+      "contentPack": "TVPK0016",
+      "reason": "3p + play more",
+      "price": {
+        "currency": "Euro",
+        "value": "24,95"
+      }
+    }
+  ]
+}

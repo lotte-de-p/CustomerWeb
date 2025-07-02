@@ -1,0 +1,91 @@
+{
+  "macAddress": "34:2C:C4:F1:0E:D0",
+  "lanIpAddress": "192.168.0.123",
+  "lanIPv6Prefix": "2a02:1811:430:7000::/64",
+  "upnpEnabled": true,
+  "wanIpAddress": "94.225.211.51",
+  "wanIPv6Prefix": "2a02:1811:430:7000::/56",
+  "wanIPv6Address": "2a02:181f:1:4021:6900:b45:3330:cb45",
+  "dmzHost": "1",
+  "fwBlockIpFragments": true,
+  "fwEnabled": true,
+  "fwBlockIPv6Fragments": true,
+  "portForwardsSettings": {
+    "forbiddenTcpPorts": [25, 53, 135, 137, 139, 161, 162, 445, 1080],
+    "forbiddenUdpPorts": [53, 135, 137, 139, 161, 162],
+    "portForwards": [
+      {
+        "active": true,
+        "description": "string",
+        "internalPortStart": 0,
+        "lanIp": "168",
+        "portStart": 2000,
+        "portStop": 3000,
+        "protocol": {
+          "value": "TCP",
+          "possibleValues": ["TCP", "UDP", "BOTH"]
+        }
+      }
+    ]
+  },
+  "bridging": [
+    {
+      "active": true,
+      "macAddress": "34:2C:C4:F1:0E:D0"
+    }
+  ],
+  "ipv6Settings": {
+    "maxNumberOfIPv6Filters": 32,
+    "fwActions": ["ACCEPT", "REJECT", "DROP"],
+    "protocols": [
+      "UDP",
+      "TCP",
+      "TCP_UDP",
+      "ICMPv6",
+      "ESP",
+      "AH",
+      "GRE",
+      "IPv6ENCAP",
+      "IPv4ENCAP",
+      "IPv6FRAG",
+      "L2TP",
+      "ANY"
+    ]
+  },
+  "ipv6Filters": [
+    {
+      "sequence": 2,
+      "active": true,
+      "ruleName": "Mock Rule 2",
+      "protocol": "TCP",
+      "fwAction": "Accept",
+      "sourceSubnet": null,
+      "sourcePrefix": null,
+      "sourceHost": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "sourcePortStart": "4502",
+      "sourcePortEnd": "4502",
+      "destinationSubnet": null,
+      "destinationPrefix": null,
+      "destinationHost": "2001:0db8:85a3:0000:0000:8a2e:0370:7335",
+      "destinationPortStart": "4503",
+      "destinationPortEnd": "4503"
+    },
+    {
+      "sequence": 1,
+      "active": true,
+      "ruleName": "Mock Rule 1",
+      "protocol": "TCP",
+      "fwAction": "Accept",
+      "sourceSubnet": null,
+      "sourcePrefix": null,
+      "sourceHost": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "sourcePortStart": "4502",
+      "sourcePortEnd": "4502",
+      "destinationSubnet": null,
+      "destinationPrefix": null,
+      "destinationHost": "2001:0db8:85a3:0000:0000:8a2e:0370:7335",
+      "destinationPortStart": "4503",
+      "destinationPortEnd": "4503"
+    }
+  ]
+}

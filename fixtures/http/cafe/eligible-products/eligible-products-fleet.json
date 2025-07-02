@@ -1,0 +1,78 @@
+[
+  {
+    "identifier": "0468397807",
+    "label": "B-Fleet Connect",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/BFLC0001",
+    "eligibleOffers": [
+      {
+        "productInfo": {
+          "id": "23456",
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING"
+            }
+          ]
+        }
+      },
+      {
+        "productInfo": {
+          "id": "2343356",
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET"
+            }
+          ]
+        }
+      },
+      {
+        "productInfo": {
+          "id": "233333456",
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING"
+            }
+          ]
+        }
+      },
+      {
+        "productInfo": {
+          "id": "33456",
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET"
+            }
+          ]
+        }
+      },
+      {
+        "productInfo": {
+          "id": "356",
+          "services": [
+            {
+              "serviceType": "general"
+            }
+          ]
+        }
+      }
+    ],
+    "optionProducts": [
+      "https://api.int.telenet.be/omapi/public/product/VOEF0060",
+
+      "https://api.int.telenet.be/omapi/public/product/VOEF0180",
+
+      "https://api.int.telenet.be/omapi/public/product/VWSM0100",
+
+      "https://api.int.telenet.be/omapi/public/product/VWME0250",
+      "https://api.int.telenet.be/omapi/public/product/VOEF0060",
+
+      "https://api.int.telenet.be/omapi/public/product/VWLA0600",
+      "https://api.int.telenet.be/omapi/public/product/INTW0250",
+
+      "https://api.int.telenet.be/omapi/public/product/INTW0600",
+
+      "https://api.int.telenet.be/omapi/public/product/INTW1500",
+
+      "https://api.int.telenet.be/omapi/public/product/LOWR0000"
+    ]
+  }
+]

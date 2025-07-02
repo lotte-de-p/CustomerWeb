@@ -1,0 +1,18 @@
+[
+  {
+    "productIdentifier": "0487523810",
+    "offers": [
+      {
+        "id": "TLTT0004",
+        "action": "ADD",
+        "type": "Option"
+      },
+      {
+        "id": "TLTT0001",
+        "action": "DISCONNECT",
+        "type": "Option"
+      }
+    ],
+    "locationId": "9170154591613916500"
+  }
+]

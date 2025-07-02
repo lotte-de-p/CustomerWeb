@@ -1,0 +1,523 @@
+{
+  "selectedLines": [
+    {
+      "id": "9169867873313578628",
+      "identifier": "0468239791",
+      "msisdn": "32468239791",
+      "accountNumber": "125788244",
+      "referenceInformation": "testMJ",
+      "label": "Mobile Connect",
+      "locationId": "9169860887713252236",
+      "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+      "status": "ACTIVE",
+      "chars": {
+        "hasVoiceMailBox": "true"
+      },
+      "handsets": [],
+      "options": [
+        {
+          "parentId": "0484058561",
+          "label": "World Data 2 GB",
+          "specurl": "https://api.int.base.be/omapi/public/product/TLTT0004",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "156,00",
+            "recurrentTotal": "156,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "156,00",
+              "recurrentTotal": "156,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-30T08:44:18+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "8,89"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        },
+        {
+          "parentId": "0484058561",
+          "label": "Data OPEC 1,5 GB",
+          "specurl": "https://api.int.base.be/omapi/public/product/FDOP0015",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "60,00",
+            "recurrentTotal": "60,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "60,00",
+              "recurrentTotal": "60,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-30T08:44:18+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "3,42"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        }
+      ],
+      "lineLevelProducts": [],
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "30,00",
+          "recurrentTotal": "30,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "summaryPrices": {
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "246,00",
+          "recurrentTotal": "246,00",
+          "recurrentDiscount": "0,00"
+        }
+      },
+      "addressId": "9150757958413973182",
+      "discountItems": {
+        "discounts": []
+      },
+      "productType": "mobile",
+      "activationDate": "2024-05-15T14:38:18+02:00",
+      "hasOldSocialTariffDiscount": false
+    },
+    {
+      "id": "9169869589813783230",
+      "identifier": "0485588068",
+      "msisdn": "32485588068",
+      "accountNumber": "125788244",
+      "secondaryAccountNumber": "125788526",
+      "secondaryBillingAddressId": "9150757974413003113",
+      "referenceInformation": "TestMFDemo",
+      "label": "Mobile Connect",
+      "locationId": "9169860887713252236",
+      "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+      "status": "ACTIVE",
+      "chars": {
+        "hasVoiceMailBox": "true"
+      },
+      "handsets": [],
+      "options": [
+        {
+          "parentId": "0485588068",
+          "label": "Data Top 24 250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "10,00",
+            "recurrentTotal": "10,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "10,00",
+              "recurrentTotal": "10,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-28T11:16:03+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "0,00"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        },
+        {
+          "parentId": "0485588068",
+          "label": "Data Blue 3 GB",
+          "specurl": "https://api.int.base.be/omapi/public/product/FLOB0010",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "60,00",
+            "recurrentTotal": "60,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "60,00",
+              "recurrentTotal": "60,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-28T11:16:03+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "0,00"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        },
+        {
+          "parentId": "0485588068",
+          "label": "Data OPEC 1,5 GB",
+          "specurl": "https://api.int.base.be/omapi/public/product/FDOP0015",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "60,00",
+            "recurrentTotal": "60,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "60,00",
+              "recurrentTotal": "60,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-28T11:16:03+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "0,00"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        },
+        {
+          "parentId": "0485588068",
+          "label": "World Data WG 1 GB",
+          "specurl": "https://api.int.base.be/omapi/public/product/TLTT0010",
+          "price": {
+            "currency": "EUR",
+            "recurrentDiscounted": "78,00",
+            "recurrentTotal": "78,00",
+            "taxExclPrices": {
+              "currency": "EUR",
+              "recurrentDiscounted": "78,00",
+              "recurrentTotal": "78,00",
+              "recurrentDiscount": "0,00"
+            },
+            "recurrentDiscount": "0,00"
+          },
+          "status": "ACTIVE",
+          "contract": {
+            "duration": "1",
+            "obligationEndDate": "2024-06-28T11:16:03+02:00",
+            "price": {
+              "currency": "Euro",
+              "earlyTerminationFee": "0,00"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": false,
+          "isIncluded": false,
+          "chars": {}
+        }
+      ],
+      "lineLevelProducts": [
+        {
+          "identifier": "0485588068",
+          "category": "mobile",
+          "specurl": "https://api.int.telenet.be/omapi/public/product/MOFL0000",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "Euro",
+              "recurrentDiscounted": "0,00",
+              "recurrentTotal": "0,00",
+              "recurrentDiscount": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "Euro",
+              "recurrentDiscounted": "0,00",
+              "recurrentTotal": "0,00",
+              "recurrentDiscount": "0,00"
+            }
+          },
+          "discountItems": {
+            "discounts": []
+          },
+          "isFree": true
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "recurrentDiscounted": "30,00",
+        "recurrentTotal": "30,00",
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "30,00",
+          "recurrentTotal": "30,00",
+          "recurrentDiscount": "0,00"
+        },
+        "recurrentDiscount": "0,00"
+      },
+      "splitBillProfile": {
+        "id": "9169860892313255592",
+        "name": "New Split Billing Profile #1"
+      },
+      "summaryPrices": {
+        "taxExclPrices": {
+          "currency": "EUR",
+          "recurrentDiscounted": "238,00",
+          "recurrentTotal": "238,00",
+          "recurrentDiscount": "0,00"
+        }
+      },
+      "addressId": "9150757958413973182",
+      "discountItems": {
+        "discounts": []
+      },
+      "productType": "mobile",
+      "activationDate": "2024-05-15T13:44:16+02:00",
+      "hasOldSocialTariffDiscount": false
+    }
+  ],
+  "productLineOptions": [
+    {
+      "category": "internet",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "productId": "UNLM0002",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Small",
+          "volume": "100 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "internet",
+          "status": "ACTIVE",
+          "isSelected": false
+        },
+        {
+          "id": "9151058241113574975",
+          "parentId": "9151058241113574973",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "category": "internet",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "prepaid_internet",
+      "subcategory": [
+        {
+          "id": "9151058241113574974",
+          "productId": "UNLM0002",
+          "parentId": "9151058241113574973",
+          "label": "Option Voice Europe 60 min",
+          "volume": "60 MIN",
+          "category": "prepaid_internet",
+          "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "data",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Small",
+          "volume": "100 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "data",
+          "isSelected": false,
+          "status": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "category": "voice",
+      "subcategory": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Small",
+          "volume": "100 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": false,
+          "status": "INACTIVE"
+        },
+        {
+          "id": "9151058241113574988",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Large",
+          "volume": "250 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": true,
+          "isDisabled": true,
+          "status": "INACTIVE"
+        },
+        {
+          "id": "9151058241113574979",
+          "parentId": "9151058241113574971",
+          "label": "Voice World Large",
+          "volume": "250 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "category": "voice",
+          "isSelected": true,
+          "isDisabled": true,
+          "status": "INACTIVE"
+        }
+      ]
+    }
+  ],
+  "mockOptionsByCategories": [
+    {
+      "category": "Bellen in België",
+      "subcategory": [
+        {
+          "id": "UNLM0002",
+          "label": "Onbeperkt bellen",
+          "category": "Bellen in België"
+        }
+      ]
+    },
+    {
+      "category": "Calls to World",
+      "subcategory": [
+        {
+          "id": "WORL0010",
+          "label": "40 minuten naar 17 niet-EU-landen ",
+          "category": "Calls to World"
+        },
+        {
+          "id": "WORL0030",
+          "label": "150 minuten naar 17 niet-EU-landen ",
+          "category": "Calls to World"
+        }
+      ]
+    },
+    {
+      "category": "Bellen naar nummers in Europa",
+      "subcategory": [
+        {
+          "id": "VOEU0060",
+          "label": "60 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        },
+        {
+          "id": "VOEU0180",
+          "label": "180 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        },
+        {
+          "id": "VOEU0600",
+          "label": "600 minuten bellen naar en in Europa",
+          "category": "Bellen naar nummers in Europa"
+        }
+      ]
+    }
+  ],
+  "selectedLinesWithMoreOptions": [
+    {
+      "id": "9151058241113574971",
+      "identifier": "0468239791",
+      "msisdn": "32468239791",
+      "accountNumber": "999910887",
+      "label": "B-Fleet Connect",
+      "description": "Dan Fuhman",
+      "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+      "status": "ACTIVE",
+      "options": [
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Small",
+          "volume": "100 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "9151058241113574973",
+      "identifier": "0468239792",
+      "msisdn": "32468239792",
+      "accountNumber": "999910887",
+      "label": "Corp Basic",
+      "description": "Smans Peter",
+      "specurl": "https://api.int.base.be/omapi/public/product/COBA000",
+      "status": "ACTIVE",
+      "options": [
+        {
+          "id": "9151058241113574974",
+          "parentId": "9151058241113574973",
+          "label": "Option Voice Europe 60 min",
+          "volume": "60 MIN",
+          "specurl": "https://api.int.base.be/omapi/public/product/VOEF0060",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574975",
+          "parentId": "9151058241113574973",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW1500",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "9151058241113574972",
+          "parentId": "9151058241113574971",
+          "label": "Internet World Large",
+          "volume": "250 MB",
+          "specurl": "https://api.int.base.be/omapi/public/product/INTW0250",
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "serviceName": "applestore",
+    "companyId": 111393,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Apple Music",
+      "nl": "Apple Muziek",
+      "fr": "Apple Musique"
+    }
+  },
+  {
+    "serviceName": "gplay",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "gplay",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "4-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "5-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "6-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "7-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "8-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "9-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "10-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "11-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "12-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "13-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  },
+  {
+    "serviceName": "14-YoutubeMusic",
+    "companyId": 111394,
+    "date": "2023-10-17T10:56:24",
+    "price": "0.01",
+    "priceUnit": "EUR",
+    "description": "Payment Apple Music.",
+    "serviceTranslation": {
+      "en": "Youtube Music",
+      "nl": "Youtube Muziek",
+      "fr": "Youtube Musique"
+    }
+  }
+]

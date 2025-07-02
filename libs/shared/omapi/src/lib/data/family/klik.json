@@ -1,0 +1,123 @@
+{
+  "tiers": [
+    {
+      "key": "klik",
+      "omapiId": "45975"
+    }
+  ],
+  "products": [
+    {
+      "type": "mobile",
+      "tiers": [
+        {
+          "key": "klik",
+          "products": [
+            {
+              "omapiId": "44859",
+              "mobileData": [
+                {
+                  "key": "limited",
+                  "omapiId": "44859"
+                },
+                {
+                  "key": "unlimited",
+                  "omapiId": "44860"
+                }
+              ]
+            },
+            {
+              "omapiId": "45975",
+              "mobileData": [
+                {
+                  "key": "limited",
+                  "omapiId": "45975"
+                },
+                {
+                  "key": "unlimited",
+                  "omapiId": "45977"
+                }
+              ]
+            },
+            {
+              "omapiId": "45976",
+              "mobileData": [
+                {
+                  "key": "limited",
+                  "omapiId": "45976"
+                },
+                {
+                  "key": "unlimited",
+                  "omapiId": "45978"
+                }
+              ]
+            },
+            {
+              "omapiId": "45979",
+              "mobileData": [
+                {
+                  "key": "limited",
+                  "omapiId": "45979"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "tiers": [
+        {
+          "key": "klik",
+          "products": [
+            {
+              "omapiId": "665"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fixedTelephony",
+      "tiers": [
+        {
+          "key": "klik",
+          "products": [
+            {
+              "omapiId": "22792"
+            },
+            {
+              "omapiId": "46948"
+            },
+            {
+              "omapiId": "22792_46948"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "optins": [
+    {
+      "key": "speedboost",
+      "tiers": [
+        {
+          "key": "klik",
+          "pax": [
+            {
+              "omapiId": "42797",
+              "optinId": "43763"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "type": "entertainment",
+      "key": "be_tv",
+      "omapiId": "TVPK1005"
+    }
+  ]
+}

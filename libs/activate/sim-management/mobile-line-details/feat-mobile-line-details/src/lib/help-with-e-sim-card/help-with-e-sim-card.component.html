@@ -1,0 +1,15 @@
+<div class="background-white p--xl">
+  <div class="display--flex flex-direction--column gap--l">
+    @for (item of items; track $index) {
+      <div class="display--flex">
+        <div><i class="font--caption-bold p--xxs mr--m icon icon-chevron-right background-brand-primary"></i></div>
+        <div>
+          <a class="link link--unstyled heading--6" [href]="item.url" [attr.data-testid]="item.testId">{{
+            item.title | translate
+          }}</a>
+          <div>{{ item.description | translate }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

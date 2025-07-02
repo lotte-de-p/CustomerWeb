@@ -1,0 +1,172 @@
+{
+  "status": "Submitting",
+  "customerId": "9169860884713252236",
+  "id": "9170776469913554118",
+  "name": "Order #0121932163",
+  "prices": {
+    "taxInclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "36,30",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "36,30",
+      "upfrontTotal": "0,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "30,00",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "30,00",
+      "upfrontTotal": "0,00"
+    }
+  },
+  "lineItems": [
+    {
+      "orderItems": [
+        {
+          "id": "9170776460013554218",
+          "name": "Mobile Connect / 0484058561",
+          "type": "New Option Acquisition",
+          "publicateNumber": false,
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "36,30",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "36,30",
+              "upfrontTotal": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "30,00",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "30,00",
+              "upfrontTotal": "0,00"
+            }
+          },
+          "locationId": "9169860887713252236",
+          "parentId": "9170776469913554118",
+          "specurl": "https://api.int.base.be/omapi/public/product/BFLC0001",
+          "orderItems": [
+            {
+              "id": "9170776516213554687",
+              "name": "Exchange Fleet E-SIM card",
+              "type": "New Line Acquisition",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9169860887713252236",
+              "parentId": "9170776469913554118",
+              "specurl": "https://api.int.base.be/omapi/public/product/EXSF0002",
+              "orderItems": [],
+              "status": "ADDED",
+              "chars": {
+                "simCardNumber": "8932030527001005141",
+                "referenceInformation": "testMJ"
+              },
+              "discountItems": {},
+              "prepaidProduct": false
+            },
+            {
+              "id": "9170776514313554687",
+              "name": "World Data 2 GB",
+              "type": "New Line Acquisition",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9169860887713252236",
+              "parentId": "9170776460013554218",
+              "specurl": "https://api.int.base.be/omapi/public/product/TLTT0004",
+              "orderItems": [],
+              "status": "DISCONNECT",
+              "chars": {},
+              "discountItems": {},
+              "isMigratedFromStandalone": false,
+              "prepaidProduct": false
+            }
+          ],
+          "status": "ADDED",
+          "billingAccountId": "9169860998713262589",
+          "productIdentifier": "0484058561",
+          "billingAddressId": "9150757958413973182",
+          "chars": {
+            "phoneNumber": "0484058561",
+            "referenceInformation": "testMJ"
+          },
+          "discountItems": {},
+          "prepaidProduct": false
+        }
+      ],
+      "publicateNumber": false
+    }
+  ],
+  "lineCount": 0,
+  "token": "3b0b4628-737c-4e72-9005-63f58377fdd9",
+  "pricesWereUpdated": false,
+  "manualAddress": false,
+  "hwitems": {
+    "orderItems": []
+  },
+  "manualProcessingRequired": false,
+  "feasibilityCheckRequired": false,
+  "modemSwapReq": false,
+  "dtvDisconnected": false,
+  "spdtoEOS": false
+}

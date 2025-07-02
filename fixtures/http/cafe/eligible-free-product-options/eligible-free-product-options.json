@@ -1,0 +1,78 @@
+{
+  "eligiblefreeproductoptions": [
+    {
+      "identifier": "am69134",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/3178",
+      "nextbillingdate": "2022-04-14T00:00:00.0+02:00",
+      "address": {
+        "street": "Zuidkaai",
+        "postalcode": "8870",
+        "municipality": "Izegem",
+        "country": "België",
+        "boxnr": "54",
+        "housenr": "6",
+        "floor": "5",
+        "addressid": "jirrzp00920qxa3cy003o"
+      },
+      "options": []
+    },
+    {
+      "identifier": "hc21362",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/2161",
+      "nextbillingdate": "2022-04-14T00:00:00.0+02:00",
+      "address": {
+        "street": "Zuidkaai",
+        "postalcode": "8870",
+        "municipality": "Izegem",
+        "country": "België",
+        "boxnr": "54",
+        "housenr": "6",
+        "floor": "5",
+        "addressid": "jirrzp00920qxa3cy003o"
+      },
+      "options": [
+        {
+          "specurl": "https://api.int.telenet.be/omapi/public/product/28489",
+          "sequence": 0,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        },
+        {
+          "specurl": "https://api.int.telenet.be/omapi/public/product/41741",
+          "sequence": 1,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        }
+      ]
+    },
+    {
+      "identifier": "am61103",
+      "specurl": "https://api.int.telenet.be/omapi/public/product/544",
+      "nextbillingdate": "2022-04-14T00:00:00.0+02:00",
+      "address": {
+        "street": "Zuidkaai",
+        "postalcode": "8870",
+        "municipality": "Izegem",
+        "country": "België",
+        "boxnr": "54",
+        "housenr": "6",
+        "floor": "5",
+        "addressid": "jirrzp00920qxa3cy003o"
+      },
+      "options": [
+        {
+          "specurl": "https://api.int.telenet.be/omapi/public/product/28489",
+          "sequence": 0,
+          "availability": {
+            "orderable": true
+          },
+          "downgradeomapiid": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<div class="whitespace whitespace--extra-large"></div>
+<div
+  class="image-title-text-block image-title-text-block--vertical-align display--flex flex-direction--column align-items--center">
+  <wink-img
+    brandImage
+    [attr.data-testid]="'billing-overview-no-billing-accounts-image'"
+    [isTelenet]="isTelenetCustomer"
+    [img]="'/content/dam/www-telenet-touch/nl/dfd/no-billing-accounts.svg'"
+    [telenetImg]="'/content/dam/www-telenet-touch/nl/dfd/no-billing-accounts.svg'"
+    [baseImg]="'/content/dam/www-telenet-touch/nl/dfd/no-billing-accounts-base.svg'"
+    loading="lazy"
+    class="hydrated"></wink-img>
+  <div class="text-align--center mt--l">
+    <h4 class="heading--nomargin" [attr.data-testid]="'billing-overview-no-billing-accounts-header'">
+      {{ 'ng.billing-overview.no-billing-accounts-header' | translate }}
+    </h4>
+  </div>
+  <wink-paragraph
+    appearance="body"
+    size="regular"
+    class="text-align--center mt--xxs mb--m"
+    [attr.data-testid]="'billing-overview-no-billing-accounts-description'">
+    {{ 'ng.billing-overview.no-billing-accounts-description' | translate }}
+  </wink-paragraph>
+  <wink-button
+    *ngIf="homePageLink"
+    [attr.data-testid]="'billing-overview-no-billing-accounts-consult-invoice-link'"
+    text="{{ 'ng.billing-overview.no-billing-accounts-link' | translate }}"
+    type="button"
+    appearance="primary"
+    size="md"
+    status="none"
+    class="width--full width--auto--md"
+    width="full"
+    (click)="redirectToConsultInvoice()"></wink-button>
+</div>
+<div class="whitespace whitespace--medium"></div>

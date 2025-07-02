@@ -1,0 +1,332 @@
+[
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Internet/Verbruik",
+        "defaultTitle": "Verbruik",
+        "title": "Verbruik"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/mijnthuisnetwerkwifi/Werktniet",
+            "defaultTitle": "Werkt niet",
+            "title": "Werkt niet"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/mijnthuisnetwerkwifi/installereninstellen",
+            "defaultTitle": "Installeren & instellen",
+            "title": "Installeren & instellen"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/mijnthuisnetwerkwifi/Gebruikenontdek",
+            "defaultTitle": "Gebruiken   Ontdek",
+            "title": "Gebruiken   Ontdek"
+          }
+        ],
+        "tagId": "IntentFinder:Internet/mijnthuisnetwerkwifi",
+        "defaultTitle": "Mijn thuisnetwerk & wifi",
+        "title": "Mijn thuisnetwerk & wifi"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/emailwebmail/Werktniet",
+            "defaultTitle": "Werkt niet",
+            "title": "Werkt niet"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/emailwebmail/Installereninstellen",
+            "defaultTitle": "Installeren & instellen",
+            "title": "Installeren & instellen"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Internet/emailwebmail/Gebruikenontdek",
+            "defaultTitle": "Gebruiken   Ontdek",
+            "title": "Gebruiken   Ontdek"
+          }
+        ],
+        "tagId": "IntentFinder:Internet/emailwebmail",
+        "defaultTitle": "E-mail & Webmail",
+        "title": "E-mail & Webmail"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Internet/Veiligheid",
+        "defaultTitle": "Veiligheid",
+        "title": "Veiligheid"
+      }
+    ],
+    "tagId": "IntentFinder:Internet",
+    "defaultTitle": "Internet",
+    "description": "internet",
+    "title": "Internet"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/Verbruik",
+        "defaultTitle": "Verbruik",
+        "title": "Verbruik"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/verbindingbereik",
+        "defaultTitle": "Verbinding & bereik",
+        "title": "Verbinding & bereik"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/Toestelkortingen",
+        "defaultTitle": "Toestelkortingen",
+        "title": "Toestelkortingen"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/Simkaart",
+        "defaultTitle": "Simkaart",
+        "title": "Simkaart"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/Voicemail",
+        "defaultTitle": "Voicemail",
+        "title": "Voicemail"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Mobiel/Buitenland",
+        "defaultTitle": "Buitenland",
+        "title": "Buitenland"
+      }
+    ],
+    "tagId": "IntentFinder:Mobiel",
+    "defaultTitle": "Mobiel (gsm)",
+    "description": "mobile",
+    "title": "Mobiel (gsm)"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/digiboxdigicorder/Werktniet",
+            "defaultTitle": "Werkt niet",
+            "title": "Werkt niet"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/digiboxdigicorder/Installereninstellen",
+            "defaultTitle": "Installeren & Instellen",
+            "title": "Installeren & instellen"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/digiboxdigicorder/Gebruikenontdek",
+            "defaultTitle": "Gebruiken   Ontdek",
+            "title": "Gebruiken   Ontdek"
+          }
+        ],
+        "tagId": "IntentFinder:Televisie/digiboxdigicorder",
+        "defaultTitle": "Digibox & Digicorder",
+        "title": "Digibox & Digicorder"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/tvmeteenkaartje/Werktniet",
+            "defaultTitle": "Werkt niet",
+            "title": "Werkt niet"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/tvmeteenkaartje/Installereninstellen",
+            "defaultTitle": "Installeren & instellen",
+            "title": "Installeren & instellen"
+          },
+          {
+            "children": [],
+            "tagId": "IntentFinder:Televisie/tvmeteenkaartje/Gebruikenontdek",
+            "defaultTitle": "Gebruiken   Ontdek",
+            "title": "Gebruiken   Ontdek"
+          }
+        ],
+        "tagId": "IntentFinder:Televisie/tvmeteenkaartje",
+        "defaultTitle": "Tv met een kaartje (CI+)",
+        "title": "Tv met een kaartje (CI+)"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Televisie/Opnames",
+        "defaultTitle": "Opnames",
+        "title": "Opnames"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Televisie/streamzplaymoreplaysports",
+        "defaultTitle": "Streamz (+), Play More & Play Sports",
+        "title": "Streamz (+), Play More & Play Sports"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Televisie/playsportsgiftcard",
+        "defaultTitle": "Play (Sports) Gift Card",
+        "title": "Play (Sports) Gift Card"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Televisie/TVapps",
+        "defaultTitle": "TV-apps",
+        "title": "TV-apps"
+      }
+    ],
+    "tagId": "IntentFinder:Televisie",
+    "defaultTitle": "Televisie",
+    "description": "television",
+    "title": "Televisie"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Vastelijn/Storing",
+        "defaultTitle": "Storing",
+        "title": "Storing"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Vastelijn/Opties",
+        "defaultTitle": "Opties",
+        "title": "Opties"
+      }
+    ],
+    "tagId": "IntentFinder:Vastelijn",
+    "defaultTitle": "Vaste lijn",
+    "title": "Vaste lijn"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Aanrekening/bekijkjeaanrekening",
+        "defaultTitle": "Bekijk je aanrekening",
+        "title": "Bekijk je aanrekening"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Aanrekening/Digitaleaanrekening",
+        "defaultTitle": "Digitale aanrekening",
+        "title": "Digitale aanrekening"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Aanrekening/Betalingsmogelijkheden",
+        "defaultTitle": "Betalingsmogelijkheden",
+        "title": "Betalingsmogelijkheden"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Aanrekening/Aanrekeningonduidelijk",
+        "defaultTitle": "Aanrekening onduidelijk",
+        "title": "Aanrekening onduidelijk"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Aanrekening/Sociaaltarief",
+        "defaultTitle": "Sociaal tarief",
+        "title": "Sociaal tarief"
+      }
+    ],
+    "tagId": "IntentFinder:Aanrekening",
+    "defaultTitle": "Aanrekening",
+    "description": "administratie",
+    "title": "Aanrekening"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Installatieverhuis/Allesoverinstalleren",
+        "defaultTitle": "Alles over installeren",
+        "title": "Alles over installeren"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Installatieverhuis/Verhuisregelen",
+        "defaultTitle": "Verhuis regelen",
+        "description": "",
+        "title": "Verhuis regelen"
+      }
+    ],
+    "tagId": "IntentFinder:Installatieverhuis",
+    "defaultTitle": "Installatie & verhuis",
+    "description": "installation",
+    "title": "Installatie & verhuis"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:Jeklantgegevens/Loginwachtwoord",
+        "defaultTitle": "Login & wachtwoord",
+        "title": "Login & wachtwoord"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Jeklantgegevens/Contactgegevens",
+        "defaultTitle": "Contactgegevens",
+        "title": "Contactgegevens"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Jeklantgegevens/Abonnementen",
+        "defaultTitle": "Abonnementen",
+        "title": "Abonnementen"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:Jeklantgegevens/Privacy",
+        "defaultTitle": "Privacy",
+        "title": "Vie privée"
+      }
+    ],
+    "tagId": "IntentFinder:Jeklantgegevens",
+    "defaultTitle": "Je klantgegevens",
+    "title": "Je klantgegevens"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "tagId": "IntentFinder:onsaanbod/Ontdekonsaanbod",
+        "defaultTitle": "Ontdek ons aanbod",
+        "title": "Ontdek ons aanbod"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:onsaanbod/Toestelkortingen",
+        "defaultTitle": "Toestelkortingen",
+        "title": "Toestelkortingen"
+      },
+      {
+        "children": [],
+        "tagId": "IntentFinder:onsaanbod/Promoties",
+        "defaultTitle": "Promoties",
+        "title": "Promoties"
+      }
+    ],
+    "tagId": "IntentFinder:onsaanbod",
+    "defaultTitle": "Ons aanbod",
+    "title": "Ons aanbod"
+  }
+]

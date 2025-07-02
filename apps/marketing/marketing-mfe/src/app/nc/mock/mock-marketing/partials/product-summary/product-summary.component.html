@@ -1,0 +1,50 @@
+<div
+  class="col-md-4 width--full hide-until-md"
+  style="bottom: 0; right: 0; position: fixed; height: auto; background: #291d18; z-index: 10"
+  *ngIf="selectedProducts && selectedProducts.length > 0">
+  <div class="header-accordion" (click)="expandChevron()">
+    <div class="header-accordion--title">
+      <div class="mr--xxxs">
+        <div class="text-flow color-white">{{ 'ng.mock-marketing.lbl.products-added' | translate }}</div>
+      </div>
+      <div class="header-accordion--title__text">
+        <div class="pagination m-0">
+          <ul class="pagination__list">
+            <li class="pagination__list__item active ng-star-inserted">
+              <a class="pagination__list__item__active ng-star-inserted">{{ selectedProducts.length }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-accordion--link color-white">
+      <div class="header-accordion--link__icon">
+        <i class="icon-sm" [ngClass]="chevronExpanded ? 'icon-chevron-up' : 'icon-chevron-down'"></i>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="chevronExpanded">
+    <div class="row">
+      <div class="col-sm-7 mb-10 text-flow color-white"></div>
+    </div>
+    <div class="background-white">
+      <div class="text--xm px--m py--xs">
+        <div
+          class="row hardware-compare-open hide-until-md background-very-light-grey m--auto"
+          *ngFor="let product of selectedProducts; index as i">
+          <div class="col-md-8">
+            <div class="fl-left text--xm text-decoration--underline">{{ product.product.title }}</div>
+          </div>
+          <div class="col-md-2 display--flex justify-content--end">
+            <i class="icon icon-cross cursor--pointer" (click)="deleteProduct(i)"></i>
+          </div>
+        </div>
+        <div class="display--flex justify-content--end">
+          <button href="#" (click)="submit()" class="button button--primary">
+            {{ 'ng.mock-marketing.btn.place-order' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

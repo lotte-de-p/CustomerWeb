@@ -1,0 +1,28 @@
+import { Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { mergeMap, map } from 'rxjs/operators';
+import { of, catchError } from 'rxjs';
+import * as fromActions from './<%= fileName %>.actions';
+import { <%= dataAccessNameCapitalized %>Service } from '../<%= name %>.service';
+import { <%= dataAccessNameCapitalized %> } from '../<%= name %>.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class <%= effectsClassName %> {
+  constructor(
+  private readonly actions$: Actions,
+  private readonly <%= propertyName %>Service: <%= dataAccessNameCapitalized %>Service ) {}
+
+  <%= propertyName %>List$ = createEffect(() =>
+      this.actions$.pipe(
+        ofType(fromActions.get<%= dataAccessNameCapitalized %>List),
+        mergeMap(() => {
+          return this.<%= propertyName %>Service.get<%= dataAccessNameCapitalized %>List().pipe(
+            map((<%= propertyName %>List: <%= dataAccessNameCapitalized %>[]) => fromActions.get<%= dataAccessNameCapitalized %>ListSuccessAction({ <%= propertyName %>List: <%= propertyName %>List })),
+            catchError((error) => of(fromActions.getErrorAction({ error: error })))
+          );
+        })
+      )
+    );
+}

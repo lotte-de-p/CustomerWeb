@@ -1,0 +1,67 @@
+{
+  "product": {
+    "productid": 285,
+    "labelkey": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+    "visible": true,
+    "family": "NOT_APPLICABLE",
+    "producttype": "PRODUCT",
+    "weight": 2,
+    "apps": [
+      {
+        "labelkey": "support"
+      }
+    ],
+    "services": [
+      {
+        "labelkey": "watch.dtv.dtv",
+        "servicetype": "DTV",
+        "experience": {
+          "experiencetype": "WATCH",
+          "weight": 30
+        },
+        "weight": 0,
+        "specifications": [
+          {
+            "labelkey": "spec.dtv.tvtheek",
+            "value": "INCLUDED",
+            "visible": true,
+            "weight": 2
+          },
+          {
+            "labelkey": "spec.dtv.cableincluded",
+            "value": "INCLUDED",
+            "visible": true,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.dtv.optionalpackages",
+            "value": "INCLUDED",
+            "visible": true,
+            "weight": 3
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "productgroup": "OTHER",
+      "productsegment": "ALL"
+    },
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "Telenet TV",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Telenet TV",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+      },
+      {
+        "locale": "en",
+        "name": "Telenet TV",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+      }
+    ]
+  }
+}

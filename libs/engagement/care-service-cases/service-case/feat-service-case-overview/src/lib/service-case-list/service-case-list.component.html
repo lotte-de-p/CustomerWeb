@@ -1,0 +1,72 @@
+<div *ngIf="serviceCases" class="service-cases">
+  <div class="hide-from-md">
+    <tg-service-case-mobile-list
+      [serviceCases]="serviceCases"
+      [openServiceCases]="openServiceCases"
+      [closedServiceCases]="closedServiceCases"
+      [selectedServiceCase]="selectedServiceCase"
+      (selectServiceCase)="selectServiceCase.emit($event)"></tg-service-case-mobile-list>
+  </div>
+  <div class="hide-until-md">
+    <span class="text--l text-weight--l">{{ 'ng.service-cases.open-cases' | translate }}</span>
+    <div *ngIf="serviceCases.length === 0; else serviceCasesList" class="text--s">
+      {{ 'ng.service-cases.list.no-service-cases' | translate }}
+    </div>
+  </div>
+  <ng-template #serviceCasesList>
+    <div class="service-cases-list">
+      <div [attr.data-cy]="'open-service-cases'" class="mb--xxl">
+        <ng-container
+          [ngTemplateOutlet]="serviceCasesListTemplate"
+          [ngTemplateOutletContext]="{ serviceCases: openServiceCases }"></ng-container>
+      </div>
+      <div *ngIf="closedServiceCases" [attr.data-cy]="'closed-service-cases'">
+        <span class="text--l text-weight--l">{{ 'ng.service-cases.closed-cases' | translate }}</span>
+        <div *ngIf="closedServiceCases.length === 0; else closedServiceCasesTemplate" class="text--s">
+          {{ 'ng.service-cases.list.no-closed-service-cases' | translate }}
+        </div>
+        <ng-template #closedServiceCasesTemplate>
+          <ng-container
+            *ngIf="showHistory && closedServiceCases.length"
+            [ngTemplateOutlet]="serviceCasesListTemplate"
+            [ngTemplateOutletContext]="{ serviceCases: closedServiceCases }"></ng-container>
+          <div
+            class="text-decoration--underline cur-pointer"
+            [attr.data-cy]="'service-case-item-history-toggle'"
+            *ngIf="closedServiceCases.length"
+            (click)="toggleHistory()">
+            {{ 'ng.service-cases.list.' + (showHistory ? 'hide' : 'show') + '-history' | translate }}
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #serviceCasesListTemplate let-serviceCases="serviceCases">
+    <div
+      class="py--xs px--s my--xs display--flex gap--m cur-pointer service-case-list__item border--left border-width--l--l transition--all-3ms"
+      [ngClass]="
+        selectedServiceCase?.id === serviceCase.id
+          ? 'border-color--all--brand-primary'
+          : 'border-color--all--transparent'
+      "
+      [attr.data-cy]="'service-case-item'"
+      *ngFor="let serviceCase of serviceCases | orderBy"
+      (click)="selectServiceCase.emit(serviceCase)">
+      <care-service-case-icon [type]="serviceCase.type" style="margin-top: 5px"></care-service-case-icon>
+      <div>
+        <h6 *ngIf="selectedServiceCase?.id === serviceCase.id; else serviceCaseRegular" class="mt-0">
+          {{ 'ng.service-cases.your' | translate }}
+          {{ 'ng.service-cases.item.type.' + serviceCase.type + '.short' | translate }}
+        </h6>
+        <ng-template #serviceCaseRegular>
+          <span>
+            {{ 'ng.service-cases.your' | translate }}
+            {{ 'ng.service-cases.item.type.' + serviceCase.type + '.short' | translate }}
+          </span>
+        </ng-template>
+        <div class="color-white_32 text--s mb--xxxs" [attr.data-cy]="'service-case-item-id'">#{{ serviceCase.id }}</div>
+        <care-service-case-status [status]="serviceCase.status"></care-service-case-status>
+      </div>
+    </div>
+  </ng-template>
+</div>

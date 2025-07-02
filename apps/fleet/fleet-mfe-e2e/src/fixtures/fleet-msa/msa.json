@@ -1,0 +1,174 @@
+[
+  {
+    "masterAgreementName": "MSA 0000000001",
+    "phoneNumberRangeId": "a3f18daa-474e-4ac8-8333-f53d8c3bad1d",
+    "eligibleOffers": [
+      {
+        "label": "B-Fleet Travel1",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/BPRB2015",
+        "price": {
+          "currency": "Euro",
+          "value": "45.0000"
+        },
+        "options": [
+          {
+            "label": "Voice Europe 60 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/C5FA0001",
+            "price": {
+              "currency": "Euro",
+              "value": "0.0000"
+            },
+            "type": "Mandatory"
+          },
+          {
+            "label": "Voice Europe 180 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "45.0000"
+            },
+            "type": "Mandatory"
+          }
+        ],
+        "type": "Mandatory"
+      },
+      {
+        "label": "B-Fleet World1",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/C5FA0001",
+        "price": {
+          "currency": "Euro",
+          "value": "0.00"
+        },
+        "options": [
+          {
+            "label": "Voice Europe 60 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.0000"
+            },
+            "type": "Mandatory"
+          },
+          {
+            "label": "Voice Europe 250 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "5.0000"
+            },
+            "type": "Mandatory"
+          }
+        ],
+        "type": "Mandatory"
+      }
+    ],
+    "groupBundles": [
+      {
+        "label": "Group bundle 1",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/BFLT0001",
+        "price": {
+          "currency": "Euro",
+          "value": "65.0000"
+        },
+        "options": [],
+        "type": "Mandatory"
+      },
+      {
+        "label": "Group bundle 2",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/STEF0000",
+        "price": {
+          "currency": "Euro",
+          "value": "55.0000"
+        },
+        "options": [],
+        "type": "Mandatory"
+      }
+    ]
+  },
+  {
+    "masterAgreementName": "MSA 0000000002",
+    "phoneNumberRangeId": "a3f18daa-474e-4ac8-8333-f53d8c3bad1d",
+    "eligibleOffers": [
+      {
+        "label": "C-Fleet Travel2",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/BPRB2015",
+        "price": {
+          "currency": "Euro",
+          "value": "45.0000"
+        },
+        "options": [
+          {
+            "label": "Voice Europe 600 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/C5FA0001",
+            "price": {
+              "currency": "Euro",
+              "value": "0.0000"
+            },
+            "type": "Mandatory"
+          },
+          {
+            "label": "Voice Europe 180 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VOEF0180",
+            "price": {
+              "currency": "Euro",
+              "value": "45.0000"
+            },
+            "type": "Mandatory"
+          }
+        ],
+        "type": "Mandatory"
+      },
+      {
+        "label": "C-Fleet World2",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/C5FA0001",
+        "price": {
+          "currency": "Euro",
+          "value": "0.00"
+        },
+        "options": [
+          {
+            "label": "Voice Europe 600 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VOEF0060",
+            "price": {
+              "currency": "Euro",
+              "value": "4.0000"
+            },
+            "type": "Mandatory"
+          },
+          {
+            "label": "Voice Europe 250 MIN",
+            "specurl": "{{STUBBING_URL}}/omapi/public/product/VWME0250",
+            "price": {
+              "currency": "Euro",
+              "value": "5.0000"
+            },
+            "type": "Mandatory"
+          }
+        ],
+        "type": "Mandatory"
+      }
+    ],
+    "groupBundles": [
+      {
+        "label": "Group bundle 1",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/C5FA0001",
+        "price": {
+          "currency": "Euro",
+          "value": "65.0000"
+        },
+        "options": [],
+        "type": "Mandatory"
+      },
+      {
+        "label": "Group bundle 2",
+        "specurl": "{{STUBBING_URL}}/omapi/public/product/STEF0000",
+        "price": {
+          "currency": "Euro",
+          "value": "55.0000"
+        },
+        "options": [],
+        "type": "Mandatory"
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <h1>Sales-mfe up and running!</h1>
+    <base href="/" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://atomic.prd.apps.telenet.be/styles/telenet.css" rel="stylesheet" />
+    <script>
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.int.telenet.be/ocapi',
+          'omapi-url': 'https://api.int.telenet.be/omapi',
+          'omapi-query-url': 'https://api.int.telenet.be/omapi-query/public',
+          'openid-auth-url': 'https://login.int.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.int.telenet.be/openid',
+          'gateway-url': 'https://api.int.telenet.be',
+          'sofy-url': 'https://int.sofy-dev.awscloud.external.telenet.be',
+          'gsa-url': 'https://api.int.telenet.be/searchapi/gsa/api/',
+          'openid-client-id': 'ocapi',
+          'oauth-callback-url': '',
+          'php-eshop-url': 'https://shop.int.telenet.be/shop/nl',
+          'base-ac-systems-url': 'https://base.rest.ac-systems.com',
+          'recaptcha-api-url': 'https://www.google.com/recaptcha/api.js',
+          'recaptcha-site-key': '6Ld15hAbAAAAABL4l8LoTnBv-CBkhYE8Ukwc3aMQ',
+          'recaptcha-v3-site-key': '6Lc2hCQbAAAAACaxx5NvByzCNYI4NSpgqsrrT4Wp',
+          'is-author-mode': 'false',
+          'kbc-post-message-receiver-origin-url': 'kbcPostMessageReceiverOriginUrl',
+          'oauth-url-pid': 'oauthUrlPid',
+          'oauth-callback-url-pid': 'oauthCallbackUrlPid',
+          'search-index-parameter': 'searchIndexParameter',
+        };
+      })();
+    </script>
+  </head>
+  <body class="sales-page theme--inherit">
+    <div class="content-wrap" id="app">
+      <header>
+        <div class="header header-base header-base--sales background-white width--full" id="header-base">
+          <div class="display--flex justify-content--between header-container">
+            <div>
+              <div class="cmp cmp-inheritance-component">
+                <div class="cmp cmp-logo">
+                  <div class="logo">
+                    <a aria-label="Telenet – Home" href="#"
+                      ><img
+                        alt="Telenet – Home"
+                        class="hidden-tablet-desktop"
+                        src="https://www.trg.telenet.be/content/dam/www-telenet-be/img/generic/Logos%20&%20Trademarks%20for%20content/ogimage/telenet_headerlogo.svg"
+                    /></a>
+                    <a aria-label="Telenet – Home" href="#"
+                      ><img
+                        alt="Telenet – Home"
+                        class="hidden-mobile-tablet"
+                        src="https://www.trg.telenet.be/content/dam/www-telenet-be/img/generic/Logos%20&%20Trademarks%20for%20content/ogimage/telenet_headerlogo.svg"
+                    /></a>
+                    <a aria-label="Telenet – Home" href="#"
+                      ><img
+                        alt="Telenet – Home"
+                        class="hidden-mobile-desktop"
+                        src="https://www.trg.telenet.be/content/dam/www-telenet-be/img/generic/Logos%20&%20Trademarks%20for%20content/ogimage/telenet_headerlogo.svg"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="display--flex align-items--center user-action">
+              <div class="cmp cmp-inheritance-component">
+                <div class="cmp cmp-shopping-cart-icon">
+                  <div class="header-shopping text-align--center pl--xxs">
+                    <div>
+                      <div
+                        class="cart-icon cart-price-change-div align-items--center justify-content--center cart-price-change"
+                        id="icons-with-notification">
+                        <div
+                          class="default-shopping-cart-icon icon-md icons-with-notification icon-basket position--relative color-text"></div>
+                        <div class="cart-icon__label font-weight--bold">Mandje</div>
+                        <p class="text--xs hidden-mobile">Winkelmand</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="sales-page__container" id="body-container">
+        <div class="sales-page__container__content">
+          <div class="sales-page__container__content__section width--full">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@import 'node_modules/atomic-library/public/styles/telenet.css';
+
+mat-sidenav div mat-toolbar {
+  font-size: 2rem;
+}
+div mat-nav-list > a {
+  font-size: large;
+}
+
+div mat-nav-list > a:hover {
+  font-size: large;
+  color: black;
+  font-weight: bold;
+  background-color: #d3d1d1;
+}

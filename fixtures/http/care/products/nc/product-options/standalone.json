@@ -1,0 +1,1552 @@
+{
+  "mutuallyExclusiveGroups": ["Mobile data", "Calls to numbers in Europe", "BASE Cloud"],
+  "groupedOptions": [
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "VOEU0060",
+          "isYupProduct": false,
+          "externalProductCode": "VOEU0060",
+          "productType": "OPTION",
+          "categories": ["voice-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers in Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers in Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers in Europa"
+          },
+          "labelKey": "Voice Europe 60 MIN",
+          "visible": true,
+          "weight": 60,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-voice-europe-60-min",
+                  "unit": "EUR",
+                  "value": "5",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "60 minuten om te bellen naar Europese landen of in Europa"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "60 minuten bellen naar en in Europa",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+            },
+            {
+              "locale": "fr",
+              "name": "60 minutes d'appel vers et en Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+            },
+            {
+              "locale": "en",
+              "name": "60 minutes calling to and in Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 5,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "60 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+        },
+        "price": { "currency": "Euro", "amount": "5,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "VOEU0180",
+          "isYupProduct": false,
+          "externalProductCode": "VOEU0180",
+          "productType": "OPTION",
+          "categories": ["voice-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers in Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers in Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers in Europa"
+          },
+          "labelKey": "Voice Europe 180 MIN",
+          "visible": true,
+          "weight": 70,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-voice-europe-180-min",
+                  "unit": "EUR",
+                  "value": "10",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "180 minuten om te bellen naar Europese landen of in Europa"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "180 minuten bellen naar en in Europa",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            },
+            {
+              "locale": "fr",
+              "name": "180 minutes d'appel vers et en Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            },
+            {
+              "locale": "en",
+              "name": "180 minutes calling to and in Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "180 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+        },
+        "price": { "currency": "Euro", "amount": "10,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "VOEU0600",
+          "isYupProduct": false,
+          "externalProductCode": "VOEU0600",
+          "productType": "OPTION",
+          "categories": ["voice-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers in Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers in Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers in Europa"
+          },
+          "labelKey": "Voice Europe 600 MIN",
+          "visible": true,
+          "weight": 80,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-voice-europe-600-min",
+                  "unit": "EUR",
+                  "value": "15",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "600 minuten om te bellen naar Europese landen of in Europa"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "600 minuten bellen naar en in Europa",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-600-min.png"
+            },
+            {
+              "locale": "fr",
+              "name": "600 minutes d'appel vers et en Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-600-min.png"
+            },
+            {
+              "locale": "en",
+              "name": "600 minutes calling to and in Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-600-min.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 15,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "600 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-600-min.png"
+        },
+        "price": { "currency": "Euro", "amount": "15,00" },
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "WORL0010",
+          "isYupProduct": false,
+          "externalProductCode": "WORL0010",
+          "productType": "OPTION",
+          "categories": ["voice-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers outside Europe",
+            "weight": 50,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers buiten Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en dehors de l'Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers outside Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers buiten Europa"
+          },
+          "labelKey": "Option World minutes 10€",
+          "visible": true,
+          "weight": 90,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-world-minutes-10",
+                  "unit": "EUR",
+                  "value": "10",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "40 minuten bellen vanuit België naar 17 landen waaronder Algerije, Brazilië, Congo DR, Israël, Marokko, Turkije en de VS"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Wereld 10: 40 min. bellen naar 17 landen",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-10€.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Monde 10: 40 min. d'appels vers 17 pays",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-10€.png"
+            },
+            {
+              "locale": "en",
+              "name": "World 10: 40 minutes calling to 17 countries",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-10€.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Wereld 10: 40 min. bellen naar 17 landen",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-10€.png"
+        },
+        "price": { "currency": "Euro", "amount": "10,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "WORL0030",
+          "isYupProduct": false,
+          "externalProductCode": "WORL0030",
+          "productType": "OPTION",
+          "categories": ["options-with-etf", "voice-options"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers outside Europe",
+            "weight": 50,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers buiten Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en dehors de l'Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers outside Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers buiten Europa"
+          },
+          "labelKey": "Option World minutes 30€",
+          "visible": true,
+          "weight": 100,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-world-minutes-30",
+                  "unit": "EUR",
+                  "value": "15",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "150 minuten bellen vanuit België naar 17 landen waaronder Algerije, Brazilië, Congo DR, Israël, Marokko, Turkije en de VS"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Wereld 30: 150 min. bellen naar 17 landen",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-30€.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Monde 30: 150 min. d'appels vers 17 pays",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-30€.png"
+            },
+            {
+              "locale": "en",
+              "name": "World 30: 150 minutes calling to 17 countries",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-30€.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 30,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Wereld 30: 150 min. bellen naar 17 landen",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/option-world-minutes-30€.png"
+        },
+        "price": { "currency": "Euro", "amount": "30,00" },
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "MOIN0000",
+          "isYupProduct": false,
+          "externalProductCode": "MOIN0000",
+          "productType": "OPTION",
+          "categories": ["options-with-etf", "data-options"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Mobile Data in Europe Outside the EU zone (CH/JE/MC)",
+            "weight": 60,
+            "mutualExclusion": false,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Surfen in Zwitserland, Jersey en Monaco"
+              },
+              {
+                "locale": "fr",
+                "name": "Surfer en Suisse, Jersey et Monaco"
+              },
+              {
+                "locale": "en",
+                "name": "Mobile internet in Switzerland, Jersey and Monaco"
+              }
+            ],
+            "localizedName": "Surfen in Zwitserland, Jersey en Monaco"
+          },
+          "labelKey": "Mobile data out of EU Europe",
+          "visible": true,
+          "weight": 110,
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "mobile-data-out-of-eu-europe",
+                  "unit": "EUR",
+                  "value": "15",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "1 GB mobiele data in Zwitzerland, Jersey en Monaco"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "SURF" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Mobiel internet in Europa buiten EU",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-data-out-of-eu-europe.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Internet Mobile Europe hors EU",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-data-out-of-eu-europe.png"
+            },
+            {
+              "locale": "en",
+              "name": "Mobile internet in Europe outside the EU",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-data-out-of-eu-europe.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 15,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Mobiel internet in Europa buiten EU",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/mobile-data-out-of-eu-europe.png"
+        },
+        "price": { "currency": "Euro", "amount": "15,00" },
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "INTW0100",
+          "isYupProduct": false,
+          "externalProductCode": "INTW0100",
+          "productType": "OPTION",
+          "categories": ["data-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Mobile data",
+            "weight": 70,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Mobiele data buiten Europa",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "fr",
+                "name": "Données mobiles en dehors de l'Europe",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "en",
+                "name": "Mobile data outside Europe",
+                "logo": "AEM to fill DAM path"
+              }
+            ],
+            "localizedName": "Mobiele data buiten Europa"
+          },
+          "labelKey": "Dataroaming Preferred netw L",
+          "visible": true,
+          "weight": 120,
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "dataroaming-preferred-netw-l",
+                  "unit": "EUR",
+                  "value": "25",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "100 MB mobiele data voor gebruik buiten Europa",
+                    "logo": "AEM to fill DAM path"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "SURF" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Mobiel internet World 100 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-l.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Internet Mobile World 100 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-l.png"
+            },
+            {
+              "locale": "en",
+              "name": "Mobile Internet World 100 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-l.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 25,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Mobiel internet World 100 MB",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-l.png"
+        },
+        "price": { "currency": "Euro", "amount": "25,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "INTW0500",
+          "isYupProduct": false,
+          "externalProductCode": "INTW0500",
+          "productType": "OPTION",
+          "categories": ["data-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Mobile data",
+            "weight": 70,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Mobiele data buiten Europa",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "fr",
+                "name": "Données mobiles en dehors de l'Europe",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "en",
+                "name": "Mobile data outside Europe",
+                "logo": "AEM to fill DAM path"
+              }
+            ],
+            "localizedName": "Mobiele data buiten Europa"
+          },
+          "labelKey": "Dataroaming Preferred netw XL",
+          "visible": true,
+          "weight": 130,
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "dataroaming-preferred-netw-xl",
+                  "unit": "EURO",
+                  "value": "85",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "500 MB mobiele data voor gebruik buiten Europa",
+                    "logo": "AEM to fill DAM path"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "SURF" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Mobiel internet World 500 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xl.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Internet Mobile World 500 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xl.png"
+            },
+            {
+              "locale": "en",
+              "name": "Mobile Internet World 500 MB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xl.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 85,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Mobiel internet World 500 MB",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xl.png"
+        },
+        "price": { "currency": "Euro", "amount": "85,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "INTW0001",
+          "isYupProduct": false,
+          "externalProductCode": "INTW0001",
+          "productType": "OPTION",
+          "categories": ["data-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Mobile data",
+            "weight": 70,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Mobiele data buiten Europa",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "fr",
+                "name": "Données mobiles en dehors de l'Europe",
+                "logo": "AEM to fill DAM path"
+              },
+              {
+                "locale": "en",
+                "name": "Mobile data outside Europe",
+                "logo": "AEM to fill DAM path"
+              }
+            ],
+            "localizedName": "Mobiele data buiten Europa"
+          },
+          "labelKey": "Dataroaming Preferred netw XXL",
+          "visible": true,
+          "weight": 140,
+          "services": [
+            {
+              "serviceType": "MOBILE_INTERNET",
+              "specifications": [
+                {
+                  "labelKey": "dataroaming-preferred-netw-xxl",
+                  "unit": "EUR",
+                  "value": "145",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "1 GB mobiele data voor gebruik buiten Europa",
+                    "logo": "AEM to fill DAM path"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "SURF" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "Mobiel internet World 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xxl.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Internet Mobile World 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xxl.png"
+            },
+            {
+              "locale": "en",
+              "name": "Mobile Internet World 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xxl.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 145,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "Mobiel internet World 1 GB",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/dataroaming-preferred-netw-xxl.png"
+        },
+        "price": { "currency": "Euro", "amount": "145,00" },
+        "otherPlatformWarningMsg": false
+      }
+    ],
+    [
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "CLOD0001",
+          "isYupProduct": false,
+          "externalProductCode": "CLOD0001",
+          "productType": "OPTION",
+          "categories": ["other-options", "options-with-etf", "cloud-options"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "BASE Cloud",
+            "weight": 80,
+            "mutualExclusion": true,
+            "localizedContent": [
+              { "locale": "nl", "name": "BASE Cloud" },
+              { "locale": "fr", "name": "BASE Cloud" },
+              { "locale": "en", "name": "BASE Cloud" }
+            ],
+            "localizedName": "BASE Cloud"
+          },
+          "labelKey": "BASE cloud 1 GB",
+          "visible": true,
+          "weight": 150,
+          "services": [
+            {
+              "serviceType": "GENERAL",
+              "specifications": [
+                {
+                  "labelKey": "spec-cloudservice-storage-1gb",
+                  "unit": "EUR",
+                  "value": "0",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "1 GB opslagruimte. Met BASE Cloud kan u al uw contacten, foto's, filmpjes, sms'en en andere bestanden veilig online opslaan. Zo kan u ze op al uw schermen bekijken, waar u ook bent."
+                  }
+                }
+              ],
+              "experience": { "experienceType": "GENERAL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "BASE cloud 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-1-gb.png"
+            },
+            {
+              "locale": "fr",
+              "name": "BASE cloud 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-1-gb.png"
+            },
+            {
+              "locale": "en",
+              "name": "BASE cloud 1 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-1-gb.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 0,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "BASE cloud 1 GB",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-1-gb.png"
+        },
+        "price": { "currency": "Euro", "amount": "0,00" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "CLOD0002",
+          "isYupProduct": false,
+          "externalProductCode": "CLOD0002",
+          "productType": "OPTION",
+          "categories": ["options-with-etf", "other-options", "cloud-options"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "BASE Cloud",
+            "weight": 80,
+            "mutualExclusion": true,
+            "localizedContent": [
+              { "locale": "nl", "name": "BASE Cloud" },
+              { "locale": "fr", "name": "BASE Cloud" },
+              { "locale": "en", "name": "BASE Cloud" }
+            ],
+            "localizedName": "BASE Cloud"
+          },
+          "labelKey": "BASE cloud 32 GB",
+          "visible": true,
+          "weight": 160,
+          "services": [
+            {
+              "serviceType": "GENERAL",
+              "specifications": [
+                {
+                  "labelKey": "spec-cloudservice-storage-1gb",
+                  "unit": "EUR",
+                  "value": "1,5",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "32 GB opslagruimte. Met BASE Cloud kan u al uw contacten, foto's, filmpjes, sms'en en andere bestanden veilig online opslaan. Zo kan u ze op al uw schermen bekijken, waar u ook bent."
+                  }
+                }
+              ],
+              "experience": { "experienceType": "GENERAL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "BASE cloud 32 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-32-gb.png"
+            },
+            {
+              "locale": "fr",
+              "name": "BASE cloud 32 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-32-gb.png"
+            },
+            {
+              "locale": "en",
+              "name": "BASE cloud 32 GB",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-32-gb.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 1,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "BASE cloud 32 GB",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-32-gb.png"
+        },
+        "price": { "currency": "Euro", "amount": "1,50" },
+        "otherPlatformWarningMsg": false
+      },
+      {
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "CLOD0003",
+          "isYupProduct": false,
+          "externalProductCode": "CLOD0003",
+          "productType": "OPTION",
+          "categories": ["other-options", "options-with-etf", "cloud-options"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "BASE Cloud",
+            "weight": 80,
+            "mutualExclusion": true,
+            "localizedContent": [
+              { "locale": "nl", "name": "BASE Cloud" },
+              { "locale": "fr", "name": "BASE Cloud" },
+              { "locale": "en", "name": "BASE Cloud" }
+            ],
+            "localizedName": "BASE Cloud"
+          },
+          "labelKey": "BASE cloud Unlimited",
+          "visible": true,
+          "weight": 170,
+          "services": [
+            {
+              "serviceType": "GENERAL",
+              "specifications": [
+                {
+                  "labelKey": "spec-cloudservice-storage-1gb",
+                  "unit": "EUR",
+                  "value": "9",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "Onbeperkte opslagruimte. Met BASE Cloud kan u al uw contacten, foto's, filmpjes, sms'en en andere bestanden veilig online opslaan. Zo kan u ze op al uw schermen bekijken, waar u ook bent."
+                  }
+                }
+              ],
+              "experience": { "experienceType": "GENERAL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "BASE cloud onbeperkt",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-unlimited.png"
+            },
+            {
+              "locale": "fr",
+              "name": "BASE cloud illimité",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-unlimited.png"
+            },
+            {
+              "locale": "en",
+              "name": "BASE cloud Unlimited",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-unlimited.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 9,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "BASE cloud onbeperkt",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/base-cloud-unlimited.png"
+        },
+        "price": { "currency": "Euro", "amount": "9,00" },
+        "otherPlatformWarningMsg": false
+      }
+    ]
+  ],
+  "productType": "",
+  "productIdentifier": "0487941434",
+  "currentOption": {
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "VOEU0060",
+      "isYupProduct": false,
+      "externalProductCode": "VOEU0060",
+      "productType": "OPTION",
+      "categories": ["voice-options", "options-with-etf"],
+      "customerCategories": ["residential", "production-test", "eventdemo"],
+      "subCategory": {
+        "name": "Calls to numbers in Europe",
+        "weight": 40,
+        "mutualExclusion": true,
+        "localizedContent": [
+          { "locale": "nl", "name": "Bellen naar nummers in Europa" },
+          {
+            "locale": "fr",
+            "name": "Appeler vers les numéros en Europe"
+          },
+          { "locale": "en", "name": "Calling to numbers in Europe" }
+        ],
+        "localizedName": "Bellen naar nummers in Europa"
+      },
+      "labelKey": "Voice Europe 60 MIN",
+      "visible": true,
+      "weight": 60,
+      "services": [
+        {
+          "serviceType": "MOBILE_CALLING",
+          "specifications": [
+            {
+              "labelKey": "option-voice-europe-60-min",
+              "unit": "EUR",
+              "value": "5",
+              "visible": true,
+              "weight": "0",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "60 minuten om te bellen naar Europese landen of in Europa"
+              }
+            }
+          ],
+          "experience": { "experienceType": "CALL" }
+        }
+      ],
+      "apps": [],
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "name": "60 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+        },
+        {
+          "locale": "fr",
+          "name": "60 minutes d'appel vers et en Europe",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+        },
+        {
+          "locale": "en",
+          "name": "60 minutes calling to and in Europe",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+        }
+      ],
+      "shortDescription": {},
+      "visibilityRules": { "conditionalVisibility": false },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "OTHER",
+        "productSubGroup": "",
+        "productSegment": "RMD",
+        "priceInclVat": 5,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": false,
+      "name": "60 minuten bellen naar en in Europa",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+    },
+    "price": { "currency": "Euro", "amount": "5,00" },
+    "otherPlatformWarningMsg": false,
+    "isFree": false
+  },
+  "activeProduct": {
+    "success": true,
+    "id": "9161288241513412365",
+    "locationId": "9161288219713410905",
+    "identifier": "0487941434",
+    "msisdn": "32487941434",
+    "accountNumber": "500504592",
+    "label": "20 Based on you",
+    "productInfo": {
+      "internalCategory": "POST-PAID-MOBILE",
+      "productId": "BOYO0020",
+      "isYupProduct": false,
+      "externalProductCode": "BOYO0020",
+      "productType": "MOBILE",
+      "categories": ["for-5-discount", "based-on-you-plans", "post-paid-mobile", "base-tadaam-discount"],
+      "customerCategories": ["residential", "production-test", "eventdemo"],
+      "subCategory": {},
+      "labelKey": "20 Based on you",
+      "visible": true,
+      "weight": 30,
+      "services": [
+        {
+          "serviceType": "MOBILE_CALLING",
+          "specifications": [
+            {
+              "labelKey": "20-based-on-you---national-and-eu-calls",
+              "unit": "minutes",
+              "value": "Unlimited",
+              "visible": true,
+              "weight": "30",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Bellen naar alle nummers in België (ook geldig in de EU-zone)"
+              }
+            },
+            {
+              "labelKey": "20-based-on-you---national-and-eu-sms",
+              "unit": "number",
+              "value": "unlimited",
+              "visible": true,
+              "weight": "40",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Sms'en"
+              }
+            }
+          ],
+          "experience": { "experienceType": "CALL" }
+        },
+        {
+          "serviceType": "MOBILE_MONETARY",
+          "specifications": [
+            {
+              "labelKey": "20-based-on-you-monthly-allowance",
+              "unit": "EUR",
+              "value": "15",
+              "visible": true,
+              "weight": "10",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Maandelijks bedrag"
+              }
+            }
+          ],
+          "experience": { "experienceType": "GENERAL" }
+        },
+        {
+          "serviceType": "MOBILE_INTERNET",
+          "specifications": [
+            {
+              "labelKey": "20-based-on-you---national-and-eu-data",
+              "unit": "GB",
+              "minValue": "0",
+              "maxValue": "8",
+              "visible": true,
+              "weight": "20",
+              "localizedContent": {
+                "locale": "nl",
+                "name": "Mobiele data in België en de EU-zone"
+              }
+            }
+          ],
+          "experience": { "experienceType": "SURF" }
+        }
+      ],
+      "apps": [],
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "name": "20 Based on you",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/20-based-on-you.png"
+        },
+        {
+          "locale": "fr",
+          "name": "20 Based on you",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/20-based-on-you.png"
+        },
+        {
+          "locale": "en",
+          "name": "20 Based on you",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/20-based-on-you.png"
+        }
+      ],
+      "shortDescription": {
+        "localizedContent": {
+          "locale": "nl",
+          "name": "Onbeperkt bellen en sms'en en 8 GB mobiel internet. Wat je niet verbruikt, neem je mee naar volgende maand."
+        }
+      },
+      "rates": [
+        {
+          "type": "mobile-data",
+          "unit": "MB",
+          "cost": "0,001831",
+          "currency": "EUR"
+        },
+        {
+          "type": "call-to-other-networks",
+          "unit": "MIN",
+          "cost": "0",
+          "currency": "EUR"
+        }
+      ],
+      "visibilityRules": { "conditionalVisibility": false },
+      "unlimited": false,
+      "eligibleForDiscount": false,
+      "priceType": "Recurrent Charge",
+      "characteristics": {
+        "productGroup": "OTHER",
+        "productSubGroup": "",
+        "productSegment": "RMD",
+        "priceInclVat": 20,
+        "recipientsMandatory": false,
+        "esimAvailable": false
+      },
+      "usageBasedRatePlan": false,
+      "requiresInstallation": false,
+      "name": "20 Based on you",
+      "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/20-based-on-you.png",
+      "usageLimits": {
+        "outOfBundle": {
+          "preferenceGroup": "MobileCB_RMD",
+          "limits": [
+            {
+              "communicationPreferenceType": "CbLimit50",
+              "communicationPreferenceTypeValue": "50",
+              "isEditable": true,
+              "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+            },
+            {
+              "communicationPreferenceType": "CbLimit90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+            },
+            {
+              "communicationPreferenceType": "CbLimit100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": true,
+              "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+            }
+          ]
+        },
+        "premiumService": {
+          "preferenceGroup": "PremiumServices",
+          "limits": [
+            {
+              "communicationPreferenceType": "OutBundleFraud",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "OutBundlePremiumServices",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      },
+      "usagenotifications": {
+        "mobile": [
+          {
+            "category": "outofbundle",
+            "preferenceGroup": "MobileOutbundleRMD",
+            "threshold": [
+              {
+                "communicationPreferenceType": "OutBundleRMD",
+                "communicationPreferenceTypeValue": "NA",
+                "isEditable": true,
+                "values": [
+                  "0 Euro",
+                  "5 Euro",
+                  "10 Euro",
+                  "15 Euro",
+                  "25 Euro",
+                  "30 Euro",
+                  "50 Euro",
+                  "75 Euro",
+                  "100 Euro",
+                  "20 Euro"
+                ]
+              }
+            ]
+          },
+          {
+            "category": "included",
+            "preferenceGroup": "MobileIncluded",
+            "threshold": [
+              {
+                "communicationPreferenceType": "Included75",
+                "communicationPreferenceTypeValue": "75",
+                "isEditable": true,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "Included90",
+                "communicationPreferenceTypeValue": "90",
+                "isEditable": true,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "Included100",
+                "communicationPreferenceTypeValue": "100",
+                "isEditable": false,
+                "values": []
+              }
+            ]
+          },
+          {
+            "category": "option",
+            "preferenceGroup": "MobileOptionsIncluded",
+            "threshold": [
+              {
+                "communicationPreferenceType": "IncludedOptions90",
+                "communicationPreferenceTypeValue": "90",
+                "isEditable": true,
+                "values": []
+              },
+              {
+                "communicationPreferenceType": "IncludedOptions100",
+                "communicationPreferenceTypeValue": "100",
+                "isEditable": false,
+                "values": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": "ACTIVE",
+    "smartPhones": [],
+    "options": [
+      {
+        "label": "Voice Europe 180 MIN",
+        "productInfo": {
+          "internalCategory": "POST-PAID-MOBILE",
+          "productId": "VOEU0180",
+          "isYupProduct": false,
+          "externalProductCode": "VOEU0180",
+          "productType": "OPTION",
+          "categories": ["voice-options", "options-with-etf"],
+          "customerCategories": ["residential", "production-test", "eventdemo"],
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar nummers in Europa"
+              },
+              {
+                "locale": "fr",
+                "name": "Appeler vers les numéros en Europe"
+              },
+              {
+                "locale": "en",
+                "name": "Calling to numbers in Europe"
+              }
+            ],
+            "localizedName": "Bellen naar nummers in Europa"
+          },
+          "labelKey": "Voice Europe 180 MIN",
+          "visible": true,
+          "weight": 70,
+          "services": [
+            {
+              "serviceType": "MOBILE_CALLING",
+              "specifications": [
+                {
+                  "labelKey": "option-voice-europe-180-min",
+                  "unit": "EUR",
+                  "value": "10",
+                  "visible": true,
+                  "weight": "0",
+                  "localizedContent": {
+                    "locale": "nl",
+                    "name": "180 minuten om te bellen naar Europese landen of in Europa"
+                  }
+                }
+              ],
+              "experience": { "experienceType": "CALL" }
+            }
+          ],
+          "apps": [],
+          "localizedContent": [
+            {
+              "locale": "nl",
+              "name": "180 minuten bellen naar en in Europa",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            },
+            {
+              "locale": "fr",
+              "name": "180 minutes d'appel vers et en Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            },
+            {
+              "locale": "en",
+              "name": "180 minutes calling to and in Europe",
+              "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+            }
+          ],
+          "shortDescription": {},
+          "visibilityRules": { "conditionalVisibility": false },
+          "unlimited": false,
+          "eligibleForDiscount": false,
+          "priceType": "Recurrent Charge",
+          "characteristics": {
+            "productGroup": "OTHER",
+            "productSubGroup": "",
+            "productSegment": "RMD",
+            "priceInclVat": 10,
+            "recipientsMandatory": false,
+            "esimAvailable": false
+          },
+          "usageBasedRatePlan": false,
+          "requiresInstallation": false,
+          "name": "180 minuten bellen naar en in Europa",
+          "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-180-min.png"
+        },
+        "status": "ACTIVE",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentTotal": "5,95",
+            "recurrentDiscount": "0,00",
+            "recurrentDiscounted": "5,95"
+          }
+        },
+        "contract": {
+          "obligationEndDate": "2021-09-11T02:00:38+02:00",
+          "duration": "1",
+          "price": {}
+        },
+        "discountItem": {},
+        "rank": "3"
+      }
+    ],
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "20,00",
+        "recurrentDiscount": "0,00",
+        "recurrentDiscounted": "20,00"
+      }
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "20,00",
+        "recurrentDiscount": "0,00",
+        "recurrentDiscounted": "20,00"
+      }
+    },
+    "discountItem": {},
+    "hasUsage": true
+  }
+}

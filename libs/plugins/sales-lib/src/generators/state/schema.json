@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "State",
+  "title": "state",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "state",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the name of the lib"
+    }
+  },
+  "required": ["name"]
+}

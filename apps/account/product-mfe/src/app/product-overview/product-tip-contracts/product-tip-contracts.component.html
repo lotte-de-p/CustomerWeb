@@ -1,0 +1,100 @@
+<div class="product-overview__section" *ngFor="let tipContract of tipContracts">
+  <div [attr.data-cy]="'dropdown'" class="hidden-mobile">
+    <div class="product-overview__section__info cursor--pointer" (click)="addProductViewEventToDataLayer(tipContract)">
+      <div class="product-overview__section__info__description">
+        <div class="description description--first-field">
+          <div>
+            <i [ngClass]="tipContract.showDetails ? 'icon-chevron-up' : 'icon-chevron-down'"></i>
+          </div>
+          <div class="plan-name">
+            <span [attr.data-cy]="'plan-name'">{{ tipContract.planName }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden-desktop">
+    <div class="product-overview__section__info">
+      <div class="product-overview__section__info__description">
+        <div class="description description--first-field">
+          <div class="plan-title">
+            {{ 'ng.product-overview.lbl.product' | translate }}
+          </div>
+          <div class="plan-name">
+            <span [attr.data-cy]="'mobile-plan-name'">
+              {{ tipContract.planName }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div
+    class="product-overview__section__more-info"
+    *ngIf="!tipContract.showDetails"
+    (click)="addProductViewEventToDataLayer(tipContract)">
+    <span>
+      {{ 'ng.product-overview.lbl.more-info' | translate }}
+    </span>
+    <div>
+      <i [attr.data-cy]="'open-mobile-dropdown'" class="icon-chevron-down"></i>
+    </div>
+  </div>
+
+  <div *ngIf="tipContract.showDetails" class="product-overview__section--container">
+    <div class="product-overview__section__details">
+      <div class="details__heading">
+        {{ 'ng.product-overview.text.specifications' | translate }}
+      </div>
+      <div class="details__data">
+        <div class="data--key">
+          {{ 'ng.product-overview.lbl.tipmrc' | translate }}
+        </div>
+        <div class="data--value">
+          <span>
+            {{ 'ng.product-overview.lbl.tip-currency' | translate }}
+          </span>
+          <span *ngIf="tipContract.tipMRC" [attr.data-cy]="'tip-mrc'">
+            {{ tipContract.tipMRC.vatExcl }}
+          </span>
+        </div>
+      </div>
+      <div class="details__data">
+        <div class="data--key">
+          {{ 'ng.product-overview.lbl.tipnrc' | translate }}
+        </div>
+
+        <div class="data--value">
+          <span>
+            {{ 'ng.product-overview.lbl.tip-currency' | translate }}
+          </span>
+          <span *ngIf="tipContract.tipNRC" [attr.data-cy]="'tip-nrc'">
+            {{ tipContract.tipNRC.vatExcl }}
+          </span>
+        </div>
+      </div>
+      <div class="details__data">
+        <div class="data--key" data-translate="product-overview.lbl.tipusage">
+          {{ 'ng.product-overview.lbl.tipusage' | translate }}
+        </div>
+        <div class="data--value">
+          <span>
+            {{ 'ng.product-overview.lbl.tip-currency' | translate }}
+          </span>
+          <span *ngIf="tipContract.tipUsage" [attr.data-cy]="'tip-usage'">
+            {{ tipContract.tipUsage.vatExcl }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="product-overview__section__more-info" (click)="addProductViewEventToDataLayer(tipContract)">
+      <span>
+        {{ 'ng.product-overview.lbl.less-info' | translate }}
+      </span>
+      <div>
+        <i [attr.data-cy]="'close-mobile-dropdown'" class="icon-chevron-up"></i>
+      </div>
+    </div>
+  </div>
+</div>

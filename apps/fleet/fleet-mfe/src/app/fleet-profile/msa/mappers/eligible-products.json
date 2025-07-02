@@ -1,0 +1,226 @@
+[
+  {
+    "id": "BOYO0020",
+    "label": "20 Based on you",
+    "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0020",
+    "eligibleOffers": [
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0015",
+        "price": {
+          "currency": "Euro",
+          "amount": "15,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0027",
+        "price": {
+          "currency": "Euro",
+          "amount": "27,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/BASE0000",
+        "price": {
+          "currency": "Euro",
+          "amount": "0,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTA0010",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTA0020",
+        "price": {
+          "currency": "Euro",
+          "amount": "20,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTA0030",
+        "price": {
+          "currency": "Euro",
+          "amount": "30,00"
+        }
+      },
+      {
+        "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0040",
+        "price": {
+          "currency": "Euro",
+          "amount": "40,00"
+        }
+      }
+    ],
+    "optionProducts": [
+      {
+        "id": "VOEU0180",
+        "label": "Voice Europe 180 MIN",
+        "category": "mobile",
+        "specurl": "https://api.sup.base.be/omapi/public/product/VOEU0180",
+        "price": {
+          "currency": "Euro",
+          "amount": "15,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "VOEU0060",
+        "label": "Voice Europe 60 MIN",
+        "specurl": "https://api.sup.base.be/omapi/public/product/VOEU0060",
+        "price": {
+          "currency": "Euro",
+          "amount": "5,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "VOEU0600",
+        "label": "Voice Europe 600 MIN",
+        "specurl": "https://api.sup.base.be/omapi/public/product/VOEU0600",
+        "price": {
+          "currency": "Euro",
+          "amount": "15,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "INTW0100",
+        "label": "Dataroaming Preferred netw L",
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTW0100",
+        "price": {
+          "currency": "Euro",
+          "amount": "25,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "INTW0500",
+        "label": "Dataroaming Preferred netw XL",
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTW0500",
+        "price": {
+          "currency": "Euro",
+          "amount": "85,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "INTW0001",
+        "label": "Dataroaming Preferred netw XXL",
+        "specurl": "https://api.sup.base.be/omapi/public/product/INTW0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "145,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "CLOD0001",
+        "label": "BASE cloud 1 GB",
+        "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0001",
+        "price": {
+          "currency": "Euro",
+          "amount": "0,00"
+        },
+        "downgradeOffers": [
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0002"
+          },
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0003"
+          }
+        ],
+        "upgradeOffers": []
+      },
+      {
+        "id": "CLOD0002",
+        "label": "BASE cloud 32 GB",
+        "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0002",
+        "price": {
+          "currency": "Euro",
+          "amount": "1,50"
+        },
+        "downgradeOffers": [
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0003"
+          }
+        ],
+        "upgradeOffers": [
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0001"
+          }
+        ]
+      },
+      {
+        "id": "CLOD0003",
+        "label": "BASE cloud Unlimited",
+        "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0003",
+        "price": {
+          "currency": "Euro",
+          "amount": "9,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": [
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0001"
+          },
+          {
+            "specurl": "https://api.sup.base.be/omapi/public/product/CLOD0002"
+          }
+        ]
+      },
+      {
+        "id": "MOIN0000",
+        "label": "Mobile data out of EU Europe",
+        "specurl": "https://api.sup.base.be/omapi/public/product/MOIN0000",
+        "price": {
+          "currency": "Euro",
+          "amount": "15,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "SPPR0000",
+        "label": "Option Spotify",
+        "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+        "price": {
+          "currency": "Euro",
+          "amount": "9,99"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "WORL0010",
+        "label": "Option World minutes 10€",
+        "specurl": "https://api.sup.base.be/omapi/public/product/WORL0010",
+        "price": {
+          "currency": "Euro",
+          "amount": "10,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      },
+      {
+        "id": "WORL0030",
+        "label": "Option World minutes 30€",
+        "specurl": "https://api.sup.base.be/omapi/public/product/WORL0030",
+        "price": {
+          "currency": "Euro",
+          "amount": "30,00"
+        },
+        "downgradeOffers": [],
+        "upgradeOffers": []
+      }
+    ]
+  }
+]

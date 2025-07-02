@@ -1,0 +1,9 @@
+.col--4 {
+  flex-basis: calc((100% / 24) * 4);
+  max-width: calc((100% / 24) * 4);
+}
+
+.col--11 {
+  flex-basis: calc((100% / 24) * 11);
+  max-width: calc((100% / 24) * 11);
+}

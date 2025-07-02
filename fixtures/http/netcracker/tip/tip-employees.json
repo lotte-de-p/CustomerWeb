@@ -1,0 +1,57 @@
+[
+  {
+    "emailAddress": "ravi.patel1@telenetgroup.be",
+    "firstName": "Amt",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "123455",
+    "employeeCustomerNumber": "1200001010",
+    "status": "ACTIVE",
+    "tipPlanName": "TIP11",
+    "customerProductId": "100212121",
+    "epc": "23232",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23232",
+    "activationDate": "2021-03-26T10:58:45+01:00",
+    "language": "NL",
+    "employeeUniqueId": "1",
+    "futureProcessingDate": "2022-02-28T14:21:29+01:00"
+  },
+  {
+    "emailAddress": "ravi.patel2@telenetgroup.be",
+    "firstName": "Cod",
+    "lastName": "ln11",
+    "employeeReferenceNumber": "A1133",
+    "employeeCustomerNumber": "1200001011",
+    "status": "ACTIVE",
+    "tipPlanName": "TIP12",
+    "customerProductId": "100212122",
+    "epc": "23233",
+    "specUrl": "https://api.int.base.be/omapi/public/product/23233",
+    "activationDate": "2021-03-27T10:58:45+01:00"
+  },
+  {
+    "emailAddress": "tipback@test6.com",
+    "firstName": "Yark",
+    "lastName": "veer",
+    "employeeReferenceNumber": "407334489",
+    "status": "Disabled",
+    "tipPlanName": "Telenet Incentive Plan / TIP000000011",
+    "customerProductId": "9159829795613859787",
+    "epc": "TIPS0001",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "activationDate": "2021-04-16T08:45:25+02:00"
+  },
+  {
+    "emailAddress": "matt.murdock@staff.telenet.be",
+    "firstName": "Matt",
+    "lastName": "Murdock",
+    "employeeReferenceNumber": "1202362370",
+    "employeeCustomerNumber": "1202362370",
+    "status": "DEACTIVATED",
+    "tipPlanName": "Telenet Incentive Plan / TIP000000146",
+    "customerProductId": "9162438473713660828",
+    "specUrl": "https://api.int.base.be/omapi/public/product/null",
+    "activationDate": "2022-02-23T14:21:29+01:00",
+    "language": "NL",
+    "futureProcessingDate": "2022-02-25T14:21:29+01:00"
+  }
+]

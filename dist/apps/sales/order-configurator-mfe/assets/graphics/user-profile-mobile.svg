@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <path d="M31.2,62.4 C48.4312842,62.4 62.4,48.4312842 62.4,31.2 C62.4,26.5459103 61.3809613,22.1298299 59.5538363,18.1627112 C58.0760039,14.953989 56.0695175,12.0389798 53.6460005,9.52930697 C47.9722554,3.65386074 40.0128301,0 31.2,0 C13.9687158,0 0,13.9687158 0,31.2 C0,48.4312842 13.9687158,62.4 31.2,62.4 Z" id="path-1"></path>
+        <circle id="path-3" cx="28.2" cy="28.2" r="28.2"></circle>
+        <path d="M28.2,56.4 C43.7744299,56.4 56.4,43.7744299 56.4,28.2 C56.4,23.993419 55.4789458,20.0019617 53.8275059,16.4162967 C52.4917728,13.5161055 50.6782178,10.8813856 48.4877312,8.61302746 C43.3595385,3.30252797 36.1654426,0 28.2,0 C12.6255701,0 0,12.6255701 0,28.2 C0,43.7744299 12.6255701,56.4 28.2,56.4 Z" id="path-5"></path>
+    </defs>
+    <g id="🟢-All-Journeys" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1.000000, -1.000000)">
+            <g id="Group-5" transform="translate(2.000000, 2.000000)">
+                <g id="Group-3">
+                    <g id="Path">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                    </g>
+                    <path d="M47.3924032,4.52548188 C42.672001,1.65388406 37.1291431,0 31.2,0 C13.9687158,0 0,13.9687158 0,31.2 C0,48.4312842 13.9687158,62.4 31.2,62.4 L31.2,62.4 C48.4312842,62.4 62.4,48.4312842 62.4,31.2 C62.4,23.1201412 59.3286541,15.7576337 54.2897653,10.2162805" id="Path" stroke="#8C8D8E" stroke-width="1.2" stroke-linecap="round"></path>
+                    <g id="25-021526-facebook_profile_picture_affects_chances_of_getting_hired" transform="translate(3.000000, 3.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask" fill="#F2F2F2" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+                <g id="Group-3-Copy-2" transform="translate(3.000000, 3.000000)">
+                    <line x1="2.4" y1="40.5" x2="13.2" y2="40.5" id="Line-17" stroke="#C5C6C6" stroke-width="0.6" stroke-linecap="round"></line>
+                    <line x1="43.2" y1="40.5" x2="54" y2="40.5" id="Line-17-Copy" stroke="#C5C6C6" stroke-width="0.6" stroke-linecap="round"></line>
+                    <path d="M42.8354413,4.09033939 C38.5689239,1.49485674 33.5590332,0 28.2,0 C12.6255701,0 0,12.6255701 0,28.2 C0,43.7744299 12.6255701,56.4 28.2,56.4 L28.2,56.4 C43.7744299,56.4 56.4,43.7744299 56.4,28.2 C56.4,20.8970507 53.6239758,14.2424766 49.0695956,9.23394584" id="Path" stroke="#8C8D8E" stroke-width="0.56" stroke-linecap="round"></path>
+                    <g id="Path">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Mask" stroke="#F2F2F2" stroke-width="1.2" xlink:href="#path-5"></use>
+                        <path d="M19.6657895,60.1105263 L44.1552632,60.1105263 L44.1552632,49.7210526 C44.1552632,40.9092041 37.0118485,33.7657895 28.2,33.7657895 C19.3881515,33.7657895 12.2447368,40.9092041 12.2447368,49.7210526 L12.2447368,60.1105263 L16.3263158,60.1105263" stroke="#8C8D8E" stroke-width="0.9" stroke-linecap="round" mask="url(#mask-6)"></path>
+                    </g>
+                    <path d="M20.2810937,29.9606542 C22.3116878,32.196291 25.241917,33.6 28.5,33.6 L28.5,33.6 C34.6303607,33.6 39.6,28.6303607 39.6,22.5 C39.6,16.3696393 34.6303607,11.4 28.5,11.4 C22.3696393,11.4 17.4,16.3696393 17.4,22.5 C17.4,24.3817175 17.8682326,26.1540735 18.6945422,27.7069122" id="Path" stroke="#8C8D8E" stroke-width="0.9" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

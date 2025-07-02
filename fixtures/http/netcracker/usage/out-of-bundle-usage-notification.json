@@ -1,0 +1,17 @@
+[
+  {
+    "pid": "41106712513",
+    "pidPreferences": [
+      {
+        "preferenceGroup": "Mobileoutofbundle",
+        "preferences": [
+          {
+            "preferenceType": "outofbundle75",
+            "channels": ["Email", "SMS"],
+            "values": ["50 Euro"]
+          }
+        ]
+      }
+    ]
+  }
+]

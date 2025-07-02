@@ -1,0 +1,17 @@
+<div
+  class="notification notification--info col-md-12 col-sm-12 m--auto mt--l"
+  *ngIf="showSuspendedPlanNotificationMessage">
+  <span class="icon icon-information-shape info">
+    <p [attr.data-cy]="'suspendedPlanNotification'">
+      {{ 'ng.fleet-user-product-overview.lbl.suspended-plan' | translate }}
+    </p>
+  </span>
+</div>
+
+<div class="notification notification--info col-md-12 col-sm-12 m--auto mt--l" *ngIf="showMoveNotificationMessage">
+  <span class="icon icon-information-shape info">
+    <p [attr.data-cy]="'moveNotification'">
+      {{ 'ng.fleet-user-product-overview.lbl.product-is-under-move' | translate }}
+    </p>
+  </span>
+</div>

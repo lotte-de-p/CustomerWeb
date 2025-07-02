@@ -1,0 +1,2 @@
+export const MAX_PREMIUM_SERVICE_LIMIT = 300;
+export const MIN_PREMIUM_SERVICE_LIMIT = 0;

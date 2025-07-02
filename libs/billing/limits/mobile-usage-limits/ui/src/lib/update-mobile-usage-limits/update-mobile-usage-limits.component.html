@@ -1,0 +1,15 @@
+<div
+  class="display--flex py--l width--full border--t-r border-color--all--light-grey border-width--t--r border-style--t--solid background-white">
+  <button
+    class="button-override button button--secondary button--fullwidth mr--m"
+    [attr.data-cy]="'cancel-update-limits'"
+    (click)="cancel()">
+    <span>{{ 'ng.mobile-usage-limits.btn.cancel-changes' | translate }}</span>
+  </button>
+  <button
+    class="button-override button button--primary button--fullwidth"
+    [attr.data-cy]="'save-limits'"
+    (click)="submit()">
+    <span>{{ 'ng.mobile-usage-limits.btn.save-changes' | translate }}</span>
+  </button>
+</div>

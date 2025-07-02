@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["cypress", "node"],
+    "sourceMap": false,
+  },
+  "include": [
+    "../src/**/*.ts",
+    "../src/**/*.js",
+    "../*.ts",
+    "../../customer-registration-mfe/**/*.ts",
+    "../../customer-registration-mfe/**/*.js",
+    "../../../libs/sales/**/*.ts",
+    "../../../libs/sales/**/*.js",
+    "**/*.ts",
+    "**/*.js",
+    "../cypress.config.ts",
+    "../**/*.cy.ts",
+    "../**/*.cy.tsx",
+    "../**/*.cy.js",
+    "../**/*.cy.jsx",
+    "../**/*.d.ts",
+  ],
+}

@@ -1,0 +1,47 @@
+<div *ngIf="selectedServiceCase; else noServiceCaseSelected" [attr.data-cy]="'service-case-detail'">
+  <div class="text--l mb--m--md mb--xxs text-weight--l">
+    {{ 'ng.service-cases.your' | translate }}
+    {{ 'ng.service-cases.item.type.' + selectedServiceCase.type | translate }}
+  </div>
+  <div class="background-white py--l px--m">
+    <div class="mb--l">{{ 'ng.service-cases.item.type.' + selectedServiceCase.type + '.description' | translate }}</div>
+    <div class="service-case__detail__information row">
+      <div class="col-md-6">
+        <div class="mb--l">
+          <div class="text-weight--xxl">{{ 'ng.service-cases.detail.case-id' | translate }}</div>
+          <div [attr.data-cy]="'service-case-id'">{{ selectedServiceCase.id }}</div>
+        </div>
+        <div class="mb--l">
+          <div class="text-weight--xxl">{{ 'ng.service-cases.detail.creation-date' | translate }}</div>
+          <div [attr.data-cy]="'service-case-creation-date'">
+            {{ selectedServiceCase.creationDate | date: 'd MMMM y' }}
+          </div>
+        </div>
+        <div class="mb--l">
+          <div class="text-weight--xxl">{{ 'ng.service-cases.detail.product-type' | translate }}</div>
+          <div [attr.data-cy]="'service-case-product-type'">{{ selectedServiceCase.productType || '-' }}</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb--l">
+          <div class="text-weight--xxl">{{ 'ng.service-cases.detail.status' | translate }}</div>
+          <care-service-case-status [status]="selectedServiceCase.status"></care-service-case-status>
+        </div>
+        <div class="mb--l">
+          <div class="text-weight--xxl">{{ 'ng.service-cases.detail.deadline-date' | translate }}</div>
+          <div
+            [attr.data-cy]="'service-case-deadline-date'"
+            *ngIf="selectedServiceCase.type === 'MOVE'; else noDeadline">
+            {{ (selectedServiceCase.deadlineDate | date: 'd MMMM y') || '-' }}
+          </div>
+          <ng-template #noDeadline>
+            <div [attr.data-cy]="'service-case-deadline-date'">-</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noServiceCaseSelected>
+  <div>{{ 'ng.service-cases.detail.no-selected-service-case' | translate }}</div>
+</ng-template>

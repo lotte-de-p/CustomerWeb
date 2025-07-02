@@ -1,0 +1,88 @@
+<ng-container *ngIf="loading; else selector">
+  <div class="flex-col m--n flex-grow">
+    <h2 class="col-5 heading--notopmargin skeleton--v2 skeleton--basic skeleton--one-line"></h2>
+  </div>
+</ng-container>
+<ng-template #selector>
+  @if (error) {
+    <tg-error-notification
+      data-testid="billing-overview-billing-accounts-error"
+      [description]="'ng.billing-overview.billing-account-selector.lbl.error-description' | translate"
+      [label]="'ng.billing-overview.billing-account-selector.lbl.error-label' | translate"></tg-error-notification>
+  } @else {
+    <div *ngIf="billingAccounts.length === 0 && !loading" data-testid="billing-overview-no-billing-accounts">
+      <tg-billing-overview-no-billing-accounts
+        [homePageLink]="homePageLink"
+        [isTelenetCustomer]="isTelenetCustomer"></tg-billing-overview-no-billing-accounts>
+    </div>
+    <ng-container *ngIf="selectedBillingAccount() as selectedBillingAccount">
+      <div data-testid="billing-account-selector-wrapper">
+        <span>{{ 'ng.billing-overview.billing-account-selector.lbl.billing-account' | translate }}</span>
+        <span data-testid="selected-billing-account" *ngIf="selectedBillingAccount?.billingAccountNumber">
+          {{ selectedBillingAccount?.billingAccountNumber }}</span
+        >
+        <a
+          class="link cursor--pointer ml--xs"
+          tabindex="-1"
+          data-testid="change-billing-account"
+          (click)="open($event)"
+          *ngIf="billingAccounts.length > 1">
+          <b>{{ 'ng.billing-overview.billing-account-selector.lbl.change-account' | translate }}</b>
+        </a>
+      </div>
+      <tg-slide-menu
+        *ngIf="billingAccounts.length > 1"
+        [showMenu]="showMenu"
+        (closeMenu)="close()"
+        [title]="'ng.billing-overview.billing-account-selector.lbl.title' | translate"
+        padding="px--xs"
+        data-testid="billing-account-selector">
+        <ul
+          class="justify-content--start align-items--start flex-direction--column display--flex flex-wrap--wrap border-radius--all--n listing--none width--full mt-0"
+          data-testid="billing-accounts-list">
+          <li
+            *ngFor="let billingAccount of billingAccounts; let last = last"
+            (click)="selectBillingAccount(billingAccount)"
+            [attr.data-testid]="'billing-accounts-option-' + billingAccount.billingAccountNumber"
+            class="width--full billing-account">
+            <div
+              [ngClass]="{ 'border-style--b--solid': !last }"
+              class="border-width--b--r border--b--r border-color--all--light-grey cursor--pointer display--flex justify-content--between mx--xs align-items--center">
+              <div
+                class="py--l justify-content--start align-items--center flex-direction--row display--flex flex-wrap--nowrap">
+                <div>
+                  <div *ngIf="billingAccount?.billingAccountNumber" data-testid="billing-accounts-option-number">
+                    <b>{{ billingAccount.billingAccountNumber }}</b>
+                  </div>
+                  <div
+                    class="font--body-small color-shade_72"
+                    *ngIf="billingAccount.billingAddress"
+                    data-testid="billing-accounts-option-address">
+                    <span
+                      >{{ billingAccount.billingAddress.street }} {{ billingAccount.billingAddress.houseNumber }}</span
+                    >
+                    <span *ngIf="billingAccount.billingAddress.subHouseNumber">
+                      {{ billingAccount.billingAddress.subHouseNumber }}</span
+                    >
+                    <span *ngIf="billingAccount.billingAddress.boxNumber">
+                      <span> {{ 'ng.billing-overview.billing-account-selector.lbl.address.box' | translate }}</span>
+                      {{ billingAccount.billingAddress.boxNumber }}</span
+                    >, {{ billingAccount.billingAddress.postalCode }} {{ billingAccount.billingAddress.municipality }}
+                  </div>
+                  <tg-billing-account-status [paymentStatus]="billingAccount.paymentStatus"></tg-billing-account-status>
+                </div>
+              </div>
+              <div class="px--xs display--flex">
+                <i
+                  *ngIf="billingAccount.billingAccountNumber === selectedBillingAccount?.billingAccountNumber"
+                  class="ml--xs color-text-t-black-b-white background-brand-primary billing-account-selected text-weight--xxs color-mid-grey">
+                  <wink-icon appearance="default" icon="tick" size="sm"></wink-icon>
+                </i>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </tg-slide-menu>
+    </ng-container>
+  }
+</ng-template>

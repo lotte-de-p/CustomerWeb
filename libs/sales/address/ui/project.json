@@ -1,0 +1,17 @@
+{
+  "name": "sales-address-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/address/ui/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/address/ui/**/*.ts", "libs/sales/address/ui/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:sales-address", "scope:sales-mfe"]
+}

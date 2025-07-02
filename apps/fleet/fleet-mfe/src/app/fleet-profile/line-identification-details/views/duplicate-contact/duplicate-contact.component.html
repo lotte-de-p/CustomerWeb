@@ -1,0 +1,102 @@
+<div class="overlay">
+  <div class="overlay__mask"></div>
+  <div class="overlay__section background-white">
+    <div class="overlay__section__content">
+      <div class="overlay__section__content__close icon icon-cross" (click)="close()"></div>
+      <div class="overlay__section__content__title switch-line__title font-weight&#45;&#45;bold">
+        {{ 'ng.line-identification-details.duplicate-contacts.overlay.title' | translate }}
+      </div>
+      <div class="overlay__section__content__description pb-15">
+        {{ 'ng.line-identification-details.lbl.select-profile-from-existing-contact-description' | translate }}
+      </div>
+      <div>
+        <div class="label-modifier-box card-mini">
+          <div
+            *ngFor="let duplicateContactOption of duplicateContactOptionList; let i = index"
+            [ngClass]="{ 'create-fleet-line__duplicate-line-container': selectedContactId }">
+            <div
+              class="label-modifier-slot animation-show-slide-up"
+              style="{{ '&#45;&#45;animation-delay:' + i }}"
+              [ngClass]="{
+                'create-fleet-line__radio-box-container': selectedContactId !== duplicateContactOption.contactId
+              }">
+              <input
+                [checked]="selectedContactId && duplicateContactOption.contactId === selectedContactId"
+                class="label-modifier-radio"
+                id="choice-{{ i }}"
+                name="choice-{{ i }}"
+                type="radio"
+                value="{{ selectedContactId }}" />
+              <div class="label-modifier--container cursor--pointer">
+                <div class="label-modifier--body">
+                  <div class="label-modifier--body--inner-container">
+                    <label
+                      (click)="selectOption(duplicateContactOption)"
+                      for="choice-{{ i }}"
+                      class="label-modifier-radio__label"></label>
+                    <div class="label-modifier-content__header">
+                      <i class="icon icon-tick"></i>
+                    </div>
+                    <div class="label-modifier-content__body text-align--left pl-10">
+                      <div class="text-flow text-flow&#45;&#45;button label-modifier-content__body-label">
+                        {{ getOptionLabel(duplicateContactOption) }}
+                      </div>
+                      <div class="text-flow text-flow&#45;&#45;legal label-modifier-content__body-range"></div>
+                    </div>
+                    <i
+                      (click)="toggleIndexFor(i)"
+                      [hidden]="isNewlyContactDetails(duplicateContactOption.contactId)"
+                      [ngClass]="toggleList[i] ? 'icon-chevron-up' : 'icon-chevron-down'"
+                      class="icon"
+                      style="z-index: 99">
+                    </i>
+                    <div class="label-modifier-content__timing"></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="create-fleet-line__duplicate-line-section"
+                [hidden]="isNewlyContactDetails(duplicateContactOption.contactId) || !toggleList[i]">
+                <div
+                  class="create-fleet-line__duplicate-line-option pt&#45;&#45;m pb&#45;&#45;m pl&#45;&#45;xg text-align--left"
+                  [ngClass]="
+                    duplicateContactOption.contactId === selectedContactId
+                      ? 'background-brand-primary color-white'
+                      : 'color-black'
+                  ">
+                  <div class="text&#45;&#45;s mb&#45;&#45;xxs">
+                    {{ 'ng.line-identification-details.duplicate-form.birth-date.lbl' | translate }}
+                    :
+                  </div>
+                  <div class="mb&#45;&#45;l">{{ duplicateContactOption.birthDate }}</div>
+                  <div class="text&#45;&#45;s mb&#45;&#45;xxs">
+                    {{ 'ng.line-identification-details.duplicate-form.email.lbl' | translate }}
+                    :
+                  </div>
+                  <div class="mb&#45;&#45;l">
+                    {{ duplicateContactOption.contactInfo.emails[0].value }}
+                  </div>
+                  <div class="text&#45;&#45;s mb&#45;&#45;xxs">
+                    {{ 'ng.line-identification-details.duplicate-form.phone-number.lbl' | translate }}
+                    :
+                  </div>
+                  <div class="mb&#45;&#45;l">
+                    {{ duplicateContactOption.contactInfo.phones[0].value }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay__section__content__action">
+        <a href="javascript:void(0)" (click)="close()" class="button button&#45;&#45;secondary">
+          {{ 'ng.line-identification-details.duplicate-contacts.overlay.btn.cancel' | translate }}
+        </a>
+        <a href="javascript:void(0)" class="button button&#45;&#45;primary" (click)="save()">
+          {{ 'ng.line-identification-details.duplicate-contacts.overlay.btn.save' | translate }}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

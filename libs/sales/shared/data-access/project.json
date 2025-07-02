@@ -1,0 +1,17 @@
+{
+  "name": "sales-shared-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/shared/data-access/**/*.ts", "libs/sales/shared/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:sales-shared", "scope:sales-mfe"]
+}

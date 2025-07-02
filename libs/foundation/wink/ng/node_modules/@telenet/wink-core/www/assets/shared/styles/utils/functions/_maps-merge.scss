@@ -1,0 +1,9 @@
+@function maps-merge($maps...) {
+  $result-map: () !default;
+
+  @each $map in $maps {
+    $result-map: map-merge($result-map, $map);
+  }
+
+  @return $result-map;
+}

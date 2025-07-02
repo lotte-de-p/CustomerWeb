@@ -1,0 +1,5 @@
+export default {
+  displayName: 'sales-<%= name %>-ui',
+  preset: '../../../../jest.preset.js',
+  coverageDirectory: '../../../../coverage/libs/sales/<%= name %>/ui',
+};

@@ -1,0 +1,8 @@
+{
+  "name": "product-product-price-changes-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/account/product/product-price-changes/ui/src",
+  "prefix": "lib",
+  "tags": ["type:ui", "scope:product-product-price-changes", "scope:product", "scope:product-mfe"],
+  "projectType": "library"
+}

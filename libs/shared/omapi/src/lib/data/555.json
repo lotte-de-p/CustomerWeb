@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productid": 555,
+    "labelkey": "internet.line.trinity.basicinternet",
+    "visible": true,
+    "family": "NOT_APPLICABLE",
+    "producttype": "PRODUCT",
+    "weight": 2,
+    "apps": [
+      {
+        "labelkey": "support"
+      }
+    ],
+    "services": [
+      {
+        "labelkey": "surf.fixedinternet",
+        "servicetype": "FIXED_INTERNET",
+        "experience": {
+          "experiencetype": "SURF",
+          "weight": 10
+        },
+        "weight": 0,
+        "specifications": [
+          {
+            "labelkey": "spec.fixedinternet.volume.download.cap",
+            "value": "150",
+            "unit": "GB",
+            "visible": true,
+            "weight": 3
+          },
+          {
+            "labelkey": "spec.fixedinternet.mailbox.included",
+            "value": "10",
+            "visible": true,
+            "weight": 4
+          },
+          {
+            "labelkey": "spec.fixedinternet.mailbox.volume",
+            "value": "5",
+            "unit": "GB",
+            "visible": true,
+            "weight": 5
+          },
+          {
+            "labelkey": "spec.fixedinternet.speed.download",
+            "value": "100",
+            "unit": "Mbps",
+            "visible": true,
+            "weight": 1
+          },
+          {
+            "labelkey": "spec.fixedinternet.webspace.volume",
+            "value": "50",
+            "unit": "MB",
+            "visible": true,
+            "weight": 6
+          },
+          {
+            "labelkey": "spec.fixedinternet.speed.upload",
+            "value": "10",
+            "unit": "Mbps",
+            "visible": true,
+            "weight": 2
+          },
+          {
+            "labelkey": "spec.fixedinternet.wifree",
+            "value": "1",
+            "visible": false,
+            "weight": 7
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "detailed_scale": {
+        "unit": "GB",
+        "value": "10"
+      },
+      "productsegment": "ALL",
+      "service_category": "CAP",
+      "productgroup": "OTHER",
+      "salespricevatexcl": {
+        "unit": "EURO",
+        "value": "23.40"
+      },
+      "service_category_limit": {
+        "unit": "GB",
+        "value": "150"
+      },
+      "salespricevatincl": {
+        "unit": "EURO",
+        "value": "28.31"
+      }
+    },
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "Basic Internet",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-trinity-basicinternet.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Basic Internet",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-trinity-basicinternet.png"
+      },
+      {
+        "locale": "en",
+        "name": "Basic Internet",
+        "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-trinity-basicinternet.png"
+      }
+    ]
+  }
+}

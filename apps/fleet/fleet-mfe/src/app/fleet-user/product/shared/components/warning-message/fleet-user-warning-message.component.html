@@ -1,0 +1,18 @@
+<div class="bundle-usage--remove fixed" [attr.data-cy]="'confirmation-screen'">
+  <div class="img-content">
+    <div class="hidden-mobile" [inlineSVG]="image"></div>
+    <div class="hidden-desktop" [inlineSVG]="imageMobile"></div>
+  </div>
+  <label class="bundle-usage--remove--question" [attr.data-cy]="'warning-title'">{{ title | translate }}</label>
+  <p class="bundle-usage--remove--statement" [attr.data-cy]="'warning-description'">
+    {{ description | translate }}
+  </p>
+  <div class="bundle-usage--remove--button-container">
+    <button class="button button--tertiary" (click)="secondaryAction.emit()" [attr.data-cy]="'warning-secondary-btn'">
+      {{ secondaryActionLabel | translate }}
+    </button>
+    <button class="button button--primary" (click)="primaryAction.emit()" [attr.data-cy]="'warning-primary-btn'">
+      {{ primaryActionLabel | translate }}
+    </button>
+  </div>
+</div>

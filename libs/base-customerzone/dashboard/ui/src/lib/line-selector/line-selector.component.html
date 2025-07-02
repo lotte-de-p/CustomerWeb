@@ -1,0 +1,55 @@
+<div class="mb--l mb--m--md" data-cs-mask>
+  <div class="display--flex align-items--center">
+    <div class="line-selector--title mr--m mt--n mb--n word-break--ellipsis">
+      @if (selectedMsisdn?.simAlias) {
+        {{ selectedMsisdn?.simAlias }} &bull;
+      }
+      {{ selectedMsisdn?.msisdn | phoneNumber }}
+    </div>
+    @if (mobileLines.length > 1) {
+      <div class="col-4 p--n">
+        <div
+          (click)="slideMenu(true, $event)"
+          class="line-selector--open text-font-family--t5 cursor--pointer width--fit-content">
+          {{ 'ng.mybase-dashboard-mobile.line-selector.open-button' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+
+  <tg-slide-menu
+    (closeMenu)="slideMenu(false)"
+    [showMenu]="showMenu"
+    [title]="'ng.mybase-dashboard-mobile.line-selector.menu-title' | translate">
+    @for (line of mobileLines; track line.msisdn; let last = $last) {
+      <div
+        (click)="selectLine(line)"
+        class="display--flex align-items--center justify-content--between px--m mobile--line cursor--pointer">
+        <div
+          class="display--flex align-items--center col-12 py--l"
+          [ngClass]="{
+            'border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey': !last
+          }">
+          <i
+            class="icon icon-md icon-no-size-override col-1"
+            [ngClass]="{ 'icon-sim-card': line.dataOnly, 'icon-mobile': !line.dataOnly }"></i>
+          <div class="col-11 p--n">
+            <div class="heading--6 m--n display--flex justify-content--between align-items--center">
+              <div class="ml--xxs">
+                @if (line.simAlias) {
+                  {{ line.simAlias }}
+                  <div class="text-flow text-flow--detail color-shade_72 m--n">{{ line.msisdn | phoneNumber }}</div>
+                } @else {
+                  {{ line.msisdn | phoneNumber }}
+                }
+              </div>
+              @if (line.msisdn === selectedMsisdn?.msisdn) {
+                <i class="icon icon-md icon-no-size-override icon-check-shape-filled color-brand-primary"></i>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </tg-slide-menu>
+</div>

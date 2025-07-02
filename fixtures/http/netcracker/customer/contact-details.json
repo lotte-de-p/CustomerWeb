@@ -1,0 +1,47 @@
+{
+  "contactdetails": {
+    "contactinfo": {
+      "emails": [
+        {
+          "id": "9154387551713052832",
+          "value": "test@user.com"
+        }
+      ],
+      "phones": []
+    },
+    "addresses": [
+      {
+        "addressid": "9153462896013523517",
+        "country": "België",
+        "municipality": "Mechelen",
+        "postalcode": "2800",
+        "street": "Elektriciteitstraat",
+        "streetId": "9153462896013523500",
+        "housenr": "6",
+        "boxnr": "5",
+        "floor": "2"
+      }
+    ],
+    "privacyProfile": [
+      {
+        "privacySettingId": "9148200020213665171",
+        "name": "1 - General",
+        "isEnabled": false
+      },
+      {
+        "privacySettingId": "9148200020213665170",
+        "name": "2 - Oriented",
+        "isEnabled": true
+      }
+    ],
+    "language": "NL",
+    "individual": {
+      "epithet": "Mr.",
+      "firstname": "hello",
+      "lastname": "world"
+    },
+    "class": "INDIVIDUAL",
+    "birthdate": "1988-02-26",
+    "contactid": "912465769860534"
+  }
+}

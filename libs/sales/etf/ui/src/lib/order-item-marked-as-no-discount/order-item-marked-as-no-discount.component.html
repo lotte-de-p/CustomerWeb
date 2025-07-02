@@ -1,0 +1,28 @@
+<div
+  *ngIf="orderItemWithDiscount"
+  [attr.data-cy]="'feat-etf-order-item-marked-as-no'"
+  class="mobile-line mobile-line--step">
+  <div class="tracker--step__content">
+    <div class="display--block display--flex--md justify-content--between">
+      <div class="header-accordion--title">
+        <div class="header-accordion--title__text">
+          <div class="text-flow text-flow--body text-weight--g">
+            {{ orderItemWithDiscount.name }}
+          </div>
+        </div>
+      </div>
+      <div class="header-accordion--link space-nowrap">
+        <a
+          (click)="selectForDiscount(orderItemWithDiscount)"
+          [attr.data-cy]="'feat-etf-order-item-marked-as-no-activate-discount-link'"
+          class="link link--unstyled text-weight--g text-flow text-flow--hyperlink"
+          href="javascript:void(0)">
+          {{
+            'ng.sales-checkout.lnk.etf-enable-discount'
+              | translate: { customerChosenDiscount: orderItemWithDiscount.rule.discountAmount.value | price }
+          }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+[
+  {
+    "addressId": "9150308785513908836",
+    "identifier": "INT000000703",
+    "label": "All-Internet / INT000000703",
+    "locationId": "9158205921413246714",
+    "status": "Activation in progress",
+    "productType": "internet",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTF0200",
+    "id": "9158336368613835988"
+  },
+  {
+    "addressId": "9150308785513908836",
+    "identifier": "IDTV000000585",
+    "label": "DTV / IDTV000000585",
+    "locationId": "9158205921413246714",
+    "status": "Activation in progress",
+    "productType": "dtv",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTF0200",
+    "id": "9158336368613835988"
+  }
+]

@@ -1,0 +1,49 @@
+@import '../../../../assets/telenet/styles';
+
+$pricing--header--desktop--fs: rem(1.4);
+$pricing--header--desktop--lh: rem(2);
+$pricing--header--mobile--fs: rem(1.2);
+$pricing--header--mobile--lh: rem(1.6);
+
+$pricing--price-value-wrapper--ff: TelenetAlbra-black, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$price--price-currency--desktop--fs: rem(1.8);
+$price--price-currency--desktop--lh: rem(1.9);
+$price--price-currency--mobile--fs: rem(1.6);
+$price--price-currency--mobile--lh: rem(1.5);
+
+$price--price-decimal--desktop--fs: rem(1.8);
+$price--price-decimal--desktop--lh: rem(1.9);
+$price--price-decimal--mobile--fs: rem(1.6);
+$price--price-decimal--mobile--lh: rem(1.5);
+
+$price--price-value--desktop--fs: rem(3.2);
+$price--price-value--desktop--lh: rem(3.1);
+$price--price-value--mobile--fs: rem(2.8);
+$price--price-value--mobile--lh: rem(2.8);
+
+$pricing--price-frequency--desktop--fs: rem(1.4);
+$pricing--price-frequency--desktop--lh: rem(2);
+$pricing--price-frequency--mobile--fs: rem(1.2);
+$pricing--price-frequency--mobile--lh: rem(1.6);
+
+$pricing--price-promo-duration--desktop--fs: rem(1.4);
+$pricing--price-promo-duration--desktop--lh: rem(2);
+$pricing--price-promo-duration--mobile--fs: rem(1.2);
+$pricing--price-promo-duration--mobile--lh: rem(1.6);
+
+$pricing-patch--starting-from--ff: TelenetAlbra-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$pricing-patch--frequency--ff: TelenetAlbra-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$pricing-patch--price-promo-price--desktop--fs: rem(1.2);
+$pricing-patch--price-promo-price--desktop--lh: rem(1.6);
+$pricing-patch--price-promo-duration--desktop--fs: rem(1);
+$pricing-patch--price-promo-duration--desktop--lh: rem(1.2);
+
+$price-patch-top-color: var(--semantic-color-text-on-brand);
+$price-frequency-color: var(--semantic-color-text-on-brand);
+$price-price-value-color: var(--semantic-color-text-on-brand);
+$price-patch-end-color: var(--semantic-color-text-on-brand);
+
+$pricing-host-background: var(--semantic-color-background-canvas-brand);
+$pricing-subtle--price-value-wrapper--ff: TelenetAlbra-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;

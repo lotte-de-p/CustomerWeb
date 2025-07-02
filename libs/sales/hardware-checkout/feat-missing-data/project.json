@@ -1,0 +1,53 @@
+{
+  "name": "sales-hardware-checkout-missing-data",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/hardware-checkout/feat-missing-data/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/hardware-checkout/feat-missing-data/**/*.ts",
+          "libs/sales/hardware-checkout/feat-missing-data/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/hardware-checkout/feat-missing-data/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/hardware-checkout/feat-missing-data/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "sales-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/sales/hardware-checkout/feat-missing-data/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "sales-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-hardware-checkout", "scope:sales-mfe"]
+}

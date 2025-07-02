@@ -1,0 +1,20 @@
+{
+  "name": "entertainment-management-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/account/entertainment-management/ui/src",
+  "prefix": "tg-entertainment-management",
+  "tags": ["type:ui", "scope:entertainment-management-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/account/entertainment-management/ui/**/*.ts",
+          "libs/account/entertainment-management//ui/**/*.html"
+        ]
+      }
+    }
+  }
+}

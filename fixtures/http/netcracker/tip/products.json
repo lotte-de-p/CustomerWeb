@@ -1,0 +1,13 @@
+{
+  "productTitle": "WIGO",
+  "productPrice": "30",
+  "productDuration": "3",
+  "productFeatures": [
+    {
+      "productFeatureTitle": "Internet"
+    },
+    {
+      "productFeatureTitle": "Dial"
+    }
+  ]
+}

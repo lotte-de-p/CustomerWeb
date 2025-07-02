@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="installation-location background-white px--xxl--md pt--xl--md pb--xxxl--md col-12 mb--xxxg mt--m">
+    @if (viewModel?.addresses | async; as addresses) {
+      <tg-sales-address-list
+        [addresses]="addresses"
+        [isNewInstallationAddress]="false"
+        [selectedAddress]="viewModel?.selectedAddress | async"
+        (addressSelected)="onAddressSelected($event)"></tg-sales-address-list>
+    }
+    @if (!isAddressFormVisible && (viewModel?.manuallyAddedAddress | async); as address) {
+      <div class="installation-location__content px--xxs">
+        <div class="justify-content--between mb--l"></div>
+        <div class="select-tile--group display--grid grid-template-column--1 gap--xm">
+          <tg-sales-installation-address
+            [index]="-1"
+            [address]="address"
+            [isNewInstallationAddress]="true"
+            (addressSelected)="onAddressSelected($event)"
+            [selectedAddress]="viewModel?.selectedAddress | async"></tg-sales-installation-address>
+        </div>
+      </div>
+    }
+    @if (!isAddressFormVisible && !(viewModel?.manuallyAddedAddress | async)) {
+      <div class="installation-location__add-address mt--l fl-left col-12 width--full px--xxs">
+        <a
+          href="#"
+          class="link secondary"
+          (click)="openAddressForm(); $event.preventDefault()"
+          [attr.data-testid]="'feat-installation-address-add-edit-action-desktop'">
+          <i class="icon icon-plus"></i>
+          <span>{{ 'ng.sales-checkout.btn.select-installation-location.add-new-address' | translate }}</span>
+        </a>
+      </div>
+    } @else if (!isAddressFormVisible) {
+      <div class="installation-location__add-address mt--l fl-left col-12 width--full px--xxs">
+        <a href="#" class="link secondary" (click)="openAddressForm(); $event.preventDefault()">
+          <i class="icon icon-pencil"></i>
+          <span>{{ 'ng.sales-checkout.btn.select-installation-location.edit-new-address' | translate }}</span>
+        </a>
+      </div>
+    }
+    <tg-sales-installation-address-form
+      [isAddressFormVisible]="isAddressFormVisible"
+      (closeForm)="closeAddressForm()"
+      (submitForm)="onSubmit($event)">
+    </tg-sales-installation-address-form>
+    <tg-sales-installation-address-overlay-form
+      [isAddressFormVisible]="isAddressFormVisible"
+      (closeForm)="closeAddressForm()"
+      (submitForm)="onSubmit($event)">
+    </tg-sales-installation-address-overlay-form>
+    @if (!isAddressFormVisible) {
+      <div class="clear-both pt--l px--xxs">
+        <div class="notification notification--info">
+          <span class="icon icon-information-shape info"></span>
+          <div>
+            <div class="text-flow--h6 text-weight--xl mb--m">
+              Heb je een toevoeging (bv. A) of busnummer (bv. 101) naast je huisnummer?
+            </div>
+            <p>
+              Controleer dan of dit correct in je adresgegevens hierboven staat. Staat er toch een foutje in, voeg dan
+              een nieuw adres toe.
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

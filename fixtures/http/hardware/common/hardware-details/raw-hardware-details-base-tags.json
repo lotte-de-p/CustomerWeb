@@ -1,0 +1,48 @@
+{
+  "base": {
+    "options": [
+      {
+        "attributeKey": "online_excl_base",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "Online Exclusive Base_nl",
+            "value": ["Online Exclusive Base_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "Online Exclusive Base_fr",
+            "value": ["Online Exclusive Base_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "Online Exclusive Base_en",
+            "value": ["Online Exclusive Base_en"]
+          }
+        ]
+      },
+      {
+        "attributeKey": "cp_label_base",
+        "startDate": "2019-05-19T13:54:49+00:00",
+        "endDate": "2077-05-19T13:54:49+00:00",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "Base_CashBack_10%_nl",
+            "value": ["Base_CashBack_10%_nl"]
+          },
+          {
+            "locale": "fr",
+            "key": "Base_CashBack_10%_fr",
+            "value": ["Base_CashBack_10%_fr"]
+          },
+          {
+            "locale": "en",
+            "key": "Base_CashBack_10%",
+            "value": ["Base_CashBack_10%"]
+          }
+        ]
+      }
+    ]
+  }
+}

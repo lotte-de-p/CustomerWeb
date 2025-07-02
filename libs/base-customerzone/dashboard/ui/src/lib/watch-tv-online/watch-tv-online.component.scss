@@ -1,0 +1,28 @@
+dialog {
+  display: none;
+
+  &[open] {
+    display: block;
+  }
+
+  &::backdrop {
+    background-color: rgba(#111111, 72%);
+  }
+
+  .qr-code {
+    max-width: 14.5rem;
+  }
+}
+.button.button--override {
+  margin-top: 0;
+  padding: 0;
+  flex: 1;
+  width: auto;
+  min-width: 1px;
+
+  &.button--tertiary {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

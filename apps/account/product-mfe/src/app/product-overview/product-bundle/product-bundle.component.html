@@ -1,0 +1,160 @@
+<div class="product-overview">
+  <ng-container *ngFor="let plan of products">
+    <div class="row" *ngIf="plan.children.length > 0 && !plan.isC5Bundle()">
+      <div class="col-md-12 col-sm-12 m--auto">
+        <div class="notification notification--info mb-20" *ngIf="plan.isMultipleDTV">
+          <span class="icon icon-information-shape info">{{
+            'ng.product-overview.info.unable-to-manage' | translate
+          }}</span>
+        </div>
+        <div class="content-section mb-30">
+          <div class="content-section__header row">
+            <div class="col-lg-6 col-md-5 col-xs-7">
+              <div class="text-font-family--t7 text--l" [attr.data-cy]="'bundleTitle'">
+                {{ plan.productInfo.name }}
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="display--flex align-items--center justify-content--end--md">
+                <div
+                  class="product-overview__hide-base text-align--right--md"
+                  *ngIf="showChangePlan(plan) && hasActiveOrSuspendedProducts(plan)">
+                  <a
+                    tabindex="0"
+                    (keydown)="
+                      handleRedirectToMarketingConfigurator(
+                        $event,
+                        planUpgradeUrl,
+                        getIntent(plan),
+                        plan,
+                        'change plan link clicked'
+                      )
+                    "
+                    class="font--body-regular link link--subtle"
+                    (click)="
+                      redirectToMarketingConfigurator(
+                        planUpgradeUrl,
+                        getIntent(plan),
+                        plan,
+                        'change plan link clicked'
+                      );
+                      $event.stopPropagation()
+                    "
+                    *ngIf="planUpgradeUrl !== '/'">
+                    {{ 'ng.product-overview.btn.change-tariff-plan' | translate }}
+                  </a>
+                </div>
+                <div
+                  class="text-align--right pt--n--md pt--m hide-until-md ml--xxxl--md"
+                  *ngIf="
+                    showManageOptions(plan) &&
+                    !plan.isProductSuspended() &&
+                    !(plan.productType === 'dtv' && plan.children.length > 0) &&
+                    hasActiveOrSuspendedProducts(plan)
+                  ">
+                  <a
+                    tabindex="0"
+                    (keydown)="handleManageOptions($event, plan)"
+                    class="font--body-regular link link--subtle"
+                    (click)="manageOptions(plan); $event.stopPropagation()"
+                    *ngIf="manageOptionUrl !== '/'">
+                    {{ 'ng.product-overview.lnk.manage-options' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-4 col-xs-12 pt--n--md pt--m hide-from-md"
+              *ngIf="
+                showManageOptions(plan) &&
+                !plan.isProductSuspended() &&
+                !(plan.productType === 'dtv' && plan.children.length > 0) &&
+                hasActiveOrSuspendedProducts(plan)
+              ">
+              <a
+                tabindex="0"
+                (keydown)="handleManageOptions($event, plan)"
+                class="font--body-regular link link--subtle"
+                (click)="manageOptions(plan); $event.stopPropagation()"
+                *ngIf="manageOptionUrl !== '/'">
+                {{ 'ng.product-overview.lnk.manage-options' | translate }}
+              </a>
+            </div>
+            <div class="hide-until-md">
+              <div
+                class="product-overview__hide-telenet"
+                *ngIf="showChangePlan(plan) && hasActiveOrSuspendedProducts(plan)"
+                [ngClass]="{
+                  'col-md-6 col-xs-5 text-align--right': !showManageOptions(plan),
+                  'col-md-3 col-xs-5 text-align--right': showManageOptions(plan)
+                }">
+                <button
+                  type="button"
+                  class="button button--secondary"
+                  (click)="
+                    redirectToMarketingConfigurator(planUpgradeUrl, 'connectivity', plan, 'change plan link clicked');
+                    $event.stopPropagation()
+                  "
+                  *ngIf="planUpgradeUrl !== '/'">
+                  {{ 'ng.product-overview.btn.change-tariff-plan' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div *ngFor="let product of sortChildren(plan.children); let last = last">
+            <div>
+              <tg-product-bundle-child
+                [productOrOption]="{ product }"
+                [plan]="plan"
+                [hasSalesScope]="hasSalesScope"
+                [canManageProductHolding]="canManageProductHolding"
+                [changeTariffPlanUrl]="changeTariffPlanUrl"
+                [manageOptionUrl]="manageOptionUrl"
+                [planUpgradeUrl]="planUpgradeUrl"
+                [intentRequired]="intentRequired"
+                [streamingOptions]="streamingOptions"
+                [componentInstanceID]="componentInstanceID"></tg-product-bundle-child>
+              <div class="divider divider--s__very-light-grey" *ngIf="!last"></div>
+            </div>
+          </div>
+
+          <div *ngIf="plan.options.length > 0">
+            <div class="divider divider--s__very-light-grey"></div>
+            <div *ngFor="let option of plan.options; let last = last">
+              <tg-product-bundle-child
+                [productOrOption]="{ option }"
+                [plan]="plan"
+                [hasSalesScope]="hasSalesScope"
+                [canManageProductHolding]="canManageProductHolding"
+                [changeTariffPlanUrl]="changeTariffPlanUrl"
+                [manageOptionUrl]="manageOptionUrl"
+                [planUpgradeUrl]="planUpgradeUrl"
+                [intentRequired]="intentRequired"
+                [streamingOptions]="streamingOptions"
+                [componentInstanceID]="componentInstanceID"></tg-product-bundle-child>
+              <div class="divider divider--s__very-light-grey" *ngIf="!last"></div>
+            </div>
+          </div>
+          <div class="divider divider--s__very-light-grey mt--m"></div>
+          <ng-container *ngIf="streamingOptions && streamingOptions.length > 0">
+            <div *ngFor="let option of streamingOptions; let last = last">
+              <tg-product-bundle-child
+                [plan]="plan"
+                [productOrOption]="{ option }"
+                [hasSalesScope]="hasSalesScope"
+                [canManageProductHolding]="canManageProductHolding"
+                [changeTariffPlanUrl]="changeTariffPlanUrl"
+                [manageOptionUrl]="manageOptionUrl"
+                [planUpgradeUrl]="planUpgradeUrl"
+                [intentRequired]="intentRequired"
+                [streamingOptions]="streamingOptions"
+                [componentInstanceID]="componentInstanceID"></tg-product-bundle-child>
+              <div class="divider divider--s__very-light-grey" [hidden]="last"></div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,96 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  font-family: TelenetAlbra-Bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+:host h1,
+:host .h1 {
+  font-size: 56px;
+  line-height: 60px;
+  margin-top: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+:host h2,
+:host .h2 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+:host h3,
+:host .h3 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+:host h4,
+:host .h4 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+:host h5,
+:host .h5 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+:host h6,
+:host .h6 {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+}
+
+:host(.spacing-top) * {
+  margin-bottom: 0;
+}
+
+:host(.spacing-bottom) * {
+  margin-top: 0;
+}
+
+:host(.spacing-none) * {
+  margin-top: 0;
+  margin-bottom: 0;
+}

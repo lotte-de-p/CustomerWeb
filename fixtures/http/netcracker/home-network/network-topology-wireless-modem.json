@@ -1,0 +1,91 @@
+{
+  "macAddress": "38:43:7D:B0:44:A6",
+  "lastSeen": "3/15/22 10:58 AM",
+  "type": "HGW",
+  "modemType": "HGW-Wireless",
+  "model": "CH7465LG",
+  "lastSeenLight": "GREEN",
+  "hgwInfo": {
+    "wirelessInterfaceInfos": [
+      {
+        "currentWifiChannel": "CHANNEL_132",
+        "currentWifiFrequency": "5GHZ",
+        "active": true
+      },
+      {
+        "currentWifiChannel": "CHANNEL_1",
+        "currentWifiFrequency": "2.4GHZ",
+        "active": true
+      }
+    ]
+  },
+  "children": [
+    {
+      "macAddress": "C8:D1:2A:D9:74:97",
+      "lastSeen": "3/15/22 11:16 AM",
+      "type": "POWERLINE",
+      "model": "PG9083L-TN",
+      "lastSeenLight": "GREEN",
+      "children": [
+        {
+          "macAddress": "1C:64:99:00:01:E1",
+          "lastSeen": "3/15/22 11:15 AM",
+          "type": "POWERLINE_WIRELESS_ACCESS_POINT",
+          "model": "PG9082L-TN",
+          "lastSeenLight": "GREEN",
+          "clients": [],
+          "ipAddressInfos": [
+            {
+              "ipAddress": "2a02:1800:a3:6600:5cfa:7656:b149:31d9",
+              "ipType": "IPv6"
+            },
+            {
+              "ipAddress": "2a02:1800:a3:6600:1e64:99ff:fe00:1e1",
+              "ipType": "IPv6"
+            },
+            {
+              "ipAddress": "192.168.0.221",
+              "ipType": "IPv4"
+            }
+          ]
+        }
+      ],
+      "clients": [],
+      "ipAddressInfos": [
+        {
+          "ipAddress": "2a02:1800:a3:6600:63c3:b3f6:4506:299c",
+          "ipType": "IPv6"
+        },
+        {
+          "ipAddress": "192.168.0.155",
+          "ipType": "IPv4"
+        }
+      ]
+    },
+    {
+      "macAddress": "68:02:B8:6B:F5:F2",
+      "lastSeen": "3/15/22 11:14 AM",
+      "type": "WIRELESS_ACCESS_POINT",
+      "model": "AP7465CE-TN",
+      "lastSeenLight": "GREEN",
+      "clients": [],
+      "ipAddressInfos": [
+        {
+          "ipAddress": "192.168.0.152",
+          "ipType": "IPv4"
+        }
+      ]
+    }
+  ],
+  "clients": [],
+  "ipAddressInfos": [
+    {
+      "ipAddress": "213.119.244.5",
+      "ipType": "IPv4"
+    },
+    {
+      "ipAddress": "2a02:1800:a0:1103:7c07:820a:186c:2af1",
+      "ipType": "IPv6"
+    }
+  ]
+}

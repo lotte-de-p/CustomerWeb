@@ -1,0 +1,73 @@
+<div class="section section-date container">
+  <div class="text-flow text-flow--h3 section__title text-align--center">
+    {{ labels.datePickerLabel | translate }}
+  </div>
+  <div class="notification notification--errorfield notification--errorfield--flow" *ngIf="error">
+    <span class="icon icon-error-shape errorfield">{{ labels.datePickerErrorLabel | translate }}</span>
+  </div>
+  <ngx-slick-carousel
+    *ngIf="appointmentsAvailable$ | async"
+    class="label-modifier-box slick-slider card-date card-date-with-value"
+    #slickModal="slick-carousel"
+    [config]="dateSlideConfig">
+    <ng-container *ngIf="!reRender">
+      <ng-container *ngFor="let appointmentSlot of timeslots; let i = index">
+        <div
+          ngxSlickItem
+          class="label-modifier-slot slick-slide animation-show-slide-up"
+          style="{{ '--animation-delay:' + (i - this.dateSlideConfig.initialSlide) }}">
+          <input
+            type="radio"
+            name="day"
+            value="{{ appointmentSlot.date | date: 'ddmm' }}"
+            id="day-{{ i }}"
+            class="label-modifier-radio"
+            [disabled]="withMoment && !appointmentSlot.hasAvailableMoments()"
+            [checked]="appointmentSlot === selectedTimeslot" />
+          <div
+            class="label-modifier--append label-modifier--container cursor--pointer"
+            [class.disabled]="withMoment && !appointmentSlot.hasAvailableMoments()">
+            <div class="label-modifier--body">
+              <div class="label-modifier--body--inner-container">
+                <label
+                  for="day-{{ i }}"
+                  class="label-modifier-radio__label"
+                  (click)="selectInstallSlotDay(appointmentSlot)"></label>
+                <div class="text-flow text-flow--label label-modifier-content__header">
+                  {{ appointmentSlot.date | date: 'EEEE' }}
+                </div>
+                <div class="text-flow text-flow--body label-modifier-content__body">
+                  {{ appointmentSlot.date | date: 'dd' }}
+                </div>
+                <div class="text-flow text-flow--label label-modifier-content__timing" *ngIf="withMoment">
+                  <i
+                    class="icon icon-sunrise"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.MORNING)"></i>
+                  <i
+                    class="icon icon-sun"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.LUNCH)"></i>
+                  <i
+                    class="icon icon-sun-half-semifilled"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.AFTERNOON)"></i>
+                  <i
+                    class="icon icon-moon"
+                    [class.disabled]="!appointmentSlot.hasAvailableMoment(appointmentMomentEnum.EVENING)"></i>
+                </div>
+                <div class="text-flow text-flow--label label-modifier-content__footer">
+                  {{ appointmentSlot.date | date: 'MMMM yyyy' }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+    <form (ngSubmit)="loadMoreSlots()" *ngIf="showLoadMore && !reRender">
+      <button class="button button--secondary mt-50" [innerHTML]="labels.loadMoreLabel | translate"></button>
+    </form>
+  </ngx-slick-carousel>
+  <app-new-no-available-appointment-date
+    *ngIf="!(appointmentsAvailable$ | async)"
+    (loadMoreSlots)="loadMoreSlots()"
+    [messageGroup]="messageGroup"></app-new-no-available-appointment-date>
+</div>

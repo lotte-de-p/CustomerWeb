@@ -1,0 +1,107 @@
+<app-loader [enableLoader]="true" [enableMask]="true" [pageType]="'sales'" [startByDefault]="false"></app-loader>
+@switch (currentSection) {
+  @case (FiberAddressCheckerSectionEnum.ADDRESS_FORM) {
+    <wink-title
+      text="{{ 'ng.' + MESSAGE_GROUP_NAME + '.check-fiber.title' | translate }}"
+      html-tag="h3"
+      spacing-y="none">
+    </wink-title>
+    @if (isAddressFormVisible) {
+      <ng-container *ngTemplateOutlet="addressChecker"></ng-container>
+      @if (userAddresses) {
+        <wink-link
+          (click)="toggleAddressChecker()"
+          appearance="default"
+          size="body-regular"
+          href="JavaScript:void(0);"
+          icon="icon-chevron-left"
+          icon-position="left"
+          icon-appearance="default"
+          is-disabled="false"
+          data-cy="back-to-address">
+          {{ 'ng.' + MESSAGE_GROUP_NAME + '.back-to-address-selector' | translate }}
+        </wink-link>
+      }
+    } @else {
+      <ng-container *ngTemplateOutlet="addressList"></ng-container>
+    }
+    @if (!isAddressFormVisible) {
+      <div [attr.data-cy]="'check-other-address-link'" (click)="toggleAddressChecker()">
+        <wink-link
+          appearance="default"
+          size="body-regular"
+          href="JavaScript:void(0);"
+          icon="plus"
+          icon-position="left"
+          icon-appearance="default"
+          is-disabled="false">
+          <wink-icon slot="link-icon" appearance="default" icon="plus" size="md" exportparts="icon, icon-location-pin">
+          </wink-icon>
+          <span>{{ 'ng.' + MESSAGE_GROUP_NAME + '.check-other-address' | translate }}</span>
+        </wink-link>
+      </div>
+    }
+    <ng-template #addressList>
+      <div class="mt--xxl">
+        <app-address-selector class="" [adresses]="userAddresses" (addressSelectedEvent)="setSelectedAddress($event)">
+        </app-address-selector>
+      </div>
+    </ng-template>
+
+    @if (showAddressNotFound) {
+      <div [attr.data-cy]="'address-not-found'" class="mb--l">
+        <wink-notification appearance="warning" has-close-icon="false">
+          <wink-title
+            slot="heading"
+            html-tag="h6"
+            spacing-y="bottom"
+            text="{{ 'ng.' + MESSAGE_GROUP_NAME + '.address-not-found-title' | translate }}"></wink-title>
+          <wink-paragraph
+            slot="content"
+            appearance="body"
+            size="small"
+            [innerHTML]="'ng.' + MESSAGE_GROUP_NAME + '.address-not-found-subtitle' | translate">
+          </wink-paragraph>
+        </wink-notification>
+      </div>
+    }
+    <ng-template #addressChecker>
+      <div class="mt--xxl">
+        <tg-address-form [addressForm]="addressForm" [messageGroupName]="MESSAGE_GROUP_NAME"></tg-address-form>
+      </div>
+    </ng-template>
+    <wink-button
+      [attr.data-cy]="'check-fiber-button'"
+      text="{{ 'ng.' + MESSAGE_GROUP_NAME + '.check-fiber-eligibility.btn' | translate }}"
+      [status]="isAddressInvalid() ? 'disable' : undefined"
+      appearance="primary"
+      size="md"
+      width="none"
+      element="button"
+      type="button"
+      class="mt--s"
+      (click)="checkFiberEligibility()"></wink-button>
+  }
+  @case (FiberAddressCheckerSectionEnum.FIBER_READY) {
+    <tg-fiber-ready
+      [messageGroupName]="MESSAGE_GROUP_NAME"
+      [address]="getSelectedOrFormAddress()"
+      [status]="fiberStatus!"
+      [isLoggedIn]="isUserLoggedIn"
+      [firstName]="firstName"
+      [urlRequestSubscription]="urlRequestSubscription"
+      (backToAddressSelector)="backToAddressSelector()"
+      (toProductPage)="toProductPage()"></tg-fiber-ready>
+  }
+  @case (FiberAddressCheckerSectionEnum.FIBER_NOT_READY) {
+    <tg-fiber-not-ready
+      [messageGroupName]="MESSAGE_GROUP_NAME"
+      [address]="getSelectedOrFormAddress()"
+      [status]="fiberStatus!"
+      [isLoggedIn]="isUserLoggedIn"
+      [firstName]="firstName"
+      [urlToInfoPage]="urlToInfoPage"
+      (backToAddressSelector)="backToAddressSelector()"
+      (toProductPage)="toProductPage()"></tg-fiber-not-ready>
+  }
+}

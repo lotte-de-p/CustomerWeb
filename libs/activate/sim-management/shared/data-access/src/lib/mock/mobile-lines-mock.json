@@ -1,0 +1,130 @@
+[
+  {
+    "tariffPlan": "Telenet Mobile 13 GB",
+    "isDataOnlyPlan": false,
+    "name": "John's phone",
+    "msisdn": "0469423770",
+    "isSuspended": true,
+    "isESimSmartWatchAvailable": true,
+    "identityId": "419101329",
+    "status": "COMPLETED",
+    "mainSimCard": {
+      "iccid": "123456109",
+      "pin": "3231",
+      "puk": "39899811",
+      "type": "E_SIM",
+      "status": "COMPLETED"
+    }
+  },
+  {
+    "tariffPlan": "Data only plan",
+    "isDataOnlyPlan": true,
+    "isESimSmartWatchAvailable": false,
+    "name": "Data only plan",
+    "msisdn": "0469693771",
+    "isSuspended": false,
+    "identityId": "41111918941",
+    "status": "COMPLETED",
+    "mainSimCard": {
+      "iccid": "123456789",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "COMPLETED"
+    }
+  },
+  {
+    "tariffPlan": "Activate SIM",
+    "isDataOnlyPlan": false,
+    "isESimSmartWatchAvailable": false,
+    "name": "Activate SIM",
+    "msisdn": "0469423771",
+    "isSuspended": true,
+    "identityId": "41111918941",
+    "status": "COMPLETED",
+    "pendingSimCard": {
+      "iccid": "123456781",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "ACTIVATION_IN_PROGRESS",
+      "eSimProfileData": null
+    },
+    "mainSimCard": {
+      "iccid": "123456789",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "COMPLETED"
+    }
+  },
+  {
+    "tariffPlan": "Activate SIM with porting",
+    "isDataOnlyPlan": false,
+    "isESimSmartWatchAvailable": false,
+    "name": "Activate SIM with porting",
+    "msisdn": "0469523512",
+    "isSuspended": true,
+    "identityId": "41111918941",
+    "status": "COMPLETED",
+    "pendingSimCard": {
+      "iccid": "123456781",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "ACTIVATION_IN_PROGRESS",
+      "eSimProfileData": null
+    },
+    "mainSimCard": {
+      "iccid": "123456789",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "COMPLETED"
+    }
+  },
+  {
+    "tariffPlan": "Activate E-SIM",
+    "isDataOnlyPlan": false,
+    "isESimSmartWatchAvailable": false,
+    "name": "Activate E-SIM",
+    "msisdn": "0469423772",
+    "isSuspended": false,
+    "identityId": null,
+    "status": "COMPLETED",
+    "pendingSimCard": {
+      "iccid": "123456781",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "E_SIM",
+      "status": "ACTIVATION_IN_PROGRESS",
+      "eSimProfileData": "LPA:1$smdprd.mobile.com$ACBDFGHJKLMNPQRSTVWXYZ23456789"
+    },
+    "mainSimCard": {
+      "iccid": "123456789",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "PHYSICAL_SIM",
+      "status": "COMPLETED"
+    }
+  },
+  {
+    "tariffPlan": "Transfer number",
+    "isDataOnlyPlan": false,
+    "isESimSmartWatchAvailable": false,
+    "isPorting": true,
+    "isPortingDetailsProvided": false,
+    "name": "Transfer number",
+    "msisdn": "0466131313",
+    "isSuspended": false,
+    "identityId": null,
+    "status": "ACTIVATION_IN_PROGRESS",
+    "mainSimCard": {
+      "iccid": "123456789",
+      "pin": "3065",
+      "puk": "15987522",
+      "type": "E_SIM",
+      "status": "ACTIVATION_IN_PROGRESS"
+    }
+  }
+]

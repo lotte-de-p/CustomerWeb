@@ -1,0 +1,12 @@
+@mixin theme($theme-name: 'light') {
+  @if $theme-name != 'light' {
+    :host([theme='telenet-#{$theme-name}-theme']) {
+      @content;
+    }
+  } @else {
+    :host(:root),
+    :host([theme='telenet-light-theme']) {
+      @content;
+    }
+  }
+}

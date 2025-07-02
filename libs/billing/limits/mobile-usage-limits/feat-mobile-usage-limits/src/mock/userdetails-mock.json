@@ -1,0 +1,20 @@
+{
+  "url": "http://localhost:8080/oauth/userdetails",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "customer_number": "1202433588",
+    "identity_id": "41112625273",
+    "username": "automation.cipem.dqadd@itdmtest.be",
+    "login_alias": "e809d556-4ea3-487d-9d07-975c20bcda35",
+    "first_name": "Milan",
+    "last_name": "Vincent",
+    "scopes": ["D_usagelimits"],
+    "explicit_login": true,
+    "narrowed_scope": false,
+    "bss_system": "NETCRACKER",
+    "auth_age": 1749653,
+    "is_pid": true,
+    "role": "MANAGER"
+  }
+}

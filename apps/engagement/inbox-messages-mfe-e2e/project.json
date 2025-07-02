@@ -1,0 +1,63 @@
+{
+  "name": "inbox-messages-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/engagement/inbox-messages-mfe-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "extractLicenses": false,
+      "sourceMap": true,
+      "namedChunks": true,
+      "vendorChunk": true,
+      "customWebpackConfig": {
+        "path": "./coverage.webpack.ts"
+      },
+      "options": {
+        "cypressConfig": "apps/engagement/inbox-messages-mfe-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "inbox-messages-mfe:storybook"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "inbox-messages-mfe:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "inbox-messages-mfe:storybook:ci"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+
+      "options": {
+        "cypressConfig": "apps/engagement/inbox-messages-mfe-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "inbox-messages-mfe:storybook"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/engagement/inbox-messages-mfe-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "inbox-messages-mfe:storybook",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "inbox-messages-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/engagement/inbox-messages-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:inbox-messages-mfe"],
+  "implicitDependencies": ["inbox-messages-mfe"]
+}

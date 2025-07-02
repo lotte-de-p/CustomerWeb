@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "uiOptions",
+  "type": "object",
+  "properties": {
+    "mfeName": {
+      "description": "MFE name",
+      "type": "string",
+      "x-prompt": {
+        "message": "What is the name of the MFE?",
+        "type": "list",
+        "items": [
+          {
+            "value": "barrings-mfe",
+            "label": "barrings-mfe"
+          },
+          {
+            "value": "care-billing-mfe",
+            "label": "care-billing-mfe"
+          },
+          {
+            "value": "address-checker-mfe",
+            "label": "address-checker-mfe"
+          },
+          {
+            "value": "care-service-cases-mfe",
+            "label": "care-service-cases-mfe"
+          },
+          {
+            "value": "customer-registration-mfe",
+            "label": "customer-registration-mfe"
+          },
+          {
+            "value": "dashboard-mfe",
+            "label": "dashboard-mfe"
+          },
+          {
+            "value": "demo-mfe",
+            "label": "demo-mfe"
+          },
+          {
+            "value": "entertainment-mfe",
+            "label": "entertainment-mfe"
+          },
+          {
+            "value": "fleet-mfe",
+            "label": "fleet-mfe"
+          },
+          {
+            "value": "general-mfe",
+            "label": "general-mfe"
+          },
+          {
+            "value": "inbox-messages-mfe",
+            "label": "inbox-messages-mfe"
+          },
+          {
+            "value": "invoice-mfe",
+            "label": "invoice-mfe"
+          },
+          {
+            "value": "limits-mfe",
+            "label": "limits-mfe"
+          },
+          {
+            "value": "marketing-mfe",
+            "label": "marketing-mfe"
+          },
+          {
+            "value": "monorepo-storybook-mfe",
+            "label": "monorepo-storybook-mfe"
+          },
+          {
+            "value": "payment-mfe",
+            "label": "payment-mfe"
+          },
+          {
+            "value": "product-mfe",
+            "label": "product-mfe"
+          },
+          {
+            "value": "product-journey-mfe",
+            "label": "product-journey-mfe"
+          },
+          {
+            "value": "profile-management-mfe",
+            "label": "profile-management-mfe"
+          },
+          {
+            "value": "return-devices-mfe",
+            "label": "return-devices-mfe"
+          },
+          {
+            "value": "sales-mfe",
+            "label": "sales-mfe"
+          },
+          {
+            "value": "sim-management-mfe",
+            "label": "sim-management-mfe"
+          },
+          {
+            "value": "wink-mfe",
+            "label": "wink-mfe"
+          }
+        ]
+      }
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain name"
+    },
+    "leanIxName": {
+      "type": "string",
+      "x-prompt": "What is the LeanIX name of the MFE?",
+      "description": "LeanIX name"
+    },
+    "importPath": {
+      "type": "string",
+      "description": "For publishable libs: Official package name used in import statements"
+    }
+  },
+  "required": ["mfeName", "leanIxName"]
+}

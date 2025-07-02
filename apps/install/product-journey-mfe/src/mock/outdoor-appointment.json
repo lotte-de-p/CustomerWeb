@@ -1,0 +1,8 @@
+{
+  "url": "http://localhost:8080/public/api/appointments-service/v1/appointments/fiber-access",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "locationIds": ["9169507398513822922"]
+  }
+}

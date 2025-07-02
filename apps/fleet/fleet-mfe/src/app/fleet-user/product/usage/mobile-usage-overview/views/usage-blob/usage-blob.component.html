@@ -1,0 +1,108 @@
+<div class="hidden-mobile mt--xl">
+  <div class="mobile-overview-usage__content__wave-section">
+    @for (cardConfig of blobCards; track cardConfig) {
+      <div class="text-align--center wave-section__wave">
+        <span class="text-weight--g" [attr.data-cy]="'card-config-name'">{{ cardConfig.name }}</span>
+        <app-liquid-chart [config]="cardConfig.config"></app-liquid-chart>
+      </div>
+    }
+  </div>
+  @if (usage?.productInfo?.isEligibleForPauseProfile && !usage.isGroupBundleUsage) {
+    <div class="mobile-overview-usage__content__paused-section hidden-mobile text-align--center">
+      <button class="button button--primary" (click)="pauseUnpauseUsage(!usage?.dataPause)">
+        {{
+          'ng.fleet-user-mobile-usage-overview.lbl.' + (usage?.dataPause ? 'unpause-data' : 'pause-data') | translate
+        }}
+      </button>
+      <div class="font--caption text-align--center mb--m">
+        {{ 'ng.fleet-user-mobile-usage-overview.lbl.pause-date-msg' | translate }}
+      </div>
+    </div>
+  }
+  <div class="mobile-overview-usage__content__note" [attr.data-cy]="'days-for-next-bill'">
+    <span>
+      {{ usage.daysForNextBill }}
+      {{ 'ng.fleet-user-mobile-usage-overview.lbl.days-untils' | translate }}
+    </span>
+  </div>
+  @if (!usage?.productInfo?.usageBasedRatePlan && usage?.outOfBundle?.usedUnits !== '0') {
+    <div class="mobile-overview-usage__cost-section cursor--default">
+      <hr />
+      <div
+        class="cost-section__cost-field display--flex justify-content--center justify-content--between--sm align-items--center">
+        <div class="cost-field__cost-area color-red text-weight--g">
+          {{ 'ng.fleet-user-mobile-usage-overview.lbl.extra-cost' | translate }}
+        </div>
+        <div class="cost-field__cost-value">
+          <div class="price price__red-bold">
+            <span>
+              {{
+                'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                  | translate: { value: usage?.outOfBundle?.usedUnits }
+              }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="cost-section__cost-description text-align--left--md text-align--center">
+        {{ 'ng.fleet-user-mobile-usage-overview.lbl.out-of-bundle-description' | translate }}
+      </div>
+    </div>
+  }
+</div>
+<div class="hidden-desktop">
+  <div class="mobile-overview-usage__content__wave-section">
+    <ngx-slick-carousel class="carousel" [config]="slideConfig" #slickModal="slick-carousel">
+      @for (cardConfig of blobCards; track cardConfig) {
+        <div ngxSlickItem class="slide">
+          <div class="text-align--center wave-section__wave">
+            <span class="text-weight--g">{{ cardConfig.name }}</span>
+            <app-liquid-chart [config]="cardConfig.config"></app-liquid-chart>
+          </div>
+        </div>
+      }
+    </ngx-slick-carousel>
+  </div>
+  <div class="mobile-overview-usage__content__note">
+    <span>
+      {{ usage.daysForNextBill }}
+      {{ 'ng.fleet-user-mobile-usage-overview.lbl.days-untils' | translate }}
+    </span>
+  </div>
+  @if (!usage?.productInfo?.usageBasedRatePlan && usage?.outOfBundle?.usedUnits !== '0') {
+    <div class="mobile-overview-usage__cost-section cursor--default">
+      <div
+        class="cost-section__cost-field display--flex justify-content--center justify-content--between--sm align-items--center">
+        <div class="cost-field__cost-area color-red text-weight--g">
+          {{ 'ng.fleet-user-mobile-usage-overview.lbl.extra-cost' | translate }}
+        </div>
+        <div class="cost-field__cost-value">
+          <div class="price price__red-bold">
+            <span>
+              {{
+                'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                  | translate: { value: usage?.outOfBundle?.usedUnits }
+              }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="cost-section__cost-description text-align--left--md text-align--center">
+        {{ 'ng.fleet-user-mobile-usage-overview.lbl.out-of-bundle-description' | translate }}
+      </div>
+    </div>
+  }
+
+  @if (usage?.isLineBundleUsage && !isConnect5Bundle) {
+    <div class="mobile-overview-usage__content__paused-section hidden-desktop">
+      <button class="button button--primary">
+        {{
+          'ng.fleet-user-mobile-usage-overview.lbl.' + (usage?.dataPause ? 'unpause-data' : 'pause-data') | translate
+        }}
+      </button>
+      <div class="mobile-overview-usage__content__paused-section__pause-note text-align--center">
+        {{ 'ng.fleet-user-mobile-usage-overview.lbl.pause-date-msg' | translate }}
+      </div>
+    </div>
+  }
+</div>

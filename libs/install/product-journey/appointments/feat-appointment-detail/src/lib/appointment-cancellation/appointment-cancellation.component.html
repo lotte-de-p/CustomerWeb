@@ -1,0 +1,48 @@
+<div class="overlay">
+  <div class="overlay__mask"></div>
+  <div class="overlay__section">
+    <div class="overlay__section__content p--m">
+      <h4 class="mt-0 pb--m">
+        {{ 'ng.appointments.cancellation.warning-message' | translate }}
+      </h4>
+      <div class="overlay__section__content__description mb--l">
+        <p class="m--n" [attr.data-cy]="'cancel-appointment-date'">
+          {{ selectedAppointment?.dayLabelKey ?? '' | translate }} {{ selectedAppointment?.dayOfMonth }}
+          {{ selectedAppointment?.monthLabelKey ?? '' | translate }}
+        </p>
+        <p [attr.data-cy]="'cancel-appointment-time'">
+          {{ selectedAppointment?.timeslotCodeLabelKey ?? '' | translate }} ({{
+            selectedAppointment?.timeSlot?.startTime
+          }}
+          - {{ selectedAppointment?.timeSlot?.endTime }})
+        </p>
+      </div>
+      <div class="overlay__section__content__action">
+        <a
+          [attr.data-cy]="'close-cancel-appointment'"
+          href="javascript:void(0)"
+          class="button button--secondary"
+          (click)="closeCancellationDialog()"
+          [clickPushToAnalytics]="{
+            attributeName: 'no don\'t cancel appointment',
+            eventName: DatalayerEventNames.EVENT_NAME_SELF_SERVICE_FLOW_ENDED,
+            messageGroupName: messageGroupName
+          }"
+          >{{ 'ng.appointments.cancellation.lbl.back-btn' | translate }}</a
+        >
+        <a
+          [attr.data-cy]="'confirm-cancel-appointment'"
+          href="javascript:void(0)"
+          class="button button--primary button--alternate"
+          (click)="cancelAppointment()"
+          [clickPushToAnalytics]="{
+            attributeName: 'yes cancel appointment',
+            eventName: DatalayerEventNames.EVENT_NAME_SELF_SERVICE_FLOW_ENDED,
+            messageGroupName: messageGroupName
+          }"
+          >{{ 'ng.appointments.cancellation.lbl.confirm-btn' | translate }}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

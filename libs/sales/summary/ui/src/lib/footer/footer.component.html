@@ -1,0 +1,48 @@
+<div class="sales-cart__section sales-cart__order-info mt-10">
+  <div class="px--n py--l background-white">
+    <div class="sales-cart-row__content">
+      <div class="sales-cart__order-info__title color-shade_64 mb--m">
+        <i class="icon icon-information-shape mr--s"></i
+        ><span class="font--caption-bold">
+          {{ 'ng.sales-checkout.shopping-cart.lbl.important-order-information-section.title' | translate }}</span
+        >
+      </div>
+      <ul class="color-shade_64 font--caption ml--l">
+        <li *ngIf="contractSummaryRequired">
+          {{ 'ng.sales-checkout.contract-summary-pre.text' | translate }}
+          <a
+            (click)="contractSummaryLinkClicked()"
+            [attr.data-cy]="'order-summary-toc-link'"
+            class="link inline"
+            href="javascript:void(0)"
+            >{{ 'ng.sales-checkout.contract-summary-link.text' | translate }}
+          </a>
+          {{ 'ng.sales-checkout.contract-summary-post.text' | translate }}
+        </li>
+        <li *ngFor="let depreciationItem of depreciationItems">
+          {{ depreciationItem?.name }}
+          <a
+            (click)="depreciationItemClicked(depreciationItem)"
+            [attr.data-cy]="'order-summary-depreciation-item'"
+            class="link inline"
+            href="javascript:void(0)">
+            {{ 'ng.sales-checkout.shopping-cart.lbl.depreciation-table-link' | translate }}
+          </a>
+        </li>
+        <li>{{ 'ng.hardware-checkout.shopping-cart.lbl.recall-right.text' | translate }}</li>
+        <li>
+          {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-pre.text' | translate }}
+          <a
+            (click)="termsAndConditionsLinkClicked()"
+            [attr.data-cy]="'order-summary-terms-and-conditions'"
+            id="order-summary-terms-and-conditions"
+            class="link inline"
+            href="javascript:void(0)">
+            {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-link.text' | translate }}
+          </a>
+          {{ 'ng.hardware-checkout.shopping-cart.lbl.terms-and-conditions-post.text' | translate }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

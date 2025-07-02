@@ -1,0 +1,8 @@
+<ng-container *ngIf="getMessages().length > 0; else noErrorTemplate">
+  <div *ngFor="let message of getMessages()" class="notification notification--{{ message.type }}">
+    <span class="icon icon-{{ message.subtype }} {{ message.type }}" [innerHTML]="getTranslatedLabel(message)"></span>
+  </div>
+</ng-container>
+<ng-template #noErrorTemplate>
+  <ng-content></ng-content>
+</ng-template>

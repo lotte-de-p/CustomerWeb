@@ -1,0 +1,92 @@
+<div class="content-section__details" [attr.data-testid]="'product-bundle-child'">
+  <div class="row display--flex align-items--center">
+    <div class="col-lg-6 col-md-6 col-xs-12 display--flex align-items--center">
+      <div class="display--flex align-items--center justify-content--center">
+        <wink-icon
+          [attr.data-testid]="'productIcon'"
+          icon="{{ productIcon }}"
+          appearance="primary"
+          size="md"></wink-icon>
+      </div>
+      <div class="display--flex--md align-items--start--md">
+        <div class="ml--m">
+          <div
+            class="text-font-family--t7 text--xxm product-overview__heading"
+            [attr.data-testid]="'bundleProductName'">
+            {{ product.productSpec?.name || product.productInfo.name }}
+          </div>
+          <div class="display--flex--md align-items--center pt--xxs" *ngIf="product.productType === 'telephone'">
+            <div class="text--s mt--n--md">
+              <span *ngIf="product.identifier">
+                {{ product.identifier | phoneNumber }}
+              </span>
+            </div>
+          </div>
+          <div class="display--flex--md align-items--center pt--xxs" *ngIf="product.productType === 'mobile'">
+            <div class="text--s mt--n--md">
+              <span>
+                <span class="pr--xxxs">{{ product.mobileIdentifier?.length }}</span>
+                <span class="pr--xxxs">{{ 'ng.product-overview.lbl.bundleMaxline-out-of' | translate }}</span>
+                <span class="pr--xxxs">{{ product.bundleMaxlines }}</span>
+                <span>{{ 'ng.product-overview.lbl.bundleMaxline-numbers' | translate }}</span>
+              </span>
+            </div>
+          </div>
+          <div class="hide-from-md pt--xxs" *ngIf="showManageOptions()">
+            <a
+              *ngIf="(product.isProductActive() && !product.isMultipleDTV) || !product.productType"
+              (click)="handleManageOptions(plan.identifier, product); $event.stopPropagation()"
+              href=""
+              class="font--body-regular">
+              {{ 'ng.product-overview.lnk.manage-options' | translate }}
+            </a>
+          </div>
+        </div>
+        <div class="pl--m pt--xxxs pt--n--md">
+          <span *ngIf="product.isProductActivationInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-activation-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductDisconnectionInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-disconnection-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductModificationInProgress()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-modification-in-progress' | translate
+            }}</span>
+          </span>
+          <span *ngIf="product.isProductSuspended()">
+            <span class="status-indicator status-indicator--warning word-break--ellipsis">{{
+              'ng.product-overview.lbl.status-suspended' | translate
+            }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12 text-align--right hide-until-md">
+      <div class="display--flex align-items--center justify-content--end--md">
+        <div class="text-align--right ml--xxxl--md" *ngIf="showManageOptions()">
+          <a
+            [attr.data-testid]="'manageOptions'"
+            *ngIf="(product.isProductActive() && !product.isMultipleDTV) || !product.productType"
+            (click)="handleManageOptions(product.identifier, product); $event.stopPropagation()"
+            class="font--body-regular">
+            Manage options
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <demo-product-specifications
+    [product]="product"
+    [hasSalesScope]="hasSalesScope"
+    [canManageProductHolding]="canManageProductHolding"
+    [changeTariffPlanUrl]="changeTariffPlanUrl"
+    [manageOptionUrl]="manageOptionUrl"
+    [isBundle]="true"
+    [attr.data-testid]="'product-specification'"
+    [componentInstanceID]="componentInstanceID"></demo-product-specifications>
+</div>

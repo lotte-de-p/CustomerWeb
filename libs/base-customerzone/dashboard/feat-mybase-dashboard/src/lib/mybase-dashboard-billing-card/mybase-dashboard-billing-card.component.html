@@ -1,0 +1,229 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white mt--l--md"
+  [attr.data-cy]="'mybase-dashboard-billing-card'">
+  <div
+    (click)="goToBillingDetail()"
+    class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">
+        {{ 'ng.mybase-dashboard.billing-card.title' | translate }}
+      </span>
+    </div>
+    <i
+      class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override display--flex align-items--center"></i>
+  </div>
+
+  @switch (billingCardViewModel.type) {
+    @case ('NO_OPEN_AMOUNT') {
+      <ng-container [ngTemplateOutlet]="noOpenAmount"></ng-container>
+    }
+    @case ('DUE_SINGLE') {
+      <ng-container [ngTemplateOutlet]="dueBillSingle"></ng-container>
+    }
+    @case ('DUE_MULTIPLE') {
+      <ng-container [ngTemplateOutlet]="dueBillMultiple"></ng-container>
+    }
+    @case ('OVERDUE_SINGLE_PAYMENT_MANUAL') {
+      <ng-container [ngTemplateOutlet]="overDueBillSinglePaymentManual"></ng-container>
+    }
+    @case ('OVERDUE_SINGLE_PAYMENT_DIRECT_DEBIT') {
+      <ng-container [ngTemplateOutlet]="overDueBillSinglePaymentDirectDebit"></ng-container>
+    }
+    @case ('OVERDUE_MULTIPLE') {
+      <ng-container [ngTemplateOutlet]="overDueBillMultiple"></ng-container>
+    }
+    @case ('REFUND_SINGLE') {
+      <ng-container [ngTemplateOutlet]="refundsSingle"></ng-container>
+    }
+    @case ('REFUND_MULTIPLE') {
+      <ng-container [ngTemplateOutlet]="refundsMultiple"></ng-container>
+    }
+  }
+</div>
+
+<ng-template #noOpenAmount>
+  <div class="mybase-dashboard--card--content" [attr.data-cy]="'mybase-dashboard-billing-card-content-no-open-amount'">
+    <div (click)="goToBillingDetail()" class="cursor--pointer display--flex flex-direction--column align-items--center">
+      <img
+        class="hide-until-md"
+        appMybaseDashboardImageSrcInterceptor
+        src="/assets/happy-bills.svg"
+        [moduleId]="'tg-mybase-dashboard'" />
+      <img
+        class="hide-from-md"
+        appMybaseDashboardImageSrcInterceptor
+        src="/assets/happy-bills-mobile-view.svg"
+        [moduleId]="'tg-mybase-dashboard'" />
+      <div class="mybase-dashboard--card--content--status mt--xxs">
+        <div class="heading--6 m--n">
+          {{ 'ng.mybase-dashboard.billing-card.status-no-open-amount' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dueBillSingle>
+  <div class="mybase-dashboard--card--content" [attr.data-cy]="'mybase-dashboard-billing-card-content-due-bill-single'">
+    <div>
+      <div class="text-flow text-flow--h3">&euro;&nbsp;{{ billingCardViewModel.amount | number: '1.2-2' }}</div>
+      <div class="font--body-small color-shade_72">
+        {{
+          'ng.mybase-dashboard.billing-card.status-due-bill-single'
+            | translate: { dueInDays: billingCardViewModel.dueInDays }
+        }}
+      </div>
+    </div>
+    @if (billingCardViewModel.showButton) {
+      <div class="display--flex mt--l">
+        <div
+          (click)="goToPayNow()"
+          [attr.data-cy]="'mybase-dashboard-billing-card-pay-now'"
+          class="button button--primary button--alternate flex-grow">
+          {{ 'ng.mybase-dashboard.billing-card.button.pay-now' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+</ng-template>
+
+<ng-template #dueBillMultiple>
+  <div
+    class="mybase-dashboard--card--content"
+    [attr.data-cy]="'mybase-dashboard-billing-card-content-due-bill-multiple'">
+    <div class="">
+      <div class="display--flex align-items--center">
+        <i class="icon icon-md icon-bill mr--xs icon-no-size-override"></i>
+        <span class="heading--6 mt--n">
+          {{ 'ng.mybase-dashboard.billing-card.status-due-bill-multiple-title' | translate }}
+        </span>
+      </div>
+      <div class="font--body-small color-shade_72">
+        {{ 'ng.mybase-dashboard.billing-card.status-due-bill-multiple-subtitle' | translate }}
+      </div>
+    </div>
+    <div class="display--flex mt--l">
+      <div
+        (click)="goToViewBills(billingCardViewModel.accountNumber)"
+        [attr.data-cy]="'mybase-dashboard-billing-card-view-bills'"
+        class="button button--primary button--alternate flex-grow">
+        {{ 'ng.mybase-dashboard.billing-card.button.view-bills' | translate }}
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #overDueBillSinglePaymentManual>
+  <div
+    class="mybase-dashboard--card--content"
+    [attr.data-cy]="'mybase-dashboard-billing-card-content-overdue-bill-single'">
+    <div>
+      <div class="display--flex align-items--center">
+        <i class="color-red icon-md icon icon-error-shape-filled mr--xs icon-no-size-override"></i>
+        <div class="text-flow text-flow--h3">&euro;&nbsp;{{ billingCardViewModel.amount | number: '1.2-2' }}</div>
+      </div>
+      <div class="font--body-small color-shade_72">
+        {{
+          'ng.mybase-dashboard.billing-card.status-overdue-bill-single'
+            | translate: { dueInDays: billingCardViewModel.dueInDays }
+        }}
+      </div>
+    </div>
+    @if (billingCardViewModel.showButton) {
+      <div class="display--flex justify-content--end mt--l">
+        <div
+          (click)="goToPayNow(billingCardViewModel.accountNumber)"
+          [attr.data-cy]="'mybase-dashboard-billing-card-pay-now'"
+          class="button button--primary button--alternate flex-grow">
+          {{ 'ng.mybase-dashboard.billing-card.button.pay-now' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+</ng-template>
+
+<ng-template #overDueBillSinglePaymentDirectDebit>
+  <div
+    class="mybase-dashboard--card--content"
+    [attr.data-cy]="'mybase-dashboard-billing-card-content-overdue-bill-single'">
+    <div>
+      <div class="display--flex align-items--center">
+        <i class="color-red icon-md icon icon-error-shape-filled mr--xs icon-no-size-override"></i>
+        <div class="text-flow text-flow--h3">&euro;&nbsp;{{ billingCardViewModel.amount | number: '1.2-2' }}</div>
+      </div>
+      <div class="font--body-small color-shade_72">
+        {{ 'ng.mybase-dashboard.billing-card.status-overdue-bill-single-direct-debit' | translate }}
+      </div>
+    </div>
+    @if (billingCardViewModel.showButton) {
+      <span
+        (click)="goToViewDetails()"
+        [attr.data-cy]="'mybase-dashboard-billing-card-view-details'"
+        class="display--inline-block text-flow text-flow--h6 width--fit-content border-style--b--solid border-width--b--b cursor--pointer--hover mt--l"
+        style="color: #00807b">
+        {{ 'ng.mybase-dashboard.billing-card.button.view-details' | translate }}
+      </span>
+    }
+  </div>
+</ng-template>
+
+<ng-template #overDueBillMultiple>
+  <div
+    class="mybase-dashboard--card--content"
+    [attr.data-cy]="'mybase-dashboard-billing-card-content-overdue-bill-multiple'">
+    <div class="display--flex align-items--center">
+      <i class="color-red icon icon-md icon-error-shape-filled mr--xs icon-no-size-override"></i>
+      <span class="heading--6 mt--n">
+        {{ 'ng.mybase-dashboard.billing-card.status-overdue-bill-multiple' | translate }}
+      </span>
+    </div>
+    <div class="display--flex mt--l">
+      <div
+        (click)="goToViewBills(billingCardViewModel.accountNumber)"
+        [attr.data-cy]="'mybase-dashboard-billing-card-view-bills'"
+        class="button button--primary button--alternate flex-grow">
+        {{ 'ng.mybase-dashboard.billing-card.button.view-bills' | translate }}
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #refundsSingle>
+  <div class="mybase-dashboard--card--content" [attr.data-cy]="'mybase-dashboard-billing-card-content-refunds-single'">
+    <div>
+      <div class="text-flow text-flow--h3">&euro;&nbsp;{{ billingCardViewModel.amount | number: '1.2-2' }}</div>
+      <div class="font--body-small color-shade_72">
+        {{ 'ng.mybase-dashboard.billing-card.status-refund-single' | translate }}
+      </div>
+    </div>
+    <span
+      (click)="goToViewDetails()"
+      [attr.data-cy]="'mybase-dashboard-billing-card-view-details'"
+      class="display--inline-block text-flow text-flow--h6 width--fit-content border-style--b--solid border-width--b--b cursor--pointer--hover mt--l"
+      style="color: #00807b">
+      {{ 'ng.mybase-dashboard.billing-card.button.view-details' | translate }}
+    </span>
+  </div>
+</ng-template>
+
+<ng-template #refundsMultiple>
+  <div
+    class="mybase-dashboard--card--content"
+    [attr.data-cy]="'mybase-dashboard-billing-card-content-refunds-multiple'">
+    <div>
+      <div class="text-flow text-flow--h3">
+        {{ 'ng.mybase-dashboard.billing-card.status-refund-multiple-title' | translate }}
+      </div>
+      <div class="font--body-small color-shade_72">
+        {{ 'ng.mybase-dashboard.billing-card.status-refund-multiple-subtitle' | translate }}
+      </div>
+    </div>
+    <span
+      (click)="goToViewDetails()"
+      [attr.data-cy]="'mybase-dashboard-billing-card-view-details'"
+      class="display--inline-block text-flow text-flow--h6 width--fit-content border-style--b--solid border-width--b--b cursor--pointer--hover mt--l"
+      style="color: #00807b">
+      {{ 'ng.mybase-dashboard.billing-card.button.view-details' | translate }}
+    </span>
+  </div>
+</ng-template>

@@ -1,0 +1,155 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div *ngrxLet="appointmentVM$; let appointment" [attr.data-cy]="'appointment-card'">
+    <ng-container *ngIf="!appointment?.showErrorCard">
+      <ng-container *ngIf="appointment?.isNewAppointment">
+        <div class="card-content--wave-data-card--full js-card-content">
+          <div class="row ml-0 mr-0">
+            <div class="row pl--xxs--md">
+              <div class="icon-text-block__icon icon-calendar icon-md mt-0"></div>
+              <h6 class="font-bold pl--xxxs heading--nomargin">
+                <span [attr.data-cy]="'card-heading'" class="text--m">
+                  {{ 'ng.appointments.lbl.schedule-appointment' | translate }}
+                </span>
+              </h6>
+            </div>
+          </div>
+          <div *ngIf="appointment?.isFtthAppointment">
+            <p class="font--caption" [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p>
+          </div>
+          <div *ngIf="!appointment?.isFtthAppointment">
+            <ol class="ml--default--lg pl--l--md pl--m">
+              <li class="font--caption-bold pt--s">
+                <div [attr.data-cy]="'select-time-heading'" class="">
+                  {{ 'ng.appointments.lbl.select-a-time' | translate }}
+                </div>
+                <a href="" class="font--body-small font--caption link text--s"
+                  ><span [attr.data-cy]="'book-now-link'">{{ 'ng.appointments.btn.book-now' | translate }}</span></a
+                >
+              </li>
+              <li class="color-shade_64 font--caption pt--xxs">
+                <div class="">
+                  {{ 'ng.appointments.lbl.appointment-complete' | translate: { type: appointment?.appointmentType } }}
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="appointment?.isPostponedAppointmentNeedsReschedule">
+        <div class="card-content--wave-data-card--full js-card-content">
+          <div class="row ml-0 mr-0">
+            <div class="row pl--xxs--md">
+              <div class="icon-text-block__icon icon-calendar icon-md mt-0"></div>
+              <h6 class="pl--xxxs heading--nomargin">
+                <span class="text--m"> {{ 'ng.appointments.lbl.upcoming-appointment' | translate }} </span>
+              </h6>
+            </div>
+          </div>
+          <div *ngIf="appointment?.isFtthAppointment">
+            <p class="font--caption" [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p>
+          </div>
+          <div *ngIf="!appointment?.isFtthAppointment">
+            <ol class="ml--default--lg pl--l--md pl--m mt--s">
+              <li class="color-shade_64 font--caption">
+                <div class="">
+                  {{ 'ng.appointments.lbl.installation' | translate
+                  }}<span class="pl--xxxs">{{ 'ng.appointments.lbl.postponed' | translate }}</span>
+                </div>
+              </li>
+              <li class="font--caption-bold pt--m">
+                <div class="">{{ 'ng.appointments.lbl.needsreschedule-appointment' | translate }}</div>
+                <a href="" class="font--body-small font--caption link text--s"
+                  ><span>{{ 'ng.appointments.link.view-details' | translate }}</span></a
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="appointment?.isAppointmentInWait">
+        <div class="card-content--wave-data-card--full js-card-content">
+          <div class="row ml-0 mr-0">
+            <div class="row pl--xxs--md">
+              <div class="icon-text-block__icon icon-calendar icon-md mt-0"></div>
+              <h6 class="pl--xxxs heading--nomargin">
+                <span class="text--m"> {{ 'ng.appointments.lbl.upcoming-wait-appointment' | translate }} </span>
+              </h6>
+            </div>
+          </div>
+          <div *ngIf="appointment?.isFtthAppointment">
+            <p class="font--caption" [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p>
+          </div>
+          <div *ngIf="!appointment?.isFtthAppointment">
+            <ol class="ml--default--lg pl--l--md pl--m mt--s">
+              <li class="color-shade_64 font--caption">
+                <div class="">
+                  {{ 'ng.appointments.lbl.installation' | translate
+                  }}<span class="pl--xxxs">{{ 'ng.appointments.lbl.wait' | translate }}</span>
+                </div>
+              </li>
+              <li class="font--caption-bold pt--m">
+                <div class="">{{ 'ng.appointments.lbl.wait-appointment' | translate }}</div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!appointment?.hasNoAppointments && appointment?.isScheduledAppointment">
+        <div class="card-content--wave-data-card--full">
+          <div class="row ml-0 mr-0">
+            <div class="row pl--xxs--md">
+              <div
+                [attr.data-cy]="'schedule-icon-calendar'"
+                class="icon-text-block__icon icon-calendar icon-md mt-0"></div>
+              <h6 class="pl--xxxs heading--nomargin">
+                <span [attr.data-cy]="'schedule-card-heading'" class="text--m">
+                  {{ 'ng.appointments.lbl.appointment-scheduled' | translate: { type: appointment?.appointmentType } }}
+                </span>
+              </h6>
+            </div>
+          </div>
+          <div *ngIf="appointment?.isFtthAppointment">
+            <p class="font--caption" [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p>
+          </div>
+          <div *ngIf="appointment?.timeSlot?.startTime && appointment?.date">
+            <ol class="pl--l--md pl--m mt--s">
+              <li class="font--caption">
+                <div [attr.data-cy]="'schedule-card-sub-heading'" class="font--caption-bold">
+                  {{ 'ng.appointments.lbl.scheduled-for' | translate }}
+                </div>
+                <div [attr.data-cy]="'schedule-card-slot'" class="font--caption">
+                  {{ appointment?.date | date: 'd MMM y' }} ({{ appointment?.timeSlot?.startTime }} -
+                  {{ appointment?.timeSlot?.endTime }})
+                </div>
+              </li>
+              <li class="font--caption color-shade_64 pt--m">
+                <div [attr.data-cy]="'schedule-card-complete'" class="">
+                  {{ 'ng.appointments.lbl.appointment-complete' | translate: { type: appointment?.appointmentType } }}
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="appointment?.hasNoAppointments">
+        <div>
+          <img [src]="cardIcon" alt="card-icon" />
+        </div>
+        <div class="dashboard-card__title">
+          {{ cardTitle }}
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngIf="appointment?.showErrorCard">
+      <div class="notification--card">
+        <i class="icon icon-error-shape"></i>
+        <div class="notification--card__message">
+          <div class="notification--card__message__header">{{ cardTitle }}</div>
+          <div [attr.data-cy]="'appointments-error'" class="notification--card__message__description">
+            {{ 'ng.appointments.error.service-not-available' | translate }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</tg-login>

@@ -1,0 +1,12 @@
+export declare enum CustomerCategoryEnum {
+    RESIDENTIAL = "RESIDENTIAL",
+    BUSINESS = "BUSINESS",
+    FLEET_PORTAL = "FLEET-PORTAL",
+    BUSINESS_LINE = "Business",
+    RESIDENTIAL_LINE = "Residential",
+    ORPHAN = "ORPHAN USER",
+    FLEET_MANAGER = "FLEET MANAGER",
+    FLEET_USER = "FLEET USER",
+    LEGACY = "LEGACY USER"
+}
+//# sourceMappingURL=customer-category.enum.d.ts.map

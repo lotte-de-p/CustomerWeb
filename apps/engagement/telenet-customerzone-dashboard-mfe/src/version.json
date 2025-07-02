@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Telenet-customerzone-dashboard application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

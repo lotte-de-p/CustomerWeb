@@ -1,0 +1,400 @@
+{
+  "product": {
+    "productid": "C5FA0001",
+    "externalProductCode": "C5FA0001",
+    "labelkey": "ONE for 1",
+    "producttype": "BUNDLE",
+    "weight": 600,
+    "apps": [],
+    "customercategories": ["Residential", "Event/Demo", "Production Test"],
+    "category": [
+      "For Rules - TLOs with Telenet TV 2.0",
+      "For Rules - ONE/ONEup with YUP",
+      "For Rules - ONE/ONEup",
+      "For Rules -TLOs for 3TB FUP Internet Service Policies",
+      "4P Bundle",
+      "Post-Paid Mobile"
+    ],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "ONE for 1",
+        "logo": "{{STUBBING_URL}}/image.png"
+      },
+      {
+        "locale": "nl",
+        "name": "ONE for 1",
+        "logo": "{{STUBBING_URL}}/image.png"
+      },
+      {
+        "locale": "fr",
+        "name": "ONE for 1",
+        "logo": "{{STUBBING_URL}}/image.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "ONE for 1"
+        },
+        {
+          "locale": "nl",
+          "name": "ONE for 1"
+        },
+        {
+          "locale": "fr",
+          "name": "ONE for 1"
+        }
+      ]
+    },
+    "services": [
+      {
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.bundle.mobile.maxlines",
+            "value": "1",
+            "visible": true,
+            "weight": "1"
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "VOICE",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Unlimited calls"
+              },
+              {
+                "locale": "nl",
+                "name": "Unlimited calls"
+              },
+              {
+                "locale": "fr",
+                "name": "Unlimited calls"
+              }
+            ]
+          },
+          {
+            "labelkey": "TEXT",
+            "value": "unlimited",
+            "unit": "number",
+            "visible": true,
+            "weight": "30",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "unlimited sms in Belgium and EU"
+              },
+              {
+                "locale": "nl",
+                "name": "unlimited sms in Belgium and EU"
+              },
+              {
+                "locale": "fr",
+                "name": "unlimited sms in Belgium and EU"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "ONE for 1 National mobile data allowance",
+            "value": "40",
+            "unit": "GB",
+            "visible": true,
+            "weight": "20",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "ONE for 1 National mobile data"
+              },
+              {
+                "locale": "nl",
+                "name": "ONE for 1 National mobile data"
+              },
+              {
+                "locale": "fr",
+                "name": "ONE for 1 National mobile data"
+              }
+            ]
+          },
+          {
+            "labelkey": "ONE for 1 EU mobile data allowance",
+            "value": "20",
+            "unit": "GB",
+            "visible": true,
+            "weight": "20",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "ONE for 1 EU mobile data"
+              },
+              {
+                "locale": "nl",
+                "name": "ONE for 1 EU mobile data"
+              },
+              {
+                "locale": "fr",
+                "name": "ONE for 1 EU mobile data"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "FIXED_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "VOICE",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "50",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "fixed Unlimited calls"
+              },
+              {
+                "locale": "nl",
+                "name": "fixed Unlimited calls"
+              },
+              {
+                "locale": "fr",
+                "name": "fixed Unlimited calls"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "FIXED_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.fixedinternet.volume.download.fup",
+            "value": "unlimited",
+            "unit": "GB",
+            "visible": true,
+            "weight": "60",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "unlimited ONE for 1 Data"
+              },
+              {
+                "locale": "nl",
+                "name": "unlimited ONE for 1 Data"
+              },
+              {
+                "locale": "fr",
+                "name": "unlimited ONE for 1 Data"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "DTV",
+        "experience": {
+          "experiencetype": "ENTERTAINMENT"
+        },
+        "specifications": [
+          {
+            "labelkey": "DTV",
+            "visible": true,
+            "weight": "40",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Dtv/Tv box"
+              },
+              {
+                "locale": "nl",
+                "name": "Dtv/Tv box"
+              },
+              {
+                "locale": "fr",
+                "name": "Dtv/Tv box"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "66,0",
+        "unit": "EUR"
+      },
+      "productsegment": "RMD",
+      "productgroup": "OTHER",
+      "esimAvailable": true
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "constituents": [
+      {
+        "type": "dtv[SIPADAN]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "dtv[EOS]",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "mobile_line",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "fixed_telephone",
+        "minCount": "0",
+        "maxCount": "1"
+      },
+      {
+        "type": "internet_line",
+        "minCount": "1",
+        "maxCount": "1"
+      }
+    ],
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncludedUnlimitedC5National",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleDataUnlimitedC5National90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "InBundleDataUnlimitedC5National100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "shared",
+          "preferenceGroup": "BundleMobileDataIncludedUnlimitedC5EU",
+          "threshold": [
+            {
+              "communicationPreferenceType": "InBundleDataUnlimitedC5EU90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "InBundleDataUnlimitedC5EU100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "personalOutOfBundle",
+          "preferenceGroup": "BundleMobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        }
+      ],
+      "internet": [
+        {
+          "category": "FUP",
+          "preferenceGroup": "InternetFUP",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": false,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Internet100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "usageLimits": {
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "requiresInstallation": true,
+    "isYupProduct": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="118px" viewBox="0 0 144 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <filter x="-27.5%" y="-27.7%" width="155.1%" height="155.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0.7" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Offers-13.2" transform="translate(-212.000000, -346.000000)">
+            <g id="Group" transform="translate(214.000000, 346.000000)">
+                <g id="Group-7" transform="translate(31.000000, 38.500000) rotate(-60.000000) translate(-31.000000, -38.500000) translate(-2.000000, 22.000000)" stroke="#575756" stroke-width="2">
+                    <path d="M0,22.3813563 L0,31.0558436 C1.01453064e-16,31.8842707 0.671572885,32.5558436 1.50000002,32.5558436 L3.22937794,32.5558436 L62.7742351,32.5558436 L64.2699305,32.5558436 C65.0959803,32.5558436 65.765626,31.886198 65.765626,31.0601482 L65.765626,22.3813563 C65.765626,21.5529291 65.0940531,20.8813562 64.265626,20.8813562 L1.50000002,20.8813562 C0.671572885,20.8813562 -3.23497669e-16,21.5529291 0,22.3813563 Z M1.48105249,32.5559327 L63.2990408,32.5559327" id="Combined-Shape"></path>
+                    <line x1="23.3515628" y1="20.8813562" x2="23.3515628" y2="32.8813562" id="Path-5"></line>
+                    <line x1="43.8437507" y1="20.8813562" x2="43.8437507" y2="32.8813562" id="Path-5"></line>
+                    <path d="M33.1276371,20.8813562 C35.1535046,8.28186664 38.8209053,1.40741604 44.1298393,0.258004445 C52.0932404,-1.46611295 55.8470345,5.78629581 52.7921875,12.0276481 C50.7556229,16.1885496 44.1191647,18.9498755 32.882813,20.3116257" id="Path-6"></path>
+                    <path d="M12.1588868,20.8813562 C14.1847542,8.28186664 17.852155,1.40741604 23.161089,0.258004445 C31.1244901,-1.46611295 34.8782841,5.78629581 31.8234372,12.0276481 C29.7868726,16.1885496 23.1504144,18.9498755 11.9140627,20.3116257" id="Path-6" transform="translate(22.398438, 10.440678) scale(-1, 1) translate(-22.398438, -10.440678) "></path>
+                </g>
+                <ellipse id="Oval-Copy-8" fill="#FDC400" fill-rule="nonzero" filter="url(#filter-1)" cx="126.8125" cy="107.79661" rx="3.8125" ry="3.79661017"></ellipse>
+                <ellipse id="Oval-Copy-9" fill="#239A98" cx="85.8125" cy="3.79661017" rx="3.8125" ry="3.79661017"></ellipse>
+                <rect id="Rectangle-Copy" stroke="#575756" stroke-width="2" x="52" y="51" width="60" height="40" rx="2"></rect>
+                <ellipse id="Oval-Copy-6" fill="#F5B0A3" cx="134.375" cy="29.2542373" rx="7.625" ry="7.59322034"></ellipse>
+                <ellipse id="Oval-Copy-26" fill="#F5B0A3" fill-rule="nonzero" cx="25.71875" cy="111.830508" rx="5.71875" ry="5.69491525"></ellipse>
+                <line x1="71.953125" y1="51.4576278" x2="71.953125" y2="91.4576278" id="Path-5" stroke="#575756" stroke-width="2"></line>
+                <line x1="92.4453128" y1="51.4576278" x2="92.4453128" y2="91.4576278" id="Path-5" stroke="#575756" stroke-width="2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "url": "http://localhost:8080/infoUrl.html",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    "<!DOCTYPE HTML><html><head><title>Useful Information</title></head><body><h1>Useful information appointment</h1><p>This is a mock data for the useful information.</p></body></html>"
+  ],
+  "responseType": "text"
+}

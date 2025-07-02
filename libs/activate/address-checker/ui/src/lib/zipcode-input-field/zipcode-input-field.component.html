@@ -1,0 +1,33 @@
+<div class="form-group pb--l">
+  <div class="input-v2--wrapper">
+    <label class="label-v2" for="new-zc" id="zipcode:Label">
+      <div class="label-v2__label">
+        <div class="font--caption cur-default my--xxxs">
+          {{ 'ng.' + messageGroup + '.lbl.zip-code' | translate }}
+        </div>
+      </div>
+    </label>
+    <div class="display--flex width--full">
+      <input
+        [formControl]="formControl"
+        [matAutocomplete]="zipCodeList"
+        aria-describedby="zipcode:Helper zipcode:Error"
+        autocomplete="off"
+        class="input-v2"
+        id="new-zc"
+        required="true"
+        type="text" />
+    </div>
+  </div>
+  <mat-autocomplete #zipCodeList="matAutocomplete" [autoActiveFirstOption]="true" [displayWith]="formattedLocation">
+    <mat-option *ngFor="let location of suggestions$ | async" [value]="location">
+      {{ location.zipCode }} - {{ location.subMunicipality }}
+    </mat-option>
+  </mat-autocomplete>
+  <div
+    *ngIf="controls.touched && controls.hasError('required')"
+    class="formErrorInput text-align--left"
+    data-cy="error-on-zipcode">
+    {{ 'ng.' + messageGroup + '.error.selectedCityOrZipCode.required' | translate }}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="section section-time container">
+  <div class="text-flow text-flow--h3 section__title text-align--center">
+    {{ labels.momentPickerLabel | translate }}
+  </div>
+  <div class="notification notification--errorfield notification--errorfield--flow mb-15" *ngIf="error">
+    <span class="icon icon-error-shape errorfield">{{ labels.momentPickerErrorLabel | translate }}</span>
+  </div>
+
+  <div class="label-modifier-box card-mini card-mini--with-icon">
+    <ng-container *ngFor="let moment of availableMoments; let i = index">
+      <div class="label-modifier-slot animation-show-slide-up" style="{{ '--animation-delay:' + i }}">
+        <input
+          type="radio"
+          name="time"
+          value="{{ moment }}"
+          id="time-{{ i }}"
+          class="label-modifier-radio"
+          [checked]="moment.timeslot === selectedMoment" />
+        <div
+          class="label-modifier--append label-modifier--container cursor--pointer mb--m"
+          [class.disabled]="!moment.available">
+          <div class="label-modifier--body">
+            <div class="label-modifier--body--inner-container">
+              <label for="time-{{ i }}" class="label-modifier-radio__label" (click)="selectMoment(moment)"></label>
+              <div class="label-modifier-content__header"><i class="icon icon-tick"></i></div>
+              <div class="label-modifier-content__body">
+                <div class="text-flow text-flow--button label-modifier-content__body-label">
+                  {{ moment.label | translate }}
+                </div>
+                <div class="text-flow text-flow--legal label-modifier-content__body-range">
+                  {{ moment.displayTime | translate }}
+                </div>
+              </div>
+              <div class="label-modifier-content__timing icon-appointment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

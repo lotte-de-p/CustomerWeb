@@ -1,0 +1,12 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": ["**/cypress/**"],
+  "reporter": ["cobertura", "html-spa", "text", "json", "text-summary"],
+  "check-coverage": true,
+  "include": ["../fleet-mfe/**", "../fleet-mfe-e2e/**"],
+  "report-dir": "../../../coverage/apps/fleet/fleet-mfe-e2e",
+  "cwd": "../../../"
+}

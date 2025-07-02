@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  label {
+    color: var(--semantic-color-text-subtle);
+  }
+  progress {
+    width: 100%;
+    height: rem(0.4);
+    border-radius: 0;
+    appearance: none;
+    background-color: var(--semantic-color-background-surface-bold-overlapping-default);
+    border: none;
+    &::-moz-progress-bar {
+      background: var(--semantic-color-background-surface-action-default);
+    }
+    &::-webkit-progress-value {
+      background-color: var(--semantic-color-background-surface-action-default);
+    }
+    &::-webkit-progress-bar {
+      background: transparent;
+    }
+    &.progress-bar-transparent {
+      background-color: transparent;
+    }
+  }
+}

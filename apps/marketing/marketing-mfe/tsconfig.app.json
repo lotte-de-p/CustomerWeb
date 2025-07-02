@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc",
+    "allowSyntheticDefaultImports": true,
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*testfactory.ts",
+    "**/test-setup.ts",
+    "**/*.spec.ts",
+    "jest.config.ts",
+    "**/*.stories.ts",
+    "**/*.stories.js"
+  ]
+}

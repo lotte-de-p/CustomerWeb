@@ -1,0 +1,26 @@
+<ng-container *ngIf="(notification | async) === null; else notificationHandling">
+  <div *ngFor="let overview of overviews">
+    <ng-container *ngIf="overview">
+      <ng-container *ngIf="overview.products.length > 0">
+        <tg-marketing-cafe-overview-group
+          [items]="overview.products"
+          [type]="overviewGroupTypeEnum.PRODUCTS"></tg-marketing-cafe-overview-group>
+        <tg-marketing-cafe-overview-group
+          [items]="overview.options"
+          [type]="overviewGroupTypeEnum.OPTIONS"></tg-marketing-cafe-overview-group>
+        <tg-marketing-cafe-bill-price
+          *ngIf="overview.lastBillPrice"
+          [price]="overview.lastBillPrice"></tg-marketing-cafe-bill-price>
+      </ng-container>
+    </ng-container>
+  </div>
+  <tg-marketing-cafe-disclaimer></tg-marketing-cafe-disclaimer>
+</ng-container>
+
+<ng-template #notificationHandling>
+  <tg-marketing-cafe-error-notification
+    [labelKey]="(notification | async)!.labelKey"
+    [type]="(notification | async)!.type"></tg-marketing-cafe-error-notification>
+</ng-template>
+
+<div class="whitespace whitespace--medium"></div>

@@ -1,0 +1,68 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-account-entertainment-management-cs/v1/entertainment-options",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "availableContentPacks": [
+      {
+        "type": "standalone",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXY9wiklb_Th2d3uejOeewNaGw2DG4TnhqMBCuAZgwb-MnfDlHuVzx-9PfMvN8yGhPWgk&usqp=CAU",
+        "weight": 16,
+        "name": {
+          "fr": "Joue Sports",
+          "en": "Play Sports",
+          "nl": "Speel Sporten"
+        },
+        "description": {
+          "fr": "Le plus grand pack de sports de haut niveau en direct!",
+          "en": "The biggest package with live top sports!",
+          "nl": "Het grootste pakket met live topsport!"
+        },
+        "price": 11.0
+      },
+      {
+        "type": "tiered",
+        "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGL9fnpsjqDMA/company-logo_200_200/company-logo_200_200/0/1631785975476/streamz_be_logo?e=2147483647&v=beta&t=AmRVzLRt5qqSMrgTRWanMT1Wbh0_P2z5y8qzn4MqXq4",
+        "weight": 17,
+        "name": {
+          "fr": "Streamz",
+          "nl": "Streamz",
+          "en": "Streamz"
+        },
+        "priceAsOf": 15.0,
+        "tiers": [
+          {
+            "logo": "https://images.telenet.be/TVPK0017.png",
+            "weight": 17,
+            "name": {
+              "fr": "Streamz Base",
+              "nl": "Streamz Basis",
+              "en": "Streamz Basic"
+            },
+            "description": {
+              "fr": "Les meilleures séries flamandes et internationales.",
+              "nl": "De beste Vlaamse én internationale series.",
+              "en": "The best Flemish and international series."
+            },
+            "price": 15.0
+          },
+          {
+            "logo": "https://images.telenet.be/TVPK0018.png",
+            "weight": 18,
+            "name": {
+              "fr": "Streamz Prémium",
+              "nl": "Streamz Premium",
+              "en": "Streamz Premium"
+            },
+            "description": {
+              "fr": "Les prémiums séries flamandes et internationales.",
+              "nl": "De premium Vlaamse én internationale series.",
+              "en": "The premium Flemish and international series."
+            },
+            "price": 20.0
+          }
+        ]
+      }
+    ]
+  }
+}

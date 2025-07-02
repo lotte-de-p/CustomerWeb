@@ -1,0 +1,17 @@
+{
+  "name": "sales-thank-you-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/thank-you/data-access/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/thank-you/data-access/**/*.ts", "libs/sales/thank-you/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:sales-thank-you", "scope:sales-mfe"]
+}

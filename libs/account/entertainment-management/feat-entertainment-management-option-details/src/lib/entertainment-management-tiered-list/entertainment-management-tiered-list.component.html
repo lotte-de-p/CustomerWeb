@@ -1,0 +1,45 @@
+<div class="animation-show-slide-up">
+  @for (tier of data.tiers; track tier; let first = $first) {
+    @if (first) {
+      <div class="font--body-regular-bold py--m animation-show-slide-up">Choose your plan:</div>
+    }
+    <label class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up mb--m">
+      <div
+        class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+        <div class="select-tile__content--inner display--flex flex-direction--column">
+          <div class="display--flex gap--m gap--l--sm">
+            <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+              <div class="heading--6 heading--nomargin">{{ tier.name[lang] }}</div>
+              <div class="font--caption-bold">Number of screens simultaneously:</div>
+            </div>
+
+            <input
+              name="checkbox-01"
+              type="radio"
+              class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+          </div>
+        </div>
+        <wink-pricing
+          brand="telenet"
+          appearance="text"
+          price="24.99"
+          annotation="{{ lang.toUpperCase() }}"
+          frequency="per maand"
+          alignment="left">
+        </wink-pricing>
+      </div>
+    </label>
+  }
+
+  <div class="display--flex--md justify-content--end">
+    <wink-button
+      class="cursor--pointer"
+      text="Add subscription"
+      type="button"
+      element="a"
+      width="full"
+      appearance="primary"
+      size="md">
+    </wink-button>
+  </div>
+</div>

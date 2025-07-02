@@ -1,0 +1,11 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.24" fill-rule="evenodd" clip-rule="evenodd" d="M156 147V24H170V161H33V147H156Z" fill="#00807B"/>
+<rect x="16" y="9" width="138" height="138" stroke="#004A47" stroke-width="5"/>
+<circle opacity="0.24" cx="61.5" cy="86.5" r="13.5" fill="#00807B"/>
+<circle opacity="0.24" cx="118.5" cy="86.5" r="13.5" fill="#00807B"/>
+<circle cx="56.5" cy="78.5" r="13.5" stroke="#004A47" stroke-width="5"/>
+<circle cx="3.5" cy="3.5" r="3.5" transform="matrix(1 0 0 -1 53 82)" fill="#004A47"/>
+<circle cx="113.5" cy="78.5" r="13.5" stroke="#004A47" stroke-width="5"/>
+<circle cx="113.5" cy="78.5" r="3.5" stroke="#004A47" stroke-width="5"/>
+<circle cx="85.5" cy="78.5" r="3.5" stroke="#004A47" stroke-width="5"/>
+</svg>

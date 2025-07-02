@@ -1,0 +1,112 @@
+[
+  {
+    "activationDate": "2021-03-28T12:38:59+01:00",
+    "cancellationDate": "2021-03-24T12:38:59+01:00",
+    "epc": "TIPS000333",
+    "status": "DISABLED",
+    "customerProductId": "1",
+    "planName": "Telenet Incentive Plan / TIP0000000333",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS000333",
+    "futureProcessingDate": "2022-07-28T12:38:59+01:00",
+    "tipMRC": {
+      "vatExcl": "45",
+      "vatIncl": "24.1"
+    },
+    "tipUsage": {
+      "vatExcl": "80",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "9",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  },
+  {
+    "activationDate": "2021-03-28T12:38:59+01:00",
+    "epc": "TIPS000333",
+    "status": "DISABLED",
+    "customerProductId": "1",
+    "planName": "Telenet Incentive Plan / TIP0000000333",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS000333",
+    "tipMRC": {
+      "vatExcl": "45",
+      "vatIncl": "24.1"
+    },
+    "tipUsage": {
+      "vatExcl": "80",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "9",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  },
+  {
+    "activationDate": "2021-03-28T12:38:59+01:00",
+    "cancellationDate": "2021-03-24T12:38:59+01:00",
+    "epc": "TIPS0001",
+    "status": "Active",
+    "customerProductId": "2",
+    "planName": "Telenet Incentive Plan / TIP000000011",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "tipMRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipUsage": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  },
+  {
+    "activationDate": "2021-02-24T12:38:59+01:00",
+    "cancellationDate": "2021-03-24T12:38:59+01:00",
+    "epc": "TIPS0001",
+    "status": "Active",
+    "customerProductId": "3",
+    "planName": "Telenet Incentive Plan / TIP000000011",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "tipMRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipUsage": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "tipNRC": {
+      "vatExcl": "10",
+      "vatIncl": "12.1"
+    },
+    "noOfEmployees": "20"
+  },
+  {
+    "activationDate": "2021-02-25T12:38:59+01:00",
+    "cancellationDate": "2021-03-25T12:38:59+01:00",
+    "epc": "TIPS0001",
+    "status": "Active",
+    "customerProductId": "4",
+    "planName": "Telenet Incentive Plan 2/ TIP000000011",
+    "specUrl": "https://api.int.base.be/omapi/public/product/TIPS0001",
+    "tipMRC": {
+      "vatExcl": "1",
+      "vatIncl": "14.1"
+    },
+    "tipUsage": {
+      "vatExcl": "10",
+      "vatIncl": "15.1"
+    },
+    "tipNRC": {
+      "vatExcl": "10",
+      "vatIncl": "16.1"
+    },
+    "noOfEmployees": "10"
+  }
+]

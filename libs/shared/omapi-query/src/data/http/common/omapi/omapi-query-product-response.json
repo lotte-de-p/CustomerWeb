@@ -1,0 +1,271 @@
+{
+  "products": [
+    {
+      "labelKey": "Galaxy S10 Black 128GB",
+      "productFamily": "smartphones",
+      "variants": [
+        {
+          "productId": "2063620",
+          "extraAtHomeDelivery": true,
+          "images": [
+            {
+              "attributeKey": "main_image",
+              "value": "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/4/0/5/5/405577bdaec21d4b51a5368fedb7905b0db19893_galaxy_s10.png",
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "key": "Main image"
+                },
+                {
+                  "locale": "en",
+                  "key": "Main image"
+                },
+                {
+                  "locale": "nl",
+                  "key": "Main image"
+                }
+              ]
+            }
+          ],
+          "contractMonths": {},
+          "prices": {
+            "priceType": "Non Recurrent Charge"
+          },
+          "color": {
+            "hexCode": "#000000",
+            "sortOrder": "0",
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "value": ["Zwart"],
+                "key": "Kleur"
+              },
+              {
+                "locale": "fr",
+                "value": ["Noir"],
+                "key": "Couleur"
+              },
+              {
+                "locale": "en",
+                "value": ["Black"],
+                "key": "Color"
+              }
+            ],
+            "attributeGroup": {
+              "code": "specs_general",
+              "sortOrder": "13",
+              "localizedContent": [
+                {
+                  "locale": "en",
+                  "key": "General Specs"
+                },
+                {
+                  "locale": "fr",
+                  "key": "Spécifications générales"
+                },
+                {
+                  "locale": "nl",
+                  "key": "Algemene kenmerken"
+                }
+              ]
+            }
+          },
+          "manBrand": {
+            "sortOrder": "7",
+            "localizedContent": [
+              {
+                "locale": "nl",
+                "value": ["Samsung"],
+                "key": "Merk Fabrikant"
+              },
+              {
+                "locale": "fr",
+                "value": ["Samsung"],
+                "key": "Marque de fabrication"
+              },
+              {
+                "locale": "en",
+                "value": ["Samsung"],
+                "key": "Manufacturing brand"
+              }
+            ],
+            "attributeGroup": {
+              "code": "general",
+              "sortOrder": "0",
+              "localizedContent": [
+                {
+                  "locale": "en",
+                  "key": "General"
+                },
+                {
+                  "locale": "fr",
+                  "key": "General"
+                },
+                {
+                  "locale": "nl",
+                  "key": "General"
+                }
+              ]
+            }
+          },
+          "shortDescription": {
+            "localizedContent": [
+              {
+                "locale": "en",
+                "data": "Galaxy S10 128GB Black"
+              },
+              {
+                "locale": "fr",
+                "data": "Galaxy S10 128GB Noir"
+              },
+              {
+                "locale": "nl",
+                "data": "Galaxy S10 128GB Zwart"
+              }
+            ]
+          },
+          "tag": {
+            "telenet": {
+              "options": [
+                {
+                  "attributeKey": "pre_order_label",
+                  "startDate": "2021-12-20T00:00:00+00:00",
+                  "endDate": "2022-03-31T00:00:00+00:00",
+                  "localizedContent": [
+                    {
+                      "locale": "fr",
+                      "key": "Pre order label"
+                    },
+                    {
+                      "locale": "en",
+                      "value": ["Available for pre-order."],
+                      "key": "Pre order label"
+                    },
+                    {
+                      "locale": "nl",
+                      "key": "Pre order label"
+                    }
+                  ],
+                  "preOrderDescription": {
+                    "localizedContent": [
+                      {
+                        "locale": "fr",
+                        "key": "Déscription Pre-order"
+                      },
+                      {
+                        "locale": "en",
+                        "value": ["This device is available for Preorder and will be delivered once in a stock."],
+                        "key": "Pre-order description"
+                      },
+                      {
+                        "locale": "nl",
+                        "key": "Pre-order omschrijving"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "attributeKey": "back_order_label",
+                  "startDate": "2021-12-20T00:00:00+00:00",
+                  "endDate": "2022-03-31T00:00:00+00:00",
+                  "localizedContent": [
+                    {
+                      "locale": "fr",
+                      "key": "BACKORDER label"
+                    },
+                    {
+                      "locale": "en",
+                      "value": ["Available for back-order."],
+                      "key": "BACKORDER label"
+                    },
+                    {
+                      "locale": "nl",
+                      "key": "BACKORDER label"
+                    }
+                  ],
+                  "backOrderDescription": {
+                    "localizedContent": [
+                      {
+                        "locale": "fr",
+                        "key": "BACKORDER Pre-order"
+                      },
+                      {
+                        "locale": "en",
+                        "value": ["This device is available for BACKORDER "],
+                        "key": "BACKORDER description"
+                      },
+                      {
+                        "locale": "nl",
+                        "key": "BACKORDER omschrijving"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "attributeKey": "online_excl_telenet",
+                  "localizedContent": [
+                    {
+                      "locale": "en",
+                      "value": ["Online Exclusive"],
+                      "key": "Online exclusive "
+                    },
+                    {
+                      "locale": "nl",
+                      "value": ["Exclusief online"],
+                      "key": "Online exclusive "
+                    },
+                    {
+                      "locale": "fr",
+                      "value": ["Uniquement en ligne"],
+                      "key": "Online exclusive "
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "manBrand": {
+        "sortOrder": "7",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "value": ["Samsung"],
+            "key": "Merk Fabrikant"
+          },
+          {
+            "locale": "fr",
+            "value": ["Samsung"],
+            "key": "Marque de fabrication"
+          },
+          {
+            "locale": "en",
+            "value": ["Samsung"],
+            "key": "Manufacturing brand"
+          }
+        ],
+        "attributeGroup": {
+          "code": "general",
+          "sortOrder": "0",
+          "localizedContent": [
+            {
+              "locale": "en",
+              "key": "General"
+            },
+            {
+              "locale": "fr",
+              "key": "General"
+            },
+            {
+              "locale": "nl",
+              "key": "General"
+            }
+          ]
+        }
+      },
+      "longDescription": {}
+    }
+  ],
+  "totalProducts": 0
+}

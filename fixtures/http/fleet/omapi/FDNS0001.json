@@ -1,0 +1,92 @@
+{
+  "product": {
+    "externalProductCode": "FDNS0001",
+    "weight": 860,
+    "apps": [],
+    "category": [
+      "B2B Options with ETF",
+      "National & Europe plus data options",
+      "Data & voice options",
+      "Fleet Options with ETF"
+    ],
+    "subcategory": {
+      "name": "National Data",
+      "weight": 200,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Mobile data"
+        },
+        {
+          "locale": "nl",
+          "name": "Mobiele data"
+        },
+        {
+          "locale": "fr",
+          "name": "Data mobiles"
+        }
+      ],
+      "mutualexclusion": true
+    },
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "Voice Europe plus 180 min",
+            "value": "180",
+            "unit": "minuten",
+            "visible": true,
+            "weight": "70",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "180 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+              },
+              {
+                "locale": "nl",
+                "name": "180 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+              },
+              {
+                "locale": "fr",
+                "name": "180 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": []
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "8,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

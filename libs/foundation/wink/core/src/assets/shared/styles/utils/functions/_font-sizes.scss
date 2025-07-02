@@ -1,0 +1,3 @@
+@function font-size($size, $mapSource: $font-sizes-map) {
+  @return map-get($mapSource, $size) * 1rem;
+}

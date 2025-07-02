@@ -1,0 +1,248 @@
+{
+  "product": {
+    "productid": "FREU0000",
+    "externalProductCode": "FREU0000",
+    "labelkey": "Telenet FreePhone Europe",
+    "producttype": "TELEPHONE",
+    "weight": 190,
+    "apps": [],
+    "customercategories": ["Residential", "Event/Demo", "Production Test"],
+    "category": [
+      "For Rules - (9) Personeelskorting Telenet",
+      "For Rules - Partner Discount",
+      "For Sponsor Discount - All TLO Products",
+      "For Rules - Fixed and Bundles Category",
+      "Fixed Telephony",
+      "For Rules - Product Holding",
+      "For Rules - Bundles, Mobile, Fix + B2B",
+      "Post-Paid Mobile",
+      "For Discounts - (19) promo",
+      "For Rules - Partner Discount (except ONEup)"
+    ],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Telenet FreePhone Europe",
+        "logo": "http://localhost:10081/image.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Telenet FreePhone Europe",
+        "logo": "http://localhost:10081/image.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Telenet FreePhone Europe",
+        "logo": "http://localhost:10081/image.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Telenet FreePhone Europe",
+          "logo": ""
+        },
+        {
+          "locale": "nl",
+          "name": "Telenet FreePhone Europe",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Telenet FreePhone Europe",
+          "logo": ""
+        }
+      ]
+    },
+    "rates": [
+      {
+        "type": "Mobile data",
+        "unit": "MB",
+        "cost": "0,003662",
+        "currency": "EUR"
+      },
+      {
+        "type": "call to other networks",
+        "unit": "MIN",
+        "cost": "0,05",
+        "currency": "EUR"
+      }
+    ],
+    "services": [
+      {
+        "servicetype": "FIXED_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "Fixed Phone monthly allowance",
+            "value": "2000",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Fixed Phone allowance",
+                "logo": ""
+              },
+              {
+                "locale": "nl",
+                "name": "Fixed Phone allowance",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Fixed Phone allowance",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "23,49",
+        "unit": "EUR"
+      },
+      "prices": {},
+      "productsegment": "RMD",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "communicationPreferenceTypeValue": "NA",
+              "isEditable": true,
+              "values": [
+                "0 Euro",
+                "5 Euro",
+                "10 Euro",
+                "15 Euro",
+                "20 Euro",
+                "25 Euro",
+                "30 Euro",
+                "50 Euro",
+                "75 Euro",
+                "100 Euro"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90",
+              "isEditable": true,
+              "values": []
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100",
+              "isEditable": false,
+              "values": []
+            }
+          ]
+        }
+      ]
+    },
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB_RMD",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50",
+            "communicationPreferenceTypeValue": "50",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90",
+            "communicationPreferenceTypeValue": "90",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100",
+            "communicationPreferenceTypeValue": "100",
+            "isEditable": true,
+            "values": ["0 Euro", "5 Euro", "10 Euro", "25 Euro", "50 Euro"]
+          }
+        ]
+      },
+      "premiumService": {
+        "preferenceGroup": "PremiumServices",
+        "limits": [
+          {
+            "communicationPreferenceType": "OutBundleFraud",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumSpendingLimit",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          },
+          {
+            "communicationPreferenceType": "OutBundlePremiumServices",
+            "communicationPreferenceTypeValue": "NA",
+            "isEditable": false,
+            "values": []
+          }
+        ]
+      }
+    },
+    "constituents": [],
+    "requiresInstallation": false,
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "hasAutoPauseSetting": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

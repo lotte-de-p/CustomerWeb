@@ -1,0 +1,30 @@
+<div class="display--flex align-content--center flex-direction--column" data-testid="billing-overview-unpaid-status">
+  <tg-billing-unpaid-status-notification
+    [icon]="getIcon(paymentStatus, paymentMethod)"
+    [textClass]="getTextClass(paymentStatus)">
+    <span *ngIf="paymentDueDate">
+      {{
+        getDaysPastPaymentDueDate(paymentDueDate)
+          | i18nPlural
+            : {
+                '=1':
+                  'ng.billing-overview.billing-overview.lbl.' +
+                  getLabel(paymentMethod) +
+                  '.status.' +
+                  getLabel(paymentStatus) +
+                  '.singular',
+                other:
+                  'ng.billing-overview.billing-overview.lbl.' +
+                  getLabel(paymentMethod) +
+                  '.status.' +
+                  getLabel(paymentStatus)
+              }
+          | translate
+            : {
+                daysPast: getDaysPastPaymentDueDate(paymentDueDate),
+                dueDate: (paymentDueDate | date: 'd MMMM' : '+0200' : locale)
+              }
+      }}
+    </span>
+  </tg-billing-unpaid-status-notification>
+</div>

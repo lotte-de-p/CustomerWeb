@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="237px" height="131px" viewBox="0 0 237 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Replace-SIM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-—-Replace-SIM-Help-Copy" transform="translate(-642.000000, -390.000000)">
+            <g id="Group-2" transform="translate(643.000000, 389.000000)">
+                <g id="Icon-/-Medium-/-question" transform="translate(213.000000, 0.000000)" fill="#239A98" fill-rule="nonzero">
+                    <path d="M11.1280004,17.6080019 C10.6600004,17.6080019 10.3180003,17.2660019 10.3180003,16.7980018 L10.3180003,16.2220017 C10.3180003,15.7540016 10.6600004,15.4120016 11.1280004,15.4120016 C11.5960005,15.4120016 11.9380006,15.7540016 11.9380006,16.2220017 L11.9380006,16.7980018 C11.9380006,17.2660019 11.5960005,17.6080019 11.1280004,17.6080019 Z M11.1370004,13.9810013 C10.6690004,13.9810013 10.3270003,13.6390013 10.3270003,13.1710012 C10.3270003,11.713001 11.0920004,10.9480008 11.9650006,10.4170007 L12.4060006,10.1470007 C12.9910007,9.78700064 13.2880008,9.51700059 13.2880008,8.89600049 C13.2880008,7.97800034 12.5680007,7.45600026 11.5420005,7.45600026 C10.7680004,7.45600026 10.1200003,7.87000032 9.83200022,8.06800036 C9.67000019,8.17600037 9.47200016,8.23000038 9.29200013,8.23000038 C8.82400005,8.23000038 8.5,7.87000032 8.5,7.42000025 C8.5,7.18600021 8.60800002,6.98800018 8.80600005,6.82600015 C9.19300011,6.5110001 10.0840003,5.89 11.5420005,5.89 C13.4680008,5.89 14.9620011,6.92500017 14.9620011,8.89600049 C14.9620011,11.821001 11.9470006,10.9480008 11.9470006,13.1710012 C11.9470006,13.6390013 11.6050005,13.9810013 11.1370004,13.9810013 Z M11.75,22.5 C5.81293894,22.5 1,17.6870611 1,11.75 C1,5.81293894 5.81293894,1 11.75,1 C17.6870611,1 22.5,5.81293894 22.5,11.75 C22.5,17.6870611 17.6870611,22.5 11.75,22.5 Z M11.75,21 C16.8586339,21 21,16.8586339 21,11.75 C21,6.64136606 16.8586339,2.5 11.75,2.5 C6.64136606,2.5 2.5,6.64136606 2.5,11.75 C2.5,16.8586339 6.64136606,21 11.75,21 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="Illustration-Copy" transform="translate(0.000000, 23.000000)">
+                    <circle id="Oval" stroke="#239A98" stroke-width="2" fill-rule="nonzero" transform="translate(88.500000, 73.000000) rotate(90.000000) translate(-88.500000, -73.000000) " cx="88.5" cy="73" r="2.5"></circle>
+                    <g id="Group-3-Copy" transform="translate(47.500000, 76.000000) rotate(90.000000) translate(-47.500000, -76.000000) translate(15.500000, 28.500000)">
+                        <path d="M35.1362305,1.55132748e-14 L45.1281599,1.55132748e-14 C46.4701309,1.28829395e-14 47.7557726,0.539446498 48.6959518,1.4970211 L62.5677919,15.6255213 C63.4857184,16.5604315 64,17.8182918 64,19.1285002 L64,90 C64,92.7614237 61.7614237,95 59,95 L5,95 C2.23857625,95 2.11453371e-15,92.7614237 1.77635684e-15,90 L0,5 C-3.38176876e-16,2.23857625 2.23857625,7.13875591e-15 5,6.63149059e-15 C12.3216146,9.44765844e-15 19.2791341,-1.28000936e-15 22.9399414,1.28074559e-16" id="Rectangle-11" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <text id="1234-1000-6429-2806" transform="translate(27.962891, 19.818359) rotate(-90.000000) translate(-27.962891, -19.818359) " font-family="BloomSpeakBody-Bold, BloomSpeak Body" font-size="6" font-weight="bold" line-spacing="6" fill="#239A98">
+                            <tspan x="21.4628906" y="6.81835938">1234</tspan>
+                            <tspan x="21.4628906" y="12.8183594">1000</tspan>
+                            <tspan x="21.4628906" y="18.8183594">6429</tspan>
+                            <tspan x="21.4628906" y="24.8183594">2806</tspan>
+                            <tspan x="21.4628906" y="30.8183594">8691</tspan>
+                            <tspan x="21.4628906" y="36.8183594">L205</tspan>
+                        </text>
+                        <path d="M46,63.8173828 L46,84 C46,84.5522847 45.5522847,85 45,85 L11,85 C10.4477153,85 10,84.5522847 10,84 C10,73.90558 10,67.2006646 10,63.8852539 M10,58.0991211 C10,54.8052809 10,48.1055739 10,38 C10,37.4477153 10.4477153,37 11,37 L45,37 C45.5522847,37 46,37.4477153 46,38 L46,58.0336914" id="Shape" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M10,69 L46,69" id="Line-15-Copy" stroke="#C5C6C6" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M10,53 L46,53" id="Line-15-Copy-2" stroke="#C5C6C6" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M22,69.1328125 L22,84.8125" id="Line-16-Copy" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M22,40.0258789 L22,53" id="Line-16-Copy-3" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M34,69 L34,80.9047852" id="Line-16-Copy-2" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M34,37 L34,53" id="Line-16-Copy-4" stroke="#C5C6C6" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                    </g>
+                    <path d="M225,0 L225,58.5" id="Line" stroke="#239A98" stroke-width="1.5" stroke-linecap="square" fill-rule="nonzero"></path>
+                    <path d="M210,73 C218.284271,73 225,66.2842712 225,58" id="Oval-2" stroke="#239A98" stroke-width="1.5" fill-rule="nonzero"></path>
+                    <path d="M91.7373047,73 L210,73" id="Line-2" stroke="#239A98" stroke-width="1.5" stroke-linecap="square" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

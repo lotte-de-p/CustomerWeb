@@ -1,0 +1,80 @@
+<tg-sales-customer-registration-title [currentStep]="(currentStep | async) ?? ''">
+</tg-sales-customer-registration-title>
+<div class="mb--xxxg pb--l py--n col-lg-8 col-md-9 col-12 m--auto">
+  <div class="mx--m mx--n--md col-md-9 col-12">
+    <div class="select-tile--group display--grid grid-template-column--2 gap--m mb--xl--md mb--l">
+      <label
+        [attr.data-cy]="'personal-view-button'"
+        class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+        for="private">
+        <div
+          class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+          <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+            <div class="display--flex gap--m gap--l--sm">
+              <div class="select-tile__content_text display--flex flex-direction--column flex-grow">
+                <div class="heading--6 heading--nomargin pl--xxs">
+                  {{ 'customer-registration.lbl.private' | translate }}
+                </div>
+              </div>
+              <input
+                type="radio"
+                [checked]="isToggleActive"
+                class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                id="private"
+                name="type"
+                (change)="togglePersonalView(PRIVATE)" />
+            </div>
+          </div>
+        </div>
+      </label>
+      <label
+        [attr.data-cy]="'business-view-button'"
+        class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up background-white"
+        for="business">
+        <div
+          class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+          <div class="select-tile__content--inner display--flex flex-direction--column gap--xm">
+            <div class="display--flex gap--m gap--l--sm">
+              <div class="select-tile__content_text display--flex flex-direction--column flex-grow">
+                <div class="heading--6 heading--nomargin pl--xxs">
+                  {{ 'customer-registration.lbl.business' | translate }}
+                </div>
+              </div>
+              <input
+                type="radio"
+                [checked]="!isToggleActive"
+                class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+                id="business"
+                name="type"
+                (change)="togglePersonalView(BUSINESS)" />
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="background-white col-12 m--auto p--xxxl--md p--xl">
+    <div class="row">
+      @if (isRestrictedProductDisclaimerVisible) {
+        <div class="m--auto">
+          <tg-sales-restricted-product
+            [currentCategory]="isResidential ? 'business' : 'private'"
+            [marketingURL]="marketingUrl | async"></tg-sales-restricted-product>
+        </div>
+      } @else {
+        <div class="col-sm-12">
+          <tg-sales-profile-details-form
+            [customerBrand]="brand | async"
+            [isPidEnabled]="isPidEnabled | async"
+            [category]="isResidential ? 'private' : 'business'"
+            [personalDetails]="personalDetails | async"
+            [itsMeDetails]="itsMeResponse | async"></tg-sales-profile-details-form>
+        </div>
+        <div class="col-sm-12 mt--xl--md mt--l">
+          <tg-sales-privacy-disclaimer [privacyPolicyUrl]="privacyPolicyUrl | async"></tg-sales-privacy-disclaimer>
+        </div>
+      }
+    </div>
+  </div>
+</div>

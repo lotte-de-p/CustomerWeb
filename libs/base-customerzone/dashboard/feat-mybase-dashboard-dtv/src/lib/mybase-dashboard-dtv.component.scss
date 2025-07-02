@@ -1,0 +1,17 @@
+.mybase-dashboard-dtv {
+  @media only screen and (min-width: 768px) {
+    margin-top: 4rem;
+  }
+  margin-top: -6rem;
+
+  .navigation--card {
+    min-height: 10rem;
+  }
+  .service--card {
+    min-height: 7rem;
+  }
+  .skeleton--title {
+    width: 15rem;
+    height: 3rem;
+  }
+}

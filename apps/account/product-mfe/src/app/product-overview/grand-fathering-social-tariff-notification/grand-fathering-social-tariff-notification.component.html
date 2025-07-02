@@ -1,0 +1,29 @@
+<div class="overlay__mask overlay__mask--backdrop backdrop-filter--3 animation--fade-in"></div>
+<div class="container">
+  <div class="overlay__section py--g--sm py--l py--xxxg--md px--n--sm px--s overlay__section--align-top">
+    <div class="overlay__section__content--wrapper animation--slide-down-to-screen overflow--hidden pl-40 pr-40">
+      <div class="overlay__section__content__close">
+        <a class="link link--no-underline secondary" (click)="closeDialog()">
+          <i class="icon icon-close"></i>
+        </a>
+      </div>
+      <div class="background-white">
+        <h4 class="text-align--left mt-0">
+          {{ 'ng.product-overview.lbl.grandfathering-change-tariff-title' | translate }}
+        </h4>
+        <p
+          tabindex="-1"
+          class="text-align--left mb-20"
+          [innerHTML]="'ng.product-overview.lbl.grandfathering-change-tariff-description' | translate"></p>
+        <div class="text-align--right">
+          <button (click)="closeDialog()" class="button button--secondary mr-10" tabindex="-1">
+            <strong>{{ 'ng.product-overview.lbl.grandfathering-change-tariff-cancel' | translate }} </strong>
+          </button>
+          <button class="button button--primary" (click)="confirm()" tabindex="-1">
+            {{ 'ng.product-overview.lbl.grandfathering-change-tariff-confirm' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div class="mybase-dashboard px--m px--n--md">
+    @if (myBaseDashboardError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <tg-mybase-dashboard-error [error]="(myBaseDashboardError$ | async)!"></tg-mybase-dashboard-error>
+        </div>
+      </div>
+    } @else {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          @if ((myBaseServiceMoments$ | async)?.length) {
+            <tg-mybase-service-moments
+              [simActivationUrl]="simActivationUrl"
+              [eSimActivationUrl]="eSimActivationUrl"
+              [appointmentUrl]="appointmentUrl"
+              (analyticsData)="sendAnalyticsData($event)"
+              [data]="(myBaseServiceMoments$ | async)!"></tg-mybase-service-moments>
+          }
+        </div>
+      </div>
+      @if ((myBaseDashboardLoading$ | async) === false) {
+        <div class="mybase-dashboard--focus-cards">
+          <div class="row">
+            @if (myBaseDashboardShowBilling$ | async) {
+              @if (myBaseDashboardBillingPending$ | async) {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardBillingPending$ | async) }">
+                  <tg-mybase-dashboard-onboarding-usage-card
+                    [title]="'ng.mybase-dashboard.billing-card.title'"
+                    [cardType]="'billing'"
+                    [billingUrl]="billingUrl"
+                    (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-onboarding-usage-card>
+                </div>
+              } @else {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardShowBilling$ | async) }">
+                  <tg-mybase-dashboard-billing-card
+                    [billingAccounts]="(myBaseDashboardBillingAccounts$ | async)!"
+                    [billingUrl]="billingUrl"
+                    [payNowUrl]="payNowUrl"
+                    [viewBillsUrl]="viewBillsUrl"
+                    [viewDetailsUrl]="viewDetailsUrl"
+                    (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-billing-card>
+                </div>
+              }
+            }
+
+            @if (myBaseDashboardShowMobileUsage$ | async) {
+              @if (myBaseDashboardMobileUsagePending$ | async) {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardMobileUsagePending$ | async) }">
+                  <tg-mybase-dashboard-onboarding-usage-card
+                    [title]="'ng.mybase-dashboard.mobile-usage-card.title'"
+                    [cardType]="'mobile'"></tg-mybase-dashboard-onboarding-usage-card>
+                </div>
+              } @else {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardShowMobileUsage$ | async) }">
+                  <tg-mybase-dashboard-mobile-usage-card
+                    [mobileUsage]="(myBaseDashboardMobileUsage$ | async)!"
+                    [mobileUsagePageUrl]="mobileUsagePageUrl"
+                    (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-mobile-usage-card>
+                </div>
+              }
+            }
+
+            @if (myBaseDashboardShowInternetUsage$ | async) {
+              @if (myBaseDashboardInternetUsagePending$ | async) {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardInternetUsagePending$ | async) }">
+                  <tg-mybase-dashboard-onboarding-usage-card
+                    [title]="'ng.mybase-dashboard.internet-usage-card.title'"
+                    [cardType]="'internet'"></tg-mybase-dashboard-onboarding-usage-card>
+                </div>
+              } @else {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardShowInternetUsage$ | async) }">
+                  <tg-mybase-dashboard-internet-usage-card
+                    [internetUsage]="(myBaseDashboardInternetUsage$ | async)!"
+                    [internetUsagePageUrl]="internetUsagePageUrl"
+                    (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-internet-usage-card>
+                </div>
+              }
+            }
+
+            @if (myBaseDashboardShowHomeNetwork$ | async) {
+              @if (myBaseDashboardHomeNetworkPending$ | async) {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardHomeNetworkPending$ | async) }">
+                  <tg-mybase-dashboard-onboarding-usage-card
+                    [title]="'ng.mybase-dashboard.home-network.title'"
+                    [cardType]="'home-network'"></tg-mybase-dashboard-onboarding-usage-card>
+                </div>
+              } @else {
+                <div [ngClass]="{ 'col-12 mb--m col-md-6 col-lg-3': (myBaseDashboardShowHomeNetwork$ | async) }">
+                  <tg-mybase-dashboard-home-network
+                    [homeNetworkUrl]="homeNetworkUrl"
+                    [wifiPassportUrl]="wifiPassportUrl"
+                    [componentPrefix]="'ng.mybase-dashboard'"
+                    [isLevel1]="true"
+                    (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-home-network>
+                </div>
+              }
+            }
+          </div>
+        </div>
+        <div class="mybase-dashboard--navigation">
+          <div class="row">
+            <div class="col-12 col-md-8 mt--m mt--g--lg">
+              <tg-mybase-dashboard-manage-products
+                [data]="(products$ | async)!"
+                [manageProductsMobileLink]="manageProductsMobileLink"
+                [manageProductsDTVLink]="manageProductsDTVLink"
+                [manageProductsInternetLink]="manageProductsInternetLink"
+                (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-manage-products>
+            </div>
+            <div class="col-12 col-md-4 mt--m mt--g--lg">
+              <tg-mybase-dashboard-support-assistance
+                [data]="(supportAssistance$ | async)!"
+                [watchTvUrl]="watchTvUrl"
+                [watchTvIosUrl]="watchTvIosUrl"
+                [watchTvAndroidUrl]="watchTvAndroidUrl"
+                [bestTariffUrl]="bestTariffUrl"
+                [easySwitchUrl]="easySwitchUrl"
+                [supportUrl]="supportUrl"
+                (analyticsData)="sendAnalyticsData($event)"></tg-mybase-dashboard-support-assistance>
+            </div>
+          </div>
+        </div>
+      }
+      @if (myBaseDashboardLoading$ | async) {
+        <div class="mybase-dashboard--focus-cards">
+          <div class="row">
+            <div class="col-12 mb--m col-md-6 col-lg-3">
+              <div class="skeleton skeleton--basic skeleton--container mybase-dashboard--card p--m mt--l--md"></div>
+            </div>
+
+            <div class="col-12 mb--m col-md-6 col-lg-3">
+              <div class="skeleton skeleton--basic skeleton--container mybase-dashboard--card p--m mt--l--md"></div>
+            </div>
+
+            <div class="col-12 mb--m col-md-6 col-lg-3">
+              <div class="skeleton skeleton--basic skeleton--container mybase-dashboard--card p--m mt--l--md"></div>
+            </div>
+
+            <div class="col-12 mb--m col-md-6 col-lg-3">
+              <div class="skeleton skeleton--basic skeleton--container mybase-dashboard--card p--m mt--l--md"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mybase-dashboard--navigation">
+          <div class="row">
+            <div class="col-12 col-md-8 mt--m mt--g--lg">
+              <div class="skeleton skeleton--basic skeleton--container skeleton--title p--m mb--sm"></div>
+              <div
+                class="skeleton skeleton--basic skeleton--container skeleton-manage-product--card p--m mt--l--md"></div>
+              <div
+                class="skeleton skeleton--basic skeleton--container skeleton-manage-product--card p--m mt--l--md"></div>
+              <div
+                class="skeleton skeleton--basic skeleton--container skeleton-manage-product--card p--m mt--l--md"></div>
+            </div>
+            <div class="col-12 col-md-4 mt--m mt--g--lg">
+              <div class="skeleton skeleton--basic skeleton--container skeleton--title p--m mb--sm"></div>
+              <div class="skeleton skeleton--basic skeleton--container skeleton-support--card p--m mt--l--md"></div>
+              <div class="skeleton skeleton--basic skeleton--container skeleton-support--card p--m mt--l--md"></div>
+              <div class="skeleton skeleton--basic skeleton--container skeleton-support--card p--m mt--l--md"></div>
+              <div class="skeleton skeleton--basic skeleton--container skeleton-support--card p--m mt--l--md"></div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</tg-login>

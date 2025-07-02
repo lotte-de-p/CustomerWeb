@@ -1,0 +1,19 @@
+<app-loader
+  id="page-loader"
+  [enableLoader]="enableLoader"
+  [enableMask]="enableMask"
+  [pageType]="pageType"
+  [startByDefault]="false">
+</app-loader>
+<ng-container *ngIf="viewState$ | async as viewState">
+  <tg-sales-error *ngIf="viewState.key === viewStateEnum.ERROR" [error]="viewState.error"></tg-sales-error>
+  <ng-container *ngIf="isLoaded && viewState.key !== viewStateEnum.ERROR">
+    <tg-sales-stepper
+      (nextButtonClicked)="nextButtonClickedEvent()"
+      [showNavigation]="viewState.showNavigation"
+      [showBackButton]="viewState.showBackButton"
+      [showStepProgressBar]="true"
+      [steps]="componentSteps">
+    </tg-sales-stepper>
+  </ng-container>
+</ng-container>

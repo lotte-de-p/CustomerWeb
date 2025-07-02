@@ -1,0 +1,90 @@
+@if (billingAccounts?.length > 0) {
+  <div class="account-line-selector">
+    @if (hideSelector === 'false' && billingAccounts && billingAccounts.length > 0) {
+      <div (click)="toggle.emit(billingAccounts)" class="account-selector">
+        @if (isInitialized) {
+          <div
+            class="account-selector__list account-selector__list__first-item account-selector__list--with-icon"
+            [ngClass]="{
+              'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__first-item--opened':
+                isSelectorOpen,
+              'cursor--default': billingAccounts.length === 1,
+              'account-selector__list__first-item--closed': !isSelectorOpen
+            }">
+            <div class="account-selector__list__icon">
+              <i class="icon icon-circle icon-euro"></i>
+            </div>
+            <div class="account-selector__list__account-info">
+              <div class="account-selector__list__account-info__account-id" data-cs-mask>
+                {{ accountSelected['accountNumber'] }}
+              </div>
+              <div class="account-selector__list__account-info__account-details">
+                <p class="m--n pr--xs word-break--ellipsis" data-cs-mask>
+                  {{ accountSelected.getDisplayAddress().readOnlyAddress }}
+                  {{ accountSelected.getDisplayAddress().zipMunicipality }}
+                </p>
+              </div>
+            </div>
+            @if (billingAccounts.length > 1) {
+              <a class="account-selector__action">
+                <div
+                  class="icon icon-sm position--absolute text-weight--g"
+                  [ngClass]="isSelectorOpen ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+              </a>
+            }
+          </div>
+          <ul
+            class="account-selector__list account-selector__list__options"
+            [ngClass]="{
+              'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__options--opened':
+                isSelectorOpen
+            }">
+            @for (account of billingAccounts; track account.accountNumber) {
+              <li
+                class="account-selector__list__options__item"
+                [ngClass]="{ 'account-selector__list__options__item--active': isActive(account) }">
+                <a class="account-selector__list__options__item__link" (click)="onSelectAccount(account)">
+                  <div class="account-selector__list__icon">
+                    <i class="icon icon-circle icon-euro"></i>
+                  </div>
+                  <div class="account-selector__list__account-info">
+                    <div class="account-selector__list__account-info__account-id" data-cs-mask>
+                      {{ account['accountNumber'] }}
+                    </div>
+                    <div class="account-selector__list__account-info__account-details">
+                      <p class="m--n" data-cs-mask>
+                        {{ account.getDisplayAddress().readOnlyAddress }}
+                        {{ account.getDisplayAddress().zipMunicipality }}
+                      </p>
+                    </div>
+                    @if (isSelectorOpen) {
+                      <div class="account-selector__list__account-info__outstanding-balance pt--xs">
+                        <span class="outstanding-amount" data-cs-mask>
+                          {{ 'invoice-overview.text.outstanding-amount' | translate }}
+                        </span>
+                        <div data-cs-mask>
+                          @if (account.getDisplayAmount()) {
+                            <span class="outstanding-value">{{
+                              'monetary-amount' | translate: { amount: account.getDisplayAmount() }
+                            }}</span>
+                          } @else {
+                            <span class="outstanding-value">{{
+                              'monetary-amount' | translate: { amount: '0.00' }
+                            }}</span>
+                          }
+                          @if (isBusinessCustomer) {
+                            <span class="inclusive-text">{{ 'invoice-overview.lbl.vat' | translate }}</span>
+                          }
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </a>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+    }
+  </div>
+}

@@ -1,0 +1,20 @@
+export class SalesConstants {
+  static EMPTY = '';
+  static API_VERSION_V1 = 'v1';
+  static MESSAGE_GROUP = 'sales-checkout';
+  static CONTEXT_PRODUCTS = '/products';
+  static PRODUCT_TYPE_DTV = 'DTV';
+  static CID = 'cid';
+  static DATA_SIM = 'MBLN0002';
+  static VOO = 'VOO';
+  static TRUE = 'true';
+  static YES = 'Yes';
+  static NO = 'No';
+  static API_VERSION = 'v2';
+  static CONTEXT_SALES_ORDERS = '/salesorders';
+  static SALES_CUSTOM_MESSAGE_GROUP = 'sales-custom-message';
+  static SALES_SERVICE_PREFIX = '/public/api/sales-service/';
+  static SALES_SERVICE_PREFIX_ITS_ME = '/public/api/sales-service/itsme/';
+  static INTENT = 'intent';
+  static CONTEXT_PREPAID_PRODUCTS = '/productsforprepaid';
+}

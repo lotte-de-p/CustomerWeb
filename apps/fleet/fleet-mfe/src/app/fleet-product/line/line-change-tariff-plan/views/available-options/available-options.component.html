@@ -1,0 +1,60 @@
+<div class="option-tiles" [attr.data-cy]="'available-options'">
+  <div class="title-row">
+    <i class="icon-manage-line"></i>
+    <p>{{ 'ng.fleet-manager-line-change-tariff-plan.text.page-header' | translate }}</p>
+  </div>
+  <div class="title">
+    <p>{{ 'ng.fleet-manager-line-change-tariff-plan.text.page-sub-header' | translate }}</p>
+  </div>
+  <div class="option-title">
+    <div
+      class="option-title-toggle"
+      [attr.data-cy]="'category-selector'"
+      (click)="isCategorySelected = !_isCategorySelected">
+      <span>{{ 'ng.fleet-manager-line-change-tariff-plan.text.category-type' | translate }}</span>
+      <i class="icon-chevron-down" [ngClass]="{ open: _isCategorySelected }"></i>
+    </div>
+    @if (_isCategorySelected) {
+      @if (mobilePlans.length > 0) {
+        <div class="options-button-container" [attr.data-cy]="'mobile-plans'">
+          <span class="ml-5 mb-15">{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.mobile-plans' | translate }}</span>
+          @for (mobilePlan of mobilePlans; track mobilePlan) {
+            <button
+              class="options-button options-button--tariff"
+              [ngClass]="{ available: !(mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId) }"
+              (click)="onSelectTariff(mobilePlan)"
+              [attr.data-cy]="'mobile-plan-option'">
+              <span>{{ mobilePlan.productInfo.name }}</span>
+              <span
+                [ngClass]="{
+                  'separator icon-plus': !(mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId),
+                  'separator icon-tick disabled': mobilePlan.isPreviouslyAdded,
+                  'separator icon-tick': mobilePlan.productInfo.productId === newTariffPlan?.productInfo.productId
+                }"></span>
+            </button>
+          }
+        </div>
+      }
+      @if (dataPlans.length > 0) {
+        <div class="options-button-container" [attr.data-cy]="'data-plans'">
+          <span class="ml-5 mb-15">{{ 'ng.fleet-manager-line-change-tariff-plan.lbl.data-plans' | translate }}</span>
+          @for (dataPlan of dataPlans; track dataPlan) {
+            <button
+              class="options-button options-button--tariff"
+              [ngClass]="{ available: !(dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId) }"
+              (click)="onSelectTariff(dataPlan)"
+              [attr.data-cy]="'data-plan-option'">
+              <span>{{ dataPlan.productInfo.name }}</span>
+              <span
+                [ngClass]="{
+                  'separator icon-plus': !(dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId),
+                  'separator icon-tick disabled': dataPlan.isPreviouslyAdded,
+                  'separator icon-tick': dataPlan.productInfo.productId === newTariffPlan?.productInfo.productId
+                }"></span>
+            </button>
+          }
+        </div>
+      }
+    }
+  </div>
+</div>

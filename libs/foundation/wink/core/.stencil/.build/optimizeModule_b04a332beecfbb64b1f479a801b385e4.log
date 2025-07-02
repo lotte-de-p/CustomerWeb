@@ -1,0 +1,1 @@
+import{a as e}from"./p-9e34848a.js";const n=["telenet","base"];const r=localStorage.getItem("currentBrand")||"telenet";e((e=>{const t=e.getAttribute("brand")||r;if(!n.includes(t)){e.setAttribute("brand",r)}e.setAttribute("brand",r);return t}));

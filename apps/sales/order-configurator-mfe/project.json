@@ -1,0 +1,162 @@
+{
+  "name": "order-configurator-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/sales/order-configurator-mfe/src",
+  "tags": ["scope:order-configurator-mfe", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sales/order-configurator-mfe",
+        "index": "apps/sales/order-configurator-mfe/src/index.html",
+        "main": "apps/sales/order-configurator-mfe/src/main.ts",
+        "polyfills": "apps/sales/order-configurator-mfe/src/polyfills.ts",
+        "tsConfig": "apps/sales/order-configurator-mfe/tsconfig.app.json",
+        "aot": true,
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/sales/order-configurator-mfe/src/favicon.ico",
+          "apps/sales/order-configurator-mfe/src/assets",
+          "apps/sales/order-configurator-mfe/src/version.json",
+          {
+            "glob": "**/*",
+            "input": "apps/sales/order-configurator-mfe/src/assets",
+            "output": "assets/"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/atomic-library/public",
+            "output": "assets/"
+          }
+        ],
+        "styles": ["apps/sales/order-configurator-mfe/src/styles.scss"],
+        "scripts": [
+          "apps/sales/order-configurator-mfe/src/assets/plugins/json-url/json-url-single.js",
+          "node_modules/tg-loader/dist/loader-plugin.js"
+        ],
+        "customWebpackConfig": {
+          "path": "apps/sales/order-configurator-mfe/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/sales/order-configurator-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/sales/order-configurator-mfe/src/favicon.ico",
+            "apps/sales/order-configurator-mfe/src/assets",
+            "apps/sales/order-configurator-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "apps/sales/order-configurator-mfe/src/assets",
+              "output": "assets/"
+            },
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "customWebpackConfig": {
+            "path": "apps/sales/order-configurator-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4205,
+        "publicHost": "http://localhost:4205",
+        "buildTarget": "order-configurator-mfe:build",
+        "host": "0.0.0.0",
+        "disableHostCheck": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "order-configurator-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "order-configurator-mfe:build:development",
+          "proxyConfig": "apps/sales/order-configurator-mfe/src/proxy.conf.json"
+        },
+        "coverage": {
+          "buildTarget": "order-configurator-mfe:build:coverage",
+          "proxyConfig": "apps/sales/order-configurator-mfe/src/proxy.conf.json"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sales/order-configurator-mfe/**/*.ts", "apps/sales/order-configurator-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/sales/order-configurator-mfe/.storybook",
+        "browserTarget": "order-configurator-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/order-configurator-mfe",
+        "configDir": "apps/sales/order-configurator-mfe/.storybook",
+        "browserTarget": "order-configurator-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/sales/order-configurator-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

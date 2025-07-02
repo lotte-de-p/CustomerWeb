@@ -1,0 +1,15 @@
+<div class="text-flow text-flow--h6">{{ 'customer-registration.lbl.privacy' | translate }}</div>
+<div class="text-flow text-flow--body">
+  <div class="mb--xl--md mb--l">{{ privacyDisclaimerKeys[0] | translate }}</div>
+  <div class="mt--xl" *ngIf="!toggleBtn">
+    <div class="mt--xl" [innerHTML]="privacyDisclaimerKeys[1] | translate"></div>
+    <div class="mt--xl" [innerHTML]="privacyDisclaimerKeys[2] | translate"></div>
+    <div class="mt--xl" [innerHTML]="privacyDisclaimerKeys[3] | translate"></div>
+    <div class="mt--xl" [innerHTML]="privacyDisclaimerKeys[4] | translate: { link: privacyPolicyUrl }"></div>
+    <div class="mt--xl" [innerHTML]="privacyDisclaimerKeys[5] | translate"></div>
+  </div>
+  <a href="JavaScript:void(0);" (click)="toggleDisclaimerLink()">
+    <span *ngIf="toggleBtn">{{ 'customer-registration.lbl.read-more' | translate }}</span>
+    <span *ngIf="!toggleBtn">{{ 'customer-registration.lbl.read-less' | translate }}</span>
+  </a>
+</div>

@@ -1,0 +1,33 @@
+{
+  "name": "billing-feat-billing-overview",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/invoice/overview/feat-billing-overview/feat-billing-overview/src",
+  "prefix": "billing",
+  "tags": ["type:feature", "scope:customer-web-billing-invoice", "scope:customer-web-billing-invoice-mfe"],
+  "projectType": "library",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/invoice/overview/feat-billing-overview/**/*.ts",
+          "libs/billing/invoice/overview/feat-billing-overview/**/*.html"
+        ]
+      }
+    }
+  }
+}

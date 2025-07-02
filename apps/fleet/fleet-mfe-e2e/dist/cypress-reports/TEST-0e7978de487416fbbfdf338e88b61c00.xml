@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.991" tests="14" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-08-29T06:06:53" tests="0" file="src/e2e/fleet-user/line-change-tariff-plan/line-change-tariff-plan.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Change Tariff Plan" timestamp="2024-08-29T06:06:53" tests="9" time="0.000" failures="0">
+    <testcase name="AC 1: Fleet User goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened" time="1.367" classname="Line Change Tariff Plan AC 1: Fleet User goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet User opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list" time="0.717" classname="Line Change Tariff Plan AC 2: Fleet User opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list">
+    </testcase>
+    <testcase name="AC 3: Fleet User opens the change tariff plan wizard when fleet user switches the mobile plan the new plan is visible " time="0.755" classname="Line Change Tariff Plan AC 3: Fleet User opens the change tariff plan wizard when fleet user switches the mobile plan the new plan is visible ">
+    </testcase>
+    <testcase name="AC 4.1: Fleet User chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown " time="0.806" classname="Line Change Tariff Plan AC 4.1: Fleet User chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown ">
+    </testcase>
+    <testcase name="AC 4.2: Fleet User chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed" time="0.855" classname="Line Change Tariff Plan AC 4.2: Fleet User chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed">
+    </testcase>
+    <testcase name="AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again " time="0.852" classname="Line Change Tariff Plan AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again ">
+    </testcase>
+    <testcase name="AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed" time="0.823" classname="Line Change Tariff Plan AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed">
+    </testcase>
+    <testcase name="AC 10: Fleet User opens the change tariff plan wizard then he can see the message that all prices are VAT excl" time="0.657" classname="Line Change Tariff Plan AC 10: Fleet User opens the change tariff plan wizard then he can see the message that all prices are VAT excl">
+    </testcase>
+    <testcase name="Fleet User opens the change tariff plan wizard then the options of the previous plan are shown" time="0.651" classname="Line Change Tariff Plan Fleet User opens the change tariff plan wizard then the options of the previous plan are shown">
+    </testcase>
+  </testsuite>
+  <testsuite name="Disconnected options" timestamp="2024-08-29T06:07:01" tests="3" time="2.576" failures="0">
+    <testcase name="Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present" time="0.725" classname="Line Change Tariff Plan Disconnected options Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options" time="0.887" classname="Line Change Tariff Plan Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed" time="0.882" classname="Line Change Tariff Plan Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Split bill guard checks" timestamp="2024-08-29T06:07:04" tests="2" time="2.726" failures="0">
+    <testcase name="should show error message when fleet user ordering is not enabled" time="0.737" classname="Line Change Tariff Plan Split bill guard checks should show error message when fleet user ordering is not enabled">
+    </testcase>
+    <testcase name="should show error message when product is not of type SB20" time="0.767" classname="Line Change Tariff Plan Split bill guard checks should show error message when product is not of type SB20">
+    </testcase>
+  </testsuite>
+</testsuites>

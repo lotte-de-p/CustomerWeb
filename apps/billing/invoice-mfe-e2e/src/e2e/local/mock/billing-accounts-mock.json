@@ -1,0 +1,71 @@
+[
+  {
+    "billingAccountNumber": "123456",
+    "currentPaymentMethod": "MANUAL",
+    "lastPaymentMethod": "DIRECT_DEBIT",
+    "dispatchMethod": "EMAIL",
+    "outstandingBalance": 0,
+    "paymentStatus": "PAID",
+    "billingAddress": {
+      "street": "Teststraat",
+      "houseNumber": "1",
+      "postalCode": "2000",
+      "municipality": "Antwerpen"
+    },
+    "email": "xmwzezestbil@gmail.com",
+    "collectionsTreatmentMessage": "AVOID_EXTRA_COSTS",
+    "defaultAccount": true
+  },
+  {
+    "billingAccountNumber": "987654",
+    "currentPaymentMethod": "DIRECT_DEBIT",
+    "dispatchMethod": "EMAIL",
+    "outstandingBalance": 123.45,
+    "paymentStatus": "UNPAID",
+    "billingAddress": {
+      "street": "Willy Wonkastraat",
+      "houseNumber": "101",
+      "postalCode": "9000",
+      "municipality": "Gent"
+    },
+    "email": "xmwzezestelle@gmail.com",
+    "defaultAccount": false
+  },
+  {
+    "billingAccountNumber": "453278",
+    "currentPaymentMethod": "MANUAL",
+    "dispatchMethod": "SMS",
+    "outstandingBalance": 954.45,
+    "paymentDueDate": "2018-01-01",
+    "paymentStatus": "OVERDUE",
+    "billingAddress": {
+      "street": "Rue de la Loi",
+      "houseNumber": "666",
+      "postalCode": "1000",
+      "municipality": "Brussel"
+    },
+    "email": "xmwzetgsac@gmail.com",
+    "mobilePhoneNumber": "0636423960",
+    "collectionsTreatmentMessage": "RESUME_SUSPENDED_SERVICES",
+    "collectionsTreatment": "PROMISE_TO_PAY",
+    "defaultAccount": false
+  },
+  {
+    "billingAccountNumber": "123456 - DD failed",
+    "dispatchMethod": "PAPER",
+    "outstandingBalance": 0,
+    "paymentStatus": "UNPAID",
+    "currentPaymentMethod": "DIRECT_DEBIT",
+    "email": "xmwzezestelle@gmail.com",
+    "mobilePhoneNumber": "0636423960",
+    "isEligibleForManualPayment": true,
+    "billingAddress": {
+      "street": "Teststraat",
+      "houseNumber": "1",
+      "postalCode": "2000",
+      "municipality": "Antwerpen"
+    },
+    "collectionsTreatment": "PAYMENT_PLAN",
+    "defaultAccount": false
+  }
+]

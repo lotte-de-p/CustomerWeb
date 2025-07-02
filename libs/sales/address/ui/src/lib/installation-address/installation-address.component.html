@@ -1,0 +1,43 @@
+<label
+  class="select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up"
+  data-cy="address-item">
+  <div class="select-tile__content display--flex flex-direction--column flex-grow gap--xxs gap--xs--sm p--m p--l--sm">
+    <div class="select-tile__content--inner display--flex flex-direction--column">
+      <div class="display--flex gap--m gap--l--sm">
+        <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+          @if (address?.isNew) {
+            <div class="select-tile__badge_container display--flex gap--xxs flex-wrap--wrap">
+              <div class="cmp-badge">
+                <div class="background-jeans-blue_40 background-white color-text display--inline-flex">
+                  <span class="font--caption-bold text-weight--xl space--nowrap">
+                    {{ 'ng.sales-checkout.lbl.installation-address.new-line' | translate }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          }
+          <div class="heading--6 heading--nomargin" data-cy="installation-address-first-line">
+            <span> {{ address?.street }} {{ address?.houseNumber }}</span>
+            @if (address?.subHouseNumber) {
+              <span>/{{ address?.subHouseNumber }}</span>
+            }
+            @if (address?.box) {
+              <span>/{{ address?.box }}</span>
+            }
+          </div>
+          <div class="font--caption-bold" data-cy="installation-address-second-line">
+            {{ address?.postalCode }} {{ address?.municipality }} , {{ address?.country }}
+          </div>
+        </div>
+        <input
+          data-cy="feat-installation-address-list-item"
+          name="select-address-radio-group-name"
+          id="choices-{{ index }}"
+          type="radio"
+          [checked]="address?.selected"
+          (click)="onSelect()"
+          class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle" />
+      </div>
+    </div>
+  </div>
+</label>

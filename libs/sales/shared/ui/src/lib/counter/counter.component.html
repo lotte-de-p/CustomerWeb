@@ -1,0 +1,23 @@
+<div class="display--flex">
+  <div
+    [ngClass]="
+      value > minValue
+        ? 'border-color--all--black cursor--pointer'
+        : 'border-color--all--mid-grey pointer-events--none--all'
+    "
+    class="icons-circle border--all--r border-width--all--r border-style--all--solid"
+    (click)="decrease()">
+    <div class="icon icon-minus"></div>
+  </div>
+  <div class="counter--value mx--xxxs text-align--center">{{ value }}</div>
+  <div
+    [ngClass]="
+      value < maxValue
+        ? 'border-color--all--black cursor--pointer'
+        : 'border-color--all--mid-grey pointer-events--none--all'
+    "
+    class="icons-circle border--all--r border-width--all--r border-style--all--solid"
+    (click)="increase()">
+    <div class="icon icon-plus"></div>
+  </div>
+</div>

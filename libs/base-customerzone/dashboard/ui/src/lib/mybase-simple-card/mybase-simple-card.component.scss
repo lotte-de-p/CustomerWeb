@@ -1,0 +1,7 @@
+.mybase-simple-card {
+  &:hover {
+    .icon.icon-chevron-right {
+      color: #00807b; // color('brand-primary');
+    }
+  }
+}

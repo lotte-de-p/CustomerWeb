@@ -1,0 +1,48 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white height--full display--flex flex-direction--column"
+  [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited'">
+  <div
+    (click)="goToInternetUsage()"
+    class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">{{
+        'ng.mybase-dashboard-internet.internet-usage-unlimited.title' | translate
+      }}</span>
+    </div>
+    <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+  </div>
+  <div class="mybase-dashboard--card--content display--flex flex-direction--column justify-content--between flex-grow">
+    <div class="mb--xxl--md">
+      <div class="display--flex align-items--center flex-grow text-flow text-flow--h1">
+        <span class="mr--xs">
+          {{ 'ng.mybase-dashboard-internet.internet-usage-unlimited.label-unlimited' | translate }}
+        </span>
+        <i
+          *ngIf="usageStatus === UsageStatus.OK"
+          [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited-icon-ok'"
+          class="icon icon-no-size-override icon-md icon-infinity color-cyan-green"></i>
+        <i
+          *ngIf="usageStatus === UsageStatus.WARN"
+          [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited-icon-warn'"
+          class="icon icon-no-size-override icon-md icon-alert-shape-filled color-notification--warning--light"></i>
+        <i
+          *ngIf="usageStatus === UsageStatus.ERROR"
+          [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited-icon-error'"
+          class="icon icon-no-size-override icon-md icon-error-shape-filled color-notification--error--light"></i>
+      </div>
+      <div [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited-volume-used'">
+        {{ used | number: '1.0-2' }}
+        {{ 'ng.mybase-dashboard-internet.internet-usage-unlimited.label-gb-used' | translate }}
+      </div>
+      <div
+        class="font--caption-small mb--s"
+        [attr.data-cy]="'mybase-dashboard-internet-usage-unlimited-days-until-renewal'"
+        [attr.data-cy-daysUntilRenewal]="daysUntilRenewal">
+        {{
+          'ng.mybase-dashboard-internet.internet-usage-unlimited.label-days-until-renewal'
+            | translate: { daysUntilRenewal }
+        }}
+      </div>
+    </div>
+  </div>
+</div>

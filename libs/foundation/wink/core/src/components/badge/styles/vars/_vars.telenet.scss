@@ -1,0 +1,12 @@
+@import '../../../../assets/telenet/styles';
+
+$badge--default-bg: var(--semantic-color-background-surface-highlight-7);
+$badge--default-color: var(--semantic-color-text-inverse-on-brand);
+$badge--default-fs: rem(1.6);
+$badge--default-lh: rem(2.4);
+$badge--sm-fs: rem(1.4);
+$badge--sm-lh: rem(2);
+$badge--md-fs: $badge--default-fs;
+$badge--md-lh: $badge--default-lh;
+$badge--lg-fs: rem(2.4);
+$badge--lg-lh: rem(3.2);

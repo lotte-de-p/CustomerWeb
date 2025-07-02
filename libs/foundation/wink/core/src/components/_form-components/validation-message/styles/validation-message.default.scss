@@ -1,0 +1,18 @@
+:host {
+  & > * {
+    --wink-icon-color: var(--semantic-color-icon-error);
+    color: var(--semantic-color-text-error);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var-rem(--semantic-spacing-3xs);
+    align-items: center;
+    font-size: rem(1.4);
+    line-height: rem(2);
+    margin-top: var-rem(--semantic-spacing-xs);
+  }
+
+  .validation-message--error {
+    --wink-icon-color: var(--semantic-color-icon-error);
+  }
+}

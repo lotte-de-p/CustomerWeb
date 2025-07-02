@@ -1,0 +1,46 @@
+<div class="background-white p--xl mb--l" data-testid="sim-management-pending-sim-information">
+  <div class="display--flex justify-content--between pb--xl">
+    <div class="heading--4 my--n">
+      {{ 'ng.sim-management.lbl.pending-sim-information' | translate }}
+    </div>
+    <div>
+      <div
+        data-testid="sim-management-sim-status"
+        class="status-indicator status-indicator--positive display--inline-block vertical-align--middle">
+        <span> {{ 'ng.sim-management.status.sim-ready-for-activation' | translate }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.tariff-plan' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">{{ mobileLine.tariffPlan }}</div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.pin' | translate }}
+    </div>
+    @if (mobileLine.pendingSimCard?.pin) {
+      <div class="col-sm-6 font--body-regular sim-card-info-block">
+        <span data-testid="sim-management-information-pin">{{ mobileLine.pendingSimCard?.pin }}</span>
+      </div>
+    }
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.puk' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      <span data-testid="sim-management-information-puk">{{ mobileLine.pendingSimCard?.puk }}</span>
+    </div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.simcard-number' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      <span data-testid="sim-management-information-iccid">{{ mobileLine.mainSimCard?.iccid }}</span>
+    </div>
+  </div>
+</div>

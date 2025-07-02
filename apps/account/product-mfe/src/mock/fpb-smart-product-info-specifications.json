@@ -1,0 +1,69 @@
+[
+  {
+    "labelKey": "voice",
+    "unit": "MIN",
+    "value": "1000",
+    "visible": true,
+    "weight": "10",
+    "productType": "TELEPHONE",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Beheer je oproepen voor al je medewerkers: stel een keuzemenu in, maak een belgroep aan en personaliseer je welkomstberichten."
+    },
+    "serviceType": "FIXED_CALLING",
+    "id": "SMCM0100",
+    "showUnit": true,
+    "isValue": true,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "smart-flavour",
+    "visible": true,
+    "weight": "20",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Bel internationaal dankzij de optie International Calling. Je krijgt 1000 inbegrepen belminuten. "
+    },
+    "serviceType": "FEATURE",
+    "id": "SMCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "smart-flavour",
+    "visible": true,
+    "weight": "30",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Je klant haken niet meer in omwille van een bezettoon. "
+    },
+    "serviceType": "FEATURE",
+    "id": "SMCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  },
+  {
+    "labelKey": "smart-flavour",
+    "visible": true,
+    "weight": "40",
+    "localizedContent": {
+      "locale": "nl",
+      "name": "Jij krijgt tot 23 vaste nummers."
+    },
+    "serviceType": "FEATURE",
+    "id": "SMCM0100",
+    "showUnit": false,
+    "isValue": false,
+    "isMonetary": false,
+    "isRange": false,
+    "isAsterisk": false
+  }
+]

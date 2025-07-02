@@ -1,0 +1,77 @@
+[
+  {
+    "id": "9169395737913082977",
+    "identifier": "DTV000067311",
+    "addressId": "9165640897913195848",
+    "devices": [
+      {
+        "id": "9169395738913082977",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "965325009601",
+        "modelNumber": "12345"
+      },
+      {
+        "id": "9169395732013083077",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "964456628297",
+        "modelNumber": "12345"
+      }
+    ]
+  },
+  {
+    "id": "9169395692713079080",
+    "identifier": "DTV000067309",
+    "addressId": "9165640896713195831",
+    "devices": [
+      {
+        "id": "9169395696713079080",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "964202216173",
+        "modelNumber": "12345"
+      },
+      {
+        "id": "9169395698713079080",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "768217960204",
+        "modelNumber": "12345"
+      }
+    ]
+  },
+  {
+    "id": "9169395581213064032",
+    "identifier": "DTV000067308",
+    "addressId": "9165640887413194976",
+    "devices": [
+      {
+        "id": "9169395586213064032",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "966030775371",
+        "modelNumber": "12345"
+      },
+      {
+        "id": "9169395584213064032",
+        "name": "HD Digicorder",
+        "type": "EOS",
+        "saleType": "RENT",
+        "macAddress": null,
+        "serialNumber": "768216567676",
+        "modelNumber": "ABC 12345"
+      }
+    ]
+  }
+]

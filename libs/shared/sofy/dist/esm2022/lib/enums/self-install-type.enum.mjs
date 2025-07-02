@@ -1,0 +1,6 @@
+export var SelfInstallTypeEnum;
+(function (SelfInstallTypeEnum) {
+    SelfInstallTypeEnum["PICKUP"] = "pick_up";
+    SelfInstallTypeEnum["HOME_DELIVERY"] = "home_delivery";
+})(SelfInstallTypeEnum || (SelfInstallTypeEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VsZi1pbnN0YWxsLXR5cGUuZW51bS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9saWIvZW51bXMvc2VsZi1pbnN0YWxsLXR5cGUuZW51bS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLENBQU4sSUFBWSxtQkFHWDtBQUhELFdBQVksbUJBQW1CO0lBQzdCLHlDQUFrQixDQUFBO0lBQ2xCLHNEQUErQixDQUFBO0FBQ2pDLENBQUMsRUFIVyxtQkFBbUIsS0FBbkIsbUJBQW1CLFFBRzlCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gU2VsZkluc3RhbGxUeXBlRW51bSB7XG4gIFBJQ0tVUCA9ICdwaWNrX3VwJyxcbiAgSE9NRV9ERUxJVkVSWSA9ICdob21lX2RlbGl2ZXJ5Jyxcbn1cbiJdfQ==

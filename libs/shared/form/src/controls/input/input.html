@@ -1,0 +1,28 @@
+<div class="form-group">
+  <div *ngIf="!hideLabel" [ngClass]="{labelStyle: this.labelStyle, 'text-flow--label': !labelStyle}">
+    <label for="{{ key }}">{{ getLabel() | translate}}</label>
+  </div>
+  <input
+    id="{{ key }}"
+    type="text"
+    class="Form__input form-control"
+    [ngClass]="{'form__input--disabled' : disabled, 'form__input--error': error}"
+    [required]="required"
+    mask="{{ mask && mask.maskValue }}"
+    [dropSpecialCharacters]="mask && mask.dropSpecialCharacters"
+    name="{{ key }}"
+    [prefix]="prefix || ''"
+    (blur)="onBlur()"
+    (ngModelChange)="updateValue($event)"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''"
+    [class.ng-invalid-custom]="error"
+    maxlength="{{ maxLength }}" />
+  <div
+    [attr.data-cy]="messageGroup + '.error.' + key"
+    class="formErrorInput Form__input__invalid-message"
+    *ngIf="error && showError">
+    {{ getText() | translate}}
+  </div>
+</div>

@@ -1,0 +1,222 @@
+{
+  "tiers": [
+    {
+      "key": "fast",
+      "omapiId": "42797"
+    },
+    {
+      "key": "furious",
+      "omapiId": "42790"
+    }
+  ],
+  "products": [
+    {
+      "type": "mobile",
+      "tiers": [
+        {
+          "key": "fast",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "42797",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "36860",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42792",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42793",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42794",
+              "mobileData": []
+            }
+          ]
+        },
+        {
+          "key": "furious",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "42790",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "36861",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42791",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42795",
+              "mobileData": []
+            },
+            {
+              "key": "",
+              "omapiId": "42796",
+              "mobileData": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "tiers": [
+        {
+          "key": "fast",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "40816"
+            },
+            {
+              "key": "",
+              "omapiId": "43755"
+            }
+          ]
+        },
+        {
+          "key": "furious",
+          "products": [
+            {
+              "key": "",
+              "omapiId": "40816"
+            },
+            {
+              "key": "",
+              "omapiId": "43755"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "optins": [
+    {
+      "key": "data_sim",
+      "tiers": [
+        {
+          "key": "fast",
+          "pax": [
+            {
+              "omapiId": "42797",
+              "optinId": "43763"
+            },
+            {
+              "omapiId": "36860",
+              "optinId": "37786"
+            },
+            {
+              "omapiId": "42792",
+              "optinId": "43761"
+            },
+            {
+              "omapiId": "42793",
+              "optinId": "43759"
+            },
+            {
+              "omapiId": "42794",
+              "optinId": "43757"
+            }
+          ]
+        },
+        {
+          "key": "furious",
+          "pax": [
+            {
+              "omapiId": "42790",
+              "optinId": "43764"
+            },
+            {
+              "omapiId": "36861",
+              "optinId": "37787"
+            },
+            {
+              "omapiId": "42791",
+              "optinId": "43762"
+            },
+            {
+              "omapiId": "42795",
+              "optinId": "43760"
+            },
+            {
+              "omapiId": "42796",
+              "optinId": "43758"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fixed_telephony",
+      "tiers": [
+        {
+          "key": "fast",
+          "pax": [
+            {
+              "omapiId": "42797",
+              "optinId": "37785"
+            },
+            {
+              "omapiId": "36860",
+              "optinId": "37785"
+            },
+            {
+              "omapiId": "42792",
+              "optinId": "37785"
+            },
+            {
+              "omapiId": "42793",
+              "optinId": "37785"
+            },
+            {
+              "omapiId": "42794",
+              "optinId": "37785"
+            }
+          ]
+        },
+        {
+          "key": "furious",
+          "pax": [
+            {
+              "omapiId": "42790",
+              "optinId": "37784"
+            },
+            {
+              "omapiId": "36861",
+              "optinId": "37784"
+            },
+            {
+              "omapiId": "42791",
+              "optinId": "37784"
+            },
+            {
+              "omapiId": "42795",
+              "optinId": "37784"
+            },
+            {
+              "omapiId": "42796",
+              "optinId": "37784"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<div class="lines-section mobile-lines-section" style="top: 0 !important; position: relative">
+  <div class="label-content">
+    <div class="left">
+      <label>
+        {{ 'ng.fleet-user-line-remove-options.lbl.phone-number' | translate }}
+      </label>
+    </div>
+    <div class="right">
+      <label>
+        {{ 'ng.fleet-user-line-remove-options.lbl.options' | translate }}
+      </label>
+      <p [attr.data-cy]="'prices-excluding-vat-message'">
+        {{ 'ng.fleet-user-line-remove-options.lbl.prices-excluding-vat' | translate }}
+      </p>
+    </div>
+  </div>
+  <div class="options-content" style="top: 0 !important">
+    <div class="content">
+      <div class="left display--flex flex-direction-row justify-content--between hidden-mobile">
+        <p>{{ selectedLine.identifier | phoneNumber }}</p>
+      </div>
+      <div class="right">
+        @if (selectedLine.isAffected) {
+          <div [attr.data-cy]="'removed-options'">
+            <label>
+              {{ 'ng.fleet-user-line-remove-options.lbl.removed' | translate }}
+            </label>
+            @for (option of selectedLine.options; track option) {
+              <div class="desktop-options mobile-options">
+                @if (option.isOptionRemoved) {
+                  <div class="right-content-upgraded">
+                    <div class="subtitle-content" [attr.data-cy]="'removed-option'">
+                      <p class="remove-option" [textContent]="option.category"></p>
+                      <b class="color-red">{{ currencySymbol }}{{ option.price.taxExclPrices.recurrentTotal }}</b>
+                    </div>
+                    <p [attr.data-cy]="'removed-option-description'">{{ option.description }}</p>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        }
+        @if (selectedLine.options.length === 0) {
+          <div class="text--r text--xxs">
+            <span class="text--r text--xxs">
+              {{ 'ng.fleet-user-line-remove-options.lbl.no-options-added' | translate }}
+            </span>
+          </div>
+        }
+        @if (showPreviouslyAddedOption(selectedLine)) {
+          <div [attr.data-cy]="'previously-added'">
+            <label>
+              {{ 'ng.fleet-user-line-remove-options.lbl.previously-added' | translate }}
+            </label>
+            @for (option of selectedLine.options; track option) {
+              <div class="desktop-options mobile-options">
+                @if (!option.isOptionRemoved && option.category && option.status === 'ACTIVE') {
+                  <div class="right-content-upgraded">
+                    <div class="subtitle-content" [attr.data-cy]="'previously-added-option'">
+                      <p class="prev-added-title" [textContent]="option.category"></p>
+                      <b class="prev-added-title"
+                        >{{ currencySymbol }}{{ option.price.taxExclPrices.recurrentTotal }}</b
+                      >
+                    </div>
+                    <p class="color-mid-grey" [attr.data-cy]="'previously-added-option-description'">
+                      {{ option.shortDescription }}
+                    </p>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

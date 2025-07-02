@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="104.219" tests="8" failures="6">
+  <testsuite name="Cypress Tests" timestamp="2024-07-17T05:57:12" tests="0" file="src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Manage Profile" timestamp="2024-07-17T05:57:12" tests="8" time="104.198" failures="6">
+    <testcase name="should show mobile number step at first" time="1.155" classname="Manage Profile should show mobile number step at first">
+    </testcase>
+    <testcase name="should fill in phone number field" time="0.709" classname="Manage Profile should fill in phone number field">
+    </testcase>
+    <testcase name="should show required error message" time="4.891" classname="Manage Profile should show required error message">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;mandatory&apos;, but the text was &apos; Mobiel nummer is een verplicht veld. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'mandatory', but the text was ' Mobiel nummer is een verplicht veld. '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:21:0)
+
+      + expected - actual
+
+      -' Mobiel nummer is een verplicht veld. '
+      +'mandatory'
+      ]]></failure>
+    </testcase>
+    <testcase name="should show number-constraint" time="4.833" classname="Manage Profile should show number-constraint">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;constraint&apos;, but the text was &apos; Geef een geldig mobiel nummer in. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'constraint', but the text was ' Geef een geldig mobiel nummer in. '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:26:0)
+
+      + expected - actual
+
+      -' Geef een geldig mobiel nummer in. '
+      +'constraint'
+      ]]></failure>
+    </testcase>
+    <testcase name="should show invalid fleet profile" time="4.989" classname="Manage Profile should show invalid fleet profile">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;invalid-fleet-number&apos;, but the text was &apos; Dit is geen geldig Telenet Business Mobile-nummer &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'invalid-fleet-number', but the text was ' Dit is geen geldig Telenet Business Mobile-nummer '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:33:0)
+
+      + expected - actual
+
+      -' Dit is geen geldig Telenet Business Mobile-nummer '
+      +'invalid-fleet-number'
+      ]]></failure>
+    </testcase>
+    <testcase name="should show already exists" time="5.000" classname="Manage Profile should show already exists">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;active-profile&apos;, but the text was &apos; Dit nummer is al gelinkt aan een actief profiel.\nKlik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'active-profile', but the text was ' Dit nummer is al gelinkt aan een actief profiel.\nKlik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:40:0)
+
+      + expected - actual
+
+      -' Dit nummer is al gelinkt aan een actief profiel.\nKlik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+      +'active-profile'
+      ]]></failure>
+    </testcase>
+    <testcase name="should show status in active state when account is pending" time="5.093" classname="Manage Profile should show status in active state when account is pending">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;inactive-profile&apos;, but the text was &apos; Dit nummer is al gelinkt aan een profiel dat niet actief is.&lt;br&gt;Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'inactive-profile', but the text was ' Dit nummer is al gelinkt aan een profiel dat niet actief is.<br>Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:47:0)
+
+      + expected - actual
+
+      -' Dit nummer is al gelinkt aan een profiel dat niet actief is.<br>Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+      +'inactive-profile'
+      ]]></failure>
+    </testcase>
+    <testcase name="should show status in active state when account is invited" time="5.008" classname="Manage Profile should show status in active state when account is invited">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;div.formErrorInput&gt;&apos; to contain text &apos;inactive-profile&apos;, but the text was &apos; Dit nummer is al gelinkt aan een profiel dat niet actief is.&lt;br&gt;Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<div.formErrorInput>' to contain text 'inactive-profile', but the text was ' Dit nummer is al gelinkt aan een profiel dat niet actief is.<br>Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+    at Context.eval (webpack:///./src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts:54:0)
+
+      + expected - actual
+
+      -' Dit nummer is al gelinkt aan een profiel dat niet actief is.<br>Klik op de link in je uitnodiging of contacteer je fleetmanager om een nieuwe uitnodiging te versturen. '
+      +'inactive-profile'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

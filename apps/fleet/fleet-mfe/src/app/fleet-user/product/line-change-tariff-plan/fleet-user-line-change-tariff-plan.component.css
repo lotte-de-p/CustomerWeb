@@ -1,0 +1,51 @@
+@media only screen and (max-width: 35.99em) {
+  .mobile-option-tiles {
+    height: auto !important;
+    max-height: 84%;
+  }
+
+  .mobile-options-button-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .mobile-options-button-container .options-button {
+    width: 100% !important;
+  }
+
+  .mobile-lines-section {
+    position: relative !important;
+    display: flex;
+    top: 0 !important;
+    width: 100%;
+  }
+
+  .mobile-options {
+    max-width: 100% !important;
+  }
+
+  .mobile-blur {
+    opacity: 50%;
+  }
+
+  .options-content .toggle-content-bottom {
+    height: auto !important;
+  }
+
+  .mobile-lines-options {
+    margin-top: 1em !important;
+  }
+}
+
+.desktop-options {
+  max-width: 80%;
+}
+
+.old-tariff {
+  margin-bottom: 0 !important;
+}
+
+.divider--brand {
+  background-color: #ffc421 !important;
+  border-color: #ffc421 !important;
+}

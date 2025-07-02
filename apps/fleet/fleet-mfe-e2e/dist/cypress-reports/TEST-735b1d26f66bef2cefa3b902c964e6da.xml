@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.018" tests="18" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-12T06:34:08" tests="0" file="src/e2e/fleet-user/line-change-tariff-plan/line-change-tariff-plan.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Change Tariff Plan" timestamp="2024-09-12T06:34:08" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="As a fleet user I want to change my tariff plan on desktop" timestamp="2024-09-12T06:34:08" tests="10" time="0.000" failures="0">
+    <testcase name="AC 1: Fleet User goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened" time="1.466" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 1: Fleet User goes to products detail page when line change tariff plan is selected then the change tariff plan wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet User opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list" time="0.729" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 2: Fleet User opens the change tariff plan wizard then the previous tariff plan is shown and is not available in the options list">
+    </testcase>
+    <testcase name="AC 3: Fleet User opens the change tariff plan wizard when fleet user switches the mobile plan the new plan is visible " time="0.766" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 3: Fleet User opens the change tariff plan wizard when fleet user switches the mobile plan the new plan is visible ">
+    </testcase>
+    <testcase name="AC 4.1: Fleet User chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown " time="0.809" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 4.1: Fleet User chooses a tariff plan in the wizard when he chooses another one then the newest chosen tariff plan will be shown ">
+    </testcase>
+    <testcase name="AC 4.2: Fleet User chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed" time="0.830" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 4.2: Fleet User chooses a tariff plan in the wizard when he chooses the same one then the new tariff plan is removed">
+    </testcase>
+    <testcase name="AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again " time="0.856" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again ">
+    </testcase>
+    <testcase name="AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed" time="0.910" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed">
+    </testcase>
+    <testcase name="AC 10: Fleet User opens the change tariff plan wizard then he can see the message that all prices are VAT excl" time="0.718" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 10: Fleet User opens the change tariff plan wizard then he can see the message that all prices are VAT excl">
+    </testcase>
+    <testcase name="AC 11: Fleet User opens the change tariff plan wizard then the options of the previous plan are shown" time="0.687" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 11: Fleet User opens the change tariff plan wizard then the options of the previous plan are shown">
+    </testcase>
+    <testcase name="AC 12: Fleet User should not see buttons that allow him to go back to Fleet Portal when he&apos;s coming from oneApp" time="1.208" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop AC 12: Fleet User should not see buttons that allow him to go back to Fleet Portal when he&apos;s coming from oneApp">
+    </testcase>
+  </testsuite>
+  <testsuite name="Disconnected options" timestamp="2024-09-12T06:34:17" tests="3" time="2.608" failures="0">
+    <testcase name="Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present" time="0.731" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop Disconnected options Fleet User changes his tariff plan disconnected options will be shown of the previous tariff plan if present">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options" time="0.888" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes then the warning message is shown with the amount of disconnected options">
+    </testcase>
+    <testcase name="Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed" time="0.887" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop Disconnected options Fleet User has disconnected options after changing the tariff plan when saving the changes and the user changes his mind then the confirmation screen is closed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Split bill guard checks" timestamp="2024-09-12T06:34:20" tests="2" time="1.566" failures="0">
+    <testcase name="should show error message when fleet user ordering is not enabled" time="0.726" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop Split bill guard checks should show error message when fleet user ordering is not enabled">
+    </testcase>
+    <testcase name="should show error message when product is not of type SB20" time="0.768" classname="Line Change Tariff Plan As a fleet user I want to change my tariff plan on desktop Split bill guard checks should show error message when product is not of type SB20">
+    </testcase>
+  </testsuite>
+  <testsuite name="As a fleet user I can change my tariff plan via mobile" timestamp="2024-09-12T06:34:21" tests="3" time="3.586" failures="0">
+    <testcase name="AC 2: Fleet User opens the change tariff plan wizard when fleet user he can not see a tariff plan that is already active " time="0.660" classname="Line Change Tariff Plan As a fleet user I can change my tariff plan via mobile AC 2: Fleet User opens the change tariff plan wizard when fleet user he can not see a tariff plan that is already active ">
+    </testcase>
+    <testcase name="AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again " time="0.802" classname="Line Change Tariff Plan As a fleet user I can change my tariff plan via mobile AC 6: Fleet User chose a tariff plan in the wizard when he clicks on undo changes then tariff plan is unselected again ">
+    </testcase>
+    <testcase name="AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed" time="0.897" classname="Line Change Tariff Plan As a fleet user I can change my tariff plan via mobile AC 8: Fleet User changes tariff plan in the wizard when he saves his changes then tariff plan is changed">
+    </testcase>
+  </testsuite>
+</testsuites>

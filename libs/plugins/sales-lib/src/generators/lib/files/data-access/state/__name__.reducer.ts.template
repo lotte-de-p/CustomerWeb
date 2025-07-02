@@ -1,0 +1,23 @@
+import { Action, createFeature, createReducer, on } from '@ngrx/store';
+import { defaultState, <%= classifiedStateName %> } from './<%= name %>.state';
+import { stateFeatureName } from '../constants/state.const';
+import { produce } from 'immer';
+import { setName } from './<%= name %>.actions';
+
+export const reducer = createReducer(
+  defaultState,
+  on(setName, (state: <%= classifiedStateName %>, props: { name: string }) => {
+    return produce(state, (draft: <%= classifiedStateName %>) => {
+      draft.name = props.name;
+    });
+  })
+);
+
+export function <%= classifiedName %>Reducer(state: <%= classifiedStateName %> = defaultState, action: Action): <%= classifiedStateName %> {
+  return reducer(state, action);
+}
+
+export const <%= name %>Feature = createFeature({
+  name: stateFeatureName,
+  reducer: <%= classifiedName %>Reducer,
+});

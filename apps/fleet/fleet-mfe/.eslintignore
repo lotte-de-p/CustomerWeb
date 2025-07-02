@@ -1,0 +1,5 @@
+dist
+webpack.config.js
+webpack.prod.config.js
+# temp ignore
+**/**.spec.ts

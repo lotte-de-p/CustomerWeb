@@ -1,0 +1,7 @@
+{
+  "url": "http://localhost:8080/public/api/mobile-usage-limits-service/v1/mobile-usage-limits/outofbundle/limits/0489552137",
+  "method": "GET",
+  "status": 200,
+  "delay": 100,
+  "response": ["0", "5", "10", "20", "50", "NO LIMIT"]
+}

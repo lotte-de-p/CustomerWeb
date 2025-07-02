@@ -1,0 +1,65 @@
+{
+  "unpaidInvoices": {
+    "totalAmount": 60.16,
+    "invoices": [
+      {
+        "invoiceDate": "2024-06-24",
+        "paymentDueDate": "2024-06-25",
+        "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcyyy",
+        "invoiceAmount": 1234.56,
+        "outstandingDebt": 1234.56,
+        "invoiceNumber": "abcyyy",
+        "paymentStatus": "UNPAID"
+      }
+    ]
+  },
+  "paidInvoices": [
+    {
+      "invoiceYear": "2024",
+      "invoices": [
+        {
+          "invoiceDate": "2024-05-24",
+          "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abczzz",
+          "invoiceAmount": 123.45,
+          "invoiceNumber": "abczzz"
+        },
+        {
+          "invoiceDate": "2024-04-24",
+          "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcttt",
+          "invoiceAmount": 145.45,
+          "invoiceNumber": "abcttt"
+        }
+      ]
+    },
+    {
+      "invoiceYear": "2023",
+      "invoices": [
+        {
+          "invoiceDate": "2023-07-10",
+          "documentUrl": "/document",
+          "invoiceAmount": -24.97
+        },
+        {
+          "invoiceDate": "2023-03-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 345.56
+        }
+      ]
+    },
+    {
+      "invoiceYear": "2022",
+      "invoices": [
+        {
+          "invoiceDate": "2022-03-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 24.97
+        },
+        {
+          "invoiceDate": "2022-02-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 543
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Marketing application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

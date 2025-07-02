@@ -1,0 +1,17 @@
+{
+  "name": "inbox-messages-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/inbox-messages/ui/src",
+  "prefix": "tg-inbox-messages",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/engagement/inbox-messages/ui/**/*.ts", "libs/engagement/inbox-messages/ui/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:inbox-messages", "scope:inbox-messages-mfe"]
+}

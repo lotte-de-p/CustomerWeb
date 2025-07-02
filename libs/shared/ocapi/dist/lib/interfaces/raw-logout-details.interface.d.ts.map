@@ -1,0 +1,1 @@
+{"version":3,"file":"raw-logout-details.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/interfaces/raw-logout-details.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,yBAAyB;IACxC,mBAAmB,EAAE,MAAM,CAAC;IAC5B,YAAY,EAAE,MAAM,CAAC;IACrB,WAAW,EAAE,MAAM,CAAC;IACpB,CAAC,YAAY,CAAC,EAAE,MAAM,CAAC;CACxB"}

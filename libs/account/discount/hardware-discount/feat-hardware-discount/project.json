@@ -1,0 +1,33 @@
+{
+  "name": "discount-feat-hardware-discount",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/account/discount/feat-hardware-discount/src",
+  "prefix": "app",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/account/discount/hardware-discount/feat-hardware-discount/**/*.ts",
+          "libs/account/discount/hardware-discount/feat-hardware-discount/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:discount-hardware-discount", "scope:discount", "scope:discount-mfe"]
+}

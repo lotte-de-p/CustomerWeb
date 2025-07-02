@@ -1,0 +1,199 @@
+<div class="product-overview">
+  <ng-container>
+    <ng-container *ngFor="let product of products">
+      <ng-container *ngTemplateOutlet="standalone; context: { product, index: '', visibilityArray: [] }"></ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #standalone let-product="product" let-index="index" let-visibilityArray="visibilityArray">
+  <div *ngIf="product.children.length === 0">
+    <div class="content-section mb-20">
+      <div class="content-section__details" (click)="visibilityArray[index] = !visibilityArray[index]">
+        <div class="row display--flex align-items--center">
+          <div
+            class="col-xs-11 display--flex align-items--start"
+            [ngClass]="{
+              'col-md-11': !showManageOptions(product),
+              'col-md-6': showManageOptions(product)
+            }">
+            <div
+              class="product-overview__content-section__image display--flex align-items--center justify-content--center">
+              <i
+                class="icon icon-md icon-no-size-override text-weight--xxs"
+                [ngClass]="'icon-' + getProductIcon(product)"></i>
+            </div>
+            <div class="product-overview__heading display--flex--md align-items--center">
+              <div class="ml--m">
+                <div class="text-font-family--t7 text--xxm">
+                  <span [attr.data-cy]="'labelKey'">
+                    {{ product.productInfo.name }}
+                  </span>
+                  <span *ngIf="product.handsets && product.handsets.length > 0 && product.handsets[0].handsetName">
+                    + {{ product.handsets[0].handsetName }}
+                  </span>
+                  <span>
+                    <i
+                      *ngIf="product.isPhysicalSim()"
+                      [attr.data-cy]="'physicalSimType'"
+                      class="icon icon-md icon-sim-card mr--m"></i>
+                    <i
+                      *ngIf="product.isESim()"
+                      [attr.data-cy]="'eSimType'"
+                      class="icon icon-md icon-sim-esim mr--m"></i>
+                  </span>
+                </div>
+                <div
+                  class="display--flex--md align-items--center pt--xxs product-overview__hide-base"
+                  *ngIf="product.productType === 'mobile'">
+                  <div *ngIf="product.eSimStatus === 'Active'" class="mr--xxs--md mb--n--md mb--xxs mt--xxs">
+                    <span class="status-indicator status-indicator--positive">
+                      {{ 'ng.fleet-user-product-overview.lbl.esim-active' | translate }}
+                    </span>
+                  </div>
+                  <div class="text--s">
+                    <span class="pr--xxxs">{{ product.identifier | phoneNumber }}</span>
+                  </div>
+                </div>
+                <div *ngIf="product.simCardNumber" [attr.data-cy]="'simCardNumber'" class="text--s">
+                  <span>
+                    {{ 'ng.fleet-user-product-overview.lbl.sim-card-number' | translate }}
+                    {{ ' ' + product.simCardNumber }}
+                  </span>
+                </div>
+                <div *ngIf="product.pukCode" [attr.data-cy]="'pukCode'" class="text--s">
+                  <span>
+                    {{ 'ng.fleet-user-product-overview.lbl.puk-code' | translate }} {{ ' ' + product.pukCode }}
+                  </span>
+                </div>
+                <div class="display--flex--md align-items--center pt--xxs product-overview__hide-telenet">
+                  <div class="text--s">
+                    <span class="pr--xxxs">{{ product.identifier | phoneNumber }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pl--m pt--xxs pt--n--md">
+                <span
+                  class="status-indicator status-indicator--warning mb--m mb--n--md"
+                  *ngIf="product.isProductActivationInProgress()">
+                  <span>{{ 'ng.fleet-user-product-overview.lbl.status-activation-in-progress' | translate }}</span>
+                </span>
+                <span
+                  class="status-indicator status-indicator--warning mb--m mb--n--md"
+                  *ngIf="product.isProductDisconnectionInProgress()">
+                  <span>{{ 'ng.fleet-user-product-overview.lbl.status-disconnection-in-progress' | translate }}</span>
+                </span>
+                <span
+                  class="status-indicator status-indicator--warning mb--m mb--n--md"
+                  *ngIf="product.isProductModificationInProgress()">
+                  <span>{{ 'ng.fleet-user-product-overview.lbl.status-modification-in-progress' | translate }}</span>
+                </span>
+                <span
+                  class="status-indicator status-indicator--negative mb--m mb--n--md"
+                  [attr.data-cy]="'productSuspended'"
+                  *ngIf="product.isProductSuspended()">
+                  <span>{{ 'ng.fleet-user-product-overview.lbl.status-suspended' | translate }}</span>
+                </span>
+              </div>
+              @if (isFleetUserOrderingEnabled && product.isSplitBill20()) {
+                @if (isSplitBill20AddOptionsEnabled) {
+                  <div class="hide-from-md pt-5 pl--m">
+                    <a
+                      *ngIf="product.isProductActive() || !product.productType"
+                      (click)="showAddOptions(product)"
+                      class="font--body-regular product-overview__hide-base link link--subtle">
+                      {{ 'ng.fleet-user-product-overview.lnk.add-options' | translate }}
+                    </a>
+                  </div>
+                }
+                @if (isSplitBill20RemoveOptionsEnabled) {
+                  <div class="hide-from-md pt-5 pl--m">
+                    <a
+                      *ngIf="product.isProductActive() || !product.productType"
+                      (click)="showRemoveOptions(product)"
+                      class="font--body-regular product-overview__hide-base link link--subtle">
+                      {{ 'ng.fleet-user-product-overview.lnk.remove-options' | translate }}
+                    </a>
+                  </div>
+                }
+                @if (isSplitBill20ChangeTariffPlanEnabled) {
+                  <div class="hide-from-md pt-5 pl--m">
+                    <a
+                      *ngIf="product.isProductActive() || !product.productType"
+                      (click)="showChangeTariffPlan(product)"
+                      class="font--body-regular product-overview__hide-base link link--subtle">
+                      {{ 'ng.fleet-user-product-overview.lnk.change-tariff-plan' | translate }}
+                    </a>
+                  </div>
+                }
+              } @else if (showManageOptions(product)) {
+                <div class="hide-from-md pt-5 pl--m">
+                  <a
+                    *ngIf="product.isProductActive() || !product.productType"
+                    (click)="manageOptions(product, $event)"
+                    class="font--body-regular product-overview__hide-base link link--subtle">
+                    {{ 'ng.fleet-user-product-overview.lnk.manage-options' | translate }}
+                  </a>
+                </div>
+              }
+            </div>
+          </div>
+          <div
+            class="col-xs-1 text-align--right"
+            [ngClass]="{
+              'col-md-1': !showManageOptions(product),
+              'col-md-6': showManageOptions(product)
+            }">
+            <div class="display--flex--md align-items--center justify-content--end--md">
+              @if (isFleetUserOrderingEnabled && product.isSplitBill20()) {
+                @if (isSplitBill20AddOptionsEnabled) {
+                  <div class="hide-until-md">
+                    <a
+                      *ngIf="product.isProductActive()"
+                      class="font--body-regular ml--xxxl--md link link--subtle"
+                      (click)="showAddOptions(product)"
+                      >{{ 'ng.fleet-user-product-overview.lnk.add-options' | translate }}</a
+                    >
+                  </div>
+                }
+                @if (isSplitBill20RemoveOptionsEnabled) {
+                  <div class="hide-until-md">
+                    <a
+                      *ngIf="product.isProductActive()"
+                      class="font--body-regular ml--xxxl--md link link--subtle"
+                      (click)="showRemoveOptions(product)"
+                      >{{ 'ng.fleet-user-product-overview.lnk.remove-options' | translate }}</a
+                    >
+                  </div>
+                }
+                @if (isSplitBill20ChangeTariffPlanEnabled) {
+                  <div class="hide-until-md">
+                    <a
+                      *ngIf="product.isProductActive() || !product.productType"
+                      (click)="showChangeTariffPlan(product)"
+                      class="font--body-regular ml--xxxl--md link link--subtle">
+                      {{ 'ng.fleet-user-product-overview.lnk.change-tariff-plan' | translate }}
+                    </a>
+                  </div>
+                }
+              } @else if (showManageOptions(product)) {
+                <div class="hide-until-md">
+                  <a
+                    *ngIf="product.isProductActive()"
+                    class="font--body-regular ml--xxxl--md link link--subtle"
+                    (click)="manageOptions(product, $event)"
+                    >{{ 'ng.fleet-user-product-overview.lnk.manage-options' | translate }}</a
+                  >
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+        <tg-product-specifications
+          [product]="product"
+          [manageOptionUrl]="manageOptionUrl"
+          [componentInstanceID]="componentInstanceID"></tg-product-specifications>
+      </div>
+    </div>
+  </div>
+</ng-template>

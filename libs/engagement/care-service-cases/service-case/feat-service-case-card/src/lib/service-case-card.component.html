@@ -1,0 +1,17 @@
+<div *ngIf="openServiceCases$ | async as openServiceCases">
+  <div [ngPlural]="openServiceCases.length">
+    <ng-template ngPluralCase="=0"></ng-template>
+    <ng-template ngPluralCase="=1"
+      ><span
+        data-cy="service-case-open-cases"
+        [translate]="'ng.service-cases.card.one-open-service-case'"
+        [translateParams]="{ amount: openServiceCases.length }"></span
+    ></ng-template>
+    <ng-template ngPluralCase="other"
+      ><span
+        data-cy="service-case-open-cases"
+        [translate]="'ng.service-cases.card.open-service-cases'"
+        [translateParams]="{ amount: openServiceCases.length }"></span
+    ></ng-template>
+  </div>
+</div>

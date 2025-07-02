@@ -1,0 +1,40 @@
+{
+  "name": "sofy",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/sofy/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "project": "libs/shared/sofy/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/sofy/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/sofy/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/@telenet/ng-lib-sofy"],
+      "options": {
+        "jestConfig": "libs/shared/sofy/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/sofy/src/**/*.ts", "libs/shared/sofy/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:api", "build:npm-library", "scope:sofy"]
+}

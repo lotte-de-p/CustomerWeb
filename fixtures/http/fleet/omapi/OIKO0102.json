@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productid": "OIKO0102",
+    "externalProductCode": "OIKO0102",
+    "labelkey": "Safesurf",
+    "producttype": "OPTION",
+    "weight": 575,
+    "apps": [],
+    "customercategories": [
+      "All",
+      "Residential",
+      "Production Test Business",
+      "Internal",
+      "Production Test",
+      "Event/Demo",
+      "Business"
+    ],
+    "category": ["Internet Options", "For Rules - Safespots"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Safesurf",
+        "logo": "http://localhost:10081/image.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Safesurf",
+        "logo": "http://localhost:10081/image.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Safesurf",
+        "logo": "http://localhost:10081/image.png"
+      }
+    ],
+    "subcategory": {
+      "name": "Security Option",
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Security Option"
+        },
+        {
+          "locale": "nl",
+          "name": "Security Option"
+        },
+        {
+          "locale": "fr",
+          "name": "Security Option"
+        }
+      ],
+      "weight": 20,
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "servicetype": "FEATURE",
+        "experience": {
+          "experiencetype": "FEATURE"
+        },
+        "specifications": [
+          {
+            "labelkey": "SafeSurf",
+            "visible": true,
+            "weight": "1",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "Telenet Safespot protects your devices from today's online dangers. It protects all your devices from hacking, malware and phishing, both at home and on the go. In addition to your computer, Telenet Safespot also protects all your smart devices, such as your smartphone, smart thermostat or camera.\\n Regardless of the number of devices you want to secure, you always pay €4.99 per month."
+              },
+              {
+                "locale": "nl",
+                "name": "Telenet Safespot beschermt je toestellen tegen de online gevaren van vandaag. Het beveiligt al je toestellen tegen hacking, malware en phishing, zowel thuis als onderweg. Behalve je computer beschermt Telenet Safespot ook al je slimme toestellen, zoals je smartphone, slimme thermostaat of camera.\\nOngeacht het aantal toestellen dat je wil beveiligen, betaal je steeds €4,99 per maand."
+              },
+              {
+                "locale": "fr",
+                "name": "Telenet Safespot protège vos appareils contre les dangers en ligne modernes. Il protège tous vos appareils contre le piratage, les logiciels malveillants et le phishing, à la maison comme en déplacement. Outre votre ordinateur, Telenet Safespot protège aussi tous vos appareils intelligents, comme votre smartphone, votre thermostat intelligent ou votre caméra.\\nPeu importe combien d’appareils vous protégez : vous payez toujours 4,99 euros par mois. Aujourd'hui bien sûr, mais aussi demain."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "0,0",
+        "unit": "EUR"
+      },
+      "productsegment": "ALL",
+      "productgroup": "OTHER",
+      "esimAvailable": false,
+      "elementarycharacteristics": [
+        {
+          "key": "upgradableto",
+          "value": "OIKO0103"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "isYupProduct": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

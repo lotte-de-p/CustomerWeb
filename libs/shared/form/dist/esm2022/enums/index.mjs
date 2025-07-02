@@ -1,0 +1,5 @@
+export * from './screen-type.enum';
+export * from './lines.enum';
+export * from './timeslot.enum';
+export * from './tax-type.enum';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvZW51bXMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsY0FBYyxvQkFBb0IsQ0FBQztBQUNuQyxjQUFjLGNBQWMsQ0FBQztBQUM3QixjQUFjLGlCQUFpQixDQUFDO0FBQ2hDLGNBQWMsaUJBQWlCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL3NjcmVlbi10eXBlLmVudW0nO1xuZXhwb3J0ICogZnJvbSAnLi9saW5lcy5lbnVtJztcbmV4cG9ydCAqIGZyb20gJy4vdGltZXNsb3QuZW51bSc7XG5leHBvcnQgKiBmcm9tICcuL3RheC10eXBlLmVudW0nO1xuIl19

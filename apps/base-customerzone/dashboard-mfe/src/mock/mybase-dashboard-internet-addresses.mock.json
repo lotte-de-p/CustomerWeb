@@ -1,0 +1,31 @@
+{
+  "url": "http://localhost:8080/public/api/mybase-dashboard-service/v1/dashboard/internet/addresses",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "default": true,
+      "productIdentifier": "BINT050004087",
+      "productName": "Internet unlimited",
+      "address": {
+        "street": "Darwin Loadteststraat",
+        "houseNumber": "356",
+        "municipality": "Mechelen",
+        "postalCode": "2800",
+        "country": "België"
+      }
+    },
+    {
+      "default": true,
+      "productIdentifier": "BINT050004086",
+      "productName": "Internet unlimited",
+      "address": {
+        "street": "Liersestenweg",
+        "houseNumber": "149",
+        "municipality": "Mechelen",
+        "postalCode": "2800",
+        "country": "België"
+      }
+    }
+  ]
+}

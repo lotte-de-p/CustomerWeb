@@ -1,0 +1,53 @@
+{
+  "name": "general-feat-header",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/foundation/general/search/feat-header/src",
+  "prefix": "tg-foundation-general-search",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/foundation/general/search/feat-header/**/*.ts",
+          "libs/foundation/general/search/feat-header/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/general/search/feat-header/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "general-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/general/search/feat-header/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "general-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/foundation/general/search/feat-header/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "general-mfe:build:development"
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:general-search", "scope:general-mfe"]
+}

@@ -1,0 +1,37 @@
+{
+  "hexCode": "#000000",
+  "attributeGroup": {
+    "code": "general",
+    "localizedContent": [
+      {
+        "locale": "nl",
+        "key": "General_nl"
+      },
+      {
+        "locale": "fr",
+        "key": "General_fr"
+      },
+      {
+        "locale": "en",
+        "key": "General_en"
+      }
+    ]
+  },
+  "localizedContent": [
+    {
+      "locale": "nl",
+      "key": "color_nl",
+      "value": ["Black NL"]
+    },
+    {
+      "locale": "fr",
+      "key": "color_fr",
+      "value": ["Black FR"]
+    },
+    {
+      "locale": "en",
+      "key": "color_en",
+      "value": ["Black EN"]
+    }
+  ]
+}

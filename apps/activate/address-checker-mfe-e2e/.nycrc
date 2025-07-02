@@ -1,0 +1,26 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "lcovonly",
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+  "../address-checker-mfe/**",
+  "../address-checker-mfe-e2e/**",
+  "../../../libs/address/**",
+  "../../../libs/activate/address-checker/**"
+  ],
+  "report-dir": "../../../coverage/apps/activate/address-checker-mfe",
+  "cwd": "../../../"
+}

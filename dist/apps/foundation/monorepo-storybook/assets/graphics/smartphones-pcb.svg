@@ -1,0 +1,14 @@
+<svg width="132" height="69" viewBox="0 0 132 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 197">
+<rect id="Rectangle 1864" x="46.5" y="3" width="40" height="63" rx="3" stroke="#111111" stroke-width="6"/>
+<path id="Rectangle 1865" d="M86.5 17H107.5C109.157 17 110.5 18.3431 110.5 20V63C110.5 64.6569 109.157 66 107.5 66H86.5V17Z" stroke="#111111" stroke-width="6"/>
+<path id="Rectangle 1867" d="M110.5 28H125.5C127.157 28 128.5 29.3431 128.5 31V63C128.5 64.6569 127.157 66 125.5 66H110.5V28Z" stroke="#111111" stroke-width="6"/>
+<path id="Rectangle 1868" d="M21.5 28H6.5C4.84315 28 3.5 29.3431 3.5 31V63C3.5 64.6569 4.84315 66 6.5 66H21.5V28Z" stroke="#111111" stroke-width="6"/>
+<path id="Rectangle 1866" d="M46.5 17H25.5C23.8431 17 22.5 18.3431 22.5 20V63C22.5 64.6569 23.8431 66 25.5 66H46.5V17Z" stroke="#111111" stroke-width="6"/>
+<circle id="Ellipse 144" cx="67.5" cy="56" r="3" fill="#111111"/>
+<circle id="Ellipse 145" cx="95.5" cy="56" r="3" fill="#111111"/>
+<circle id="Ellipse 147" cx="117.5" cy="56" r="3" fill="#111111"/>
+<circle id="Ellipse 148" cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 17.5 53)" fill="#111111"/>
+<circle id="Ellipse 146" cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 40.5 53)" fill="#111111"/>
+</g>
+</svg>

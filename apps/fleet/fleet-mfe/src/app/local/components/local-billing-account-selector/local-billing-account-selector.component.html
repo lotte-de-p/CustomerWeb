@@ -1,0 +1,59 @@
+@if (billingAccounts$ | async; as billingAccounts) {
+  <div class="account-line-selector">
+    @if (billingAccounts.length > 0) {
+      <div (click)="isSelectorOpen = !isSelectorOpen" class="account-selector">
+        <div
+          class="account-selector__list account-selector__list__first-item account-selector__list--with-icon"
+          [ngClass]="{
+            'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__first-item--opened':
+              isSelectorOpen,
+            'cursor--default': billingAccounts.length === 1,
+            'account-selector__list__first-item--closed': !isSelectorOpen
+          }"
+          [attr.data-cy]="'billing-account-selector'">
+          <div class="account-selector__list__icon">
+            <i class="icon-circle icon-billing-account"></i>
+          </div>
+          <div class="account-selector__list__account-info">
+            <ng-container>
+              <div class="account-selector__list__account-info__account-id">
+                {{ selectedAccount.accountNumber }}
+              </div>
+            </ng-container>
+          </div>
+          @if (billingAccounts.length > 1) {
+            <a class="account-selector__action">
+              <div
+                class="icon icon-sm position--absolute text-weight--g"
+                [ngClass]="isSelectorOpen ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+            </a>
+          }
+        </div>
+        <ul
+          class="account-selector__list account-selector__list__options"
+          [ngClass]="{
+            'account-selector__list--opened-with-icon account-selector__list--opened account-selector__list__options--opened':
+              isSelectorOpen
+          }"
+          [attr.data-cy]="'account-selector-list'">
+          @for (account of billingAccounts; track account.accountNumber) {
+            <li
+              class="account-selector__list__options__item"
+              [ngClass]="{ 'account-selector__list__options__item--active': isActive(account) }">
+              <a class="account-selector__list__options__item__link" (click)="setSelectedAccount(account)">
+                <div class="account-selector__list__icon">
+                  <i class="icon-circle icon-billing-account"></i>
+                </div>
+                <div class="account-selector__list__account-info">
+                  <div class="account-selector__list__account-info__account-id">
+                    {{ account.accountNumber }}
+                  </div>
+                </div>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+}

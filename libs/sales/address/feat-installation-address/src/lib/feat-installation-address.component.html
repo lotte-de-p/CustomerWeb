@@ -1,0 +1,31 @@
+<div class="installation-location background-white px--xxl--md pt--xl--md pb--xxxl--md col-12 mb--xxxg mt--m">
+  <ng-container *ngIf="viewModel?.addresses | async as addresses">
+    <tg-sales-address-list [addresses]="addresses" (addressSelected)="onAddressSelected()"></tg-sales-address-list>
+  </ng-container>
+  <div class="installation-location__add-address mt--l fl-left col-12" data-cy="feat-installation-address-action">
+    <ng-container
+      *ngTemplateOutlet="
+        addOrEditAddressTemplate;
+        context: { editableAddress: (viewModel?.editableAddress | async) }
+      "></ng-container>
+  </div>
+</div>
+<ng-template #addOrEditAddressTemplate let-editableAddress="editableAddress">
+  <a href="javascript:void(0)" class="link secondary hide-from-md" (click)="openAddressForm(true)">
+    <ng-container
+      *ngTemplateOutlet="addOrEditLabelTemplate; context: { editableAddress: editableAddress }"></ng-container>
+  </a>
+  <a href="javascript:void(0)" class="link secondary hide-until-md" (click)="openAddressForm(true)">
+    <ng-container
+      *ngTemplateOutlet="addOrEditLabelTemplate; context: { editableAddress: editableAddress }"></ng-container>
+  </a>
+</ng-template>
+<ng-template #addOrEditLabelTemplate let-editableAddress="editableAddress">
+  <i class="icon" [ngClass]="editableAddress ? 'icon-pencil' : 'icon-plus'"></i>
+  <span *ngIf="!editableAddress">{{
+    'ng.sales-checkout.btn.select-installation-location.add-new-address' | translate
+  }}</span>
+  <span *ngIf="editableAddress">{{
+    'ng.sales-checkout.btn.select-installation-location.edit-new-address' | translate
+  }}</span>
+</ng-template>

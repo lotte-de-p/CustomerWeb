@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="60px" viewBox="0 0 64 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="🟢-All-Journeys" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Return-Rented-Devices---V1.1-(M)" transform="translate(-36.000000, -640.000000)" stroke="#979797">
+            <g id="Group" transform="translate(36.000000, 640.000000)">
+                <circle id="Oval" cx="6" cy="41" r="1.5"></circle>
+                <rect id="Rectangle" stroke-width="2" x="1" y="1" width="62" height="58" rx="4"></rect>
+                <path d="M1.34358906,11.3678763 C5.4597647,10.8381401 7.51785252,7.53005739 7.51785252,1.44362832" id="Path" stroke-width="2"></path>
+                <path d="M14.4566096,11.359919 C20.3400043,12.0256771 23.2817017,8.72024686 23.2817017,1.44362832" id="Path-13-Copy" stroke-width="2"></path>
+                <path d="M30.2204588,11.359919 C36.1038535,12.0256771 39.0455508,8.72024686 39.0455508,1.44362832" id="Path-13-Copy-3" stroke-width="2"></path>
+                <path d="M46.2204588,11.359919 C52.1038535,12.0256771 55.0455508,8.72024686 55.0455508,1.44362832" id="Path-13-Copy-5" stroke-width="2"></path>
+                <path d="M8.15106996,11.359919 C14.0344647,12.0256771 16.976162,8.72024686 16.976162,1.44362832" id="Path-13" stroke-width="2" transform="translate(12.563616, 6.443628) scale(-1, 1) translate(-12.563616, -6.443628) "></path>
+                <path d="M23.9149191,11.359919 C29.7983138,12.0256771 32.7400112,8.72024686 32.7400112,1.44362832" id="Path-13-Copy-2" stroke-width="2" transform="translate(28.327465, 6.443628) scale(-1, 1) translate(-28.327465, -6.443628) "></path>
+                <path d="M39.6787683,11.359919 C45.562163,12.0256771 48.5038603,8.72024686 48.5038603,1.44362832" id="Path-13-Copy-4" stroke-width="2" transform="translate(44.091314, 6.443628) scale(-1, 1) translate(-44.091314, -6.443628) "></path>
+                <path d="M55.6787683,11.4400959 C60.4332795,11.3171518 62.8105352,7.98499595 62.8105352,1.44362832" id="Path" stroke-width="2" transform="translate(59.244652, 6.441862) scale(-1, 1) translate(-59.244652, -6.441862) "></path>
+                <line x1="1.34358906" y1="19.8687197" x2="62.8105352" y2="19.8687197" id="Path-14" stroke-width="2"></line>
+                <line x1="25.9149191" y1="59.0816954" x2="25.9149191" y2="19.8687197" id="Path-15" stroke-width="2"></line>
+                <line x1="63.8105352" y1="40.7692555" x2="26.9149192" y2="40.7692555" id="Path-16" stroke-width="2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

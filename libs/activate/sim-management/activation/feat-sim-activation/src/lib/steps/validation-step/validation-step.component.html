@@ -1,0 +1,117 @@
+<tg-activate-sim-management-activation-ui-step-container
+  data-testid="sim-validation"
+  [title]="'ng.e-sim-activation.lbl.title.home-flow-sim-information.Homeflow'"
+  [description]="'ng.e-sim-activation.lbl.subtitle.sim-information.eSales'"
+  [progress]="activationParams.type === ActivationType.E_SIM ? '33' : '50'"
+  [showBack]="(isAuthenticated$ | async) ?? true"
+  (backClick)="onBackClick()"
+  (submitClick)="onSubmitClick()">
+  <ng-container left-content>
+    <div class="col-6 hide-until-sm text-align--center">
+      <img
+        [tgActivateSimManagementImageSrcInterceptor]="imagePath"
+        src="/assets/mobile-secure.svg"
+        [moduleId]="SimManagementComponentId.SIM_MANAGEMENT_SIM_ACTIVATION" />
+    </div>
+  </ng-container>
+  <ng-container content>
+    <div class="background-white p--xxl">
+      <h4 class="heading--nomargin mb--m">{{ 'ng.e-sim-activation.lbl.sim-details' | translate }}</h4>
+
+      @if (actionResultMessage$ | async; as message) {
+        <tg-activate-sim-management-ui-notification [message]="message"></tg-activate-sim-management-ui-notification>
+      }
+
+      <form [formGroup]="validationForm">
+        <div class="form-group">
+          @if (activationParams.type !== ActivationType.E_SIM) {
+            @if ((isAuthenticated$ | async) === false) {
+              <div class="mb--xl">
+                <label class="cursor--default" for="order-number">{{
+                  'ng.e-sim-activation.lbl.order-number' | translate
+                }}</label>
+                <div class="form__input-container">
+                  <input
+                    type="text"
+                    class="form__input input-v2"
+                    formControlName="orderNumber"
+                    data-testid="sim-validation-input-order-number" />
+
+                  @if (
+                    (validationForm.get('orderNumber')?.touched || isSubmitted) &&
+                    validationForm.get('orderNumber')?.errors
+                  ) {
+                    <div class="formErrorInput" data-testid="sim-validation-input-order-number-error">
+                      {{ 'ng.e-sim-activation.sim-information-order-number-guidance-error-required' | translate }}
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+          }
+          <div class="mb--xl">
+            <label class="cursor--default" for="msisdn">{{
+              'ng.e-sim-activation.lbl.mobile-number' | translate
+            }}</label>
+            <div class="form__input-container">
+              <input
+                type="text"
+                class="form__input input-v2"
+                formControlName="msisdn"
+                data-testid="sim-validation-input-msisdn" />
+
+              @if ((validationForm.get('msisdn')?.touched || isSubmitted) && validationForm.get('msisdn')?.errors) {
+                <div class="formErrorInput" data-testid="sim-validation-input-msisdn-error">
+                  {{
+                    'ng.e-sim-activation.sim-information-mobile-number-guidance-error-base-phone-number-constraint'
+                      | translate
+                  }}
+                </div>
+              }
+            </div>
+          </div>
+          @if (activationParams.type !== ActivationType.E_SIM) {
+            <div class="js-sim-activation-user-block mb--xl">
+              <label class="cursor--default" for="sim-card-number">{{
+                'ng.e-sim-activation.lbl.sim-card-number' | translate
+              }}</label>
+              <div class="display--flex position--relative sim-activation-user__input__sim-card-number">
+                <label class="cursor--default pt--m pr--m" for="sim-card-number">{{ simNumberPrefix }}</label>
+                <div class="form__input-container position--relative flex-grow">
+                  <input
+                    type="text"
+                    class="form__input input-v2"
+                    formControlName="iccid"
+                    data-testid="sim-validation-input-iccid" />
+
+                  @if ((validationForm.get('iccid')?.touched || isSubmitted) && validationForm.get('iccid')?.errors) {
+                    <div class="formErrorInput" data-testid="sim-validation-input-iccid-error">
+                      {{
+                        'ng.e-sim-activation.sim-information-sim-card-guidance-error-sim-card-constraint' | translate
+                      }}
+                    </div>
+                  }
+                  <span class="form__input--icon" (click)="onToggleShowSimClick()"
+                    ><i
+                      [class.visibility--hide]="toggleShowSim"
+                      class="icon icon-information-shape icon-sm cursor--pointer position--absolute sim-activation-user__input__information-icon js-sim-activation-user-icon visibility--show"></i
+                  ></span>
+                </div>
+                @if (toggleShowSim) {
+                  <div class="js-sim-activation-user-image-container mb--xxxg" (click)="onToggleShowSimClick()">
+                    <div class="cursor--pointer sim-activation-user__sim-card position--absolute"></div>
+                  </div>
+                }
+              </div>
+            </div>
+            @if (!toggleShowSim) {
+              <div class="color-shade_48">
+                {{ 'ng.e-sim-activation.text.prefill-sim-number-help' | translate }}
+              </div>
+            }
+          }
+        </div>
+      </form>
+    </div>
+  </ng-container>
+</tg-activate-sim-management-activation-ui-step-container>

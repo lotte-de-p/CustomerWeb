@@ -1,0 +1,14 @@
+{
+  "promotions": [
+    {
+      "description": "PPWIGO15GB",
+      "startdate": "2019-01-01T08:00:00.0+01:00",
+      "enddate": "2039-12-31T08:00:00.0+01:00"
+    },
+    {
+      "description": "insiders2018",
+      "startdate": "2019-10-01T08:00:00.0+01:00",
+      "enddate": "2039-11-31T08:00:00.0+01:00"
+    }
+  ]
+}

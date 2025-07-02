@@ -1,0 +1,18 @@
+<form [formGroup]="duidFormGroup">
+  <div class="display--flex">
+    <input
+      type="text"
+      formControlName="duidField"
+      class="form__input mr--xxs text-align--left"
+      required="true"
+      placeholder="{{ 'ng.duid.lbl.placeholder' | translate }}"
+      maxlength="41"
+      (keyup)="keyUpEvent($event)"
+      (keypress)="keyPressEvent($event)" />
+  </div>
+  <div class="formErrorInput" *ngIf="duidFormGroup.invalid">
+    <div class="color-red text--s text-align--left cursor--default">
+      {{ 'ng.duid.lbl.duid-length-error' | translate }}
+    </div>
+  </div>
+</form>

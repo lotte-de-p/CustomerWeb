@@ -1,0 +1,20 @@
+{
+  "name": "sales-order-configurator-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/order-configurator/data-access/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:order-configurator-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/order-configurator/data-access/**/*.ts",
+          "libs/sales/order-configurator/data-access/**/*.html"
+        ]
+      }
+    }
+  }
+}

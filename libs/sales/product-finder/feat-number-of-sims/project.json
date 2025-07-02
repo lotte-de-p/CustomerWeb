@@ -1,0 +1,20 @@
+{
+  "name": "sales-product-finder-feat-number-of-sims",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/product-finder/feat-number-of-sims/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/product-finder/feat-number-of-sims/**/*.ts",
+          "libs/sales/product-finder/feat-number-of-sims/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-mfe", "scope:sales/product-finder"]
+}

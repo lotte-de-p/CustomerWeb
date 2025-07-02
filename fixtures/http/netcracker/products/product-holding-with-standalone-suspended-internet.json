@@ -1,0 +1,16 @@
+{
+  "id": "9162325822213090266",
+  "identifier": "INT000000697",
+  "accountNumber": "105217685",
+  "label": "All-Internet1",
+  "locationId": "9162325781813080985",
+  "specurl": "https://api.uat.telenet.be/omapi/public/product/INTF0201",
+  "status": "SUSPENDED",
+  "handsets": [],
+  "options": [],
+  "addressId": "9150757945313162202",
+  "productType": "internet",
+  "children": [],
+  "collectionStatus": "Green",
+  "showPlanUpgradeBanner": true
+}

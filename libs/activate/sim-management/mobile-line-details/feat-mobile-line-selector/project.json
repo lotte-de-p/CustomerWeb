@@ -1,0 +1,20 @@
+{
+  "name": "sim-management-feat-mobile-line-selector",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/activate/sim-management/mobile-line-details/feat-mobile-line-selector/src",
+  "prefix": "feat",
+  "tags": ["type:feature", "scope:sim-management-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/activate/sim-management/mobile-line-details/feat-mobile-line-selector/**/*.ts",
+          "libs/activate/sim-management/mobile-line-details/feat-mobile-line-selector/**/*.html"
+        ]
+      }
+    }
+  }
+}

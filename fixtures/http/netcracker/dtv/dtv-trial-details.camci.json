@@ -1,0 +1,31 @@
+{
+  "trials": [
+    {
+      "description": "Play Channel",
+      "id": "91828773773894",
+      "activationDate": "12/12/2019",
+      "expirationDate": "12/12/2020",
+      "externalProductCode": "DTV0001",
+      "specurl": "https://api.int.base.be/omapi/public/product/DTV0001",
+      "name": "PLAY",
+      "status": "Active",
+      "canBeSubscribed": "true",
+      "relatedContentPack": "PlayMoreEPC"
+    },
+    {
+      "description": "Sport channel",
+      "id": "91828773773895",
+      "activationDate": "12/12/2018",
+      "expirationDate": "12/12/2019",
+      "externalProductCode": "DTV0002",
+      "specurl": "https://api.int.base.be/omapi/public/product/DTV0002",
+      "name": "SPORT",
+      "status": "Expired",
+      "canBeSubscribed": "false",
+      "relatedContentPack": "PlayEPC"
+    }
+  ],
+  "chars": {
+    "hasCamCiCard": "false"
+  }
+}

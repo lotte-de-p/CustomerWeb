@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  box-sizing: border-box;
+}
+
+@mixin generate-host-classes-with-prefix-from-map($cssProperty, $classesPostFixes) {
+  @each $cssPropertyValue in $classesPostFixes {
+    :host(.#{$cssProperty}-#{$cssPropertyValue}) {
+      #{$cssProperty}: #{$cssPropertyValue};
+    }
+  }
+  @each $bp, $val in $breakpoints {
+    @each $cssPropertyValue in $classesPostFixes {
+      @include media('from-' #{$bp}) {
+        :host(.#{$cssProperty}-#{$cssPropertyValue}-#{$bp}) {
+          #{$cssProperty}: #{$cssPropertyValue};
+        }
+      }
+    }
+  }
+}
+
+$justify-content-postFixes: (
+  'flex-start',
+  'center',
+  'flex-end',
+  'unset',
+  'space-around',
+  'space-between',
+  'space-evenly',
+  'stretch',
+  'left',
+  'inherit',
+  'normal'
+);
+
+@include generate-host-classes-with-prefix-from-map('justify-content', $justify-content-postFixes);
+
+$align-items-stretch-postFixes: ('flex-start', 'center', 'flex-end', 'baseline', 'stretch', 'inherit');
+
+@include generate-host-classes-with-prefix-from-map('align-items', $align-items-stretch-postFixes);
+
+$flex-direction-postFixes: ('row', 'row-reverse', 'column', 'column-reverse');
+
+@include generate-host-classes-with-prefix-from-map('flex-direction', $flex-direction-postFixes);
+
+$flex-wrap-postFixes: ('wrap', 'nowrap', 'wrap-reverse', 'initial');
+
+@include generate-host-classes-with-prefix-from-map('flex-wrap', $flex-wrap-postFixes);
+
+$columns: 12;
+
+@for $col from 1 through $columns {
+  :host(.col-#{$col}) {
+    flex-basis: calc(100% / $columns) * $col;
+    max-width: calc(100% / $columns) * $col;
+  }
+}
+
+@each $bp, $val in $breakpoints {
+  @for $col from 1 through $columns {
+    @include media('from-' $bp) {
+      :host(.col-#{$col}-#{$bp}) {
+        flex-basis: calc(100% / $columns) * $col;
+        max-width: calc(100% / $columns) * $col;
+      }
+    }
+  }
+}
+
+@each $size in $semantic-sizes-map {
+  :host(.gap-#{$size}) {
+    gap: var-rem(--semantic-spacing-#{$size});
+  }
+}
+@each $bp, $val in $breakpoints {
+  @each $size in $semantic-sizes-map {
+    @include media('from-' $bp) {
+      :host(.gap-#{$size}-#{$bp}) {
+        gap: var-rem(--semantic-spacing-#{$size});
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "types": ["cypress", "node"],
+    "paths": {
+      "@fleet-mfe/*": ["apps/fleet/fleet-mfe/src/*"],
+      "@fleet-mfe-global/*": ["apps/fleet/fleet-mfe/global/*"],
+    },
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "cypress.config.ts"],
+}

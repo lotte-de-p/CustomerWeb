@@ -1,0 +1,130 @@
+{
+  "product": {
+    "externalProductCode": "FVNM0250",
+    "weight": 20,
+    "apps": [],
+    "category": [
+      "B2B Options with ETF",
+      "National & Europe plus voice options",
+      "Data & voice options",
+      "Fleet Options with ETF"
+    ],
+    "subcategory": {
+      "name": "Calling",
+      "weight": 10,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Voice National"
+        },
+        {
+          "locale": "nl",
+          "name": "Telefonie Nationaal"
+        },
+        {
+          "locale": "fr",
+          "name": "Téléphonie Nationale"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "value": "250",
+            "unit": "minuten",
+            "visible": true,
+            "weight": "20",
+            "labelkey": "Voice National 250 min",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "250 minutes calling to all numbers in Belgium (also valid in the EU zone)"
+              },
+              {
+                "locale": "nl",
+                "name": "250 minuten bellen naar alle nummers in België (ook geldig in de EU-zone)"
+              },
+              {
+                "locale": "fr",
+                "name": "250 minutes d'appels vers tous les numéros en Belgique (aussi valable dans la zone UE)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_CALLING"
+      },
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "5,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "FVNM0250",
+    "labelkey": "Voice National 250 min",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Voice National 250 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Telefonie Nationaal 250 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Téléphonie Nationale 250 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-national-250-min.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "250 minutes calling"
+        },
+        {
+          "locale": "nl",
+          "name": "250 minuten bellen"
+        },
+        {
+          "locale": "fr",
+          "name": "250 minutes d'appels"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

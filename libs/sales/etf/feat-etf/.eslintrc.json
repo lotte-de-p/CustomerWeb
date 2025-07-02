@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "../../../../.eslintrc.json"
+  ],
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "tgSales",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "tg-sales",
+            "style": "kebab-case"
+          }
+        ]
+      },
+      "extends": [
+        "plugin:@nrwl/nx/angular",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ]
+    },
+    {
+      "files": [
+        "*.spec*.ts",
+        "*.factory.ts",
+        "*.cy.ts"
+      ],
+      "extends": [
+        "plugin:sonarjs/recommended"
+      ],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/angular-template"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.spec*.ts",
+        "*.factory.ts",
+        "*.cy.ts"
+      ],
+      "extends": [
+        "plugin:sonarjs/recommended"
+      ],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
+    }
+  ]
+}

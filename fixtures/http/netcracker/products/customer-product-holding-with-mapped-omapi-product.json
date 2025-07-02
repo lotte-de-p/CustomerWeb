@@ -1,0 +1,69 @@
+{
+  "productInfo": {
+    "productId": "BPRB2015",
+    "categories": ["prepaid-mobile"]
+  },
+  "status": "ACTIVE",
+  "options": [
+    {
+      "productInfo": {
+        "productId": "MINE0005",
+        "categories": [
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "common-category-for-optional-buckets"
+        ],
+        "weight": 10,
+        "subCategory": {
+          "name": "Calls to numbers in Europe",
+          "weight": 10,
+          "mutualExclusion": false,
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Minutes to call to or in Europe",
+              "logo": ""
+            }
+          ]
+        }
+      },
+      "status": "ACTIVE"
+    },
+    {
+      "productInfo": {
+        "productId": "VOEU0060",
+        "categories": [
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "prepaid-voice-options",
+          "common-category-for-optional-buckets"
+        ],
+        "weight": 10,
+        "subCategory": {
+          "name": "Calls to numbers in Europe",
+          "weight": 10,
+          "mutualExclusion": false,
+          "localizedContent": [
+            {
+              "locale": "en",
+              "name": "Minutes to call to or in Europe",
+              "logo": ""
+            }
+          ]
+        }
+      },
+      "activeTrialPack": {
+        "id": "TVPK0100",
+        "label": "Entertainment Trial",
+        "status": "ACTIVE",
+        "deactivationDate": "2021-01-24T18:02:58"
+      },
+      "status": "DISCONNECTED"
+    }
+  ]
+}

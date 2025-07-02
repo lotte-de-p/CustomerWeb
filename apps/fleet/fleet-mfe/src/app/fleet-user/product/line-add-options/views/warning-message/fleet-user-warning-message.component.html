@@ -1,0 +1,21 @@
+@if (isShowWarning) {
+  <div class="bundle-usage--remove" [attr.data-cy]="'confirmation-screen'">
+    <div class="img-content">
+      <div [inlineSVG]="centralSuccessIllustration"></div>
+    </div>
+    <label class="bundle-usage--remove--question">{{
+      'ng.fleet-user-line-add-options.lbl.add-options-confirm-message' | translate
+    }}</label>
+    <p class="bundle-usage--remove--statement">
+      {{ 'ng.fleet-user-line-add-options.info.options-terminated-message' | translate }}
+    </p>
+    <div class="bundle-usage--remove--button-container">
+      <button class="button button--tertiary" (click)="cancelAddAction()" [attr.data-cy]="'cancel-add-option'">
+        {{ 'ng.fleet-user-line-add-options.btn.no' | translate }}
+      </button>
+      <button class="button button--primary" (click)="submitOptions()" [attr.data-cy]="'confirm-add-option'">
+        {{ 'ng.fleet-user-line-add-options.btn.yes' | translate }}
+      </button>
+    </div>
+  </div>
+}

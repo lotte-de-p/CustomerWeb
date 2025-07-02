@@ -1,0 +1,36 @@
+<div class="hide-from-md">
+  @if (isAddressFormVisible) {
+    <div class="overlay">
+      <div class="overlay__mask"></div>
+      <div class="overlay__section py--g--sm py--l py--xxxg--md">
+        <div class="overlay__section__content--wrapper animation--slide-down-to-screen">
+          <div class="overlay__section__content__close" (click)="onCloseForm()">
+            <div class="icon icon-cross"></div>
+          </div>
+          <div class="overlay__section__content__sub-title text-align--center">
+            {{ 'ng.sales-checkout.lbl.title.installation-location-address-overlay' | translate }}
+          </div>
+          <div class="overlay__section__content__description">
+            <form
+              [formGroup]="addressForm"
+              (ngSubmit)="onSubmitForm()"
+              class="form-group ng-untouched ng-pristine ng-invalid">
+              <h5>
+                {{ 'ng.sales-checkout.lbl.installation-address-form.title' | translate }}
+              </h5>
+              <tg-sales-address-form-field formControlName="address"></tg-sales-address-form-field>
+
+              <div class="installation-address__footer display-flex--sm fl-right--md px--xxs">
+                <div>
+                  <button class="button button--secondary mt--xs mt--n--sm" type="submit">
+                    {{ 'ng.sales-checkout.button.save' | translate }}
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,45 @@
+@if (priceAndDiscount.isFree) {
+  <div class="text-align--center hide-until-md">
+    <span class="heading--2">{{ 'ng.sales-checkout.prices.lbl.free' | translate }}</span>
+  </div>
+  <span class="heading--3 hide-from-md">{{ 'ng.sales-checkout.prices.lbl.free' | translate }}</span>
+} @else {
+  @if (priceAndDiscount.discount) {
+    <div
+      class="promo-highlight display--flex flex-direction--column align-items--center--md align-items--baseline flex-wrap--wrap">
+      <div class="display--flex align-items--start align-items--center--md flex-direction--column">
+        <div
+          class="promo-highlight__second-row text-decoration--line-through align-items--baseline font--caption space-nowrap mx--xxxs"
+          [innerHTML]="
+            'ng.sales-checkout.shopping-cart.lbl.price-one-time'
+              | translate: { value: priceAndDiscount.amount | price: (languageIsEnglish ? 'EN' : '') }
+          "></div>
+        <div class="display--flex flex-direction--row flex-direction--column--md align-items--center">
+          <div
+            class="promo-highlight__third-row display--flex justify-content--center space-nowrap"
+            [innerHTML]="
+              'ng.sales-checkout.shopping-cart.lbl.price-one-time-discounted'
+                | translate: { euro: discountedEuros, cents: discountedCents }
+            "></div>
+          @for (discount of priceAndDiscount.discount.names; track discount) {
+            <div class="promo-highlight__fourth-row align-items--baseline font--caption space-nowrap">
+              {{ discount }}
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div
+      class="promo-highlight display--flex flex-direction--column align-items--center--md align-items--baseline flex-wrap--wrap">
+      <div class="display--flex align-items--start align-items--center--md flex-direction--column">
+        <div
+          class="promo-highlight__third-row display--flex justify-content--center space-nowrap"
+          [innerHTML]="
+            'ng.sales-checkout.shopping-cart.lbl.price-one-time-total'
+              | translate: { euro: discountedEuros, cents: discountedCents }
+          "></div>
+      </div>
+    </div>
+  }
+}

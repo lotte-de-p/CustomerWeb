@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+  "../limits-mfe/**",
+  "../limits-mfe-e2e/**",
+  "../../../libs/billing/limits/**"
+  ],
+  "report-dir": "../../../coverage/apps/billing/barrings-mfe-e2e",
+  "cwd": "../../../"
+}

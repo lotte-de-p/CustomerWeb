@@ -1,0 +1,9 @@
+<div class="group-bundles">
+  <div class="group-bundles-item" *ngFor="let bundle of weightOrder()">
+    <p class="group-bundles-item-name">{{ bundle.label }}</p>
+    <p class="group-bundles-price">
+      <label>{{ 'ng.msa.lbl.billing-cost' | translate }}</label>
+      <span class="font-weight--black">{{ bundle.price.amount }}</span>
+    </p>
+  </div>
+</div>

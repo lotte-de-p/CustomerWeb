@@ -1,0 +1,65 @@
+<ng-container *ngIf="viewState === viewStateEnum.OVERLAY_CLOSED">
+  <div [attr.data-cy]="'feat-summary'" class="sales-page__container" id="body-container">
+    <div class="sales-page__container__content">
+      <div class="sales-page__container__content__section width--full">
+        <div>
+          <div class="sales-checkout container--medium">
+            <div class="sales-page__container__title sales-page__container__title--secondary">
+              <div class="display--flex flex-direction--column">
+                <div class="sales-page__container__title__header text-align--center--md text-align--left">
+                  {{ 'ng.sales-checkout.lbl.title.order-confirmation' | translate }}
+                </div>
+                <p class="text-align--center--md text-align--left">
+                  {{ 'ng.sales-checkout.lbl.sub-title.order-confirmation' | translate }}
+                </p>
+              </div>
+            </div>
+            <div
+              class="order-confirmation-section row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse sales-review-container">
+              <div class="col-sm-12 col-md-5">
+                <div class="order-confirmation-section mb--xxg pb--xxl--md ng-star-inserted">
+                  <tg-sales-summary-error-notification
+                    [notifications]="viewModel?.generalNotifications$ | async"></tg-sales-summary-error-notification>
+                  <tg-sales-summary-personal-info
+                    [personalInfo]="viewModel?.personalInfo$ | async"></tg-sales-summary-personal-info>
+                  <tg-sales-summary-delivery-info
+                    [notifications]="viewModel?.deliveryNotifications$ | async"
+                    [deliveryInfo]="viewModel?.deliveryInfo$ | async"></tg-sales-summary-delivery-info>
+                  <tg-sales-summary-invoice-info
+                    [invoiceInfo]="viewModel?.invoiceInfo$ | async"></tg-sales-summary-invoice-info>
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-12 mb--xxg--md pb--xxg--md ng-star-inserted">
+                <div
+                  class="position--sticky--md sticky-header-shopping-cart position--top--md"
+                  id="sticky-header-shopping-cart"
+                  style="top: -257px">
+                  <tg-sales-summary-order-data
+                    [orderItems]="viewModel?.orderItems$ | async"
+                    [prices]="viewModel?.prices$ | async"
+                    (orderButtonClicked)="handleOrderButtonClicked()">
+                  </tg-sales-summary-order-data>
+                  <tg-sales-summary-footer
+                    (contractSummaryLinkClickedEvent)="showContractSummary()"
+                    (depreciationItemClickedEvent)="showDepreciationOverlay($event)"
+                    (termsAndConditionsLinkClickedEvent)="showTermsAndConditions()"
+                    [contractSummaryRequired]="viewModel?.contractSummaryRequired$ | async"
+                    [depreciationItems]="viewModel?.depreciationItems$ | async"></tg-sales-summary-footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="viewState === viewStateEnum.OVERLAY_OPEN">
+  <tg-sales-summary-depreciation-table
+    (closeOverlayClickedEvent)="closeDepreciationTableOverlay()"
+    [isSoho]="!(viewModel?.prices$ | async)?.vatInclusive"
+    [depreciationItem]="selectedDepreciationItem"></tg-sales-summary-depreciation-table>
+</ng-container>
+<tg-sales-ingenico-form
+  [actionUrl]="ingenicoFormUrl$ | async"
+  (paymentInitiated)="handlePaymentInitiated()"></tg-sales-ingenico-form>

@@ -1,0 +1,92 @@
+<div class="tip-invitation--help-overlay tip-overlay-width">
+  <div class="overlay">
+    <div class="overlay__mask overlay__mask--backdrop backdrop-filter--3 animation--fade-in"></div>
+    <div class="overlay__section overlay__section--align-top py--g--sm py--l py--xxxg--md">
+      <div class="overlay__section__content--wrapper animation--slide-down-to-screen">
+        <div class="overlay__section__content__close" (click)="close()">
+          <div class="icon icon-cross"></div>
+        </div>
+        <div class="overlay__section__content__description">
+          <div class="col-12 p--n">
+            <div class="text-flow text-flow--h3 my--l text-align--left--md text-align--center">
+              {{ 'customer-registration.form.identity.where-to-find' | translate }}
+            </div>
+          </div>
+          <div class="row flex-direction--column align-items--center">
+            <div class="col-12 shadow--m--sm shadow--n px--n" [ngClass]="{ 'mb--xl': !isBelgianIdentity }">
+              <div class="row justify-content--around">
+                <div class="col-12 col-sm-5 pb--m pb--n--sm px--n">
+                  <div class="Container Container--default">
+                    <div class="text-align--center text-align--left--md">
+                      <span class="text-flow text-flow--h6">{{
+                        'customer-registration.form-belgian-eid-label' | translate
+                      }}</span>
+                      <span class="font--body-small">{{
+                        'customer-registration.form.identity.front' | translate
+                      }}</span>
+                    </div>
+                    <div class="tip-invitation--help-overlay__image text-align--center text-align--left--md py--m">
+                      <ng-container
+                        [ngTemplateOutlet]="image"
+                        [ngTemplateOutletContext]="{
+                          brand: brand,
+                          imageName: isBelgianIdentity ? '/IDCN-1.svg' : '/IDCN-2.svg'
+                        }">
+                      </ng-container>
+                    </div>
+                    <div class="tip-invitation--help-overlay__body text-align--left pb--xl">
+                      <div class="text-align--left display--none display--block--md">
+                        {{ 'customer-registration.form.identity.front-desc' | translate }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-5 pb--m pb--n--sm px--n">
+                  <div class="Container Container--default">
+                    <div class="text-align--center text-align--left--md">
+                      <span class="text-flow text-flow--h6">{{
+                        'customer-registration.form-nrn-label' | translate
+                      }}</span>
+                      <span class="font--body-small">{{
+                        (isBelgianIdentity
+                          ? 'customer-registration.form.identity.back'
+                          : 'customer-registration.form.identity.front'
+                        ) | translate
+                      }}</span>
+                    </div>
+                    <div class="tip-invitation--help-overlay__image text-align--center text-align--left--md py--m">
+                      <ng-container
+                        [ngTemplateOutlet]="image"
+                        [ngTemplateOutletContext]="{
+                          brand: brand,
+                          imageName: isBelgianIdentity ? '/NRN-1.svg' : '/NRN-2.svg'
+                        }">
+                      </ng-container>
+                    </div>
+                    <div class="tip-invitation--help-overlay__body text-align--left pb--xl">
+                      <div class="text-align--left display--none display--block--md">
+                        {{
+                          (isBelgianIdentity
+                            ? 'customer-registration.form.identity.back-desc'
+                            : 'customer-registration.form.identity.front-desc'
+                          ) | translate
+                        }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #image let-brand="brand" let-imageName="imageName">
+  <img
+    class="width--full—md"
+    alt="{{ brand }}"
+    [src]="'/etc/designs/aff-telenetgroup/ngjs/components/customer-registration/identity-info/' + brand + imageName" />
+</ng-template>

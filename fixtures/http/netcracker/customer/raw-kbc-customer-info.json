@@ -1,0 +1,17 @@
+{
+  "userId": "userId",
+  "firstName": "firstName",
+  "lastName": "name",
+  "dateOfBirth": "birthDate",
+  "email": "email",
+  "mobilePhone": "mobilePhone",
+  "msisdn": "msisdn",
+  "address": {
+    "countryCode": "countryCode",
+    "city": "city",
+    "postalCode": "postalCode",
+    "street": "street",
+    "houseNumber": "houseNumber",
+    "bus": "bus"
+  }
+}

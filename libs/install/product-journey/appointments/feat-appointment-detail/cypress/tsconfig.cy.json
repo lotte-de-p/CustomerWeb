@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.spec.json",
+  "compilerOptions": {
+    "outDir": "../../../../../../dist/out-tsc",
+    "module": "ES2022",
+    "strict": true,
+    "types": ["node", "global"],
+    "preserveSymlinks": true
+  },
+  "exclude": [],
+  "include": [
+    "support/**/*.ts",
+    "../cypress.config.ts",
+    "../**/*.cy.ts",
+    "../**/*.cy.tsx",
+    "../**/*.cy.js",
+    "../**/*.cy.jsx",
+    "../**/*.d.ts"
+  ]
+}

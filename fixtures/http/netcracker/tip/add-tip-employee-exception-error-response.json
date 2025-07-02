@@ -1,0 +1,16 @@
+[
+  {
+    "status": "FAILURE",
+    "employeeReferenceNumber": "1234",
+    "emailAddress": "test7@.test.com",
+    "errorCode": "TIPEXCEPT_01",
+    "errorDescription": "errordescription"
+  },
+  {
+    "status": "FAILURE",
+    "employeeReferenceNumber": "1234",
+    "emailAddress": "test7@.test.com",
+    "errorCode": "TIPEXCEPT_01",
+    "errorDescription": "errordescription"
+  }
+]

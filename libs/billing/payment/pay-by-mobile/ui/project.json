@@ -1,0 +1,33 @@
+{
+  "name": "billing-pay-by-mobile-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/billing/payment/pay-by-mobile/ui/src",
+  "prefix": "app",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/payment/pay-by-mobile/ui/**/*.ts",
+          "libs/billing/payment/pay-by-mobile/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:customer-web-billing-payment", "scope:customer-web-billing-payment-mfe"]
+}

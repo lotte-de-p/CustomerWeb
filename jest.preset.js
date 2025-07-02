@@ -1,0 +1,56 @@
+const nxPreset = require('@nx/jest/preset');
+const path = require('path');
+module.exports = {
+  ...nxPreset,
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }], '@babel/preset-typescript'],
+  collectCoverageFrom: ['<rootDir>/**/*.{js,jsx,ts,tsx}', '!**/src/mock/*', '!**/src/*.cy.ts'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    'index.ts',
+    'dist/',
+    '.stories.ts',
+    'src/mock',
+    '.routes.ts',
+    'providers.ts',
+    '.interface.ts',
+    'src/polyfills.ts',
+    'src/bootstrap.ts',
+    'src/main.ts',
+    'src/environments',
+    'jest.config.ts',
+    'public-api.ts',
+    '.module.ts',
+    'test-setup.ts',
+    '.d.ts',
+    '.cy.ts',
+    '.stories.ts',
+    '.testfactory.ts',
+  ],
+  coverageReporters: ['lcov', 'json', 'text-summary', 'cobertura'],
+  moduleFileExtensions: ['ts', 'js', 'html'],
+  resolver: '@nx/jest/plugins/resolver',
+  passWithNoTests: true,
+  setupFilesAfterEnv: [path.join(__dirname, '.', 'tools/jest/test-setup.ts')],
+  snapshotSerializers: [
+    'jest-preset-angular/build/serializers/no-ng-attributes',
+    'jest-preset-angular/build/serializers/ng-snapshot',
+    'jest-preset-angular/build/serializers/html-comment',
+  ],
+  testEnvironment: 'jsdom',
+  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+  testTimeout: 15000,
+  transform: {
+    '^.+\\.(ts|mjs|js|html)$': [
+      'jest-preset-angular',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+        stringifyContentPathRegex: '\\.(html|svg)$',
+      },
+      'ts-jest',
+    ],
+  },
+  transformIgnorePatterns: ['node_modules/(?!.*.mjs$|@stomp/.*)'],
+  moduleNameMapper: {
+    'lodash-es': 'lodash',
+  },
+};

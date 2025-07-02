@@ -1,0 +1,189 @@
+:host {
+  display: inline-block;
+
+  .price__price-currency {
+    font-style: normal;
+  }
+
+  .pricing__header {
+    @include media('from-md') {
+      font-size: var(--pricing--header--desktop--fs, $pricing--header--desktop--fs);
+      line-height: var(--pricing--header--desktop--lh, $pricing--header--desktop--lh);
+    }
+    font-size: var(--pricing--mobile--desktop--fs, $pricing--header--mobile--fs);
+    line-height: var(--pricing--mobile--desktop--lh, $pricing--header--mobile--lh);
+    margin-bottom: var-rem(--semantic-spacing-3xs);
+    display: inline-flex;
+    width: 100%;
+
+    &.price-align__center {
+      justify-content: center;
+    }
+
+    &.price-align__right {
+      justify-content: flex-end;
+    }
+
+    .pricing__starting-from {
+      color: var(--pricing--starting-from, var(--semantic-color-text-subtle));
+      margin-right: var-rem(--semantic-spacing-3xs);
+      display: inline-block;
+    }
+
+    .pricing__promo-price {
+      color: var(--pricing--promo-price, var(--semantic-color-text-subtle));
+      display: inline-flex;
+      text-decoration: line-through;
+    }
+  }
+
+  .pricing__current-price-wrapper {
+    display: flex;
+    align-items: flex-end;
+
+    &.price-align__right,
+    &.price-align__center {
+      flex-direction: column;
+
+      .pricing__price-frequency {
+        margin-right: 0;
+      }
+    }
+    &.price-align__center {
+      align-items: center;
+    }
+
+    &.price-align__right {
+      align-items: flex-end;
+    }
+    .pricing__price-value-wrapper {
+      color: var(--price-price-value-color, var(--semantic-color-text-default));
+      font-family: var(--pricing--price-value-wrapper--ff, $pricing--price-value-wrapper--ff);
+      display: inline-flex;
+      align-items: flex-start;
+
+      .price__price-currency {
+        @include media('from-md') {
+          font-size: var(--price--price-currency--desktop--fs, $price--price-currency--desktop--fs);
+          line-height: var(--price--price-currency--desktop--lh, $price--price-currency--desktop--lh);
+        }
+
+        font-size: var(--price--price-currency--mobile--fs, $price--price-currency--mobile--fs);
+        line-height: var(--price--price-currency--mobile--lh, $price--price-currency--mobile--lh);
+        font-style: normal;
+      }
+
+      .price__price-decimal {
+        @include media('from-md') {
+          font-size: var(--price--price-decimal--desktop--fs, $price--price-decimal--desktop--fs);
+          line-height: var(--price--price-decimal--desktop--lh, $price--price-decimal--desktop--lh);
+        }
+
+        font-size: var(--price--price-decimal--mobile--fs, $price--price-decimal--mobile--fs);
+        line-height: var(--price--price-decimal--mobile--lh, $price--price-decimal--mobile--lh);
+        font-style: normal;
+      }
+
+      .price__price-value {
+        @include media('from-md') {
+          font-size: var(--price--price-value--desktop--fs, $price--price-value--desktop--fs);
+          line-height: var(--price--price-value--desktop--lh, $price--price-value--desktop--lh);
+        }
+        font-size: var(--price--price-value--mobile--fs, $price--price-value--mobile--fs);
+        line-height: var(--price--price-value--mobile--lh, $price--price-value--mobile--lh);
+        display: inline-flex;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .pricing__price-frequency {
+    @include media('from-md') {
+      font-size: var(--pricing--price-frequency--desktop--fs, $pricing--price-frequency--desktop--fs);
+      line-height: var(--pricing--price-frequency--desktop--lh, $pricing--price-frequency--desktop--lh);
+    }
+
+    font-size: var(--pricing--price-frequency--mobile--fs, $pricing--price-frequency--mobile--fs);
+    line-height: var(--pricing--price-frequency--mobile--lh, $pricing--price-frequency--mobile--lh);
+  }
+
+  .pricing__price-promo-duration {
+    @include media('from-md') {
+      font-size: var(--pricing--price-promo-duration--desktop--fs, $pricing--price-promo-duration--desktop--fs);
+      line-height: var(--pricing--price-promo-duration--desktop--lh, $pricing--price-promo-duration--desktop--lh);
+    }
+
+    font-size: var(--pricing--price-promo-duration--mobile--fs, $pricing--price-promo-duration--mobile--fs);
+    line-height: var(--pricing--price-promo-duration--mobile--lh, $pricing--price-promo-duration--mobile--lh);
+  }
+
+  .pricing__price-frequency {
+    color: var(--price-frequency-color, var(--semantic-color-text-default));
+    margin-left: var-rem(--semantic-spacing-3xs);
+  }
+
+  .pricing__price-promo-duration {
+    color: var(--price-end-color, var(--semantic-color-text-subtle));
+  }
+
+  .currency-after {
+    justify-content: start;
+    flex-direction: row-reverse;
+    gap: var-rem(--semantic-spacing-3xs);
+  }
+  .pricing__footer.price-align__center,
+  .pricing__footer.price-align__right {
+    display: flex;
+  }
+
+  .pricing__footer.price-align__center {
+    justify-content: center;
+  }
+
+  .pricing__footer.price-align__right {
+    justify-content: flex-end;
+  }
+}
+
+:host([appearance='patch']) {
+  --pricing--starting-from: #{$price-patch-top-color};
+  --pricing--promo-price: #{$price-patch-top-color};
+  --price-frequency-color: #{$price-frequency-color}; //var(--semantic-color-text-on-brand)
+  --price-price-value-color: #{$price-price-value-color}; // var(--semantic-color-text-on-brand);
+  --price-end-color: #{$price-patch-end-color}; // var(--semantic-color-text-on-brand);
+
+  --pricing--price-promo-price--desktop--fs: #{$pricing-patch--price-promo-price--desktop--fs};
+  --pricing--price-promo-price--desktop--lh: #{$pricing-patch--price-promo-price--desktop--lh};
+  --pricing--price-promo-duration--desktop--fs: #{$pricing-patch--price-promo-duration--desktop--fs};
+  --pricing--price-promo-duration--desktop--lh: #{$pricing-patch--price-promo-duration--desktop--lh};
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pricing-host-background, $pricing-host-background);
+  padding: var-rem(--semantic-spacing-s);
+  aspect-ratio: 1 / 1;
+  min-height: rem(12.8);
+  min-width: rem(12.8);
+
+  .pricing__header.price-align__center {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .pricing__starting-from {
+    font-family: $pricing-patch--starting-from--ff;
+  }
+
+  .pricing__price-frequency {
+    font-family: $pricing-patch--frequency--ff;
+  }
+}
+
+:host([appearance='subtle text']) {
+  --pricing--price-value-wrapper--ff: #{$pricing-subtle--price-value-wrapper--ff};
+  --price--price-value--desktop--fs: #{rem(1.8)};
+  --price--price-value--desktop--lh: #{rem(1.8)};
+}

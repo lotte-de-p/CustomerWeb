@@ -1,0 +1,87 @@
+<div class="price-changes">
+  <div class="price-changes-desktop display--none display--block--md">
+    <div class="row border--bottom--light-grey mb-0 ml--n mr--n mt--xl">
+      <div class="col-4 pb-15 pl-0">
+        <h6
+          class="mt-0 font--caption"
+          innerHTML="{{ 'ng.product-price-changes.label.subscription-name' | translate }}"></h6>
+      </div>
+      <div class="col-4 pb-15 pl-0 text-align--right">
+        <h6 class="mt-0 font--caption" data-cy="price-changes-current-price-title">
+          {{ 'ng.product-price-changes.label.current-price' | translate }}
+          <small>({{ 'ng.product-price-changes.label.' + getVAT(productPriceChange) | translate }})</small>
+        </h6>
+      </div>
+      <div class="col-4 pb-15 pl-0 text-align--right">
+        <h6 class="mt-0 font--caption" data-cy="price-changes-new-price-title">
+          {{ 'ng.product-price-changes.label.new-price' | translate }}
+          <small>({{ 'ng.product-price-changes.label.' + getVAT(productPriceChange) | translate }})</small>
+        </h6>
+      </div>
+    </div>
+    <ng-container *ngFor="let product of products; let j = index; let last = last">
+      <div class="row ml--n mr--n mb-0" [ngClass]="{ 'border--bottom--light-grey': !last }" data-cy="price-changes">
+        <div class="col-4 pb-15 pt-15 pl-0" data-cy="price-changes-description">
+          {{ 'fr' === lang ? product.description.fr : product.description.nl }}
+        </div>
+        <div class="col-4 pb-15 pt-15 pl-0 text-align--right" data-cy="price-changes-current-price">
+          {{
+            product.oldPrice | currency: 'EUR' : 'symbol' : (product.oldPrice % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+          }}
+        </div>
+        <div class="col-4 pb-15 pt-15 pl-0 text-align--right" data-cy="price-changes-new-price">
+          {{
+            product.newPrice | currency: 'EUR' : 'symbol' : (product.newPrice % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+          }}
+        </div>
+      </div>
+    </ng-container>
+    <p class="mb--n">
+      <small>{{
+        'ng.product-price-changes.text.subscription-change-details-' + getVAT(productPriceChange) | translate
+      }}</small>
+    </p>
+  </div>
+  <div class="price-changes-mobile display--block display--none--md">
+    <div
+      *ngFor="let product of products; let j = index; let last = last"
+      class="py--m"
+      [ngClass]="{ 'border--bottom--light-grey': !last }">
+      <div>
+        <h6
+          class="mt-0 font--caption"
+          innerHTML="{{ 'ng.product-price-changes.label.subscription-name' | translate }}"></h6>
+        <div>{{ 'fr' === lang ? product.description.fr : product.description.nl }}</div>
+      </div>
+      <div class="row mt--m prices">
+        <div class="col-s-6">
+          <h6 class="mt-0 font--caption" data-cy="price-changes-current-price-title">
+            {{ 'ng.product-price-changes.label.current-price' | translate }}
+            <small>({{ 'ng.product-price-changes.label.' + getVAT(productPriceChange) | translate }})</small>
+          </h6>
+          <div data-cy="price-changes-current-price">
+            {{
+              product.oldPrice | currency: 'EUR' : 'symbol' : (product.oldPrice % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+            }}
+          </div>
+        </div>
+        <div class="col-s-6 new-price">
+          <h6 class="mt-0 font--caption" data-cy="price-changes-new-price-title">
+            {{ 'ng.product-price-changes.label.new-price' | translate }}
+            <small>({{ 'ng.product-price-changes.label.' + getVAT(productPriceChange) | translate }})</small>
+          </h6>
+          <div data-cy="price-changes-new-price">
+            {{
+              product.newPrice | currency: 'EUR' : 'symbol' : (product.oldPrice % 1 === 0 ? '1.0-0' : '1.2-2') : locale
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mb--n">
+      <small>{{
+        'ng.product-price-changes.text.subscription-change-details-' + getVAT(productPriceChange) | translate
+      }}</small>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,163 @@
+{
+  "url": "http://localhost:8080/public/api/inbox-messages-service/v1/inbox-messages",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "fa6f2f5b-2163-4280-9d6f-1c12c9c1ec92",
+      "contents": [
+        {
+          "lang": "EN",
+          "title": "Your New TV-Box has arrived",
+          "body": "Lets install it Following our seamless self install guide within the app",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/dtvboxswap/",
+            "name": "Install TV-box "
+          }
+        },
+        {
+          "lang": "FR",
+          "title": "Installez votre nouveau modem Telenet",
+          "body": "Vous avez reçu votre nouveau modem Telenet ? C'est pourquoi nous sommes heureux de vous aider, étape par étape, avec une installation simple",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/dtvboxswap/",
+            "name": "Install TV-box"
+          }
+        },
+        {
+          "lang": "NL",
+          "title": "Installeer je nieuwe Telenet-modem",
+          "body": "Heb je je nieuwe Telenet-modem ontvangen? Daarom helpen we je graag stap voor stap met de eenvoudige installatie",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/dtvboxswap/",
+            "name": "Install TV-box"
+          }
+        }
+      ],
+      "messageAdded": {
+        "amount": 2,
+        "unit": "YEARS"
+      },
+      "seen": false,
+      "read": false,
+      "pinned": true
+    },
+    {
+      "id": "ac2f63ff-70c2-4408-a95b-6bdc6d7e3797",
+      "contents": [
+        {
+          "lang": "NL",
+          "title": "Title NL usage_oob",
+          "body": "Body NL usage_oob NL",
+          "callToAction": {
+            "link": "http://www.telenet.be/message?id=odKDSkmwe54&lang=nl",
+            "name": "View Usage"
+          }
+        },
+        {
+          "lang": "EN",
+          "title": "Title EN usage_oob",
+          "body": "Body EN usage_oob EN",
+          "callToAction": {
+            "link": "http://www.telenet.be/message?id=odKDSkmwe54&lang=en",
+            "name": "View Usage"
+          }
+        },
+        {
+          "lang": "FR",
+          "title": "Title FR usage_shared_fr",
+          "body": "Body FR usage_oob",
+          "callToAction": {
+            "link": "http://www.telenet.be/message?id=odKDSkmwe54&lang=fr",
+            "name": "View Usage"
+          }
+        }
+      ],
+      "messageAdded": {
+        "amount": 3,
+        "unit": "DAYS"
+      },
+      "seen": false,
+      "read": false,
+      "pinned": true
+    },
+    {
+      "id": "c5bf1f71-982e-42a9-8d3b-37c4d0b8f9c6",
+      "contents": [
+        {
+          "lang": "EN",
+          "title": "Modem Swap",
+          "body": "A new modem is now available for you",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        },
+        {
+          "lang": "FR",
+          "title": "Nouveau modem a decouvrir",
+          "body": "Changer pour un nouveau modem",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        },
+        {
+          "lang": "NL",
+          "title": "Modem Swap",
+          "body": "En hier heb je een zeer interessante inhoud",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        }
+      ],
+      "messageAdded": {
+        "amount": 2,
+        "unit": "DAYS"
+      },
+      "seen": false,
+      "read": false,
+      "pinned": false
+    },
+    {
+      "id": "c5bf1f71-982e-42a9-8d3b-37c4d0b8f9c7",
+      "contents": [
+        {
+          "lang": "EN",
+          "title": "Modem Swap",
+          "body": "A new modem is now available for you",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        },
+        {
+          "lang": "FR",
+          "title": "Nouveau modem a decouvrir",
+          "body": "Changer pour un nouveau modem",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        },
+        {
+          "lang": "NL",
+          "title": "Modem Swap",
+          "body": "En hier heb je een zeer interessante inhoud",
+          "callToAction": {
+            "link": "be.telenet.telenetapp://overlay/shop_flow/?productid=10456",
+            "name": "Swap Modem"
+          }
+        }
+      ],
+      "messageAdded": {
+        "amount": 2,
+        "unit": "DAYS"
+      },
+      "seen": false,
+      "read": true,
+      "pinned": false
+    }
+  ]
+}

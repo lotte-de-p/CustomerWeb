@@ -1,0 +1,38 @@
+{
+  "availabilities": [
+    {
+      "date": "2020-08-20",
+      "slots": [
+        {
+          "timeFormat": "00:00:00+01:00",
+          "availabilityId": "9158093522413781595",
+          "timeSlotCode": "MORNING",
+          "specURL": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+        },
+        {
+          "timeFormat": "00:00:00+01:00",
+          "availabilityId": "9158093523413781595",
+          "timeSlotCode": "EVENING",
+          "specURL": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+        }
+      ]
+    },
+    {
+      "date": "2020-08-21",
+      "slots": [
+        {
+          "timeFormat": "00:00:00+01:00",
+          "availabilityId": "9158093526413781595",
+          "timeSlotCode": "LUNCH",
+          "specURL": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+        },
+        {
+          "timeFormat": "00:00:00+01:00",
+          "availabilityId": "9158093527413781595",
+          "timeSlotCode": "AFTERNOON",
+          "specURL": "https://api.int.telenet.be/omapi/public/product/APPT0000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+@media only screen and (max-width: 35.99em) {
+  .mobile-option-tiles {
+    height: auto !important;
+  }
+
+  .mobile-options-button-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .mobile-options-button-container .options-button {
+    width: 100% !important;
+  }
+
+  .mobile-lines-section {
+    position: relative !important;
+    display: flex;
+    top: 0 !important;
+    width: 100%;
+  }
+
+  .options-content {
+    width: 100%;
+  }
+
+  .mobile-options {
+    max-width: 100% !important;
+  }
+
+  .mobile-blur {
+    opacity: 50%;
+  }
+}
+
+.desktop-options {
+  max-width: 80%;
+}

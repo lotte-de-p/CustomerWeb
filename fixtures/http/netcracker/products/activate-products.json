@@ -1,0 +1,40 @@
+[
+  {
+    "addressId": "9160433229813359570",
+    "identifier": "032839213",
+    "label": "Telenet FreePhone Europe / 032839213",
+    "locationId": "9160435339813020564",
+    "status": "Activation in progress",
+    "productType": "telephone",
+    "specurl": "https://api.uat.telenet.be/omapi/public/product/FREU0000",
+    "id": "9160435514613267076",
+    "useSpecurl": false,
+    "productOrders": [
+      {
+        "id": "9160435516613267681",
+        "status": "Processing",
+        "customerProduct": {
+          "name": "Fixed Line / 032839213",
+          "id": "9160435517613267076",
+          "specurl": "https://api.uat.telenet.be/omapi/public/product/FLIN0001"
+        },
+        "tasks": [
+          {
+            "topic": "Terms_Conditions",
+            "status": {
+              "name": "Completed"
+            }
+          },
+          {
+            "topic": "Deinstallation_OK",
+            "status": {
+              "name": "Completed"
+            }
+          }
+        ]
+      }
+    ],
+    "salesOrderId": "9160435518613261935",
+    "compositeOrderId": "9160435519213267982"
+  }
+]

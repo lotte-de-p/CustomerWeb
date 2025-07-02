@@ -1,0 +1,46 @@
+{
+  "name": "@telenet/mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/mfe/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/plugins/mfe",
+        "main": "libs/plugins/mfe/src/index.ts",
+        "tsConfig": "libs/plugins/mfe/tsconfig.lib.json",
+        "assets": [
+          "libs/plugins/mfe/*.md",
+          {
+            "input": "./libs/plugins/mfe/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/mfe/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/mfe",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/plugins/mfe",
+            "glob": "collection.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/plugins/mfe",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    }
+  },
+  "tags": ["type:plugin", "scope:mfe"]
+}

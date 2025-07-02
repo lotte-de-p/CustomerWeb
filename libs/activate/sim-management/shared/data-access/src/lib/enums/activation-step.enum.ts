@@ -1,0 +1,6 @@
+export enum ActivationStep {
+  VALIDATION = 'VALIDATION',
+  TERMS_AND_CONDITIONS = 'TERMS_AND_CONDITIONS',
+  DONE = 'DONE',
+  PORTING = 'PORTING',
+}

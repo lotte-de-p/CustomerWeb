@@ -1,0 +1,17 @@
+{
+  "name": "demo-billing-data-access",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/foundation/demo/billing/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/foundation/demo/billing/data-access/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:demo-billing", "scope:demo-mfe"]
+}

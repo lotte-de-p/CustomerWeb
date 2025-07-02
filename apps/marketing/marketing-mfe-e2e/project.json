@@ -1,0 +1,55 @@
+{
+  "name": "marketing-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/marketing/marketing-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/marketing/marketing-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "marketing-mfe:storybook",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "marketing-mfe:storybook:ci"
+        },
+        "local": {
+          "watch": true
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/marketing/marketing-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "marketing-mfe:storybook",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/marketing/marketing-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "marketing-mfe:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "marketing-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/marketing/marketing-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:marketing-mfe"],
+  "implicitDependencies": ["marketing-mfe"]
+}

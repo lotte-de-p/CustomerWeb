@@ -1,0 +1,20 @@
+{
+  "name": "sales-products-details-feat-products-details",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/products-details/feat-products-details/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/sales/products-details/feat-products-details/**/*.ts",
+          "libs/sales/products-details/feat-products-details/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-products-details", "scope:sales-mfe"]
+}

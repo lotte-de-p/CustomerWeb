@@ -1,0 +1,38 @@
+{
+  "base": {
+    "attributeKey": "contract_months_base",
+    "value": "24",
+    "localizedContent": [
+      {
+        "locale": "nl",
+        "key": "Contract Months_nl"
+      },
+      {
+        "locale": "fr",
+        "key": "Contract Months_fr"
+      },
+      {
+        "locale": "en",
+        "key": "Contract Months_en"
+      }
+    ]
+  },
+  "baseSoho": {
+    "attributeKey": "contract_months_base_soho",
+    "value": "24",
+    "localizedContent": [
+      {
+        "locale": "nl",
+        "key": "Contract Months_nl"
+      },
+      {
+        "locale": "fr",
+        "key": "Contract Months_fr"
+      },
+      {
+        "locale": "en",
+        "key": "Contract Months_en"
+      }
+    ]
+  }
+}

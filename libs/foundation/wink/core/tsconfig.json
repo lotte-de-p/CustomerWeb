@@ -1,0 +1,25 @@
+{
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2022"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2022",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "sourceMap": false
+  },
+  "include": ["**/*.tsx"],
+  "exclude": ["cypress.config.ts", "**/*.cy.tsx", "./src/components/animation/**/*"],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ]
+}

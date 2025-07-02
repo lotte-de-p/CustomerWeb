@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  legend {
+    margin-bottom: var-rem(--semantic-spacing-xs);
+    display: flex;
+    width: 100%;
+  }
+
+  .radio-group--horizontal,
+  .radio-group--vertical {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .radio-group--vertical {
+    flex-direction: column;
+    gap: var-rem(--semantic-spacing-md);
+  }
+
+  .radio-group--horizontal {
+    flex-direction: row;
+    gap: var-rem(--semantic-spacing-xl);
+  }
+}

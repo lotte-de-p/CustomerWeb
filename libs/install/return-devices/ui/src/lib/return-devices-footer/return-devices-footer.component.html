@@ -1,0 +1,121 @@
+<h4 data-cy="how-to-return-devices-title">
+  {{ 'ng.return-devices.title.return-devices' | translate }}
+</h4>
+
+<div class="p--l--md p--m background-white mx--n" data-cy="footer-send-box">
+  <div class="display--flex flex-direction--row align-items--center justify-content--between">
+    <div>
+      <div class="text-font-family--t4 text-weight--xl mb--s">
+        {{ 'ng.return-devices.lbl.send-in-mail' | translate }}
+      </div>
+      <ul class="pl--n list-style--ordered-highlight">
+        <li>
+          <a
+            href="#"
+            (click)="onGenerateReturnLabelClick()"
+            class="link text-weight--l"
+            data-cy="footer-generate-return-label-link">
+            {{ 'ng.return-devices.lbl.generate-return-label' | translate }}</a
+          >
+        </li>
+        <li>{{ 'ng.return-devices.lbl.place-devices' | translate }}</li>
+        <li>
+          {{ 'ng.return-devices.lbl.bring-a-box' | translate }}
+          <a
+            target="_blank"
+            href="{{ returnPointUrl }}"
+            [clickPushToAnalytics]="{
+              attributeName: 'return point link',
+              eventName: DatalayerEventNames.LINK_CLICKED,
+              messageGroupName: messageGroupName
+            }"
+            class="text-weight--l display--inline-block"
+            rel="noopener">
+            {{ 'ng.return-devices.lbl.return-point' | translate }}
+          </a>
+          {{ 'ng.return-devices.lbl.in-your-area' | translate }}
+        </li>
+      </ul>
+    </div>
+    <div class="px--xl">
+      <img [tgReturnDevicesImageSrcInterceptor]="imagePath" src="/assets/box.svg" alt="" />
+    </div>
+  </div>
+  <hr class="divider divider--s__very-light-grey my--n" />
+  <div class="mt--l">
+    <img
+      [tgReturnDevicesImageSrcInterceptor]="imagePath"
+      class="return-devices__footer-image mr--xs"
+      src="/assets/postnl.svg"
+      alt="Post NL" /><span>
+      <a
+        href="{{ returnPointUrl }}"
+        [clickPushToAnalytics]="{
+          attributeName: 'return point link',
+          eventName: DatalayerEventNames.LINK_CLICKED,
+          messageGroupName: messageGroupName
+        }"
+        class="link text-weight--l"
+        data-cy="return-point--link"
+        >{{ 'ng.return-devices.post-nl-locator' | translate }}</a
+      >
+    </span>
+  </div>
+</div>
+
+@if (!isBaseCustomer) {
+  <div class="row my--l pl--xl pl--n--md my--l" data-cy="footer-divider">
+    <div class="col-5">
+      <hr class="divider divider--s__light-grey my--xs" />
+    </div>
+    <div class="col-2 return-devices__seperator text-font-family--t7 text--xxm text-align--center">
+      {{ 'ng.return-devices.lbl.or' | translate }}
+    </div>
+    <div class="col-5">
+      <hr class="divider divider--s__light-grey my--xs" />
+    </div>
+  </div>
+
+  <div class="p--l--md p--m background-white mx--n mb--l" data-cy="footer-bring-to-store">
+    <div class="display--flex flex-direction--row align-items--center justify-content--between">
+      <div>
+        <div class="text-font-family--t4 text-weight--xl mb--m">
+          {{ 'ng.return-devices.lbl.bring-to-store' | translate }}
+        </div>
+        <ul class="pl--n text--m list-style--ordered-highlight">
+          <li>
+            <a
+              href="{{ telenetStoreUrl }}"
+              [clickPushToAnalytics]="{
+                attributeName: 'telenet store link',
+                eventName: DatalayerEventNames.LINK_CLICKED,
+                messageGroupName: messageGroupName
+              }"
+              class="link text-weight--l"
+              data-cy="telenet-store-link"
+              >{{ 'ng.return-devices.lbl.telenet-store' | translate }}</a
+            >
+          </li>
+          <li>{{ 'ng.return-devices.lbl.bring-devices' | translate }}</li>
+        </ul>
+      </div>
+      <div class="px--xl">
+        <img [tgReturnDevicesImageSrcInterceptor]="imagePath" src="/assets/telenet-shop.svg" alt="" />
+      </div>
+    </div>
+    <hr class="divider divider--s__very-light-grey my--n" />
+    <div class="mt--l">
+      <i class="icon icon-md icon-logo-telenet mr--xs"></i>
+      <a
+        href="{{ telenetStoreUrl }}"
+        [clickPushToAnalytics]="{
+          attributeName: 'telenet store link',
+          eventName: DatalayerEventNames.LINK_CLICKED,
+          messageGroupName: messageGroupName
+        }"
+        class="link text-weight--l"
+        >{{ 'ng.return-devices.lbl.telenet-store' | translate }}</a
+      >
+    </div>
+  </div>
+}

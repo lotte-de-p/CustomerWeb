@@ -1,0 +1,23 @@
+<div class="cmp-rate background-very-light-grey p--xm mb--default flex-grow">
+  <p class="heading--5 heading--nomargin">
+    {{ 'ng.roaming-international-rates.rates-card.title.' + (rate.type | lowercase) | translate }}
+  </p>
+  <hr class="my--xxs" />
+  <div class="display--flex">
+    <ul class="list-style--bullit">
+      <li *ngFor="let detail of rate.details">
+        {{ 'ng.roaming-international-rates.rates-card.detail.title.' + (detail.type | lowercase) | translate }}
+      </li>
+    </ul>
+    <ul class="list-style--none font--body-regular-bold ml--xm">
+      <li *ngFor="let detail of rate.details">
+        {{
+          detail.amount === 0
+            ? ('ng.roaming-international-rates.rates-card.detail.price.free' | translate)
+            : ('ng.roaming-international-rates.rates-card.detail.price.' + (rate.type | lowercase)
+              | translate: { price: (detail.amount | number: '1.2-2') })
+        }}
+      </li>
+    </ul>
+  </div>
+</div>

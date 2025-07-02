@@ -1,0 +1,38 @@
+//
+//
+// Brand
+$semantic-color-brand: $primitive-color-yellow-yellow500;
+
+//
+//
+// Text
+$semantic-color-text: $primitive-color-primary-dark-brown;
+$semantic-color-text-subtle: $primitive-color-neutrals-neutral72;
+$semantic-color-text-subtlest: $primitive-color-neutrals-neutral48;
+
+//
+//
+// Backgrounds
+$semantic-color-background: $primitive-color-primary-white;
+$semantic-color-background-neutral: $primitive-color-neutrals-neutral04;
+$semantic-color-background-tile-selected: $primitive-color-primary-white;
+$semantic-color-background-info: $primitive-color-system-blue16;
+$semantic-color-background-success: $primitive-color-system-green16;
+$semantic-color-background-warning: $primitive-color-system-orange16;
+$semantic-color-background-error: $primitive-color-system-red16;
+$semantic-color-background-icon-primary: $primitive-color-primary-lemon;
+$semantic-color-background-icon-secondary: $primitive-color-neutrals-neutral12;
+$semantic-color-background-icon-transparant: $primitive-color-primary-white;
+
+//
+//
+// Borders
+$semantic-color-border: $primitive-color-neutrals-neutral24;
+$semantic-color-border-subtle: $primitive-color-neutrals-neutral08;
+$semantic-color-border-selected: $semantic-color-brand;
+
+//
+//
+// Icons
+$semantic-color-icon: $primitive-color-primary-dark-brown;
+$semantic-color-icon-warning: $primitive-color-system-orange100;

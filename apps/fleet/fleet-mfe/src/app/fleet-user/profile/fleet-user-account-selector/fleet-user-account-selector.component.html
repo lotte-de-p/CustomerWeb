@@ -1,0 +1,71 @@
+@if (isLoggedIn && isOriginCustomer && selectorType === 'billingAccount') {
+  <app-billing-account-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    (toggle)="toggleAccount($event)">
+  </app-billing-account-selector>
+}
+
+@if (isLoggedIn && !isPidLogin && (selectorType === 'mobileLines' || selectorType === 'prepaidLines')) {
+  <app-mobile-line-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    [status]="status"
+    [identityId]="identityId"
+    [isPrepaidOnly]="selectorType === 'prepaidLines'"
+    (toggle)="toggleAccount($event)"
+    [showOnlyLoggedInLine]="showOnlyLoggedInLine">
+  </app-mobile-line-selector>
+}
+
+@if (
+  isLoggedIn &&
+  isPidLogin &&
+  (selectorType === 'mobileLines' || selectorType === 'telenetMobileLines' || selectorType === 'prepaidLines-new')
+) {
+  <app-telenet-mobile-line-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    (toggle)="toggleAccount($event)"
+    [isPrepaidOnly]="selectorType === 'prepaidLines-new'"
+    [identityId]="identityId"
+    [status]="status"
+    [isFleetCustomer]="isFleetCustomer"
+    [showOnlyLoggedInLine]="showOnlyLoggedInLine"
+    [showAllLines]="showAllLines">
+  </app-telenet-mobile-line-selector>
+}
+
+@if (isLoggedIn && selectorType === 'plan') {
+  <app-address-line-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    (toggle)="toggleAccount($event)"
+    [identityId]="identityId"
+    [status]="status"
+    [showOnlyLoggedInLine]="showOnlyLoggedInLine"
+    [onlyFpbProducts]="onlyFpbProducts">
+  </app-address-line-selector>
+}
+
+@if (isLoggedIn && selectorType === 'planned-maintenance') {
+  <app-planned-maintenance-address-line-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    (toggle)="toggleAccount($event)">
+  </app-planned-maintenance-address-line-selector>
+}
+
+@if (isLoggedIn && selectorType === 'privacy-setting') {
+  <app-privacy-settings-selector
+    #accountSelector
+    [hideSelector]="hideSelector"
+    [isSelectorOpen]="isSelectorOpen"
+    (toggle)="toggleAccount($event)">
+  </app-privacy-settings-selector>
+}

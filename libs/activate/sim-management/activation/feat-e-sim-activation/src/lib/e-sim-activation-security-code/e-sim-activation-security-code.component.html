@@ -1,0 +1,28 @@
+<div class="row mt--l mb--l">
+  @if (pin) {
+    <div class="col-md-6 col-xs-6">
+      <i data-testid="e-sim-activation-pin-icon" class="icon-lock fl-left"></i>
+      <div class="fl-left ml--xxs">
+        <p class="m--n">
+          {{ 'ng.sim-management.e-sim-activation.pin.code' | translate }}
+        </p>
+        <label data-testid="e-sim-activation-pin-value" class="font--body-regular cursor--default color-shade_48">{{
+          pin
+        }}</label>
+      </div>
+    </div>
+  }
+  @if (puk) {
+    <div class="col-md-6 col-xs-6">
+      <i data-testid="e-sim-activation-puk-icon" class="icon-shield fl-left"></i>
+      <div class="fl-left ml--xxs">
+        <p data-testid="e-sim-activation-puk-label" class="m--n">
+          {{ 'ng.sim-management.e-sim-activation.puk.code' | translate }}
+        </p>
+        <label data-testid="e-sim-activation-puk-value" class="font--body-regular cursor--default color-shade_48">{{
+          puk
+        }}</label>
+      </div>
+    </div>
+  }
+</div>

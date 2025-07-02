@@ -1,0 +1,23 @@
+{
+  "macAddress": "1C:64:99:16:CD:CB",
+  "lastSeen": "6/17/20 9:15 AM",
+  "type": "WIRELESS_ACCESS_POINT",
+  "model": "AP9082L-TN",
+  "lastSeenLight": "GREEN",
+  "clients": [],
+  "ipAddressInfos": [
+    {
+      "ipAddress": "192.168.0.234",
+      "ipType": "IPv4"
+    },
+    {
+      "ipAddress": "2a02:1811:430:7000:8ce3:ca3a:44a1:b155",
+      "ipType": "IPv6"
+    },
+    {
+      "ipAddress": "2a02:1811:430:7000:1e64:99ff:fe16:cdcg",
+      "ipType": "IPv6"
+    }
+  ],
+  "children": ""
+}

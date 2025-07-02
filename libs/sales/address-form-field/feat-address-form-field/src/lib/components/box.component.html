@@ -1,0 +1,24 @@
+<div class="font--caption cur-default my--xxxs">{{ 'ng.address.lbl.box-number' | translate }}</div>
+<div [ngClass]="{ 'disabled-state': disabledState }">
+  <input
+    #input
+    [attr.data-cy]="'feat-delivery-address-form-box'"
+    [matAutocomplete]="optionList"
+    autocomplete="one-time-code"
+    class="form__input"
+    [formControl]="control"
+    [placeholder]="'ng.address.form-box-number-placeholder-label' | translate"
+    (blur)="onBlur()"
+    type="text" />
+  <mat-autocomplete
+    #optionList="matAutocomplete"
+    [displayWith]="display"
+    (optionSelected)="optionSelected($event.option.value)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option.boxNumber }} ({{ option.floor }})
+    </mat-option>
+  </mat-autocomplete>
+  <div *ngIf="control.touched && control.hasError('pattern')" class="formErrorInput text-align--left">
+    <div>{{ 'ng.address.boxNumber-pattern.error' | translate }}</div>
+  </div>
+</div>

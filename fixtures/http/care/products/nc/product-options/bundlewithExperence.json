@@ -1,0 +1,63 @@
+{
+  "productInfo": {
+    "internalCategory": "POST-PAID-MOBILE",
+    "productId": "EXPC0102",
+    "isYupProduct": false,
+    "externalProductCode": "EXPC0102",
+    "productType": "EXPERIENCE",
+    "categories": ["experiences", "for-discounts---123430-promo"],
+    "customerCategories": ["business", "production-test-business"],
+    "subCategory": {},
+    "labelKey": "Freephone Classic",
+    "visible": true,
+    "weight": 674,
+    "services": [],
+    "apps": [],
+    "localizedContent": [
+      {
+        "locale": "en",
+        "name": "Freephone Classic",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/freephone-classic.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Freephone Classic",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/freephone-classic.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Freephone Classic",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/freephone-classic.png"
+      }
+    ],
+    "shortDescription": {},
+    "visibilityRules": {
+      "conditionalVisibility": false
+    },
+    "unlimited": false,
+    "eligibleForDiscount": false,
+    "priceType": "Recurrent Charge",
+    "characteristics": {
+      "productGroup": "OTHER",
+      "productSubGroup": "",
+      "productSegment": "TB",
+      "priceInclVat": 10,
+      "recipientsMandatory": false,
+      "esimAvailable": false
+    },
+    "usageBasedRatePlan": false,
+    "requiresInstallation": false,
+    "maxCount": "2",
+    "isExternalContentPack": "false",
+    "name": "Freephone Classic",
+    "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/freephone-classic.png",
+    "productConstituents": []
+  },
+  "isIncluded": false,
+  "category": "telephone",
+  "rank": "4",
+  "price": {
+    "amount": "5,00"
+  },
+  "parentId": "015895154"
+}

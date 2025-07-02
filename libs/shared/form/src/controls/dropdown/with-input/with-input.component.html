@@ -1,0 +1,38 @@
+<div class="form-group position--relative">
+  <div *ngIf="customLabel" [ngClass]="{ labelStyle: this.labelStyle }">
+    <label for="{{ key }}">{{ getLabel() | translate }}</label>
+  </div>
+  <div class="select-dropdown-section default">
+    <div class="form-control select-dropdown p--n" [ngClass]="{ 'form__input--disabled': disabled }" (click)="toggle()">
+      <input
+        id="{{ key }}"
+        type="text"
+        class="form__input form-control cursor--pointer ellipsis"
+        name="{{ key }}"
+        [(ngModel)]="value"
+        [disabled]="disabled"
+        [required]="required"
+        [placeholder]="showPlaceHolder ? (getPlaceholder() | translate) : ''"
+        [class.ng-invalid-custom]="error"
+        (focusout)="focusOut()"
+        [ngClass]="{ 'form__input--disabled': disabled, 'form__input--error': error }"
+        readonly />
+      <div
+        class="icon position--absolute text--m text-weight--g"
+        [ngClass]="shouldShowDropdown ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+    </div>
+  </div>
+  <div *ngIf="shouldShowDropdown" class="select-dropdown__options position--absolute width--full">
+    <ul class="select-dropdown__options__content pl--n m--n position--relative">
+      <li
+        *ngFor="let option of optionList"
+        (mousedown)="updateValue(option)"
+        class="select-dropdown__options__list cursor---pointer">
+        {{ option.value }}
+      </li>
+    </ul>
+  </div>
+  <div class="formErrorInput Form__input__invalid-message" *ngIf="error">
+    {{ getText() | translate }}
+  </div>
+</div>

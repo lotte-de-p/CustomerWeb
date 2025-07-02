@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.481" tests="1" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-24T13:29:16" tests="0" file="src/e2e/fleet-profile/line-address-details/line-address-details.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Address Details" timestamp="2024-07-24T13:29:16" tests="1" time="3.440" failures="0">
+    <testcase name="On page load, the page should be loaded with address details" time="1.348" classname="Line Address Details On page load, the page should be loaded with address details">
+    </testcase>
+  </testsuite>
+</testsuites>

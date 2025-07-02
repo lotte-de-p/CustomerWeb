@@ -1,0 +1,96 @@
+<div class="lines-section mobile-lines-section" style="top: 0 !important; position: relative">
+  <div class="label-content">
+    <div class="left">
+      <label>{{ 'ng.fleet-user-line-add-options.lbl.phone-number' | translate }}</label>
+    </div>
+    <div class="right">
+      <label>{{ 'ng.fleet-user-line-add-options.lbl.options' | translate }}</label>
+      <p>{{ 'ng.fleet-user-line-add-options.lbl.prices-excluding-vat' | translate }}</p>
+    </div>
+  </div>
+  <div class="options-content" style="top: 0 !important">
+    <div class="content">
+      <div class="left display--flex flex-direction-row justify-content--between hidden-mobile">
+        @if (selectedLine.identifier) {
+          <p>{{ selectedLine.identifier | phoneNumber }}</p>
+        }
+      </div>
+      <div class="right">
+        <div [attr.data-cy]="'upgraded-options'">
+          @if (selectedLine.isUpgraded) {
+            <p>{{ 'ng.fleet-user-line-add-options.lbl.upgraded' | translate }}</p>
+          }
+          @for (option of selectedLine.options; track option) {
+            <div class="desktop-options mobile-options">
+              @if (option.optionCategory === 'upgraded') {
+                <div class="right-content-upgraded">
+                  <div class="subtitle-content" [attr.data-cy]="'upgraded-option'">
+                    <p>{{ option.category }}</p>
+
+                    <b class="color-yellow">{{ currencySymbol }}{{ option.price.taxExclPrices.recurrentTotal }}</b>
+                  </div>
+                  <p [attr.data-cy]="'upgraded-option-description'">{{ option.description }}</p>
+                  <p>
+                    {{
+                      'ng.fleet-user-line-add-options.lbl.upgrade-from'
+                        | translate
+                          : {
+                              category: option.category,
+                              oldData: option.upgradedFrom,
+                              newData: option.volume
+                            }
+                    }}
+                  </p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+        <div [attr.data-cy]="'new-options'">
+          @if (selectedLine.isAdded) {
+            <label>{{ 'ng.fleet-user-line-add-options.lbl.added' | translate }}</label>
+          }
+          @for (option of selectedLine.options; track option) {
+            <div class="desktop-options mobile-options">
+              @if (option.optionCategory === 'added') {
+                <div class="right-content-upgraded">
+                  <div class="subtitle-content" [attr.data-cy]="'added-option'">
+                    <p>{{ option.category }}</p>
+                    <b class="color-yellow">{{ currencySymbol }}{{ option.price.taxExclPrices.recurrentTotal }}</b>
+                  </div>
+                  <p [attr.data-cy]="'added-option-description'">{{ option.description }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+        @if (selectedLine.options.length === 0) {
+          <span class="text--xxs">{{ 'ng.fleet-user-line-add-options.lbl.no-options-added' | translate }}</span>
+        }
+        <div [attr.data-cy]="'previously-added-options'">
+          @if (!showFilteredLines && showPreviouslyAddedOption()) {
+            <label>{{ 'ng.fleet-user-line-add-options.lbl.previously-added' | translate }}</label>
+
+            @for (option of selectedLine.options; track option) {
+              <div class="desktop-options mobile-options">
+                @if (isOptionPreviouslyAdded(option)) {
+                  <div class="right-content-upgraded">
+                    <div class="subtitle-content" [attr.data-cy]="'previously-added-option'">
+                      <p class="prev-added-title">{{ option.category }}</p>
+                      <p class="prev-added-title">
+                        {{ currencySymbol }}{{ option.price.taxExclPrices.recurrentTotal }}
+                      </p>
+                    </div>
+                    <p class="color-mid-grey" [attr.data-cy]="'previously-added-option-description'">
+                      {{ option.shortDescription }}
+                    </p>
+                  </div>
+                }
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

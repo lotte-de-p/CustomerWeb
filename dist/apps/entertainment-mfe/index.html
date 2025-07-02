@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="background-shade_04">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Customer web activate entertainment MFE</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <script src="https://www.uat.telenet.be/en.pageLocaleData.js"></script>
+
+    <script type="text/javascript">
+      let global = window;
+      (function () {
+        window.Config = {
+          'ocapi-url': 'https://api.uat.telenet.be/ocapi',
+          'omapi-url': 'https://api.uat.telenet.be/omapi',
+          'oauth-url': 'https://login.uat.telenet.be/openid/oauth/authorize',
+          'openid-url': 'https://login.uat.telenet.be/openid',
+          'oauth-client-id': 'ocapi',
+        };
+      })();
+    </script>
+  <link rel="stylesheet" href="styles.css"></head>
+  <body class="background-shade_04">
+    <tg-entertainment-local></tg-entertainment-local>
+  <script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>

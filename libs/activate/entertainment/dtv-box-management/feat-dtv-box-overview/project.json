@@ -1,0 +1,17 @@
+{
+  "name": "entertainment-dtv-box-management-overview",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/activate/entertainment/dtv-box-management/feat-dtv-box-overview/src",
+  "prefix": "tg-entertainment",
+  "tags": ["type:feature", "scope:entertainment-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/activate/entertainment/dtv-box-management/feat-dtv-box-overview/**/*.{ts,js,html}"]
+      }
+    }
+  }
+}

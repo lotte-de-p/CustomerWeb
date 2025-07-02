@@ -1,0 +1,82 @@
+@if (showNavsOverlay) {
+  <tg-sales-customer-registration-navs-overlay
+    [pointOfSalesUrl]="pointOfSalesUrl$ | async"
+    [requestHelpUrl]="requestHelpUrl$ | async"></tg-sales-customer-registration-navs-overlay>
+} @else {
+  <tg-sales-customer-registration-title [currentStep]="currentStep | async"> </tg-sales-customer-registration-title>
+  @if (error$ | async; as error) {
+    <div class="my--m">
+      <tg-sales-error-message
+        [errorMessage]="'ng.customer-registration.' + error.code + '-errorfield'"></tg-sales-error-message>
+    </div>
+  }
+  <div class="mb--xxxg pb--l py--n col-lg-8 col-md-9 col-12 m--auto">
+    <div class="background-white col-12 m--auto p--xxxl--md p--xl">
+      <div class="pb--m heading--5 heading--nomargin">
+        {{ 'customer-registration.lbl.address-details' | translate }}
+      </div>
+      <div class="pb--m">
+        <p>{{ 'customer-registration.lbl.address-info-message' | translate }}</p>
+      </div>
+      <div class="address-identity-section">
+        @if (showOverlay && (searchCustomerSoftMatchResultExists$ | async)) {
+          <app-overlay-popup
+            [title]="'customer-registration.lbl.customer-exists' | translate"
+            [content]="'customer-registration.lbl.customer-check-disclaimer' | translate"
+            [primaryButtonText]="'customer-registration.lbl.continue-as-new' | translate"
+            [secondaryButtonText]="'customer-registration.lbl.login-to-my-account' | translate"
+            [enableClose]="false"
+            (primaryButtonClicked)="continueRegistrationForSoftMatch()"
+            (secondaryButtonClicked)="redirectToStandAloneLogin()"></app-overlay-popup>
+        }
+        <tg-sales-customer-registration-address-form
+          #legalAddress
+          [locationSuggestions]="locationSuggestion$ | async"
+          [streetSuggestions]="streetSuggestion$ | async"
+          [itsMeDetails]="itsMeResponse$ | async"
+          (updateStreetsEmitter)="updateStreets($event)"
+          (saveAddressEmitter)="saveAddressToState($event)"
+          (updateSubHouseEmitter)="updateSubHouse()"
+          [subHouseNoSuggestions]="subHouseNoSuggestions$ | async"
+          [boxNoSuggestions]="boxNoSuggestions$ | async"
+          (updateBoxEmitter)="updateBox()"
+          [addressType]="'legalAddress'">
+        </tg-sales-customer-registration-address-form>
+        @if ((isInstallableProductExists$ | async) === true) {
+          <tg-sales-customer-registration-address-toggle
+            (isChecked)="toggleAddressVisibility($event)"
+            [showBillingAddressToggle]="false"
+            [addressType]="'installationAddress'"
+            [showInstallationAddressToggle]="true"
+            [attr.data-cy]="'address-toggle-component'"></tg-sales-customer-registration-address-toggle>
+          @defer (on viewport) {
+            @if (showInstallationAddress) {
+              <div class="mt--xl--md mt--l">
+                <div class="pb--xs heading--5 heading--nomargin">
+                  {{ 'customer-registration.lbl.installation-address' | translate }}
+                </div>
+                <div class="pb--m">
+                  <div>{{ 'customer-registration.lbl.address-info-message' | translate }}</div>
+                </div>
+                <tg-sales-customer-registration-address-form
+                  #installationAddress
+                  [locationSuggestions]="locationSuggestion$ | async"
+                  [streetSuggestions]="streetSuggestion$ | async"
+                  (updateStreetsEmitter)="updateStreets($event)"
+                  (saveAddressEmitter)="saveAddressToState($event)"
+                  (updateSubHouseEmitter)="updateSubHouse()"
+                  [subHouseNoSuggestions]="subHouseNoSuggestions$ | async"
+                  [boxNoSuggestions]="boxNoSuggestions$ | async"
+                  (updateBoxEmitter)="updateBox()"
+                  [addressType]="'installationAddress'">
+                </tg-sales-customer-registration-address-form>
+              </div>
+            }
+          } @placeholder {
+            <br />
+          }
+        }
+      </div>
+    </div>
+  </div>
+}

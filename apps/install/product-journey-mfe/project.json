@@ -1,0 +1,163 @@
+{
+  "name": "product-journey-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/install/product-journey-mfe/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/install/product-journey-mfe",
+        "index": "apps/install/product-journey-mfe/src/index.html",
+        "main": "apps/install/product-journey-mfe/src/main.ts",
+        "polyfills": ["apps/install/product-journey-mfe/src/polyfills.ts"],
+        "tsConfig": "apps/install/product-journey-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/install/product-journey-mfe/src/favicon.ico",
+          "apps/install/product-journey-mfe/src/assets",
+          "apps/install/product-journey-mfe/src/version.json"
+        ],
+        "styles": ["apps/install/product-journey-mfe/src/styles.scss"],
+        "scripts": ["node_modules/jquery/dist/jquery.min.js", "node_modules/slick-carousel/slick/slick.min.js"],
+        "customWebpackConfig": {
+          "path": "apps/install/product-journey-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "5mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/install/product-journey-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/install/product-journey-mfe/src/favicon.ico",
+            "apps/install/product-journey-mfe/src/assets",
+            "apps/install/product-journey-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "product-journey-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "product-journey-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4208,
+        "publicHost": "http://localhost:4208"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "product-journey-mfe:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/install/product-journey-mfe/**/*.ts", "apps/install/product-journey-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/install/product-journey-mfe/.storybook",
+        "browserTarget": "product-journey-mfe:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/install/product-journey-mfe/.storybook",
+        "browserTarget": "product-journey-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/install/product-journey-mfe/src/styles.scss"],
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/product-journey-mfe",
+        "configDir": "apps/install/product-journey-mfe/.storybook",
+        "browserTarget": "product-journey-mfe:build",
+        "compodoc": false,
+        "styles": [
+          "apps/install/product-journey-mfe/src/styles.scss",
+          "node_modules/atomic-library/public/styles/telenet-generic-classes.css",
+          "node_modules/atomic-library/public/styles/telenet.css",
+          "node_modules/atomic-library/public/styles/telenet-plugins.css",
+          "node_modules/atomic-library/public/styles/telenet-fonts.css",
+          "node_modules/atomic-library/public/styles/telenet-themes.css",
+          "node_modules/atomic-library/public/styles/telenet-atomic-comps.css",
+          "node_modules/atomic-library/public/styles/telenet-aem-cats/care.css",
+          "node_modules/atomic-library/public/styles/telenet-aem-cats/general.css",
+          "node_modules/atomic-library/public/styles/telenet-aem-cats/shared.css",
+          "node_modules/atomic-library/public/styles/telenet-aem-cats/form.css",
+          "node_modules/atomic-library/public/styles/telenet-aem-cats/container.css"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["type:app", "scope:product-journey-mfe"]
+}

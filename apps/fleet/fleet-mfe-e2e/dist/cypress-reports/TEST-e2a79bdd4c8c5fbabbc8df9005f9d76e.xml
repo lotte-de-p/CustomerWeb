@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.906" tests="5" failures="1">
+  <testsuite name="Cypress Tests" timestamp="2024-08-29T07:06:29" tests="0" file="src/e2e/fleet-product/line-remove-options/line-remove-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Remove Options" timestamp="2024-08-29T07:06:29" tests="5" time="17.882" failures="1">
+    <testcase name="&quot;before each&quot; hook for &quot;On page load, check options&quot;" time="5.117" classname="Line Remove Options &quot;before each&quot; hook for &quot;On page load, check options&quot;">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `[data-cy=remove-options]`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Line Remove Options`" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-cy=remove-options]`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Line Remove Options`
+    at openRemoveOptions (webpack:///./src/e2e/fleet-product/line-remove-options/line-remove-options.spec.cy.ts:111:0)
+    at Context.eval (webpack:///./src/e2e/fleet-product/line-remove-options/line-remove-options.spec.cy.ts:66:0)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

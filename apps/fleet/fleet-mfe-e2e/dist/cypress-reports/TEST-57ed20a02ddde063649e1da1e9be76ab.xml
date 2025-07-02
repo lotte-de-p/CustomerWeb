@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.329" tests="3" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-12T08:01:03" tests="0" file="src/e2e/fleet-profile/line-identification-details/line-identification-details.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Identification Details" timestamp="2024-09-12T08:01:03" tests="2" time="3.630" failures="0">
+    <testcase name="On page load, form should be pre-populated with values" time="1.120" classname="Line Identification Details On page load, form should be pre-populated with values">
+    </testcase>
+    <testcase name="Edit description and save" time="0.953" classname="Line Identification Details Edit description and save">
+    </testcase>
+  </testsuite>
+  <testsuite name="Line Identification Details - No customer Details" timestamp="2024-09-12T08:01:07" tests="1" time="3.676" failures="0">
+    <testcase name="As a fleet manager when I view line details and the user does not have details then I see only the description field at first and can update the description " time="0.933" classname="Line Identification Details - No customer Details As a fleet manager when I view line details and the user does not have details then I see only the description field at first and can update the description ">
+    </testcase>
+  </testsuite>
+</testsuites>

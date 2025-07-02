@@ -1,0 +1,75 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": [
+      "es2020",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@customer-registration-mfe/*": [
+        "apps/sales/customer-registration-mfe/src/*"
+      ],
+      "@sales/customer-registration/data-access": ["libs/sales/customer-registration/data-access/src/index.ts"],
+      "@sales/customer-registration/feat-personal-details": [
+        "libs/sales/customer-registration/feat-personal-details/src/index.ts"
+      ],
+      "@sales/shared/data-access": ["libs/sales/shared/data-access/src/index.ts"],
+      "@sales/shared/feature-sales-stepper": ["libs/sales/shared/feature-sales-stepper/src/index.ts"],
+      "@sales/shared/ingenico-form": ["libs/sales/shared/feat-ingenico-form/src/index.ts"],
+      "@sales/shared/ui": ["libs/sales/shared/ui/src/index.ts"],
+      "@sales/shared/util": ["libs/sales/shared/util/src/index.ts"],
+      "@telenet/ng-lib-account": ["libs/shared/account/src/index.ts"],
+      "@telenet/ng-lib-config": ["libs/shared/config/src/index.ts"],
+      "@telenet/ng-lib-datalayer": ["libs/shared/datalayer/src/index.ts"],
+      "@telenet/ng-lib-form": ["libs/shared/form/src/index.ts"],
+      "@telenet/ng-lib-layout": ["libs/shared/layout/src/index.ts"],
+      "@telenet/ng-lib-message": ["libs/shared/message/src/index.ts"],
+      "@telenet/ng-lib-ocapi": ["libs/shared/ocapi/src/index.ts"],
+      "@telenet/ng-lib-omapi": ["libs/shared/omapi/src/index.ts"],
+      "@telenet/ng-lib-omapi-query": ["libs/shared/omapi-query/src/index.ts"],
+      "@telenet/ng-lib-page": ["libs/shared/page/src/index.ts"],
+      "@telenet/ng-lib-personalisation": ["libs/shared/personalisation/src/index.ts"],
+      "@telenet/ng-lib-shared": ["libs/shared/shared/src/index.ts"],
+      "@telenet/ng-lib-sofy": ["libs/shared/sofy/src/index.ts"],
+      "@telenet/ng-lib-step-flow": ["libs/shared/step-flow/src/index.ts"],
+      "@telenet/wink-core/loader": ["libs/foundation/wink/dist/loader/index.js"],
+      "@telenet/wink-core/shared": ["libs/foundation/wink/core/src/assets/shared/index.ts"],
+      "factory.ts": ["node_modules/factory.ts/lib/index.d.ts"],
+      "@telenet/wink-ng": ["libs/foundation/wink/ng/src/index.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "*.ts",
+    "../customer-registration-mfe/**/*.ts",
+    "../customer-registration-mfe/**/*.js",
+    "../../../libs/sales/**/*.ts",
+    "../../../libs/sales/**/*.js"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

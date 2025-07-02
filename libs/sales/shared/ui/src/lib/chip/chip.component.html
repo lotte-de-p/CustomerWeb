@@ -1,0 +1,18 @@
+<label class="select-tile position--relative display--flex align-items--start gap--xxs color-text p--xxs">
+  <input
+    (change)="onToggle($event)"
+    (blur)="onBlur()"
+    [checked]="checked"
+    type="checkbox"
+    class="select-tile__input display--flex align-items--center justify-content--center font--body-regular hidden-input-box cursor--pointer" />
+  <i
+    class="select-tile__content_icon font--body-regular icon icon-md icon-no-size-override"
+    [ngClass]="checked ? 'icon icon-tick' : iconClass"></i>
+  <div class="select-tile__content display--flex flex-direction--column align-self--stretch flex-grow">
+    <div class="select-tile__content--inner display--flex gap--xm">
+      <div class="select-tile__content_text display--flex flex-direction--column flex-grow">
+        <div class="heading--6 heading--nomargin">{{ label | translate }}</div>
+      </div>
+    </div>
+  </div>
+</label>

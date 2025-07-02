@@ -1,0 +1,12 @@
+[
+  {
+    "productIdentifierValue": "WIGO123",
+    "productIdentifierType": "0485959303",
+    "pendingOperationType": "Upgrade"
+  },
+  {
+    "productIdentifierValue": "WIGO123",
+    "productIdentifierType": "04384939223",
+    "pendingOperationType": "Downgrade"
+  }
+]

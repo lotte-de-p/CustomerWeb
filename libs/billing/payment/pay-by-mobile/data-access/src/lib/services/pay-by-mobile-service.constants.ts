@@ -1,0 +1,9 @@
+export const PAY_BY_MOBILE_SERVICE = '/public/api/pay-by-mobile-service/v1/pay-by-mobile/';
+export const MESSAGE_GROUP = 'pay-by-mobile';
+export const EVENT_ATTRIBUTE_VALUE_STOP_SUBSCRIPTION = 'stop subscription';
+export const EVENT_ATTRIBUTE_ITEM_NAME = 'itemName';
+export const EVENT_ATTRIBUTE_ITEM_DATA = 'itemData';
+export const EVENT_NAME_PAY_BY_MOBILE = 'pay by mobile settings changed';
+export const EVENT_TYPE_CHANGE_MOBILE_SERVICE_SETTINGS = 'change-mobile-service-settings';
+export const SECONDARY_CATEGORY = 'billing';
+export const PRIMARY_CATEGORY = 'care';

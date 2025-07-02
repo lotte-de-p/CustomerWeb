@@ -1,0 +1,15 @@
+export enum LineRemoveConstants {
+  MESSAGE_GROUP = 'line-remove-options',
+  MSISDN = 'msisdn',
+  ACTIVE_OPTION = 'ACTIVE',
+  ACTIVATION_PASSED_PONR = 'ACTIVATION_PASSED_PONR',
+  MANDATORY = 'Mandatory',
+  DISCONNECT = 'DISCONNECT',
+  OPTION = 'Option',
+  EVENT_ATTRIBUTE_INTENT_REMOVE_OPTION = 'remove-option',
+  EVENT_NAME_LINE_DETAILS_CHANGED = 'line details changed',
+  EVENT_NAME_CHANGE_LINE_DETAILS_STARTED = 'change line details started',
+  STEP_ID_REMOVE_OPTION_OVERLAY = 'remove-option-overlay',
+  SUB_CATEGORY1_FLEET_PRODUCT = 'product',
+  SUCCESS_MESSAGE = 'fleet-manager-line-remove-options.response-success-submit-sales-order',
+}

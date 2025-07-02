@@ -1,0 +1,41 @@
+<div
+  class="search display--flex"
+  tg-general-search-facets
+  [facetGroups]="facetGroups$ | async"
+  [collections]="collections$ | async"
+  (facetChanged)="facetChanged($event.groupIndex, $event.facetIndex)"
+  (facetsCleared)="facetsCleared()"
+  (collectionChanged)="collectionChanged($event)"
+  [(overlayActive)]="filtersOverlayActive">
+  <div class="search__content">
+    <tg-foundation-general-search-searched-for
+      [query]="query$ | async"
+      [numberOfSearchResults]="numberOfSearchResults$ | async"
+      [loading]="loading$ | async"
+      [didYouMean]="didYouMean$ | async"
+      [noResultsFragmentLocation]="noResultsFragmentLocation">
+    </tg-foundation-general-search-searched-for>
+    <div class="hide-from-md">
+      <div class="py--m">
+        <button class="button button--secondary button--fullwidth button--filter" (click)="toggleFiltersOverlay()">
+          <span>{{ 'ng.search-results-page.lbl.filter' | translate }}</span>
+        </button>
+      </div>
+      <hr class="divider divider--s__very-light-grey mb--n" />
+      <div class="py--m">
+        <p>
+          <strong>{{ 'ng.search-results-page.lbl.activefilters' | translate }}: </strong>
+          <ng-container *ngFor="let appliedFilter of appliedFilters$ | async; let last = last"
+            >{{ appliedFilter | translate }}{{ last ? '' : ', ' }}
+          </ng-container>
+        </p>
+      </div>
+    </div>
+    <tg-foundation-general-search-page-controller
+      [contentItems]="contentItems$ | async"
+      [keyMatches]="keyMatches$ | async"
+      [hardwareItems]="hardwareItems$ | async"
+      [loading]="loading$ | async"
+      [detailsPagePath]="detailsPagePath"></tg-foundation-general-search-page-controller>
+  </div>
+</div>

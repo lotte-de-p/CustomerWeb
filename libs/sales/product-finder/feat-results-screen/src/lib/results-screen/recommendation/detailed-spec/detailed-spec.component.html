@@ -1,0 +1,9 @@
+<p *ngIf="title && detailedSpecs.length > 0" class="text-flow text-flow--h6 mb--s">
+  {{ title | translate }}
+</p>
+<ng-container *ngFor="let spec of detailedSpecs">
+  <div class="mb--m display--flex">
+    <i [ngClass]="spec.icon" class="mr--xs icon-md"></i>
+    <span [innerHTML]="spec.labelKey"></span>
+  </div>
+</ng-container>

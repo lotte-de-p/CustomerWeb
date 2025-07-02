@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sn-12 p-0">
+    <tg-login messageGroupName="{{ messageGroupName }}" [scopes]="scopes">
+      <div class="navigation-content">
+        <div class="navigation-content__header">
+          <div class="title">
+            <i class="header-icon icon-copy"></i>
+            <h2>
+              {{ 'ng.line-apn-details.lbl.apn' | translate }}
+            </h2>
+          </div>
+          <p>
+            {{ 'ng.line-apn-details.lbl.apn.overview' | translate }}
+          </p>
+        </div>
+        <div class="navigation-content__details apn">
+          <div class="footer-btn">
+            <a
+              *ngIf="changeAPN"
+              href="{{ changeAPN }}"
+              class="mb-20 button button--tertiary button__icon--position-right">
+              <span>{{ 'ng.line-apn-details.link.change-apn' | translate }}</span>
+              <i class="icon icon-chevron-right"></i>
+            </a>
+            <a
+              *ngIf="orderNewAPN"
+              href="{{ orderNewAPN }}"
+              class="mb-20 button button--tertiary button__icon--position-right">
+              <span>{{ 'ng.line-apn-details.link.order-new-apn' | translate }}</span>
+              <i class="icon icon-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </tg-login>
+  </div>
+</div>

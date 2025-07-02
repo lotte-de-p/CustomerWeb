@@ -1,0 +1,12 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "unpaidInvoices": {
+      "totalAmount": 0,
+      "invoices": []
+    },
+    "paidInvoices": []
+  }
+}

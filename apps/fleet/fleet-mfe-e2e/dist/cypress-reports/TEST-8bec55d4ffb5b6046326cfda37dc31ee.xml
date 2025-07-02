@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.962" tests="8" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-13T10:16:51" tests="0" file="src/e2e/fleet-account/bundle-usage-reminders/bundle-usage-reminders.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Bundle usage reminders" timestamp="2024-09-13T10:16:51" tests="8" time="6.938" failures="0">
+    <testcase name="should show enabled checkbox and threshold 50" time="1.296" classname="Bundle usage reminders should show enabled checkbox and threshold 50">
+    </testcase>
+    <testcase name="should show disabled checkbox and hide threshold input" time="0.545" classname="Bundle usage reminders should show disabled checkbox and hide threshold input">
+    </testcase>
+    <testcase name="should show enabled checkbox and empty threshold input when threshold value is default value" time="0.513" classname="Bundle usage reminders should show enabled checkbox and empty threshold input when threshold value is default value">
+    </testcase>
+    <testcase name="should save a threshold" time="0.798" classname="Bundle usage reminders should save a threshold">
+    </testcase>
+    <testcase name="should display an error message and disable the save button when threshold is empty" time="0.718" classname="Bundle usage reminders should display an error message and disable the save button when threshold is empty">
+    </testcase>
+    <testcase name="should not display the form and show error message when it cannot retrieve the threshold" time="0.592" classname="Bundle usage reminders should not display the form and show error message when it cannot retrieve the threshold">
+    </testcase>
+    <testcase name="should disable the form when threshold is in progress" time="0.512" classname="Bundle usage reminders should disable the form when threshold is in progress">
+    </testcase>
+    <testcase name="should update the form and clear the messages when you switch to a different billing account" time="1.000" classname="Bundle usage reminders should update the form and clear the messages when you switch to a different billing account">
+    </testcase>
+  </testsuite>
+</testsuites>

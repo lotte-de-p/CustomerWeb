@@ -1,0 +1,21 @@
+{
+  "name": "tg-engagement-telenet-customerzone-dashboard-engagement-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/telenet-customerzone-dashboard/engagement/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/engagement/telenet-customerzone-dashboard/engagement/data-access/**/*.ts"]
+      }
+    }
+  },
+  "tags": [
+    "type:data-access",
+    "scope:engagement-telenet-customerzone-dashboard-engagement",
+    "scope:telenet-customerzone-dashboard-mfe"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "links": [
+    {
+      "rel": ["self"],
+      "href": "http://aemauta1.dvp.corp.telenet.be:4502/api/assets/www-telenet-touch/nl/omapi/1234.json"
+    },
+    {
+      "rel": ["parent"],
+      "href": "http://aemauta1.dvp.corp.telenet.be:4502/api/assets/www-telenet-touch/nl/omapi.json"
+    }
+  ],
+  "class": ["assets/asset"],
+  "actions": [
+    {
+      "method": "DELETE",
+      "name": "delete",
+      "href": "http://aemauta1.dvp.corp.telenet.be:4502/api/assets/www-telenet-touch/nl/omapi/1234",
+      "title": "Delete"
+    },
+    {
+      "method": "PUT",
+      "name": "update-fragment",
+      "href": "http://aemauta1.dvp.corp.telenet.be:4502/api/assets/www-telenet-touch/nl/omapi/1234",
+      "type": "application/json",
+      "title": "Update Content Fragment"
+    }
+  ],
+  "properties": {
+    "contentFragment": true,
+    "metadata": {},
+    "elementsOrder": ["image", "title", "text"],
+    "elements": {
+      "image": {
+        "variationsOrder": ["mobile"],
+        ":type": "string",
+        "variations": {
+          "mobile": {
+            ":type": "string",
+            "dataType": "string",
+            "description": "",
+            "title": "mobile",
+            "multiValue": false,
+            "value": "image mobile value"
+          }
+        },
+        "dataType": "string",
+        "title": "Image",
+        "multiValue": false,
+        "value": "image value"
+      },
+      "text": {
+        "variationsOrder": ["mobile"],
+        ":type": "text/html",
+        "variations": {
+          "mobile": {
+            ":type": "text/html",
+            "dataType": "string",
+            "description": "",
+            "title": "mobile",
+            "multiValue": false,
+            "value": "text mobile value"
+          }
+        },
+        "dataType": "string",
+        "title": "Text",
+        "multiValue": false,
+        "value": "text value"
+      },
+      "title": {
+        "variationsOrder": ["mobile"],
+        ":type": "string",
+        "variations": {
+          "mobile": {
+            ":type": "string",
+            "dataType": "string",
+            "description": "",
+            "title": "mobile",
+            "multiValue": false,
+            "value": "title mobile value"
+          }
+        },
+        "dataType": "string",
+        "title": "Title",
+        "multiValue": false,
+        "value": "title value"
+      }
+    },
+    "name": "1234",
+    "description": "Product description",
+    "title": "Thrill",
+    "srn:paging": {
+      "total": 0,
+      "offset": 0,
+      "limit": 20
+    }
+  }
+}

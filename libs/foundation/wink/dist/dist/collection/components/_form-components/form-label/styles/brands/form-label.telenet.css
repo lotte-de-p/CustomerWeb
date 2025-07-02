@@ -1,0 +1,98 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+:host .label--content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+:host .label--text {
+  color: var(--semantic-color-text-default);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  background-color: transparent;
+}
+@media only screen and (max-width: calc(74.5em - 1px)) {
+  :host .label--text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+:host .label--helper {
+  color: var(--semantic-color-text-subtlest);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+@media only screen and (max-width: calc(74.5em - 1px)) {
+  :host .label--helper {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+:host .label--optional {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--semantic-color-text-subtlest);
+}
+:host.label--subcomponent .label--text {
+  color: var(--semantic-color-text-default);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+@media only screen and (max-width: calc(74.5em - 1px)) {
+  :host.label--subcomponent .label--text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+:host.label--subcomponent .label--helper {
+  color: var(--semantic-color-text-subtlest);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+@media only screen and (max-width: calc(74.5em - 1px)) {
+  :host.label--subcomponent .label--helper {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+:host.label--disabled {
+  opacity: calc(var(--semantic-opacity-disabled) / 10);
+}

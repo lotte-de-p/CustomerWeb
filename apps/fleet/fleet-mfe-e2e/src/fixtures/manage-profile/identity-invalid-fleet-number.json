@@ -1,0 +1,11 @@
+{
+  "code": "OCAPI-ERR-ODPD102",
+  "cause": "Entered number: 0482009322 is not a Fleet Number",
+  "correlationId": "4c0c73bb-d228-43aa-b106-3945c9f50dc7",
+  "errorDetails": [
+    {
+      "errorDetailCode": "500 Internal Server Error",
+      "message": "NotFleetAccountException"
+    }
+  ]
+}

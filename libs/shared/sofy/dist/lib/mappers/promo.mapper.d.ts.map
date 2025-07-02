@@ -1,0 +1,1 @@
+{"version":3,"file":"promo.mapper.d.ts","sourceRoot":"","sources":["../../../src/lib/mappers/promo.mapper.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,eAAe,EAAE,MAAM,oBAAoB,CAAC;AACrD,OAAO,EAAE,UAAU,EAAE,MAAM,uBAAuB,CAAC;;AAGnD,qBAGa,WAAW;IACf,GAAG,CAAC,QAAQ,EAAE,eAAe,GAAG,UAAU;yCADtC,WAAW;6CAAX,WAAW;CAgBvB"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"euro-sign.pipe.d.ts","sourceRoot":"","sources":["../../src/pipes/euro-sign.pipe.ts"],"names":[],"mappings":"AAAA,OAAO,EAAQ,aAAa,EAAE,MAAM,eAAe,CAAC;AACpD,OAAO,EAAgB,eAAe,EAAE,MAAM,sBAAsB,CAAC;;AAErE,qBAIa,YAAa,YAAW,aAAa;IACpC,OAAO,CAAC,QAAQ,CAAC,eAAe;gBAAf,eAAe,EAAE,eAAe;IAE7D,SAAS,CAAC,KAAK,EAAE,MAAM;yCAHZ,YAAY;uCAAZ,YAAY;CAYxB"}

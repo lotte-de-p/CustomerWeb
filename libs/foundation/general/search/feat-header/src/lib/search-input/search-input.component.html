@@ -1,0 +1,91 @@
+<div
+  class="overlay-mask position--fixed"
+  [ngClass]="isSearchExpanded ? '' : 'display--none'"
+  (click)="clear(true)"></div>
+
+<div
+  class="header-search-v2 position--relative display--flex flex-direction--row justify-content--end--md"
+  [ngClass]="{ 'header-search-v2-center-expanded': isSearchExpanded }">
+  <div class="search-bar__item-logo hide--mobile display--none" [ngClass]="{ visible: isSearchExpanded }">
+    <tg-foundation-general-search-brand-logo></tg-foundation-general-search-brand-logo>
+  </div>
+  <form
+    action=""
+    autocomplete="off"
+    [formGroup]="searchFormGroup"
+    [ngClass]="{
+      'search-bar-from-v2-expanded--border': isSearchExpanded || inputField.value.length > 0,
+      'onclick-icon-search-remove': !isSearchExpanded,
+      'search-bar-from-v2-expanded--border-active': inputField.value.length > 0
+    }"
+    id="search-bar"
+    class="search-bar__form display--flex">
+    <tg-foundation-general-search-header-button
+      class="display--flex"
+      type="search"
+      (click)="searchOrOpenHeader()"
+      (keyup.enter)="searchOrOpenHeader()">
+    </tg-foundation-general-search-header-button>
+    <input
+      #inputField
+      [formControl]="queryFormControl"
+      [placeholder]="'ng.search-header.phd.search' | translate"
+      [attr.data-testid]="'tgFoundationGeneralSearchSearchInput'"
+      [ngClass]="{
+        'search-bar__input-expanded': isSearchExpanded,
+        '': inputField.value.length > 1
+      }"
+      (click)="setExpanded(true)"
+      type="search"
+      id="searchTerm"
+      class="search-bar__input outline--none font--body" />
+
+    <tg-foundation-general-search-header-button
+      class="display--flex search-bar__form--button-icon-backspace--wrapper"
+      [ngClass]="[
+        inputField.value.length < 1 ? 'visibility--hide' : '',
+        !isSearchExpanded && inputField.value.length < 1 ? 'display--none' : ''
+      ]"
+      type="backspace"
+      (click)="clear(false, true)">
+    </tg-foundation-general-search-header-button>
+  </form>
+  <div class="search-bar__button display--none" [ngClass]="isSearchExpanded ? 'visible' : ''">
+    <tg-foundation-general-search-header-button
+      [attr.data-testid]="'tgFoundationGeneralSearchSearchInputCancel'"
+      (click)="clear(true)"
+      [hideMobile]="true"
+      type="cancel">
+      {{ 'ng.search-header.lbl.cancel' | translate }}
+    </tg-foundation-general-search-header-button>
+    <tg-foundation-general-search-header-button (click)="clear(true)" type="close">
+    </tg-foundation-general-search-header-button>
+  </div>
+
+  <div class="search-bar__item-search--mobile display--none--md" [ngClass]="{ 'display--none': isSearchExpanded }">
+    <tg-foundation-general-search-button [customClasses]="['icon-search--mobile']" (click)="setExpanded(true)">
+      <tg-foundation-general-search-header-icon
+        type="search"
+        [mobile]="true"></tg-foundation-general-search-header-icon>
+      <span
+        class="hide--telenet mt--default text--xs text-font-family--t1"
+        [innerHTML]="'ng.search-header.lbl.search' | translate"></span>
+    </tg-foundation-general-search-button>
+  </div>
+</div>
+
+<div
+  class="header-search-results justify-content--center flex-direction--row--md width--full position--fixed flex-direction--column display--flex"
+  [ngClass]="isSearchExpanded && inputField.value.length > 2 ? 'header-search-results--keyword' : ''">
+  <div
+    class="header-search--autosuggest width--full justify-content--center display--flex background-white flex-direction--column flex-direction--row--md"
+    *ngIf="inputField.value.length"
+    tgFoundationGeneralSearchKeyboardNavigationDirective>
+    <tg-foundation-general-search-suggestions
+      [suggestions$]="suggestions$"
+      [suggestionsFieldName]="suggestionsFieldName">
+    </tg-foundation-general-search-suggestions>
+    <tg-foundation-general-search-top-results
+      [detailsPagePath]="detailsPagePath"></tg-foundation-general-search-top-results>
+  </div>
+</div>

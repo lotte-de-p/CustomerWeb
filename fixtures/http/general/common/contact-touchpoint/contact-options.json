@@ -1,0 +1,67 @@
+[
+  {
+    "primaryCtaText": "Main Chat",
+    "chatChannels": [
+      {
+        "chatChannelIcon": "icon-messaging",
+        "chatChannelPrimaryCTA": "Liv1",
+        "chatChannelType": "live-chat",
+        "chatChannelDescription": "Liv11",
+        "liveChatFallback": false
+      },
+      {
+        "chatChannelIcon": "icon-face-adult",
+        "chatChannelPrimaryCTA": "Fb1",
+        "chatChannelUrl": "messenger.com/telenet",
+        "chatChannelType": "facebook-messenger",
+        "chatChannelDescription": "Fb11",
+        "facebookMessengerPageId": "21708711283",
+        "liveChatFallback": true
+      },
+      {
+        "chatChannelIcon": "icon-whatsapp",
+        "chatChannelPrimaryCTA": "WA1",
+        "chatChannelUrl": "&text=test",
+        "chatChannelType": "whatsapp",
+        "chatChannelDescription": "WA11",
+        "liveChatFallback": false
+      }
+    ],
+    "icon": "icon-euro",
+    "description": "Main Chat1",
+    "type": "chat-channel",
+    "openInNewTab": false
+  },
+  {
+    "primaryCtaText": "Contact us",
+    "icon": "icon-grid",
+    "description": "Contact us Desc",
+    "type": "contact-us",
+    "url": "tel:123 456 7",
+    "openInNewTab": false
+  },
+  {
+    "primaryCtaText": "Custom1-title",
+    "icon": "icon-email",
+    "description": "Custom1-desc",
+    "type": "custom-contact-option",
+    "url": "/content/community/badging",
+    "openInNewTab": true
+  },
+  {
+    "primaryCtaText": "Custom2-title",
+    "icon": "icon-house",
+    "description": "Custom2-desc",
+    "type": "custom-contact-option",
+    "url": "/content/experience-fragments",
+    "openInNewTab": false
+  },
+  {
+    "primaryCtaText": "search1",
+    "icon": "icon-face-adult",
+    "description": "search-desc1",
+    "type": "search-telenet-shop",
+    "url": "/content/communities/templates",
+    "openInNewTab": true
+  }
+]

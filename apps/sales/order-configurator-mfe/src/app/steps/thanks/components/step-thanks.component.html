@@ -1,0 +1,74 @@
+<div [attr.data-testid]="'feat-thank-you'" class="sales-checkout container--medium">
+  <div class="sales-page__container__title sales-page__container__title--secondary">
+    <div class="display--flex flex-direction--column">
+      <div class="sales-page__container__title__header text-align--center--md text-align--left">
+        {{ 'ng.sales-checkout.lbl.title.thank-you' | translate }}
+      </div>
+    </div>
+  </div>
+  <div
+    class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+    <div class="col-sm-12 sales-checkout">
+      <div>
+        <div class="stepper-page__body-inner p-0">
+          <div class="stepper-page__content--split container mobile-lines">
+            <div class="stepper-page__content-first position--sticky--md position--top--md">
+              @if (viewModel) {
+                <div
+                  [attr.data-testid]="'feat-thank-you-image'"
+                  [inlineSVG]="viewModel.stepImage"
+                  [resolveSVGUrl]="false"
+                  class="stepper-page__content-first flex-hide-until-sm"></div>
+                <div
+                  [attr.data-testid]="'feat-thank-you-mobile-image'"
+                  class="stepper-page__content-first flex-hide-from-sm"
+                  [inlineSVG]="viewModel.stepImage"
+                  [resolveSVGUrl]="false"></div>
+              }
+            </div>
+            <div class="stepper-page__content-second">
+              <div class="stepper-move" id="undefined">
+                <div class="text-flow text-flow--label stepper-page__title-label m-0"></div>
+                <div>
+                  <div class="sales-flow">
+                    <div class="sales-flow__content mb--xxxg">
+                      <div class="pt--xxl--md pr--xxxl--md pt--s">
+                        <h3 class="m-0">{{ 'ng.sales-checkout.text.thank-you-content-title' | translate }}</h3>
+                        <div class="text-align--left pt--xxs">
+                          <ng-container *ngIf="viewModel?.orderNumber$ | async as orderNumber">
+                            <div class="font--body-large">
+                              {{
+                                'ng.sales-checkout.text.thank-you-content-description'
+                                  | translate: { orderNumber: orderNumber }
+                              }}
+                              Order number: {{ orderNumber }}
+                            </div>
+                            <div class="mt--l font--body-small opacity--mid-transparency">
+                              {{
+                                'ng.sales-checkout.text.thank-you-content-subdescription'
+                                  | translate: { orderNumber: orderNumber }
+                              }}
+                              Order number: {{ orderNumber }}
+                            </div>
+                          </ng-container>
+                        </div>
+                        <div class="px--n--md text-align--left pt--l">
+                          <button
+                            [attr.data-testid]="'feat-thank-you-button'"
+                            class="button button--primary__dark"
+                            (click)="onRedirectClick()">
+                            <span>{{ 'ng.sales-checkout.lbl.button.thank-you' | translate }}</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

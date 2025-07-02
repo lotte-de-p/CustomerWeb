@@ -1,0 +1,28 @@
+{
+  "segment": "A",
+  "channel": "mobile",
+  "item_uid": "9158903454313180202",
+  "item_value": "10.00",
+  "cart": [
+    {
+      "name": "BASE Unlimited",
+      "price": "0.00",
+      "product_id": "BOYO0040",
+      "quantity": "1",
+      "product_type": "PRODUCT",
+      "status": "ADD"
+    },
+    {
+      "name": "New SIM Card",
+      "price": "10.00",
+      "product_id": "EQUI0226",
+      "quantity": "1",
+      "product_type": "SIM CARD",
+      "status": "ADD"
+    }
+  ],
+  "firstname": "MSINGHWHIZZ",
+  "lastname": "OKT",
+  "user_uid": "9158444850613362907",
+  "language": "en"
+}

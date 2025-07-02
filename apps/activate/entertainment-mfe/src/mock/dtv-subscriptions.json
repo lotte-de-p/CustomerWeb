@@ -1,0 +1,88 @@
+{
+  "url": "http://localhost:8080/public/api/dtv-box-management-service/v1/subscriptions",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "id": "9169395737913082977",
+      "identifier": "DTV000067311",
+      "addressId": "9165640897913195848",
+      "devices": [
+        {
+          "id": "9169395738913082977",
+          "name": "HD Digicorder",
+          "type": "SIPADAN",
+          "saleType": "RENT",
+          "macAddress": "00:11:22:33:44:55",
+          "serialNumber": "965325009601",
+          "modelNumber": "AD2100"
+        },
+        {
+          "id": "9169395732013083077",
+          "name": "HD Digicorder",
+          "type": "SIPADAN",
+          "saleType": "RENT",
+          "macAddress": "00:11:22:33:44:55",
+          "serialNumber": "964456628297",
+          "modelNumber": "AD2100"
+        }
+      ]
+    },
+    {
+      "id": "9169395737913082979",
+      "identifier": "DTV000067312",
+      "addressId": "9165640897913195848",
+      "devices": [
+        {
+          "id": "9169395738913082979",
+          "name": "HD Digicorder",
+          "type": "SIPADAN",
+          "saleType": "RENT",
+          "macAddress": "00:11:22:33:44:55",
+          "serialNumber": "965325009601",
+          "modelNumber": "AD2100"
+        },
+        {
+          "id": "9169395732013083079",
+          "name": "HD Digicorder",
+          "type": "SIPADAN",
+          "saleType": "RENT",
+          "macAddress": "00:11:22:33:44:55",
+          "serialNumber": "964456628297",
+          "modelNumber": "AD2100"
+        }
+      ]
+    },
+    {
+      "id": "9169395692713079080",
+      "identifier": "DTV000067309",
+      "addressId": "9165640896713195831",
+      "devices": []
+    },
+    {
+      "id": "9169395581213064032",
+      "identifier": "DTV000067308",
+      "addressId": "9165640887413194976",
+      "devices": [
+        {
+          "id": "9169395586213064032",
+          "name": "Telenet TV Box",
+          "type": "EOS",
+          "saleType": "RENT",
+          "macAddress": "FC:51:A4:CE:B2:3D",
+          "serialNumber": "966030775371",
+          "modelNumber": "DCX960"
+        },
+        {
+          "id": "9169395584213064032",
+          "name": "Telenet TV Box",
+          "type": "EOS",
+          "saleType": "RENT",
+          "macAddress": "AD:53:D4:BE:32:38",
+          "serialNumber": "226151189494",
+          "modelNumber": "DCX960"
+        }
+      ]
+    }
+  ]
+}

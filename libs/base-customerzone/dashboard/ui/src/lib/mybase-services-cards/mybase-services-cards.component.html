@@ -1,0 +1,19 @@
+@if (cards.length > 0) {
+  <div class="row">
+    <div class="col-12 mb--xs mb--m--md mt--xxl--md mt--l">
+      <span class="heading--4">
+        {{ 'ng.mybase-dashboard-' + type + '.services.title' | translate }}
+      </span>
+    </div>
+
+    @for (card of cards; track $index; let last = $last) {
+      <div class="col-12 col-md-6 col-lg-4 mb--m">
+        <tg-mybase-simple-card
+          [title]="'ng.mybase-dashboard-' + type + '.services.title-' + card | translate"
+          [cypressTag]="'mybase-dashboard-' + type + '.services.card-' + card"
+          [ngClass]="{ 'display--block': !last }"
+          (cardClicked)="redirectTo(card)"></tg-mybase-simple-card>
+      </div>
+    }
+  </div>
+}

@@ -1,0 +1,70 @@
+<div
+  [tgSalesProductFinderAlignRecommendationHtmlElements]="'badges'"
+  class="product-finder-result--screen-item--recommendation">
+  <div class="display--flex flex-wrap--wrap">
+    <div class="cmp-badge mr--s mb--s" *ngIf="salesOffer.promo">
+      <div class="background-dark-brown color-white display--inline-flex">
+        <p class="font--caption-bold text-weight--xl">
+          {{ 'ng.product-finder.results-screen.promo' | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="cmp-badge mr--s mb--s" *ngIf="isMostRecommended">
+      <div class="background-turquoise_40 color-text display--inline-flex">
+        <p class="font--caption-bold text-weight--xl">
+          {{ 'ng.product-finder.results-screen.most-recommended' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'caption'">
+  <p *ngIf="isMultipleTLO">
+    {{ 'ng.product-finder.results-screen.caption-multiple-tlo' | translate }}
+  </p>
+  <p *ngIf="containsC5Product">{{ 'ng.product-finder.results-screen.caption-C5' | translate }}</p>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'title'" class="my--xxxs">
+  <p class="text-flow text-flow--h3">{{ title }}</p>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'short-summaries'" class="mb--xl">
+  <ng-container *ngFor="let shortSummary of shortSummaries">
+    <p [innerHTML]="shortSummary"></p>
+  </ng-container>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'pricing'" class="mb--xl">
+  <tg-sales-pricing [salesOffer]="salesOffer"></tg-sales-pricing>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'result-details'" class="mb--l text-align--center">
+  <a href="javascript:void(0);" (click)="resultDetailsEvent.emit(index)" class="link"
+    ><span>{{ 'ng.product-finder.results-screen.info-and-options' | translate }}</span></a
+  >
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'order-button'" class="mb--xl">
+  <button (click)="orderEvent.emit(index)" class="button button button--primary button--fullwidth">
+    <span>{{ 'ng.product-finder.results-screen.btn.order' | translate }}</span>
+  </button>
+</div>
+<div [tgSalesProductFinderAlignRecommendationHtmlElements]="'detailed-specs'">
+  <p class="text-flow text-flow--h4 mb--xl">{{ 'ng.product-finder.results-screen.specs' | translate }}</p>
+  <div>
+    <ng-container *ngIf="isMultipleTLO; else other">
+      <tg-sales-detailed-spec
+        [title]="internetDetailedSpecsTitle"
+        [detailedSpecs]="internetDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec [detailedSpecs]="tvDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec
+        [title]="'ng.product-finder.results-screen.specs-mobile'"
+        [detailedSpecs]="mobileDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec
+        [title]="'ng.product-finder.results-screen.specs-fixed-telephone'"
+        [detailedSpecs]="fixedTelephoneDetailedSpecs"></tg-sales-detailed-spec>
+    </ng-container>
+    <ng-template #other>
+      <tg-sales-detailed-spec [detailedSpecs]="internetDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec [detailedSpecs]="tvDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec [detailedSpecs]="mobileDetailedSpecs"></tg-sales-detailed-spec>
+      <tg-sales-detailed-spec [detailedSpecs]="fixedTelephoneDetailedSpecs"></tg-sales-detailed-spec>
+    </ng-template>
+  </div>
+</div>

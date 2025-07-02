@@ -1,0 +1,1565 @@
+{
+  "salesOrderMockResponse": {
+    "data": {
+      "status": "ENTERING",
+      "customerId": "9149566706113852854",
+      "id": "9149131520113634156",
+      "name": "Sales Order #0000001189",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "EUR",
+          "deliveryCharge": "0,00",
+          "oneTimeDiscount": "0,00",
+          "oneTimeTotal": "0,00",
+          "recurrentDiscount": "0,00",
+          "recurrentTotal": "25,00"
+        }
+      },
+      "orderItems": [
+        {
+          "id": "9148384981065685788",
+          "name": "BASE 25",
+          "status": "MODIFY",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "deliveryCharge": "0,00",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "25,00"
+            }
+          },
+          "locationId": "9149566706113852860",
+          "specurl": "https://api.edp.telenet.be/omapi/public/plan/NC612",
+          "orderItems": [
+            {
+              "id": "1234567890",
+              "name": "Mobile Line",
+              "status": "ADD",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "deliveryCharge": "0,00",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "10,00"
+                }
+              },
+              "locationId": "0987654321",
+              "specurl": "https://api.edp.telenet.be/omapi/public/plan/EPC123"
+            },
+            {
+              "id": "1234567890",
+              "name": "Mobile Line",
+              "status": "DISCONNECT",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "deliveryCharge": "0,00",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "5,00"
+                }
+              },
+              "locationId": "0987654321",
+              "specurl": "https://api.edp.telenet.be/omapi/public/plan/EPC124"
+            }
+          ],
+          "spec": {
+            "product": {
+              "productid": "BOYO0025",
+              "labelkey": "25 Based on you",
+              "category": ["POST-PAID-MOBILE"]
+            }
+          }
+        }
+      ],
+      "delivery": {
+        "locationId": "9150057943613416650",
+        "contact": {
+          "firstName": "FirstName",
+          "lastName": "LastName",
+          "phoneNumber": "0465635019",
+          "email": "testemail@gmail.com"
+        },
+        "address": {
+          "id": "9149578220013870928",
+          "country": "Belgium",
+          "municipality": "Willebroek",
+          "postalCode": "2830",
+          "street": "Overwinningsstraat",
+          "houseNumber": "112",
+          "boxNumber": "12345"
+        }
+      },
+      "itemsCount": "1"
+    },
+    "success": true
+  },
+  "mockDataLayerSalesResponse": {
+    "data": {
+      "status": "Entering",
+      "customerId": "9151734536551973693",
+      "id": "12345",
+      "name": "Order #0000119250",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "EUR",
+          "oneTimeDiscount": "0,00",
+          "oneTimeTotal": "0,00",
+          "recurrentDiscount": "2,00",
+          "recurrentTotal": "98,99",
+          "terminationCharge": "0,00",
+          "oneTimeDiscounted": "0,00",
+          "recurrentDiscounted": "49,99"
+        }
+      },
+      "orderItems": [
+        {
+          "id": "9152010940251378333",
+          "name": "35 Based on you / 0489000079",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "35,00",
+              "netAmount": "49,99",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "35,00"
+            }
+          },
+          "locationId": "9151734536551973702",
+          "parentId": "9152010178213999679",
+          "specurl": "https://api.sup.base.be/omapi/public/product/BOYO0035",
+          "orderItems": [
+            {
+              "id": "9152010940251378348",
+              "name": "Unlimited call - Based on you",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "2,00",
+                  "netAmount": "2,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "2,00"
+                }
+              },
+              "locationId": "9151734536551973702",
+              "parentId": "9152010940251378333",
+              "specurl": "https://api.sup.base.be/omapi/public/product/UNLM0002",
+              "orderItems": [],
+              "status": "ADDED",
+              "spec": {
+                "product": {
+                  "productid": "UNLM0002",
+                  "externalProductCode": "UNLM0002",
+                  "labelkey": "Unlimited call - Based on you",
+                  "producttype": "OPTION",
+                  "weight": 10,
+                  "apps": [],
+                  "customercategories": ["RESIDENTIAL"],
+                  "category": ["Voice Options"],
+                  "localizedcontent": [
+                    {
+                      "locale": "nl",
+                      "name": "Onbeperkt bellen - Based on you",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Appels illimités - Based on you",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png"
+                    },
+                    {
+                      "locale": "en",
+                      "name": "Unlimited call - Based on you",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png"
+                    }
+                  ],
+                  "subcategory": {
+                    "name": "Calling",
+                    "localizedcontent": [
+                      {
+                        "locale": "nl",
+                        "name": "Bellen in België",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Appeler en Belgique",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "en",
+                        "name": "Calling in Belgium",
+                        "logo": ""
+                      }
+                    ],
+                    "weight": 10,
+                    "mutualexclusion": false
+                  },
+                  "services": [
+                    {
+                      "servicetype": "MOBILE_CALLING",
+                      "experience": {
+                        "experiencetype": "CALL"
+                      },
+                      "specifications": [
+                        {
+                          "labelkey": "spec.mobilecalling.minutes.national/EU",
+                          "value": "2",
+                          "unit": "EUR",
+                          "visible": true,
+                          "weight": "0",
+                          "localizedcontent": [
+                            {
+                              "locale": "nl",
+                              "name": "Onbeperkt bellen naar alle nummers in België (ook geldig in de EU-zone)",
+                              "logo": ""
+                            },
+                            {
+                              "locale": "fr",
+                              "name": "Appels illimités vers tous les numéros en Belgique (aussi valable dans la zone UE)",
+                              "logo": ""
+                            },
+                            {
+                              "locale": "en",
+                              "name": "Unlimited calls to all numbers in Belgium (also valid in the EU zone)",
+                              "logo": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "characteristics": {
+                    "salespricevatincl": {
+                      "value": 2,
+                      "unit": "EUR",
+                      "overriddenprice": [
+                        {
+                          "value": 5,
+                          "unit": "EUR",
+                          "externalProductcode": "BOYO0015"
+                        }
+                      ]
+                    }
+                  },
+                  "visibilityrules": {
+                    "conditionalvisibility": true
+                  }
+                }
+              },
+              "productInfo": {
+                "services": [
+                  {
+                    "specifications": [
+                      {
+                        "key": "spec-mobilecalling-minutes-nationaleu",
+                        "visible": true,
+                        "weight": "0",
+                        "value": "2",
+                        "formattedValue": "2",
+                        "unit": "EUR",
+                        "localizedcontent": {
+                          "locale": "en",
+                          "name": "Unlimited calls to all numbers in Belgium (also valid in the EU zone)",
+                          "logo": ""
+                        }
+                      }
+                    ],
+                    "key": "",
+                    "type": "mobile_calling",
+                    "experience": {
+                      "type": "call"
+                    }
+                  }
+                ],
+                "apps": [],
+                "id": "UNLM0002",
+                "epc": "UNLM0002",
+                "key": "unlimited-call---based-on-you",
+                "category": ["voice-options"],
+                "labelKey": "Unlimited call - Based on you",
+                "type": "option",
+                "weight": 10,
+                "characteristics": {
+                  "productSubGroup": "",
+                  "priceInclVat": 2,
+                  "recipientsMandatory": false
+                },
+                "name": "Unlimited call - Based on you",
+                "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/unlimited-call---based-on-you.png",
+                "shortDescription": null,
+                "subcategory": {
+                  "name": "Calling",
+                  "weight": 10,
+                  "mutualExclusion": false,
+                  "localizedName": "Calling in Belgium",
+                  "normalizedName": "calling"
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": true
+                }
+              }
+            },
+            {
+              "id": "9152010940351378395",
+              "name": "Option Spotify",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "1,00",
+                  "recurrentDiscount": "2,00",
+                  "recurrentTotal": "2,99",
+                  "netAmount": "9,99",
+                  "oneTimeDiscounted": "0,10",
+                  "recurrentDiscounted": "1,99"
+                }
+              },
+              "locationId": "9151734536551973702",
+              "parentId": "9152010940251378333",
+              "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+              "orderItems": [],
+              "status": "ADD",
+              "spec": {
+                "product": {
+                  "productid": "CLOD0002",
+                  "externalProductCode": "CLOD0002",
+                  "labelkey": "BASE cloud 32 GB",
+                  "producttype": "OPTION",
+                  "weight": 20,
+                  "apps": [],
+                  "customercategories": ["RESIDENTIAL"],
+                  "category": ["Other Options"],
+                  "localizedcontent": [
+                    {
+                      "locale": "nl",
+                      "name": "Spotify Premium",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/option-spotify.png"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Spotify Premium",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/option-spotify.png"
+                    },
+                    {
+                      "locale": "en",
+                      "name": "Spotify Premium",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/option-spotify.png"
+                    }
+                  ],
+                  "subcategory": {
+                    "name": "Spotify",
+                    "localizedcontent": [
+                      {
+                        "locale": "nl",
+                        "name": "Spotify",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Spotify",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "en",
+                        "name": "Spotify",
+                        "logo": ""
+                      }
+                    ],
+                    "weight": 20,
+                    "mutualexclusion": false
+                  },
+                  "characteristics": {
+                    "salespricevatincl": {
+                      "value": 5,
+                      "unit": "EUR",
+                      "overriddenprice": []
+                    }
+                  },
+                  "visibilityrules": {
+                    "conditionalvisibility": false
+                  }
+                }
+              },
+              "productInfo": {
+                "services": [],
+                "apps": [],
+                "id": "SPPR0000",
+                "epc": "SPPR0000",
+                "key": "option-spotify",
+                "category": ["other-options"],
+                "labelKey": "Option Spotify",
+                "type": "option",
+                "weight": 20,
+                "characteristics": {
+                  "productSubGroup": "",
+                  "priceInclVat": 5,
+                  "recipientsMandatory": false
+                },
+                "name": "Spotify Premium",
+                "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/option-spotify.png",
+                "shortDescription": null,
+                "subcategory": {
+                  "name": "Spotify",
+                  "weight": 20,
+                  "mutualExclusion": false,
+                  "localizedName": "Spotify",
+                  "normalizedName": "spotify"
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                }
+              }
+            },
+            {
+              "id": "9152011000551383440",
+              "name": "Voice Europe 60 MIN",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "1,99",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "80,00",
+                  "netAmount": "5,00",
+                  "oneTimeDiscounted": "1,89",
+                  "recurrentDiscounted": "79,01"
+                }
+              },
+              "locationId": "9151734536551973702",
+              "parentId": "9152010940251378333",
+              "specurl": "https://api.sup.base.be/omapi/public/product/VOEU0060",
+              "orderItems": [],
+              "status": "ADD",
+              "spec": {
+                "product": {
+                  "productid": "INTW0500",
+                  "externalProductCode": "INTW0500",
+                  "labelkey": "Dataroaming Preferred netw XL",
+                  "producttype": "OPTION",
+                  "weight": 60,
+                  "apps": [],
+                  "customercategories": ["RESIDENTIAL"],
+                  "category": ["Voice Options"],
+                  "localizedcontent": [
+                    {
+                      "locale": "nl",
+                      "name": "60 minuten bellen naar en in Europa",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "60 minutes d'appel vers et en Europe",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+                    },
+                    {
+                      "locale": "en",
+                      "name": "60 minutes calling to and in Europe",
+                      "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png"
+                    }
+                  ],
+                  "subcategory": {
+                    "name": "Calls to numbers in Europe",
+                    "localizedcontent": [
+                      {
+                        "locale": "nl",
+                        "name": "Bellen naar nummers in Europa",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "fr",
+                        "name": "Appeler vers les numéros en Europe",
+                        "logo": ""
+                      },
+                      {
+                        "locale": "en",
+                        "name": "Calling to numbers in Europe",
+                        "logo": ""
+                      }
+                    ],
+                    "weight": 40,
+                    "mutualexclusion": true
+                  },
+                  "services": [
+                    {
+                      "servicetype": "MOBILE_CALLING",
+                      "experience": {
+                        "experiencetype": "CALL"
+                      },
+                      "specifications": [
+                        {
+                          "labelkey": "spec.mobilecalling.minutes.national/EU",
+                          "value": "5",
+                          "unit": "EUR",
+                          "visible": true,
+                          "weight": "0",
+                          "localizedcontent": [
+                            {
+                              "locale": "nl",
+                              "name": "60 minuten om te bellen naar Europese landen of in Europa",
+                              "logo": ""
+                            },
+                            {
+                              "locale": "fr",
+                              "name": "60 minutes pour vos appels vers des pays européens ou en Europe",
+                              "logo": ""
+                            },
+                            {
+                              "locale": "en",
+                              "name": "60 minutes to call to European countries or in Europe",
+                              "logo": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "characteristics": {
+                    "salespricevatincl": {
+                      "value": 5,
+                      "unit": "EUR",
+                      "overriddenprice": []
+                    }
+                  },
+                  "visibilityrules": {
+                    "conditionalvisibility": false
+                  }
+                }
+              },
+              "productInfo": {
+                "services": [
+                  {
+                    "specifications": [
+                      {
+                        "key": "spec-mobilecalling-minutes-nationaleu",
+                        "visible": true,
+                        "weight": "0",
+                        "value": "5",
+                        "formattedValue": "5",
+                        "unit": "EUR",
+                        "localizedcontent": {
+                          "locale": "en",
+                          "name": "60 minutes to call to European countries or in Europe",
+                          "logo": ""
+                        }
+                      }
+                    ],
+                    "key": "",
+                    "type": "mobile_calling",
+                    "experience": {
+                      "type": "call"
+                    }
+                  }
+                ],
+                "apps": [],
+                "id": "VOEU0060",
+                "key": "voice-europe-60-min",
+                "category": ["voice-options"],
+                "labelKey": "Voice Europe 60 MIN",
+                "type": "option",
+                "weight": 60,
+                "characteristics": {
+                  "productSubGroup": "",
+                  "priceInclVat": 5,
+                  "recipientsMandatory": false
+                },
+                "name": "60 minutes calling to and in Europe",
+                "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-60-min.png",
+                "shortDescription": null,
+                "subcategory": {
+                  "name": "Calls to numbers in Europe",
+                  "weight": 40,
+                  "mutualExclusion": true,
+                  "localizedName": "Calling to numbers in Europe",
+                  "normalizedName": "calls-to-numbers-in-europe"
+                },
+                "visibilityrules": {
+                  "conditionalvisibility": false
+                }
+              }
+            }
+          ],
+          "status": "ADDED",
+          "spec": {
+            "product": {
+              "productid": "BOYO0035",
+              "externalProductCode": "BOYO0035",
+              "labelkey": "35 Based on you",
+              "producttype": "PRODUCT",
+              "weight": 30,
+              "apps": [],
+              "customercategories": ["RESIDENTIAL"],
+              "category": ["POST-PAID-MOBILE"],
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "35 Based on you",
+                  "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/35-based-on-you.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "35 Based on you",
+                  "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/35-based-on-you.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "35 Based on you",
+                  "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/35-based-on-you.png"
+                }
+              ],
+              "shortdescription": {
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "name": "Combineer 0 tot 12 GB met 0 tot 1200 belminuten. Wat je niet verbruikt, neem je mee naar volgende maand.",
+                    "logo": ""
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "Combinez de 0 à 12 GB et 0 à 1200 minutes d'appel. Ce que vous ne consommez pas est reporté au mois suivant.",
+                    "logo": ""
+                  },
+                  {
+                    "locale": "en",
+                    "name": "Combine 0 to 12 GB with 0 to 1200 minutes. What you don't use up, you carry over to next month.",
+                    "logo": ""
+                  }
+                ]
+              },
+              "rates": [
+                {
+                  "type": "DATA",
+                  "unit": "MB",
+                  "cost": "0,002848",
+                  "currency": "EUR"
+                },
+                {
+                  "type": "VOICE",
+                  "unit": "MIN",
+                  "cost": "0,029166",
+                  "currency": "EUR"
+                }
+              ],
+              "services": [
+                {
+                  "servicetype": "MOBILE_CALLING",
+                  "experience": {
+                    "experiencetype": "CALL"
+                  },
+                  "specifications": [
+                    {
+                      "labelkey": "spec.mobilecalling.minutes.onnet",
+                      "value": "unlimited",
+                      "unit": "minutes",
+                      "visible": true,
+                      "weight": "40",
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "Bellen naar BASE",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "Appels vers BASE",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "en",
+                          "name": "Calls to BASE",
+                          "logo": ""
+                        }
+                      ]
+                    },
+                    {
+                      "labelkey": "spec.mobilecalling.minutes.national/EU",
+                      "unit": "minutes",
+                      "visible": true,
+                      "weight": "30",
+                      "minvalue": "0",
+                      "maxvalue": "1200",
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "Minuten naar alle nummers in België (en van de EU-zone naar de EU-zone)",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "Minutes vers tous les numéros en Belgique (et de la zone UE vers la zone UE)",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "en",
+                          "name": "Minutes to all numbers in Belgium (and from the EU-zone to the EU-zone)",
+                          "logo": ""
+                        }
+                      ]
+                    },
+                    {
+                      "labelkey": "spec.mobilecalling.sms.national/EU",
+                      "value": "unlimited",
+                      "unit": "number",
+                      "visible": true,
+                      "weight": "50",
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "Sms'en",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "SMS",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "en",
+                          "name": "Texting",
+                          "logo": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "servicetype": "MOBILE_MONETARY",
+                  "experience": {
+                    "experiencetype": "GENERAL"
+                  },
+                  "specifications": [
+                    {
+                      "labelkey": "spec.mobilemonetary.volume.national/EU",
+                      "value": "35",
+                      "unit": "EUR",
+                      "visible": true,
+                      "weight": "10",
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "Maandelijks bedrag",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "Montant mensuel",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "en",
+                          "name": "Monthly amount",
+                          "logo": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "servicetype": "MOBILE_INTERNET",
+                  "experience": {
+                    "experiencetype": "SURF"
+                  },
+                  "specifications": [
+                    {
+                      "labelkey": "spec.mobileinternet.data.national/EU",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": "20",
+                      "minvalue": "0",
+                      "maxvalue": "12",
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "Mobiele data in België en de EU-zone",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "Données mobiles en Belgique and dans la zone UE",
+                          "logo": ""
+                        },
+                        {
+                          "locale": "en",
+                          "name": "Data usage in Belgium and the EU-zone",
+                          "logo": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "salespricevatincl": {
+                  "value": 35,
+                  "unit": "EUR",
+                  "overriddenprice": []
+                }
+              },
+              "visibilityrules": {
+                "conditionalvisibility": false
+              }
+            }
+          },
+          "productInfo": {
+            "services": [
+              {
+                "specifications": [
+                  {
+                    "key": "spec-mobilecalling-minutes-onnet",
+                    "visible": true,
+                    "weight": "40",
+                    "value": "unlimited",
+                    "formattedValue": "unlimited",
+                    "unit": "minutes",
+                    "localizedcontent": {
+                      "locale": "en",
+                      "name": "Calls to BASE",
+                      "logo": ""
+                    }
+                  },
+                  {
+                    "key": "spec-mobilecalling-minutes-nationaleu",
+                    "visible": true,
+                    "weight": "30",
+                    "minValue": "0",
+                    "maxValue": "1200",
+                    "formattedMinValue": "0",
+                    "formattedMaxValue": "1.200",
+                    "unit": "minutes",
+                    "localizedcontent": {
+                      "locale": "en",
+                      "name": "Minutes to all numbers in Belgium (and from the EU-zone to the EU-zone)",
+                      "logo": ""
+                    }
+                  },
+                  {
+                    "key": "spec-mobilecalling-sms-nationaleu",
+                    "visible": true,
+                    "weight": "50",
+                    "value": "unlimited",
+                    "formattedValue": "unlimited",
+                    "unit": "number",
+                    "localizedcontent": {
+                      "locale": "en",
+                      "name": "Texting",
+                      "logo": ""
+                    }
+                  }
+                ],
+                "key": "",
+                "type": "mobile_calling",
+                "experience": {
+                  "type": "call"
+                }
+              },
+              {
+                "specifications": [
+                  {
+                    "key": "spec-mobilemonetary-volume-nationaleu",
+                    "visible": true,
+                    "weight": "10",
+                    "value": "35",
+                    "formattedValue": "35",
+                    "unit": "EUR",
+                    "localizedcontent": {
+                      "locale": "en",
+                      "name": "Monthly amount",
+                      "logo": ""
+                    }
+                  }
+                ],
+                "key": "",
+                "type": "mobile_monetary",
+                "experience": {
+                  "type": "general"
+                }
+              },
+              {
+                "specifications": [
+                  {
+                    "key": "spec-mobileinternet-data-nationaleu",
+                    "visible": true,
+                    "weight": "20",
+                    "minValue": "0",
+                    "maxValue": "12",
+                    "formattedMinValue": "0",
+                    "formattedMaxValue": "12",
+                    "unit": "GB",
+                    "localizedcontent": {
+                      "locale": "en",
+                      "name": "Data usage in Belgium and the EU-zone",
+                      "logo": ""
+                    }
+                  }
+                ],
+                "key": "",
+                "type": "mobile_internet",
+                "experience": {
+                  "type": "surf"
+                }
+              }
+            ],
+            "apps": [],
+            "id": "BOYO0035",
+            "key": "35-based-on-you",
+            "category": ["POST-PAID-MOBILE"],
+            "labelKey": "35 Based on you",
+            "type": "product",
+            "weight": 30,
+            "characteristics": {
+              "productSubGroup": "",
+              "priceInclVat": 35,
+              "recipientsMandatory": false
+            },
+            "name": "35 Based on you",
+            "logo": "https://customerzone.local.base.be/content/dam/www-base-be/img/self-service/products/35-based-on-you.png",
+            "shortDescription": "Combine 0 to 12 GB with 0 to 1200 minutes. What you don't use up, you carry over to next month.",
+            "rates": [
+              {
+                "type": "DATA",
+                "unit": "MB",
+                "cost": "0,002848",
+                "currency": "EUR"
+              },
+              {
+                "type": "VOICE",
+                "unit": "MIN",
+                "cost": "0,029166",
+                "currency": "EUR"
+              }
+            ],
+            "visibilityrules": {
+              "conditionalvisibility": false
+            }
+          }
+        }
+      ],
+      "itemsCount": 0,
+      "token": "fad4f8a5-5a60-4ac9-96ea-89b4a7a1586c"
+    },
+    "status": 200,
+    "config": {
+      "method": "PUT",
+      "transformRequest": [null],
+      "transformResponse": [null],
+      "url": "https://api.sup.base.be/ocapi/public/api/sales-service/v1/products/0489000079/options?salesOrder=9152010178213999679",
+      "headers": {
+        "x-alt-referer": "https://customerzone.sup.base.be/en/test_2483.html?item=0489000079",
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      "timeout": 120000,
+      "withCredentials": true,
+      "data": {
+        "options": [
+          {
+            "productid": "VOEU0060",
+            "active": true
+          }
+        ]
+      }
+    },
+    "statusText": "OK",
+    "success": true
+  },
+  "getMockSalesOrderWithNonEligibleDevice": {
+    "data": {
+      "status": "Entering",
+      "customerId": "9150592324913308707",
+      "id": "9152201403513837482",
+      "name": "Order #0000552701",
+      "prices": {
+        "currency": "EUR",
+        "deliveryCharge": "0,00",
+        "oneTimeDiscount": "0,00",
+        "oneTimeTotal": "599,00",
+        "recurrentDiscount": "0,00",
+        "recurrentTotal": "50,00",
+        "netAmount": "0,00",
+        "oneTimeDiscounted": "599,00",
+        "recurrentDiscounted": "50,00"
+      },
+      "orderItems": [
+        {
+          "id": "9152202243813902671",
+          "name": "35 Based on you",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "35,00",
+              "netAmount": "35,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            }
+          },
+          "locationId": "9150593088751409440",
+          "parentId": "9152201403513837482",
+          "specurl": "https://api.int.base.be/omapi/public/product/BOYO0035",
+          "orderItems": [],
+          "status": "ADD"
+        },
+        {
+          "id": "9152202243813902673",
+          "name": "APPLE iPHONE 7+ BLK 4G 32GB",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "0,00",
+              "netAmount": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            }
+          },
+          "locationId": "9150593088751409440",
+          "parentId": "9152202243813902671",
+          "eligibility": false,
+          "specurl": "https://api.int.base.be/omapi/public/product/EQUI0019",
+          "status": "ADD"
+        }
+      ],
+      "itemsCount": 1,
+      "delivery": {
+        "id": "9152202243913902716",
+        "contact": {
+          "firstName": "Check",
+          "lastName": "Ololoa",
+          "phoneNumber": "0987654321",
+          "email": "mail@mai.ml"
+        }
+      },
+      "token": "e33802f2-afee-459b-b2cf-7c71aeb4cbd5"
+    },
+    "success": true
+  },
+  "getMockSalesOrderWithEligibleDevice": {
+    "data": {
+      "status": "Entering",
+      "customerId": "9150592324913308707",
+      "id": "9152201403513837482",
+      "name": "Order #0000552701",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "EUR",
+          "deliveryCharge": "0,00",
+          "oneTimeDiscount": "0,00",
+          "oneTimeTotal": "599,00",
+          "recurrentDiscount": "0,00",
+          "recurrentTotal": "50,00",
+          "netAmount": "0,00",
+          "oneTimeDiscounted": "599,00",
+          "recurrentDiscounted": "50,00"
+        }
+      },
+      "orderItems": [
+        {
+          "id": "9152202243813902671",
+          "name": "35 Based on you",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "35,00",
+              "netAmount": "35,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            }
+          },
+          "locationId": "9150593088751409440",
+          "parentId": "9152201403513837482",
+          "specurl": "https://api.int.base.be/omapi/public/product/BOYO0035",
+          "orderItems": [],
+          "status": "ADD"
+        },
+        {
+          "id": "9152202243813902673",
+          "name": "APPLE iPHONE 7+ BLK 4G 32GB",
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "0,00",
+              "netAmount": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "0,00"
+            }
+          },
+          "locationId": "9150593088751409440",
+          "parentId": "9152202243813902671",
+          "eligibility": true,
+          "specurl": "https://api.int.base.be/omapi/public/product/EQUI0019",
+          "status": "ADD"
+        }
+      ],
+      "itemsCount": 1,
+      "delivery": {
+        "id": "9152202243913902716",
+        "contact": {
+          "firstName": "Check",
+          "lastName": "Ololoa",
+          "phoneNumber": "0987654321",
+          "email": "mail@mai.ml"
+        }
+      },
+      "token": "e33802f2-afee-459b-b2cf-7c71aeb4cbd5"
+    },
+    "success": true
+  },
+  "mocksalesResponsewithLineitems": {
+    "success": "true",
+    "data": {
+      "status": "Entering",
+      "customerId": "9152763807413632111",
+      "id": "9154577186413050110",
+      "name": "Order #0000366191",
+      "prices": {
+        "taxInclPrices": {
+          "currency": "EUR",
+          "oneTimeDiscount": "15,00",
+          "oneTimeTotal": "125,00",
+          "oneTimeDiscounted": "110,00",
+          "terminationCharge": "10,00",
+          "recurrentDiscount": "25,00",
+          "recurrentTotal": "55,00",
+          "recurrentDiscounted": "30,00",
+          "oneTimeDiscountedOnNextInvoice": "25,00"
+        },
+        "taxExclPrices": {
+          "currency": "EUR",
+          "oneTimeDiscount": "5,00",
+          "oneTimeTotal": "95,00",
+          "oneTimeDiscounted": "90,00",
+          "terminationCharge": "5,00",
+          "recurrentDiscount": "22,00",
+          "recurrentTotal": "40,00",
+          "recurrentDiscounted": "18,00",
+          "oneTimeDiscountedOnNextInvoice": "20,00"
+        }
+      },
+      "lineItems": [
+        {
+          "type": "New Line Acquisition",
+          "orderItems": [
+            {
+              "id": "9154577959152539825",
+              "name": "15 Based on you",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9152763807413632788",
+              "parentId": "9154577186413050110",
+              "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0015",
+              "billingAddressId": "9153462896013523517",
+              "eligibility": "ADD",
+              "orderItems": [
+                {
+                  "id": "9153662764313918101",
+                  "name": "Unlimited call",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "15,00",
+                      "oneTimeTotal": "125,00",
+                      "oneTimeDiscounted": "110,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "5,00",
+                      "oneTimeTotal": "95,00",
+                      "oneTimeDiscounted": "90,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9154577959152539825",
+                  "specurl": "https://api.sup.base.be/omapi/public/product/UNLM0002",
+                  "orderItems": [],
+                  "status": "ADD"
+                },
+                {
+                  "id": "9153662764313918102",
+                  "name": "SPOTIFY",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "15,00",
+                      "oneTimeTotal": "125,00",
+                      "oneTimeDiscounted": "110,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "5,00",
+                      "oneTimeTotal": "95,00",
+                      "oneTimeDiscounted": "90,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9154577959152539825",
+                  "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+                  "orderItems": [],
+                  "status": "ADD"
+                },
+                {
+                  "id": "9153662764313918428",
+                  "name": "Samsung",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "0,00",
+                      "oneTimeTotal": "0,00",
+                      "oneTimeDiscounted": "0,00",
+                      "recurrentDiscount": "0,00",
+                      "recurrentTotal": "0,00",
+                      "recurrentDiscounted": "0,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "0,00",
+                      "oneTimeTotal": "0,00",
+                      "oneTimeDiscounted": "0,00",
+                      "recurrentDiscount": "0,00",
+                      "recurrentTotal": "0,00",
+                      "recurrentDiscounted": "0,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+                  "orderItems": [
+                    {
+                      "id": "9153662764313918428",
+                      "name": "Samsung OTC",
+                      "prices": {
+                        "taxInclPrices": {
+                          "currency": "EUR",
+                          "oneTimeDiscount": "50,00",
+                          "oneTimeTotal": "500,00",
+                          "oneTimeDiscounted": "450,00",
+                          "recurrentDiscount": "0,00",
+                          "recurrentTotal": "0,00",
+                          "recurrentDiscounted": "0,00"
+                        },
+                        "taxExclPrices": {
+                          "currency": "EUR",
+                          "oneTimeDiscount": "50,00",
+                          "oneTimeTotal": "450,00",
+                          "oneTimeDiscounted": "400,00",
+                          "recurrentDiscount": "0,00",
+                          "recurrentTotal": "0,00",
+                          "recurrentDiscounted": "0,00"
+                        }
+                      },
+                      "locationId": "9151718264451773823",
+                      "parentId": "9153662764113918312",
+                      "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+                      "orderItems": [],
+                      "status": "ADD"
+                    }
+                  ],
+                  "status": "ADD"
+                }
+              ],
+              "status": "ADD",
+              "validations": [
+                {
+                  "typeOfProblem": "CUSTOMER_INFO_NOT_FILLED",
+                  "validationPriority": "ERROR(10)",
+                  "message": "Mandatory fields on the customer Account needs to be fill-in properly."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "productIdentifier": "0489093146",
+          "type": "Modify Product",
+          "orderItems": [
+            {
+              "id": "9154577959152539825",
+              "name": "45 Based on you / 0489093146",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153661678313855656",
+              "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0045",
+              "billingAddressId": "9153462896013523517",
+              "orderItems": [
+                {
+                  "id": "9153662764313918428",
+                  "name": "Unlimited call",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "15,00",
+                      "oneTimeTotal": "125,00",
+                      "oneTimeDiscounted": "110,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "5,00",
+                      "oneTimeTotal": "95,00",
+                      "oneTimeDiscounted": "90,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https://api.sup.base.be/omapi/public/product/UNLM0002",
+                  "orderItems": [],
+                  "status": "ADD"
+                },
+                {
+                  "id": "9153662764313918428",
+                  "name": "SPOTIFY",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "15,00",
+                      "oneTimeTotal": "125,00",
+                      "oneTimeDiscounted": "110,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "5,00",
+                      "oneTimeTotal": "95,00",
+                      "oneTimeDiscounted": "90,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https://api.sup.base.be/omapi/public/product/SPPR0000",
+                  "orderItems": [
+                    {
+                      "id": "9153662764313918428",
+                      "name": "Cancellation Fee",
+                      "prices": {
+                        "taxInclPrices": {
+                          "currency": "EUR",
+                          "oneTimeDiscount": "0,00",
+                          "oneTimeTotal": "20,00",
+                          "recurrentDiscount": "0,00",
+                          "recurrentTotal": "0,00",
+                          "oneTimeDiscounted": "20,00",
+                          "recurrentDiscounted": "0,00"
+                        },
+                        "taxExclPrices": {
+                          "currency": "EUR",
+                          "oneTimeDiscount": "0,00",
+                          "oneTimeTotal": "20,00",
+                          "recurrentDiscount": "0,00",
+                          "recurrentTotal": "0,00",
+                          "terminationCharge": "0,00",
+                          "oneTimeDiscounted": "20,00",
+                          "recurrentDiscounted": "0,00"
+                        }
+                      },
+                      "locationId": "9151718264451773823",
+                      "parentId": "9153662764113918312",
+                      "specurl": "https: //api.sup.base.be/omapi/public/product/CANF0001",
+                      "orderItems": [],
+                      "status": "ADD"
+                    }
+                  ],
+                  "status": "DISCONNECT"
+                },
+                {
+                  "id": "9153662764313918428",
+                  "name": "Call to Europe",
+                  "prices": {
+                    "taxInclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "15,00",
+                      "oneTimeTotal": "125,00",
+                      "oneTimeDiscounted": "110,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    },
+                    "taxExclPrices": {
+                      "currency": "EUR",
+                      "oneTimeDiscount": "5,00",
+                      "oneTimeTotal": "95,00",
+                      "oneTimeDiscounted": "90,00",
+                      "recurrentDiscount": "20,00",
+                      "recurrentTotal": "40,00",
+                      "recurrentDiscounted": "20,00"
+                    }
+                  },
+                  "locationId": "9151718264451773823",
+                  "parentId": "9153662764113918312",
+                  "specurl": "https://api.sup.base.be/omapi/public/product/EUROPE10",
+                  "orderItems": [],
+                  "status": "ADDED"
+                }
+              ],
+              "status": "MODIFY"
+            },
+            {
+              "id": "9154577959152539825",
+              "name": "25 Based on you / 0489093146",
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "15,00",
+                  "oneTimeTotal": "125,00",
+                  "oneTimeDiscounted": "110,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "5,00",
+                  "oneTimeTotal": "95,00",
+                  "oneTimeDiscounted": "90,00",
+                  "recurrentDiscount": "20,00",
+                  "recurrentTotal": "40,00",
+                  "recurrentDiscounted": "20,00"
+                }
+              },
+              "locationId": "9151718264451773823",
+              "parentId": "9153661678313855656",
+              "specurl": "https://api.uat.base.be/omapi/public/product/BOYO0025",
+              "billingAddressId": "9153462896013523517",
+              "orderItems": [],
+              "status": "ACTIVE"
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "id": "9154577959152539888",
+        "name": "Delivery",
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "20,00",
+            "oneTimeDiscounted": "20,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "30,00",
+            "recurrentDiscounted": "30,00"
+          },
+          "taxExclPrices": {
+            "currency": "EUR",
+            "oneTimeDiscount": "0,00",
+            "oneTimeTotal": "15,00",
+            "oneTimeDiscounted": "15,00",
+            "recurrentDiscount": "0,00",
+            "recurrentTotal": "25,00",
+            "recurrentDiscounted": "25,00"
+          }
+        },
+        "parentId": "9154577186413050110",
+        "specurl": "https://api.uat.base.be/omapi/public/product/TECH0021",
+        "chars": {
+          "email": "test@gmail.com",
+          "phoneNumber": "0466322909",
+          "locationId": "91527638074136327777",
+          "contactFirstName": "Hello",
+          "contactLastName": "World",
+          "address": {
+            "type": "Geographical Address",
+            "country": "België",
+            "municipality": "AnonymousLocation",
+            "houseNumber": "10",
+            "subHouseNumber": "10a",
+            "boxNumber": "101",
+            "street": "Electricistraat",
+            "streetId": "915323545489456132",
+            "postalCode": "2800"
+          }
+        },
+        "orderItems": [],
+        "status": "ADD"
+      },
+      "lineCount": 3,
+      "token": "dd7256b1-5eca-4d16-b4d3-a0a2401a0bdc",
+      "validations": [
+        {
+          "typeOfProblem": "CUSTOMER_INFO_NOT_FILLED",
+          "validationPriority": "ERROR(10)",
+          "message": "Mandatory fields on the customer Account needs to be fill-in properly."
+        }
+      ]
+    }
+  }
+}

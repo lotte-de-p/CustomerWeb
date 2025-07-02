@@ -1,0 +1,24 @@
+<div
+  class="mybase-simple-card display--flex align-items--center p--m p--l--lg background-white cursor--pointer--hover"
+  [ngClass]="{ 'height--full': fullHeight }"
+  (click)="cardClicked.emit()"
+  [attr.data-cy]="cypressTag">
+  @if (iconName) {
+    <div class="display--flex justify-content--center align-items--center mr--s">
+      <i class="icon icon-md {{ iconName }} icon-no-size-override"></i>
+    </div>
+  }
+  <div class="display--flex flex-grow flex-direction--column">
+    <div class="heading--6 heading--nomargin">
+      {{ title }}
+    </div>
+    @if (subtitle) {
+      <div class="font--body-small color-shade_72">
+        {{ subtitle }}
+      </div>
+    }
+  </div>
+  <i
+    class="icon icon-md icon-no-size-override color-shade_48"
+    [ngClass]="{ 'icon-chevron-right': !isExternalLink, 'icon-external-link': isExternalLink }"></i>
+</div>

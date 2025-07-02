@@ -1,0 +1,42 @@
+<div *ngIf="error" class="notification notification--errorfield">
+  <span class="icon icon-error-shape errorfield">{{ getText() | translate }}</span>
+</div>
+<div class="label-modifier-box card-mini card-mini--no-select-box">
+  <div
+    *ngFor="let option of optionList; let i = index"
+    class="label-modifier-slot animation-show-slide-up"
+    style="{{ '--animation-delay:' + i }}">
+    <input
+      [checked]="selectedOption && option.value === selectedOption.value"
+      class="label-modifier-radio"
+      id="choice-{{ i }}-{{ key }}"
+      name="choice-{{ key }}"
+      type="radio"
+      value="{{ option.value }}" />
+    <!-- Effective body -->
+    <div class="label-modifier--append label-modifier--container cursor--pointer">
+      <div class="label-modifier--body">
+        <div class="label-modifier--body--inner-container">
+          <label
+            (click)="selectOption(option)"
+            class="label-modifier-radio__label"
+            for="choice-{{ i }}-{{ key }}"></label>
+          <div class="label-modifier-content__header">
+            <i class="icon icon-tick"></i>
+          </div>
+          <div class="label-modifier-content__body">
+            <div
+              [innerHTML]="getOptionLabel(option) | translate"
+              class="text-flow text-flow--button label-modifier-content__body-label"></div>
+            <div
+              *ngIf="hasSubscript(option)"
+              [innerHTML]="getSubscript(option)"
+              appTextFlow="legal"
+              class="label-modifier-content__body-range"></div>
+          </div>
+          <div class="label-modifier-content__timing"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

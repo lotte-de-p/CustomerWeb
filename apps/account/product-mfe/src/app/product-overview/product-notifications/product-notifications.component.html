@@ -1,0 +1,25 @@
+<div class="notification notification--info col-md-12 col-sm-12 m--auto mt--l" *ngIf="showYUPNotificationMessage">
+  <span class="icon icon-information-shape info">
+    <p [attr.data-cy]="'yupNotification'">
+      {{ 'ng.product-overview.lbl.yup-product-active' | translate }}
+    </p>
+  </span>
+</div>
+
+<div
+  class="notification notification--info col-md-12 col-sm-12 m--auto mt--l"
+  *ngIf="showSuspendedPlanNotificationMessage">
+  <span class="icon icon-information-shape info">
+    <p [attr.data-cy]="'suspendedPlanNotification'">
+      {{ 'ng.product-overview.lbl.suspended-plan' | translate }}
+    </p>
+  </span>
+</div>
+
+<div class="notification notification--info col-md-12 col-sm-12 m--auto mt--l" *ngIf="showMoveNotificationMessage">
+  <span class="icon icon-information-shape info">
+    <p [attr.data-cy]="'moveNotification'">
+      {{ 'ng.product-overview.lbl.product-is-under-move' | translate }}
+    </p>
+  </span>
+</div>

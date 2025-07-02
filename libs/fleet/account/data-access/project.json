@@ -1,0 +1,17 @@
+{
+  "name": "fleet-account-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/fleet/data-access/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/fleet/account/data-access/**/*.ts", "libs/fleet/account/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:fleet-account", "scope:fleet-mfe"]
+}

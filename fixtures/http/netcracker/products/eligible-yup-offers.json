@@ -1,0 +1,129 @@
+[
+  {
+    "id": "9159274086313244783",
+    "identifier": "WIGO000007048",
+    "label": "WIGO 25GB",
+    "locationId": "9159268450113122717",
+    "activationDate": "2021-02-15T12:38:35+01:00",
+    "addressId": "9150308785813943164",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0025",
+    "targetepc": "YUPW0025",
+    "productType": "YUPProduct",
+    "chargePeriod": 12,
+    "inviteType": "Initial",
+    "status": "Active",
+    "billingAccountNumber": 9123344,
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "126,31",
+        "yupUpfrontPayment": {
+          "recurrentDiscounted": "119,96",
+          "totalDiscounted": "1439,94"
+        }
+      }
+    },
+    "children": [
+      {
+        "id": "9159274086313244783",
+        "identifier": "WIGO000007048",
+        "label": "Experience1",
+        "locationId": "9159268450113122717",
+        "activationDate": "2021-02-18T12:38:35+01:00",
+        "addressId": "9150308785813943164",
+        "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0025",
+        "targetepc": "YUPW0025",
+        "productType": "YUPProduct",
+        "chargePeriod": 12,
+        "inviteType": "Initial",
+        "status": "Active",
+        "billingAccountNumber": 9123344,
+        "prices": {
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentTotal": "126,31",
+            "yupUpfrontPayment": {
+              "recurrentDiscounted": "119,96",
+              "totalDiscounted": "1439,94"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "9159274086313244783",
+    "identifier": "WIGO000007048",
+    "label": "WIGO 25GB",
+    "locationId": "9159268450113122717",
+    "activationDate": "2021-02-18T12:38:35+01:00",
+    "addressId": "9150308785813943164",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0025",
+    "targetepc": "YUPW0025",
+    "productType": "YUPProduct",
+    "chargePeriod": 12,
+    "inviteType": "Initial",
+    "status": "Active",
+    "billingAccountNumber": 9123344,
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "126,31",
+        "yupUpfrontPayment": {
+          "recurrentDiscounted": "119,96",
+          "totalDiscounted": "1439,94"
+        }
+      }
+    }
+  },
+  {
+    "id": "9159274086313244783",
+    "identifier": "WIGO000007048",
+    "label": "WIGO 25GB",
+    "locationId": "9159268450113122717",
+    "activationDate": "2021-02-18T12:38:35+01:00",
+    "addressId": "9150308785813943165",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0025",
+    "targetepc": "YUPW0025",
+    "productType": "YUPProduct",
+    "chargePeriod": 12,
+    "inviteType": "Initial",
+    "status": "eligible",
+    "billingAccountNumber": 9123344,
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "126,31",
+        "yupUpfrontPayment": {
+          "recurrentDiscounted": "119,96",
+          "totalDiscounted": "1439,94"
+        }
+      }
+    }
+  },
+  {
+    "id": "9159274086313244783",
+    "identifier": "WIGO000007048",
+    "label": "WIGO 25GB",
+    "locationId": "9159268450113122717",
+    "activationDate": "2021-02-18T12:38:35+01:00",
+    "addressId": "9150308785813943165",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/WIGO0025",
+    "targetepc": "YUPW0025",
+    "productType": "YUPProduct",
+    "chargePeriod": 12,
+    "inviteType": "Initial",
+    "status": "Suspended",
+    "billingAccountNumber": 9123344,
+    "prices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentTotal": "126,31",
+        "yupUpfrontPayment": {
+          "recurrentDiscounted": "119,96",
+          "totalDiscounted": "1439,94"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,63 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-manager-line-overlay (closeOverlay)="backToProductOverview()" [attr.data-cy]="'remove-options'">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-manager-result-message
+        backToProductOverviewLabel="ng.fleet-manager-line-remove-options.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        (backToProductOverviewClicked)="backToProductOverview()">
+      </tg-fleet-manager-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+    @if (selectedLines()) {
+      <div class="row" [attr.data-cy]="'remove-options'">
+        <div class="col-sm-12 p-0">
+          <div data-component-instance-id="${lineRemoveOptions.componentInstanceID}">
+            <div class="options-content">
+              <tg-fleet-manager-options-overview
+                [productLineOptions]="productLineOptions()"
+                [selectedLines]="selectedLines()">
+              </tg-fleet-manager-options-overview>
+              <div class="title-top">
+                <div class="title-container">
+                  <div>
+                    <p class="hidden-mobile">
+                      {{ 'ng.fleet-manager-line-remove-options.lbl.review-selected-lines' | translate }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <tg-fleet-manager-selected-line-list [selectedLines]="selectedLines()">
+              </tg-fleet-manager-selected-line-list>
+              <div class="sticky-bottom">
+                <tg-fleet-manager-sticky-actions
+                  [primaryButtonEnabled]="hasAffected()"
+                  [secondaryButtonEnabled]="hasAffected()"
+                  [secondaryButtonLabel]="'ng.fleet-manager-line-remove-options.btn.revert-changes'"
+                  [primaryButtonLabel]="'ng.fleet-manager-line-remove-options.btn.save-changes'"
+                  (secondaryCallback)="revertChanges()"
+                  (primaryCallback)="showWarning()">
+                </tg-fleet-manager-sticky-actions>
+              </div>
+            </div>
+            @if (isShowWarning()) {
+              <tg-fleet-manager-warning-message
+                [image]="warningImage"
+                [imageMobile]="warningImageMobile"
+                [primaryActionLabel]="'ng.fleet-manager-line-remove-options.btn.yes'"
+                [secondaryActionLabel]="'ng.fleet-manager-line-remove-options.btn.no'"
+                [title]="'ng.fleet-manager-line-remove-options.lbl.remove-options-confirm-message'"
+                [description]="'ng.fleet-manager-line-remove-options.info.options-terminated-message'"
+                (secondaryAction)="cancelChanges()"
+                (primaryAction)="saveChanges()" />
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </tg-fleet-manager-line-overlay>
+</tg-login>

@@ -1,0 +1,40 @@
+import { ControlValueAccessor, NgControl, ValidationErrors } from '@angular/forms';
+import { AfterViewInit, EventEmitter, Injector, OnInit } from '@angular/core';
+import { LanguageService } from '@telenet/ng-lib-page';
+import { TrackingEvent } from '../interfaces';
+import { FormErrorService, MessageGroupDirective } from '../errors';
+import { Subscription } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class InputAbstractComponent implements ControlValueAccessor, OnInit, AfterViewInit {
+    readonly languageService: LanguageService;
+    readonly formService: FormErrorService;
+    readonly messageGroupDirective: MessageGroupDirective;
+    readonly injector: Injector;
+    valueChangesSubscription$?: Subscription;
+    formSubscription$: Subscription;
+    messageGroup: string;
+    labelPrefix?: string;
+    error: unknown;
+    formControlName: string;
+    trackingEvent: EventEmitter<TrackingEvent>;
+    key: string;
+    control: NgControl;
+    constructor(languageService: LanguageService, formService: FormErrorService, messageGroupDirective: MessageGroupDirective, injector: Injector);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    initMessageGroup(): void;
+    getLabel(customLabel?: string): string;
+    getTooltip(customLabel?: string): string;
+    setError(value?: ValidationErrors | null): void;
+    getPlaceholder(customLabel?: string): string;
+    registerOnChange(_: unknown): void;
+    registerOnTouched(_fn: unknown): void;
+    setDisabledState(_isDisabled: boolean): void;
+    writeValue(_obj: unknown): void;
+    getText(): string;
+    private generateLabelKey;
+    private camelCaseToKebapCase;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputAbstractComponent, [null, null, { optional: true; }, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputAbstractComponent, "input-abstract-component", never, { "messageGroup": { "alias": "messageGroup"; "required": false; }; "labelPrefix": { "alias": "labelPrefix"; "required": false; }; "error": { "alias": "error"; "required": false; }; "formControlName": { "alias": "formControlName"; "required": false; }; }, { "trackingEvent": "trackingEvent"; }, never, never, false, never>;
+}
+//# sourceMappingURL=input-abstract.component.d.ts.map

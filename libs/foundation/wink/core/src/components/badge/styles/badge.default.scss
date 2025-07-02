@@ -1,0 +1,66 @@
+:host {
+  display: inline-block;
+  padding: var-rem(--semantic-spacing-3xs) var-rem(--semantic-spacing-xs);
+  background-color: $badge--default-bg;
+  color: $badge--default-color;
+  font-size: $badge--default-fs;
+  line-height: $badge--default-lh;
+  font-family: var(--font-family), Arial, sans-serif;
+}
+
+:host([size='sm']) {
+  font-size: $badge--sm-fs;
+  line-height: $badge--sm-lh;
+}
+:host([size='md']) {
+  font-size: $badge--md-fs;
+  line-height: $badge--md-lh;
+}
+:host([size='lg']) {
+  font-size: $badge--lg-fs;
+  line-height: $badge--lg-lh;
+}
+
+:host([background='default']) {
+  background-color: var(--semantic-components-badge-default);
+  color: var(--semantic-color-text-on-brand);
+}
+
+:host([background='brand']) {
+  background-color: var(--semantic-components-badge-brand);
+  color: var(--semantic-color-text-on-brand);
+}
+:host([background='dark']) {
+  background-color: var(--semantic-color-background-surface-highlight-7);
+  color: var(--semantic-color-text-inverse-on-brand);
+}
+
+:host([background='light']) {
+  background-color: var(--semantic-components-badge-light);
+  color: var(--semantic-components-badge-on-white);
+}
+
+:host([background='accent1']) {
+  background-color: var(--semantic-components-badge-accent-1);
+  color: var(--semantic-components-badge-on-accent);
+}
+
+:host([background='accent2']) {
+  background-color: var(--semantic-components-badge-accent-2);
+  color: var(--semantic-components-badge-on-accent);
+}
+
+:host([background='accent3']) {
+  background-color: var(--semantic-components-badge-accent-3);
+  color: var(--semantic-components-badge-on-accent);
+}
+
+:host([background='accent4']) {
+  background-color: var(--semantic-components-badge-accent-4);
+  color: var(--semantic-components-badge-on-accent);
+}
+
+:host([background='accent5']) {
+  background-color: var(--semantic-components-badge-accent-5);
+  color: var(--semantic-components-badge-on-accent);
+}

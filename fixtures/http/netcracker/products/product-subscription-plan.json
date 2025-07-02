@@ -1,0 +1,31 @@
+[
+  {
+    "activationDate": "2021-09-16T13:26:43",
+    "addressId": "9150308807013312580",
+    "identifier": "ONE000001673",
+    "label": "ONE for 2 / ONE000001673",
+    "locationId": "9161462547913834357",
+    "status": "Active",
+    "productType": "bundle",
+    "isDataOnlyPlan": false,
+    "products": [
+      {
+        "identifier": "0468598435",
+        "productType": "mobile"
+      },
+      {
+        "identifier": "INT000020117",
+        "productType": "internet"
+      },
+      {
+        "identifier": "0468598433",
+        "productType": "mobile"
+      }
+    ],
+    "specurl": "https://api.int.telenet.be/omapi/public/product/C5FA0002",
+    "bundleFamily": "Connect 5",
+    "id": "9161462572813836621",
+    "useSpecurl": false,
+    "hasVoiceMail": false
+  }
+]

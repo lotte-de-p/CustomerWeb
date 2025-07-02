@@ -1,0 +1,21 @@
+import { h, Host } from "@stencil/core";
+export class IntentBar {
+    render() {
+        return (h(Host, { key: 'ad81ae8f5475d75afa096d7277bdb374c43d872b' }, h("wink-link", { key: '6358eca3fac1768438f7aa5be54c1b0717116821', appearance: "menu-secondary", icon: "headset", size: "body-regular", "icon-position": "left", "icon-appearance": "default", href: "#" }, h("wink-icon", { key: '80dc31c9b6d4b24ee8424677930b3eedc7fa0df1', slot: "link-icon", appearance: "default", icon: "message-question", size: "sm" }), "Hulp"), h("wink-link", { key: '1352400e684bfe850700388ed0f70cf861d2cc94', appearance: "menu-secondary", icon: "headset", size: "body-regular", "icon-position": "left", "icon-appearance": "default", href: "#" }, h("wink-icon", { key: 'f676342f8fa08dd90bfe55b57b8e6cf9172ae094', slot: "link-icon", appearance: "default", icon: "headset", size: "sm" }), "Contact"), h("wink-link", { key: '84284ff0a689bba582e80220e0432d347bcec46c', appearance: "menu-secondary", icon: "headset", size: "body-regular", "icon-position": "left", "icon-appearance": "default", href: "#" }, h("wink-icon", { key: 'f560f8b4cb6f5cc6cde267e6db108d4c7096daf8', slot: "link-icon", appearance: "default", icon: "email", size: "sm" }), "Webmail")));
+    }
+    static get is() { return "wink-intent-bar"; }
+    static get encapsulation() { return "shadow"; }
+    static get originalStyleUrls() {
+        return {
+            "telenet": ["styles/brands/intent-bar.telenet.scss"],
+            "base": ["styles/brands/intent-bar.base.scss"]
+        };
+    }
+    static get styleUrls() {
+        return {
+            "telenet": ["styles/brands/intent-bar.telenet.css"],
+            "base": ["styles/brands/intent-bar.base.css"]
+        };
+    }
+}
+//# sourceMappingURL=intent-bar.js.map

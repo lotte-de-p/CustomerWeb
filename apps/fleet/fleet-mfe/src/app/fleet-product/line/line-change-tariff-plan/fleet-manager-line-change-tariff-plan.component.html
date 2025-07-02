@@ -1,0 +1,84 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-manager-line-overlay (closeOverlay)="redirect()">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-manager-result-message
+        backToProductOverviewLabel="ng.fleet-manager-line-change-tariff-plan.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        (backToProductOverviewClicked)="redirect()">
+      </tg-fleet-manager-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+
+    <div class="row" [attr.data-cy]="'line-change-tariff-plan'">
+      <div class="col-sm-12 p-0">
+        <div>
+          <div class="options-content" style="margin-top: 12rem">
+            @if (!loading) {
+              <div
+                class="toggle-content-bottom hidden-desktop"
+                [ngClass]="{ 'scroll-up-lines': stickyContainer, 'scroll-down-lines': !stickyContainer }">
+                <i
+                  (click)="toggleStickyContainer()"
+                  class="icon-chevron-down"
+                  [ngClass]="{ 'up-icon': !stickyContainer, 'down-icon': stickyContainer }"></i>
+                <div (click)="toggleStickyContainer()">
+                  <p [ngClass]="{ 'title-large': stickyContainer }">
+                    {{ 'ng.fleet-manager-line-change-tariff-plan.lbl.review-selected-lines' | translate }}
+                  </p>
+                </div>
+              </div>
+              <tg-available-options
+                [newTariffPlan]="newTariffPlan()"
+                [mobilePlans]="mobilePlans()"
+                [dataPlans]="dataPlans()"
+                [isCategorySelected]="isCategorySelected"
+                (tariffPlanSelected)="onSelectTariff($event)"></tg-available-options>
+              <div
+                class="title-top hidden-mobile"
+                [ngClass]="{ 'blur-on-confirmation': isChangesConfirmed && containsDisconnectedStatus() }">
+                <div class="title-container">
+                  <p class="hidden-mobile">
+                    {{ 'ng.fleet-manager-line-change-tariff-plan.lbl.review-selected-lines' | translate }}
+                  </p>
+                </div>
+              </div>
+              <tg-line-items
+                [disconnectedActiveTariffPlanOptions]="disconnectedActiveTariffPlanOptions()"
+                [isChangesConfirmed]="isChangesConfirmed"
+                [lineProductDetails]="product()"
+                [selectedTariffPlan]="newTariffPlan()"
+                [tariffPlanOptions]="tariffPlanOptions()">
+              </tg-line-items>
+              @if (isChangesConfirmed) {
+                <tg-fleet-manager-warning-message
+                  [image]="confirmationImage"
+                  [title]="
+                    'ng.fleet-manager-line-change-tariff-plan.lbl.affected-options-count'
+                      | translate: { count: affectedLineCount() }
+                  "
+                  [description]="'ng.fleet-manager-line-change-tariff-plan.text.confirmation-message'"
+                  [primaryActionLabel]="'ng.fleet-manager-line-change-tariff-plan.btn.continue'"
+                  [secondaryActionLabel]="'ng.fleet-manager-line-change-tariff-plan.btn.revert-confirm'"
+                  (secondaryAction)="toggleWarningMessage()"
+                  (primaryAction)="submitTariffPlanFromWarning()"></tg-fleet-manager-warning-message>
+              }
+              <tg-fleet-manager-sticky-actions
+                [primaryButtonEnabled]="!!newTariffPlan()"
+                [secondaryButtonEnabled]="!!newTariffPlan()"
+                [secondaryButtonLabel]="'ng.fleet-manager-line-change-tariff-plan.btn.revert-changes'"
+                [primaryButtonLabel]="'ng.fleet-manager-line-change-tariff-plan.btn.save-changes'"
+                (secondaryCallback)="revertChanges()"
+                (primaryCallback)="submitDetails()">
+              </tg-fleet-manager-sticky-actions>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </tg-fleet-manager-line-overlay>
+</tg-login>

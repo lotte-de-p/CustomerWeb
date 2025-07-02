@@ -1,0 +1,21 @@
+<div class="form-builder form-group">
+  <label>{{getLabel() | translate}}</label>
+  <div class="date-picker hide-until-sm">
+    <input
+      matInput
+      class="date-picker-input"
+      [min]="minDate? minDate: ''"
+      [max]="maxDate? maxDate: ''"
+      [matDatepicker]="datepicker"
+      placeholder="{{getPlaceholder() | translate}}"
+      (ngModelChange)="updateValue($event)"
+      [(ngModel)]="value"
+      (click)="datepicker.open()" />
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker>
+  </div>
+  <div class="hide-from-sm display--flex align-content--center">
+    <input type="date" class="form__input form-control" />
+    <i class="icon-calendar"></i>
+  </div>
+</div>

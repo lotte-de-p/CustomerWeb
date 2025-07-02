@@ -1,0 +1,38 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "jsxFactory": "h"
+  },
+  "references": [
+    {
+      "path": "./.storybook/tsconfig.json"
+    }
+  ],
+  "include": [
+    "../monorepo-storybook/src/**/*.js",
+    "..monorepo-storybook/src/**/*.ts",
+    "src/**/*.js",
+    ".storybook/*.ts",
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "cypress.config.ts"
+  ]
+}

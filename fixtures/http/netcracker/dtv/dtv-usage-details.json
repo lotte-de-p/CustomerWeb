@@ -1,0 +1,49 @@
+{
+  "dtv": {
+    "videosOnDemand": [
+      {
+        "name": "active day pass",
+        "purchaseAmount": "20",
+        "activateDate": "2019-04-26",
+        "activationTime": "12:35"
+      },
+      {
+        "name": "active day pass3",
+        "purchaseAmount": "21",
+        "activateDate": "2019-04-21",
+        "activationTime": "12:31"
+      },
+      {
+        "name": "active day pass2",
+        "purchaseAmount": "23",
+        "activateDate": "2019-04-21",
+        "activationTime": "12:36"
+      }
+    ],
+    "dailyPasses": [
+      {
+        "name": "active day pass",
+        "purchaseAmount": "20",
+        "activateDate": "2019-04-26",
+        "activationTime": "12:35"
+      },
+      {
+        "name": "active day pass3",
+        "purchaseAmount": "21",
+        "activateDate": "2019-04-21",
+        "activationTime": "12:31"
+      },
+      {
+        "name": "active day pass2",
+        "purchaseAmount": "23",
+        "activateDate": "2019-04-21",
+        "activationTime": "12:36"
+      }
+    ],
+    "totalUsage": {
+      "videosOnDemand": "20",
+      "dailyPasses": "35.20",
+      "currentUsage": "55.20"
+    }
+  }
+}

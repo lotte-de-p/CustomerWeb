@@ -1,0 +1,23 @@
+{
+  "couponCode": "12757245256723432",
+  "salesOrderId": "9152403743665058321",
+  "orderItemId": "9152403743665058332",
+  "offeringId": "19626",
+  "childOfferPresent": true,
+  "trialOffers": [
+    {
+      "label": "Play More Trial (30 days)",
+      "id": "9152403743665058321",
+      "duration": "30",
+      "externalProductCode": "TVPK1104",
+      "specurl": "https://api.int.base.be/omapi/public/product/TVPK1104"
+    },
+    {
+      "label": "Play More Trial Extension (7 days)",
+      "id": "9152403743665058321",
+      "duration": "7",
+      "externalProductCode": "TVPK1105",
+      "specurl": "https://api.int.base.be/omapi/public/product/TVPK1105"
+    }
+  ]
+}

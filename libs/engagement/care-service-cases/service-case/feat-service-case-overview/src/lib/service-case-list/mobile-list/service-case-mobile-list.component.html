@@ -1,0 +1,82 @@
+<div class="position--relative" #list>
+  <div
+    (click)="toggleSelector()"
+    class="background-shade_16 py--s px--xs account-selector__list account-selector__list__first-item account-selector__list--with-icon cursor--pointer display--flex justify-content--between width--auto pr--m align-items--center"
+    [ngClass]="{
+      'account-selector__list--opened-with-icon account-selector__list__first-item--opened': showSelector,
+      'account-selector__list__first-item--closed': !showSelector
+    }">
+    <div class="display--flex align-items--center gap--s">
+      <div class="account-selector__list__icon">
+        <i class="icon-file color-dark-brown background-yellow"></i>
+      </div>
+      <div class="account-selector__list__account-info">
+        <div
+          class="account-selector__list__account-info__account-details"
+          *ngIf="selectedServiceCase; else noSelectedServiceCase">
+          <div class="text-weight--l">
+            {{ 'ng.service-cases.your' | translate }}
+            {{ 'ng.service-cases.item.type.' + selectedServiceCase.type + '.short' | translate }}
+          </div>
+          <div>
+            <div class="color-white_32 text--m" [attr.data-cy]="'service-case-item-id'">
+              #{{ selectedServiceCase.id }}
+            </div>
+          </div>
+        </div>
+        <ng-template #noSelectedServiceCase>
+          <div class="text--s">
+            {{ 'ng.service-cases.list.no-service-cases' | translate }}
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <a class="account-selector__action display--flex align-items--center mr--xs" *ngIf="serviceCases.length > 1">
+      <div
+        class="icon icon-sm position--absolute text-weight--g"
+        [ngClass]="showSelector ? 'icon-chevron-up' : 'icon-chevron-down'"></div>
+    </a>
+  </div>
+  <ul
+    *ngIf="showSelector"
+    class="account-selector__list account-selector__list__options position--absolute background-white list-style--none py--xs px--xs box-shadow width--full"
+    style="z-index: 100"
+    [ngClass]="{ 'account-selector__list--opened-with-icon account-selector__list__options--opened': showSelector }">
+    <li class="text-weight--l py--xxs">{{ 'ng.service-cases.open-cases' | translate }}</li>
+    <li *ngIf="serviceCases.length === 0" class="text--s">
+      {{ 'ng.service-cases.list.no-service-cases' | translate }}
+    </li>
+    <li
+      class="account-selector__list__options__item cursor--pointer py--xxs"
+      [ngClass]="{ 'account-selector__list__options__item--active': selectedServiceCase?.id === serviceCase.id }"
+      *ngFor="let serviceCase of openServiceCases | orderBy">
+      <a class="account-selector__list__options__item__link" (click)="selectServiceCaseItem(serviceCase)">
+        <div class="account-selector__list__account-info">
+          <div class="account-selector__list__account-info__account-details">
+            {{ 'ng.service-cases.your' | translate }}
+            {{ 'ng.service-cases.item.type.' + serviceCase.type + '.short' | translate }} (#{{ serviceCase.id }})
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="text-weight--l py--xxs">
+      {{ 'ng.service-cases.closed-cases' | translate }}
+    </li>
+    <li
+      class="account-selector__list__options__item cursor--pointer py--xxs"
+      [ngClass]="{ 'account-selector__list__options__item--active': selectedServiceCase?.id === serviceCase.id }"
+      *ngFor="let serviceCase of closedServiceCases | orderBy">
+      <a class="account-selector__list__options__item__link" (click)="selectServiceCaseItem(serviceCase)">
+        <div class="account-selector__list__account-info">
+          <div class="account-selector__list__account-info__account-details">
+            {{ 'ng.service-cases.your' | translate }}
+            {{ 'ng.service-cases.item.type.' + serviceCase.type + '.short' | translate }} (#{{ serviceCase.id }})
+          </div>
+        </div>
+      </a>
+    </li>
+    <li *ngIf="closedServiceCases.length === 0" class="text--s">
+      {{ 'ng.service-cases.list.no-closed-service-cases' | translate }}
+    </li>
+  </ul>
+</div>

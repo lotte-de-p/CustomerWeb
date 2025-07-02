@@ -1,0 +1,32 @@
+[
+  {
+    "attributeKey": "main_image",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  },
+  {
+    "attributeKey": "picture_1",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  },
+  {
+    "attributeKey": "Picture_2",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  },
+  {
+    "attributeKey": "picture_3",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  },
+  {
+    "attributeKey": "picture_4",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  },
+  {
+    "attributeKey": "picture_5",
+    "localizedContent": [],
+    "value": "http://image_url_path"
+  }
+]

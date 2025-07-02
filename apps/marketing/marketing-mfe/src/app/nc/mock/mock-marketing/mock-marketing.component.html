@@ -1,0 +1,64 @@
+<div class="dashboard-container mock-marketing-cards mock-marketing mb-20">
+  <div>
+    <h2 class="text-align--center">{{ title }}</h2>
+    <ng-container *ngIf="productConfiguratorUrl">
+      <p
+        class="text-align--center"
+        [innerHTML]="'ng.mock-marketing.lbl.confgure-product' | translate: { link: productConfiguratorUrl }"></p>
+    </ng-container>
+    <ng-container *ngIf="hasProducts">
+      <ul class="display--flex justify-content--center row p-0">
+        <li
+          *ngFor="let product of productList; let idx = index"
+          class="col-md-3 col-sm-6 cursor--pointer card-content center-align p--s"
+          [ngClass]="{ medium: customerBrand === 'BASE' }">
+          <span>{{ product.title }}</span>
+          <div class="center-align mt-10">
+            <!--suppress TypeScriptUnresolvedVariable -->
+            <form
+              [formGroup]="getFormGroup(idx)"
+              class="card-info"
+              (ngSubmit)="createReqBody(product, getFormGroup(idx))">
+              <div *ngIf="product.enableDiscount">
+                <!--suppress TypeScriptUnresolvedVariable -->
+                <tg-marketing-nc-select-discount-type
+                  [parentForm]="getFormGroup(idx)"
+                  [idx]="idx"></tg-marketing-nc-select-discount-type>
+              </div>
+              <div *ngIf="customerBrand === 'TELENET'">
+                <!--suppress TypeScriptUnresolvedVariable -->
+                <tg-marketing-nc-apply-manual-discount
+                  [parentForm]="getFormGroup(idx)"
+                  [idx]="idx"
+                  [productType]="product.type"
+                  [sku]="product.sku">
+                </tg-marketing-nc-apply-manual-discount>
+              </div>
+              <div *ngIf="product.type === 'domain-name'">
+                <!--suppress TypeScriptUnresolvedVariable -->
+                <tg-marketing-nc-domain-name [parentForm]="getFormGroup(idx)" [idx]="idx"></tg-marketing-nc-domain-name>
+              </div>
+              <div *ngIf="customerBrand === 'TELENET'" class="mt--xxs">
+                <!--suppress TypeScriptUnresolvedVariable -->
+                <tg-marketing-nc-options-contentpack
+                  [parentForm]="getFormGroup(idx)"
+                  [idx]="idx"
+                  [productType]="product.type"
+                  [epc]="product.sku">
+                </tg-marketing-nc-options-contentpack>
+              </div>
+              <button type="submit" class="button button--primary mt--s">
+                {{ 'ng.mock-marketing.button.select-product' | translate }}
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-container *ngIf="!hasProducts">
+      <div class="notification notification--errorfield notification--errorfield--flow">
+        <span>{{ 'ng.mock-marketing.button.empty-product' | translate }}</span>
+      </div>
+    </ng-container>
+  </div>
+</div>

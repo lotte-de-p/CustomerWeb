@@ -1,0 +1,9 @@
+{
+  "name": "sales-order-configurator-api",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sales/order-configurator/api/src",
+  "prefix": "lib",
+  "tags": ["type:util", "scope:sales", "scope:order-configurator-mfe", "scope:checkout-mfe"],
+  "projectType": "library",
+  "targets": {}
+}

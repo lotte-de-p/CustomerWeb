@@ -1,0 +1,20 @@
+{
+  "name": "product-journey-appointments-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/install/product-journey/appointments/ui/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/install/product-journey/appointments/ui/**/*.ts",
+          "libs/install/product-journey/appointments/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:product-journey-appointments", "scope:product-journey-mfe"]
+}

@@ -1,0 +1,64 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: inline-block;
+  position: relative;
+}
+:host img {
+  object-fit: cover;
+  object-position: center;
+}
+
+:host([size=sm]) img {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+:host([size=md]) img {
+  height: 4rem;
+  width: 4rem;
+}
+
+:host([size=lg]) img {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+:host([size=xl]) img {
+  height: 7.2rem;
+  width: 7.2rem;
+}

@@ -1,0 +1,53 @@
+{
+  "unpaidInvoices": {
+    "totalAmount": 0,
+    "invoices": []
+  },
+  "paidInvoices": [
+    {
+      "invoiceYear": "2024",
+      "invoices": [
+        {
+          "invoiceDate": "2024-06-25",
+          "documentUrl": "/document",
+          "invoiceAmount": 123.45
+        },
+        {
+          "invoiceDate": "2024-05-25",
+          "documentUrl": "/document",
+          "invoiceAmount": 145.45
+        }
+      ]
+    },
+    {
+      "invoiceYear": "2023",
+      "invoices": [
+        {
+          "invoiceDate": "2023-07-10",
+          "documentUrl": "/document",
+          "invoiceAmount": -24.97
+        },
+        {
+          "invoiceDate": "2023-03-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 345.56
+        }
+      ]
+    },
+    {
+      "invoiceYear": "2022",
+      "invoices": [
+        {
+          "invoiceDate": "2022-03-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 24.97
+        },
+        {
+          "invoiceDate": "2022-02-10",
+          "documentUrl": "/document",
+          "invoiceAmount": 543
+        }
+      ]
+    }
+  ]
+}

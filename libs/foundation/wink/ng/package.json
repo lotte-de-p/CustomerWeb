@@ -1,0 +1,23 @@
+{
+  "name": "@telenet/wink-ng",
+  "version": "0.0.1",
+  "main": "index.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^17.1.0 || ^18.0.0",
+    "@angular/core": "^17.1.0 || ^18.0.0",
+    "@telenet/wink-core": "^1.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "files": [
+    "esm2022",
+    "fesm2022",
+    "generated",
+    "index.d.ts"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://artifact-repo.rel.apps.telenet.be/repository/eDev_NPM_Private/"
+  }
+}

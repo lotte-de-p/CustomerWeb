@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "cobertura",
+    "html-spa",
+    "text",
+    "json",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "include": [
+  "../dashboard-mfe/**",
+  "../dashboard-mfe-e2e/**",
+  "../../../libs/base-customerzone/dashboard/**"
+  ],
+  "report-dir": "../../../coverage/apps/base-customerzone/dashboard-mfe-e2e",
+  "cwd": "../../../"
+}

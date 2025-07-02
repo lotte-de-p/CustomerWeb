@@ -1,0 +1,86 @@
+<div *ngIf="selectedAppointment">
+  <div
+    [attr.data-cy]="'appointment-schedule-success'"
+    class="notification notification--success"
+    *ngIf="selectedAppointment?.isScheduleAppointmentSuccess">
+    <span class="icon icon-check-shape success"></span>
+    <div class="text-flow text-flow--h5" [innerHTML]="'ng.appointments.confirm-success' | translate"></div>
+  </div>
+  <div
+    [attr.data-cy]="'appointment-reschedule-success'"
+    class="notification notification--success"
+    *ngIf="selectedAppointment?.isRescheduleAppointmentSuccess">
+    <span class="icon icon-check-shape success"></span>
+    <div class="text-flow text-flow--h5" [innerHTML]="'ng.appointments.rescheduled.confirm-success' | translate"></div>
+  </div>
+  <div
+    class="notification notification--success"
+    *ngIf="!selectedAppointment?.isNewAppointment && selectedAppointment.isSaveContactSuccess">
+    <span class="icon icon-check-shape success"></span>
+    <div class="text-flow text-flow--h5" [innerHTML]="'ng.appointments.contact.save-success' | translate"></div>
+  </div>
+  <div class="notification notification--success" *ngIf="selectedAppointment?.isAppointmentCancellationSuccess">
+    <span class="icon icon-check-shape success"></span>
+    <div class="text-flow text-flow--h5" [innerHTML]="'ng.appointments.cancellation.success-message' | translate"></div>
+  </div>
+  <div
+    class="notification notification--info"
+    *ngIf="selectedAppointment?.isRepairAppointment"
+    [attr.data-cy]="'repair-appointment-subtype-message'">
+    <span class="icon icon-information-shape info"></span>
+    <div class="text-flow text-flow--h5"><p [innerHTML]="selectedAppointment.appointmentSubTypeMessage"></p></div>
+  </div>
+  <div
+    class="notification notification--info"
+    *ngIf="
+      selectedAppointment?.isUpcomingAppointment &&
+      !selectedAppointment.isRepairAppointment &&
+      !selectedAppointment?.fiberAppointment
+    ">
+    <span class="icon-information info"></span>
+    <div class="text-flow text-flow--h5" [innerHTML]="'ng.appointments.information.message' | translate"></div>
+  </div>
+  <ng-container *ngIf="allowFiberRepairChanges">
+    <div
+      class="notification notification--info"
+      *ngIf="
+        selectedAppointment?.fiberAppointment &&
+        !selectedAppointment?.timeSlot?.startTime &&
+        !selectedAppointment.isRepairAppointment
+      ">
+      <span class="icon-information info"></span>
+      <div class="text-flow text-flow--h5" [attr.data-cy]="'not-bookable-appointment'">
+        <p [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p>
+      </div>
+    </div>
+    <div
+      class="notification notification--info"
+      *ngIf="
+        selectedAppointment?.fiberAppointment &&
+        selectedAppointment?.timeSlot?.startTime &&
+        !selectedAppointment.isRepairAppointment
+      ">
+      <span class="icon-information info"></span>
+      <div class="text-flow text-flow--h5" [attr.data-cy]="'fiber-not-repair-scheduled-ftth-message'">
+        <p [innerHTML]="'ng.appointments.lbl.scheduled-ftth-message' | translate"></p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!allowFiberRepairChanges">
+    <div
+      [attr.data-cy]="'not-allowed-fiber-repair-message'"
+      class="notification notification--info"
+      *ngIf="selectedAppointment?.fiberAppointment && !selectedAppointment?.timeSlot?.startTime">
+      <span class="icon-information info"></span>
+      <div class="text-flow text-flow--h5"><p [innerHTML]="'ng.appointments.lbl.ftth-message' | translate"></p></div>
+    </div>
+    <div
+      class="notification notification--info"
+      *ngIf="selectedAppointment?.fiberAppointment && selectedAppointment?.timeSlot?.startTime">
+      <span class="icon-information info"></span>
+      <div class="text-flow text-flow--h5" [attr.data-cy]="'fiber-scheduled-ftth-message'">
+        <p [innerHTML]="'ng.appointments.lbl.scheduled-ftth-message' | translate"></p>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "feat-profile-overview",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/engagement/profile-management/profile-overview/feat-profile-overview/src",
+  "projectType": "library",
+  "prefix": "lib",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/profile-management/profile-overview/feat-profile-overview/**/*.ts",
+          "libs/engagement/profile-management/profile-overview/feat-profile-overview/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": [
+    "type:feature",
+    "scope:profile-management",
+    "scope:profile-management-mfe",
+    "scope:profile-management-profile-overview",
+    "scope:profile-management-profile-overview-feat-profile-overview"
+  ]
+}

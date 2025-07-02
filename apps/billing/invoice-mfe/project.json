@@ -1,0 +1,167 @@
+{
+  "name": "customer-web-billing-invoice-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/billing/invoice-mfe/src",
+  "tags": ["scope:customer-web-billing-invoice-mfe", "type:app"],
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/customer-web-billing-invoice-mfe",
+        "index": "apps/billing/invoice-mfe/src/index.html",
+        "main": "apps/billing/invoice-mfe/src/main.ts",
+        "polyfills": ["apps/billing/invoice-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/billing/invoice-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/billing/invoice-mfe/src/favicon.ico",
+          "apps/billing/invoice-mfe/src/assets",
+          "apps/billing/invoice-mfe/src/version.json"
+        ],
+        "styles": ["apps/billing/invoice-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/billing/invoice-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/billing/invoice-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/billing/invoice-mfe/src/favicon.ico",
+            "apps/billing/invoice-mfe/src/assets",
+            "apps/billing/invoice-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "customer-web-billing-invoice-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "customer-web-billing-invoice-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4211,
+        "publicHost": "http://localhost:4211"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "customer-web-billing-invoice-mfe:build",
+        "extraWebpackConfig": "apps/billing/invoice-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/billing/invoice-mfe/**/*.ts", "apps/billing/invoice-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/billing/invoice-mfe/.storybook",
+        "browserTarget": "customer-web-billing-invoice-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/billing/invoice-mfe/.storybook",
+        "browserTarget": "customer-web-billing/invoice-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/billing/invoice-mfe/src/styles.scss"],
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/customer-web-billing-invoice-mfe",
+        "configDir": "apps/billing/invoice-mfe/.storybook",
+        "browserTarget": "customer-web-billing-invoice-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/billing/invoice-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  }
+}

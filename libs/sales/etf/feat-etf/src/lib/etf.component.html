@@ -1,0 +1,109 @@
+<div [attr.data-cy]="'feat-etf'" class="sales-checkout container--medium">
+  <div class="sales-page__container__title sales-page__container__title--secondary">
+    <div class="display--flex flex-direction--column">
+      <div class="sales-page__container__title__header text-align--center--md text-align--left">
+        {{ 'ng.sales-checkout.lbl.title.etf-buy-off' | translate }}
+      </div>
+      <p class="text-align--center--md text-align--left">
+        {{ 'ng.sales-checkout.lbl.sub-title.etf-buy-off' | translate }}
+      </p>
+    </div>
+  </div>
+  <div
+    class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+    <div class="col-sm-12 sales-checkout">
+      <div>
+        <div class="stepper-page__body-inner p-0">
+          <div class="stepper-page__content--split container mobile-lines">
+            <div class="stepper-page__content-first flex-hide-until-md position--sticky--md position--top--md">
+              <div
+                *ngIf="viewModel"
+                [inlineSVG]="viewModel.stepImage"
+                [resolveSVGUrl]="false"
+                class="stepper-page__content-first flex-hide-until-sm"></div>
+            </div>
+            <div class="stepper-page__content-second">
+              <div class="stepper-move" id="undefined">
+                <div class="text-flow text-flow--label stepper-page__title-label m-0"></div>
+                <div>
+                  <div class="sales-flow">
+                    <div class="sales-flow__content__delivery mb--xxxg">
+                      <div class="mobile-lines__discount">
+                        <div *ngIf="viewModel?.showValidationNotification" class="mb--s mt--s">
+                          <div [attr.data-cy]="'feat-etf-validation'" class="notification notification--errorfield">
+                            <span
+                              [innerHTML]="'ng.sales-checkout.error.yes-or-no-to-continue-errorfield' | translate"
+                              class="icon-status-errorfield errorfield"></span>
+                          </div>
+                        </div>
+
+                        <div class="mobile-lines__vertical-step-content m--auto">
+                          <div class="mobile-lines__options display--flex flex-direction--column">
+                            <div [ngClass]="{ hideTracker: true }" class="vertical-step-tracker">
+                              <ul class="Container">
+                                <ng-container
+                                  *ngFor="
+                                    let orderItemWithDiscount of viewModel?.discountItems | async;
+                                    let trackerIndex = index
+                                  ">
+                                  <li class="tracker--step ready-{{ trackerIndex }} mb-20">
+                                    <ng-container
+                                      *ngIf="
+                                        viewModel?.usedAndPendingDiscounts | async as usedAndPendingDiscountSlotList
+                                      ">
+                                      <ng-container
+                                        *ngIf="usedAndPendingDiscountSlotList && usedAndPendingDiscountSlotList.length">
+                                        <tg-sales-etf-order-item
+                                          (setOrderItemTerminationStateEvent)="
+                                            setOrderItemTerminationStateEvent($event)
+                                          "
+                                          *ngIf="
+                                            !orderItemWithDiscount.hasMadeASelection &&
+                                            !orderItemWithDiscount.selectedEtfDiscountSlot
+                                          "
+                                          [orderItemWithDiscount]="orderItemWithDiscount">
+                                        </tg-sales-etf-order-item>
+                                        <tg-sales-etf-order-item-marked-as-no-discount
+                                          (setOrderMarkedForDiscount)="setOrderItemMarkedForDiscount($event)"
+                                          *ngIf="
+                                            orderItemWithDiscount.hasMadeASelection &&
+                                            !orderItemWithDiscount.selectedEtfDiscountSlot
+                                          "
+                                          [orderItemWithDiscount]="orderItemWithDiscount">
+                                        </tg-sales-etf-order-item-marked-as-no-discount>
+                                        <tg-sales-etf-order-item-with-etf-list
+                                          (applyEtfCancellationEvent)="selectDiscountToTerminate($event)"
+                                          (cancelEtfSelectionEvent)="cancelEtfTermination($event)"
+                                          *ngIf="orderItemWithDiscount.showEtfOptions"
+                                          [orderItemWithDiscount]="orderItemWithDiscount"
+                                          [usedAndPendingDiscountSlotList]="usedAndPendingDiscountSlotList">
+                                        </tg-sales-etf-order-item-with-etf-list>
+                                        <tg-sales-etf-order-item-with-termination
+                                          (showEtfOptionsEvent)="setShowEtfOptions($event, true)"
+                                          *ngIf="
+                                            orderItemWithDiscount.selectedEtfDiscountSlot &&
+                                            !orderItemWithDiscount.showEtfOptions
+                                          "
+                                          [orderItemWithDiscount]="orderItemWithDiscount">
+                                        </tg-sales-etf-order-item-with-termination>
+                                      </ng-container>
+                                    </ng-container>
+                                  </li>
+                                </ng-container>
+                              </ul>
+                              <div class="whitespace whitespace--medium"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

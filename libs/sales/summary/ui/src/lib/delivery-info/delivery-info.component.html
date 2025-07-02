@@ -1,0 +1,38 @@
+<div class="shipping-info-section">
+  <div class="sales-display-info align-items--baseline">
+    <h5 class="m-0">{{ 'ng.sales-checkout.text.review-shipping-info' | translate }}</h5>
+  </div>
+  <tg-sales-summary-notification
+    *ngFor="let notification of notifications"
+    [notification]="notification"></tg-sales-summary-notification>
+  <div
+    class="sales-display-info pb--l border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey"
+    data-cs-mask="">
+    <div class="sales-display-info__content">
+      <div class="sales-display-info__content__row mb--xs">
+        <i class="icon-house icon-md sales-display-info__content__row__icon"></i>
+        <div>
+          <p [attr.data-cy]="'delivery-info-name'" class="sales-display-info__content__row__description">
+            {{ deliveryInfo?.personalInfo?.firstname }} {{ deliveryInfo?.personalInfo?.lastname }}
+          </p>
+          <p [attr.data-cy]="'delivery-info-address'" class="sales-display-info__content__row__description">
+            {{ deliveryInfo?.address?.street }} {{ deliveryInfo?.address?.houseNumber }}
+            <ng-container *ngIf="deliveryInfo?.address?.subHouseNumber">
+              /{{ deliveryInfo?.address?.subHouseNumber }}</ng-container
+            >
+            <ng-container *ngIf="deliveryInfo?.address?.box"> /{{ deliveryInfo?.address?.box }}</ng-container>
+            ,<br />
+            {{ deliveryInfo?.address?.postalCode }} {{ deliveryInfo?.address?.municipality }},
+            {{ deliveryInfo?.address?.country }}
+          </p>
+          <p [attr.data-cy]="'delivery-info-mobile'" class="sales-display-info__content__row__description">
+            {{ deliveryInfo?.personalInfo?.mobile }}
+          </p>
+          <p [attr.data-cy]="'delivery-info-email'" class="sales-display-info__content__row__description">
+            {{ deliveryInfo?.personalInfo?.email }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

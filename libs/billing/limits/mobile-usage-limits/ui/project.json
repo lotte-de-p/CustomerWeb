@@ -1,0 +1,20 @@
+{
+  "name": "billing-mobile-usage-limits-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/billing/limits/mobile-usage-limits/ui/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/limits/mobile-usage-limits/ui/**/*.ts",
+          "libs/billing/limits/mobile-usage-limits/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:ui", "scope:customer-web-billing-limits", "scope:customer-web-billing-limits-mfe"]
+}

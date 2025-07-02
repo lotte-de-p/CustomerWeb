@@ -1,0 +1,185 @@
+{
+  "name": "address-checker-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/activate/address-checker-mfe/src",
+  "prefix": "",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/activate/address-checker-mfe",
+        "index": "apps/activate/address-checker-mfe/src/index.html",
+        "main": "apps/activate/address-checker-mfe/src/main.ts",
+        "polyfills": "apps/activate/address-checker-mfe/src/polyfills.ts",
+        "tsConfig": "apps/activate/address-checker-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/activate/address-checker-mfe/src/favicon.ico",
+          "apps/activate/address-checker-mfe/src/assets",
+          "apps/activate/address-checker-mfe/src/version.json"
+        ],
+        "styles": ["apps/activate/address-checker-mfe/src/styles.scss"],
+        "scripts": [
+          "apps/activate/address-checker-mfe/src/assets/plugins/json-url/json-url-single.js",
+          "node_modules/tg-loader/dist/loader-plugin.js"
+        ],
+        "customWebpackConfig": {
+          "path": "apps/activate/address-checker-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/activate/address-checker-mfe/src/environments/environment.ts",
+              "with": "apps/activate/address-checker-mfe/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/activate/address-checker-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/activate/address-checker-mfe/src/favicon.ico",
+            "apps/activate/address-checker-mfe/src/assets",
+            "apps/activate/address-checker-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "customWebpackConfig": {
+            "path": "apps/activate/address-checker-mfe-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4200,
+        "host": "local.telenet.be",
+        "buildTarget": "address-checker-mfe:build",
+        "ssl": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "address-checker-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "address-checker-mfe:build:development"
+        },
+        "coverage": {
+          "buildTarget": "address-checker-mfe:build:coverage"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve-ssl": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "address-checker-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "address-checker-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200,
+        "host": "local.telenet.be",
+        "buildTarget": "address-checker-mfe:build",
+        "ssl": true,
+        "sslKey": "%SSL_KEY_PATH%server.key",
+        "sslCert": "%SSL_CERT_PATH%server.crt"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/activate/address-checker-mfe/src/**/*.ts",
+          "apps/activate/address-checker-mfe/src/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/activate/address-checker-mfe/.storybook",
+        "browserTarget": "address-checker-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/address-checker-mfe",
+        "configDir": "apps/activate/address-checker-mfe/.storybook",
+        "browserTarget": "address-checker-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/activate/address-checker-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["scope:address-checker-mfe", "type:app"]
+}

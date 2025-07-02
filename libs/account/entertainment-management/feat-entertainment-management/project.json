@@ -1,0 +1,33 @@
+{
+  "name": "account-feat-entertainment-management",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/account/entertainment-management/feat-entertainment-management/src",
+  "prefix": "tg-entertainment-management",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/account/entertainment-management/feat-entertainment-management/**/*.ts",
+          "libs/account/entertainment-management/feat-entertainment-management/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:entertainment-management", "scope:entertainment-management-mfe"]
+}

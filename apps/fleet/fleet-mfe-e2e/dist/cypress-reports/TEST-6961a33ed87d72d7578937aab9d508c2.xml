@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.949" tests="2" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-07-16T14:20:17" tests="0" file="src/e2e/local/header.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Header" timestamp="2024-07-16T14:20:17" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Page Loading and navigation" timestamp="2024-07-16T14:20:17" tests="2" time="13.923" failures="0">
+    <testcase name="should load the header component" time="10.054" classname="Header Page Loading and navigation should load the header component">
+    </testcase>
+    <testcase name="should navigate back to the home page when clicking the Home button" time="0.657" classname="Header Page Loading and navigation should navigate back to the home page when clicking the Home button">
+    </testcase>
+  </testsuite>
+</testsuites>

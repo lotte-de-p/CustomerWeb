@@ -1,0 +1,180 @@
+@mixin font-body-large {
+  @include media('from-md') {
+    font-size: rem(2);
+    line-height: rem(3);
+  }
+  @include media('from-lg') {
+    font-size: rem(2.4);
+    line-height: rem(3.6);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(2);
+  line-height: rem(3);
+  font-weight: 400;
+}
+@mixin font-body-large-bold {
+  @include media('from-md') {
+    font-size: rem(2);
+    line-height: rem(3);
+  }
+  @include media('from-lg') {
+    font-size: rem(2.4);
+    line-height: rem(3.6);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(2);
+  line-height: rem(3);
+  font-weight: 900;
+}
+@mixin font-body-regular {
+  @include media('from-md') {
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+  }
+  @include media('from-lg') {
+    font-size: rem(1.8);
+    line-height: rem(2.8);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.6);
+  line-height: rem(2.4);
+  font-weight: 400;
+}
+@mixin font-body-regular-bold {
+  @include media('from-md') {
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+  }
+  @include media('from-lg') {
+    font-size: rem(1.8);
+    line-height: rem(2.8);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.6);
+  line-height: rem(2.4);
+  font-weight: 900;
+}
+@mixin font-body-small {
+  @include media('from-md') {
+    font-size: rem(1.4);
+    line-height: rem(2);
+  }
+  @include media('from-lg') {
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.4);
+  line-height: rem(2);
+  font-weight: 400;
+}
+@mixin font-body-small-bold {
+  @include media('from-md') {
+    font-size: rem(1.4);
+    line-height: rem(2);
+  }
+  @include media('from-lg') {
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.4);
+  line-height: rem(2);
+  font-weight: 900;
+}
+@mixin font-caption-bold {
+  @include media('from-md') {
+    font-size: rem(1.2);
+    line-height: rem(1.6);
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: rem(1.4);
+    line-height: rem(2);
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Bold, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.2);
+  line-height: rem(1.6);
+  letter-spacing: 0;
+  font-weight: 900;
+}
+@mixin font-caption {
+  @include media('from-md') {
+    font-size: rem(1.2);
+    line-height: rem(1.6);
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: rem(1.4);
+    line-height: rem(2);
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1.2);
+  line-height: rem(1.6);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@mixin font-caption-small {
+  @include media('from-md') {
+    font-size: rem(1);
+    line-height: rem(1.2);
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: rem(1.2);
+    line-height: rem(1.6);
+    letter-spacing: 0;
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1);
+  line-height: rem(1.2);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@mixin font-text-icon {
+  @include media('from-md') {
+    font-size: rem(1.6);
+    line-height: rem(2.4);
+  }
+  @include media('from-lg') {
+    font-size: rem(1.8);
+    line-height: rem(2.8);
+  }
+
+  font-family: TelenetTextIcon, sans-serif;
+  font-size: rem(1.6);
+  line-height: rem(2.4);
+  font-weight: 400;
+}
+@mixin font-none {
+  line-height: 0;
+  font-size: 0;
+}
+@mixin font-custom-dfd-navigation {
+  @include media('from-md') {
+    font-size: rem(1);
+    line-height: rem(1);
+    letter-spacing: 0;
+  }
+  @include media('from-lg') {
+    font-size: rem(1.4);
+    line-height: rem(2);
+  }
+
+  font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, sans-serif;
+  font-size: rem(1);
+  line-height: rem(1);
+  font-weight: 400;
+  letter-spacing: 0;
+}

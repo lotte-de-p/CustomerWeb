@@ -1,0 +1,38 @@
+{
+  "attributeKey": "internal_memory",
+  "sortOrder": "2",
+  "attributeGroup": {
+    "code": "general",
+    "sortOrder": "0",
+    "localizedContent": [
+      {
+        "locale": "nl",
+        "key": "General_nl"
+      },
+      {
+        "locale": "fr",
+        "key": "General_fr"
+      },
+      {
+        "locale": "en",
+        "key": "General_en"
+      }
+    ]
+  },
+  "value": "64",
+  "unit": "GB",
+  "localizedContent": [
+    {
+      "locale": "nl",
+      "key": "internal_memory_nl"
+    },
+    {
+      "locale": "fr",
+      "key": "internal_memory_fr"
+    },
+    {
+      "locale": "en",
+      "key": "internal_memory_en"
+    }
+  ]
+}

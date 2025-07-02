@@ -1,0 +1,38 @@
+[
+  {
+    "activationDate": "2020-09-02T11:43:56",
+    "addressId": "9150308819213642874",
+    "identifier": "015373104",
+    "label": "Telenet FreePhone Europe / 015373104",
+    "locationId": "9158196213313026401",
+    "status": "Active",
+    "productType": "telephone",
+    "specurl": "http://localhost:10081/omapi/public/product/FREU0000",
+    "id": "9158196272613031282",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "description": "Telenet FreePhone Europe",
+    "externalProductCode": "FREU0000",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "pid": "120016945"
+  },
+  {
+    "activationDate": "2020-09-02T11:43:04",
+    "addressId": "9150308819213642874",
+    "identifier": "0468136446",
+    "label": "King / 0468136446",
+    "locationId": "9158196213313026401",
+    "status": "Active",
+    "productType": "mobile",
+    "specurl": "http://localhost:10081/omapi/public/product/KING0000",
+    "id": "9158196932213173622",
+    "useSpecurl": false,
+    "hasVoiceMail": false,
+    "description": "Telenet FreePhone Europe",
+    "externalProductCode": "FREU0000",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "pid": "120016945"
+  }
+]

@@ -1,0 +1,19 @@
+@if (cards.length > 0) {
+  <div class="heading--4 mt--n mb--s">{{ 'ng.mybase-dashboard.support-assistance.title' | translate }}</div>
+
+  @for (card of cards; track $index; let last = $last) {
+    @if (card !== SupportAssistanceType.WATCH_TV) {
+      <tg-mybase-simple-card
+        [title]="'ng.mybase-dashboard.support-assistance.card-' + card | translate"
+        [cypressTag]="'mybase-dashboard-support-assistance-card-' + card"
+        [ngClass]="{ 'display--block mb--m': !last }"
+        [isExternalLink]="externalLinks.includes(card)"
+        (cardClicked)="redirectTo(card)"></tg-mybase-simple-card>
+    } @else {
+      <tg-watch-tv-online
+        [watchTvUrl]="watchTvUrl"
+        [watchTvIosUrl]="watchTvIosUrl"
+        [watchTvAndroidUrl]="watchTvAndroidUrl"></tg-watch-tv-online>
+    }
+  }
+}

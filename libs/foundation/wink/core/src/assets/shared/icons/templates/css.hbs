@@ -1,0 +1,33 @@
+@font-face {
+  font-family: {{ name }};
+  src: {{{ fontSrc }}};
+}
+
+[class^="wink-{{prefix}}-"],
+[class*=" wink-{{prefix}}-"],
+.wink-{{prefix}},
+::part({{prefix}}){
+  font-family: {{name}}, sans-serif !important;
+  font-style: normal;
+  font-weight: inherit;
+  font-variant: normal;
+  line-height: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+{{# each codepoints }}
+  {{# if ../selector }}
+{{ ../selector }}.wink-{{ ../prefix }}-{{ @key }}::before,
+::part({{ ../selector }}{{ ../prefix }}-{{ @key }})::before {
+  {{ else }}
+.wink-{{ ../prefix }}-{{ @key }}::before,
+::part({{ ../prefix }}-{{ @key }})::before {
+  {{/ if }}
+  content: "\\{{ codepoint this }}";
+}
+
+{{/ each }}

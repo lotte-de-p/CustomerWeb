@@ -1,0 +1,178 @@
+include:
+  - local: '/tools/gitlab/images/distributed.yml'
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.test:app:
+  image: $NODE_BUILD_IMAGE
+  variables:
+    KUBERNETES_CPU_REQUEST: '3'
+    KUBERNETES_MEMORY_REQUEST: '6Gi'
+  extends:
+    - .distributed
+  stage: quality
+  script:
+    - nx run-many -t test --projects=tag:"scope:${CLIENT_PROJECT}" --base=$NX_BASE --head=$NX_HEAD --coverage --parallel=1 --maxWorkers=1 --output-style=stream-without-prefix
+  before_script:
+    - |-
+      if [ $CI_PIPELINE_SOURCE == 'merge_request_event' ]; then
+        echo 'NX_HEAD will be origin/develop:HEAD'
+        NX_HEAD=HEAD
+        NX_BASE=origin/develop
+      elif [[ $CI_COMMIT_BRANCH =~ 'release/' ]]; then
+        echo 'NX_HEAD will be origin/$CI_COMMIT_BRANCH~1'
+        NX_HEAD=origin/$CI_COMMIT_BRANCH
+        NX_BASE=origin/$CI_COMMIT_BRANCH~1
+      else
+        echo 'NX_HEAD will be origin/develop~1'
+        NX_HEAD=origin/develop
+        NX_BASE=origin/develop~1
+      fi
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  artifacts:
+    paths:
+      - coverage
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'coverage/**/cobertura-coverage.xml'
+    expire_in: 3 days
+  retry:
+    max: 2
+
+.test:libs:
+  image: $NODE_BUILD_IMAGE
+  extends:
+    - .distributed
+  stage: quality
+  variables:
+    KUBERNETES_CPU_REQUEST: '3'
+    KUBERNETES_MEMORY_REQUEST: '6Gi'
+  before_script:
+    - |-
+      if [ $CI_PIPELINE_SOURCE == 'merge_request_event' ]; then
+        echo 'NX_HEAD will be origin/develop:HEAD'
+        NX_HEAD=HEAD
+        NX_BASE=origin/develop
+      elif [[ $CI_COMMIT_BRANCH =~ 'release/' ]]; then
+        echo 'NX_HEAD will be origin/$CI_COMMIT_BRANCH~1'
+        NX_HEAD=origin/$CI_COMMIT_BRANCH
+        NX_BASE=origin/$CI_COMMIT_BRANCH~1
+      else
+        echo 'NX_HEAD will be origin/develop~1'
+        NX_HEAD=origin/develop
+        NX_BASE=origin/develop~1
+      fi
+    - export PATH=$PATH:/$CI_PROJECT_DIR/node_modules/.bin
+  artifacts:
+    paths:
+      - coverage
+      - node_modules/.cache/nx
+      - dist
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'coverage/**/cobertura-coverage.xml'
+    expire_in: 3 days
+  only: !reference [.allowed-branches]
+
+.test:npm-libs:
+  image: $CI_HARBOR_REGISTRY/dockerhub/cypress/included:13.6.3
+  extends:
+    - .test:libs
+  script:
+    - node ./tools/scripts/execute-target-for-affected.js --target=test --tags="build:npm-library" --base=$NX_BASE --head=$NX_HEAD --coverage --parallel=1 --maxWorkers=1 --output-style=stream-without-prefix
+    - node ./tools/scripts/execute-target-for-affected.js --target=test --tags="scope:ionic-portal" --base=$NX_BASE --head=$NX_HEAD --coverage --parallel=1 --maxWorkers=1 --output-style=stream-without-prefix
+    - npx nx run monorepo-storybook-e2e:e2e-coverage
+
+.e2e:app:
+  image: $CI_HARBOR_REGISTRY/dockerhub/cypress/included:13.6.3
+  extends:
+    - .test:app
+  script:
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx run $CLIENT_E2E:e2e-coverage --parallel=1 --output-style=static
+  artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/apps/${CLIENT_E2E}/coverage
+      - coverage
+      - dist
+    expire_in: 3 days
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'apps/**/cypress-reports/TEST-*.xml'
+  retry:
+    max: 2
+
+.component-test:app:
+  image: $CI_HARBOR_REGISTRY/dockerhub/cypress/included:13.6.3
+  extends:
+    - .test:app
+  artifacts:
+    paths:
+      - coverage
+      - node_modules/.cache/nx
+      - dist
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'coverage/**/cobertura-coverage.xml'
+    expire_in: 3 days
+  script:
+    - node --max-old-space-size=8192 ./tools/scripts/execute-target-for-given-target-and-tags.js --target=component-test-coverage --tags="scope:${CLIENT_PROJECT}" --base=$NX_BASE --head=$NX_HEAD --code-coverage --parallel=1 --output-style=stream-without-prefix --maxWorkers=1
+  rules:
+    - when: always
+
+.e2e-cy-&-pl:app:
+  image: $CI_HARBOR_REGISTRY/dockerhub/cypress/included:13.6.3
+  extends:
+    - .test:app
+  script:
+    - npx playwright install --with-deps
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx run $CLIENT_E2E:e2e-coverage --parallel=1 --output-style=static
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx run $CLIENT_E2E:e2e --parallel
+  artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/apps/${CLIENT_E2E}/coverage
+      - coverage
+      - dist
+    expire_in: 3 days
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'apps/**/cypress-reports/TEST-*.xml'
+  retry:
+    max: 2
+
+.e2e:local:
+  image: $PLAYWRIGHT_TEST_IMAGE
+  extends:
+    - .test:app
+  script:
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx run $CLIENT_E2E:e2e --parallel
+  artifacts:
+    paths:
+      - coverage
+      - dist
+    expire_in: 3 days
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'coverage/**/cobertura-coverage.xml'
+  retry:
+    max: 2
+
+.e2e:integrated:
+  image: $PLAYWRIGHT_TEST_IMAGE
+  extends:
+    - .test:app
+  script:
+    - node --max-old-space-size=8192 ./node_modules/nx/bin/nx run $CLIENT_E2E:e2e-integrated --parallel
+  artifacts:
+    paths:
+      - coverage
+      - dist
+    expire_in: 3 days
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: 'coverage/**/cobertura-coverage.xml'

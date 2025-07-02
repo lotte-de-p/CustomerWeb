@@ -1,0 +1,9 @@
+<div [attr.data-cy]="'mobile-usage-limits-out-of-bundle-section-header'">
+  <h4 [attr.data-cy]="'mobile-usage-limits-out-of-bundle-section-header-title'" class="heading--nomargin">
+    @if (!isMember) {
+      {{ 'ng.mobile-usage-limits.title.out-of-bundle-limit' | translate }}
+    } @else {
+      {{ 'ng.mobile-usage-limits.title.member-out-of-bundle-limit' | translate }}
+    }
+  </h4>
+</div>

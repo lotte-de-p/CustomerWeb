@@ -1,0 +1,91 @@
+@if (showError) {
+  <div>
+    <tg-error-notification
+      [description]="'ng.mobile-line-selector.lbl.error-description' | translate"
+      [label]="'ng.mobile-line-selector.lbl.error-label' | translate"></tg-error-notification>
+  </div>
+} @else if (loading && !showError) {
+  <div class="flex-col m--n flex-grow">
+    <h2 class="col-5 heading--notopmargin skeleton--v2 skeleton--basic skeleton--one-line"></h2>
+  </div>
+} @else if (!loading && !showError && selectedMobileLine) {
+  <div class="display--flex pb--xl align-items--center" data-testid="mobile-line-selector">
+    <div data-cy="selected-mobile-line-name" *ngIf="selectedMobileLine.name">
+      {{ selectedMobileLine.name }} &bull;&nbsp;
+    </div>
+    <div data-cy="selected-mobile-line-msisdn" *ngIf="selectedMobileLine.msisdn">
+      {{ selectedMobileLine.msisdn! | phoneNumber }}
+    </div>
+    @if (mobileLines.length > 1) {
+      <div class="cursor--pointer change-mobile-line ml--xs">
+        <div
+          data-cy="change-mobile-line"
+          (click)="open($event)"
+          class="text-font-family--t5 cursor--pointer width--fit-content">
+          {{ 'ng.mobile-line-selector.lbl.change-line' | translate }}
+        </div>
+      </div>
+    }
+  </div>
+  <tg-slide-menu
+    *ngIf="mobileLines.length > 1"
+    [showMenu]="showMenu"
+    (closeMenu)="close()"
+    [title]="'ng.mobile-line-selector.lbl.title' | translate"
+    padding="px--xs"
+    [attr.data-cy]="'mobile-line-selector-slide-in'">
+    <ul
+      class="mobile-lines-list justify-content--start align-items--start flex-direction--column display--flex flex-wrap--wrap border-radius--all--n listing--none width--full mt-0"
+      data-cy="mobile-lines-list">
+      <li
+        *ngFor="let mobileLine of mobileLines; let last = last"
+        (click)="selectMobileLine(mobileLine)"
+        [attr.data-cy]="'mobile-line-selector-option-' + mobileLine.msisdn"
+        class="mobile-line width--full"
+        [ngClass]="{ active: mobileLine.msisdn === selectedMobileLine.msisdn }">
+        <div
+          [ngClass]="{ 'border-style--b--solid': !last }"
+          class="border-width--b--r border--b--r border-color--all--light-grey cursor--pointer display--flex justify-content--between mx--s align-items--center">
+          <div
+            class="py--l justify-content--start align-items--center flex-direction--row display--flex flex-wrap--nowrap">
+            <span class="mr--xs">
+              <i
+                [ngClass]="{ 'icon-sim-card': mobileLine.isDataOnly, 'icon-mobile': !mobileLine.isDataOnly }"
+                class="icon icon-md"></i>
+            </span>
+            <div>
+              <div
+                class="heading--6 m--n justify-content--between align-items--center"
+                *ngIf="mobileLine?.name; else mobileOnly">
+                {{ mobileLine.name }}
+                <div class="font--body-small color-shade_72">{{ mobileLine.msisdn | phoneNumber }}</div>
+              </div>
+              <ng-template #mobileOnly>
+                <div class="heading--6 m--n">{{ mobileLine.msisdn | phoneNumber }}</div>
+              </ng-template>
+            </div>
+          </div>
+          <div class="display--flex">
+            <span
+              *ngIf="mobileLine.isDataOnly"
+              class="status-indicator display--inline-block vertical-align--middle status-indicator status-indicator--with-text"
+              >{{ 'ng.mobile-line-selector.lbl.data-sim' | translate }}</span
+            >
+            <i
+              *ngIf="mobileLine.msisdn === selectedMobileLine?.msisdn"
+              class="icon icon-md icon-no-size-override icon-check-shape-filled color-brand-primary ml--xxs"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </tg-slide-menu>
+} @else {
+  <div class="notification notification--errorfield notification--errorfield--flow">
+    <span class="icon icon-error-shape errorfield"></span>
+    <span [innerHTML]="'ng.mobile-line-selector.no-lines' | translate"></span>
+  </div>
+}
+
+@if (selectedMobileLine?.status === ACTIVATION_IN_PROGRESS) {
+  <tg-mobile-activation-in-progress-notification></tg-mobile-activation-in-progress-notification>
+}

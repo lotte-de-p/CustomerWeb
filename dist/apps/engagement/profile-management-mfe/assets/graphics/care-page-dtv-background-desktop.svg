@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1002px" viewBox="0 0 1440 1002" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Dispaly</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="46.0143882%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F2F2F2" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1440" height="1003"></rect>
+    </defs>
+    <g id="Voucher-Activation-(ALMOST-APPROVED)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voucher-Activation-Components" transform="translate(0.000000, -4052.000000)">
+            <g id="Dispaly" transform="translate(0.000000, 4051.000000)">
+                <polygon id="Rectangle-2-Copy-7" fill="url(#linearGradient-1)" points="0 1 1440 1 1440 927 0 927"></polygon>
+                <circle id="Pink-Ball-Copy" fill="#239A98" cx="1000.5" cy="268.5" r="33.5"></circle>
+                <circle id="Pink-Ball" stroke="#F5B0A3" fill="#F5B0A3" cx="1242.5" cy="392.5" r="52.5"></circle>
+                <circle id="Pink-Ball-Copy-2" stroke="#F5B0A3" fill="#F5B0A3" cx="199.5" cy="371.5" r="45.5"></circle>
+                <circle id="Pink-Ball-Copy" fill="#239A98" cx="370.5" cy="228.5" r="33.5"></circle>
+                <g id="Oval">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <circle fill="#FFFFFF" mask="url(#mask-3)" cx="720" cy="3352" r="3000"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

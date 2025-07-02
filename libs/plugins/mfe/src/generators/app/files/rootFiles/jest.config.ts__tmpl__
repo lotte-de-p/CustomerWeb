@@ -1,0 +1,6 @@
+/* eslint-disable */
+export default {
+  displayName: '<%= mfeName %>',
+  preset: '<%= offsetFromRoot %>jest.preset.js',
+  coverageDirectory: '<%= offsetFromRoot %>coverage/<%= fullAppsPath %>',
+};

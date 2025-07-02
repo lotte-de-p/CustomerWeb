@@ -1,0 +1,11 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-account-discount-overview-cs/v1/discount-overview",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "availableSlots": 5,
+    "totalSlots": 5,
+    "creditCheck": "OK",
+    "usedDiscounts": []
+  }
+}

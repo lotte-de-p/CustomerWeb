@@ -1,0 +1,60 @@
+<div class="mb--xxxg">
+  @if (submitted && easySwitchForm.invalid) {
+    <div class="mb--s mt--s">
+      <div
+        class="notification notification--errorfield notification--errorfield--flow ng-star-inserted"
+        data-cy="app-message-flow">
+        <span class="icon-error-shape"></span>
+        <div>Vul de verplichte velden in.</div>
+      </div>
+    </div>
+  }
+  <form [formGroup]="easySwitchForm">
+    <div class="mb--xl--md mb--l">
+      <tg-order-configurator-easy-switch-ui-switch-selection-checkmarks
+        [labels]="[
+          'ng.sales-checkout.lbl.easy-switch-options-cancel-subscription-text',
+          'Je blijft altijd verbonden met internet en via je tv.',
+          'ng.sales-checkout.lbl.easy-switch-options-no-double-billing-text'
+        ]">
+      </tg-order-configurator-easy-switch-ui-switch-selection-checkmarks>
+    </div>
+    <div class="easy-switch--selection p--xl--md">
+      <div class="heading--6 heading--nomargin pb--l--md pb--xxs">Wil je je tv easy switchen?</div>
+      <div class="select-tile--group display--grid grid-template-column--1--sm gap--xxs">
+        <tg-order-configurator-easy-switch-ui-switch-selection-option
+          [heading]="'Ja, ik wil dat Telenet mijn overstap regelt met Easy Switch.'"
+          [badgeText]="'Gratis'">
+          <input
+            type="radio"
+            class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+            [value]="'yes'"
+            formControlName="easySwitchSelection"
+            [id]="'yes-option'" />
+        </tg-order-configurator-easy-switch-ui-switch-selection-option>
+
+        <tg-order-configurator-easy-switch-ui-switch-selection-option
+          [heading]="'Nee, ik wil Easy Switch niet gebruiken.'"
+          [label]="'Als je geen internet- en tv-abonnement hebt of je overstap liever zelf regelt.'">
+          <input
+            type="radio"
+            class="select-tile__input display--flex align-items--center justify-content--center font--caption cursor--pointer border-radius--circle"
+            [value]="'no'"
+            formControlName="easySwitchSelection"
+            [id]="'no-option'" />
+        </tg-order-configurator-easy-switch-ui-switch-selection-option>
+      </div>
+    </div>
+    @if (showTipNotification) {
+      <div class="mt--xl--md mt--xxs ng-star-inserted">
+        <div class="notification notification--info">
+          <span class="icon icon-information-shape info"></span>
+          <div>
+            <div class="text-flow--h6 text-weight--xl mb--m">Tip</div>
+            <p>Heb je momenteel al een tv- of internetabonnement, vergeet het dan niet tijdig zelf op te zeggen.</p>
+          </div>
+        </div>
+      </div>
+    }
+  </form>
+</div>

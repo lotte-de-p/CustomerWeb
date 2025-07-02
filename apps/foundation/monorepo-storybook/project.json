@@ -1,0 +1,143 @@
+{
+  "name": "monorepo-storybook",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/foundation/monorepo-storybook/src",
+  "prefix": "app",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/foundation/monorepo-storybook",
+        "index": "apps/foundation/monorepo-storybook/src/index.html",
+        "main": "apps/foundation/monorepo-storybook/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/foundation/monorepo-storybook/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/foundation/monorepo-storybook/src/favicon.ico",
+          "apps/foundation/monorepo-storybook/src/assets",
+          "apps/foundation/monorepo-storybook/src/version.json"
+        ],
+        "styles": ["apps/foundation/monorepo-storybook/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/foundation/monorepo-storybook/src/favicon.ico",
+            "apps/foundation/monorepo-storybook/src/assets",
+            "apps/foundation/monorepo-storybook/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "customWebpackConfig": {
+            "path": "apps/foundation/monorepo-storybook-e2e/coverage.webpack.ts"
+          }
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "monorepo-storybook:build:production"
+        },
+        "development": {
+          "buildTarget": "monorepo-storybook:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4009
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/foundation/monorepo-storybook/**/*.ts",
+          "apps/foundation/monorepo-storybook/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "dependsOn": ["prebuild"],
+      "options": {
+        "port": 4400,
+        "configDir": "apps/foundation/monorepo-storybook/.storybook",
+        "browserTarget": "monorepo-storybook:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "dependsOn": ["prebuild"],
+      "options": {
+        "outputDir": "dist/storybook/monorepo-storybook",
+        "configDir": "apps/foundation/monorepo-storybook/.storybook",
+        "browserTarget": "monorepo-storybook:build",
+        "compodoc": false,
+        "styles": ["node_modules/atomic-library/public/styles/telenet.css"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/foundation/monorepo-storybook/.storybook --url=http://localhost:4400"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:monorepo-storybook"]
+}

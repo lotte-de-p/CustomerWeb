@@ -1,0 +1,789 @@
+[
+  {
+    "productId": "114100002",
+    "bestSellerPositionTelenet": 2,
+    "prices": {
+      "priceType": "Non Recurrent Charge",
+      "base": {
+        "plans": [
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatInclusive": 649.0,
+            "discountedPriceVatInclusive": 450.0,
+            "priceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR"
+          },
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatInclusive": 649.0,
+            "discountedPriceVatInclusive": 500.0,
+            "priceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR"
+          }
+        ]
+      },
+      "telenet": {
+        "originalPriceVatInclusive": 649.0,
+        "originalPriceAfterCashbackVatInclusive": 400.0,
+        "discountedPriceVatInclusive": 450.0,
+        "discountedPriceAfterCashbackVatInclusive": 400.0,
+        "basicDiscountVatInclusive": 199.0,
+        "currency": "EUR",
+        "onTopPromos": [
+          {
+            "onTopPromoName": "KLIK promo",
+            "externalProductCode": "BOYO0040",
+            "onTopPromoPriceVatInclusive": 649.0,
+            "promoPriceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR",
+            "onTopPromoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "promo CLIC"
+                },
+                {
+                  "locale": "fr",
+                  "key": "KLIK promo"
+                },
+                {
+                  "locale": "en",
+                  "key": "CLICK promo"
+                }
+              ]
+            }
+          },
+          {
+            "onTopPromoName": "KLIK promo",
+            "externalProductCode": "BOYO0040",
+            "onTopPromoPriceVatInclusive": 649.0,
+            "promoPriceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR",
+            "onTopPromoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "promo CLIC"
+                },
+                {
+                  "locale": "fr",
+                  "key": "KLIK promo"
+                },
+                {
+                  "locale": "en",
+                  "key": "CLICK promo"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "baseSoho": {
+        "plans": [
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatExclusive": 649.0,
+            "discountedPriceVatExclusive": 450.0,
+            "priceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR"
+          },
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatExclusive": 649.0,
+            "discountedPriceVatExclusive": 500.0,
+            "priceAfterCashbackVatInclusive": 450.0,
+            "currency": "EUR"
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "attributeKey": "main_image",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "main_image_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "main_image_fr"
+          },
+          {
+            "locale": "en",
+            "key": "main_image_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "picture_1",
+        "value": "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/d/d/3/c/dd3ce1ef631ef4a91c16a70d9536c4df93310236_SSG_GalaxyA12_Black_FB_LR.jpg",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_1_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_1_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_1_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_2",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_2_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_2_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_2_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_3",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_3_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_3_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_3_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_4",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_4_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_4_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_4_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_5",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_5_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_5_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_5_en"
+          }
+        ]
+      }
+    ],
+    "manBrand": {
+      "sortOrder": "17",
+      "attributeGroup": {
+        "code": "general",
+        "sortOrder": "0",
+        "localizedContent": [
+          {
+            "locale": "en",
+            "key": "General"
+          },
+          {
+            "locale": "fr",
+            "key": "General"
+          },
+          {
+            "locale": "nl",
+            "key": "General"
+          }
+        ]
+      },
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "key": "brand_nl",
+          "value": ["Apple NL"]
+        },
+        {
+          "locale": "fr",
+          "key": "brand_fr",
+          "value": ["Apple FR"]
+        },
+        {
+          "locale": "en",
+          "key": "brand_en",
+          "value": ["Apple EN"]
+        }
+      ]
+    },
+    "color": {
+      "hexCode": "#000000",
+      "sortOrder": "0",
+      "attributeGroup": {
+        "code": "general",
+        "sortOrder": "0",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "General_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "General_fr"
+          },
+          {
+            "locale": "en",
+            "key": "General_en"
+          }
+        ]
+      },
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "key": "color_nl",
+          "value": ["Black NL"]
+        },
+        {
+          "locale": "fr",
+          "key": "color_fr",
+          "value": ["Black FR"]
+        },
+        {
+          "locale": "en",
+          "key": "color_en",
+          "value": ["Black EN"]
+        }
+      ]
+    },
+    "shortDescription": {
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "data": "IPHONE SE 2020 64GB Blue"
+        },
+        {
+          "locale": "fr",
+          "data": "IPHONE SE 2020 64GB Blue"
+        },
+        {
+          "locale": "en",
+          "data": "IPHONE SE 2020 64GB Blue"
+        }
+      ]
+    }
+  },
+  {
+    "productId": "11800161",
+    "bestSellerPositionTelenet": 1,
+    "prices": {
+      "priceType": "Non Recurrent Charge",
+      "base": {
+        "plans": [
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0027",
+            "externalProductCode": "BOYO0027",
+            "forNewCustomer": "false",
+            "forExistingCustomer": "true",
+            "originalPriceVatInclusive": 649.0,
+            "discountedPriceVatInclusive": 450.0,
+            "priceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR"
+          },
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0027",
+            "externalProductCode": "BOYO0027",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatInclusive": 649.0,
+            "discountedPriceVatInclusive": 500.0,
+            "priceAfterCashbackVatInclusive": 450.0,
+            "currency": "EUR"
+          }
+        ]
+      },
+      "telenet": {
+        "originalPriceVatInclusive": 649.0,
+        "originalPriceAfterCashbackVatInclusive": 400.0,
+        "discountedPriceVatInclusive": 450.0,
+        "discountedPriceAfterCashbackVatInclusive": 400.0,
+        "basicDiscountVatInclusive": 199.0,
+        "currency": "EUR",
+        "onTopPromos": [
+          {
+            "onTopPromoName": "KLIK promo",
+            "externalProductCode": "BOYO0040",
+            "onTopPromoPriceVatInclusive": 329.0,
+            "promoPriceAfterCashbackVatInclusive": 399.0,
+            "currency": "EUR",
+            "onTopPromoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "promo CLIC"
+                },
+                {
+                  "locale": "fr",
+                  "key": "KLIK promo"
+                },
+                {
+                  "locale": "en",
+                  "key": "CLICK promo"
+                }
+              ]
+            }
+          },
+          {
+            "onTopPromoName": "KLIK promo",
+            "externalProductCode": "BOYO0040",
+            "onTopPromoPriceVatInclusive": 649.0,
+            "promoPriceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR",
+            "onTopPromoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "nl",
+                  "key": "promo CLIC"
+                },
+                {
+                  "locale": "fr",
+                  "key": "KLIK promo"
+                },
+                {
+                  "locale": "en",
+                  "key": "CLICK promo"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "baseSoho": {
+        "plans": [
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatExclusive": 649.0,
+            "discountedPriceVatExclusive": 450.0,
+            "priceAfterCashbackVatInclusive": 400.0,
+            "currency": "EUR"
+          },
+          {
+            "specurl": "https://api.int.base.be/omapi/public/product/BOYO0040",
+            "externalProductCode": "BOYO0040",
+            "forNewCustomer": "true",
+            "forExistingCustomer": "false",
+            "originalPriceVatExclusive": 649.0,
+            "discountedPriceVatExclusive": 500.0,
+            "priceAfterCashbackVatInclusive": 450.0,
+            "currency": "EUR"
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "attributeKey": "main_image",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "main_image_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "main_image_fr"
+          },
+          {
+            "locale": "en",
+            "key": "main_image_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "picture_1",
+        "value": "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/d/d/3/c/dd3ce1ef631ef4a91c16a70d9536c4df93310236_SSG_GalaxyA12_Black_FB_LR.jpg",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_1_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_1_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_1_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_2",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_2_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_2_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_2_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_3",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_3_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_3_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_3_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_4",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_4_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_4_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_4_en"
+          }
+        ]
+      },
+      {
+        "attributeKey": "image_5",
+        "value": "https://s3.eu-central-1.amazonaws.com/pim-log/c/3/9/a/c39a0f6d198675c618ed930dc7a447234b3bfd84_SSG_GalaxyA21s_Black_FB_LR.png",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "image_5_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "image_5_fr"
+          },
+          {
+            "locale": "en",
+            "key": "image_5_en"
+          }
+        ]
+      }
+    ],
+    "manBrand": {
+      "sortOrder": "17",
+      "attributeGroup": {
+        "code": "general",
+        "sortOrder": "0",
+        "localizedContent": [
+          {
+            "locale": "en",
+            "key": "General"
+          },
+          {
+            "locale": "fr",
+            "key": "General"
+          },
+          {
+            "locale": "nl",
+            "key": "General"
+          }
+        ]
+      },
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "key": "brand_nl",
+          "value": ["Apple NL"]
+        },
+        {
+          "locale": "fr",
+          "key": "brand_fr",
+          "value": ["Apple FR"]
+        },
+        {
+          "locale": "en",
+          "key": "brand_en",
+          "value": ["Apple EN"]
+        }
+      ]
+    },
+    "color": {
+      "hexCode": "#000000",
+      "sortOrder": "0",
+      "attributeGroup": {
+        "code": "general",
+        "sortOrder": "0",
+        "localizedContent": [
+          {
+            "locale": "nl",
+            "key": "General_nl"
+          },
+          {
+            "locale": "fr",
+            "key": "General_fr"
+          },
+          {
+            "locale": "en",
+            "key": "General_en"
+          }
+        ]
+      },
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "key": "color_nl",
+          "value": ["Black NL"]
+        },
+        {
+          "locale": "fr",
+          "key": "color_fr",
+          "value": ["Black FR"]
+        },
+        {
+          "locale": "en",
+          "key": "color_en",
+          "value": ["Black EN"]
+        }
+      ]
+    },
+    "shortDescription": {
+      "localizedContent": [
+        {
+          "locale": "nl",
+          "data": "IPHONE SE 2020 64GB Blue"
+        },
+        {
+          "locale": "fr",
+          "data": "IPHONE SE 2020 64GB Blue"
+        },
+        {
+          "locale": "en",
+          "data": "IPHONE SE 2020 64GB Blue"
+        }
+      ]
+    },
+    "tag": {
+      "telenet": {
+        "options": [
+          {
+            "attributeKey": "vp_label",
+            "startDate": "2021-08-16T00:00:00+00:00",
+            "endDate": "2077-10-24T00:00:00+00:00",
+            "localizedContent": [
+              {
+                "locale": "fr",
+                "value": ["Enco W31 gratuit"],
+                "key": "Vendor promo label"
+              },
+              {
+                "locale": "en",
+                "value": ["free enco W31"],
+                "key": "Vendor promo label"
+              },
+              {
+                "locale": "nl",
+                "value": ["Gratis Enco w31"],
+                "key": "Vendor promo label"
+              }
+            ],
+            "promoURL": {
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "value": ["https://telenet.myactions.eu/actions/52"],
+                  "key": "Vendor promo url"
+                },
+                {
+                  "locale": "en",
+                  "value": ["https://telenet.myactions.eu/actions/52"],
+                  "key": "Vendor promo url"
+                },
+                {
+                  "locale": "nl",
+                  "value": ["https://telenet.myactions.eu/actions/52"],
+                  "key": "Vendor promo url"
+                }
+              ]
+            },
+            "promoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "value": [
+                    "Enco W31 graduit à l'achat d'un OPPO Reno4 ou Find X3 Lite entre 16/08/2021 et 24/10/2021"
+                  ],
+                  "key": "Vendor promo description"
+                },
+                {
+                  "locale": "en",
+                  "value": ["free enco W31"],
+                  "key": "Vendor promo description"
+                },
+                {
+                  "locale": "nl",
+                  "value": [
+                    "Gratis Enco w31 bij aankoop van een OPPO Reno4 of Find X3 Lite tussen 16/08/2021 en 24/10/2021"
+                  ],
+                  "key": "Vendor promo description"
+                }
+              ]
+            },
+            "promoImage": {
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "value": [
+                    "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/e/8/1/b/e81bed98d5c287c9209e8cd59da0e65e8a2626d9_FR.png"
+                  ],
+                  "key": "Vendor promo image"
+                },
+                {
+                  "locale": "en",
+                  "value": [
+                    "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/d/8/2/8/d828640441b67f9eba558294bdf1298a9c6513ed_550x582_min.png"
+                  ],
+                  "key": "Vendor promo image"
+                },
+                {
+                  "locale": "nl",
+                  "value": [
+                    "https://s3.eu-central-1.amazonaws.com/994842004184-pim-dev-akeneo/9/a/2/2/9a229b878c78cf87610333f73e8002a9b49cdae7_NL.png"
+                  ],
+                  "key": "Vendor promo image"
+                }
+              ]
+            }
+          },
+          {
+            "attributeKey": "cp_label",
+            "startDate": "2021-08-16T00:00:00+00:00",
+            "endDate": "2077-10-10T00:00:00+00:00",
+            "localizedContent": [
+              {
+                "locale": "fr",
+                "value": ["9 € uniquement dans les BASE Shops​"],
+                "key": "Cashback label"
+              },
+              {
+                "locale": "en",
+                "value": ["€ 9 in BASE Shop"],
+                "key": "Cashback label"
+              },
+              {
+                "locale": "nl",
+                "value": ["€9, alleen in BASE Shops​"],
+                "key": "Cashback label"
+              }
+            ],
+            "promoURL": {
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "value": ["https://www.base.be/fautpasplus"],
+                  "key": "Cashback url"
+                },
+                {
+                  "locale": "en",
+                  "value": ["https://www.base.be/gooddeals"],
+                  "key": "Cashback url "
+                },
+                {
+                  "locale": "nl",
+                  "value": ["https://www.base.be/goedgeriefdeals"],
+                  "key": "Cashback url"
+                }
+              ]
+            },
+            "promoDescription": {
+              "localizedContent": [
+                {
+                  "locale": "fr",
+                  "value": [
+                    "Prenez un abonnement et un plan de paiement BASE et payez seulement 9 € dans le BASE Shop pour l'achat d'un Xiaomi Mi 11 Lite. Infos et conditions :​"
+                  ],
+                  "key": "Cashback description"
+                },
+                {
+                  "locale": "en",
+                  "value": ["Take a BASE monthly plan and payment plan and pay just €9"],
+                  "key": "Cashback description"
+                },
+                {
+                  "locale": "nl",
+                  "value": [
+                    "Neem een BASE-abonnement en afbetalingsplan en betaal maar € 9 in de BASE Shop bij aankoop van een Xiaomi Mi 11 Lite. Info en voorwaarden:"
+                  ],
+                  "key": "Cashback omschrijving"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+]

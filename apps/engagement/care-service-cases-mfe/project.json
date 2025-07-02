@@ -1,0 +1,178 @@
+{
+  "name": "care-service-cases-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/engagement/care-service-cases-mfe/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/engagement/care-service-cases-mfe",
+        "index": "apps/engagement/care-service-cases-mfe/src/index.html",
+        "main": "apps/engagement/care-service-cases-mfe/src/main.ts",
+        "polyfills": ["apps/engagement/care-service-cases-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/engagement/care-service-cases-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/engagement/care-service-cases-mfe/src/favicon.ico",
+          "apps/engagement/care-service-cases-mfe/src/assets",
+          "apps/engagement/care-service-cases-mfe/src/version.json"
+        ],
+        "styles": ["apps/engagement/care-service-cases-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/engagement/care-service-cases-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/engagement/care-service-cases-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/engagement/care-service-cases-mfe/src/favicon.ico",
+            "apps/engagement/care-service-cases-mfe/src/assets",
+            "apps/engagement/care-service-cases-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        },
+        "coverage": {
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "vendorChunk": true,
+          "customWebpackConfig": {
+            "path": "apps/engagement/care-service-cases-mfe-e2e/coverage.webpack.ts"
+          }
+        },
+        "mobile": {
+          "main": "apps/engagement/care-service-cases-mfe/src/mobile/main.ts"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "care-service-cases-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "care-service-cases-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4210,
+        "publicHost": "http://localhost:4210"
+      }
+    },
+    "extract-i18n": {
+      "executor": "ngx-build-plus:extract-i18n",
+      "options": {
+        "buildTarget": "care-service-cases-mfe:build",
+        "extraWebpackConfig": "apps/engagement/care-service-cases-mfe/webpack.config.js"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/engagement/care-service-cases-mfe/**/*.ts",
+          "apps/engagement/care-service-cases-mfe/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/engagement/care-service-cases-mfe/.storybook",
+        "browserTarget": "care-service-cases-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/engagement/care-service-cases-mfe/.storybook",
+        "browserTarget": "care-service-cases-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/engagement/care-service-cases-mfe/src/styles.scss"],
+        "host": "local.telenet.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/care-service-cases-mfe",
+        "configDir": "apps/engagement/care-service-cases-mfe/.storybook",
+        "browserTarget": "care-service-cases-mfe:build-storybook",
+        "styles": ["apps/engagement/care-service-cases-mfe/src/styles.scss"],
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-mobile": {
+      "executor": "nx:run-commands",
+      "options": {
+        "dependencies": ["care-service-cases-mfe:build:mobile"],
+        "commands": [
+          "nx run care-service-cases-mfe:build:mobile",
+          "cp -r dist/apps/engagement/care-service-cases-mfe/assets/config/capacitor.config.json dist/apps/engagement/care-service-cases-mfe/capacitor.config.json"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": ["type:app", "scope:care-service-cases-mfe"]
+}

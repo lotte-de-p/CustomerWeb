@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productid": "FLOB0005",
+    "externalProductCode": "FLOB0005",
+    "labelkey": "Voice Europe plus 400 min",
+    "producttype": "OPTION",
+    "weight": 80,
+    "apps": [],
+    "customercategories": ["Business", "Production Test Business"],
+    "category": ["National & Europe plus voice options", "B2B Options with ETF", "Fleet Options with ETF"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Voice Europe plus 400 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Telefonie Europa plus 400 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Téléphonie Europe plus 400 min",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/voice-europe-plus-400-min.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "250 minutes calling EU plus"
+        },
+        {
+          "locale": "nl",
+          "name": "250 minuten bellen EU plus"
+        },
+        {
+          "locale": "fr",
+          "name": "250 minutes d’appels UE plus"
+        }
+      ]
+    },
+    "subcategory": {
+      "name": "Calls to numbers in Europe",
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Calls in/to Europe plus"
+        },
+        {
+          "locale": "nl",
+          "name": "Bellen in/naar Europa plus"
+        },
+        {
+          "locale": "fr",
+          "name": "Appels dans/vers l’Europe plus"
+        }
+      ],
+      "weight": 20,
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "Voice Europe plus 400 min",
+            "value": "250",
+            "unit": "minuten",
+            "visible": true,
+            "weight": "80",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "250 minutes for calls to European countries or in Europe; also valid in/to Jersey, Monaco, Switzerland"
+              },
+              {
+                "locale": "nl",
+                "name": "250 minuten om te bellen naar Europese landen of in Europa; ook geldig in/naar Jersey, Monaco, Zwitserland"
+              },
+              {
+                "locale": "fr",
+                "name": "250 minutes pour téléphoner vers les pays européens ou en Europe ; aussi valable à/vers Jersey, Monaco et la Suisse"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "GENERAL",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": []
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "16,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false
+  }
+}

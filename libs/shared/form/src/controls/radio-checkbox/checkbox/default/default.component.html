@@ -1,0 +1,18 @@
+<div *ngIf="error" class="notification notification--errorfield">
+  <span class="icon icon-error-shape errorfield">{{ getText() | translate }}</span>
+</div>
+<ng-container *ngFor="let option of optionList; let i = index">
+  <div class="radio-checkbox">
+    <div class="form__checkbox" style="--animation-delay: i">
+      <input
+        (click)="selectOption(option)"
+        [checked]="selectedOptions.includes(option)"
+        class="form__checkbox__input"
+        id="{{ key + i }}"
+        name="checkbox-group-name"
+        type="checkbox" />
+      <label class="form__checkbox__label" for="{{ key + i }}"></label>
+    </div>
+    <label [innerHTML]="getOptionLabel(option) | translate" class="label--large" for="{{ key + i }}"> </label>
+  </div>
+</ng-container>

@@ -1,0 +1,59 @@
+{
+  "name": "product-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/account/product-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "extractLicenses": false,
+      "sourceMap": true,
+      "namedChunks": true,
+      "vendorChunk": true,
+      "customWebpackConfig": {
+        "path": "./coverage.webpack.ts"
+      },
+      "options": {
+        "cypressConfig": "apps/account/product-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "product-mfe:storybook",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "product-mfe:storybook:ci"
+        }
+      }
+    },
+    "e2e-coverage": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/account/product-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "product-mfe:storybook",
+        "testingType": "e2e"
+      }
+    },
+    "e2e-local": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/account/product-mfe-e2e/cypress.config.ts",
+        "devServerTarget": "product-mfe:storybook",
+        "testingType": "e2e",
+        "watch": true
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "product-mfe:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/account/product-mfe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:product-mfe"],
+  "implicitDependencies": ["product-mfe"]
+}

@@ -1,0 +1,20 @@
+@import './fonts';
+
+:root {
+  --body-font-size: 62.5%;
+  --rem-multiplier: 1rem;
+
+  //--body-font-size: 100%;
+  //--rem-multiplier: .625rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--body-font-size, 62.5%);
+}
+
+body {
+  font-family: TelenetAlbra-Regular, serif;
+}

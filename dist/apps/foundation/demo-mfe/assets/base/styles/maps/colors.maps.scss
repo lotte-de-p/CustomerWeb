@@ -1,0 +1,108 @@
+$colors-test: (
+  '//white': #f1f1f1f1,
+  'canary': #ffe500ff,
+  'vanilla': #fff6b1ff,
+  'cadet-gray': #93a8acff,
+  'cerulean': #1282a2ff,
+  'charcoal': #424b54ff,
+  'jet': #363636ff,
+);
+
+//
+//
+// Yellow
+$primitive-yellow: (
+  'yellow50': #fff8e2,
+  'yellow100': #ffedb5,
+  'yellow200': #ffe186,
+  'yellow300': #ffd756,
+  'yellow400': #ffcc34,
+  'yellow500': #ffc421,
+);
+
+//
+//
+// Primary
+$primitive-primary: (
+  'lemon': #fff7c7,
+  'white': #ffffff,
+  'dark-brown': #291d18,
+);
+
+//
+//
+// Secondary
+$primitive-secondary: (
+  'brightblue': #7291b5,
+  'lila': #aa81a8,
+  'red': #c95942,
+  'watermelon': #e16a5b,
+  'jeansblue': #1a9aaa,
+  'turquoise': #209d91,
+  'olivine': #749645,
+);
+
+//
+//
+// Tertiary
+$primitive-tertiary: (
+  'sinbad': #a6d9d9,
+  'peach': #fac7ba,
+  'sprout': #add1a6,
+  'golden': #fdd671,
+  'tan': #f7945c,
+  'duststorm': #e5cfc7,
+);
+
+//
+//
+// System
+$primitive-system: (
+  'blue16': rgba(#2373e6, 0.16),
+  'blue100': rgba(#2373e6, 1),
+  'green16': rgba(#00875a, 0.16),
+  'green100': rgba(#00875a, 1),
+  'orange16': rgba(#ff9500, 0.16),
+  'orange100': rgba(#ff9500, 1),
+  'red16': rgba(#de350b, 0.16),
+  'red100': rgba(#de350b, 1),
+);
+
+//
+//
+// Neutrals
+$primitive-neutrals: (
+  'neutral04': #f7f6f6,
+  'neutral08': #eeeded,
+  'neutral12': #e5e3e3,
+  'neutral16': #dddbda,
+  'neutral24': #ccc9c8,
+  'neutral32': #bab6b5,
+  'neutral40': #a8a5a3,
+  'neutral48': #999391,
+  'neutral64': #766f6b,
+  'neutral72': #655c58,
+  'neutral04A': rgba(#291d18, 0.4),
+  'neutral08A': rgba(#291d18, 0.8),
+  'neutral12A': rgba(#291d18, 0.12),
+  'neutral16A': rgba(#291d18, 0.16),
+  'neutral24A': rgba(#291d18, 0.24),
+);
+
+//
+//
+// Whites
+$primitive-whites: (
+  'white64A': rgba(#ffffff, 0.64),
+);
+
+$brand-colors-map: maps-merge(
+  $colors-test,
+  $primitive-yellow,
+  $primitive-primary,
+  $primitive-secondary,
+  $primitive-tertiary,
+  $primitive-system,
+  $primitive-neutrals,
+  $primitive-whites
+);

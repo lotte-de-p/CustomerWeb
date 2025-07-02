@@ -1,0 +1,127 @@
+{
+  "status": "Entering",
+  "customerId": "9164070940913075774",
+  "id": "9164141523813497989",
+  "name": "Order #0009953218",
+  "success": true,
+  "prices": {
+    "taxInclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "106,00",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "106,01",
+      "upfrontTotal": "0,00"
+    },
+    "taxExclPrices": {
+      "currency": "EUR",
+      "oneTimeDiscount": "0,00",
+      "oneTimeTotal": "0,00",
+      "recurrentDiscount": "0,00",
+      "recurrentTotal": "87,61",
+      "oneTimeDiscountedOnNextInvoice": "0,00",
+      "oneTimeDiscounted": "0,00",
+      "recurrentDiscounted": "87,61",
+      "upfrontTotal": "0,00"
+    }
+  },
+  "lineItems": [
+    {
+      "orderItems": [
+        {
+          "id": "9164141525913497989",
+          "name": "Business Fibernet 300Plus",
+          "type": "New Option Acquisition",
+          "publicateNumber": false,
+          "prices": {
+            "taxInclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "106,00",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "106,01",
+              "upfrontTotal": "0,00"
+            },
+            "taxExclPrices": {
+              "currency": "EUR",
+              "oneTimeDiscount": "0,00",
+              "oneTimeTotal": "0,00",
+              "recurrentDiscount": "0,00",
+              "recurrentTotal": "87,61",
+              "oneTimeDiscountedOnNextInvoice": "0,00",
+              "oneTimeDiscounted": "0,00",
+              "recurrentDiscounted": "87,61",
+              "upfrontTotal": "0,00"
+            }
+          },
+          "locationId": "9164070947913075774",
+          "parentId": "9164141523813497989",
+          "specurl": "https://api.int.telenet.be/omapi/public/product/BINT0003",
+          "orderItems": [
+            {
+              "id": "9164141526413498097",
+              "name": "Fixed IP",
+              "type": "New Line Acquisition",
+              "publicateNumber": false,
+              "prices": {
+                "taxInclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                },
+                "taxExclPrices": {
+                  "currency": "EUR",
+                  "oneTimeDiscount": "0,00",
+                  "oneTimeTotal": "0,00",
+                  "recurrentDiscount": "0,00",
+                  "recurrentTotal": "0,00",
+                  "oneTimeDiscountedOnNextInvoice": "0,00",
+                  "oneTimeDiscounted": "0,00",
+                  "recurrentDiscounted": "0,00",
+                  "upfrontTotal": "0,00"
+                }
+              },
+              "locationId": "9164070947913075774",
+              "parentId": "9164141525913497989",
+              "specurl": "https://api.int.telenet.be/omapi/public/product/IOPT0108",
+              "orderItems": [],
+              "status": "ADD",
+              "billingAccountId": "9164071022313088481",
+              "billingAddressId": "9150308807013313126",
+              "discountItems": {}
+            }
+          ],
+          "status": "ADDED",
+          "billingAccountId": "9164071022313088481",
+          "productIdentifier": "INT000037680",
+          "billingAddressId": "9150308807013313126",
+          "discountItems": {}
+        }
+      ],
+      "publicateNumber": false
+    }
+  ],
+  "lineCount": 0,
+  "token": "c4f698a2-6648-4528-83bf-f9f368a12b72",
+  "pricesWereUpdated": false,
+  "manualAddress": false,
+  "feasibilityCheckResult": {
+    "isFeasible": true,
+    "interventionRequired": false
+  },
+  "manualProcessingRequired": false,
+  "feasibilityCheckRequired": false,
+  "modemSwapReq": false
+}

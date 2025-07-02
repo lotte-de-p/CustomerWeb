@@ -1,0 +1,658 @@
+{
+  "customerproductholding": [
+    {
+      "identifier": "DTV2710555",
+      "customerproductid": "158495352",
+      "accountnumber": "72093824",
+      "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+      "rateclassid": "44",
+      "rateclassdescription": "Telenet Digital TV",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+      "products": [],
+      "options": [],
+      "address": {
+        "street": "Hazel",
+        "postalcode": "9340",
+        "municipality": "Lede",
+        "country": "België",
+        "housenr": "63",
+        "addressid": "6cc7yy007q-9x3xae07dk"
+      },
+      "rawOmapi": {
+        "product": {
+          "productid": 285,
+          "labelkey": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+          "visible": true,
+          "family": "NOT_APPLICABLE",
+          "producttype": "PRODUCT",
+          "weight": 2,
+          "apps": [
+            {
+              "labelkey": "support"
+            }
+          ],
+          "services": [
+            {
+              "labelkey": "watch.dtv.dtv",
+              "servicetype": "DTV",
+              "experience": {
+                "experiencetype": "WATCH",
+                "weight": 30
+              },
+              "weight": 0,
+              "specifications": [
+                {
+                  "labelkey": "spec.dtv.tvtheek",
+                  "value": "INCLUDED",
+                  "visible": true,
+                  "weight": 2
+                },
+                {
+                  "labelkey": "spec.dtv.optionalpackages",
+                  "value": "INCLUDED",
+                  "visible": true,
+                  "weight": 3
+                },
+                {
+                  "labelkey": "spec.dtv.cableincluded",
+                  "value": "INCLUDED",
+                  "visible": true,
+                  "weight": 1
+                }
+              ]
+            }
+          ],
+          "characteristics": {
+            "productsegment": "ALL",
+            "productgroup": "OTHER"
+          },
+          "localizedcontent": [
+            {
+              "locale": "nl",
+              "name": "Telenet TV",
+              "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+            },
+            {
+              "locale": "fr",
+              "name": "Telenet TV",
+              "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+            },
+            {
+              "locale": "en",
+              "name": "Telenet TV",
+              "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-feature-digital-interactive-package-digitaalzenderpakket.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "WIGOHOME_44375989",
+      "accountnumber": "72093824",
+      "label": "WIGOHOME",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/20046",
+      "products": [
+        {
+          "identifier": "am15380",
+          "customerproductid": "339322002",
+          "accountnumber": "72093824",
+          "label": "internet.line.fmc.wigohome",
+          "rateclassid": "22",
+          "rateclassdescription": "Telenet Internet",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/20799",
+          "products": [],
+          "options": [],
+          "rawOmapi": {
+            "product": {
+              "productid": 20799,
+              "labelkey": "internet.line.fmc.wigohome",
+              "visible": true,
+              "family": "FMC_RMD",
+              "producttype": "PRODUCT",
+              "weight": 2,
+              "apps": [
+                {
+                  "labelkey": "support"
+                }
+              ],
+              "customercategories": ["customercategories_one", "customercategories_two"],
+              "category": ["category_one", "category_two"],
+              "visibilityrules": {
+                "conditionalvisibility": true
+              },
+              "unlimited": true,
+              "priceType": "Abc",
+              "subcategory": {
+                "name": "SubCategoryOne",
+                "weight": 2,
+                "mutualexclusion": true,
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  },
+                  {
+                    "locale": "en",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  }
+                ]
+              },
+              "rates": [
+                {
+                  "type": "Abc",
+                  "unit": "3",
+                  "cost": "20",
+                  "currency": "Euro"
+                },
+                {
+                  "type": "Def",
+                  "unit": "4",
+                  "cost": "30",
+                  "currency": "Euro"
+                }
+              ],
+              "services": [
+                {
+                  "labelkey": "surf.fixedinternet.wigo",
+                  "servicetype": "FIXED_INTERNET",
+                  "experience": {
+                    "experiencetype": "SURF",
+                    "weight": 10
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "spec.fixedinternet.webspace.volume",
+                      "value": "50",
+                      "unit": "MB",
+                      "visible": true,
+                      "weight": 6
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.volume",
+                      "value": "5",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": 5,
+                      "maxvalue": 10,
+                      "minvalue": 1,
+                      "localizedcontent": [
+                        {
+                          "locale": "nl",
+                          "name": "All-Internet 300",
+                          "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                        },
+                        {
+                          "locale": "fr",
+                          "name": "All-Internet 300",
+                          "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                        },
+                        {
+                          "locale": "en",
+                          "name": "All-Internet 300",
+                          "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                        }
+                      ]
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.volume.download.fup",
+                      "value": "FUP",
+                      "visible": true,
+                      "weight": 3
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.included",
+                      "value": "10",
+                      "visible": true,
+                      "weight": 4
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.wifree",
+                      "value": "1",
+                      "visible": false,
+                      "weight": 7
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.download",
+                      "value": "300",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.upload",
+                      "value": "20",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 2
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "alert_threshold_marker": {
+                  "unit": "GB",
+                  "value": "750"
+                },
+                "detailed_scale": {
+                  "unit": "GB",
+                  "value": "25"
+                },
+                "productsegment": "RMD",
+                "service_category": "FUP",
+                "initial_threshold_2": {
+                  "unit": "GB",
+                  "value": "1050"
+                },
+                "productgroup": "FMC",
+                "initial_threshold_1": {
+                  "unit": "GB",
+                  "value": "225"
+                },
+                "alert_threshold": {
+                  "unit": "GB",
+                  "value": "525"
+                },
+                "service_category_limit": {
+                  "unit": "GB",
+                  "value": "750"
+                },
+                "sharedmobiledata": {
+                  "unit": "GB",
+                  "value": "40"
+                },
+                "producttier": "High",
+                "max_mobile_lines": "5",
+                "max_mobile_includeddata_reminders": "1",
+                "activationsalesofferingid": "115",
+                "max_mobile_outofbundle_reminders": "4",
+                "productlevel": "4P",
+                "salespricevatexcl": {
+                  "unit": "EURO",
+                  "value": "122.07"
+                },
+                "rentalpricevatexcl": {
+                  "unit": "EURO",
+                  "value": "120"
+                },
+                "rentalpricevatincl": {
+                  "unit": "EURO",
+                  "value": "127"
+                },
+                "salespricevatincl": {
+                  "unit": "EURO",
+                  "value": "147.71"
+                },
+                "sharedmobiledata_unlimited": {
+                  "unit": "EURO",
+                  "value": "150"
+                },
+                "productsubgroup": "NDH",
+                "huwrecipientsmandatory": "yes",
+                "devicetype": "TypeA",
+                "is_sellable": "yes"
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "All-Internet 300",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "All-Internet 300",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "All-Internet 300",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                }
+              ],
+              "shortdescription": {
+                "localizedcontent": [
+                  {
+                    "locale": "nl",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  },
+                  {
+                    "locale": "fr",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  },
+                  {
+                    "locale": "en",
+                    "name": "All-Internet 300",
+                    "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-fmc-wigohome.png"
+                  }
+                ]
+              }
+            }
+          },
+          "address": {
+            "street": "Liersesteenweg",
+            "postalcode": "2800",
+            "municipality": "Mechelen",
+            "country": "België",
+            "subhousenr": "70",
+            "housenr": "4",
+            "boxnr": "404",
+            "subhousenr": "44",
+            "addressid": "oi0sql009k-i6j6t8018k"
+          }
+        },
+        {
+          "identifier": "050658323",
+          "customerproductid": "339322016",
+          "accountnumber": "72093824",
+          "label": "telephony.line.basic",
+          "rateclassid": "51",
+          "rateclassdescription": "Telenet FreePhone Europe",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/672",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/151",
+              "label": "telephony.linetype.bijkomendelijn"
+            },
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/275",
+              "label": "tv.digitaltv.package.primepacks.primesportspack",
+              "rawOmapi": {
+                "product": {
+                  "productid": 275,
+                  "labelkey": "tv.digitaltv.package.primepacks.primesportspack",
+                  "visible": true,
+                  "family": "NOT_APPLICABLE",
+                  "producttype": "PRODUCT",
+                  "weight": 2,
+                  "apps": [
+                    {
+                      "labelkey": "playsports"
+                    },
+                    {
+                      "labelkey": "support"
+                    }
+                  ],
+                  "services": [
+                    {
+                      "labelkey": "watch.dtv.playsports",
+                      "servicetype": "DTV",
+                      "experience": {
+                        "experiencetype": "WATCH",
+                        "weight": 30
+                      },
+                      "weight": 0,
+                      "specifications": [
+                        {
+                          "labelkey": "spec.watch.dtv.sportapp",
+                          "value": "INCLUDED",
+                          "visible": true,
+                          "weight": 1
+                        },
+                        {
+                          "labelkey": "spec.watch.dtv.sportomkadering",
+                          "value": "INCLUDED",
+                          "visible": true,
+                          "weight": 4
+                        },
+                        {
+                          "labelkey": "spec.watch.dtv.sportsoffer",
+                          "value": "INCLUDED",
+                          "visible": true,
+                          "weight": 2
+                        },
+                        {
+                          "labelkey": "spec.watch.dtv.sport.channels",
+                          "value": "8",
+                          "visible": true,
+                          "weight": 3
+                        }
+                      ]
+                    }
+                  ],
+                  "characteristics": {
+                    "productsegment": "ALL",
+                    "productgroup": "OTHER",
+                    "weightnl": "40",
+                    "weightfr": "10"
+                  },
+                  "localizedcontent": [
+                    {
+                      "locale": "nl",
+                      "name": "Play Sports",
+                      "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-digitaltv-package-primepacks-primesportspack.png"
+                    },
+                    {
+                      "locale": "fr",
+                      "name": "Play Sports",
+                      "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-digitaltv-package-primepacks-primesportspack.png"
+                    },
+                    {
+                      "locale": "en",
+                      "name": "Play Sports",
+                      "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/tv-digitaltv-package-primepacks-primesportspack.png"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "identifier": "DTV4048252",
+          "customerproductid": "339321992",
+          "accountnumber": "72093824",
+          "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+          "rateclassid": "44",
+          "rateclassdescription": "Telenet Digital TV",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/585",
+              "label": "tv.digitaltv.package.popcornpacks.popcorn"
+            }
+          ]
+        }
+      ],
+      "options": [],
+      "address": {
+        "street": "Zeedijk",
+        "postalcode": "8370",
+        "municipality": "Blankenberge",
+        "country": "België",
+        "housenr": "190",
+        "floor": "3",
+        "addressid": "6cc7yy007q-9w6brv0n6l"
+      }
+    },
+    {
+      "identifier": "IMTTK_43537707",
+      "accountnumber": "72093824",
+      "label": "IMTTK",
+      "specurl": "https://api.dvp.telenet.be/omapi/public/product/71",
+      "products": [
+        {
+          "identifier": "DTV332063",
+          "customerproductid": "50968122",
+          "accountnumber": "72093824",
+          "label": "tv.feature.digital.interactive.package.digitaalzenderpakket",
+          "rateclassid": "44",
+          "rateclassdescription": "Telenet Digital TV",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/285",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/277",
+              "label": "tv.digitaltv.package.primepacks.primesportsfilmpack"
+            }
+          ]
+        },
+        {
+          "identifier": "093296194",
+          "customerproductid": "92264561",
+          "accountnumber": "72093824",
+          "label": "telephony.line.basic",
+          "rateclassid": "51",
+          "rateclassdescription": "Telenet FreePhone Europe",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/672",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/150",
+              "label": "telephony.linetype.eerstelijn"
+            }
+          ]
+        },
+        {
+          "identifier": "u935524",
+          "customerproductid": "289678661",
+          "accountnumber": "72093824",
+          "label": "internet.line.sun.smallpipe",
+          "rateclassid": "22",
+          "rateclassdescription": "Telenet Internet",
+          "specurl": "https://api.dvp.telenet.be/omapi/public/product/588",
+          "products": [],
+          "options": [
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/114",
+              "label": "internet.feature.domein.be"
+            },
+            {
+              "specurl": "https://api.dvp.telenet.be/omapi/public/product/301",
+              "label": "internet.feature.tsp"
+            }
+          ],
+          "rawOmapi": {
+            "product": {
+              "productid": 588,
+              "externalProductCode": 123,
+              "labelkey": "internet.line.sun.smallpipe",
+              "visible": false,
+              "family": "NOT_APPLICABLE",
+              "producttype": "PRODUCT",
+              "salesofferingid": 111,
+              "weight": 1,
+              "apps": [
+                {
+                  "labelkey": "oneapp"
+                },
+                {
+                  "labelkey": "twoapp"
+                }
+              ],
+              "services": [
+                {
+                  "labelkey": "surf.fixedinternet",
+                  "servicetype": "FIXED_INTERNET",
+                  "experience": {
+                    "experiencetype": "SURF",
+                    "weight": 10
+                  },
+                  "weight": 0,
+                  "specifications": [
+                    {
+                      "labelkey": "spec.fixedinternet.volume.download.cap",
+                      "value": "200",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": 3
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.volume",
+                      "value": "5",
+                      "unit": "GB",
+                      "visible": true,
+                      "weight": 5
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.mailbox.included",
+                      "value": "10",
+                      "visible": true,
+                      "weight": 4
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.download",
+                      "value": "150",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 1
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.wifree",
+                      "value": "1",
+                      "visible": false,
+                      "weight": 7
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.speed.upload",
+                      "value": "15",
+                      "unit": "Mbps",
+                      "visible": true,
+                      "weight": 2
+                    },
+                    {
+                      "labelkey": "spec.fixedinternet.webspace.volume",
+                      "value": "50",
+                      "unit": "MB",
+                      "visible": true,
+                      "weight": 6
+                    }
+                  ]
+                }
+              ],
+              "characteristics": {
+                "detailed_scale": {
+                  "unit": "GB",
+                  "value": "10"
+                },
+                "productsegment": "ALL",
+                "service_category": "CAP",
+                "productgroup": "OTHER",
+                "service_category_limit": {
+                  "unit": "GB",
+                  "value": "200"
+                }
+              },
+              "localizedcontent": [
+                {
+                  "locale": "nl",
+                  "name": "All-Internet 150",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-sun-smallpipe.png"
+                },
+                {
+                  "locale": "fr",
+                  "name": "All-Internet 150",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-sun-smallpipe.png"
+                },
+                {
+                  "locale": "en",
+                  "name": "All-Internet 150",
+                  "logo": "https://www2.telenet.be/content/dam/www-telenet-be/img/self-service/products/internet-line-sun-smallpipe.png"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "options": [],
+      "address": {
+        "street": "Hazel",
+        "postalcode": "9340",
+        "municipality": "Lede",
+        "country": "België",
+        "housenr": "63",
+        "addressid": "6cc7yy007q-9x3xae07dk"
+      }
+    }
+  ]
+}

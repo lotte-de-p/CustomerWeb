@@ -1,0 +1,7 @@
+{
+  "url": "http://localhost:8080/public/api/dtv-box-management-service/v1/subscriptions/DTV000067308/resetPin",
+  "method": "POST",
+  "status": 200,
+  "request": {},
+  "response": {}
+}

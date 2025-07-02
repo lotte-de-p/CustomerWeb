@@ -1,0 +1,33 @@
+<div class="input-v2--wrapper mb--m">
+  <label class="label-v2" for="new-as" id="street:Label">
+    <div class="label-v2__label">
+      <div [ngClass]="{ 'label-v2--disabled': controls.disabled }" class="font--caption cur-default my--xxxs">
+        {{ 'ng.' + messageGroup + '.lbl.street' | translate }}
+      </div>
+    </div>
+  </label>
+  <div class="display--flex width--full">
+    <input
+      [formControl]="formControl"
+      [matAutocomplete]="streetList"
+      aria-describedby="street:Helper street:Error"
+      autocomplete="off"
+      class="input-v2"
+      id="new-as"
+      type="text" />
+    <mat-autocomplete #streetList="matAutocomplete">
+      <mat-option *ngFor="let street of suggestions$ | async" [value]="street">
+        {{ street }}
+      </mat-option>
+    </mat-autocomplete>
+  </div>
+  <div
+    *ngIf="controls.touched && controls.hasError('required')"
+    class="formErrorInput text-align--left"
+    data-cy="error-required-on-street">
+    {{ 'ng.' + messageGroup + '.error.street.required' | translate }}
+  </div>
+  <div *ngIf="controls.hasError('invalid')" class="formErrorInput text-align--left" data-cy="error-invalid-on-street">
+    {{ 'ng.' + messageGroup + '.error.street.invalid' | translate }}
+  </div>
+</div>

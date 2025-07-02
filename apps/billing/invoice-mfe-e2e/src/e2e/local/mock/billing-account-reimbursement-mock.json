@@ -1,0 +1,19 @@
+[
+  {
+    "billingAccountNumber": "123456",
+    "currentPaymentMethod": "MANUAL",
+    "lastPaymentMethod": "DIRECT_DEBIT",
+    "dispatchMethod": "EMAIL",
+    "outstandingBalance": -100,
+    "paymentStatus": "PAID",
+    "billingAddress": {
+      "street": "Teststraat",
+      "houseNumber": "1",
+      "postalCode": "2000",
+      "municipality": "Antwerpen"
+    },
+    "email": "xmwzezestbil@gmail.com",
+    "collectionsTreatmentMessage": "AVOID_EXTRA_COSTS",
+    "defaultAccount": true
+  }
+]

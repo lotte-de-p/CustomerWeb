@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-loader [enableLoader]="true"> </app-loader>
+    <tg-login (componentCanRender)="initAfterLoggedIn()" [messageGroupName]="messageGroupName" [scopes]="scopes">
+      <div class="product-overview">
+        <tg-product-notifications
+          [showYUPNotificationMessage]="showYUPNotificationMessage"
+          [showSuspendedPlanNotificationMessage]="showSuspendedPlanNotificationMessage"
+          [showMoveNotificationMessage]="showMoveNotificationMessage"></tg-product-notifications>
+
+        <tg-product-bundle
+          *ngIf="fpbProducts.length === 0"
+          [streamingOptions]="streamingOptions"
+          [products]="selectedAccountProducts"
+          [hasSalesScope]="hasSalesScope"
+          [canManageProductHolding]="canManageProductHolding"
+          [changeTariffPlanUrl]="changeTariffPlanUrl"
+          [manageOptionUrl]="manageOptionUrl"
+          [planUpgradeUrl]="planUpgradeUrl"
+          [intentRequired]="intentRequired"
+          [componentInstanceID]="componentInstanceID"></tg-product-bundle>
+
+        <tg-product-c5-bundle
+          [showStreamingSection]="streamingOptions.length > 0"
+          [setSelectedProducts]="selectedAccountProducts"
+          [canManageProductHolding]="canManageProductHolding"
+          [planUpgradeUrl]="planUpgradeUrl"
+          [changeDataPlanUrl]="changeDataPlanUrl"
+          [managePhone2GoUrl]="managePhone2GoUrl"
+          [intentRequired]="intentRequired"
+          [manageOptionUrl]="manageOptionUrl"
+          [componentInstanceID]="componentInstanceID"
+          [changeTariffPlanUrl]="changeTariffPlanUrl"
+          [phoneToGoNumbers]="phoneToGoNumbers"
+          [streamingOptions]="streamingOptions"
+          [hasSalesScope]="hasSalesScope"></tg-product-c5-bundle>
+
+        <tg-product-standalone
+          *ngIf="selectedAccountProducts.length > 0"
+          [standAloneProducts]="selectedAccountProducts"
+          [hasSalesScope]="hasSalesScope"
+          [canManageProductHolding]="canManageProductHolding"
+          [changeTariffPlanUrl]="changeTariffPlanUrl"
+          [changeMobileTariffUrl]="changeMobileTariffUrl"
+          [changeDTVTariffUrl]="changeDTVTariffUrl"
+          [changeInternetTariffUrl]="changeInternetTariffUrl"
+          [manageOptionUrl]="manageOptionUrl"
+          [showStreamingSection]="streamingOptions.length > 0"
+          [marketingPagesObject]="marketingPagesObject"
+          [componentInstanceID]="componentInstanceID"></tg-product-standalone>
+
+        <tg-product-freephone-business
+          *ngIf="fpbProducts.length > 0"
+          [fpbProducts]="fpbProducts"
+          [freePhoneBusinessUrl]="freePhoneBusinessUrl"></tg-product-freephone-business>
+
+        <tg-product-modem-banner
+          *ngIf="selectedAccountProducts.length > 0 && showModemUpgradeBanner"
+          [locationId]="selectedAccountProducts[0].locationId"
+          [componentInstanceID]="componentInstanceID"
+          [changeTariffPlanUrl]="changeTariffPlanUrl"></tg-product-modem-banner>
+
+        <tg-product-tip-contracts *ngIf="tipContracts?.length" [tipContracts]="tipContracts"></tg-product-tip-contracts>
+
+        <tg-product-overview-monthly-plan
+          *ngIf="hasSalesScope"
+          [discoverSmartPhoneUrl]="discoverSmartPhoneUrl"
+          [addSubscriptionUrl]="addSubscriptionUrl"></tg-product-overview-monthly-plan>
+      </div>
+    </tg-login>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="footer-btn" *ngIf="this.simStatus">
+  <div class="link-actions col-sm-12 col-md-7">
+    <a
+      class="button button--tertiary button__icon--position-right ellipsis"
+      *ngIf="isStatusSuspended && unSuspendSimUrl"
+      [tgLoadPage]="getUrlWithQueryParams(unSuspendSimUrl)">
+      <span class="ellipsis">
+        {{ 'ng.line-identification-details.btn.unsuspend-sim' | translate }}
+      </span>
+      <i class="icon icon-chevron-right"></i>
+    </a>
+
+    <a
+      class="button button--tertiary button__icon--position-right ellipsis"
+      *ngIf="isStatusActive && suspendSimUrl"
+      [tgLoadPage]="getUrlWithQueryParams(suspendSimUrl)">
+      <span class="ellipsis">
+        {{ 'ng.line-identification-details.btn.stop-suspend-sim' | translate }}
+      </span>
+      <i class="icon icon-chevron-right"></i>
+    </a>
+    <button
+      type="submit"
+      id="saveButton"
+      class="button button--primary"
+      (click)="save()"
+      [disabled]="formGroup.pristine || formGroup.invalid"
+      [ngClass]="{ 'ml--xxg--md ml--n': isStatusActive }">
+      {{ 'ng.line-identification-details.btn.save' | translate }}
+    </button>
+  </div>
+</div>

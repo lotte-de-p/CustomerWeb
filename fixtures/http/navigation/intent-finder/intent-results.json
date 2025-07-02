@@ -1,0 +1,12 @@
+[
+  {
+    "pageTitle": "test1",
+    "pageUrl": "https://www2.telenet.be/content/www-telenet-be/nl/klantenservice/wat-is-de-telemeter",
+    "redirectUrl": ""
+  },
+  {
+    "pageTitle": "test2",
+    "pageUrl": "http://test2.com",
+    "redirectUrl": ""
+  }
+]

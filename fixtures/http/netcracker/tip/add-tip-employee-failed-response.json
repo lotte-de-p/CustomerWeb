@@ -1,0 +1,14 @@
+[
+  {
+    "status": "FAILURE",
+    "employeeReferenceNumber": "1234",
+    "errorCode": "TIPERR_06",
+    "errorDescription": "errordescription"
+  },
+  {
+    "status": "FAILURE",
+    "employeeReferenceNumber": "1234",
+    "errorCode": "TIPERR_06",
+    "errorDescription": "errordescription"
+  }
+]

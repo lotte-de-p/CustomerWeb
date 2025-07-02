@@ -1,0 +1,18 @@
+<tg-login [scopes]="scope" (componentCanRender)="initAfterLoggedIn()">
+  <div data-testid="entertainment-management" class="py--l">
+    @if (selectEntertainmentManagementError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <wink-notification appearance="error" has-close-icon="false">
+            <wink-paragraph slot="content" appearance="body" size="small">
+              {{ (selectEntertainmentManagementError$ | async)! | translate }}
+            </wink-paragraph>
+          </wink-notification>
+        </div>
+      </div>
+    }
+    @if ((selectEntertainmentManagementLoaded$ | async)!) {
+      <tg-entertainment-management-options-list></tg-entertainment-management-options-list>
+    }
+  </div>
+</tg-login>

@@ -1,0 +1,17 @@
+{
+  "url": "http://localhost:8080/public/api/contact-service/v1/contact/addresses/9165638576413172145",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "id": "9165638576413172145",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "municipality": "Mechelen",
+    "postalCode": "2800",
+    "street": "Darwin Loadteststraat",
+    "streetId": "9165637286113103076",
+    "houseNumber": "5796",
+    "tinaLocationId": "-xyhej200at-q2yojd0ol5"
+  }
+}

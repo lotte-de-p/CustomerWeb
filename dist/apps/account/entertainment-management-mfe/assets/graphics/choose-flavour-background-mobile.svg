@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="322px" height="1060px" viewBox="0 0 322 398" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Pink Ball Copy 3 + Pink Ball Copy + Pink Ball Copy 2 + Oval + Rectangle Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="68.2062922%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F2F2F2" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="320" height="364"></rect>
+        <rect id="path-4" x="0" y="0" width="320" height="396"></rect>
+    </defs>
+    <g id="Voucher-Activation-(ALMOST-APPROVED)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voucher-Activation-Components" transform="translate(-153.000000, -4606.000000)">
+            <g id="Group" transform="translate(154.000000, 4607.000000)">
+                <g id="Pink-Ball-Copy-3-+-Pink-Ball-Copy-+-Pink-Ball-Copy-2-+-Oval-+-Rectangle-Mask">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <circle id="Pink-Ball-Copy-3" stroke="#F5B0A3" fill="#F5B0A3" mask="url(#mask-3)" cx="44" cy="75" r="24"></circle>
+                    <circle id="Pink-Ball-Copy" fill="#239A98" mask="url(#mask-3)" cx="276" cy="253" r="32"></circle>
+                    <circle id="Pink-Ball-Copy-2" fill="#239A98" mask="url(#mask-3)" cx="2.5" cy="199.5" r="17.5"></circle>
+                    <circle id="Oval" fill="#FFFFFF" mask="url(#mask-3)" cx="160" cy="1309" r="1000"></circle>
+                    <mask id="mask-5" fill="white">
+                        <use xlink:href="#path-4"></use>
+                    </mask>
+                    <use id="Rectangle" stroke="#C5C6C6" xlink:href="#path-4"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

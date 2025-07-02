@@ -1,0 +1,187 @@
+[
+  {
+    "description": "Freephone Europe Pro",
+    "id": "917476364863439",
+    "identifier": "767767677",
+    "externalProductCode": "INT0100",
+    "label": "Internetline Europe Pro/INT0100",
+    "addressId": "9152527990413378524",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "internetType": "FUP",
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-22T00:00:00+01:00",
+    "productType": "dtv",
+    "pid": "120016945",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/DITV0000",
+    "billingAccountNumber": "500414008",
+    "inviteType": "Initial",
+    "targetepc": "YUPW0025",
+    "chargePeriod": "12",
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "Digital TV",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767678",
+    "msisdn": "767767678",
+    "externalProductCode": "INT0101",
+    "label": "Internetline Europe",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-21T00:00:00+01:00",
+    "productType": "mobile",
+    "pid": "120016945",
+    "useSpecurl": false,
+    "specurl": "https://api.int.telenet.be/omapi/public/product/FEU0000",
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "Fixed Line",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767679",
+    "externalProductCode": "INT0101",
+    "label": "Internetline Europe",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-20T00:00:00+01:00",
+    "productType": "bundle",
+    "pid": "120016945",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/FEU0000",
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "Telephone",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    },
+    "bundleFamily": "Wigo"
+  },
+  {
+    "description": "Freephone Europe",
+    "id": "917476364863439",
+    "identifier": "767767670",
+    "externalProductCode": "INT0101",
+    "addressId": "9152565163813591077",
+    "locationId": "9152565163813591022",
+    "status": "ACTIVE",
+    "userPIDLinked": true,
+    "isDataOnlyPlan": false,
+    "activationDate": "2018-11-19T00:00:00+01:00",
+    "productType": "bundle",
+    "pid": "120016945",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/FEU0000",
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "Internet",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    },
+    "bundleFamily": "Whop(pa)"
+  },
+  {
+    "activationDate": "2020-09-21T11:34:58",
+    "addressId": "9152565163813591077",
+    "id": "9158361034513196905",
+    "identifier": "767767692",
+    "label": "Kong / 0468145163",
+    "locationId": "9158361016013193451",
+    "productType": "mobile",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/KONG0000",
+    "status": "Active",
+    "useSpecurl": true,
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "mobile local",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "activationDate": "2020-09-18T12:30:18",
+    "addressId": "9152565163813591077",
+    "id": "9152527990413378524",
+    "identifier": "INT000000701",
+    "label": "Basic Internet / INT000000701",
+    "locationId": "9158335424013766895",
+    "productType": "internet",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTB0000",
+    "status": "Suspended",
+    "useSpecurl": true,
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "internet local",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "activationDate": "2020-09-18T12:30:18",
+    "addressId": "9152565163813591077",
+    "id": "9152527990413378525",
+    "identifier": "INT000000701",
+    "label": "Basic Internet / INT000000701",
+    "locationId": "9158335424013766895",
+    "productType": "internet",
+    "specurl": "https://api.int.telenet.be/omapi/public/product/INTB0000",
+    "status": "Suspended",
+    "useSpecurl": false,
+    "rawOmapi": {
+      "product": {
+        "localizedcontent": [
+          {
+            "locale": "en",
+            "name": "internet local",
+            "logo": "someLogo"
+          }
+        ]
+      }
+    }
+  }
+]

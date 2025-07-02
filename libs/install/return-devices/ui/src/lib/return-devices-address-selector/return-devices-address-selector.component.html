@@ -1,0 +1,43 @@
+<tg-return-devices-slide-menu
+  [showMenu]="showMenu"
+  (closeMenu)="close()"
+  [title]="'ng.return-devices.select-address.lbl.title' | translate">
+  <ng-container
+    [ngTemplateOutlet]="addressList"
+    [ngTemplateOutletContext]="{
+      addresses: returnDevicesAddressLines,
+      selectedAddress: selectedAddressLine
+    }">
+  </ng-container>
+</tg-return-devices-slide-menu>
+
+<ng-template #addressList let-addresses="addresses" let-selectedAddress="selectedAddress">
+  <ul data-cy="address-selector-list">
+    <li
+      *ngFor="let address of addresses; let i = index; let last = last"
+      (click)="selectAddressLine(address)"
+      [attr.data-cy]="'address-selector-option-' + i"
+      class="px--xs">
+      <div
+        class="border-width--b--r border--b--r border-color--all--light-grey cursor--pointer display--flex justify-content--between mx--xs align-items--center"
+        tabindex="0"
+        [ngClass]="{ 'border-style--b--solid': !last }">
+        <div class="py--l align-items--center display--flex overflow--hidden position--relative">
+          <span class="mr--xs">
+            <i class="icon-house icon icon-md"></i>
+          </span>
+          <div class="overflow--hidden">
+            <h6 class="heading--nomargin break-word">
+              {{ address?.street }}
+              {{ address?.houseNumber }}, {{ address?.postalCode }} {{ address?.municipality }}
+            </h6>
+          </div>
+        </div>
+        <div class="px--xs" *ngIf="address?.id === selectedAddress?.id">
+          <i
+            class="ml--xs color-text-t-black-b-white background-brand-primary color-te icon icon-sm icon-tick return-address-selected text-weight--xxs color-mid-grey"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>

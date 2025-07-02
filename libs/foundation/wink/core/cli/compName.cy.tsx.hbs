@@ -1,0 +1,11 @@
+/// <reference types="cypress" />
+
+describe('wink-{{compName}}', () => {
+  beforeEach(() => {
+    cy.visit('/iframe.html?id=components-{{compName}}--default&viewMode=story');
+  });
+
+  it('should find the wink-{{compName}} element', () => {
+    cy.get('wink-{{compName}}').should('exist');
+  });
+});

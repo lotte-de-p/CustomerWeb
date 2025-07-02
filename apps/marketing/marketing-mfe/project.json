@@ -1,0 +1,148 @@
+{
+  "name": "marketing-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/marketing/marketing-mfe/src",
+  "prefix": "tg-marketing-marketing",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-ng:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/marketing/marketing-mfe",
+        "index": "apps/marketing/marketing-mfe/src/index.html",
+        "main": "apps/marketing/marketing-mfe/src/main.ts",
+        "polyfills": "apps/marketing/marketing-mfe/src/polyfills.ts",
+        "tsConfig": "apps/marketing/marketing-mfe/tsconfig.app.json",
+        "aot": true,
+        "baseHref": "/",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/marketing/marketing-mfe/src/favicon.ico",
+          "apps/marketing/marketing-mfe/src/assets",
+          "apps/marketing/marketing-mfe/src/version.json"
+        ],
+        "styles": ["apps/marketing/marketing-mfe/src/styles.scss"],
+        "scripts": ["node_modules/tg-loader/dist/loader-plugin.js"],
+        "customWebpackConfig": {
+          "path": "apps/marketing/marketing-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "1.5mb",
+              "maximumError": "2mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/marketing/marketing-mfe/src/environments/environment.ts",
+              "with": "apps/marketing/marketing-mfe/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "customWebpackConfig": {
+            "path": "apps/marketing/marketing-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/marketing/marketing-mfe/src/favicon.ico",
+            "apps/marketing/marketing-mfe/src/assets",
+            "apps/marketing/marketing-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4202,
+        "publicHost": "http://localhost:4202",
+        "buildTarget": "marketing-mfe:build:development"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "marketing-mfe:build:production"
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/marketing/marketing-mfe/src/**/*.ts", "apps/marketing/marketing-mfe/src/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/marketing/marketing-mfe/.storybook",
+        "browserTarget": "marketing-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/marketing-mfe",
+        "configDir": "apps/marketing/marketing-mfe/.storybook",
+        "browserTarget": "marketing-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/marketing/marketing-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:app", "scope:marketing-mfe"]
+}

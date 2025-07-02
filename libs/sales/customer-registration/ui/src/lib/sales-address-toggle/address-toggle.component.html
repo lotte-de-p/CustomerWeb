@@ -1,0 +1,34 @@
+@if (showInstallationAddressToggle) {
+  <div class="display--flex align-items--baseline mt--xl--md mt--l">
+    <span class="text-flow text-flow--h6 color-text">{{
+      'customer-registration.lbl.same-business-installation-address' | translate
+    }}</span>
+    <div class="CheckboxSwitch">
+      <input
+        type="checkbox"
+        class="CheckboxSwitch-input"
+        id="addressCheckboxSwitch"
+        (change)="onAddressToggle($event, addressType)"
+        checked />
+      <label class="CheckboxSwitch-control" for="addressCheckboxSwitch">&nbsp;</label>
+    </div>
+  </div>
+}
+@if (showBillingAddressToggle) {
+  <div class="display--flex align-items--baseline mt--xl--md mt--l">
+    <label class="CheckboxSwitch--label">{{
+      'customer-registration.form-billing-address-check-label' | translate
+    }}</label>
+    <span class="display--inline">
+      <div class="CheckboxSwitch">
+        <input
+          type="checkbox"
+          class="CheckboxSwitch-input"
+          id="billingAddressCheckboxSwitch"
+          (change)="onAddressToggle($event, 'billingAddress')"
+          checked />
+        <label class="CheckboxSwitch-control" for="billingAddressCheckboxSwitch">&nbsp;</label>
+      </div>
+    </span>
+  </div>
+}

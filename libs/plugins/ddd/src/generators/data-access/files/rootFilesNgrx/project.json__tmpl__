@@ -1,0 +1,17 @@
+{
+  "name": "<%= prefix %>-data-access",
+  "$schema": "<%= offsetFromRoot %>node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "<%= dataAccessRootPath %>/src",
+  "prefix": "app",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["<%= dataAccessRootPath %>/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["type:data-access", "scope:<%= prefix %>", "scope:<%= mfeName %>"]
+}

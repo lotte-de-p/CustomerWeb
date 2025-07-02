@@ -1,0 +1,14 @@
+<div class="mobile-usage-limits__premium-input" [attr.data-cy]="'premium-services-adjust-limit'">
+  <div class="mobile-usage-limits__premium-edit">
+    <span class="mr--xxs text-weight--l">
+      {{ 'ng.mobile-usage-limits.lbl.limit' | translate: { value: currentPremiumLimit } }}
+    </span>
+    <a
+      (click)="onEdit($event)"
+      href="javascript:void(0)"
+      class="link"
+      [attr.data-cy]="'premium-services-adjust-limit-link'"
+      >{{ 'ng.mobile-usage-limits.lnk.edit' | translate }}</a
+    >
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<aside class="sidebar" [ngClass]="{ slide: showMenu }">
+  <div class="sidebar__menu">
+    <div class="sidebar__heading display--flex align-items--center px--l pt--l justify-content--end mb--m">
+      <div class="sidebar__close cursor--pointer" (click)="close()">
+        <i class="icon icon-cross"></i>
+      </div>
+    </div>
+    <div class="heading--5 mt--n mb--l--md mb--xs px--l">
+      {{ title }}
+    </div>
+    <div class="sidebar__content mb--l">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</aside>
+<div (click)="close()" [ngClass]="{ slide: showMenu }" class="slide-menu-overlay"></div>

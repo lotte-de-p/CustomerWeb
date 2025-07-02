@@ -1,0 +1,16 @@
+<div class="py--m col-lg-8 col-md-9 col-12 m--auto">
+  <app-message-flow [messageGroupName]="messageGroup"></app-message-flow>
+</div>
+<app-loader
+  [pageType]="pageType"
+  [enableLoader]="enableLoader"
+  [enableMask]="enableMask"
+  [startByDefault]="false"></app-loader>
+<ng-container *ngIf="isLoaded()">
+  <div>
+    <tg-sales-stepper
+      [showNavigation]="(showNavigationBar | async) ?? undefined"
+      [steps]="componentSteps"
+      [showBackButton]="(showBackButton | async) ?? true"></tg-sales-stepper>
+  </div>
+</ng-container>

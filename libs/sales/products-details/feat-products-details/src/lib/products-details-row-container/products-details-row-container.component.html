@@ -1,0 +1,140 @@
+<ng-container
+  *ngIf="{
+    isInternetRowVisible: isInternetRowVisible$ | async,
+    isTvIconicRowVisible: isTvIconicRowVisible$ | async,
+    isTvFlowRowVisible: isTvFlowRowVisible$ | async,
+    isMobileRowVisible: isMobileRowVisible$ | async,
+    isFixedTelephoneRowVisible: isFixedTelephoneRowVisible$ | async
+  } as $">
+  <ng-container
+    *ngIf="
+      $.isInternetRowVisible !== null &&
+      $.isTvIconicRowVisible !== null &&
+      $.isTvFlowRowVisible !== null &&
+      $.isMobileRowVisible !== null &&
+      $.isFixedTelephoneRowVisible !== null
+    ">
+    <div class="container px--m px--n--md py--l py--g--md">
+      <div
+        *ngIf="$.isInternetRowVisible"
+        class="display--flex product-finder-result--detail-screen--info justify-content--between">
+        <div
+          class="product-finder-result--detail-screen--info-detail display--flex flex-direction--column justify-content--center mt--xxl mr--xxg--md col-12 col-md-5">
+          <div class="text-flow text-flow--h2 mb--l">
+            {{ 'ng.products-details-row-container.internet-title' | translate }}
+          </div>
+          <div>
+            {{ 'ng.products-details-row-container.internet-text' | translate }}
+          </div>
+        </div>
+        <div class="mt--xxl hide-until-md text-align--right col-12 col-md-7 display--flex align-items--baseline">
+          <img
+            class="product-finder-result--detail-screen--info-img"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            alt="telenet"
+            src="/assets/sales/products-details/row-container/internet.png" />
+          <img
+            class="position--relative product-finder-result--detail-screen--info-img--icon"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/internet-icon.png" />
+        </div>
+      </div>
+      <div
+        *ngIf="$.isTvIconicRowVisible"
+        class="display--flex product-finder-result--detail-screen--info justify-content--between product-finder-result--detail-screen--info-img-right">
+        <div
+          class="product-finder-result--detail-screen--info-detail display--flex flex-direction--column justify-content--center mt--xxl mr--xxg--md col-12 col-md-5">
+          <div class="text-flow text-flow--h2 mb--l">
+            {{ 'ng.products-details-row-container.tv-iconic-title' | translate }}
+          </div>
+
+          <div>{{ 'ng.products-details-row-container.tv-iconic-text' | translate }}</div>
+        </div>
+        <div class="mt--xxl hide-until-md text-align--right col-12 col-md-7 display--flex align-items--baseline">
+          <img
+            class="product-finder-result--detail-screen--info-img"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/tv.png" />
+          <img
+            class="position--relative product-finder-result--detail-screen--info-img--icon"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/tv-icon.png" />
+        </div>
+      </div>
+      <div
+        *ngIf="$.isTvFlowRowVisible"
+        class="display--flex product-finder-result--detail-screen--info justify-content--between product-finder-result--detail-screen--info-img-right">
+        <div
+          class="product-finder-result--detail-screen--info-detail display--flex flex-direction--column justify-content--center mt--xxl mr--xxg--md col-12 col-md-5">
+          <div class="text-flow text-flow--h2 mb--l">
+            {{ 'ng.products-details-row-container.tv-flow-title' | translate }}
+          </div>
+
+          <div>{{ 'ng.products-details-row-container.tv-flow-text' | translate }}</div>
+        </div>
+        <div class="mt--xxl hide-until-md text-align--right col-12 col-md-7 display--flex align-items--baseline">
+          <img
+            class="product-finder-result--detail-screen--info-img"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/tv.png" />
+          <img
+            class="position--relative product-finder-result--detail-screen--info-img--icon"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/tv-icon.png" />
+        </div>
+      </div>
+      <div
+        *ngIf="$.isMobileRowVisible"
+        class="display--flex product-finder-result--detail-screen--info justify-content--between">
+        <div
+          class="product-finder-result--detail-screen--info-detail display--flex flex-direction--column justify-content--center mt--xxl mr--xxg--md col-12 col-md-5">
+          <div class="text-flow text-flow--h2 mb--l">
+            {{ 'ng.products-details-row-container.mobile-title' | translate }}
+          </div>
+          <div>{{ 'ng.products-details-row-container.mobile-text' | translate }}</div>
+        </div>
+        <div class="mt--xxl hide-until-md text-align--right col-12 col-md-7 display--flex align-items--baseline">
+          <img
+            class="product-finder-result--detail-screen--info-img"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/mobile.png" />
+          <img
+            class="position--relative product-finder-result--detail-screen--info-img--icon"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/mobile-icon.png" />
+        </div>
+      </div>
+      <div
+        *ngIf="$.isFixedTelephoneRowVisible"
+        class="display--flex product-finder-result--detail-screen--info justify-content--between">
+        <div
+          class="product-finder-result--detail-screen--info-detail display--flex flex-direction--column justify-content--center mt--xxl mr--xxg--md col-12 col-md-5">
+          <div class="text-flow text-flow--h2 mb--l">
+            {{ 'ng.products-details-row-container.fixed-telephone-title' | translate }}
+          </div>
+          <div>{{ 'ng.products-details-row-container.fixed-telephone-text' | translate }}</div>
+        </div>
+        <div class="mt--xxl hide-until-md text-align--right col-12 col-md-7 display--flex align-items--baseline">
+          <img
+            class="product-finder-result--detail-screen--info-img"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/fixed-telephone.png" />
+          <img
+            class="position--relative product-finder-result--detail-screen--info-img--icon"
+            appSalesImageSrcInterceptor
+            [moduleId]="'tg-sales-products-details-row-container'"
+            src="/assets/sales/products-details/row-container/fixed-telephone-icon.png" />
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

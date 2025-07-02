@@ -1,0 +1,387 @@
+{
+  "product": {
+    "productid": 1,
+    "salesofferingid": "2",
+    "externalProductCode": "BOYO0025",
+    "labelkey": "25 Based on you",
+    "producttype": "MOBILE",
+    "weight": 20,
+    "unlimitedInternet": false,
+    "apps": [],
+    "maxCount": "20",
+    "requiresInstallation": true,
+    "customercategories": ["Residential", "Production Test", "Event/Demo"],
+    "category": ["Based on You Plans", "For €5 discount", "Post-Paid Mobile"],
+    "visible": false,
+    "characteristics": {
+      "service_category_limit": {
+        "value": "750",
+        "unit": "GB"
+      },
+      "initial_threshold_1": {
+        "value": "600",
+        "unit": "GB"
+      },
+      "alert_threshold": {
+        "value": "675",
+        "unit": "GB"
+      },
+      "productsegment": "ALL",
+      "productgroup": "OTHER",
+      "productsubgroup": "",
+      "max_mobile_outofbundle_reminders": "5",
+      "salespricevatincl": {
+        "unit": "EURO",
+        "value": "15"
+      },
+      "salespricevatexcl": {
+        "unit": "EURO",
+        "value": "12.40"
+      },
+      "prices": {
+        "activationFee": 15.0
+      }
+    },
+    "localizedcontent": [
+      {
+        "locale": "nl",
+        "name": "25 Based on you NL",
+        "logo": "https://customerzone.sup.base.be/nl"
+      },
+      {
+        "locale": "fr",
+        "name": "25 Based on you FR",
+        "logo": "https://customerzone.sup.base.be/fr"
+      },
+      {
+        "locale": "en",
+        "name": "25 Based on you EN",
+        "logo": "https://customerzone.sup.base.be/en"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Combineer 0 tot 7 GB",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Combinez de 0 à 7 GB",
+          "logo": ""
+        },
+        {
+          "locale": "en",
+          "name": "Combine 0 to 7 GB",
+          "logo": ""
+        }
+      ]
+    },
+    "rates": [
+      {
+        "type": "Mobile data",
+        "unit": "MB",
+        "cost": "0,003487",
+        "currency": "EUR"
+      },
+      {
+        "type": "call to other networks",
+        "unit": "MIN",
+        "cost": "0,041666",
+        "currency": "EUR"
+      }
+    ],
+    "subcategory": {
+      "name": "Spotify",
+      "localizedcontent": [
+        {
+          "locale": "nl",
+          "name": "Spotify NL",
+          "logo": ""
+        },
+        {
+          "locale": "fr",
+          "name": "Spotify FR",
+          "logo": ""
+        },
+        {
+          "locale": "en",
+          "name": "Spotify EN",
+          "logo": ""
+        }
+      ],
+      "weight": 20,
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "servicetype": "MOBILE_CALLING",
+        "experience": {
+          "experiencetype": "CALL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobilecalling.minutes.onnet",
+            "value": "unlimited",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "40",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Bellen naar BASE",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Appels vers BASE",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Calls to BASE",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "spec.mobilecalling.minutes.national/EU",
+            "unit": "minutes",
+            "visible": true,
+            "weight": "30",
+            "minvalue": "0",
+            "maxvalue": "600",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Minuten naar alle",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Minutes vers tous",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Minutes to all numbers",
+                "logo": ""
+              }
+            ]
+          },
+          {
+            "labelkey": "spec.mobilecalling.sms.national/EU",
+            "value": "unlimited",
+            "unit": "number",
+            "visible": true,
+            "weight": "50",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Sms'en",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "SMS",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Texting",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_MONETARY",
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobilemonetary.volume.national/EU",
+            "value": "25",
+            "unit": "EUR",
+            "visible": true,
+            "weight": "10",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Maandelijks bedrag",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Montant mensuel",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Monthly amount",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "servicetype": "MOBILE_INTERNET",
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "labelkey": "spec.mobileinternet.data.national/EU",
+            "unit": "GB",
+            "visible": true,
+            "weight": "20",
+            "minvalue": "0",
+            "maxvalue": "7",
+            "localizedcontent": [
+              {
+                "locale": "nl",
+                "name": "Mobiele data in België en de EU-zone",
+                "logo": ""
+              },
+              {
+                "locale": "fr",
+                "name": "Données mobiles en Belgique and dans la zone UE",
+                "logo": ""
+              },
+              {
+                "locale": "en",
+                "name": "Data usage in Belgium and the EU-zone",
+                "logo": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "usageLimits": {
+      "outOfBundle": {
+        "preferenceGroup": "MobileCB",
+        "policyInstanceName": "CompteBloqueSpendLimit",
+        "limits": [
+          {
+            "communicationPreferenceType": "CbLimit50",
+            "communicationPreferenceTypeValue": "50",
+            "values": ["10", "20", "30", "40", "50"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit90",
+            "communicationPreferenceTypeValue": "90",
+            "values": ["10", "20", "30", "40", "50"]
+          },
+          {
+            "communicationPreferenceType": "CbLimit100",
+            "communicationPreferenceTypeValue": "100",
+            "values": ["10", "20", "30", "40", "50"]
+          }
+        ]
+      },
+      "premiumService": {
+        "policyInstanceName": "PremiumUsageSpendLimit",
+        "limits": [
+          {
+            "minValue": "0",
+            "maxValue": "300",
+            "default": "125"
+          }
+        ]
+      }
+    },
+    "usagenotifications": {
+      "mobile": [
+        {
+          "category": "included",
+          "preferenceGroup": "MobileIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Included75",
+              "communicationPreferenceTypeValue": "75"
+            },
+            {
+              "communicationPreferenceType": "Included90",
+              "communicationPreferenceTypeValue": "90"
+            },
+            {
+              "communicationPreferenceType": "Included100",
+              "communicationPreferenceTypeValue": "100"
+            }
+          ]
+        },
+        {
+          "category": "option",
+          "preferenceGroup": "MobileOptionsIncluded",
+          "threshold": [
+            {
+              "communicationPreferenceType": "IncludedOptions90",
+              "communicationPreferenceTypeValue": "90"
+            },
+            {
+              "communicationPreferenceType": "IncludedOptions100",
+              "communicationPreferenceTypeValue": "100"
+            }
+          ]
+        },
+        {
+          "category": "outofbundle",
+          "preferenceGroup": "MobileOutbundleRMD",
+          "threshold": [
+            {
+              "communicationPreferenceType": "OutBundleRMD",
+              "values": ["5", "10", "15", "20", "25", "30", "50", "75", "100"]
+            }
+          ]
+        }
+      ],
+      "internet": [
+        {
+          "preferenceGroup": "Internet",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet80",
+              "communicationPreferenceTypeValue": "80"
+            },
+            {
+              "communicationPreferenceType": "Internet90",
+              "communicationPreferenceTypeValue": "90"
+            },
+            {
+              "communicationPreferenceType": "Internet100",
+              "communicationPreferenceTypeValue": "100"
+            }
+          ]
+        },
+        {
+          "preferenceGroup": "InternetNew",
+          "threshold": [
+            {
+              "communicationPreferenceType": "Internet800",
+              "communicationPreferenceTypeValue": "800"
+            },
+            {
+              "communicationPreferenceType": "Internet900",
+              "communicationPreferenceTypeValue": "900"
+            },
+            {
+              "communicationPreferenceType": "Internet1000",
+              "communicationPreferenceTypeValue": "100"
+            }
+          ]
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "usageBasedRatePlan": false
+  }
+}

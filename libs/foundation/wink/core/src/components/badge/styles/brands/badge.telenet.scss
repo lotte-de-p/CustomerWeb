@@ -1,0 +1,10 @@
+@import '../vars/vars.telenet';
+@import '../badge.default';
+
+:host {
+  --font-family: TelenetAlbra;
+}
+
+:host([is-bold]) {
+  --font-family: TelenetAlbra-Bold;
+}

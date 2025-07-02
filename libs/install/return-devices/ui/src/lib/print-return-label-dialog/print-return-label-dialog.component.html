@@ -1,0 +1,36 @@
+<div class="overlay" data-cy="print-return-label-overlay">
+  <div class="overlay__mask"></div>
+
+  <div class="overlay__section">
+    <div class="overlay__section__content animation--slide-down-to-screen py--m py--n--md">
+      <div class="display--flex justify-content--between flex-direction--column px--m px--n--md">
+        <div class="text-align--right">
+          <div class="icon icon-cross" (click)="close()" data-cy="print-return-label-overlay-close-button"></div>
+        </div>
+        <div
+          class="mt--n text-flow text-flow--h5 overlay__section__content__title text-align--center"
+          data-cy="print-return-label-overlay-title">
+          {{ 'ng.return-devices.print-return-label-dialog.lbl.title' | translate }}
+        </div>
+      </div>
+      <div class="overlay__section__content__description text-align--center px--m px--n--md">
+        <div class="my--l" data-cy="print-return-label-overlay-description">
+          {{ 'ng.return-devices.print-return-label-dialog.text.description' | translate }}
+        </div>
+      </div>
+      <div class="overlay__section__content__action">
+        <button
+          class="button button--secondary"
+          (click)="download()"
+          data-cy="print-return-label-overlay-download-button">
+          <i class="icon icon-download pr--m"></i>
+          <span>{{ 'ng.return-devices.print-return-label-dialog.btn.download' | translate }}</span>
+        </button>
+        <button class="button button--primary" (click)="print()" data-cy="print-return-label-overlay-print-button">
+          <i class="icon icon-printer pr--m"></i>
+          <span>{{ 'ng.return-devices.print-return-label-dialog.btn.print' | translate }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

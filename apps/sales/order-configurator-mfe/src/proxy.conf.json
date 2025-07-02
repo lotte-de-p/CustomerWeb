@@ -1,0 +1,30 @@
+{
+  "/content/dam/www-telenet-touch/default/images/hardware-checkout": {
+    "target": "http://local.telenet.be:4205",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/content/dam/www-telenet-touch/default/images/hardware-checkout": "/assets/sales/hardware-checkout"
+    }
+  },
+  "/telenet/data/municipalities": {
+    "target": "https://www.int.telenet.be",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/telenet/data/streets": {
+    "target": "https://www.int.telenet.be",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/components/sales/nc/sales-checkout/media/telenet/installation-type": {
+    "target": "http://local.telenet.be:4205",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/components/sales/nc/sales-checkout/media/telenet/installation-type": "/assets/sales/installation-type"
+    }
+  }
+}

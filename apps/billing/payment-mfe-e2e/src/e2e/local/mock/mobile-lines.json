@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Peter",
+    "msisdn": "0489552137",
+    "isDataOnly": false
+  },
+  {
+    "name": "",
+    "msisdn": "0489129746",
+    "isDataOnly": true
+  }
+]

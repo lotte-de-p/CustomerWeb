@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="background-shade_04 p--l mt--m">
+      <demo-product-collapsible-header header="Meer details">
+        <ng-template>
+          <div>
+            <span class="text-font-family--t7"></span>
+            <div>
+              <div class="pt--xs">
+                <span>
+                  {{ product.productInfo.name }}
+                </span>
+                <div
+                  class="display--flex--md justify-content--between pt--xs"
+                  *ngFor="let rate of product.productInfo.rates">
+                  <div>
+                    {{ 'ng.product-overview.lbl.' + rate.type | lowercase | translate }}
+                  </div>
+                  <div class="text-weight--l mt--n--md mt--xxs">
+                    <span>
+                      {{
+                        'ng.product-overview.text.specifications-for-base-zero-value' | translate: { amount: rate.cost }
+                      }} </span
+                    >/
+                    <span>
+                      {{
+                        'ng.product-overview.text.specifications-for-base-zero-unit' | translate: { unit: rate.unit }
+                      }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="product.identifier && product.productType === 'mobile' && isBundle" class="pt--xs">
+                <span class="text-font-family--t7">
+                  {{ 'ng.product-overview.text.available-numbers' | translate }}
+                </span>
+                <div class="pt--m" *ngIf="!product.mobileIdentifier?.length">
+                  {{ product.identifier | phoneNumber }}
+                </div>
+                <ng-container *ngIf="product.mobileIdentifier?.length">
+                  <div *ngFor="let line of product.mobileIdentifier">
+                    <div class="display--flex mt--m align-items--center">
+                      <div>{{ line.identifier | phoneNumber }}</div>
+                      <div class="pl--s" *ngIf="line.eSimStatus === 'Active'">
+                        <span class="status-indicator status-indicator--positive">
+                          {{ 'ng.product-overview.lbl.esim-active' }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+
+              <div *ngIf="product?.handsets?.length">
+                <div *ngFor="let handset of product.handsets">
+                  <div class="mt--xs text-weight--l">
+                    {{ 'ng.product-overview.text.contract-information' | translate }}
+                  </div>
+                  <div class="row display--flex--md justify-content--between pt--xs line-height--24">
+                    <div class="col-md-10 col-xs-12">
+                      {{ 'ng.product-overview.text.contract-duration' | translate }}
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-align--right--md text-weight--l mt--n--md mt--xxs">
+                      <span>{{ handset.contract.duration }} {{ 'ng.product-overview.lbl.months' | translate }}</span>
+                    </div>
+                  </div>
+                  <div class="row display--flex--md justify-content--between pt--xs line-height--24">
+                    <div class="col-md-10 col-xs-12">
+                      {{ 'ng.product-overview.text.contract-obligationEndDate' | translate }}
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-align--right--md text-weight--l mt--n--md mt--xxs">
+                      {{ handset.contract.obligationEndDate | date: 'dd/MM/yyyy' }}
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="product.hasValidPrice(handset.contract?.price?.earlyTerminationFee)"
+                    class="row display--flex--md justify-content--between pt--xs line-height--24">
+                    <div class="col-md-10 col-xs-12">
+                      {{ 'ng.product-overview.text.contract-TerminationFee' | translate }}
+                    </div>
+                    <div
+                      class="col-md-2 col-xs-12 text-align--right--md text-weight--l mt--n--md mt--xxs"
+                      *ngIf="handset.contract?.price?.earlyTerminationFee">
+                      {{ 'ng.product-overview.lbl.monetary-amount' | translate }}
+                      {{ handset.contract.price?.earlyTerminationFee }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </demo-product-collapsible-header>
+    </div>
+    <div class="col-md-4 col-xs-12 text-align--right pt--n--md pt--m pl--n pr--n">
+      <button
+        [attr.data-testid]="'manageOptions'"
+        type="button"
+        *ngIf="product.isProductActive() && !product.isMultipleDTV && !isBundle"
+        (click)="handleManageOptions(product)"
+        class="button button--secondary button--fullwidth">
+        {{ 'ng.product-overview.lnk.manage-options' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="sales-cart-row-border-radius sales-cart-row-left sales-cart-row">
+  <div>
+    <div class="p-0">
+      <div class="sales-cart-row__contents mb--m">
+        <div class="align-items--center sales-cart-row__content__section--discount mt--m mb-0 px--l--md px--xs pb--m">
+          <div>
+            <img
+              *ngIf="orderItem?.mainImageUrl"
+              alt=""
+              class="icon icon-md text-weight--l hw-image"
+              [src]="orderItem?.mainImageUrl" />
+          </div>
+          <div class="width--full pt--l">
+            <div class="display--flex justify-content--between width--full">
+              <div class="sales-cart-row__content__section__title">
+                <div class="font-body-small" [attr.data-cy]="'order-item-without-discount-name'">
+                  {{ orderItem?.name }}
+                </div>
+              </div>
+              <div class="sales-cart-row__content__section__price align-items--top display--flex">
+                <div class="sales-cart-row__content__section right">
+                  <div class="align-items--center display--flex space-nowrap sales-cart-row__content__section__price">
+                    <div class="color-black text-weight--l">
+                      <span class="space-nowrap" [attr.data-cy]="'order-item-without-discount-price'">{{
+                        orderItem?.prices?.total | summaryPrice
+                      }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

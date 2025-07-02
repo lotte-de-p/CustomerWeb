@@ -1,0 +1,246 @@
+include:
+  - local: '/tools/gitlab/base/allowed-branches.yml'
+
+.jira-create-ticket: &jira-create-ticket
+  image: ${CI_HARBOR_REGISTRY}/css-other/curl
+  environment: ${ENV}
+  script:
+    - >-
+      [ -z ${PAYLOAD} ] &&
+      echo "Missing variable 'PAYLOAD' with the data for the POST request" &&
+      exit 1
+    - echo "${PAYLOAD}"
+    - >-
+      http_response=$(curl --silent --show-error --write-out "%{http_code}" -o response.txt
+      --request POST "https://jira.rel.apps.telenet.be/rest/api/2/issue"
+      --header 'Content-Type: application/json'
+      --header 'Accept: application/json'
+      --header "Authorization: Bearer ${JIRA_REST_API_BEARER_TOKEN}"
+      --data-binary "${PAYLOAD}")
+    - |-
+      if [ $http_response != "201" ]; then
+        exit 1
+      else
+        echo "Server returned:"
+        cat response.txt
+        echo
+      fi
+    - echo -e "######\n##\n#### https://jira.rel.apps.telenet.be/browse/$(cat response.txt | jq -r '.key')\n##\n######"
+
+.jira-create-release-ticket:
+  extends: .jira-create-ticket
+  image: ${CI_HARBOR_REGISTRY}/build-images/build-release-toolkit
+  variables:
+    ENDPOINT: 'https://jira.rel.apps.telenet.be/rest/api/2'
+    TAGGED_RELEASE: 'false'
+  when: manual
+  only: !reference [.allowed-branches-release]
+  script:
+    - |-
+      if [ -z "${ENV}" ]; then
+        echo "Variable 'ENV' must be manually provided in CI/DC variables or use the provided steps in common pipeline templates for STAGE and PROD. Example: ENV=STAGE"
+        exit 1
+      fi
+
+    #Link ENV to Jira customfield ID
+    - |-
+      ENV=$(echo "${ENV}" | tr '[:lower:]' '[:upper:]')
+      if [ "${ENV}" = "STAGE" ]; then
+        ENV_ID="944803"
+      elif [ "${ENV}" = "PROD" ]; then
+        ENV_ID="840155"
+      else
+        echo "Unknown environment id for: ${ENV}. Please update the ENV field using the dropdown selector in Jira after the ticket is created."
+        ENV_ID="${ENV}"
+      fi
+
+    #Set current and previous release/tag
+    - |-
+      git remote prune origin
+      git fetch --all
+
+      if [ "${TAGGED_RELEASE}" = "true" ]; then
+
+        CURRENT_TAG=$(git describe --tags --abbrev=0)
+        echo "Current tag: ${CURRENT_TAG}"
+
+        VERSION=${CURRENT_TAG}
+        RELEASE=${VERSION%.*}
+
+        if [ -z "${PREV_MINOR}" ]; then
+          PREV_MINOR=$(echo "${RELEASE} - 0.01" | bc)
+        fi
+        echo "Previous minor: ${PREV_MINOR} - if incorrect manually override CI/CD variable. Example PREV_MINOR=24.12"
+
+        PREV_TAG=$(git tag -l | grep ${PREV_MINOR} | tail -n 1)
+        echo "Previous tag: ${PREV_TAG}"
+
+        TARGET="${PREV_TAG}..${CURRENT_TAG}"
+      else
+        RELEASE=${VERSION%.*}
+        echo "Current release: ${RELEASE}"
+
+        if [ -z "${PREV_RELEASE}" ]; then
+          PREV_RELEASE=$(echo "${RELEASE} - 0.01" | bc)
+        fi
+        echo "Previous release: ${PREV_RELEASE} - if incorrect manually override CI/CD variable. Example PREV_RELEASE=24.12"
+
+        TARGET="origin/release/S${RELEASE} --not origin/release/S${PREV_RELEASE}"
+      fi
+
+    #Get all changes from GitLab
+    - |-
+      QUERY=$(git log --oneline ${TARGET} \
+        | cut -d' ' -f2- \
+        | grep -oE '\[?[A-Z0-9]+-[0-9]+' \
+        | grep -vE '\-000' \
+        | tr -d '[' \
+        | sort \
+        | uniq \
+        | awk '{printf "%s%s", sep, $0; sep=","}')
+
+      echo "Changes since last release: ${QUERY}"
+
+      if [ -z "${QUERY}" ]; then
+        echo "No changes with previous release detected"
+        exit 1
+      fi
+
+      QUERY="key%20in%20(${QUERY})%20and%20status=\"Ready%204%20Acceptance%20Deploy\"&fields=none"
+
+      echo "GitLab query completed"
+
+    #Get linked issues from JIRA
+    - |-
+      ISSUES=$(curl -s -H "Authorization: Bearer ${JIRA_REST_API_BEARER_TOKEN}" \
+      -H "Content-Type: application/json" \
+      "${ENDPOINT}/search?jql=${QUERY}")
+
+      KEYS=$(echo "${ISSUES}" | jq -r '.issues[].key' | tr '\n' ',' | tr -d '[:space:]' | sed 's/,$//')
+      if [ -z "${KEYS}" ]; then
+        echo "No keys could be extracted from JIRA issues. Make sure issues are in Ready 4 Acceptance Deploy status."
+        exit 1
+      fi
+
+      echo "Received Jira issues in Ready 4 Acceptance Deploy: ${KEYS}"
+
+      PARTIAL_URL=${LEANIX_APPLICATION_NAME:+$LEANIX_APPLICATION_NAME-}${CLIENT_PROJECT%-mfe}
+    - |
+      if [ "${CLIENT_PROJECT%-mfe}" == "$LEANIX_APPLICATION_NAME" ]; then
+          PARTIAL_URL="${CLIENT_PROJECT%-mfe}"
+      fi
+
+    #Create JIRA ticket PAYLOAD
+    - |-
+      PAYLOAD=$(cat <<EOF
+      {
+      "fields":{
+        "project":{
+          "key":"CUSTPORTTM"
+        },
+        "issuetype":{
+          "name":"Patch"
+        },
+        "summary":"${PARTIAL_URL} - S${RELEASE} - AWS - ${VERSION}",
+        "description":"Hi Team,\n\nPlease execute the pipeline for the AWS stage environment:\n\n${CI_PIPELINE_URL} \n\nApplication intake: https://confluence.rel.apps.telenet.be/x/7BQEFQ \n\n|| Env || Sanity Check Link ||\n| STAGE | https://customer-web-${PARTIAL_URL}.aem-modules-stage.awscloud.external.telenet.be/version.json |\n| PROD  | https://customer-web-${PARTIAL_URL}.aem-modules-prod.awscloud.external.telenet.be/version.json |\n\nThe version will match the artifact version in Patch Details.",
+        "customfield_18903":{
+          "value":"AWS"
+        },
+        "customfield_13833":"S${RELEASE}",
+        "customfield_15401":"${VERSION}",
+        "customfield_17311":[
+          "${ENV_ID}"
+        ]
+      }
+      }
+      EOF
+      )
+
+    #Create JIRA patch ticket
+    - |-
+      http_response=$(curl --silent --show-error --write-out "%{http_code}" -o response.txt \
+        -X POST \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer ${JIRA_REST_API_BEARER_TOKEN}" \
+        -d "${PAYLOAD}" \
+        "${ENDPOINT}/issue")
+
+      if [ "${http_response}" != "201" ]; then
+        echo "Failed to create ticket with PAYLOAD: ${PAYLOAD}"
+        echo "Server returned:"
+        cat response.txt
+        echo
+        exit 1
+      fi
+
+    #Extract the key of the created ticket
+    - ISSUE=$(jq -r '.key' response.txt)
+
+    #Link issues to created ticket
+    - |-
+      echo "Adding issue links to ${ISSUE} for keys: ${KEYS}"
+      for KEY in $(echo "${KEYS}" | tr "," "\n")
+      do
+        ISSUE_LINKS=$(cat <<EOF
+        {
+          "update": {
+            "issuelinks": [
+              {
+                "add": {
+                  "type": {
+                    "name": "Realize",
+                    "inward":"realized by",
+                    "outward":"realizes"
+                  },
+                  "outwardIssue": {
+                    "key": "${KEY}"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      EOF
+        )
+
+        http_response=$(curl --silent --show-error --write-out "%{http_code}" -o response.txt \
+          -X PUT \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${JIRA_REST_API_BEARER_TOKEN}" \
+          -d "${ISSUE_LINKS}" \
+          "${ENDPOINT}/issue/${ISSUE}")
+
+        if [ "${http_response}" != "204" ]; then
+          echo "Failed to add issue link for key: ${KEY}"
+          echo "Server returned:"
+          cat response.txt
+          echo
+          exit 1
+        fi
+
+        echo "Linked ${KEY}"
+      done
+
+      echo "Ticket created at: https://jira.rel.apps.telenet.be/browse/${ISSUE}"
+
+.patch-stage:
+  extends: .jira-create-release-ticket
+  stage: patch for release (done by devs)
+  variables:
+    ENV: 'STAGE'
+  only: !reference [.allowed-branches-release]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.patch-prod:
+  extends: .jira-create-release-ticket
+  stage: patch for release (done by devs)
+  variables:
+    ENV: 'PROD'
+  only: !reference [.allowed-branches-release]
+  when: manual
+  retry:
+    max: 2
+    when: runner_system_failure

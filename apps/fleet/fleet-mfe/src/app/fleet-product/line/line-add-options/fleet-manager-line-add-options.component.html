@@ -1,0 +1,120 @@
+<tg-login (componentCanRender)="initAfterLoggedIn()" [scopes]="scopes" [messageGroupName]="messageGroup">
+  <tg-fleet-manager-line-overlay (closeOverlay)="backToProductOverview()" [attr.data-cy]="'add-options'">
+    @if (hasErrorOrSuccessMessage()) {
+      <tg-fleet-manager-result-message
+        backToProductOverviewLabel="ng.fleet-manager-line-change-tariff-plan.lnk.back-to-product-overview"
+        [messageGroup]="messageGroup"
+        (backToProductOverviewClicked)="redirect()">
+      </tg-fleet-manager-result-message>
+    }
+    <app-loader
+      [enableLoader]="enableLoader"
+      [pageType]="'fleet-page'"
+      [enableMask]="enableMask"
+      [startByDefault]="false">
+    </app-loader>
+    @if (selectedLines()) {
+      <div class="row">
+        <div class="col-sm-12 p-0">
+          <div>
+            <div class="options-content">
+              <tg-fleet-manager-available-option (toggleContainerData)="toggleContainerData($event)">
+              </tg-fleet-manager-available-option>
+
+              <div>
+                <div
+                  class="toggle-content-bottom hidden-desktop"
+                  [ngClass]="{ 'scroll-up-lines': stickyContainer, 'scroll-down-lines': !stickyContainer }">
+                  <em
+                    (click)="toggleStickyContainer()"
+                    class="icon-chevron-down"
+                    [ngClass]="{ 'up-icon': !stickyContainer, 'down-icon': stickyContainer }"></em>
+                  <div (click)="toggleStickyContainer()">
+                    <p [ngClass]="{ 'title-large': stickyContainer }">
+                      {{ 'ng.line-add-options.lbl.review-selected-lines' | translate }}
+                    </p>
+                  </div>
+                  @if (stickyContainer) {
+                    <div class="display--flex justify-content--between mt-25">
+                      <div>
+                        <label [ngClass]="{ 'cursor--default': !hasAffectedLine() }" for="showChangesSwitch">{{
+                          'ng.line-add-options.lbl.show-change' | translate
+                        }}</label>
+                      </div>
+                      <div class="CheckboxSwitch">
+                        <input
+                          type="checkbox"
+                          class="CheckboxSwitch-input"
+                          id="showChangesSwitch"
+                          [disabled]="!hasAffectedLine()"
+                          [(ngModel)]="showFilteredLines" />
+                        <label class="CheckboxSwitch-control" for="showChangesSwitch">&nbsp;</label>
+                      </div>
+                    </div>
+                  }
+                  <div [hidden]="!stickyContainer">
+                    @if (selectedLines) {
+                      <tg-fleet-manager-line-item
+                        [selectedLines]="selectedLines()"
+                        [showFilteredLines]="showFilteredLines"></tg-fleet-manager-line-item>
+                    }
+                  </div>
+                  <div [hidden]="!stickyContainer">
+                    <tg-fleet-manager-sticky-actions
+                      (revertChanges)="revertChanges()"
+                      (showWarning)="showWarningContent()"
+                      [selectedLines]="selectedLines()"
+                      [initialSelectedLines]="initialSelectedLines"></tg-fleet-manager-sticky-actions>
+                  </div>
+                </div>
+                <div class="title-top">
+                  <div class="title-container">
+                    <div>
+                      <p class="hidden-mobile">{{ 'ng.line-add-options.lbl.review-selected-lines' | translate }}</p>
+                    </div>
+                    <div class="display--flex">
+                      <div>
+                        <label [ngClass]="{ 'cursor--default': !hasAffectedLine() }" for="showChangesSwitch">{{
+                          'ng.line-add-options.lbl.show-change' | translate
+                        }}</label>
+                      </div>
+                      <div class="CheckboxSwitch">
+                        <input
+                          type="checkbox"
+                          class="CheckboxSwitch-input"
+                          id="showChangesSwitchDesktop"
+                          [disabled]="!hasAffectedLine()"
+                          [(ngModel)]="showFilteredLines" />
+                        <label class="CheckboxSwitch-control" for="showChangesSwitch">&nbsp;</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <tg-fleet-manager-line-item
+                  [selectedLines]="selectedLines()"
+                  [showFilteredLines]="showFilteredLines"
+                  [toggleClass]="toggleClass"></tg-fleet-manager-line-item>
+
+                <tg-fleet-manager-sticky-actions
+                  (revertChanges)="revertChanges()"
+                  (showWarning)="showWarningContent()"
+                  [selectedLines]="selectedLines()"
+                  [initialSelectedLines]="initialSelectedLines"></tg-fleet-manager-sticky-actions>
+
+                <tg-fleet-manager-warning-message
+                  [isShowWarning]="isShowWarning()"
+                  [selectedLines]="selectedLines()"
+                  [optionProducts]="optionProducts"
+                  [salesOrderResponse]="salesOrderResponse"
+                  [category]="category"
+                  (closedOverLay)="closeOverLay()"
+                  [messageGroup]="messageGroup"></tg-fleet-manager-warning-message>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </tg-fleet-manager-line-overlay>
+</tg-login>

@@ -1,0 +1,1 @@
+{"version":3,"file":"sofy-modem-details.mapper.d.ts","sourceRoot":"","sources":["../../../src/lib/mappers/sofy-modem-details.mapper.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,gBAAgB,EAAE,MAAM,8BAA8B,CAAC;AAEhE,OAAO,EAAE,qBAAqB,EAAE,MAAM,oCAAoC,CAAC;;AAG3E,qBAGa,sBAAsB;IAC1B,mBAAmB,CAAC,YAAY,EAAE,qBAAqB,GAAG,gBAAgB,EAAE;IAmBnF,OAAO,CAAC,sBAAsB;yCApBnB,sBAAsB;6CAAtB,sBAAsB;CAgClC"}

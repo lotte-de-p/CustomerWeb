@@ -1,0 +1,57 @@
+{
+  "name": "engagement-telenet-customerzone-dashboard-engagement",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/src",
+  "prefix": "tg-engagement-telenet-customerzone-dashboard-engagement",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/**/*.ts",
+          "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "telenet-customerzone-dashboard-mfe:build:development"
+      }
+    },
+    "component-test-coverage": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/cypress.config.ts",
+        "polyfills": ["zone.js"],
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "telenet-customerzone-dashboard-mfe:build:development",
+        "extractLicenses": false,
+        "sourceMap": true,
+        "namedChunks": true,
+        "vendorChunk": true
+      }
+    },
+    "local-component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/engagement/telenet-customerzone-dashboard/engagement/feature-device/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "watch": true,
+        "devServerTarget": "telenet-customerzone-dashboard-mfe:build:development"
+      }
+    }
+  },
+  "tags": [
+    "type:feature",
+    "scope:engagement-telenet-customerzone-dashboard-engagement",
+    "scope:telenet-customerzone-dashboard-mfe"
+  ]
+}

@@ -1,0 +1,64 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div class="mybase-dashboard-dtv">
+    @if (myBaseDashboardDtvError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <tg-mybase-dashboard-error [error]="(myBaseDashboardDtvError$ | async)!"></tg-mybase-dashboard-error>
+        </div>
+      </div>
+    } @else {
+      <div class="row">
+        @if (myBaseDashboardDtvLoading$ | async) {
+          <div class="col-12 col-md-6 col-lg-4 mb--l">
+            <div class="height--full skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+          </div>
+        }
+        @if ((myBaseDashboardDtvSimpleCards$ | async) && (myBaseDashboardDtvLoading$ | async) === false) {
+          <div class="col-12 col-md-6 col-lg-4 mb--m mt--xxxs--md">
+            <tg-watch-tv-online
+              [showSubtitle]="true"
+              [watchTvUrl]="watchTvOnlineUrl"
+              [watchTvIosUrl]="watchTvIosUrl"
+              [watchTvAndroidUrl]="watchTvAndroidUrl"
+              [fullHeight]="true"></tg-watch-tv-online>
+          </div>
+          <div class="col-12 col-md-6 col-lg-8">
+            <tg-mybase-navigation-cards
+              [manageContentPacksUrl]="manageContentPacksUrl"
+              [manageYourDeviceUrl]="manageYourDeviceUrl"
+              [productOverviewUrl]="productOverviewUrl"
+              [addTvBoxUrl]="addTvBoxUrl"
+              [type]="'dtv'"
+              [customClassGrid]="'col-lg-6'"
+              [productIdentifier]="(myBaseDashboardDtvIdentifier$ | async)!"
+              [data]="(myBaseDashboardDtvSimpleCards$ | async)!"
+              (analyticsData)="sendAnalyticsData($event)"></tg-mybase-navigation-cards>
+          </div>
+        }
+      </div>
+      <div>
+        @if (myBaseDashboardDtvLoading$ | async) {
+          <div class="row">
+            <div class="col-12 mb--l">
+              <div class="skeleton skeleton--basic skeleton--container skeleton--title p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+          </div>
+        }
+        <div>
+          <tg-mybase-services-cards
+            [returnDeviceUrl]="returnDeviceUrl"
+            [type]="'dtv'"
+            [data]="(myBaseDashboardDtvServices$ | async)!"
+            (analyticsData)="sendAnalyticsData($event)">
+          </tg-mybase-services-cards>
+        </div>
+      </div>
+    }
+  </div>
+</tg-login>

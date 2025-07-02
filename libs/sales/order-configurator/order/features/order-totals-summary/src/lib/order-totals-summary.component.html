@@ -1,0 +1,53 @@
+<div
+  class="mt-10"
+  [ngClass]="{
+    'background-lemon': true
+  }">
+  <div class="display--flex align-items--center justify-content--between p--l">
+    <div class="sales-cart-row__content__section__title color-black font-weight--bold">
+      {{ 'ng.sales-checkout.shopping-cart.lbl.subtotals' | translate }}
+    </div>
+    <div class="display--flex">
+      <p class="font--caption color-black pr--xs pt--xxxs">
+        {{ 'ng.sales-checkout.shopping-cart.lbl.all-prices-exclusive-vat' | translate }}
+      </p>
+    </div>
+  </div>
+  <div
+    class="width--full color-black border--t--r border-width--t--r border-style--t--solid border-color--t--light-grey upfront-payment p--m">
+    <div class="sales-cart-row__content mt--xxs">
+      <div class="display--flex justify-content--between">
+        <div class="sales-cart-row__content__section">
+          <div class="display--flex align-items--center">
+            <div class="text-flow--h6 text-weight--l display--flex">
+              <span class="icon icon-sm mr--xs icon-euro-check"></span>
+              <div
+                class="text-flow--h6 text-weight--l"
+                [innerHTML]="'ng.sales-checkout.shopping-cart.lbl.upfront-payment.tln' | translate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sales-cart-row__content sales-cart-row__content--small mt--xs">
+      <div class="display--flex flex-direction--row justify-content--between">
+        <div class="sales-cart-row__content__section ml-25">
+          <div class="display--flex">
+            <div class="text--m--md text--s text-weight--m">
+              {{ 'ng.sales-checkout.shopping-cart.lbl.hardware-cvp-delivery' | translate }}
+            </div>
+          </div>
+        </div>
+        @if (viewModel.deliveryPrice$ | async; as deliveryPrice) {
+          <div class="sales-cart-row__content__section right ml--m">
+            <div class="display--flex align-items--center">
+              <div class="text--m--md text--s text-weight--m ml--xxxs" [attr.data-cy]="'order-summary-home-delivery'">
+                {{ deliveryPrice | summaryPrice }}
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

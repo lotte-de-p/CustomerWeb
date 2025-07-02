@@ -1,0 +1,44 @@
+export enum SalesDataType {
+  TYPE_PRODUCT = 'Product',
+  TYPE_OPTION = 'Option',
+  TYPE_OPTION_DWN = 'OPTION',
+  TYPE_STREAMING_SERVICE = 'StreamingService',
+  TYPE_OPTIN = 'Optin',
+  TYPE_MOBILE = 'Mobile',
+  TYPE_SMARTPHONE = 'Smartphone',
+  TYPE_BUNDLE = 'BUNDLE',
+  TYPE_OTT_LINE = 'OTT LINE',
+  TYPE_IDTV_LINE = 'IDTV LINE',
+  TYPE_DATA_ONLY_MOBILE_LINE = 'DATA ONLY MOBILE LINE',
+  TYPE_FIXED_LINE = 'FIXED LINE',
+  TYPE_MOBILE_LINE = 'MOBILE LINE',
+  TYPE_TELEPHONE = 'TELEPHONE',
+  TYPE_INTERNET = 'INTERNET',
+  TYPE_DTV = 'DTV',
+  TYPE_INTERNET_BASE = 'Internet',
+  TYPE_DTV_BASE = 'Dtv',
+  TYPE_TV_BOX_BASE = 'TV_BOX',
+}
+
+export enum SalesDataProductType {
+  TYPE_PRODUCT = 'Product',
+  TYPE_MOBILE = 'Mobile',
+  TYPE_BUNDLE = 'BUNDLE',
+  TYPE_INTERNET = 'INTERNET',
+  TYPE_TELEPHONE = 'TELEPHONE',
+  TYPE_DTV = 'DTV',
+  TYPE_IDTV_LINE = 'IDTV LINE',
+  TYPE_OTT_LINE = 'OTT LINE',
+}
+
+export enum SalesDataOptionType {
+  TYPE_OPTION = 'Option',
+  TYPE_OPTION_DWN = 'OPTION',
+}
+
+export enum SalesDataOptinType {
+  TYPE_OPTIN = 'Optin',
+  TYPE_DATA_ONLY_MOBILE_LINE = 'DATA ONLY MOBILE LINE',
+  TYPE_FIXED_LINE = 'FIXED LINE',
+  TYPE_MOBILE_LINE = 'MOBILE LINE',
+}

@@ -1,0 +1,36 @@
+<div [attr.data-testid]="'feat-easy-switch-selection'" class="sales-checkout container--medium">
+  <div class="sales-page__container__title--secondary py--m px--l width--full">
+    <div class="display--flex flex-direction--column">
+      <div class="heading--3 heading--nomargin text-align--center--md text-align--left">
+        Stap snel en eenvoudig over met Easy Switch
+      </div>
+      <p class="text-flow text-flow--body text-align--center--md text-align--left">
+        Wij regelen de overstap van je huidige operator naar Telenet, zodat jij je geen zorgen hoeft te maken over
+        vervelende administratie.
+      </p>
+    </div>
+  </div>
+  <div
+    class="row m--auto pl--xxxs pr--xxxs pl--n--md pr--n--md flex-direction--row--md flex-direction--column-reverse horizontal-center-align">
+    <div class="col-sm-12 sales-checkout mb--xxxl pb--xxl--md">
+      <div>
+        <div class="stepper-page__body-inner p-0">
+          <div class="stepper-page__content--split container mobile-lines">
+            <div
+              [inlineSVG]="stepImagePath"
+              [resolveSVGUrl]="true"
+              class="stepper-page__content-first flex-hide-until-md position--sticky--md position--top--md ng-star-inserted"></div>
+            <div class="stepper-page__content-second">
+              <div class="stepper-move">
+                <div class="text-flow text-flow--label stepper-page__title-label m-0"></div>
+                <div>
+                  <tg-order-configurator-easy-switch-feat-easy-switch-selection></tg-order-configurator-easy-switch-feat-easy-switch-selection>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

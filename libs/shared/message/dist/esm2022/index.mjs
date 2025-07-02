@@ -1,0 +1,8 @@
+/*
+ * Public API Surface of ng-lib-message
+ */
+export * from './lib/message.service';
+export * from './lib/messages.module';
+export * from './lib/message';
+export * from './lib/model';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLHVCQUF1QixDQUFDO0FBQ3RDLGNBQWMsdUJBQXVCLENBQUM7QUFDdEMsY0FBYyxlQUFlLENBQUM7QUFDOUIsY0FBYyxhQUFhLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIG5nLWxpYi1tZXNzYWdlXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvbWVzc2FnZS5zZXJ2aWNlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL21lc3NhZ2VzLm1vZHVsZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9tZXNzYWdlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL21vZGVsJztcbiJdfQ==

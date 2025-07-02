@@ -1,0 +1,33 @@
+{
+  "name": "billing-feat-pay-by-mobile",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/billing/payment/pay-by-mobile/feat-pay-by-mobile/src",
+  "prefix": "billing",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "test": {
+      "dependsOn": ["prebuild"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/payment/pay-by-mobile/feat-pay-by-mobile/**/*.ts",
+          "libs/billing/payment/pay-by-mobile/feat-pay-by-mobile/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:customer-web-billing-payment", "scope:customer-web-billing-payment-mfe"]
+}

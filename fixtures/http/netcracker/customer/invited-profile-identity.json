@@ -1,0 +1,46 @@
+{
+  "identityRequests": [
+    {
+      "identityRequestId": "2109",
+      "role": "Member",
+      "credentialAlias": "test2@gmail.com",
+      "msisdns": []
+    },
+    {
+      "identityRequestId": "2131",
+      "role": "Member",
+      "credentialAlias": "m@m.com",
+      "msisdns": []
+    },
+    {
+      "identityRequestId": "2136",
+      "role": "Member",
+      "credentialAlias": "test08@gmail.com",
+      "msisdns": []
+    },
+    {
+      "identityRequestId": "2320",
+      "role": "Member",
+      "credentialAlias": "hitest@gmail.com",
+      "msisdns": ["+32468599162"]
+    },
+    {
+      "identityRequestId": "2337",
+      "role": "Member",
+      "credentialAlias": "testtheflow@gmail.com",
+      "msisdns": []
+    },
+    {
+      "identityRequestId": "2102",
+      "role": "Member",
+      "credentialAlias": "mm@gmail.com",
+      "msisdns": []
+    },
+    {
+      "identityRequestId": "3099",
+      "role": "Member",
+      "credentialAlias": "test12checkverify@aem.com",
+      "msisdns": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<div class="display--flex align-items--center mb--m">
+  <i [ngClass]="icon" class="icon-md mr--m"></i>
+  <span class="text-flow text-flow--h3">{{ title | translate }}</span>
+</div>
+<ng-container *ngFor="let spec of specs">
+  <div class="display--flex mb--m">
+    <i class="icon icon-md icon-tick color-yellow mr--xxs"></i>
+    <span>{{ spec }}</span>
+  </div>
+</ng-container>

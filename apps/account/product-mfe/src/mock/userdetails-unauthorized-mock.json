@@ -1,0 +1,6 @@
+{
+  "url": "http://localhost:8080/oauth/userdetails",
+  "method": "GET",
+  "status": 401,
+  "response": {}
+}

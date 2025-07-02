@@ -1,0 +1,20 @@
+{
+  "name": "billing-barrings-mobile-barrings-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/barrings/mobile-barrings/ui/src",
+  "prefix": "lib",
+  "tags": ["type:ui", "scope:barrings", "scope:customer-web-billing-barrings-mfe"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/billing/barrings/mobile-barrings/ui/**/*.ts",
+          "libs/billing/barrings/mobile-barrings/ui/**/*.html"
+        ]
+      }
+    }
+  }
+}

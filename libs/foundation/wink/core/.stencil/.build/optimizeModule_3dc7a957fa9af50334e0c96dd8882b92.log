@@ -1,0 +1,1 @@
+const o={default:"default",subComponent:"subComponent"};export{o as F};

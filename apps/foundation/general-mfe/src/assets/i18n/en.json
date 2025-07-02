@@ -1,0 +1,9 @@
+{
+  "ng.search-header.lbl.cancel": "Cancel",
+  "ng.search-header.phd.search": "Search",
+  "ng.search-results-page.lbl.searchon": "Search on",
+  "ng.search-results-page.lbl.filter": "Filter",
+  "ng.search-results-page.lbl.activefilters": "Active filters",
+  "ng.search-results-page.lbl.resultsfor": "Results for",
+  "ng.search-results-page.lbl.with": "with"
+}

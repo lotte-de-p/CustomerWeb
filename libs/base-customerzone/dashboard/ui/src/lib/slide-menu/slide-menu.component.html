@@ -1,0 +1,18 @@
+<aside class="sidebar" (appClickOutside)="close()" [ngClass]="{ slide: showMenu }">
+  <div class="sidebar__menu">
+    <div class="p--l position--top position--sticky width--full background-white">
+      <div class="sidebar__heading display--flex align-items--center justify-content--end">
+        <div for="menu-control" class="sidebar__close cursor--pointer" (click)="close()">
+          <i class="icon icon-cross icon-md icon-no-size-override"></i>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar__content px--xxs pb--l">
+      <div class="heading--5 mt--n px--m">
+        {{ title }}
+      </div>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</aside>
+<div class="mybase-overlay"></div>

@@ -1,0 +1,40 @@
+<div class="display--flex flex-direction--row--md flex-direction--column position--full-height col-12 gap--s">
+  <div class="select-tile--group display--grid {{ amountOfColumnsClass }} gap--xm position--full-height--md">
+    <label
+      *ngFor="let option of optionList; let i = index"
+      for="choice-{{ i }}-{{ option.value }}"
+      class="background-white select-tile display--flex flex-direction--column m--n color-text animation-show-slide-up flex-direction--column p--m px--l--sm"
+      style="--animation-delay: 2"
+      (click)="selectOption(option)">
+      <div
+        class="select-tile__content--image width--full pointer-events--none display--inline-flex justify-content--center hide-until-md px--l pb--l">
+        <img alt="telenet" [src]="option.imagePath" />
+      </div>
+      <div
+        class="select-tile__content display--flex flex-direction--column--md flex-direction--row flex-grow gap--xxs gap--xs--sm justify-content--between align-items--start align-items--center--md">
+        <div class="display--flex height--full flex-direction--column justify-content--between">
+          <div class="select-tile__content--inner display--flex flex-direction--column">
+            <div class="display--flex gap--m gap--l--sm">
+              <div class="select-tile__content_text display--flex flex-direction--column flex-grow gap--xxs">
+                <div class="heading--6 heading--nomargin">{{ getOptionLabel(option) | translate }}</div>
+              </div>
+            </div>
+            <div class="font--body-regular py--m" [innerHTML]="getOptionText(option) | translate"></div>
+          </div>
+          <div class="mt--auto">
+            <app-install-type-price [installTypePrice]="option.installTypePrice"></app-install-type-price>
+          </div>
+        </div>
+        <div class="display--flex justify-content--center--md">
+          <input
+            type="radio"
+            name="choice-{{ key }}"
+            value="{{ option.value }}"
+            id="choice-{{ i }}-{{ option.value }}"
+            class="select-tile__input display--flex align-items--center justify-content--center align-self--center font--caption align-self--center order--last cursor--pointer border-radius--circle"
+            [checked]="selectedOption && option.value === selectedOption.value" />
+        </div>
+      </div>
+    </label>
+  </div>
+</div>

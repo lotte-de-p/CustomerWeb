@@ -1,0 +1,30 @@
+<div class="shipping-info-section">
+  <div class="sales-display-info align-items--baseline">
+    <h5 class="m-0">{{ 'ng.sales-checkout.text.review-installation-address-text' | translate }}</h5>
+  </div>
+  <div
+    class="sales-display-info pb--l border--b--r border-width--b--r border-style--b--solid border-color--b--light-grey"
+    data-cs-mask="">
+    <div class="sales-display-info__content">
+      <ng-container *ngIf="address$ | async as address">
+        <div class="sales-display-info__content__row mb--xs">
+          <i class="icon-house icon-md sales-display-info__content__row__icon"></i>
+          <div>
+            <p [attr.data-cy]="'delivery-info-address'" class="sales-display-info__content__row__description">
+              {{ address?.street }} {{ address?.houseNumber }}
+              @if (address?.subHouseNumber) {
+                /{{ address.subHouseNumber }}
+              }
+              @if (address?.box) {
+                /{{ address.box }}
+              }
+              ,<br />
+              {{ address?.postalCode }} {{ address?.municipality }},
+              {{ address?.country }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

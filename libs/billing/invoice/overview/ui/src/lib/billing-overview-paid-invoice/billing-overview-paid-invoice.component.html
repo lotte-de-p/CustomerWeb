@@ -1,0 +1,32 @@
+<div class="cursor--pointer" data-testid="billing-overview-paid-invoice" (click)="handleClickEvent()">
+  <div class="display--flex justify-content--between">
+    <div class="display--flex align-items--center py--l gap--m">
+      <div class="display--flex gap--m">
+        <div class="invoice-icon">
+          <tg-billing-overview-icon [invoiceAmount]="invoice.invoiceAmount"></tg-billing-overview-icon>
+        </div>
+        <div class="display--flex flex-direction--column justify-content--center">
+          <span data-testid="billing-overview-invoice-date">{{
+            invoice.invoiceDate | date: 'd MMMM' : '+0200' : locale
+          }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="display--flex align-items--center display--flex gap--xs">
+      <tg-billing-overview-amount
+        [ngClass]="{ 'color-notification--success--light': isReimbursement(invoice.invoiceAmount) }"
+        [invoiceAmount]="invoice.invoiceAmount"
+        [outstandingDebt]="0"
+        [locale]="locale" />
+
+      <tg-billing-overview-download
+        *ngIf="!areExplicitBillScenariosAvailable"
+        [invoice]="invoice"></tg-billing-overview-download>
+      <tg-billing-overview-bill-scenario-details
+        *ngIf="areExplicitBillScenariosAvailable"
+        [paymentMethod]="paymentMethod"
+        [invoice]="invoice"
+        [paymentStatus]="'paid'"></tg-billing-overview-bill-scenario-details>
+    </div>
+  </div>
+</div>

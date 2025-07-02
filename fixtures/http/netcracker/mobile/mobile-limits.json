@@ -1,0 +1,24 @@
+{
+  "mobile": {
+    "outOfBundle": {
+      "id": "915321865216215",
+      "policyName": "CompteBloqueSpendLimitTelenet",
+      "currentUsage": "45",
+      "limit": {
+        "id": "147750487413744134",
+        "enabled": true,
+        "value": "50"
+      }
+    },
+    "premiumService": {
+      "id": "45455",
+      "policyName": "PremiumUsageSpendLimitTelenet",
+      "currentUsage": "45",
+      "limit": {
+        "id": "1215454",
+        "enabled": true,
+        "value": "50"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class="display--flex align--items-start m--l">
+  <div>
+    <wink-icon
+      data-testid="bill-shock-message-icon"
+      icon="calendar"
+      appearance="secondary"
+      size="md"
+      class="mr--m"></wink-icon>
+  </div>
+  <div>
+    <wink-paragraph
+      data-testid="bill-shock-message-headline"
+      size="small"
+      appearance="body"
+      class="mb--xxxs font--body-regular-bold">
+      {{ getBillShockDetails(scenario).headline }}
+    </wink-paragraph>
+    <wink-paragraph class="mb--xxs color-transparent_shade_64" size="regular" appearance="caption">
+      {{ getBillShockDetails(scenario).caption }}
+    </wink-paragraph>
+    <div *ngIf="getBillShockDetails(scenario).description || getBillShockDetails(scenario).buttonText" class="mb--m">
+      <wink-paragraph
+        data-testid="bill-shock-message-description"
+        *ngIf="getBillShockDetails(scenario).description"
+        size="small"
+        appearance="caption"
+        class="font--caption-small mb--m color-transparent_shade_64">
+        {{ getBillShockDetails(scenario).description }}
+      </wink-paragraph>
+      <wink-button
+        data-testid="bill-shock-message-button"
+        *ngIf="getBillShockDetails(scenario).buttonText"
+        [text]="getBillShockDetails(scenario).buttonText"
+        appearance="tertiary"
+        size="sm"
+        width="none"
+        status="none"
+        element="button"
+        type="button"></wink-button>
+    </div>
+  </div>
+</div>

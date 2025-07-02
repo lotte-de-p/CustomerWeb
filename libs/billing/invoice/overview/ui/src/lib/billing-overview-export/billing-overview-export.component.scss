@@ -1,0 +1,22 @@
+.invoice-overview-export {
+  transition: background-color 0.1s ease;
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: rgba(#291d18, 04%);
+  }
+
+  &:active {
+    background-color: rgba(#291d18, 08%);
+  }
+}
+
+.export-button {
+  min-width: 170px;
+}
+
+@media only screen and (max-width: 768px) {
+  .flex--1 {
+    flex: 1;
+  }
+}

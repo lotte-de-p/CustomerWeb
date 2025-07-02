@@ -1,0 +1,133 @@
+{
+  "name": "general-mfe",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/foundation/general-mfe/src",
+  "prefix": "tg-foundation-general",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/foundation/general-mfe",
+        "index": "apps/foundation/general-mfe/src/index.html",
+        "main": "apps/foundation/general-mfe/src/main.ts",
+        "polyfills": "apps/foundation/general-mfe/src/polyfills.ts",
+        "tsConfig": "apps/foundation/general-mfe/tsconfig.app.json",
+        "baseHref": "/",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/foundation/general-mfe/src/favicon.ico",
+          "apps/foundation/general-mfe/src/assets",
+          "apps/foundation/general-mfe/src/version.json"
+        ],
+        "styles": ["apps/foundation/general-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/foundation/general-mfe/webpack.config.js"
+        },
+        "commonChunk": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "1.5mb",
+              "maximumError": "2mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/foundation/general-mfe/src/environments/environment.ts",
+              "with": "apps/foundation/general-mfe/src/environments/environment.prod.ts"
+            }
+          ],
+          "baseHref": "/",
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/foundation/general-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/foundation/general-mfe/src/favicon.ico",
+            "apps/foundation/general-mfe/src/assets",
+            "apps/foundation/general-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4206,
+        "publicHost": "http://localhost:4206",
+        "buildTarget": "general-mfe:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "general-mfe:build:production"
+        },
+        "development": {
+          "buildTarget": "general-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/foundation/general-mfe/src/**/*.ts", "apps/foundation/general-mfe/src/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/foundation/general-mfe/.storybook",
+        "browserTarget": "general-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/general-mfe",
+        "configDir": "apps/foundation/general-mfe/.storybook",
+        "browserTarget": "general-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/foundation/general-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["type:app", "scope:general-mfe"]
+}

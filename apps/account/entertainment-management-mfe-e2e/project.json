@@ -1,0 +1,36 @@
+{
+  "name": "entertainment-management-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/account/entertainment-management-mfe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/account/entertainment-management-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "entertainment-management-mfe:serve:production"
+        },
+        "local-dev": {
+          "ui": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:e2e", "scope:entertainment-management-mfe"],
+  "implicitDependencies": ["entertainment-management-mfe"]
+}

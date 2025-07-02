@@ -1,0 +1,24 @@
+<div class="background-white" *ngIf="appointmentStatus === STATUS_COMPLETED && postInstallationHtml">
+  <div class="display--flex flex-wrap--wrap">
+    <div class="col-md-12 col-12 p--n">
+      <div
+        [attr.data-cy]="'appointment-show-useful-info'"
+        class="display--flex justify-content--between cursor--pointer p--xl--md p--m"
+        (click)="toggleFeatures = !toggleFeatures">
+        <h5 class="heading--nomargin">
+          {{ 'ng.appointments.post-installation.lbl' | translate }}
+        </h5>
+        <i class="icon" [ngClass]="{ 'icon-chevron-up': toggleFeatures, 'icon-chevron-down': !toggleFeatures }"></i>
+      </div>
+      <div [hidden]="!toggleFeatures">
+        <div class="divider divider--xxs__very-light-grey mb--xl--md mb--l"></div>
+        <div class="px--xl--md px--m pb--m pb--xl--md">
+          <div
+            [attr.data-cy]="'post-appointment-useful-info'"
+            *ngIf="postInstallationHtml"
+            [innerHTML]="postInstallationHtml"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

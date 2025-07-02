@@ -1,0 +1,9 @@
+<div class="select-tile--group display--grid grid-template-column--2--md gap--xm">
+  <ng-container *ngFor="let checkbox of checkboxes">
+    <tg-sales-checkbox
+      [label]="checkbox.label"
+      [iconClass]="checkbox.iconClass"
+      [ngModel]="isChecked(checkbox)"
+      (ngModelChange)="toggleCheckbox(checkbox)"></tg-sales-checkbox>
+  </ng-container>
+</div>

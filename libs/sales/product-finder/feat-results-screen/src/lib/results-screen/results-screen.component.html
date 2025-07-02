@@ -1,0 +1,40 @@
+<ng-container *ngIf="{ enableLoader: enableLoader$ | async, enableMask: enableLoaderMask$ | async } as $">
+  <app-loader
+    [startByDefault]="false"
+    [enableLoader]="$.enableLoader !== null && $.enableLoader"
+    [enableMask]="$.enableMask !== null && $.enableMask"></app-loader>
+</ng-container>
+<ng-container *ngIf="productRecommendationResult$ | async as productRecommendationResult">
+  <div class="container">
+    <div class="mx--auto--md my--xxl col-md-10 col-lg-9 col-md-10 col-lg-9">
+      <ng-container *ngIf="productRecommendationResult.productRecommendations.length > 0; else contactCustomerService">
+        <p
+          class="display--flex text-flow text-flow--h3 mx--m mx--n--md"
+          *ngIf="productRecommendationResult.productRecommendations.length === 1; else elseBlock">
+          {{ 'ng.product-finder.results-screen.header-single-recommendation' | translate }}
+        </p>
+        <ng-template #elseBlock>
+          <p class="display--flex text-flow text-flow--h3 mx--m mx--n--md">
+            {{ 'ng.product-finder.results-screen.header-multiple-recommendations' | translate }}
+          </p>
+        </ng-template>
+        <div class="product-finder-result--screen display--flex my--m">
+          <div
+            class="product-finder-result--screen-item col-md-6 background-white p--xxl--md p--xm ml--m mr--m mr--n--md"
+            *ngFor="let productRecommendation of productRecommendationResult.productRecommendations; index as i">
+            <tg-sales-recommendation
+              [isMostRecommended]="productRecommendationResult.mostRecommendedIndex === i"
+              [productRecommendation]="productRecommendation"
+              [index]="i"
+              (orderEvent)="order($event)"
+              (resultDetailsEvent)="resultDetails($event)"></tg-sales-recommendation>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #contactCustomerService>
+        <tg-sales-contact-customer-service></tg-sales-contact-customer-service>
+      </ng-template>
+      <tg-sales-redo-test (redoTestEvent)="redoTest()"></tg-sales-redo-test>
+    </div>
+  </div>
+</ng-container>

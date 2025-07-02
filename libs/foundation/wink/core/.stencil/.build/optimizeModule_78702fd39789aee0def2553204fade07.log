@@ -1,0 +1,1 @@
+const t={left:"left",right:"right",up:"up",down:"down"};export{t as I};

@@ -1,0 +1,202 @@
+<div class="mobile-overview-usage__consumption-part">
+  <hr />
+  <div class="consumption-part__consumption-section p--n cursor--default">
+    @if (usage.splitBillBudget && enableSBBudget) {
+      <div
+        class="row consumption-section__consumption-field py--m display--flex justify-content-between justify-content--between border--b--r border-width--b--r border-style--b--solid">
+        <span class="icon-none" [attr.data-cy]="'splitbill-budget-title'">
+          {{
+            MobileUsageOverviewConstant.KEY_MOBILE_USAGE_OVERVIEW_LABEL +
+              MobileUsageOverviewConstant.SPLIT_BILL_BUDGET_LABEL | translate
+          }}
+        </span>
+        <span
+          class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right"
+          [attr.data-cy]="'splitbill-budget-value'">
+          {{ usage.splitBillBudget.usedUnits }}
+          <span> / {{ usage.splitBillBudget.startUnits }} {{ usage.splitBillBudget.unitType }} </span>
+        </span>
+      </div>
+    }
+    @if (consumptionData?.length > 0) {
+      @for (data of consumptionData; track data) {
+        <div
+          class="row consumption-section__consumption-field py--m display--flex justify-content-between justify-content--between border--b--r border-width--b--r border-style--b--solid">
+          <span
+            class="col-md-8 col-xs-7 consumption-field__plan text-weight--g text--xm--md text--s"
+            [ngClass]="'icon-' + getUsageTypeIcon(data)"
+            [attr.data-cy]="'usage-type-label'">
+            {{ getUsageTypeLabelKey(data) | translate }}</span
+          >
+          @if (hasUnlimitedUsage(data)) {
+            <ng-container [ngTemplateOutlet]="unlimitedData"></ng-container>
+          } @else {
+            <ng-container [ngTemplateOutlet]="limitedData"></ng-container>
+          }
+          <ng-template #unlimitedData
+            ><span class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right">
+              @if (data.usedUnits !== '0') {
+                <ng-container>
+                  @if (data.unitType !== 'min') {
+                    <span>{{ data.usedUnits }}{{ data.usedUnitType ? data.usedUnitType : data.unitType }}</span>
+                  } @else {
+                    <span
+                      >{{
+                        'ng.fleet-user-mobile-usage-overview.lbl.used-voice-data-mins'
+                          | translate: { mins: data.usedUnits.split(',')[0] }
+                      }}
+                      @if (data.usedUnits.split(',')[1] && data.usedUnits.split(',')[1] !== '0') {
+                        <span>{{
+                          'ng.fleet-user-mobile-usage-overview.lbl.used-voice-data-secs'
+                            | translate: { secs: convertToSeconds(data.usedUnits.split(',')[1]) }
+                        }}</span>
+                      }
+                    </span>
+                  }
+                  @if (data.startUnits) {
+                    <span>/ {{ data.startUnits }}</span>
+                  }
+                </ng-container>
+              }
+              @if (data.usedUnits === '0') {
+                <ng-container>
+                  @if (data.startUnits) {
+                    <span>{{ data.startUnits }}</span>
+                  }
+                </ng-container>
+              }
+            </span>
+          </ng-template>
+
+          <ng-template #limitedData>
+            @if (!data.isManual) {
+              <span
+                class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right"
+                [attr.data-cy]="'used-and-start-amount'">
+                @if (usage.isGroupBundleUsage && isShowTotalZBR(data)) {
+                  <ng-container>
+                    {{ data.usedUnits }}
+                    @if (data.startUnits) {
+                      <ng-container>/ {{ data.startUnits }}</ng-container>
+                    }
+                    {{ data.unitType }}
+                  </ng-container>
+                }
+                @if (data.unitType === 'min') {
+                  <span>
+                    @if (data.usedUnits !== '0') {
+                      <span>
+                        {{
+                          'ng.fleet-user-mobile-usage-overview.lbl.used-voice-data-mins'
+                            | translate: { mins: data.usedUnits.split(',')[0] }
+                        }}
+                        @if (data.usedUnits.split(',')[1] && data.usedUnits.split(',')[1] !== '0') {
+                          <span>
+                            {{
+                              'ng.fleet-user-mobile-usage-overview.lbl.used-voice-data-secs'
+                                | translate: { secs: convertToSeconds(data.usedUnits.split(',')[1]) }
+                            }}
+                          </span>
+                        }
+                      </span>
+                    }
+                    @if (data.usedUnits === '0') {
+                      <ng-container>
+                        <span>
+                          {{
+                            'ng.fleet-user-mobile-usage-overview.lbl.used-voice-data-mins'
+                              | translate: { mins: data.usedUnits.split(',')[0] }
+                          }}
+                        </span>
+                      </ng-container>
+                    }
+                    @if (data.startUnits) {
+                      <ng-container>/ {{ data.startUnits }} {{ data.unitType }}</ng-container>
+                    }
+                  </span>
+                }
+                @if (data.unitType !== 'min') {
+                  <span>
+                    {{ getUsedUnitsAndUnitType(data) }}
+                    @if (data.startUnits && data.unitType === 'GB') {
+                      <span> / {{ data.startUnits }} {{ data.unitType }} </span>
+                    }
+                  </span>
+                }
+              </span>
+            }
+            @if (data.isManual) {
+              <span class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right">
+                {{ data.startUnits }} {{ data.unitType }}
+              </span>
+            }
+          </ng-template>
+        </div>
+      }
+    }
+    @if (usage?.extraUsages?.length > 0) {
+      <ng-container>
+        @for (extraUsage of getExtraUsages(); track extraUsage) {
+          <div
+            class="row consumption-section__consumption-field py--m display--flex justify-content-between justify-content--between align-items--center border--b--r border-width--b--r border-style--b--solid">
+            <span class="consumption-field__plan text-weight--g text--xm--md text--s">
+              {{ 'ng.fleet-user-mobile-usage-overview.lbl.extra-usages' | translate: { name: extraUsage?.name } }}
+            </span>
+            @if (!extraUsage?.unlimited) {
+              <span class="consumption-field__value text-weight--g text-align--right">
+                {{
+                  'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                    | translate: { value: extraUsage?.usedUnits }
+                }}/{{
+                  'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                    | translate: { value: extraUsage?.startUnits }
+                }}
+              </span>
+            } @else {
+              <span class="consumption-field__value text-weight--g text-align--right">
+                {{
+                  'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                    | translate: { value: extraUsage?.usedUnits }
+                }}/{{ 'ng.fleet-user-mobile-usage-overview.lbl.unlimited' | translate }}
+              </span>
+            }
+          </div>
+        }
+      </ng-container>
+    }
+
+    @if (autoPause?.limit && !usage?.isGroupBundleUsage && autoPause?.limit.value) {
+      <ng-container>
+        <div
+          class="row consumption-section__consumption-field py--m display--flex justify-content-between justify-content--between border--b--r border-width--b--r border-style--b--solid">
+          <span class="col-md-8 col-xs-7 consumption-field__plan text-weight--g text--xm--md text--s">
+            {{ 'ng.fleet-user-mobile-usage-overview.lbl.auto-pause' | translate }}
+          </span>
+          @if (!autoPause?.isAutopauseEnabled()) {
+            <span class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right">
+              {{ 'ng.fleet-user-mobile-usage-overview.lbl.no-auto-pause-limit' | translate }}
+            </span>
+          }
+          @if (autoPause?.isUsageWithinLimit()) {
+            <span class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right">
+              {{ autoPause.limit.value }} {{ autoPause.limit.unitType }}
+            </span>
+          }
+          @if (autoPause?.isUsageLimitReached()) {
+            <span class="col-md-4 col-xs-5 consumption-field__value text-weight--g text-align--right">
+              {{ autoPause.limit.value }} {{ autoPause.limit.unitType }}
+            </span>
+          }
+        </div>
+      </ng-container>
+    }
+    @if (usage.splitBillBudget && enableSBBudget) {
+      <div
+        class="row consumption-section__consumption-field py--m display--flex justify-content-between justify-content--between border--b--r border-width--b--r border-style--b--solid">
+        <span class="icon-none">
+          {{ 'ng.fleet-user-mobile-usage-overview.lbl.split-bill-legal-notice' | translate }}
+        </span>
+      </div>
+    }
+  </div>
+</div>

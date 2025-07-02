@@ -1,0 +1,17 @@
+{
+  "name": "sales-events-feat-analytics",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/events/feat-analytics/src",
+  "prefix": "tg-sales",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/sales/events/feat-analytics/**/*.ts", "libs/sales/events/feat-analytics/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:feature", "scope:sales-mfe"]
+}

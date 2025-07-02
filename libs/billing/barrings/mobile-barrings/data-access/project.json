@@ -1,0 +1,9 @@
+{
+  "name": "billing-barrings-mobile-barrings-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/barrings/mobile-barrings/data-access/src",
+  "prefix": "lib",
+  "tags": ["type:data-access", "scope:barrings", "scope:customer-web-billing-barrings-mfe"],
+  "projectType": "library",
+  "targets": {}
+}

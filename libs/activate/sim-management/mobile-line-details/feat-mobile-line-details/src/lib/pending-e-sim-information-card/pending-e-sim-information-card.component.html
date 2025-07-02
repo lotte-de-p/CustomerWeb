@@ -1,0 +1,49 @@
+<div class="background-white p--xl mb--l" data-testid="sim-management-pending-e-sim-information">
+  <div class="display--flex justify-content--between">
+    <div class="heading--4 my--n">
+      {{ 'ng.sim-management.lbl.esim-information' | translate }}
+    </div>
+    @if (isESimSwapReadyForActivation$ | async) {
+      <div>
+        <div
+          data-testid="sim-management-esim-status"
+          class="status-indicator status-indicator--positive display--inline-block vertical-align--middle">
+          <span> {{ 'ng.sim-management.status.esim-ready-for-activation' | translate }}</span>
+        </div>
+      </div>
+    } @else if (isESimSwapInProgress$ | async) {
+      <div>
+        <div
+          data-testid="sim-management-esim-status"
+          class="status-indicator status-indicator--warning display--inline-block vertical-align--middle">
+          <span>{{ 'ng.sim-management.status.esim-pending-request' | translate }}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="row pt--xl pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.tariff-plan' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">{{ mobileLine.tariffPlan }}</div>
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.pin' | translate }}
+    </div>
+    @if (mobileLine.pendingSimCard?.pin) {
+      <div class="col-sm-6 font--body-regular sim-card-info-block">
+        <span data-testid="sim-management-information-pin">{{ mobileLine.pendingSimCard?.pin }}</span>
+      </div>
+    }
+  </div>
+  <div class="row pb--m">
+    <div class="col-sm-6 font--body-regular-bold">
+      {{ 'ng.sim-management.lbl.puk' | translate }}
+    </div>
+    <div class="col-sm-6 font--body-regular sim-card-info-block">
+      <span data-testid="sim-management-information-puk">{{ mobileLine.pendingSimCard?.puk }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  legend {
+    margin-bottom: var-rem(--semantic-spacing-xs);
+    display: flex;
+    width: 100%;
+  }
+
+  .checkbox-group--horizontal,
+  .checkbox-group--vertical {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-group--vertical {
+    flex-direction: column;
+    gap: var-rem(--semantic-spacing-md);
+  }
+
+  .checkbox-group--horizontal {
+    flex-direction: row;
+    gap: var-rem(--semantic-spacing-xl);
+  }
+}

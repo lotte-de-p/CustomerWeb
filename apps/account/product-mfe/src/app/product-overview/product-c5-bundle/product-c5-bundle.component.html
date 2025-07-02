@@ -1,0 +1,194 @@
+<div class="product-overview">
+  <ng-container *ngFor="let plan of products">
+    <div class="row" *ngIf="plan.isC5Bundle()">
+      <div class="col-md-12 col-sm-12 m--auto">
+        <div class="notification notification--info mb-20" *ngIf="plan.isMultipleDTV">
+          <span class="icon icon-information-shape info">{{
+            'ng.product-overview.info.unable-to-manage' | translate
+          }}</span>
+        </div>
+        <div class="pb--l pl--m pl--n--md">
+          <div class="align-items--center display--flex text-weight--l">
+            <div class="icon-apn icon-no-size-override icon-md"></div>
+            <div class="text--l ml--m--md ml--xs text-capitalize">
+              {{ plan.productInfo.name }}
+            </div>
+          </div>
+        </div>
+        <div *ngFor="let section of c5Sections">
+          <div class="content-section mb-30" *ngIf="section.showSection">
+            <div class="content-section__header row">
+              <div [ngClass]="{ 'col-md-6 col-12': showManageOptions(plan) }">
+                <div class="text-font-family--t7 text--l" [attr.data-cy]="'c5SectionTitle'">
+                  {{ section.title | translate }}
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="display--flex align-items--center justify-content--end--md">
+                  <div
+                    class="text-align--right--md mr--xxxl--md"
+                    *ngIf="showChangePlan(plan) && hasActiveOrSuspendedProducts(plan)"
+                    [ngClass]="{ 'mr-0': showManageOptions(plan) && section.type === 'includedOptions' }">
+                    <a
+                      tabindex="0"
+                      (keydown)="
+                        handleRedirectToMarketingConfigurator(
+                          $event,
+                          planUpgradeUrl,
+                          'connectivity',
+                          plan,
+                          'change plan link clicked'
+                        )
+                      "
+                      class="font--body-regular link link--subtle"
+                      *ngIf="section.type === 'connectivity'"
+                      (click)="
+                        redirectToMarketingConfigurator(
+                          planUpgradeUrl,
+                          'connectivity',
+                          plan,
+                          'change plan link clicked'
+                        )
+                      ">
+                      <div *ngIf="isNewOneUpBundle(); else oldOneUpBundleLabel">
+                        {{ 'ng.product-overview.btn.change-tariff-plan-connectivity' | translate }}
+                      </div>
+                      <ng-template #oldOneUpBundleLabel>
+                        {{ 'ng.product-overview.btn.change-tariff-plan-connectivity-old-oneup-bundle' | translate }}
+                      </ng-template>
+                    </a>
+                    <a
+                      tabindex="0"
+                      (keydown)="
+                        handleRedirectToMarketingConfigurator(
+                          $event,
+                          planUpgradeUrl,
+                          'entertainment',
+                          plan,
+                          'change plan link clicked'
+                        )
+                      "
+                      class="font--body-regular link link--subtle"
+                      (click)="
+                        redirectToMarketingConfigurator(
+                          planUpgradeUrl,
+                          'entertainment',
+                          plan,
+                          'change plan link clicked'
+                        )
+                      "
+                      *ngIf="section.type === 'entertainment'">
+                      {{ 'ng.product-overview.btn.change-tariff-plan-entertainment' | translate }}
+                    </a>
+                  </div>
+                  <div
+                    class="text-align--right pt--n--md pt--m hide-until-md"
+                    *ngIf="
+                      showManageOptions(plan) &&
+                      section.type !== 'includedOptions' &&
+                      section.type !== 'streaming' &&
+                      !isSuspendedPlan &&
+                      hasActiveOrSuspendedProducts(plan)
+                    ">
+                    <a
+                      tabindex="0"
+                      (keydown)="handleManageOptions($event, plan)"
+                      *ngIf="section.type !== 'entertainment' && manageOptionUrl !== '/'"
+                      (click)="manageOptions(plan); $event.stopPropagation()"
+                      class="font--body-regular link link--subtle">
+                      {{ 'ng.product-overview.lnk.manage-options' | translate }}
+                    </a>
+                    <a
+                      tabindex="0"
+                      (keydown)="handleManageOptions($event, plan, true, true)"
+                      *ngIf="section.type === 'entertainment' && manageOptionUrl !== '/'"
+                      (click)="manageOptions(plan, true, true); $event.stopPropagation()"
+                      class="font--body-regular link link--subtle">
+                      {{ 'ng.product-overview.lnk.manage-options' | translate }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-12 col-xs-12 pt--n--md pt--m hide-from-md"
+                *ngIf="
+                  showManageOptions(plan) && section.type !== 'includedOptions' && hasActiveOrSuspendedProducts(plan)
+                ">
+                <a
+                  tabindex="0"
+                  (keydown)="handleManageOptions($event, plan)"
+                  *ngIf="manageOptionUrl !== '/'"
+                  (click)="manageOptions(plan); $event.stopPropagation()"
+                  class="font--body-regular link link--subtle">
+                  {{ 'ng.product-overview.lnk.manage-options' | translate }}
+                </a>
+              </div>
+            </div>
+            <div *ngFor="let product of plan.children; let last = last">
+              <div *ngIf="isProductAllowed(section, product)">
+                <tg-product-c5-bundle-child
+                  [productOrOption]="{ product }"
+                  [section]="section"
+                  [intentRequired]="intentRequired"
+                  [plan]="plan"
+                  [planUpgradeUrl]="planUpgradeUrl"
+                  [managePhone2GoUrl]="managePhone2GoUrl"
+                  [changeDataPlanUrl]="changeDataPlanUrl"
+                  [changeTariffPlanUrl]="changeTariffPlanUrl"
+                  [phoneToGoNumbers]="phoneToGoNumbers"
+                  [manageOptionUrl]="manageOptionUrl"
+                  [componentInstanceID]="componentInstanceID"
+                  [canManageProductHolding]="canManageProductHolding"></tg-product-c5-bundle-child>
+                <div class="divider divider--s__very-light-grey" *ngIf="!last"></div>
+              </div>
+            </div>
+
+            <div *ngIf="plan.options.length > 0 && section.type !== 'streaming'">
+              <div class="divider divider--s__very-light-grey"></div>
+              <ng-container *ngFor="let option of plan.options; let last = last">
+                <div *ngIf="showPlanLevelOption(section, option)">
+                  <tg-product-c5-bundle-child
+                    [productOrOption]="{ option }"
+                    [section]="section"
+                    [intentRequired]="intentRequired"
+                    [plan]="plan"
+                    [planUpgradeUrl]="planUpgradeUrl"
+                    [managePhone2GoUrl]="managePhone2GoUrl"
+                    [phoneToGoNumbers]="phoneToGoNumbers"
+                    [changeDataPlanUrl]="changeDataPlanUrl"
+                    [changeTariffPlanUrl]="changeTariffPlanUrl"
+                    [manageOptionUrl]="manageOptionUrl"
+                    [componentInstanceID]="componentInstanceID"
+                    [canManageProductHolding]="canManageProductHolding"></tg-product-c5-bundle-child>
+                  <div class="divider divider--s__very-light-grey" *ngIf="!last"></div>
+                </div>
+              </ng-container>
+            </div>
+            <div *ngIf="plan.options.length > 0 && section.type === 'streaming'">
+              <div class="divider divider--s__very-light-grey"></div>
+              <ng-container *ngIf="showStreamingSection">
+                <div *ngFor="let option of streamingOptions; let last = last">
+                  <tg-product-c5-bundle-child
+                    [productOrOption]="{ option }"
+                    [section]="section"
+                    [intentRequired]="intentRequired"
+                    [plan]="plan"
+                    [planUpgradeUrl]="planUpgradeUrl"
+                    [managePhone2GoUrl]="managePhone2GoUrl"
+                    [phoneToGoNumbers]="phoneToGoNumbers"
+                    [changeDataPlanUrl]="changeDataPlanUrl"
+                    [changeTariffPlanUrl]="changeTariffPlanUrl"
+                    [manageOptionUrl]="manageOptionUrl"
+                    [componentInstanceID]="componentInstanceID"
+                    [canManageProductHolding]="canManageProductHolding"></tg-product-c5-bundle-child>
+                  <div class="divider divider--s__very-light-grey" *ngIf="!last"></div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

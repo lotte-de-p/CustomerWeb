@@ -1,0 +1,24 @@
+<div>
+  <tg-mobile-number></tg-mobile-number>
+  <div
+    class="sticky-footer-v2 position--fixed background-white width--full py--m px--xm p--xm--md display--flex justify-content--center align-items--center box-sizing--inherit shadow--xs-inverse position--bottom position--left ng-scope">
+    <div
+      class="sticky-footer-v2__container width--full default-max-site-width display--flex justify-content--end align-items--center">
+      <div class="sticky-container">
+        <div class="sticky-action-item">
+          <button
+            class="button button--primary"
+            (click)="onSubmit()"
+            [class.disabled]="!canSubmit"
+            [class.disabled-state]="!canSubmit"
+            [attr.data-cy]="'submit-button'">
+            {{ 'ng.create-fleet-profile.btn.save-changes' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar" *ngIf="!showSubmitButton">
+      <div class="indicator-progress" [ngClass]="getProgress()"></div>
+    </div>
+  </div>
+</div>

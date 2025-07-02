@@ -1,0 +1,118 @@
+{
+  "name": "wink-core",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/foundation/wink/core/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "tags": ["scope:wink", "type:ui"],
+  "targets": {
+    "build": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "cache": false,
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/foundation/wink/core/tsconfig.lib.json",
+        "configPath": "libs/foundation/wink/core/stencil.config.ts",
+        "outputPath": "libs/foundation/wink/dist"
+      },
+      "configurations": {
+        "production": {
+          "dev": false,
+          "prod": true
+        }
+      }
+    },
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/foundation/wink/core/tsconfig.spec.json",
+        "configPath": "libs/foundation/wink/core/stencil.config.ts",
+        "outputPath": "{workspaceRoot}/coverage/libs/@telenet/wink-core"
+      }
+    },
+    "test:coverage": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run wink-core:test -- --no-cache --coverage",
+        "codeCoverage": true,
+        "parallel": false
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx run wink-core:serve", "nx run wink-core:serve-storybook"],
+        "parallel": true
+      }
+    },
+    "serve": {
+      "executor": "@nxext/stencil:serve",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/foundation/wink/core/tsconfig.lib.json",
+        "configPath": "libs/foundation/wink/core/stencil.config.ts",
+        "outputPath": "libs/foundation/wink/dist"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/foundation/wink/core/**/*.@(js|jsx|ts|tsx|mdx)"]
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/foundation/wink/core/**/*.css"],
+        "formatter": "compact"
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/html-webpack5",
+        "outputPath": "dist/storybook/wink-core",
+        "config": {
+          "configFolder": "libs/foundation/wink/core/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd libs/foundation/wink/core && npm run generate"
+          }
+        ]
+      }
+    },
+    "generate:icon-font": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "fantasticon --config libs/foundation/wink/core/src/assets/telenet/icons/icon-font-generator.js && fantasticon --config libs/foundation/wink/core/src/assets/base/icons/icon-font-generator.js "
+          }
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

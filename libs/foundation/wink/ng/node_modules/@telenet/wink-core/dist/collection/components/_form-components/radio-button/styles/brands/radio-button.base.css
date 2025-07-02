@@ -1,0 +1,109 @@
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+* Layout mixins
+*/
+/* ==========================================================================
+1. breakpoint
+========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host {
+  display: inline-block;
+}
+:host label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+}
+:host input[type=radio] {
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-self: flex-start;
+  background-color: var(--semantic-color-background-surface-neutral-default);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid var(--semantic-color-border-button-default);
+  padding: 0;
+  margin: 0.2rem calc(var(--semantic-spacing-xs) * 1rem) 0 0;
+  appearance: none;
+}
+:host input[type=radio]:before {
+  content: "";
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--semantic-color-background-surface-highlight-7);
+  transform: scale(0);
+  transition: transform 0.12s ease-in-out;
+}
+:host input[type=radio]:checked {
+  background: var(--semantic-color-background-surface-action-default);
+  border-color: var(--semantic-color-background-surface-action-selected);
+}
+:host input[type=radio]:checked:hover {
+  background: var(--semantic-color-background-surface-action-hover);
+  border-color: var(--semantic-color-background-surface-action-selected);
+}
+:host input[type=radio]:checked:before {
+  transform: scale(1);
+}
+:host input[type=radio]:disabled, :host input[type=radio]:disabled ~ * {
+  opacity: calc(var(--semantic-opacity-disabled) / 10);
+  cursor: not-allowed;
+}
+:host input[type=radio]:disabled:hover {
+  border-color: var(--semantic-color-border-button-default);
+}
+:host input[type=radio]:invalid, :host input[type=radio][aria-invalid], :host input[type=radio]:invalid:hover, :host input[type=radio][aria-invalid]:hover, :host input[type=radio]:invalid:focus, :host input[type=radio][aria-invalid]:focus {
+  border: 2px solid var(--semantic-color-border-error);
+  background-color: transparent;
+}
+:host input[type=radio]:invalid:before, :host input[type=radio][aria-invalid]:before, :host input[type=radio]:invalid:hover:before, :host input[type=radio][aria-invalid]:hover:before, :host input[type=radio]:invalid:focus:before, :host input[type=radio][aria-invalid]:focus:before {
+  background-color: var(--semantic-color-icon-error);
+}
+:host input[type=radio]:checked:invalid:before, :host input[type=radio][aria-invalid]:checked:before {
+  background-color: var(--semantic-color-icon-error);
+}
+:host:hover,
+:host input[type=radio]:hover {
+  border-color: var(--semantic-color-border-highlight);
+}
+:host:focus,
+:host input[type=radio]:focus {
+  border-color: var(--semantic-color-border-highlight);
+  outline: 0.2rem solid var(--semantic-color-border-focus);
+  outline-offset: 0.2rem;
+}

@@ -1,0 +1,6 @@
+node_modules
+dist/
+www/
+src/stories/
+src/components.d.ts
+src/assets/telenet/icons/templates/css.hbs

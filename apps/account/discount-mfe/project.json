@@ -1,0 +1,163 @@
+{
+  "name": "discount-mfe",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/account/discount-mfe/src",
+  "prefix": "",
+  "targets": {
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run wink:update"
+          }
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/account/discount-mfe",
+        "index": "apps/account/discount-mfe/src/index.html",
+        "main": "apps/account/discount-mfe/src/main.ts",
+        "polyfills": ["apps/account/discount-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/account/discount-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/account/discount-mfe/src/favicon.ico",
+          "apps/account/discount-mfe/src/assets",
+          "apps/account/discount-mfe/src/version.json"
+        ],
+        "styles": ["apps/account/discount-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/account/discount-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/account/discount-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/account/discount-mfe/src/favicon.ico",
+            "apps/account/discount-mfe/src/assets",
+            "apps/account/discount-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": ["prebuild"]
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4207,
+        "publicHost": "http://localhost:4207"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "discount-mfe:build:production"
+        },
+        "development": {
+          "browserTarget": "discount-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "discount-mfe:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/account/discount-mfe/**/*.ts", "apps/account/discount-mfe/**/*.html"]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/account/discount-mfe/.storybook",
+        "browserTarget": "discount-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/account/discount-mfe/.storybook",
+        "browserTarget": "discount-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/account/discount-mfe/src/styles.scss"],
+        "host": "local.base.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/account/discount-mfe",
+        "configDir": "apps/account/discount-mfe/.storybook",
+        "browserTarget": "discount-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/account/discount-mfe/src/styles.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": ["prebuild"]
+    }
+  },
+  "tags": ["type:app", "scope:discount-mfe"]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "customer-web-billing-barrings-mfe-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/billing/barrings-mfe-e2e/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/billing/barrings-mfe-e2e/**/*.{js,ts}"]
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/billing/barrings-mfe-e2e/playwright.local.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      }
+    },
+    "e2e-integrated": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/billing/barrings-mfe-e2e/playwright.integrated.config.ts",
+        "skipInstall": true
+      },
+      "configurations": {
+        "local-dev": {
+          "ui": true
+        }
+      }
+    }
+  },
+  "tags": ["type:e2e", "scope:customer-web-billing-barrings-mfe"],
+  "implicitDependencies": ["customer-web-billing-barrings-mfe"]
+}

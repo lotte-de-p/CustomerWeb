@@ -1,0 +1,164 @@
+{
+  "name": "mybase-dashboard-mfe",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/base-customerzone/dashboard-mfe/src",
+  "prefix": "",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/base-customerzone/dashboard-mfe",
+        "index": "apps/base-customerzone/dashboard-mfe/src/index.html",
+        "main": "apps/base-customerzone/dashboard-mfe/src/main.ts",
+        "polyfills": ["apps/base-customerzone/dashboard-mfe/src/polyfills.ts", "zone.js"],
+        "tsConfig": "apps/base-customerzone/dashboard-mfe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/base-customerzone/dashboard-mfe/src/favicon.ico",
+          "apps/base-customerzone/dashboard-mfe/src/assets",
+          "apps/base-customerzone/dashboard-mfe/src/version.json"
+        ],
+        "styles": ["apps/base-customerzone/dashboard-mfe/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/base-customerzone/dashboard-mfe/webpack.config.js"
+        },
+        "commonChunk": false,
+        "aot": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/base-customerzone/dashboard-mfe/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "assets": [
+            "apps/base-customerzone/dashboard-mfe/src/favicon.ico",
+            "apps/base-customerzone/dashboard-mfe/src/assets",
+            "apps/base-customerzone/dashboard-mfe/src/version.json",
+            {
+              "glob": "**/*",
+              "input": "node_modules/atomic-library/public",
+              "output": "assets/"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4207,
+        "publicHost": "http://localhost:4207",
+        "browserTarget": "mybase-dashboard-mfe:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "mybase-dashboard-mfe:build:production"
+        },
+        "development": {
+          "browserTarget": "mybase-dashboard-mfe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "mybase-dashboard-mfe:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/base-customerzone/dashboard-mfe/**/*.ts",
+          "apps/base-customerzone/dashboard-mfe/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/base-customerzone/dashboard-mfe/.storybook",
+        "browserTarget": "mybase-dashboard-mfe:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook-ssl": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4200,
+        "configDir": "apps/base-customerzone/dashboard-mfe/.storybook",
+        "browserTarget": "mybase-dashboard-mfe:build-storybook",
+        "compodoc": false,
+        "styles": ["apps/base-customerzone/dashboard-mfe/src/styles.scss"],
+        "host": "local.base.be",
+        "https": true,
+        "sslKey": "%SSL_KEY_PATH%/localhost.key",
+        "sslCert": "%SSL_KEY_PATH%/localhost.crt"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/base-customerzone/dashboard-mfe",
+        "configDir": "apps/base-customerzone/dashboard-mfe/.storybook",
+        "browserTarget": "mybase-dashboard-mfe:build-storybook",
+        "compodoc": false,
+        "styles": [
+          "apps/base-customerzone/dashboard-mfe/src/styles.scss",
+          "node_modules/atomic-library/public/styles/base-generic-classes.css",
+          "node_modules/atomic-library/public/styles/base-plugins.css",
+          "node_modules/atomic-library/public/styles/base-themes.css",
+          "node_modules/atomic-library/public/styles/base-fonts.css",
+          "node_modules/atomic-library/public/styles/base-atomic-comps.css",
+          "node_modules/atomic-library/public/styles/base-aem-cats/care.css",
+          "node_modules/atomic-library/public/styles/base.css"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["type:app", "scope:mybase-dashboard-mfe"]
+}

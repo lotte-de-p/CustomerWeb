@@ -1,0 +1,49 @@
+@for (moment of mappedServiceMoments; track $index; let last = $last) {
+  <div
+    class="display--none display--flex--md align-items--center p--l background-white cursor--pointer--hover"
+    [ngClass]="{ 'mb--m': !last }"
+    [attr.data-cy]="'mybase-service-moments-card-' + moment.type">
+    <div class="display--flex justify-content--center align-items--center mr--s product-icon">
+      <i class="icon icon-md icon-sim-card icon-no-size-override" [ngClass]="moment.icon"></i>
+    </div>
+    <div class="display--flex flex-grow flex-direction--column">
+      <div class="heading--6 heading--nomargin">
+        {{ moment.title }}
+      </div>
+
+      <div
+        class="font--body-regular color-shade_72"
+        [attr.data-cy]="'mybase-service-moments-card-subtitle-' + moment.subType">
+        {{ moment.subTitle }}
+      </div>
+    </div>
+    <div
+      [attr.data-cy]="'mybase-service-moments-card-button-' + moment.type"
+      (click)="redirectTo(moment.url, moment.attributeData, moment.attributeGroup, moment.msisdn)"
+      class="button button--primary button--alternate button--paynow">
+      {{ moment.buttonText }}
+    </div>
+  </div>
+
+  <!-- Mobile view -->
+  <div
+    class="display--none--md mybase-dashboard--card p--l--lg p--m background-white mt--l--md mb--m"
+    [attr.data-cy]="'mybase-service-moments-card-' + moment.type + '-mobile'">
+    <div
+      (click)="redirectTo(moment.url, moment.attributeData, moment.attributeGroup, moment.msisdn)"
+      class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+      <div class="mybase-dashboard--card--title display--flex">
+        <span class="text-flow text-flow--h5">
+          {{ moment.title }}
+        </span>
+      </div>
+      <i
+        class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override display--flex align-items--center"></i>
+    </div>
+    <div
+      class="font--body-small color-shade_72"
+      [attr.data-cy]="'mybase-service-moments-card-subtitle-' + moment.subType">
+      {{ moment.subTitle }}
+    </div>
+  </div>
+}

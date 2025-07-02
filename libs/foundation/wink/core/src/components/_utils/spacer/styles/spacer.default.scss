@@ -1,0 +1,9 @@
+:host {
+  display: contents;
+
+  @each $size in $semantic-sizes-map {
+    .height-#{$size} {
+      height: var-rem(--semantic-spacing-#{$size});
+    }
+  }
+}

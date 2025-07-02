@@ -1,0 +1,3 @@
+const rootPreview = require('<%= offsetFromRoot %>../.storybook/preview');
+
+export const parameters = { ...rootPreview.parameters };

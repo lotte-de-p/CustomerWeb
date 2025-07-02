@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 126 150" xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd">
+		<g transform="translate(-514 -378)">
+			<g transform="translate(515 379)">
+				<path d="m17 136.19v-132.19m85 2.6884v140.31h-85v-7.8809" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<polyline points="88 135 88 147 66 147 66 135 66 135" stroke="#979797" stroke-linejoin="round" stroke-width="1.52" />
+				<path d="m65.043 143.5h22.957" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m65 138.5h22.957" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m67 134.5h21" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m88 134v-20.645c0-6.2711-4.9249-11.355-11-11.355s-11 5.0837-11 11.355v20.645" stroke="#979797" stroke-linejoin="round" stroke-width="1.2" />
+				<path d="m67 113.5h20" stroke="#979797" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5" />
+				<path d="m82.4 113v21m-10.8 0v-21" fill="#8C8D8E" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m76.5 126c0.82843 0 1.5-0.67157 1.5-1.5s-0.67157-1.5-1.5-1.5-1.5 0.67157-1.5 1.5 0.67157 1.5 1.5 1.5z" fill="#8C8D8E" />
+				<rect x="22" y="58" width="15" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="22" y="105" width="15" height="31" stroke="#979797" stroke-linejoin="round" />
+				<g transform="translate(22 11)" stroke="#979797" stroke-linejoin="round">
+					<rect width="14.8" height="31" />
+					<rect x="19.733" width="14.8" height="31" />
+					<rect x="39.467" width="14.8" height="31" />
+					<rect x="59.2" width="14.8" height="31" />
+					<path d="m0 11.16h11.824" stroke-linecap="round" />
+					<path d="m19.733 11.16h11.306" stroke-linecap="round" />
+					<path d="m39.467 11.16h11.306" stroke-linecap="round" />
+					<path d="m59.2 11.16h11.306" stroke-linecap="round" />
+				</g>
+				<rect x="42" y="58" width="15" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="62" y="58" width="15" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="82" y="58" width="15" height="31" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<rect x="42" y="105" width="15" height="31" stroke="#979797" stroke-linejoin="round" />
+				<path d="m22 69.5h11.504" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m22 115.5h11.504" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m42 69.5h11" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m62 69.5h11" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m82 69.5h11" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				<path d="m42 115.5h11" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="m112 128h1c1.1046 0 2 0.89543 2 2v17h-5v-17c0-1.1046 0.89543-2 2-2z" stroke="#979797" stroke-linejoin="round" />
+				<rect x="112" y="76" width="2" height="52" stroke="#979797" />
+				<path d="m110 74c0 1.1046 1.1193 2 2.5 2s2.5-0.89543 2.5-2" stroke="#979797" />
+				<path d="m107.3 73.5h11.327" stroke="#979797" stroke-linecap="round" />
+				<path d="m0 147.5h124" stroke="#8C8D8E" stroke-linecap="round" stroke-width="1.5" />
+				<polygon points="12 47 12 49 14.082 49 14.082 51 104.57 51 104.57 49 107 49 107 47" fill="#fff" stroke="#979797" stroke-linejoin="round" stroke-width="1.5" />
+				<polygon points="12 94 12 96 14.082 96 14.082 98 104.57 98 104.57 96 107 96 107 94" fill="#fff" stroke="#979797" stroke-linejoin="round" />
+				<polyline points="66.157 0 12 0 12 2 14.082 2 14.082 4 43.23 4 104.57 4 104.57 2 107 2 107 0 68.171 0" fill="#fff" stroke="#979797" stroke-linecap="round" stroke-linejoin="round" />
+			</g>
+		</g>
+	</g>
+</svg>

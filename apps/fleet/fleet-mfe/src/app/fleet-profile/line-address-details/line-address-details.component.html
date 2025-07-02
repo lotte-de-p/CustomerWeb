@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-sm-12 p-0">
+    <tg-login (componentCanRender)="initAfterLoggedIn()" [messageGroupName]="messageGroupName" [scopes]="scopes">
+      <div>
+        <div class="navigation-content" *ngIf="address">
+          <div class="navigation-content__header">
+            <div class="title">
+              <i class="header-icon icon-house"></i>
+              <h2>
+                {{ 'ng.line-address-details.lbl.address' | translate }}
+              </h2>
+            </div>
+          </div>
+          <div class="navigation-content__details address">
+            <div class="details-section">
+              <div class="details-section__item">
+                <label> {{ 'ng.line-address-details.lbl.postal-code' | translate }}</label>
+                <p id="postalCode">{{ address.postalCode }}</p>
+              </div>
+              <div class="details-section__item">
+                <label class="cursor--default">{{ 'ng.line-address-details.lbl.city' | translate }}</label>
+                <p id="municipality">{{ address.municipality }}</p>
+              </div>
+              <div class="details-section__item">
+                <label class="cursor--default">
+                  {{ 'ng.line-address-details.lbl.street-house-number' | translate }}
+                </label>
+                <p id="streetHouseNr">{{ streetHouseNr }}</p>
+              </div>
+              <div class="details-section__item">
+                <label class="cursor--default"> {{ 'ng.line-address-details.lbl.bus' | translate }}</label>
+                <p id="boxNumber">{{ address.boxNumber }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </tg-login>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "newOrExistingNumber": "existing",
+    "phoneNumber": "+3244556677",
+    "publishPhoneBook": true,
+    "telenetOperator": false
+  },
+  "dirty": false,
+  "status": "",
+  "errors": {}
+}

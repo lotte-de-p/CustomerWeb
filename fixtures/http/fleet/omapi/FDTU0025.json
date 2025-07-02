@@ -1,0 +1,111 @@
+{
+  "product": {
+    "externalProductCode": "FDTU0025",
+    "weight": 1150,
+    "apps": [],
+    "category": ["Other data options", "B2B Options with ETF", "Fleet Options with ETF"],
+    "subcategory": {
+      "name": "Data in Turkey",
+      "weight": 270,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "Data Turkey"
+        },
+        {
+          "locale": "nl",
+          "name": "Data Turkije"
+        },
+        {
+          "locale": "fr",
+          "name": "Data Turquie"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "250",
+            "unit": "MB",
+            "visible": true,
+            "weight": "1150",
+            "labelkey": "Data Turkey 250 MB"
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      },
+      {
+        "experience": {
+          "experiencetype": "GENERAL"
+        },
+        "specifications": [],
+        "servicetype": "GENERAL"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "4,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "FDTU0025",
+    "labelkey": "Data Turkey 250 MB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "Data Turkey 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-250-mb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "Data Turkije 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-250-mb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "Data Turquie 250 MB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/data-turkey-250-mb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "250 MB mobile data in Turkey"
+        },
+        {
+          "locale": "nl",
+          "name": "250 MB mobiele data in Turkije"
+        },
+        {
+          "locale": "fr",
+          "name": "250 MB de data mobiles en Turquie"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

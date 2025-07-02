@@ -1,0 +1,14 @@
+[
+  {
+    "accountNumber": "500837001",
+    "billNumber": "215900000048",
+    "statementDate": "2022-07-07T22:00:00Z",
+    "billAmount": 199.5
+  },
+  {
+    "accountNumber": "500837001",
+    "billNumber": "215900000047",
+    "statementDate": "2022-07-07T22:00:00Z",
+    "billAmount": 399.0
+  }
+]

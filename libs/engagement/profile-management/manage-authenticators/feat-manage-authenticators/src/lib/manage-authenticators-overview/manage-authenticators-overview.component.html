@@ -1,0 +1,161 @@
+<div class="manage-authenticators col-sm-12 background-shade_04 m--auto">
+  <div *ngIf="showOverview">
+    <div>
+      <div class="cmp cmp-title px--s px--0" [attr.data-cy]="'pm-ma-overview-title'">
+        <h2 class="text-align--left heading--notopmargin">
+          {{ 'ng.manage-authenticators.lbl.overview-title' | translate }}
+        </h2>
+      </div>
+      <div
+        class="cmp-text theme--inherit px--s py--0"
+        [attr.data-cy]="'pm-ma-overview-info'"
+        [innerHTML]="'ng.manage-authenticators.lbl.overview-info' | translate"></div>
+      <div class="heading--4 heading--nomargin px--s pt--s pb--0" [attr.data-cy]="'pm-ma-passwordless-title'">
+        {{ 'ng.manage-authenticators.lbl.passwordless-title' | translate }}
+      </div>
+      <div
+        class="cmp-text theme--inherit px--s py--0"
+        [attr.data-cy]="'pm-ma-passwordless-info'"
+        [innerHTML]="'ng.manage-authenticators.lbl.passwordless-info' | translate"></div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 p--s">
+      <div class="content-section">
+        <ul class="link-list">
+          @for (authenticator of (authenticators$ | async)?.authenticators; track authenticator) {
+            <li class="link-list__item">
+              <a
+                (click)="onSelectAuthenticator(authenticator)"
+                [attr.data-cy]="'pm-ma-authenticator-link'"
+                class="link-list-item link link--unstyled display--flex gap--m gap--m--lg width--full pl--m pl--l--lg align-items--start">
+                <div
+                  class="link-list-item__icon my--m my--l--lg align-self--stretch display--flex align-items--start"
+                  [attr.data-cy]="'pm-ma-authenticator-icon'">
+                  <div *ngIf="authenticator.type === 'itsme'">
+                    <i
+                      class="icon icon-component display--inline-flex aspect-ratio--1-1 width--fit-content backdrop-mask icon-component--size__m hide--base icon-component--secondary"
+                      aria-hidden="true">
+                      <img
+                        tgProfileManagementImageSrcInterceptor
+                        [moduleId]="'tg-pm-manage-authenticators'"
+                        src="/assets/logo_{{ authenticator.type }}.svg"
+                        alt="{{ authenticator.type }} icon" />
+                    </i>
+                  </div>
+                  <div *ngIf="authenticator?.type !== 'itsme'">
+                    <tg-pm-manage-authenticators-icon
+                      [type]="'' + authenticator.type"
+                      [size]="'icon-component--size__m'">
+                    </tg-pm-manage-authenticators-icon>
+                  </div>
+                </div>
+                <div
+                  class="link-list-item__content display--flex width--full justify-content--between align-self--stretch gap--m gap--m--lg py--m pr--m py--l--lg pr--l--lg border-width--b--r border-style--b--solid border-color--b--light-grey align-items--start">
+                  <div>
+                    <div class="link-list-item__content__title">
+                      <div class="cmp-text" [attr.data-cy]="'pm-ma-authenticator-title'">
+                        {{ 'ng.manage-authenticators.lbl.' + authenticator.type | translate }}
+                      </div>
+                      <div class="link-list-item__content__subtext color-shade_72">
+                        <div class="cmp-text" [attr.data-cy]="'pm-ma-authenticator-subtitle'">
+                          {{ 'ng.manage-authenticators.lbl.' + authenticator.type + '-subtitle' | translate }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="display--flex">
+                    <div
+                      *ngIf="authenticator.enabled"
+                      [attr.data-cy]="'pm-ma-authenticator-status'"
+                      class="text--xxm--sm text--s text-weight--xxs text-align--left mr--l">
+                      <span class="status-indicator status-indicator--positive word-break--ellipsis">
+                        {{ 'ng.manage-authenticators.lbl.authenticator-status' | translate }}
+                      </span>
+                    </div>
+                    <i
+                      class="icon icon-component justify-content--end aspect-ratio--1-1 width--fit-content icon-chevron-right icon-component icon-component--size__m icon-component--no-padding backdrop-mask"
+                      aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="heading--4 heading--nomargin px--s pt--s pb--0">
+        {{ 'ng.manage-authenticators.lbl.2fa-title' | translate }}
+      </div>
+      <div
+        class="cmp-text theme--inherit px--s py--0"
+        *ngIf="(authenticators$ | async)?.['2fa']?.enabled"
+        [innerHTML]="'ng.manage-authenticators.lbl.2fa-info-enabled' | translate"></div>
+      <div
+        class="cmp-text theme--inherit px--s py--0"
+        *ngIf="!(authenticators$ | async)?.['2fa']?.enabled"
+        [innerHTML]="'ng.manage-authenticators.lbl.2fa-info-disabled' | translate"></div>
+    </div>
+    <div class="col-sm-12 col-md-12 p--s">
+      <div class="content-section">
+        <a
+          (click)="onSelectMultiFactor()"
+          class="link-list-item link link--unstyled display--flex gap--m gap--m--lg width--full pl--m pl--l--lg align-items--start">
+          <div class="link-list-item__icon my--m my--l--lg align-self--stretch display--flex align-items--start">
+            <i
+              class="icon icon-component icon-shield-key display--inline-flex aspect-ratio--1-1 width--fit-content backdrop-mask icon-component--size__m hide--base icon-component--secondary"
+              aria-hidden="true"></i>
+          </div>
+          <div
+            class="link-list-item__content display--flex width--full justify-content--between align-self--stretch gap--m gap--m--lg py--m pr--m py--l--lg pr--l--lg border-width--b--r border-style--b--solid border-color--b--light-grey align-items--start">
+            <div>
+              <div class="link-list-item__content__title">
+                <div class="cmp-text" [attr.data-cy]="'pm-ma-2fa-title'">
+                  {{ 'ng.manage-authenticators.lbl.2fa' | translate }}
+                </div>
+                <div class="link-list-item__content__subtext color-shade_72">
+                  <div class="cmp-text" [attr.data-cy]="'pm-ma-2fa-subtitle'">
+                    <span *ngIf="(authenticators$ | async)?.['2fa']?.enabled">{{
+                      'ng.manage-authenticators.lbl.2fa-subtitle-enabled' | translate
+                    }}</span>
+                    <span *ngIf="!(authenticators$ | async)?.['2fa']?.enabled">{{
+                      'ng.manage-authenticators.lbl.2fa-subtitle-disabled' | translate
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="display--flex">
+              <div
+                *ngIf="(authenticators$ | async)?.['2fa']?.enabled"
+                [attr.data-cy]="'pm-ma-authenticator-status'"
+                class="text--xxm--sm text--s text-weight--xxs text-align--left mr--l">
+                <span class="status-indicator status-indicator--positive word-break--ellipsis">
+                  {{ 'ng.manage-authenticators.lbl.authenticator-status' | translate }}
+                </span>
+              </div>
+              <i
+                class="icon icon-component display--inline-flex aspect-ratio--1-1 width--fit-content icon-chevron-right icon-component icon-component--size__m icon-component--no-padding backdrop-mask"
+                aria-hidden="true"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <tg-pm-manage-authenticators-activate
+    *ngIf="showActivate"
+    [selectedAuthenticator]="selectedAuthenticator"
+    (toggleActivateEvent)="toggleActivateEvent($event)"
+    [successPageUrl]="successPageUrl">
+  </tg-pm-manage-authenticators-activate>
+
+  <tg-pm-manage-authenticators-manage
+    *ngIf="showManage"
+    [selectedAuthenticator]="selectedAuthenticator"
+    (toggleManageEvent)="toggleManageEvent($event)"
+    [successPageUrl]="successPageUrl">
+  </tg-pm-manage-authenticators-manage>
+</div>

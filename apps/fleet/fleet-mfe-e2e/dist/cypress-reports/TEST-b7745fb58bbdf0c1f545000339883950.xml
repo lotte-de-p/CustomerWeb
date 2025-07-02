@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.941" tests="8" failures="0">
+  <testsuite name="Cypress Tests" timestamp="2024-09-13T10:16:59" tests="0" file="src/e2e/fleet-account/manage-profile/manage-profile.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Manage Profile" timestamp="2024-09-13T10:16:59" tests="8" time="8.916" failures="0">
+    <testcase name="should show mobile number step at first" time="1.277" classname="Manage Profile should show mobile number step at first">
+    </testcase>
+    <testcase name="should fill in phone number field" time="1.437" classname="Manage Profile should fill in phone number field">
+    </testcase>
+    <testcase name="should show required error message" time="0.848" classname="Manage Profile should show required error message">
+    </testcase>
+    <testcase name="should show number-constraint" time="0.771" classname="Manage Profile should show number-constraint">
+    </testcase>
+    <testcase name="should show invalid fleet profile" time="0.822" classname="Manage Profile should show invalid fleet profile">
+    </testcase>
+    <testcase name="should show already exists" time="0.850" classname="Manage Profile should show already exists">
+    </testcase>
+    <testcase name="should show status in active state when account is pending" time="0.886" classname="Manage Profile should show status in active state when account is pending">
+    </testcase>
+    <testcase name="should show status in active state when account is invited" time="0.864" classname="Manage Profile should show status in active state when account is invited">
+    </testcase>
+  </testsuite>
+</testsuites>

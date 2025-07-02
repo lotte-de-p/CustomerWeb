@@ -1,0 +1,117 @@
+{
+  "product": {
+    "externalProductCode": "TLTT0004",
+    "weight": 40,
+    "apps": [],
+    "category": ["Fleet Options with ETF", "Other data options"],
+    "subcategory": {
+      "name": "World Data",
+      "weight": 8,
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "World Data"
+        },
+        {
+          "locale": "nl",
+          "name": "World Data"
+        },
+        {
+          "locale": "fr",
+          "name": "World Data"
+        }
+      ],
+      "mutualexclusion": false
+    },
+    "services": [
+      {
+        "experience": {
+          "experiencetype": "SURF"
+        },
+        "specifications": [
+          {
+            "value": "2",
+            "unit": "GB",
+            "visible": true,
+            "labelkey": "Roam World Data - 2 Gb",
+            "localizedcontent": [
+              {
+                "locale": "en",
+                "name": "2 GB mobile data for use in all countries (not valid for satellite connections)"
+              },
+              {
+                "locale": "nl",
+                "name": "2 GB Data voor gebruik in alle landen (uitgezonderd  satelliet verbindingen)"
+              },
+              {
+                "locale": "fr",
+                "name": "2 GB de data mobiles pour une consommation dans tous les pays  (excepté connection satellite)"
+              }
+            ]
+          }
+        ],
+        "servicetype": "MOBILE_INTERNET"
+      }
+    ],
+    "characteristics": {
+      "salespricevatincl": {
+        "value": "156,0",
+        "unit": "EUR"
+      },
+      "productsegment": "TB",
+      "productgroup": "OTHER",
+      "esimAvailable": false
+    },
+    "unlimited": false,
+    "priceType": "Recurrent Charge",
+    "requiresInstallation": false,
+    "languageSpecifications": [],
+    "usageBasedRatePlan": false,
+    "productid": "TLTT0004",
+    "labelkey": "World Data 2 GB",
+    "producttype": "OPTION",
+    "customercategories": ["Business", "Production Test Business"],
+    "visible": true,
+    "localizedcontent": [
+      {
+        "locale": "en",
+        "name": "World Data 2 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-2-gb.png"
+      },
+      {
+        "locale": "nl",
+        "name": "World Data 2 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-2-gb.png"
+      },
+      {
+        "locale": "fr",
+        "name": "World Data 2 GB",
+        "logo": "https://customerzone.prd.base.be/content/dam/www-base-be/img/self-service/products/world-data-2-gb.png"
+      }
+    ],
+    "shortdescription": {
+      "localizedcontent": [
+        {
+          "locale": "en",
+          "name": "2 GB World Data"
+        },
+        {
+          "locale": "nl",
+          "name": "2 GB World Data"
+        },
+        {
+          "locale": "fr",
+          "name": "2 GB World Data"
+        }
+      ]
+    },
+    "visibilityrules": {
+      "conditionalvisibility": false
+    },
+    "isYupProduct": false,
+    "isEligibleForPauseProfile": false,
+    "isEligibleForAutoPause": false,
+    "isEligibleForSettinglimits": false,
+    "isFPBProduct": false
+  }
+}

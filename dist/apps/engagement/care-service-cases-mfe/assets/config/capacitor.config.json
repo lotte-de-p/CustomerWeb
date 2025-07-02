@@ -1,0 +1,12 @@
+{
+  "appId": "be.telenet.telenetapp.staging",
+  "appName": "Telenet",
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": false
+    }
+  },
+  "server": {
+    "hostname": "telenetapp.telenet.be"
+  }
+}

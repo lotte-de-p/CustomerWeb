@@ -1,0 +1,135 @@
+<ng-container>
+  <div
+    data-testid="pay-by-mobile-subscription"
+    class="py--l cursor--pointer display--flex align-items--center justify-content--between"
+    (click)="open($event)">
+    <div class="display--flex gap--m align-items--center">
+      <tg-billing-transaction-logo [serviceName]="subscription.serviceName"></tg-billing-transaction-logo>
+      <div class="display--flex gap--xxs flex-direction--column">
+        <div class="heading--6 mt--n" data-testid="subscription-service">
+          {{ serviceName }}
+        </div>
+        <div>
+          <span class="font--body-small color-shade_72" data-testid="subscription-date">
+            {{ subscription.startDate | date: 'd MMMM YYYY' : '+0200' : locale }}
+          </span>
+          <span *ngIf="expired">
+            •
+            <span class="font--body-small color-notification--error--light" data-testid="subscription-date-expired"
+              >{{ 'ng.pay-by-mobile.subscription.expires' | translate }}
+              {{ subscription.endDate | date: 'd MMMM YYYY' : '+0200' : locale }}</span
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="display--flex gap--s align-items--center">
+      <div class="heading--5 mb--n mt--xxxs" data-testid="subscription-price">
+        {{ subscription.price | price: locale }}
+      </div>
+      <wink-icon icon="chevron-right"></wink-icon>
+    </div>
+  </div>
+  <tg-slide-menu
+    [showMenu]="showDetails"
+    [hideCloseButton]="confirmation"
+    [hideTitle]="confirmation"
+    (closeMenu)="close()"
+    [title]="'ng.pay-by-mobile.subscription.title' | translate">
+    <div class="p--m" data-testid="subscription-detail">
+      <div *ngIf="confirmation; else details">
+        <div class="heading--3">
+          {{ 'ng.pay-by-mobile.overlay.cancel-subscription-description' | translate: { serviceName } }}
+        </div>
+        <div class="display--flex gap--m mt--xl">
+          <wink-button
+            appearance="secondary"
+            (click)="close()"
+            data-testid="subscription-detail-stop-confirmation-cancel"
+            [text]="'ng.pay-by-mobile.subscription.cancel.dismiss' | translate"></wink-button>
+          <wink-button
+            appearance="primary"
+            (click)="confirm($event)"
+            data-testid="subscription-detail-stop-confirmation-confirm"
+            [text]="'ng.pay-by-mobile.subscription.cancel.confirm' | translate"></wink-button>
+        </div>
+      </div>
+      <ng-template #details>
+        <div class="display--flex justify-content--between">
+          <div class="display--flex flex-direction--row gap--m align-items--center">
+            <tg-billing-transaction-logo [serviceName]="subscription.serviceName"></tg-billing-transaction-logo>
+            <div class="heading--6 mt--n" data-testid="subscription-detail-service">
+              {{ serviceName }}
+            </div>
+          </div>
+          <div class="heading--5 mb--n mt--xxxs" data-testid="subscription-detail-price">
+            {{ subscription.price | price: locale }}
+          </div>
+        </div>
+        <div class="mt--m font--body-small color-shade_72" data-testid="subscription-detail-date">
+          {{ subscription.startDate | date: 'd MMMM YYYY' : '+0200' : locale }}
+          <span *ngIf="expired">
+            •
+            <span class="color-notification--error--light"
+              >{{ 'ng.pay-by-mobile.subscription.expires' | translate }}
+              {{ subscription.endDate | date: 'd MMMM YYYY' : '+0200' : locale }}</span
+            >
+          </span>
+          <span
+            *ngIf="subscription.renewalPeriod.period && subscription.renewalPeriod.units"
+            data-testid="subscription-detail-renewal">
+            • {{ 'ng.pay-by-mobile.lbl.recurring' | translate }} {{ subscription.renewalPeriod.period }}
+            <span *ngIf="subscription.renewalPeriod.period === 1">{{
+              'ng.pay-by-mobile.lbl.recurring-' +
+                subscription.renewalPeriod.units.slice(0, subscription.renewalPeriod.units.length - 1) | translate
+            }}</span>
+            <span *ngIf="subscription.renewalPeriod.period > 1">{{
+              'ng.pay-by-mobile.lbl.recurring-' + subscription.renewalPeriod.units | translate
+            }}</span>
+            <ng-template>
+              {{ 'ng.pay-by-mobile.lbl.recurring-' + subscription.renewalPeriod.units | translate }}
+            </ng-template>
+          </span>
+        </div>
+        <div *ngIf="company; else loading">
+          <div class="mt--m">
+            <div class="mt--m font--body-small color-shade_72">
+              {{ 'ng.pay-by-mobile.transaction.company.name' | translate }}
+            </div>
+            <div data-testid="subscription-detail-company-name">{{ company.companyName }}</div>
+          </div>
+          <div class="mt--m">
+            <div class="font--body-small color-shade_72">
+              {{ 'ng.pay-by-mobile.transaction.company.email' | translate }}
+            </div>
+            <div data-testid="subscription-detail-company-email">{{ company.email }}</div>
+          </div>
+          <div class="mt--m display--flex gap--xl align-items--center">
+            <wink-button
+              appearance="secondary"
+              *ngIf="!expired"
+              data-testid="subscription-detail-stop"
+              (click)="startConfirmation($event)"
+              [text]="'ng.pay-by-mobile.btn.stop-subscription' | translate"></wink-button>
+            <a
+              *ngIf="company.url"
+              [href]="company.url"
+              class="display--flex align-items--center link link--unstyled"
+              data-testid="subscription-detail-company-url">
+              <span class="text-decoration--underline">{{
+                'ng.pay-by-mobile.transaction.company.support' | translate
+              }}</span>
+              <wink-icon icon="external-link" size="sm" style="margin-top: -8px" class="ml--xxs"></wink-icon>
+            </a>
+          </div>
+        </div>
+        <ng-template #loading>
+          <div
+            data-testid="transaction-company-loading"
+            class="loading--circular"
+            style="width: 50px; height: 50px"></div>
+        </ng-template>
+      </ng-template>
+    </div>
+  </tg-slide-menu>
+</ng-container>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.862" tests="8" failures="0" skipped="1">
+  <testsuite name="Cypress Tests" timestamp="2024-07-16T12:42:17" tests="0" file="src/e2e/fleet-product/line-remove-options/line-remove-options.spec.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Line Remove Options" timestamp="2024-07-16T12:42:17" tests="8" time="12.838" failures="0">
+    <testcase name="AC 1: Fleet Manager goes to products detail page when remove options is selected then the add options wizard is opened" time="1.087" classname="Line Remove Options AC 1: Fleet Manager goes to products detail page when remove options is selected then the add options wizard is opened">
+    </testcase>
+    <testcase name="AC 2: Fleet Manager opens the remove options wizard when fleet manager he sees an option that is not in his sim line he can not remove this option " time="0.722" classname="Line Remove Options AC 2: Fleet Manager opens the remove options wizard when fleet manager he sees an option that is not in his sim line he can not remove this option ">
+    </testcase>
+    <testcase name="AC 3: Fleet Manager removes an option in the wizard when he selected to remove this option then the option is shown under  " time="0.729" classname="Line Remove Options AC 3: Fleet Manager removes an option in the wizard when he selected to remove this option then the option is shown under  ">
+    </testcase>
+    <testcase name="AC 4: Fleet Manager is in the wizard and sees all the options he already has under Previously added " time="0.637" classname="Line Remove Options AC 4: Fleet Manager is in the wizard and sees all the options he already has under Previously added ">
+    </testcase>
+    <testcase name="AC 7: Fleet Manager removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview " time="0.793" classname="Line Remove Options AC 7: Fleet Manager removed an option  in the wizard when he clicks on undo changes then the options are removed from the overview ">
+    </testcase>
+    <testcase name="AC 8: Fleet Manager removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line " time="1.048" classname="Line Remove Options AC 8: Fleet Manager removes an option in the wizard when he saves his changes then the options  that are selected are removed from his SIM line ">
+    </testcase>
+    <testcase name="AC 9: Fleet Manager removes an option in the wizard when he saves his changes then he changes his mind and cancels it the manager is to the product details view " time="1.183" classname="Line Remove Options AC 9: Fleet Manager removes an option in the wizard when he saves his changes then he changes his mind and cancels it the manager is to the product details view ">
+    </testcase>
+  </testsuite>
+</testsuites>

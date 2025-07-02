@@ -1,0 +1,8 @@
+import { createAction, props } from '@ngrx/store';
+
+export const exampleAction = createAction('<%= actionPrefix %> example');
+export const exampleSuccessAction = createAction(
+  '<%= actionPrefix %> example success response',
+  props<{ message: string }>()
+);
+export const exampleErrorAction = createAction('<%= actionPrefix %> example Error', props<{ error: Error }>());

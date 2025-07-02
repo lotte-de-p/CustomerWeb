@@ -1,0 +1,158 @@
+<tg-login [scopes]="scopes" (componentCanRender)="initAfterLoggedIn()">
+  <div class="mybase-dashboard-mobile">
+    @if (myBaseDashboardMobileError$ | async) {
+      <div class="row">
+        <div class="col-12 mt--l--md">
+          <tg-mybase-dashboard-error [error]="(myBaseDashboardMobileError$ | async)!"></tg-mybase-dashboard-error>
+        </div>
+      </div>
+    } @else {
+      <div class="row">
+        <div class="col-12">
+          <tg-line-selector
+            [data]="(mobileLines$ | async)!"
+            (selectMsisdn)="selectMsisdn($event)"
+            (analyticsData)="addAnalyticsEvent($event)"></tg-line-selector>
+        </div>
+      </div>
+      @if ((myBaseDashboardMobileLoading$ | async) === false) {
+        <div class="row">
+          @if ((myBaseDashboardMobileUsage$ | async)?.showCard) {
+            <div class="col-12 col-md-6 col-lg-4 mb--m mt--xxxs--md">
+              @if ((myBaseDashboardMobileUsage$ | async)?.postpaid || (myBaseDashboardMobileUsage$ | async)?.legacy) {
+                <tg-mybase-dashboard-mobile-usage-postpaid
+                  [data]="(myBaseDashboardMobileUsage$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [mobileUsageUrl]="mobileUsageUrl"></tg-mybase-dashboard-mobile-usage-postpaid>
+              } @else if ((myBaseDashboardMobileUsage$ | async)?.prepaid) {
+                <tg-mybase-dashboard-mobile-usage-prepaid
+                  [data]="(myBaseDashboardMobileUsage$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [topUpUrl]="topupUrl"
+                  [mobileUsageUrl]="mobileUsageUrl"></tg-mybase-dashboard-mobile-usage-prepaid>
+              } @else if ((myBaseDashboardMobileUsage$ | async)?.unlimited) {
+                <tg-mybase-dashboard-mobile-usage-unlimited
+                  [data]="(myBaseDashboardMobileUsage$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [mobileUsageUrl]="mobileUsageUrl"></tg-mybase-dashboard-mobile-usage-unlimited>
+              } @else if ((myBaseDashboardMobileUsage$ | async)?.baseZero) {
+                <tg-mybase-dashboard-mobile-usage-basezero
+                  [data]="(myBaseDashboardMobileUsage$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [mobileUsageUrl]="mobileUsageUrl"></tg-mybase-dashboard-mobile-usage-basezero>
+              } @else if ((myBaseDashboardMobileUsage$ | async)?.basedOnYou) {
+                <tg-mybase-dashboard-mobile-usage-basedonyou
+                  [data]="(myBaseDashboardMobileUsage$ | async)!"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [mobileUsageUrl]="mobileUsageUrl"></tg-mybase-dashboard-mobile-usage-basedonyou>
+              }
+            </div>
+          }
+          <div class="col-12 col-md-6 col-lg-8">
+            @if (myBaseDashboardMobileNavigationCards$ | async) {
+              <tg-mybase-navigation-cards
+                [mobileUsageNotificationUrl]="mobileUsageNotificationUrl"
+                [voicemailUrl]="voicemailUrl"
+                [simManagementUrl]="simManagementUrl"
+                [productOverviewUrl]="productOverviewUrl"
+                [topopUrl]="topupUrl"
+                [topupHistoryUrl]="topupHistoryUrl"
+                [mobileUsageDetailsUrl]="mobileUsageDetailsUrl"
+                [mobileUsageLimitsUrl]="mobileUsageLimitsUrl"
+                [barringsUrl]="barringsUrl"
+                [type]="'mobile'"
+                [customClassGrid]="'col-lg-6'"
+                [mobileTitle]="'ng.mybase-dashboard-mobile.navigation-cards.title' | translate"
+                (analyticsData)="addAnalyticsEvent($event)"
+                [data]="(topLevelNavigationCards$ | async)!"></tg-mybase-navigation-cards>
+            }
+          </div>
+        </div>
+        @if ((bottomLevelNavigationCards$ | async)?.length && (myBaseDashboardMobileLoading$ | async) === false) {
+          <div class="row">
+            <div class="col-12">
+              <tg-mybase-navigation-cards
+                [voicemailUrl]="voicemailUrl"
+                [simManagementUrl]="simManagementUrl"
+                [productOverviewUrl]="productOverviewUrl"
+                [topopUrl]="topupUrl"
+                [mobileUsageDetailsUrl]="mobileUsageDetailsUrl"
+                [type]="'mobile'"
+                [customClassGrid]="'col-lg-4'"
+                (analyticsData)="addAnalyticsEvent($event)"
+                [topupHistoryUrl]="topupHistoryUrl"
+                [data]="(bottomLevelNavigationCards$ | async)!"></tg-mybase-navigation-cards>
+            </div>
+          </div>
+        }
+        @if ((controlUsageNavCards$ | async)?.length) {
+          <div class="row">
+            <div class="col-12">
+              <tg-mybase-navigation-cards
+                [mobileUsageNotificationUrl]="mobileUsageNotificationUrl"
+                [mobileUsageLimitsUrl]="mobileUsageLimitsUrl"
+                [barringsUrl]="barringsUrl"
+                [type]="'mobile'"
+                [customClassGrid]="'col-lg-4'"
+                [showControlUsageTitle]="true"
+                (analyticsData)="addAnalyticsEvent($event)"
+                [data]="(controlUsageNavCards$ | async)!"></tg-mybase-navigation-cards>
+            </div>
+          </div>
+        }
+        <div>
+          @if (myBaseDashboardMobileServices$ | async) {
+            <div class="row">
+              <div class="col-12">
+                <tg-mybase-services-cards
+                  [payByMobileUrl]="payByMobileUrl"
+                  [buyHardwareDiscountUrl]="buyHardwareDiscountUrl"
+                  [type]="'mobile'"
+                  (analyticsData)="addAnalyticsEvent($event)"
+                  [data]="(myBaseDashboardMobileServices$ | async)!"></tg-mybase-services-cards>
+              </div>
+            </div>
+          }
+        </div>
+      }
+      @if (myBaseDashboardMobileLoading$ | async) {
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb--l">
+            <div class="height--full skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-8">
+            <div class="row">
+              <div class="col-12 mb--l col-lg-6">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+              <div class="col-12 mb--l col-lg-6">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+              <div class="col-12 mb--l col-lg-6">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+              <div class="col-12 mb--l col-lg-6">
+                <div class="skeleton skeleton--basic skeleton--container navigation--card p--m"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-12 mb--l">
+              <div class="skeleton skeleton--basic skeleton--container skeleton--title p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+            <div class="col-12 mb--l col-lg-4">
+              <div class="skeleton skeleton--basic skeleton--container service--card p--m"></div>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</tg-login>

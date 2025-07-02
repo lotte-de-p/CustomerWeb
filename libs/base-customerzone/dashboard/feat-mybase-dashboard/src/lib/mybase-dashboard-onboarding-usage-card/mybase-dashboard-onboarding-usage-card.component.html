@@ -1,0 +1,89 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white mt--l--md"
+  [attr.data-cy]="'mybase-dashboard-onboarding-' + cardType + '-card'">
+  <div
+    (click)="cardType === 'billing' && goToBillingDetail()"
+    class="display--flex justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m"
+    [ngClass]="{ 'cursor--pointer': cardType === 'billing', 'color-shade_48': cardType !== 'billing' }">
+    <div class="mybase-dashboard--card--title display--flex user-select--none">
+      <span class="text-flow text-flow--h5">
+        {{ title | translate }}
+      </span>
+    </div>
+    @if (cardType === 'billing') {
+      <i
+        class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override display--flex align-items--center"></i>
+    }
+  </div>
+
+  <div class="mybase-dashboard--card--content">
+    <div
+      class="display--flex flex-direction--column align-items--center"
+      [ngClass]="{ 'cursor--pointer': cardType === 'billing', 'user-select--none': cardType !== 'billing' }"
+      (click)="cardType === 'billing' && goToBillingDetail()">
+      @switch (cardType) {
+        @case ('billing') {
+          <img
+            class="hide-until-md mybase-dashboard-image"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-billing.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+          <img
+            class="hide-from-md"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-billing.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+        }
+        @case ('mobile') {
+          <img
+            class="hide-until-md mybase-dashboard-image"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-mobile.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+          <img
+            class="hide-from-md"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-mobile.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+        }
+        @case ('internet') {
+          <img
+            class="hide-until-md mybase-dashboard-image"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-internet.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+          <img
+            class="hide-from-md"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-internet.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+        }
+        @case ('home-network') {
+          <img
+            class="hide-until-md mybase-dashboard-image"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-home-network.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+          <img
+            class="hide-from-md"
+            appMybaseDashboardImageSrcInterceptor
+            src="/assets/pending-home-network.svg"
+            [moduleId]="'tg-mybase-dashboard'" />
+        }
+      }
+      <div class="mybase-dashboard--card--content--status mt--m">
+        @if (cardType === 'billing') {
+          <div class="heading--6 m--n" [attr.data-cy]="'mybase-dashboard-onboarding-card-no-bills'">
+            {{ 'ng.mybase-dashboard.onboarding.no-bills-label' | translate }}
+          </div>
+        } @else {
+          <div
+            class="status-indicator display--inline-block vertical-align--middle status-indicator status-indicator--inactive"
+            [attr.data-cy]="'mybase-dashboard-onboarding-card-coming-soon'">
+            <span>{{ 'ng.mybase-dashboard.onboarding.coming-soon-label' | translate }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

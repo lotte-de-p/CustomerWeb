@@ -1,0 +1,46 @@
+import { Observable } from 'rxjs';
+import { OmapiFamily, RawOmapiFamily } from '../interfaces';
+import { HttpClient } from '@angular/common/http';
+import { MessageService } from '@telenet/ng-lib-message';
+import { UrlService } from '@telenet/ng-lib-page';
+import { ConfigService } from '@telenet/ng-lib-config';
+import { OmapiProductService } from './omapi-product.service';
+import { OmapiCacheService } from './cache/omapi-cache.service';
+import { KlikOmapiFamily } from '../interfaces/klik-omapi-family.interface';
+import * as i0 from "@angular/core";
+export declare class OmapiFamilyService {
+    private readonly http;
+    private readonly urlService;
+    private readonly messageService;
+    private readonly configService;
+    private readonly cacheService;
+    private readonly omapiProductService;
+    constructor(http: HttpClient, urlService: UrlService, messageService: MessageService, configService: ConfigService, cacheService: OmapiCacheService<RawOmapiFamily>, omapiProductService: OmapiProductService);
+    getFamily(messageGroup: string, family: string): Observable<OmapiFamily>;
+    getKlikFamily(messageGroup: string, family: string): Observable<KlikOmapiFamily>;
+    private getOmapiFamilyUrl;
+    private getFamilyByEndpoint;
+    private parseFamily;
+    private parseTiers;
+    private parseProductsByType;
+    private parseOptins;
+    private parseOptions;
+    private addOmapiProductToTier;
+    private addOmapiFamilyObjectToTier;
+    private createOmapiProductInfos;
+    private createTier;
+    private getHttpConfig;
+    private handleError;
+    private getKlikFamilyByEndpoint;
+    private createFamily;
+    private createKlikTier;
+    private createKlikProduct;
+    private createKlikOptins;
+    private createKlikOptions;
+    private getProductTiers;
+    private getProductDetails;
+    private getMobileData;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OmapiFamilyService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<OmapiFamilyService>;
+}
+//# sourceMappingURL=omapi-family.service.d.ts.map

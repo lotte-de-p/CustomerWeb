@@ -1,0 +1,42 @@
+import { OnInit } from '@angular/core';
+import { FormGroup, ValidationErrors } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+import { InputOption } from '../radio';
+import { InputComponent } from '../input';
+import { IMonth } from './model';
+import * as i0 from "@angular/core";
+export declare class AbstractDateOfBirthPickerComponent implements OnInit {
+    private readonly translateService;
+    static readonly DOB_DAY_REGEX: RegExp;
+    static readonly DOB_MONTH_REGEX: RegExp;
+    static readonly DOB_YEAR_REGEX: RegExp;
+    form: FormGroup;
+    day: number;
+    year: number;
+    month: number;
+    minDefaultAge: number | undefined;
+    dayBasedValidationFeatureFlag?: boolean;
+    dayInputField: InputComponent;
+    yearInputField: InputComponent;
+    private MIN_DEFAULT_LEGAL_AGE;
+    options: InputOption[];
+    readonly MAX_DEFAULT_LEGAL_AGE = 110;
+    readonly MOMENT_DATE_FORMAT = "DD/MM/YYYY";
+    set minDefaultLegalAge(value: number | undefined);
+    get minDefaultLegalAge(): number;
+    constructor(translateService: TranslateService);
+    ngOnInit(): void;
+    getTranslatedDayOrMonthNames(type: string): IMonth[];
+    detectFormControlsValueChange(): void;
+    validateDayBasedOnMonth(): ValidationErrors | null;
+    isValidDate(year: number, month: number, day: number): boolean;
+    isValidDayForMonth(month: number, day: number): boolean;
+    private checkYear;
+    private checkDay;
+    private checkDate;
+    private removeValidationErrors;
+    private setInvalidBirthDateError;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AbstractDateOfBirthPickerComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AbstractDateOfBirthPickerComponent, "tg-abstract-date-of-birth-picker-with-dropdown-input", never, { "form": { "alias": "form"; "required": false; }; "day": { "alias": "day"; "required": false; }; "year": { "alias": "year"; "required": false; }; "month": { "alias": "month"; "required": false; }; "minDefaultAge": { "alias": "minDefaultAge"; "required": false; }; "dayBasedValidationFeatureFlag": { "alias": "dayBasedValidationFeatureFlag"; "required": false; }; "minDefaultLegalAge": { "alias": "minDefaultLegalAge"; "required": false; }; }, {}, never, never, false, never>;
+}
+//# sourceMappingURL=abstract-date-of-birth-picker.component.d.ts.map

@@ -1,0 +1,83 @@
+@if (!hasActivationInProgressProduct) {
+  <div
+    class="circle-wave"
+    [ngClass]="{ 'circle-wave--paused': config.hideShadow, 'circle-wave__overflow': config.showBorderWaves }">
+    <div class="circle-wave__wave" [ngStyle]="config.style" [ngClass]="config.liquidColor"></div>
+    <div class="circle-wave__info">
+      <div class="circle-wave__info__data word-break--ellipsis ml--m" [ngClass]="config.iconColor">
+        @if (config.iconClass) {
+          <i [ngClass]="config.iconClass"></i>
+        }
+        <span class="ml-5 word-break--ellipsis mr--m"> {{ config.iconName }} </span>
+      </div>
+      @if (!internetUsage) {
+        <p class="circle-wave__info__used">
+          <span
+            class="circle-wave__info__used heading--1-small"
+            [attr.data-cy]="'config-used-amount'"
+            [ngClass]="config.titleColor">
+            {{ config.title?.replace('.', ',') }}
+          </span>
+        </p>
+      }
+      @if (!internetUsage?.isUnlimitedLine()) {
+        <p class="circle-wave__info__used">
+          @if (internetUsage?.isFUPLine()) {
+            <span class="circle-wave__info__used heading--1-small" [ngClass]="config.titleColor">
+              {{ totalUsage?.replace('.', ',') | replaceDecimals }} {{ internetUsage?.allocatedUsage.unitType }}
+            </span>
+          }
+          @if (internetUsage?.isCAPLine()) {
+            <span class="circle-wave__info__used heading--1-small" [ngClass]="config.titleColor">
+              {{ config.title?.replace('.', ',') }}
+            </span>
+          }
+        </p>
+      }
+      @if (config.title && internetUsage?.isUnlimitedLine()) {
+        <p class="circle-wave__info__used">
+          <span class="circle-wave__info__used heading--1-small" [ngClass]="config.titleColor">
+            {{ 'ng.internet-usage.lbl.unlimited' | translate }}
+          </span>
+        </p>
+      }
+      @if (config.subtitle && !internetUsage?.isUnlimitedLine()) {
+        <p class="circle-wave__info__available">
+          <span class="circle-wave__info__available" [ngClass]="config.subtitleColor" [innerHTML]="config.subtitle">
+          </span>
+        </p>
+      }
+      @if (config.subtitle && internetUsage?.isUnlimitedLine()) {
+        <p class="circle-wave__info__available">
+          <span class="circle-wave__info__available" [ngClass]="config.subtitleColor">
+            {{ config.title?.replace('.', ',') }} {{ config.subtitle }}
+          </span>
+        </p>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="cards">
+    <div class="pointer-events--none cursor--default">
+      <div class="cover overlay-backdrop__background">
+        <div class="col-10 shadow--s m--auto p--m background-white">
+          <div class="display--flex align-items--start">
+            <span class="icon icon-md icon-information-shape"></span>
+            <p class="pl--xs">
+              @if (isInternet) {
+                <span>{{ 'ng.internet-usage.lbl.new-customer-msg' | translate }}</span>
+              } @else {
+                <span>{{ 'ng.fleet-user-mobile-usage-overview.lbl.new-customer-msg' | translate }}</span>
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="display--flex justify-content--center">
+      <div class="circle-wave">
+        <div class="circle-wave__wave circle-wave__wave--yellow"></div>
+      </div>
+    </div>
+  </div>
+}

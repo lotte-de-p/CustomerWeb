@@ -1,0 +1,117 @@
+<div class="row display--flex--md justify-content--between pl--xs">
+  <div *ngIf="product.unlimitedLines?.length" class="col-md-12 pr--xs">
+    <div class="pt--l">
+      <span class="text-font-family--t7"
+        >{{ 'ng.product-overview.lbl.unlimited-numbers' | translate }} ({{ product.unlimitedLines!.length }})</span
+      >
+      <div class="row display--flex--md">
+        <div
+          *ngFor="let line of product.unlimitedLines"
+          class="m--xxs background-white center-align text--s text-font-family--t7 p--xs"
+          style="width: fit-content">
+          {{ line }}
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let specification of getLineSpecification()">
+      <div
+        class="row border--b--r border-width--b--r border-style--b--solid border-color--all--light-grey display--flex--md justify-content--between pt--l"
+        [ngClass]="{ 'pt-0': specification.isMonetary }"
+        *ngIf="!specification.labelKey.endsWith('mobile-data-allowance-limited1')">
+        <div class="col-md-9" *ngIf="!specification.isMonetary">
+          {{ specification.localizedContent?.name }}
+        </div>
+        <div class="col-md-3 text-align--right--md text-weight--l mt--n--md mt--xxs">
+          <span *ngIf="specification.value">
+            <span>
+              {{ getLocalizedLabel(specification.value) }}
+            </span>
+          </span>
+          <span *ngIf="specification.isRange">
+            <span>{{ specification.minValue }}</span>
+            <span>{{ 'ng.product-overview.text.to' | translate }}</span>
+            <span>{{ specification.maxValue }}</span>
+          </span>
+          <span *ngIf="specification.showUnit">
+            {{ getLocalizedLabel(specification.unit) }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mt--m" *ngIf="product.hasIncludedOptions">
+      <div *ngIf="product.options">
+        <div *ngFor="let option of product.options">
+          <div class="pt--xs" *ngIf="option.isIncludedOption">
+            <div>
+              <span class="text-font-family--t7">{{ option.label }}</span
+              ><br />
+              <span class="text--s">{{ 'ng.product-overview.lbl.included-option' | translate }}</span>
+            </div>
+            <div *ngFor="let service of option.productInfo.services">
+              <ng-container *ngFor="let spec of service.specifications">
+                <ul *ngIf="spec.localizedContent?.name" class="mt-10 ml--m">
+                  <li class="data--key" [innerHtml]="getFormattedSpecifications(spec.localizedContent?.name)"></li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+          <div *ngFor="let optionSpec of getLineSpecification(option)">
+            <div class="row display--flex--md justify-content--between pt--l">
+              <div class="col-md-9">
+                {{ optionSpec.localizedContent?.name }}
+              </div>
+              <div class="col-md-3 text-align--right--md text-weight--l mt--n--md mt--xxs">
+                <span *ngIf="optionSpec.value">
+                  {{ getLocalizedLabel(optionSpec.value) }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="product.limitedLines?.length && product.unlimitedLines?.length"
+    class="divider divider--xxxs__grey mt--xl"></div>
+
+  <div *ngIf="product.limitedLines?.length" class="col-md-12 pr--xs">
+    <div class="pt--l">
+      <span class="text-font-family--t7"
+        >{{ 'ng.product-overview.lbl.limited-numbers' | translate }} ({{ product.limitedLines!.length }})</span
+      >
+      <div class="row display--flex--md">
+        <div
+          *ngFor="let line of product.limitedLines"
+          class="m--xxs background-white center-align text--s text-font-family--t7 p--xs"
+          style="width: fit-content">
+          {{ line }}
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let specification of getLineSpecification()">
+      <div
+        class="row border--b--r border-width--b--r border-style--b--solid border-color--all--light-grey display--flex--md justify-content--between pt--l"
+        [ngClass]="{ 'pt-0': specification.isMonetary }"
+        *ngIf="!specification.labelKey.endsWith('mobile-data-allowance-unlimited')">
+        <div class="col-md-9" *ngIf="!specification.isMonetary">
+          {{ specification.localizedContent?.name }}
+        </div>
+        <div class="col-md-3 text-align--right--md text-weight--l mt--n--md mt--xxs">
+          <span *ngIf="specification.value">
+            <span>
+              {{ getLocalizedLabel(specification.value) }}
+            </span>
+          </span>
+          <span *ngIf="specification.isRange">
+            <span>{{ specification.minValue }}</span>
+            <span>{{ 'ng.product-overview.text.to' | translate }}</span>
+            <span>{{ specification.maxValue }}</span>
+          </span>
+          <span *ngIf="specification.showUnit"> {{ getLocalizedLabel(specification.unit) }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

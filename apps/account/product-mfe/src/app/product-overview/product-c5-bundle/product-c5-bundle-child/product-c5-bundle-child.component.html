@@ -1,0 +1,607 @@
+<div class="content-section__details">
+  <div class="row display--flex align-items--center">
+    <div class="col-md-7 col-xs-12 display--flex align-items--center">
+      <div class="product-overview__content-section__image display--flex align-items--center justify-content--center">
+        <i class="icon icon-md text-weight--xxs" [ngClass]="'icon-' + getProductIcon()"></i>
+      </div>
+      <div class="display--flex--md align-items--center--md">
+        <div class="ml--m">
+          <div
+            class="text-font-family--t7 text--xxm product-overview__heading"
+            [attr.data-cy]="'c5SectionType'"
+            *ngIf="section.type !== 'entertainment'">
+            {{ product.productSpec?.name || product.productInfo.name }}
+            <span *ngIf="product.productType === 'phone2go'">({{ product.options.length }})</span>
+          </div>
+          <div
+            [attr.data-cy]="'c5SectionType'"
+            class="text-font-family--t7 text--xxm product-overview__heading"
+            *ngIf="section.type === 'entertainment'">
+            {{ product.experience?.productInfo?.name || product.productSpec?.name }}
+          </div>
+          <div class="display--flex--md align-items--center" *ngIf="product.productType === 'mobile'">
+            <span
+              *ngIf="product.options?.[0]?.status === 'ACTIVE'"
+              class="status-indicator status-indicator--positive mt--xxs">
+              {{ 'ng.product-overview.lbl.data-sim-active' | translate }}
+            </span>
+            <div *ngIf="product.eSimStatus === 'Active'" class="mr--xxs--md mb--n--md mb--xxs mt--xxs">
+              <span class="status-indicator status-indicator--positive">
+                {{ 'ng.product-overview.lbl.esim-active' | translate }}
+              </span>
+            </div>
+            <div
+              class="text--s"
+              [ngClass]="{
+                'ml--xs--md pt--xxs pt--n--md': product.options[0] && product.options[0].status === 'ACTIVE'
+              }">
+              <span *ngIf="product.mobileIdentifier?.length">
+                <span *ngIf="product.unlimitedLines?.length" [attr.data-cy]="'unlimitedLineText'"
+                  >{{ product.unlimitedLines?.length }} {{ 'ng.product-overview.lbl.unlimited-line' | translate }}</span
+                >
+                <span *ngIf="product.unlimitedLines?.length && product.limitedLines?.length">, </span>
+                <span *ngIf="product.limitedLines?.length" [attr.data-cy]="'limitedLineText'">
+                  {{ product.limitedLines?.length }} {{ 'ng.product-overview.lbl.limited-line' | translate }}
+                </span>
+                <span [attr.data-cy]="'amountOfunlimitedLines'">{{
+                  'ng.product-overview.lbl.numbers' | translate
+                }}</span>
+              </span>
+            </div>
+          </div>
+          <div class="display--flex--md align-items--center" *ngIf="product.productType === 'telephone'">
+            <div class="text--s" *ngIf="product.status === 'ACTIVE'" [attr.data-cy]="'activePhoneNumber'">
+              {{ product.identifier | phoneNumber }}
+            </div>
+          </div>
+          <div *ngIf="product.productType === 'phone2go'">
+            <div *ngFor="let phoneToGo of phoneToGoNumbers" class="display--flex--md align-items--center">
+              <div class="text--s">
+                {{ phoneToGo.phoneNumber | phoneNumber }}
+              </div>
+              <div class="pl--m pt--xxxs pt--n--md">
+                <span *ngIf="phoneToGo.active" class="status-indicator status-indicator--positive">
+                  {{ 'ng.product-overview.lbl.active' | translate }}
+                </span>
+                <span *ngIf="!phoneToGo.active" class="status-indicator status-indicator--negative">
+                  {{ 'ng.product-overview.lbl.not-active' | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pl--m pt--xxxs pt--n--md" *ngIf="section.type === 'includedOptions'">
+          <span
+            class="status-indicator"
+            [ngClass]="{
+              'status-indicator--negative': product.productType !== 'mobile' && product.productType !== 'telephone'
+            }"
+            *ngIf="product.status === 'NOT_ACTIVE'">
+            <span
+              *ngIf="product.productType === 'mobile' || product.productType === 'telephone'"
+              [attr.data-cy]="'notRequestedStatus'">
+              {{ 'ng.product-overview.lbl.not-requested' | translate }}
+            </span>
+            <span
+              *ngIf="product.productType !== 'mobile' && product.productType !== 'telephone'"
+              [attr.data-cy]="'productNotActiveStatus'">
+              {{ 'ng.product-overview.lbl.not-active' | translate }}
+            </span>
+          </span>
+          <span class="status-indicator status-indicator--positive" *ngIf="product.status === 'ACTIVE'">
+            {{ 'ng.product-overview.lbl.active' | translate }}
+          </span>
+          <span class="status-indicator" *ngIf="product.isProductSuspended()">
+            {{ 'ng.product-overview.lbl.status-suspended' | translate }}
+          </span>
+        </div>
+        <div class="pl--m pt--xxxs pt--n--md">
+          <span class="status-indicator status-indicator--warning" *ngIf="product.isProductActivationInProgress()">
+            {{ 'ng.product-overview.lbl.status-activation-in-progress' | translate }}
+          </span>
+          <span class="status-indicator status-indicator--warning" *ngIf="product.isProductDisconnectionInProgress()">
+            {{ 'ng.product-overview.lbl.status-disconnection-in-progress' | translate }}
+          </span>
+          <span
+            class="status-indicator status-indicator--warning"
+            *ngIf="product.isProductModificationInProgress()"
+            [attr.data-cy]="'modificationInProgressStatus'">
+            {{ 'ng.product-overview.lbl.status-modification-in-progress' | translate }}
+          </span>
+          <span class="status-indicator status-indicator--negative" *ngIf="product.isProductSuspended()">
+            {{ 'ng.product-overview.lbl.status-suspended' | translate }}
+          </span>
+        </div>
+        <div class="text-align--right--md hide-from-md pl--m pt--xxs" *ngIf="shouldDisplayChangeDataPlan()">
+          <a
+            tabindex="0"
+            (keydown)="
+              handleRedirectToMarketingConfigurator(
+                $event,
+                changeDataPlanUrl,
+                'mobile',
+                plan.locationId!,
+                'change mobile number or data plan clicked'
+              )
+            "
+            class="text--xm--md text--m link link--subtle"
+            (click)="
+              redirectToMarketingConfigurator(
+                changeDataPlanUrl,
+                'mobile',
+                plan.locationId!,
+                'change mobile number or data plan clicked'
+              )
+            ">
+            <span>{{ 'ng.product-overview.lnk.change-data-plan' | translate }}</span>
+          </a>
+        </div>
+        <div
+          class="text-align--right--md hide-from-md pl--m pt--xxs"
+          *ngIf="
+            showManageOptionsButton(plan, section, product) &&
+            (product.status === 'ACTIVE' || product.status === 'NOT_ACTIVE' || product.status === 'DISCONNECTED') &&
+            !plan.isProductActivationInProgress()
+          ">
+          <a
+            tabindex="0"
+            (keydown)="handleManageOptions($event, plan.identifier, product, true)"
+            *ngIf="manageOptionUrl !== '/' && product.productType !== 'phone2go'"
+            (click)="manageOptions(plan.identifier, product, true); $event.stopPropagation()"
+            class="font--body-regular link link--subtle">
+            <span *ngIf="product.status === 'ACTIVE' && !product.upgradePossibleTo">
+              {{ 'ng.product-overview.lnk.manage-options' | translate }}
+            </span>
+            <span
+              *ngIf="
+                (product.status === 'NOT_ACTIVE' || product.status === 'DISCONNECTED') && !product.upgradePossibleTo
+              ">
+              {{ 'ng.product-overview.btn.activate-option' | translate }}
+            </span>
+            <span *ngIf="product.status === 'ACTIVE' && product.upgradePossibleTo">
+              {{ 'ng.product-overview.btn.upgrade-option' | translate }}
+            </span>
+          </a>
+          <a
+            *ngIf="managePhone2GoUrl && product.productType === 'phone2go'"
+            href="{{ managePhone2GoUrl }}"
+            class="font--body-regular">
+            <span>{{ 'ng.product-overview.lnk.manage-phone2go' | translate }}</span>
+          </a>
+        </div>
+
+        <div *ngIf="hasActiveOrSuspendedProducts(plan)">
+          <div
+            *ngIf="section.type !== 'includedOptions' && product.productType === 'mobile'"
+            class="hide-from-md pt-5 pl--m">
+            <div
+              *ngIf="
+                product.mobileIdentifier &&
+                product.bundleMaxlines &&
+                product.mobileIdentifier.length < product.bundleMaxlines
+              ">
+              <div *ngIf="plan.bundleType === 'Connect 5'">
+                <a
+                  tabindex="0"
+                  (keydown)="
+                    handleRedirectToMarketingConfigurator(
+                      $event,
+                      planUpgradeUrl,
+                      'marketing',
+                      plan.locationId!,
+                      'add sim link clicked',
+                      plan.bundleType
+                    )
+                  "
+                  class="text--xm--md text--m link link--subtle"
+                  (click)="
+                    redirectToMarketingConfigurator(
+                      planUpgradeUrl,
+                      'marketing',
+                      plan.locationId!,
+                      'add sim link clicked',
+                      plan.bundleType
+                    )
+                  ">
+                  {{ 'ng.product-overview.lnk.order-sim' | translate }}
+                </a>
+              </div>
+              <div *ngIf="plan.bundleType !== 'Connect 5'">
+                <a
+                  tabindex="0"
+                  (keydown)="
+                    handleRedirectToOrderSimSalesFlow(
+                      $event,
+                      changeTariffPlanUrl,
+                      'marketing',
+                      'add-sim',
+                      plan.identifier,
+                      plan.productType,
+                      plan.locationId,
+                      'add sim link clicked'
+                    )
+                  "
+                  class="text--xm--md text--m link link--subtle"
+                  (click)="
+                    redirectToOrderSimSalesFlow(
+                      changeTariffPlanUrl,
+                      'marketing',
+                      'add-sim',
+                      plan.identifier,
+                      plan.productType,
+                      plan.locationId,
+                      'add sim link clicked'
+                    )
+                  ">
+                  {{ 'ng.product-overview.lnk.order-sim' | translate }}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            *ngIf="section.type === 'includedOptions' && product.productType === 'telephone'"
+            class="hide-from-md pt-5 pl--m">
+            <a
+              tabindex="0"
+              (keydown)="
+                handleRedirectToMarketingConfigurator(
+                  $event,
+                  planUpgradeUrl,
+                  'optins',
+                  plan.locationId!,
+                  'add fixed line button clicked'
+                )
+              "
+              class="text--xm--md text--m link link--subtle"
+              (click)="
+                redirectToMarketingConfigurator(
+                  planUpgradeUrl,
+                  'optins',
+                  plan.locationId!,
+                  'add fixed line button clicked'
+                )
+              ">
+              {{ 'ng.product-overview.lnk.order-fixed-telephone' | translate }}
+            </a>
+          </div>
+          <div
+            *ngIf="section.type === 'includedOptions' && product.productType === 'mobile'"
+            class="hide-from-md pt-5 pl--m">
+            <a
+              tabindex="0"
+              (keydown)="
+                handleRedirectToMarketingConfigurator(
+                  $event,
+                  planUpgradeUrl,
+                  'optins',
+                  plan.locationId!,
+                  'add sim link clicked'
+                )
+              "
+              class="text--xm--md text--m link link--subtle"
+              (click)="
+                redirectToMarketingConfigurator(planUpgradeUrl, 'optins', plan.locationId!, 'add sim link clicked')
+              ">
+              {{ 'ng.product-overview.lnk.order-data-sim' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 col-xs-12">
+      <div class="row">
+        <div
+          class="col-md-5 display--flex align-items--center justify-content--end--md"
+          *ngIf="shouldDisplayChangeDataPlan()">
+          <a
+            tabindex="0"
+            (keydown)="
+              handleRedirectToMarketingConfigurator(
+                $event,
+                changeDataPlanUrl,
+                'mobile',
+                plan.locationId!,
+                'change mobile number or data plan clicked'
+              )
+            "
+            class="text--xm--md text--m link link--subtle"
+            (click)="
+              redirectToMarketingConfigurator(
+                changeDataPlanUrl,
+                'mobile',
+                plan.locationId!,
+                'change mobile number or data plan clicked'
+              )
+            ">
+            <span>{{ 'ng.product-overview.lnk.change-data-plan' | translate }}</span>
+          </a>
+        </div>
+        <div
+          [ngClass]="{
+            'col-md-7': shouldDisplayChangeDataPlan(),
+            'col-md-12': !shouldDisplayChangeDataPlan()
+          }"
+          class="display--flex align-items--center justify-content--end--md">
+          <div
+            class="text-align--right"
+            *ngIf="hasActiveOrSuspendedProducts(plan)"
+            [ngClass]="{ 'mr-0': showManageOptions(plan) && section.type === 'includedOptions' }">
+            <div *ngIf="section.type !== 'includedOptions' && product.productType === 'mobile'" class="hide-until-md">
+              <div
+                *ngIf="
+                  product.mobileIdentifier &&
+                  product.bundleMaxlines &&
+                  product.mobileIdentifier.length < product.bundleMaxlines
+                ">
+                <div *ngIf="plan.bundleType === 'Connect 5'">
+                  <a
+                    tabindex="0"
+                    (keydown)="
+                      handleRedirectToMarketingConfigurator(
+                        $event,
+                        planUpgradeUrl,
+                        'marketing',
+                        plan.locationId!,
+                        'add sim link clicked',
+                        plan.bundleType
+                      )
+                    "
+                    class="text--xm--md text--m link link--subtle"
+                    (click)="
+                      redirectToMarketingConfigurator(
+                        planUpgradeUrl,
+                        'marketing',
+                        plan.locationId!,
+                        'add sim link clicked',
+                        plan.bundleType
+                      )
+                    ">
+                    {{ 'ng.product-overview.lnk.order-sim' | translate }}
+                  </a>
+                </div>
+                <div *ngIf="plan.bundleType !== 'Connect 5'">
+                  <a
+                    tabindex="0"
+                    (keydown)="
+                      handleRedirectToOrderSimSalesFlow(
+                        $event,
+                        changeTariffPlanUrl,
+                        'marketing',
+                        'add-sim',
+                        plan.identifier,
+                        plan.productType,
+                        plan.locationId,
+                        'add sim link clicked'
+                      )
+                    "
+                    class="text--xm--md text--m link link--subtle"
+                    (click)="
+                      redirectToOrderSimSalesFlow(
+                        changeTariffPlanUrl,
+                        'marketing',
+                        'add-sim',
+                        plan.identifier,
+                        plan.productType,
+                        plan.locationId,
+                        'add sim link clicked'
+                      )
+                    ">
+                    {{ 'ng.product-overview.lnk.order-sim' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              *ngIf="section.type === 'includedOptions' && product.productType === 'telephone'"
+              class="hide-until-md">
+              <a
+                tabindex="0"
+                (keydown)="
+                  handleRedirectToMarketingConfigurator(
+                    $event,
+                    planUpgradeUrl,
+                    'optins',
+                    plan.locationId!,
+                    'add fixed line button clicked'
+                  )
+                "
+                class="text--xm--md text--m link link--subtle"
+                (click)="
+                  redirectToMarketingConfigurator(
+                    planUpgradeUrl,
+                    'optins',
+                    plan.locationId!,
+                    'add fixed line button clicked'
+                  )
+                ">
+                {{ 'ng.product-overview.lnk.order-fixed-telephone' | translate }}
+              </a>
+            </div>
+            <div *ngIf="section.type === 'includedOptions' && product.productType === 'mobile'" class="hide-until-md">
+              <a
+                tabindex="0"
+                (keydown)="
+                  handleRedirectToMarketingConfigurator(
+                    $event,
+                    planUpgradeUrl,
+                    'optins',
+                    plan.locationId!,
+                    'add sim link clicked'
+                  )
+                "
+                class="text--xm--md text--m link link--subtle"
+                (click)="
+                  redirectToMarketingConfigurator(planUpgradeUrl, 'optins', plan.locationId!, 'add sim link clicked')
+                ">
+                {{ 'ng.product-overview.lnk.order-data-sim' | translate }}
+              </a>
+            </div>
+          </div>
+          <div
+            class="text-align--right hide-until-md ml--xxxl--md"
+            *ngIf="
+              showManageOptionsButton(plan, section, product) &&
+              (product.status === 'ACTIVE' ||
+                product.status === 'NOT_ACTIVE' ||
+                product.status === 'DISCONNECTED' ||
+                product.status === 'ACTIVATION_PASSED_PONR') &&
+              !plan.isProductActivationInProgress()
+            ">
+            <a
+              tabindex="0"
+              (keydown)="handleManageOptions($event, plan.identifier, product, true)"
+              *ngIf="
+                manageOptionUrl !== '/' && product.productType !== 'phone2go' && !plan.isProductActivationInProgress()
+              "
+              (click)="manageOptions(plan.identifier, product, true); $event.stopPropagation()"
+              class="font--body-regular link link--subtle">
+              <span *ngIf="product.status === 'ACTIVE' && !product.upgradePossibleTo">
+                {{ 'ng.product-overview.lnk.manage-options' | translate }}
+              </span>
+              <span *ngIf="product.status === 'ACTIVATION_PASSED_PONR' && isNetflixProductActivationInProgress()">
+                {{ 'ng.product-overview.lnk.manage-options' | translate }}
+              </span>
+              <span
+                *ngIf="
+                  (product.status === 'NOT_ACTIVE' || product.status === 'DISCONNECTED') && !product.upgradePossibleTo
+                ">
+                {{ 'ng.product-overview.btn.activate-option' | translate }}
+              </span>
+              <span *ngIf="product.status === 'ACTIVE' && product.upgradePossibleTo">
+                {{ 'ng.product-overview.btn.upgrade-option' | translate }}
+              </span>
+            </a>
+            <a
+              *ngIf="managePhone2GoUrl && product.productType === 'phone2go'"
+              [href]="managePhone2GoUrl"
+              class="font--body-regular">
+              <span>{{ 'ng.product-overview.lnk.manage-phone2go' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="background-shade_04 p--l mt--m">
+        <div
+          class="display--flex justify-content--between cursor--pointer"
+          (click)="showFeature = !showFeature; addPlanDetailViewEventInDataLayer()">
+          <span class="text-font-family--t7">
+            {{ 'ng.product-overview.lbl.feature-included' | translate }}
+          </span>
+          <a
+            tabindex="0"
+            (keydown)="onKeydown($event)"
+            aria-controls="c5_bundle_product_info"
+            [attr.aria-expanded]="showFeature ? 'true' : 'false'"
+            [attr.aria-label]="'ng.product-overview.lbl.feature-included' | translate">
+            <i *ngIf="!showFeature" class="icon-chevron-down"></i>
+            <i *ngIf="showFeature" class="icon-chevron-up"></i>
+          </a>
+        </div>
+        <div *ngIf="showFeature" id="c5_bundle_product_info">
+          <div>
+            <span class="text-font-family--t7"></span>
+            <div>
+              <div
+                *ngIf="plan.productInfo.isShowRates()"
+                class="pt--xs"
+                [ngClass]="{ 'pre-paid': product.productInfo.hasCategory(PREPAID_MOBILE) }">
+                <span>{{ product.productInfo.name }}</span>
+                <div class="display--flex--md justify-content--between" *ngFor="let rate of plan.productInfo.rates">
+                  <div>
+                    {{ 'ng.product-overview.lbl.' + (rate.type | lowercase) | translate }}
+                  </div>
+                  <div class="text-weight--l">
+                    <span>
+                      {{
+                        'ng.product-overview.text.specifications-for-base-zero-value' | translate: { amount: rate.cost }
+                      }}
+                    </span>
+                    /
+                    <span>
+                      {{
+                        'ng.product-overview.text.specifications-for-base-zero-unit' | translate: { unit: rate.unit }
+                      }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="!plan.productInfo.isShowRates() && plan.productInfo.services?.length">
+                <div *ngIf="product.productType === 'mobile' && product.mobileIdentifier?.length">
+                  <tg-product-c5-mobile-specifications
+                    [c5product]="product"
+                    [plan]="plan"></tg-product-c5-mobile-specifications>
+                </div>
+                <div *ngIf="!(product.productType === 'mobile' && product.mobileIdentifier?.length)">
+                  <tg-product-level-specifications
+                    [product]="product"
+                    [isBundle]="true"></tg-product-level-specifications>
+                </div>
+              </div>
+
+              <div *ngIf="plan.handsets.length > 0">
+                <div *ngFor="let handset of product.handsets">
+                  <div class="text--s text-weight--l">
+                    {{ 'ng.product-overview.text.contract-information' | translate }}
+                  </div>
+                  <div class="display--flex--md justify-content--between pt--m">
+                    <div>
+                      {{ 'ng.product-overview.text.contract-duration' | translate }}
+                    </div>
+                    <div class="text-weight--l">
+                      <span>{{ handset.contract.duration }}</span>
+                      <span>
+                        {{ 'ng.product-overview.lbl.months' | translate }}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="display--flex--md justify-content--between pt--m">
+                    <div>
+                      {{ 'ng.product-overview.text.contract-obligation-end-date' | translate }}
+                    </div>
+                    <div class="text-weight--l">
+                      {{ handset.contract.obligationEndDate | date: 'dd/MM/yyyy' }}
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="product.hasValidPrice(handset.contract.price?.earlyTerminationFee)"
+                    class="display--flex--md justify-content--between pt--m">
+                    <div>
+                      {{ 'ng.product-overview.text.contract-termination-fee' | translate }}
+                    </div>
+                    <div class="text-weight--l" *ngIf="handset.contract.price?.earlyTerminationFee">
+                      {{
+                        'ng.product-overview.lbl.monetary-amount'
+                          | translate: { amount: handset.contract.price?.earlyTerminationFee }
+                      }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="!product.productType">
+                <tg-product-options-specifications
+                  [services]="product.productInfo.services"></tg-product-options-specifications>
+              </div>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              !(product.productType === 'mobile' && product.mobileIdentifier?.length) &&
+              (product.hasIncludedOptions || product.contentPacks?.length)
+            ">
+            <tg-product-included-options [product]="product"></tg-product-included-options>
+          </div>
+          <div *ngIf="product.productType !== 'phone2go' && product.hasExtraOptions">
+            <tg-product-extra-options [product]="product"></tg-product-extra-options>
+          </div>
+          <div *ngIf="product.productType === 'phone2go'">
+            <span>{{ 'ng.product-overview.lbl.phone2go-feature' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

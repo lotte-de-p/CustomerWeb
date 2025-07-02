@@ -1,0 +1,24 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "compact": false,
+  "merge": true,
+  "exclude": [
+    "**/cypress/**"
+  ],
+  "reporter": [
+    "json",
+    "cobertura",
+    "html-spa",
+    "text-summary",
+    "text"
+  ],
+  "check-coverage": true,
+  "include": [
+    "../product-journey-mfe/**",
+    "../product-journey-e2e/**",
+    "../../../libs/install/product-journey/**"
+  ],
+  "report-dir": "../../../coverage/apps/install/product-journey-mfe-e2e",
+  "cwd": "../../../"
+}

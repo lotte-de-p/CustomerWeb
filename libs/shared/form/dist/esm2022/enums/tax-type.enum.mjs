@@ -1,0 +1,6 @@
+export var TaxTypeEnum;
+(function (TaxTypeEnum) {
+    TaxTypeEnum["INCLUSIVE"] = "taxInclPrices";
+    TaxTypeEnum["EXCLUSIVE"] = "taxExclPrices";
+})(TaxTypeEnum || (TaxTypeEnum = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGF4LXR5cGUuZW51bS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9lbnVtcy90YXgtdHlwZS5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBTixJQUFZLFdBR1g7QUFIRCxXQUFZLFdBQVc7SUFDckIsMENBQTJCLENBQUE7SUFDM0IsMENBQTJCLENBQUE7QUFDN0IsQ0FBQyxFQUhXLFdBQVcsS0FBWCxXQUFXLFFBR3RCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gVGF4VHlwZUVudW0ge1xuICBJTkNMVVNJVkUgPSAndGF4SW5jbFByaWNlcycsXG4gIEVYQ0xVU0lWRSA9ICd0YXhFeGNsUHJpY2VzJyxcbn1cbiJdfQ==

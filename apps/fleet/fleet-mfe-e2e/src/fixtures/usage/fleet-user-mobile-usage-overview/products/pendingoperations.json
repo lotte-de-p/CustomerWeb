@@ -1,0 +1,12 @@
+[
+  {
+    "productIdentifierValue": "WORL0010",
+    "productIdentifierType": "0485959303",
+    "pendingOperationType": "Upgrade"
+  },
+  {
+    "productIdentifierValue": "WORL0010",
+    "productIdentifierType": "04384939223",
+    "pendingOperationType": "Downgrade"
+  }
+]

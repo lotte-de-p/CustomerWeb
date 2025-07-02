@@ -1,0 +1,58 @@
+[
+  {
+    "productInfo": {
+      "productId": "BOYO0027",
+      "categories": ["based-on-you-plans", "post-paid-mobile", "for-5-discount"],
+      "weight": 20,
+      "externalProductCode": "BOYO0027",
+      "name": "27 Based on you"
+    },
+    "eligibleOffers": [
+      {
+        "productInfo": {
+          "ProductId": "BOYO0015",
+          "categories": ["for-5-discount", "based-on-you-plans", "post-paid-mobile"],
+          "weight": 10
+        },
+        "weight": 10
+      }
+    ],
+    "optionProducts": [
+      {
+        "productInfo": {
+          "productType": "OPTION",
+          "productId": "MINE0005",
+          "externalProductCode": "MINE0005",
+          "categories": ["options-with-etf", "voice-options", "voice-options"],
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedName": "Calling to numbers in Europe",
+            "normalizedName": "calls-to-numbers-in-europe"
+          }
+        },
+        "weight": 70,
+        "category": "mobile"
+      },
+      {
+        "productInfo": {
+          "productType": "OPTION",
+          "productId": "VOEU0060",
+          "categories": ["voice-options", "voice-options", "options-with-etf"],
+          "weight": 60,
+          "subCategory": {
+            "name": "Calls to numbers in Europe",
+            "weight": 40,
+            "mutualExclusion": true,
+            "localizedName": "Calling to numbers in Europe",
+            "normalizedName": "calls-to-numbers-in-europe"
+          }
+        },
+        "weight": 60,
+        "category": "mobile",
+        "parentId": "015895154"
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "app": {
+    "description": "Profile-Management application",
+    "version": "${BUILD_VERSION}",
+    "build": "${BUILD_DATE}"
+  }
+}

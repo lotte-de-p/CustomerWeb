@@ -1,0 +1,43 @@
+@import '../vars/vars.telenet';
+@import '../button.default';
+
+:host {
+  .button,
+  a.button,
+  button.button,
+  input.button {
+    @include font-body-regular;
+    &.primary {
+      font-weight: 700;
+      font-family: TelenetAlbra-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    &.secondary {
+      font-weight: 600;
+      font-family: TelenetAlbra-Semi, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    &.tertiary {
+      font-weight: 500;
+    }
+
+    &.size-sm {
+      font-size: var(--wink-button--sm-fs, #{rem(1.4)});
+      line-height: var(--wink-button--sm-lh, #{rem(2)});
+      @include media('from-lg') {
+        --wink-button--sm-fs: #{rem(1.6)};
+        --wink-button--sm-lh: #{rem(2.4)};
+      }
+
+      &.primary {
+        font-weight: 700;
+        font-family: TelenetAlbra-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      &.secondary {
+        font-weight: 600;
+        font-family: TelenetAlbra-Semi, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      &.tertiary {
+        font-weight: 500;
+      }
+    }
+  }
+}

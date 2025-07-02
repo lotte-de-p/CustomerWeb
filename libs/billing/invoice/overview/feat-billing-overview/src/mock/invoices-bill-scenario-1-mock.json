@@ -1,0 +1,253 @@
+{
+  "url": "http://localhost:8080/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices",
+  "method": "GET",
+  "status": 200,
+  "response": {
+    "unpaidInvoices": {
+      "totalAmount": 60.16,
+      "invoices": [
+        {
+          "invoiceDate": "2022-03-10",
+          "paymentDueDate": "2022-03-10",
+          "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcxxx",
+          "invoiceAmount": 12.34,
+          "outstandingDebt": 12.34,
+          "invoiceNumber": "abcxxx",
+          "paymentStatus": "OVERDUE",
+          "ogmCode": "+++490/5829/80701+++",
+          "billingScenarios": [
+            {
+              "name": "EXTRA_COST_ROAMING_OUTSIDE_EU",
+              "type": "EXTRA_COST"
+            }
+          ]
+        },
+        {
+          "invoiceDate": "{twentyFourthOfJune}",
+          "paymentDueDate": "{twentyFifthOfJune}",
+          "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcyyy",
+          "invoiceAmount": 35.15,
+          "outstandingDebt": 35.15,
+          "invoiceNumber": "abcyyy",
+          "paymentStatus": "UNPAID",
+          "ogmCode": "+++490/5829/80702+++",
+          "billingScenarios": [
+            {
+              "name": "EXTRA_COST_INTERNATIONAL_CALLS",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "EXTRA_COST_OUT_OF_BUNDLE_MOBILE",
+              "type": "EXTRA_COST"
+            }
+          ]
+        },
+        {
+          "invoiceDate": "{twentyFourthOfJune}",
+          "paymentDueDate": "{twentyFifthOfJune}",
+          "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcaaa",
+          "invoiceAmount": 56.78,
+          "outstandingDebt": 12.67,
+          "invoiceNumber": "abcaaa",
+          "paymentStatus": "PARTIALLY_PAID",
+          "ogmCode": "+++490/5829/80703+++",
+          "billingScenarios": [
+            {
+              "name": "EXTRA_COST_INTERNATIONAL_CALLS",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "EXTRA_COST_OUT_OF_BUNDLE_MOBILE",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "EXTRA_COST_SPECIAL_NUMBERS",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "EXTRA_COST_THIRD_PARTY_USAGE",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "EXTRA_COST_VOD",
+              "type": "EXTRA_COST"
+            },
+            {
+              "name": "CREDITING_OVER_FIFTY_CENTS",
+              "type": "CORRECTION"
+            }
+          ]
+        }
+      ]
+    },
+    "paidInvoices": [
+      {
+        "invoiceYear": "2024",
+        "invoices": [
+          {
+            "invoiceDate": "{latest}",
+            "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abczzz",
+            "invoiceAmount": 123.45,
+            "invoiceNumber": "abczzz",
+            "billingScenarios": [
+              {
+                "name": "EXTRA_COST_ROAMING_OUTSIDE_EU",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_INTERNATIONAL_CALLS",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_OUT_OF_BUNDLE_MOBILE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_SPECIAL_NUMBERS",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_THIRD_PARTY_USAGE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_VOD",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_HOME_DELIVERY",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EXTRA_COST_ADDITIONAL_HARDWARE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "NEGLIGENCE_FEE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "REMINDER_FEE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "COLLECTIONS_INTERVENTION_COST",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "COLLECTIONS_REACTIVATION",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "CABLE_CONNECTION",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "ACTIVATION_COST",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "INSTALLATION_COST",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "RESIDUAL_VALUE_STOP",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EARLY_TERMINATION_FEE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "RESIDUAL_VALUE_RETURN",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "EARLY_TERMINATION_FEE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "RESIDUAL_VALUE_RETURN",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "REPAIR_INTERVENTION_COST",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "DUPLICATE",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "COMPENSATIONS",
+                "type": "CORRECTION"
+              },
+              {
+                "name": "CREDITING_OVER_FIFTY_CENTS",
+                "type": "CORRECTION"
+              },
+              {
+                "name": "DISCOUNTS_PROMOTIONS_TEMPORARILY",
+                "type": "DISCOUNT"
+              },
+              {
+                "name": "DISCOUNTS_PROMOTIONS",
+                "type": "DISCOUNT"
+              }
+            ]
+          },
+          {
+            "invoiceDate": "{latestMinusOne}",
+            "documentUrl": "/ocapi/public/api/customer-web-billing-invoice-cs/v1/billing-accounts/123456/invoices/abcttt",
+            "invoiceAmount": 145.45,
+            "invoiceNumber": "abcttt"
+          }
+        ]
+      },
+      {
+        "invoiceYear": "2023",
+        "invoices": [
+          {
+            "invoiceDate": "2023-07-10",
+            "documentUrl": "/document",
+            "invoiceAmount": -24.97,
+            "billingScenarios": [
+              {
+                "name": "CABLE_CONNECTION",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "ACTIVATION_COST",
+                "type": "EXTRA_COST"
+              },
+              {
+                "name": "INSTALLATION_COST",
+                "type": "EXTRA_COST"
+              }
+            ]
+          },
+          {
+            "invoiceDate": "2023-03-10",
+            "documentUrl": "/document",
+            "invoiceAmount": 345.56
+          }
+        ]
+      },
+      {
+        "invoiceYear": "2022",
+        "invoices": [
+          {
+            "invoiceDate": "2022-03-10",
+            "documentUrl": "/document",
+            "invoiceAmount": 24.97
+          },
+          {
+            "invoiceDate": "2022-02-10",
+            "documentUrl": "/document",
+            "invoiceAmount": 543
+          }
+        ]
+      }
+    ]
+  }
+}

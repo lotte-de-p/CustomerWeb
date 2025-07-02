@@ -1,0 +1,34 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "noImplicitOverride": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noImplicitReturns": false,
+    "useDefineForClassFields": false,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "../**/*.spec.ts",
+    "../../../../**/*.spec.ts",
+    "../../../../**/dist/**",
+    "../../../../**/*.json",
+    "../../../../**/*.mock.ts"
+  ],
+  "include": [
+    "../../../../libs/**/*.stories.ts",
+    "../../../../libs/**/*.stories.js",
+    "../../monorepo-storybook/src/**/*.stories.ts",
+    "../../monorepo-storybook/src/**/*.stories.js",
+    "../../monorepo-storybook/src/**/*.stories.jsx",
+    "../../monorepo-storybook/src/**/*.stories.tsx",
+    "../../monorepo-storybook/src/**/*.stories.mdx",
+    "../../../libs/foundation/wink/core/src/components/**/*.stories.tsx",
+  ],
+  "files": [
+    "preview.ts"
+  ]
+}

@@ -1,0 +1,5 @@
+import { createFeatureSelector } from '@ngrx/store';
+
+import { <%= stateClassName %> } from './<%= fileName %>.state';
+
+export const featureState = createFeatureSelector <<%= stateClassName %>>('<%= featureName %>');

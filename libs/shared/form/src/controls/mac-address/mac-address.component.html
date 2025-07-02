@@ -1,0 +1,26 @@
+<form [formGroup]="macAddressForm">
+  <div class="display--flex">
+    <input
+      *ngFor="let input of formInput; index as i"
+      #formRow
+      type="text"
+      formControlName="{{ input }}"
+      class="form__input pid-profile__otp-value-container mr--xxs text-align--center pl-5"
+      required="true"
+      placeholder="00"
+      maxlength="2"
+      (keyup)="keyUpEvent($event, i)"
+      (blur)="getFullMACAddress()"
+      (paste)="onPaste($event)" />
+  </div>
+  <div class="formErrorInput" *ngIf="showError() && isValidMacAddress && canShowError">
+    <div class="color-red text--s text-align--left cursor--default">
+      {{ 'ng.mac-address.lbl.mac-address-error' | translate }}
+    </div>
+  </div>
+  <div class="formErrorInput" *ngIf="!isValidMacAddress">
+    <div class="color-red text--s text-align--left cursor--default">
+      {{ 'ng.mac-address.lbl.mac-address-invalid' | translate }}
+    </div>
+  </div>
+</form>

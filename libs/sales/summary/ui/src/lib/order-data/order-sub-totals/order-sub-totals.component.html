@@ -1,0 +1,72 @@
+<div class="background-white" *ngIf="prices">
+  <div class="display--flex align-items--center justify-content--between p--l">
+    <div class="sales-cart-row__content__section__title color-black font-weight--bold">
+      {{ 'ng.sales-checkout.shopping-cart.lbl.sub-totals' | translate }}
+    </div>
+    <div class="display--flex">
+      <p class="font--caption color-black pr--xs pt--xxxs">
+        {{ 'ng.sales-checkout.shopping-cart.lbl.all-prices-exclusive-vat' | translate }}
+      </p>
+    </div>
+  </div>
+  <div
+    class="width--full color-black border--t--r border-width--t--r border-style--t--solid border-color--t--light-grey upfront-payment p--m">
+    <div class="sales-cart-row__content mt--xxs">
+      <div class="display--flex justify-content--between">
+        <div class="sales-cart-row__content__section">
+          <div class="display--flex align-items--center">
+            <div class="text-flow--h6 text-weight--l display--flex">
+              <span class="icon icon-sm mr--xs icon-euro-check"></span>
+              <div class="text-flow--h6 text-weight--l">
+                <div class="text-flow--h6">
+                  Vooraf te betalen
+                  <div class="font--caption color-black">(betaal vandaag)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sales-cart-row__content__section right">
+          <div class="color-black text-flow--h6 text-weight--l">€354,55</div>
+        </div>
+      </div>
+    </div>
+    <div class="sales-cart-row__content sales-cart-row__content--small mt--xs">
+      <div class="display--flex flex-direction--row justify-content--between">
+        <div class="sales-cart-row__content__section ml-25">
+          <div class="display--flex">
+            <div class="text--m--md text--s text-weight--m">Levering van hardware</div>
+          </div>
+        </div>
+        <div class="sales-cart-row__content__section right ml--m">
+          <div class="display--flex align-items--center">
+            <div class="text--m--md text--s text-weight--m ml--xxxs">€0,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="width--full color-black border--t--r border-width--t--r border-style--t--solid border-color--t--light-grey one-off-payment-for-next-month-busines p--m">
+    <div class="sales-cart-row__content mt--xxs">
+      <div class="display--flex justify-content--between">
+        <div class="sales-cart-row__content__section">
+          <div class="display--flex align-items--center">
+            <div class="text-flow--h6 text-weight--l display--flex">
+              <span class="icon icon-sm mr--xs icon-euro"></span>
+              <div class="text-flow--h6 text-weight--l">
+                <div class="text-flow--h6">
+                  Eenmalige kost
+                  <div class="font--caption color-black">op je volgende aanrekening</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sales-cart-row__content__section right">
+          <div class="color-black text-flow--h6 text-weight--l">€0,00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

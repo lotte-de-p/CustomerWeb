@@ -1,0 +1,155 @@
+<div class="card-content--wave-data-card--group-view pr--xxs" (click)="navigateToMobileUsage()">
+  <div class="group-view__title-section js-hide-card-skeleton-identifier text--m line-height--20">
+    <div class="title-section__first-content font--body-small mb--s">
+      <div>
+        @if (card.chartConfig || card.chartConfigs) {
+          <span class="text-weight--g">
+            {{ 'ng.fleet-user-mobile-usage-overview.lbl.your-plan' | translate: { value: card?.bundleName } }}
+          </span>
+        }
+        @if (card.hasTableView) {
+          <span class="text-weight--g hide-from-sm">
+            {{ 'ng.fleet-user-mobile-usage-overview.lbl.plan-members' | translate: { value: card?.bundleName } }}
+          </span>
+        }
+      </div>
+    </div>
+    @if (card.chartConfig) {
+      <div class="hide-from-sm">
+        <span>{{ 'ng.fleet-user-mobile-usage-overview.lbl.group-totals' | translate }}</span>
+      </div>
+    }
+  </div>
+  <div class="group-view__body group-view__body--with-list">
+    <div>
+      @if (card?.chartConfigs) {
+        <ng-container>
+          <ng-container *ngTemplateOutlet="liquidChartDesktop"></ng-container>
+        </ng-container>
+      }
+      @if (card?.chartConfig) {
+        <ng-container>
+          <ng-container *ngTemplateOutlet="liquidChartMobile"></ng-container>
+        </ng-container>
+      }
+      @if (card.chartConfig || card.chartConfigs) {
+        <div class="font--body-small mb--xxs group-view__footer-section hide-until-sm">
+          {{ 'ng.fleet-user-mobile-usage-overview.lbl.group-totals' | translate }}
+        </div>
+        <div class="mb--n font--caption color-shade_64 text-align--center">
+          <span>
+            {{ card?.nextUpdateDate }} {{ 'ng.fleet-user-mobile-usage-overview.lbl.days-untils' | translate }}
+          </span>
+        </div>
+      }
+    </div>
+    @if (card.hasTableView) {
+      <ng-container>
+        <ng-container *ngTemplateOutlet="table"></ng-container>
+      </ng-container>
+    }
+  </div>
+</div>
+<ng-template #liquidChartDesktop>
+  <div class="wave-data-card__wave-section">
+    @for (chartConfig of card?.chartConfigs; track chartConfig) {
+      <ng-container>
+        <app-liquid-chart [config]="chartConfig"></app-liquid-chart>
+      </ng-container>
+    }
+  </div>
+</ng-template>
+<ng-template #liquidChartMobile>
+  <div class="wave-data-card__wave-section">
+    @if (!card.hasTableView) {
+      <ng-container>
+        <app-liquid-chart [config]="card.chartConfig"></app-liquid-chart>
+      </ng-container>
+    }
+  </div>
+</ng-template>
+<ng-template #table>
+  <div class="group-view__body__list">
+    <ul>
+      <li *ngFor="let rowdata of card?.bundleTableData | slice: 0 : 4; let last = last">
+        <div>
+          <div class="list-item">
+            <div class="group-view__content-section__image display--flex align-items--center justify-content--center">
+              @if (rowdata['showIcon']) {
+                <i class="icon icon-md text-weight--xxs icon-sim-card"></i>
+              }
+              @if (!rowdata['showIcon']) {
+                <img
+                  class="icon-circle account-selector__list__image"
+                  [src]="getProfileImageUrl(rowdata)"
+                  [override]="true"
+                  alt="profile"
+                  (error)="rowdata['showIcon'] = 'true'" />
+              }
+            </div>
+            <div class="item-details pl--xs">
+              <div class="item-details--username">
+                <div class="item-details--user-consumption align-items--start">
+                  <div class="font--caption-bold">
+                    @if (rowdata?.pid) {
+                      <span>{{ getLabelName(rowdata?.label) }}</span>
+                    }
+
+                    @if (!rowdata?.pid) {
+                      <span>{{ rowdata.identifier | phoneNumber }}</span>
+                    }
+                  </div>
+                  <div class="text--xs text-weight--xl text-align--right pl--xxs">
+                    @if (rowdata?.usage?.shared?.data[0]?.usedUnits) {
+                      <div>
+                        {{ rowdata?.usage?.shared?.data[0].usedUnits }}&nbsp;{{
+                          rowdata?.usage?.shared?.data[0].usedUnitType || rowdata?.usage?.shared?.data[0].unitType
+                        }}
+                      </div>
+                    }
+
+                    @if (rowdata?.usage?.outOfBundle?.usedUnits !== '0') {
+                      <div>
+                        <span class="color-notification--error--light">
+                          {{
+                            'ng.fleet-user-mobile-usage-overview.lbl.monetary-balance'
+                              | translate: { value: rowdata?.usage?.outOfBundle?.usedUnits }
+                          }}
+                        </span>
+                      </div>
+                    }
+                  </div>
+                </div>
+              </div>
+              <div class="item-details--user-consumption">
+                @if (rowdata?.pid) {
+                  <p class="font--caption-small color-shade_64">
+                    {{ rowdata.identifier | phoneNumber }}
+                  </p>
+                }
+              </div>
+              @if (!last) {
+                <div class="pt--xxs">
+                  <div class="divider divider--xs__very-light-grey"></div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    @if (card?.bundleTableData?.length) {
+      <div class="group-view__footer-section group-view__footer-section-list fl-right--md ml--s--md">
+        <a
+          href="javascript:void(0)"
+          (click)="navigateToMobileUsage()"
+          class="footer-section--more-info font--caption-bold mb-5 link">
+          {{
+            'ng.fleet-user-mobile-usage-overview.lbl.usage-details'
+              | translate: { count: card?.bundleTableData?.length }
+          }}
+        </a>
+      </div>
+    }
+  </div>
+</ng-template>

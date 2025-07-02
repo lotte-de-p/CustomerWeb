@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:8080/public/api/inbox-messages-service/v1/inbox-messages/unread/amount",
+  "method": "GET",
+  "status": 200,
+  "response": [
+    {
+      "amount": 2
+    }
+  ]
+}

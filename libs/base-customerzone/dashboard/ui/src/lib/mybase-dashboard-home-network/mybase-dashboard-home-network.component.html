@@ -1,0 +1,25 @@
+<div
+  class="mybase-dashboard--card p--l--lg p--m background-white"
+  [ngClass]="{ 'mt--l--md': marginTop }"
+  [attr.data-cy]="'mybase-dashboard-home-network-card'">
+  <div
+    (click)="goToHomeNetwork()"
+    class="display--flex cursor--pointer justify-content--between border--b--r border-color--all--light-grey border-width--b--r border-style--b--solid pb--m mb--m">
+    <div class="mybase-dashboard--card--title display--flex">
+      <span class="text-flow text-flow--h5">
+        {{ componentPrefix + '.home-network.title' | translate }}
+      </span>
+    </div>
+    <i class="icon icon-md icon-chevron-right color-shade_48 icon-no-size-override"></i>
+  </div>
+  <div class="mybase-dashboard--card--content display--flex flex-direction--column justify-content--between flex-grow">
+    <div class="">
+      <button
+        (click)="goToWifiPassport()"
+        class="button button--secondary button--alternate button--fullwidth cursor--pointer">
+        <i class="icon icon-qr-code-scan icon-md mr--s icon-no-size-override font--caption-small"></i>
+        <span>{{ componentPrefix + '.home-network.lbl.share' | translate }}</span>
+      </button>
+    </div>
+  </div>
+</div>

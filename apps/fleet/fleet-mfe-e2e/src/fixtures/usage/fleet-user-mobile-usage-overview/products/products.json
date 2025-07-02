@@ -1,0 +1,414 @@
+[
+  {
+    "id": "9166172510813956762",
+    "identifier": "s300180",
+    "accountNumber": "501258916",
+    "showModemUpgradeBanner": false,
+    "label": "Smart Communication",
+    "locationId": "9166172038613933857",
+    "language": "NL",
+    "specurl": "http://localhost:10081/omapi/public/product/SMCM0100",
+    "status": "ACTIVE",
+    "handsets": [],
+    "options": [],
+    "addressId": "9150758021813831894",
+    "productType": "bundle",
+    "children": [],
+    "showPlanUpgradeBanner": false,
+    "activationDate": "2023-03-14T16:09:59+01:00"
+  },
+  {
+    "id": "9155416117313935627",
+    "identifier": "0487071067",
+    "msisdn": "32487071067",
+    "accountNumber": "1200262036",
+    "label": "15 Based on you",
+    "locationId": "9150056762113397955",
+    "specurl": "http://localhost:10081/omapi/public/product/BOYO0015",
+    "status": "MODIFICATION_IN_PROGRESS",
+    "addressId": "9150758021813831894",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [
+      {
+        "label": "BASE cloud Unlimited",
+        "specurl": "http://localhost:10081/omapi/public/product/CLOD0003",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "9,00",
+          "recurrentTotal": "9,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "9,00",
+            "recurrentTotal": "9,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-01T14:13:24",
+          "price": {}
+        }
+      },
+      {
+        "label": "Voice Europe 60 MIN",
+        "specurl": "http://localhost:10081/omapi/public/product/VOEU0060",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "5,00",
+          "recurrentTotal": "5,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "5,00",
+            "recurrentTotal": "5,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-03T15:04:34",
+          "price": {}
+        }
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "15,00",
+      "recurrentTotal": "15,00",
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "15,00",
+        "recurrentTotal": "15,00",
+        "recurrentDiscount": "0"
+      },
+      "recurrentDiscount": "0"
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "29,00",
+        "recurrentTotal": "29,00",
+        "recurrentDiscount": "0,00"
+      }
+    }
+  },
+  {
+    "id": "9155483364913370065",
+    "identifier": "0487074631",
+    "msisdn": "32487074631",
+    "accountNumber": "1200262036",
+    "label": "BASE Unlimited",
+    "locationId": "9150056762113397955",
+    "specurl": "http://localhost:10081/omapi/public/product/BOYO0040",
+    "addressId": "9150758021813831894",
+    "status": "ACTIVE",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [
+      {
+        "label": "Option World minutes 10€",
+        "specurl": "http://localhost:10081/omapi/public/product/WORL0010",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "10,00",
+          "recurrentTotal": "10,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "10,00",
+            "recurrentTotal": "10,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2019-11-24T10:42:41",
+          "price": {}
+        }
+      },
+      {
+        "label": "Safesurf",
+        "specurl": "http://localhost:10081/omapi/public/product/OIKO0102",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "9,00",
+          "recurrentTotal": "9,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "9,00",
+            "recurrentTotal": "9,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "NOT_ACTIVE",
+        "isIncludedOption": true,
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-01T14:13:24",
+          "price": {}
+        }
+      },
+      {
+        "label": "Voice Europe 60 MIN",
+        "specurl": "http://localhost:10081/omapi/public/product/VOEU0060",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "5,00",
+          "recurrentTotal": "5,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "5,00",
+            "recurrentTotal": "5,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-02T14:00:36",
+          "price": {}
+        }
+      },
+      {
+        "label": "Option Spotify",
+        "specurl": "http://localhost:10081/omapi/public/product/SPPR0000",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "0,00",
+          "recurrentTotal": "0,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "0,00",
+            "recurrentTotal": "0,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVATION_IN_PROGRESS",
+        "contract": {}
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "40,00",
+      "recurrentTotal": "40,00",
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "40,00",
+        "recurrentTotal": "40,00",
+        "recurrentDiscount": "0"
+      },
+      "recurrentDiscount": "0"
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "55,00",
+        "recurrentTotal": "55,00",
+        "recurrentDiscount": "0,00"
+      }
+    }
+  },
+  {
+    "id": "9155521203813437346",
+    "identifier": "0487072328",
+    "msisdn": "32487072328",
+    "accountNumber": "1200262036",
+    "label": "20 Based on you",
+    "locationId": "9150056762113397955",
+    "specurl": "http://localhost:10081/omapi/public/product/BOYO0020",
+    "status": "ACTIVE",
+    "addressId": "9150758021813831894",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [
+      {
+        "label": "Voice Europe 60 MIN",
+        "specurl": "http://localhost:10081/omapi/public/product/VOEU0060",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "5,00",
+          "recurrentTotal": "5,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "5,00",
+            "recurrentTotal": "5,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-07T16:14:21",
+          "price": {}
+        }
+      },
+      {
+        "label": "Option World minutes 10€",
+        "specurl": "http://localhost:10081/omapi/public/product/WORL0010",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "10,00",
+          "recurrentTotal": "10,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "10,00",
+            "recurrentTotal": "10,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-07T18:55:44",
+          "price": {}
+        }
+      },
+      {
+        "label": "Option World minutes 30€",
+        "specurl": "http://localhost:10081/omapi/public/product/WORL0030",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "30,00",
+          "recurrentTotal": "30,00",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "30,00",
+            "recurrentTotal": "30,00",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-07T19:19:08",
+          "price": {}
+        }
+      },
+      {
+        "label": "Option Spotify",
+        "specurl": "http://localhost:10081/omapi/public/product/SPPR0000",
+        "price": {
+          "currency": "EUR",
+          "recurrentDiscounted": "9,99",
+          "recurrentTotal": "9,99",
+          "taxInclPrices": {
+            "currency": "EUR",
+            "recurrentDiscounted": "9,99",
+            "recurrentTotal": "9,99",
+            "recurrentDiscount": "0,00"
+          },
+          "recurrentDiscount": "0,00"
+        },
+        "status": "ACTIVE",
+        "contract": {
+          "duration": "1",
+          "obligationEndDate": "2020-01-09T16:28:44",
+          "price": {}
+        }
+      }
+    ],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "20,00",
+      "recurrentTotal": "20,00",
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "20,00",
+        "recurrentTotal": "20,00",
+        "recurrentDiscount": "0"
+      },
+      "recurrentDiscount": "0"
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "74,99",
+        "recurrentTotal": "74,99",
+        "recurrentDiscount": "0,00"
+      }
+    }
+  },
+  {
+    "id": "9155521268413437721",
+    "identifier": "0487072330",
+    "msisdn": "32487072330",
+    "accountNumber": "1200262036",
+    "label": "BASE 0",
+    "locationId": "9150056762113397955",
+    "specurl": "http://localhost:10081/omapi/public/product/BASE0000",
+    "status": "ACTIVE",
+    "addressId": "9150758021813831894",
+    "chars": {
+      "hasVoiceMailBox": "true"
+    },
+    "handsets": [],
+    "options": [],
+    "price": {
+      "currency": "EUR",
+      "recurrentDiscounted": "0,00",
+      "recurrentTotal": "0,00",
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "0,00",
+        "recurrentTotal": "0,00",
+        "recurrentDiscount": "0"
+      },
+      "recurrentDiscount": "0"
+    },
+    "summaryPrices": {
+      "taxInclPrices": {
+        "currency": "EUR",
+        "recurrentDiscounted": "0,00",
+        "recurrentTotal": "0,00",
+        "recurrentDiscount": "0"
+      }
+    }
+  },
+  {
+    "id": "9162125670513885237",
+    "addressId": "9150308819213642874",
+    "identifier": "0468136446",
+    "label": "King / 0468136446",
+    "locationId": "9162125422713682924",
+    "specurl": "http://localhost:10081/omapi/public/product/KING0000",
+    "status": "ACTIVATION_IN_PROGRESS",
+    "handsets": [],
+    "options": [],
+    "productType": "mobile",
+    "children": [],
+    "collectionStatus": "Green",
+    "showPlanUpgradeBanner": true
+  },
+  {
+    "id": "9162125670513885238",
+    "addressId": "9150308819213642875",
+    "identifier": "0468136446",
+    "label": "King / 0468136446",
+    "locationId": "9162125422713682924",
+    "specurl": "http://localhost:10081/omapi/public/product/C5FA0001",
+    "status": "ACTIVE",
+    "handsets": [],
+    "options": [],
+    "productType": "mobile",
+    "children": [],
+    "collectionStatus": "Green",
+    "showPlanUpgradeBanner": true
+  }
+]

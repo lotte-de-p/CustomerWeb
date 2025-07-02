@@ -1,0 +1,27 @@
+{
+  "url": "http://localhost:8080/public/api/pay-by-mobile-service/v1/pay-by-mobile/subscriptions/0489129746",
+  "method": "GET",
+  "status": 200,
+  "delay": 100,
+  "response": [
+    {
+      "serviceName": "YoutubeMusic",
+      "companyId": 111394,
+      "recurring": true,
+      "renewalPeriod": {
+        "period": 14,
+        "units": "days"
+      },
+      "startDate": "2022-03-10",
+      "endDate": "2022-03-10",
+      "price": 12.5,
+      "priceUnit": "EUR",
+      "serviceTranslation": {
+        "en": "Youtube Music",
+        "nl": "Youtube Muziek",
+        "fr": "Youtube Musique"
+      },
+      "status": "ACTIVE"
+    }
+  ]
+}

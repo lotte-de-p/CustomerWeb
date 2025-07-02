@@ -1,0 +1,31 @@
+@import '../vars/vars.base';
+@import '../pricing.default';
+:host([brand='base']) {
+  font-family: AkagiProBook;
+}
+:host([brand='base'][theme='telenet-dark']),
+:host([brand='base'][theme='base-dark']) {
+  --pricing--starting-from: #a9a9a9;
+  --pricing--promo-price: #a9a9a9;
+  --price-frequency-color: #ffffff;
+  --price-price-value-color: #ffffff;
+  --price-end-color: #a9a9a9;
+}
+
+:host([brand='base'][theme='telenet-dark'][appearance='patch']),
+:host([brand='base'][theme='base-dark'][appearance='patch']) {
+  --pricing-host-background: #ffffff;
+  --pricing--starting-from: #111111;
+  --pricing--promo-price: #111111;
+  --price-frequency-color: #111111;
+  --price-price-value-color: #111111;
+  --price-end-color: #111111;
+}
+:host([brand='base'][theme='telenet-light'][appearance='subtle text']),
+:host([brand='base'][theme='base-light'][appearance='subtle text']),
+:host([brand='base'][theme='telenet-dark'][appearance='subtle text']),
+:host([brand='base'][theme='base-dark'][appearance='subtle text']) {
+  --price--price-value--desktop--fs: #{rem(1.8)};
+  --price--price-value--desktop--lh: #{rem(1.8)};
+  --pricing--price-value-wrapper--ff: AkagiProBold;
+}

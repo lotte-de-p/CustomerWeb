@@ -1,0 +1,58 @@
+<div class="in-page-search position--relative display--flex flex-direction--row" (appClickOutside)="clearNoFocus()">
+  <div
+    class="in-page-search--container display--flex flex-direction--column border-radius--all--xxs form__input-container">
+    <form
+      action=""
+      [formGroup]="inPageFormGroup"
+      class="in-page-search--input-container display--flex flex-direction--row flex-wrap--nowrap form__input-container mr--xs--md">
+      <tg-foundation-general-search-button
+        class="in-page-search--input--tg-foundation-general-search-button display--flex"
+        [customClasses]="['in-page-search--input--button-icon-search']"
+        (click)="goToResults()"
+        (keyup.enter)="goToResults()">
+        <i class="icon icon-search pl--xxs" aria-hidden="true"></i>
+        <tg-foundation-general-search-accessibility-span>
+          {{ 'ng.search-inpage.search' | translate }}
+        </tg-foundation-general-search-accessibility-span>
+      </tg-foundation-general-search-button>
+      <input
+        autocomplete="off"
+        [formControl]="queryFormControl"
+        [placeholder]="'ng.search-inpage.phd.search' | translate"
+        #inputField
+        type="search"
+        id="searchTerm"
+        [attr.data-testid]="'tgFoundationGeneralSearchSearchInput'"
+        class="in-page-search--input form__input--max-width width--full border-width--all--n mb--n" />
+      <tg-foundation-general-search-button
+        class="display--flex"
+        [customClasses]="['in-page-search--input--button-icon-backspace ', 'cursor--pointer']"
+        [ngClass]="[getSearchTerm().length < 1 ? 'display--none' : 'display--flex']"
+        (click)="clear()">
+        <i
+          class="icon icon-backspace clear-input"
+          aria-hidden="true"
+          [attr.data-testid]="'tgFoundationGeneralSearchBackspace'"></i>
+        <tg-foundation-general-search-accessibility-span>
+          {{ 'ng.search-inpage.clear' | translate }}
+        </tg-foundation-general-search-accessibility-span>
+      </tg-foundation-general-search-button>
+    </form>
+
+    <ng-container *ngIf="suggestions$ | async as suggestions">
+      <div
+        tg-foundation-general-search-inpage-search-suggestions
+        class="in-page-search--results justify-content--center flex-direction--column mr--xs"
+        *ngIf="suggestions?.[suggestionsFieldName]?.length ?? 0 > 0"
+        tgFoundationGeneralSearchKeyboardNavigationDirective
+        [suggestions]="suggestions"
+        [suggestionsFieldName]="suggestionsFieldName"></div>
+    </ng-container>
+  </div>
+  <button
+    class="button button-primary align-self--start hide-until-md"
+    (click)="goToResults()"
+    [attr.data-testid]="'tgFoundationGeneralSearchButton'">
+    <span>{{ 'ng.search-inpage.search' | translate }}</span>
+  </button>
+</div>

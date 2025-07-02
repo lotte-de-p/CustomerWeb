@@ -1,0 +1,56 @@
+[
+  {
+    "id": "9153462896013523517",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "municipality": "Mechelen",
+    "postalCode": "2800",
+    "street": "Elektriciteitstraat",
+    "streetId": "9153462896013523500",
+    "houseNumber": "6",
+    "boxNumber": "5",
+    "floorNumber": "2",
+    "tinaLocationId": "2"
+  },
+  {
+    "addressid": "9152527990413378524",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "municipality": "Mechelen",
+    "postalCode": "2800",
+    "street": "Abeelstraat",
+    "streetId": "9153462896013523501",
+    "subhousenr": "5",
+    "housenr": "5",
+    "boxnr": "115/t",
+    "floor": "7",
+    "tinaLocationId": "2"
+  },
+  {
+    "id": "9153462896013523444",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "municipality": "Mechelen",
+    "postalCode": "2800",
+    "street": "Elektriciteitstraat",
+    "streetId": "9153462896013523500",
+    "houseNumber": "6",
+    "boxNumber": "3",
+    "subHouseNumber": "6A",
+    "floorNumber": "2",
+    "tinaLocationId": "21"
+  },
+  {
+    "id": "9153462896013523444",
+    "type": "Geographical Address",
+    "country": "België",
+    "countryCode": "BE",
+    "streetId": "9153462896013523500",
+    "houseNumber": "6",
+    "floorNumber": "2",
+    "tinaLocationId": "22"
+  }
+]

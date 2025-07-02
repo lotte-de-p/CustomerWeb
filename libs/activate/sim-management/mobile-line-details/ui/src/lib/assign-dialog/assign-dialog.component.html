@@ -1,0 +1,86 @@
+<div class="overlay sim-management--sim-overlay" data-testid="sim-management-assign-dialog">
+  <div class="overlay__mask"></div>
+
+  <div class="overlay__section">
+    <div class="overlay__section__content__description">
+      <div class="position--full-height content-section p--xl">
+        <div class="text-align--center text--xl--sm text--xxm font-weight--black mb--xxs">
+          {{ 'ng.sim-management.lbl.assign-sim' | translate }}
+        </div>
+        <div class="text-align--center text--xm--sm text--m">
+          {{
+            'ng.sim-management.info.choose-member-to-assign-sim-card'
+              | translate: { number: data.mobileLine.msisdn | phoneNumber }
+          }}
+        </div>
+        <div class="pt--l pb--l pr--xxxg--sm pl--xxxg--sm pr--n pl--n">
+          <div class="label-modifier-box card-mini" [formGroup]="assignSimCardForm">
+            @for (user of data.householdUsers; track $index) {
+              <div class="label-modifier-slot">
+                <input
+                  type="radio"
+                  name="userId"
+                  id="choice-{{ $index }}"
+                  data-testid="sim-management-assign-dialog-user-radio"
+                  class="label-modifier-radio"
+                  formControlName="userId"
+                  [value]="user.identityId" />
+
+                <div
+                  class="label-modifier--append label-modifier--container cursor--pointer"
+                  data-testid="sim-management-assign-dialog-user-name">
+                  <div class="label-modifier--body">
+                    <div class="label-modifier--body--inner-container">
+                      <label for="choice-{{ $index }}" class="label-modifier-radio__label"></label>
+
+                      <div class="label-modifier-content__header-text"></div>
+                      <div class="label-modifier-content__header">
+                        <i class="icon icon-tick"></i>
+                      </div>
+
+                      <div class="label-modifier-content__desc"></div>
+
+                      <div class="label-modifier-content__body">
+                        <div class="text-flow text-flow--button label-modifier-content__body-label">
+                          {{ user.firstName }} {{ user.lastName }}
+                        </div>
+
+                        <div class="text-flow text-flow--legal"></div>
+                      </div>
+                      <div class="label-modifier-content__timing"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+          <div class="heading--6 heading--nomargin text-align--left pt--l pb--xl">
+            <div class="display--block">
+              <a href="{{ data.profileManagementUrl }}" class="link link--with-icon"
+                ><i class="icon icon-plus"></i> <span>{{ 'ng.sim-management.lbl.invite-user' | translate }}</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="display--flex justify-content--center flex-direction--row--sm flex-direction--column-reverse">
+          <div class="mr--xxs--sm mr--n mt--xxs mt--n--sm">
+            <button
+              class="button button button--secondary"
+              (click)="onCancelClick()"
+              data-testid="sim-management-assign-dialog-cancel-button">
+              <span>{{ 'ng.sim-management.btn.sim-assignee-popup-cancel' | translate }}</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="button button button--primary"
+              (click)="onAssignClick()"
+              data-testid="sim-management-assign-dialog-confirm-button">
+              <span>{{ 'ng.sim-management.btn.assign-sim-card' | translate }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div
+  class="notification notification--errorfield notification--errorfield--flow"
+  *ngFor="let notification of notifications"
+  data-cy="app-message-flow">
+  <span class="icon-error-shape"></span>
+  <div [innerHTML]="notification.message | translate"></div>
+</div>

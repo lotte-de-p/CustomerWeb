@@ -1,0 +1,1 @@
+import{S as a}from"./p-bb41a39d.js";const r={default:"default",primary:"primary",secondary:"secondary"};const s={...r,transparent:"transparent"};const t={sm:a.sm,md:a.md,lg:a.lg,xl:a.xl};export{s as I,t as a,r as b};

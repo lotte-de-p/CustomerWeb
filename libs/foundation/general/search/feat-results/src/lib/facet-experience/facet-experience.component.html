@@ -1,0 +1,74 @@
+<div class="overlay-container" [ngClass]="overlayActive ? '' : 'visibility--hide'">
+  <div class="overlay overlay--page">
+    <div class="overlay__mask"></div>
+    <div class="overlay__section">
+      <div class="overlay__section__content__description">
+        <div class="sticky-header border--b--r border-width--b--r border-color--b--light-grey border-style--b--solid">
+          <div class="display--flex align-items--center justify-content--between">
+            <div class="search__overlay-title heading--4 heading--notopmargin">
+              {{ 'ng.search-results-page.lbl.filter' | translate }}
+            </div>
+            <button
+              (click)="toggleOverlay()"
+              aria-label="Close button"
+              class="border-width--all--n background-white close-btn cursor--pointer">
+              <i class="icon icon-md icon-cross" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="search__nav position--relative p--m">
+          <form class="search-product search-product--nav mb--s mb--n--md">
+            <div
+              tg-general-search-choice-group
+              *ngIf="collections"
+              [type]="ChoiceType.SINGLE"
+              [facetGroup]="collections"
+              [groupPrefix]="'mobile'"
+              (selectionChanged)="notifyCollectionChanged($event)"></div>
+            <div
+              tg-general-search-choice-group
+              *ngFor="let facetGroup of facetGroups; index as groupIndex"
+              [facetGroup]="facetGroup"
+              [groupPrefix]="'mobile'"
+              (selectionChanged)="notifyFacetsChanged(groupIndex, $event)"></div>
+          </form>
+        </div>
+        <div
+          class="sticky-footer-v2 position--fixed background-white width--full py--m px--xm p--xm--md display--flex justify-content--center align-items--center box-sizing--inherit shadow--xs-inverse position--bottom position--left">
+          <div
+            class="sticky-footer-v2__container width--full default-max-site-width display--flex justify-content--center align-items--center">
+            <div class="back-section mr--m">
+              <a (click)="notifyFacetsCleared()" class="button button--secondary">
+                <span>{{ 'ng.search-results-page.lbl.clear' | translate }}</span>
+              </a>
+            </div>
+            <div class="next-section">
+              <button (click)="toggleOverlay()" class="button button--primary">
+                <span>{{ 'ng.search-results-page.lbl.apply' | translate }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="search__nav width--full hide-until-md">
+  <form class="search-product search-product--nav mb--s mb--n--md">
+    <div
+      tg-general-search-choice-group
+      *ngIf="collections"
+      [type]="ChoiceType.SINGLE"
+      [facetGroup]="collections"
+      [groupPrefix]="'desktop'"
+      (selectionChanged)="notifyCollectionChanged($event)"></div>
+    <div
+      tg-general-search-choice-group
+      *ngFor="let facetGroup of facetGroups; index as groupIndex"
+      [type]="ChoiceType.MULTI"
+      [facetGroup]="facetGroup"
+      [groupPrefix]="'desktop'"
+      (selectionChanged)="notifyFacetsChanged(groupIndex, $event)"></div>
+  </form>
+</div>
+<ng-content></ng-content>

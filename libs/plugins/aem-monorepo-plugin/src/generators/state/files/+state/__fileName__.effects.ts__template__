@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+import { Actions } from '@ngrx/effects';
+import * as fromActions from './<%= fileName %>.actions';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class <%= effectsClassName %> {
+  constructor(private readonly actions$: Actions) {}
+}
